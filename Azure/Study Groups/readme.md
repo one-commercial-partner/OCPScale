@@ -1,5 +1,6 @@
-# Study Group Materials 
-Simple ... 
+# Study Group Materials
+
+Simple ...
 
 Each folder is for a different exam and then each file listed is a separate homework assignment, one for each of the exam objectives.
 
