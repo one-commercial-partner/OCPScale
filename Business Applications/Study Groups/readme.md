@@ -1,1 +1,1 @@
-# Study Group COntent will be posted here
+# Study Group Content will be posted here
