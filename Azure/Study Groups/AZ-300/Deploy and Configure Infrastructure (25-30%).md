@@ -51,15 +51,15 @@ _May include but not limited to:_ Modify Azure Resource Manager (ARM) template; 
 
 | Topic | Link |
 | --- | --- |
-| Modify Azure Resource Manager (ARM) template | [https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates) |
-| configure location of new VMs | [https://docs.microsoft.com/en-us/azure/azure-resource-manager/how-to-create-template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/how-to-create-template) |
-| configure VHD template | [https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-data-disk](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-data-disk) |
-| deploy from template | [https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal) |
-|   | [https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-quickstart-create-templates-use-visual-studio-code#deploy-the-template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-quickstart-create-templates-use-visual-studio-code#deploy-the-template) |
-|   | [https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ps-template](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ps-template) |
+| Modify Azure Resource Manager (ARM) template | [Understand the structure and syntax of Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates) |
+| configure location of new VMs | [Create Azure Resource Manager template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/how-to-create-template) |
+| configure VHD template | [Tutorial - Manage Azure disks with Azure PowerShell](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-data-disk) |
+| deploy from template | [Deploy resources with Resource Manager templates and Azure portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal) |
+|   | [Deploy the template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-quickstart-create-templates-use-visual-studio-code#deploy-the-template) |
+|   | [Create a Windows virtual machine from a Resource Manager template](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ps-template) |
 | save a deployment as an ARM template | [https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template) |
-| deploy Windows and Linux VMs | [https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ps-template](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ps-template) |
-|   | [https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-secured-vm-from-template](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-secured-vm-from-template) |
+| deploy Windows and Linux VMs | [Deploy an Azure Virtual Machine using C# and a Resource Manager template](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/csharp-template) |
+|   | [How to create a Linux virtual machine with Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-secured-vm-from-template) |
 
 ## Create connectivity between virtual networks
 
