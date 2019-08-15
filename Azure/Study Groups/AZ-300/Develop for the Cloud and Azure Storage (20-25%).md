@@ -1,5 +1,23 @@
 # Developing for the Cloud
 
+## Develop solutions that use Cosmos DB storage
+
+| Topic | Link |
+| --- | --- |
+|create, read, update, and delete data by using appropriate APIs| [Introduction to the Azure Cosmos DB Cassandra API](https://docs.microsoft.com/en-us/azure/cosmos-db/cassandra-introduction) |
+|  | [Azure Cosmos DB's API for MongoDB](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)|
+|implement partitioning schemes| [Partitioning in Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/partitioning-overview)  |
+| |[Partitioning and horizontal scaling in Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data)
+|set the appropriate consistency level for operations|
+
+## Develop solutions that use a relational database
+
+| Topic | Link |
+| --- | --- |
+|provision and configure relational databases|
+|configure elastic pools for Azure SQL Database|
+|create, read, update, and delete data tables by using code|
+
 ## Configure a message-based integration architecture
 
 | Topic | Link |
