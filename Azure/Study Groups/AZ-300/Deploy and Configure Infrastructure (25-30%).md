@@ -63,15 +63,14 @@ _May include but not limited to:_ Modify Azure Resource Manager (ARM) template; 
 
 ## Create connectivity between virtual networks
 
-_May include but not limited to:_ Create and configure VNET peering; create and configure VNET to VNET; verify virtual network connectivity; create virtual network gateway
-
 | Topic | Link |
 | --- | --- |
-| Create and configure VNET peering | [https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview) |
-|   | [https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering) |
+| Create and configure VNET peering | [Virtual network peering](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview) |
+|   | [Create, change, or delete a virtual network peering](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering) |
 | create and configure VNET to VNET | [https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-different-deployment-models-portal?toc=%2fazure%2fvirtual-network%2ftoc.json](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-different-deployment-models-portal?toc=%2fazure%2fvirtual-network%2ftoc.json) |
-|  verify virtual network connectivity | [https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-different-deployment-models-portal?toc=%2fazure%2fvirtual-network%2ftoc.json#verify](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-different-deployment-models-portal?toc=%2fazure%2fvirtual-network%2ftoc.json#verify) |
-| create virtual network gateway | [https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity) |
+|  verify virtual network connectivity | [Connect virtual networks from different deployment models using the portal](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-different-deployment-models-portal?toc=%2fazure%2fvirtual-network%2ftoc.json#verify) |
+||[Connect virtual networks from different deployment models using PowerShell](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-different-deployment-models-powershell)
+| create virtual network gateway | [Gateways and on-premises connectivity](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity) |
 
 ## Implement and manage virtual networking
 
