@@ -1,1 +1,2 @@
-# Hackathon content will be here
+# Boot Camp content will be here
+
