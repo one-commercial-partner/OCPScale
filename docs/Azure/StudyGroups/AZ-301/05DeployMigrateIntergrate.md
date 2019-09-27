@@ -56,3 +56,6 @@ Design a compute, container, data platform, messaging solution, storage, and web
 * Recommend a hosting structure for API management
   * [API Management access restriction policies](https://docs.microsoft.com/en-us/azure/api-management/api-management-access-restriction-policies)
   * [Advanced request throttling with Azure API Management](https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-flexible-throttling)
+
+
+[Back](index.md)

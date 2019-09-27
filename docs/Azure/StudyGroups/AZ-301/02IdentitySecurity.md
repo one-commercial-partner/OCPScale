@@ -82,3 +82,6 @@ For this exam objective please complete the following:
 
 * [Security, responsibility and trust in Azure](https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/)
 * [Design for security in Azure](https://docs.microsoft.com/en-us/learn/modules/design-for-security-in-azure/)
+
+
+[Back](index.md)

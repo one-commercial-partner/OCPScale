@@ -41,3 +41,6 @@ May include but not limited to: Recommend storage types and methodology for data
 * [Recommend storage types and methodology for data archiving](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers)
 * [Identify requirements for data archiving and business compliance requirements for data archiving](https://docs.microsoft.com/en-us/azure/storage/common/storage-compliance-offerings)
 * [Identify SLA(s) for data archiving](https://azure.microsoft.com/en-us/support/legal/sla/storage/v1_2/)
+
+
+[Back](index.md)

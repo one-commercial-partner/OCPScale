@@ -70,3 +70,5 @@ May include but not limited to: Design for alert notifications; design an alert 
     * [Monitoring and diagnostics](https://docs.microsoft.com/en-us/azure/architecture/best-practices/monitoring)  *Note this is a long read*
     * [Find and apply performance recommendations](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal)
 
+
+[Back](index.md)

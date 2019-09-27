@@ -59,3 +59,7 @@ May include but not limited to: Design for alert notifications; design an alert 
     * [Overview of alerts in Microsoft Azure](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-overview)
 * [Design an alert and metrics strategy]
     * [Understand how metric alerts work in Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric-overview)
+
+
+
+[Back](index.md)
