@@ -14,7 +14,7 @@ If you run across an interesting blog post, article, nuggest of truth, update th
 - [AZ-300: Microsoft Azure Architect Technologies](./AZ-300)
 - [AZ-301: Microsoft Azure Architect Design](./AZ-301)
 - [AZ-500: Microsoft Azure Security Technologies](./AZ-500)
-- [AZ-900](./AZ-900)
+- [AZ-900: Microsoft Azure Fundamentals](./AZ-900)
 
 
 [Back](../)

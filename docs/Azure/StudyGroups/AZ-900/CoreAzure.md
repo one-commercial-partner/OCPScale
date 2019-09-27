@@ -28,3 +28,6 @@ Understand Azure management tools
 
 understand Azure tools such as Azure CLI, PowerShell, and the Azure Portal
 understand Azure Advisor
+
+
+[Back](index.md)
