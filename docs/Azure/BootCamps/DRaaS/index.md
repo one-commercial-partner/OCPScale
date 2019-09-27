@@ -207,24 +207,20 @@ Timeframe: 15 minutes
 Directions: Discuss as a group the preferred solution for the case study.
 
 ##  Additional references
-|    |            |       
-|----------|:-------------:|
-| **Description** | **Links** |
-| Overview of Azure Site Recovery | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview/> |
-| Prepare Azure resources for replication of on-premises machines | <https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-prepare-azure/> |
-| Migrate on-premises machines to Azure | <https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-migrate-on-premises-to-azure/> |
-| Azure to Azure replication architecture | <https://docs.microsoft.com/en-us/azure/site-recovery/concepts-azure-to-azure-architecture/> |
-| Hyper-V to Azure replication architecture | <https://docs.microsoft.com/en-us/azure/site-recovery/concepts-hyper-v-to-azure-architecture/> |
-| Azure to Azure Support Matrix | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-support-matrix-azure-to-azure/> |
-| Support matrix for Hyper-V replication to Azure | <https://docs.microsoft.com/en-us/azure/site-recovery/support-matrix-hyper-v-to-azure/> |
-| Protect SQL Server using SQL Server disaster recovery and Azure Site Recovery | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-sql/> |
-| Overview: Failover groups and active geo-replication | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview/> |
-| What is Traffic Manager? | <https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview/> |
-| Traffic Manager Routing Methods | <https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods/> |
-| Traffic Manager Endpoints | <https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-endpoint-types/> |
-| Backup Solution Architectures | <https://azure.microsoft.com/en-us/solutions/architecture/backup-archive-on-premises-applications/> |
 
-
+- [Overview of Azure Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview/)
+- [Prepare Azure resources for replication of on-premises machines](https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-prepare-azure/)
+- [Migrate on-premises machines to Azure](https://docs.microsoft.com/en-us/azure/site-recovery/tutorial-migrate-on-premises-to-azure/)
+- [Azure to Azure replication architecture](https://docs.microsoft.com/en-us/azure/site-recovery/concepts-azure-to-azure-architecture/)
+- [Hyper-V to Azure replication architecture](https://docs.microsoft.com/en-us/azure/site-recovery/concepts-hyper-v-to-azure-architecture/)
+- [Azure to Azure Support Matrix](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-support-matrix-azure-to-azure/)
+- [Support matrix for Hyper-V replication to Azure](https://docs.microsoft.com/en-us/azure/site-recovery/support-matrix-hyper-v-to-azure/)
+- [Protect SQL Server using SQL Server disaster recovery and Azure Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-sql/)
+- [Overview: Failover groups and active geo-replication](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview/)
+- [What is Traffic Manager?](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview/)
+- [Traffic Manager Routing Methods](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods/)
+- [Traffic Manager Endpoints](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-endpoint-types/)
+- [Backup Solution Architectures](https://azure.microsoft.com/en-us/solutions/architecture/backup-archive-on-premises-applications/)
 
 
 [Back](../)
