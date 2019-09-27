@@ -74,3 +74,5 @@ If you have a custom domain name available, please complete the steps in this tu
 3)	Copy the DNS name of your Traffic Manager Profile from the preceding step to successfully view the website in a web browser. When the primary endpoint is disabled, the user traffic gets routed to the secondary endpoint.
 
  
+
+[Back](../)

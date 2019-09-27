@@ -147,3 +147,7 @@ Obtain the public IP address of your load balancer with `Get-AzPublicIPAddress`.
 Once you are done you may want to clean up the resources we created.  Use the following PowerShell command to delete the resources we created in this lab:
 
 `Remove-AzResourceGroup -Name "LBRG"`
+
+
+
+[Back](../)

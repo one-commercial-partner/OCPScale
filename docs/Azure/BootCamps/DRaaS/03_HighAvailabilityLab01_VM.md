@@ -62,3 +62,7 @@ This lab details using Azure PowerShell to create an Azure virtual machine runni
 Use the following PowerShell command to delete the resources we created in this lab:
 
 `Remove-AzResourceGroup -Name "AvailabilityZoneRG"`
+
+
+
+[Back](../)

@@ -179,3 +179,6 @@ Your MABS Server needs local storage to save backup files.  Please complete the 
 3. Right-click **Disk 2** and choose **New Simple Volume**. Hit Next four times and then CLose.
 4. From the MABS UI, click on Disk Storage, then Add.
 5. Select and Add the E:\ volume and click **OK**.
+
+
+[Back](../)

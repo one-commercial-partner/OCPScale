@@ -23,3 +23,6 @@ To test network communication with Network Watcher, first enable a network watch
     * https://www.microsoft.com/en-US/download/details.aspx?id=4865 
 8.	Launch **Network Monitor** and open the capture file from your Documents folder.  Examine the contents of your packet capture session.
 
+
+
+[Back](../)

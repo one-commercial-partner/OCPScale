@@ -89,3 +89,5 @@ In this lab you are going to simulate a backup of an on-premises VM or physical 
 3.	The recovery volume mounts. Click **Browse** and open the **ignite** directory.  Copy the files from the mounted volume to **c:\ignite**.  Click **More details** to see network transfer speeds.
 4.	Switch back to Microsoft Azure Backup and click **Unmount** to unmount the recovery volume.  Choose **Yes**.
 
+
+[Back](../)

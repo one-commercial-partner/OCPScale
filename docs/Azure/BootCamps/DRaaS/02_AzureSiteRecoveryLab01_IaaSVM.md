@@ -139,3 +139,6 @@ If you don’t delete the failover VM, the VM will continue to run and increase 
  
  [Add Public IP and NSG to ARM VMs during Test Failover of an ASR Recovery Plan](https://gallery.technet.microsoft.com/scriptcenter/Add-Public-IP-and-NSG-to-a6bb8fee)
 
+
+
+[Back](../)
