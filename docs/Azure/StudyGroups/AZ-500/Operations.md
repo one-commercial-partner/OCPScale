@@ -24,3 +24,5 @@
 |review and respond to alerts and recommendations
 |configure a playbook for a security event by using Microsoft Azure Security Center
 |investigate escalated security incidents
+
+[Back](index.md)

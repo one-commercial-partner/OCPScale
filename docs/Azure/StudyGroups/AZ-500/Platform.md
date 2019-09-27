@@ -43,3 +43,5 @@
 |configure Microsoft Azure policies
 |configure custom RBAC roles
 |configure subscription and resource permissions
+
+[Back](index.md)

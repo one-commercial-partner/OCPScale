@@ -29,3 +29,5 @@
 | --- | --- |
 |transfer Microsoft Azure subscriptions between Microsoft Azure AD tenants
 |manage API access to Microsoft Azure subscriptions and resources
+
+[Back](index.md)
