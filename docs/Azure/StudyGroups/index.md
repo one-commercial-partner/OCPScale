@@ -11,7 +11,7 @@ Additionally, if you see something, say something! Let's leverage the power of t
 If you run across an interesting blog post, article, nuggest of truth, update the documents on Github!
 
 - [AZ-103: Microsoft Azure Administrator](./AZ-103)
-- [Exam AZ-300: Microsoft Azure Architect Technologies](./AZ-300)
+- [AZ-300: Microsoft Azure Architect Technologies](./AZ-300)
 - [AZ-301](./AZ-301)
 - [AZ-500](./AZ-500)
 - [AZ-900](./AZ-900)
