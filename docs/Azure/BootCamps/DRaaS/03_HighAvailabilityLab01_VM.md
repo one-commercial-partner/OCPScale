@@ -65,4 +65,4 @@ Use the following PowerShell command to delete the resources we created in this 
 
 
 
-[Back](../)
+[Back](index.md)

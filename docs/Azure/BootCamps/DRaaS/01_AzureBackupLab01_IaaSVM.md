@@ -98,4 +98,4 @@ It can take several minutes for the Recovery Services vault to be created. Monit
 6.	After identifying the files and copying them to a local storage location, remove (or unmount) the additional drives. To unmount the drives, on the File Recovery menu in the Azure portal, click Unmount Disks.
 
 
-[Back](../)
+[Back](index.md)

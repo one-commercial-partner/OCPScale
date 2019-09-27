@@ -90,4 +90,4 @@ In this lab you are going to simulate a backup of an on-premises VM or physical 
 4.	Switch back to Microsoft Azure Backup and click **Unmount** to unmount the recovery volume.  Choose **Yes**.
 
 
-[Back](../)
+[Back](index.md)
