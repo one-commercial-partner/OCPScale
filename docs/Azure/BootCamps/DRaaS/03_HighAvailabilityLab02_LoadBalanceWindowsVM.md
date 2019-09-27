@@ -34,21 +34,21 @@ In this lab you will:
 ## Task 3 - Create a load balancer
 1. Create a frontend IP pool named **myFrontEndPool** and attach it  the **myPublicIP** address:
 
-  ```
-  $frontendIP = New-AzLoadBalancerFrontendIpConfig -Name "FrontEndPool" -PublicIpAddress $publicIP
-  ```
+    ```
+    $frontendIP = New-AzLoadBalancerFrontendIpConfig -Name "FrontEndPool" -PublicIpAddress $publicIP
+    ```
 
 2. Create a backend address pool:
 
-  ```
-  $backendPool = New-AzLoadBalancerBackendAddressPoolConfig -Name "BackEndPool"
-  ```
+    ```
+    $backendPool = New-AzLoadBalancerBackendAddressPoolConfig -Name "BackEndPool"
+    ```
 
 3. Create the load balancer itself:
 
-  ```
-  $lb = New-AzLoadBalancer -ResourceGroupName "LBRG" -Name "LoadBalancer" -Location "EastUS" -FrontendIpConfiguration $frontendIP -BackendAddressPool $backendPool
-  ```
+    ```
+    $lb = New-AzLoadBalancer -ResourceGroupName "LBRG" -Name "LoadBalancer" -Location "EastUS" -FrontendIpConfiguration $frontendIP -BackendAddressPool $backendPool
+    ```
 
 ## Task 4 - Create a health probe
 

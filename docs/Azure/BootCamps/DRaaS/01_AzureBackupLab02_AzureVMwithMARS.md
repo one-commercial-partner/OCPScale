@@ -66,7 +66,7 @@ In this lab you are going to simulate a backup of an on-premises VM or physical 
     ```
 
 4.	Monitor the file copy process while the files are copied over.  After a few files you can move on to the next section of the lab.
- 
+
 ## Install the agent
 
 1.	From your remote desktop Logon to the Azure Portal https://portal.azure.com and then select your Recovery Services Vault called `MyVault` . You can find it by clicking on the search box at the top of the portal.
