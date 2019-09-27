@@ -1,4 +1,4 @@
-#Understand security, privacy, compliance, and trust (25-30%)
+# Understand security, privacy, compliance, and trust (25-30%)
 
 ## Understand securing network connectivity in Azure
 
