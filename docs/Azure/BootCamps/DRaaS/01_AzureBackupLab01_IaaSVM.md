@@ -62,7 +62,7 @@ We need a source environments to backup.
 3.	Enter the following command:
     * `Robocopy z:\ c:\ignite brk22* /z`
 4.	Monitor the file copy process while the files are copied over.  After a few files you can move on to the next section of the lab.
- 
+
 ### Create a recovery services vault
 
 To back up your files and folders, you need to create a Recovery Services vault in the region where you want to store the data. 
@@ -78,7 +78,7 @@ To back up your files and folders, you need to create a Recovery Services vault 
 5.	When the alert appears, pin the vault to the dashboard.
 
     > It can take several minutes for the Recovery Services vault to be created. Monitor the status notifications in the upper right-hand area of the portal. Once your vault is created, it appears in the list of Recovery Services vaults. If after several minutes you don't see your vault, click Refresh.
- 
+
 ### Kickoff a Backup
 
 1.	Open the **Recovery Services** vault then click **Backup** under **Getting Started**.
@@ -100,18 +100,17 @@ To back up your files and folders, you need to create a Recovery Services vault 
 1.	Within your RDP session to **SourceVM** open **File Explorer**.
 2.	Expand This PC, then Windows C:, then ignite.
 3.	Delete all the files within the ignite directory.
- 
+
 ### Restore Data
 
 1.	Within the backup vm surf to https://portal.azure.com and logon. 
 2.	Select Virtual Machines -> **SourceVM** -> **Backup** under **Operations**.
 3.	Click on **File Recovery**.   Select the `Latest` under **Select recovery point** and then **Download Executable**.
 4.	Click **Run** when prompted.  Paste the password to run the script from the portal into PowerShell.
- 
+
     > If you see that 0 recovery volumes have mounted, there was a problem with the process.  Open up Computer Management from Start/Windows Administrative tools.  Click on Disk Management.  Select the 126 GB partition on Disk 2 and assign a drive letter. Copy the files from the mount volume (typically the F: Drive) to c:\ignite.*
- 
+
 5.	Notice the actions taken to mount the volume. Copy the files back to **SourceVM** and then type Q to exit.
 6.	After identifying the files and copying them to a local storage location, remove (or unmount) the additional drives. To unmount the drives, on the File Recovery menu in the Azure portal, click Unmount Disks.
-
 
 [Back](index.md)
