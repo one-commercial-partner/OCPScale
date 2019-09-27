@@ -1,1 +1,0 @@
-# OCPScale Azure Content
