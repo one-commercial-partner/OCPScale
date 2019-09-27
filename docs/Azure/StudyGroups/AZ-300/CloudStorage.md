@@ -35,3 +35,5 @@
 | implement code that addresses transient state | [https://docs.microsoft.com/en-us/azure/architecture/best-practices/transient-faults](https://docs.microsoft.com/en-us/azure/architecture/best-practices/transient-faults) |
 |   | [https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out](https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out) |
 |   | https://docs.microsoft.com/en-us/azure/architecture/resiliency/recovery-local-failures |
+
+[Back](index.md)

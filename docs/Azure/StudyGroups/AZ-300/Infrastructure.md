@@ -114,3 +114,5 @@ _May include but not limited to:_ Configure private and public IP addresses, net
 |   | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization) |
 |   | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-device-writeback](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-device-writeback) |
 |   | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-pta](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-pta) |
+
+[Back](index.md)

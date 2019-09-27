@@ -31,3 +31,5 @@
 |   | [https://docs.microsoft.com/en-us/azure/key-vault/key-vault-whatis](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-whatis) |
 |   | [https://docs.microsoft.com/en-us/rest/api/keyvault/](https://docs.microsoft.com/en-us/rest/api/keyvault/)Review each command (e.g. create, read, etc.) in the list |
 |   | [https://docs.microsoft.com/en-us/azure/key-vault/key-vault-developers-guide](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-developers-guide) |
+
+[Back](index.md)

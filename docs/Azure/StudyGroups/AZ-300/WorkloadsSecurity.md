@@ -85,3 +85,5 @@ _Note:  Given how vague the topics are in this objective domain, we recommend th
 |   | [https://docs.microsoft.com/en-us/azure/role-based-access-control/tutorial-custom-role-powershell](https://docs.microsoft.com/en-us/azure/role-based-access-control/tutorial-custom-role-powershell) |
 | configure access to Azure resources by assigning roles | [https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal#add-a-role-assignment](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal#add-a-role-assignment) |
 | configure management access to Azure | [https://docs.microsoft.com/en-us/azure/role-based-access-control/conditional-access-azure-management](https://docs.microsoft.com/en-us/azure/role-based-access-control/conditional-access-azure-management) |
+
+[Back](index.md)

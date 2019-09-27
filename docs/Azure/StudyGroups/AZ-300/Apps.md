@@ -27,3 +27,5 @@
 | implement an application that runs on an Azure Container Instance | [https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-deploy-app](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-deploy-app) |
 | manage container settings by using code | [https://docs.microsoft.com/en-us/azure/container-instances/container-instances-update](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-update) |
 |   | [https://docs.microsoft.com/en-us/azure/container-instances/container-instances-container-groups](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-container-groups) |
+
+[Back](index.md)
