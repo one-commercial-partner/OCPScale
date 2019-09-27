@@ -10,7 +10,6 @@ Additionally, if you see something, say something! Let's leverage the power of t
 
 If you run across an interesting blog post, article, nuggest of truth, update the documents on Github!
 
-
 - [Deploy and configure infrastructure (25-30%)](Infrastructure.md)
 - [Implement workloads and security (20-25%)](WorkloadsSecurity.md)
 - [Create and deploy apps (5-10%)](Apps.md)
