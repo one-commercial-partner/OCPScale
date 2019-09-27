@@ -7,7 +7,6 @@ In this exercise you are going to get practical experience designing a BCDR solu
 
 <!-- TOC -->
 
-- [Azure DR as a Service Boot Camp](#azure-dr-as-a-service-boot-camp)
 - [DRaaS Boot Camp Hackathon](#draas-boot-camp-hackathon)
 - [Business continuity and disaster recovery whiteboard design session student guide](#business-continuity-and-disaster-recovery-whiteboard-design-session-student-guide)
   - [Abstract](#abstract)

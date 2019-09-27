@@ -11,10 +11,13 @@ When choosing a server for running Azure Backup Server, it is recommended you st
 Protecting workloads with Azure Backup Server has many nuances. The article, [Install DPM as an Azure virtual machine](https://technet.microsoft.com/library/jj852163.aspx), helps explain these nuances. Before deploying the machine, read this article completely.
 
 ## Setup an IaaS Domain Controller via JSON Template
+
 We will setup an IaaS VM with Active Directory via a JSON template from GitHub.  Although this domain controller is the in the cloud, we’ll use it to simulate an on-prem domain controller.
 
-*Please note this task will take approximately **30 minutes** to complete.*
+> Please note this task will take approximately **30 minutes** to complete.
+
 ### Task 1 - Install the domain controller
+
 1.	Logon to your Azure subscription.
 2.	Surf to https://azure.microsoft.com/en-us/resources/templates/active-directory-new-domain/ 
 3.	Select **Deploy to Azure**. 
@@ -33,8 +36,11 @@ We will setup an IaaS VM with Active Directory via a JSON template from GitHub. 
 6.	The deployment and build of the VM will take upwards of 30 minutes depending on several factors.  Don’t forget that we’re not only spinning up a VM but we are also installing and configuring DNS and running DCPromo.  
 
 ## Setup a VM for MABS
+
 MABS needs to run on it's own dedicated VM.
+
 ### Task 2 - Build MABS VM
+
 1.	Select **+ Create a resource** found on the upper, left corner of the Azure portal.
 2.	Select **Windows Server 2016 Datacenter**.
 3.	Enter, or select, the following information, accept the defaults for the remaining settings:
@@ -58,7 +64,9 @@ MABS needs to run on it's own dedicated VM.
 9.	Once validation passes click **Create**.
 
 ## Join the MABS VM to the domain
+
 ### Task 3 - Check the DNS Setting
+
 1.	Connect to the **MABS** VM and logon. **Home/Virtual machines/MABS/Connect.**
 2.	If prompted, click **No** on the Network discovery blade.
 3.	Depending on which region you chose for setup, the **MABS**  VM may or may not have the DNS server set to a value we need.
@@ -66,6 +74,7 @@ MABS needs to run on it's own dedicated VM.
 6.	If the DNS Server is set to 10.0.0.4, close the Command Prompt window and continue to the  **Task 5 - Join the Domain.**
 
 ### Task 4 - Configure DNS
+
 1.	Within **Server Manager**, click on **Local Server**.
 2.	Click on **IPv4 address assigned by DHCP, IPv6 enabled setting** for the Ethernet connection.
 3.	Right-click on the network adapter and choose **Properties**.
@@ -75,6 +84,7 @@ MABS needs to run on it's own dedicated VM.
 7.	Once the VM is successfully restarted, connect to the **MABS** VM and logon.
 
 ### Task 5 - Join the Domain
+
 1.	Within **Server Manager**, click on **Local Server**.
 2.	Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
 3.	Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
@@ -82,6 +92,7 @@ MABS needs to run on it's own dedicated VM.
 5.	Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
 ### Task 6 - Install the required MABS Components
+
 1. Once the MABS VM is restarted complete the following:
     * RDP into the desktop and logon with your **domain credentials**, not your *MABS\username* account.
     * Click the **Windows Start** button,  then select **Control Panel**.
@@ -91,7 +102,9 @@ MABS needs to run on it's own dedicated VM.
 5. Open an administrative PowerShell window and enter this command: **Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Manage**
 
 ### Task 7 - Create a MABS Service Account
+
 We are going to create a service account that MABS will use.
+
 1.	Connect to the adVM virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AZDCRG / adVM / Connect**.  
 2.	Click on **Download RDP File**.
 3.	Logon with the fully qualified credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
@@ -109,6 +122,7 @@ We are going to create a service account that MABS will use.
 11.	Minimize the RDP window.
 
 ### Task 8 - Setup MABS
+
 1.	Once the required components are installed, complete the following:
     * Disable IE ESC in Server Manager
     * Logon to the Azure Portal https://portal.azure.com
@@ -134,24 +148,28 @@ We are going to create a service account that MABS will use.
 18. Generate a passphrase and save it to the Desktop folder by clicking **Browse** and then select **Desktop** under **This PC**.  Click **Next**.
 19. The **Microsoft Update Opt-In** will process and several steps will complete.
 
-*Please note that it may take upwards of 30 minutes to install the required components.*
+> Please note that it may take upwards of 30 minutes to install the required components.
 
 When the installation step has completed, the product's desktop icons will have been created as well. Just double-click the icon to launch the product.
 
 Notice the final status message:
 
-*Data Protection Manager installed successfully.  You need to restart your computer to incorporate the changes made by DPM Setup.*
+```
+Data Protection Manager installed successfully.  You need to restart your computer to incorporate the changes made by DPM Setup.
+```
 
 DPM and Azure Backup server share the same code base, with the only difference being:
-1. MABS does not require a SYstem Center License
+
+1. MABS does not require a System Center License
 2. MABS does not support local tape drives
 3. MABS requires an Azure subscription.
 
 Restart the server once setup is complete.
 
-
 ## Task 9 - Open Windows Firewall
+
 We need to allow communications between our source VM (ADVM) and the MABS Server.  Under normal circumstances you would open the appropriate ports, but for this lab we are simply disabling the firewall.
+
 1. Connect to ADVM via RDP.
 2. In Server Manager choose **Local Server**.
 3. Click on Windows Firewall **DOmain:On**.
@@ -160,6 +178,7 @@ We need to allow communications between our source VM (ADVM) and the MABS Server
 
 
 ## Task 10 - Install an agent
+
 Once your MABS server reboots, logon and complete the following steps.
 
 1. Click on the **Microsoft Azure Backup Server** icon from the desktop.
@@ -172,6 +191,7 @@ Once your MABS server reboots, logon and complete the following steps.
 8. Monitor the progress and then click **Close**
 
 ## Task 11 - Add Disks
+
 Your MABS Server needs local storage to save backup files.  Please complete the following steps to allocate storage.
 
 1. **Right-click** the Windows Start button and click **Disk Management**.
