@@ -162,3 +162,6 @@ Let's examine our network topology now that we have peering enabled.
 1.  Click on **Monitor** from the left hand pane.
 2. Under **Insights** select **Network**, then under **Monitoring** choose **Topology**.
 3. User **Resource Group** select **MyVNets**.  In a moment a conceptual network diagram should be generated showing all your vNets and subnets including the new peerings between vNet1 and vNet2.
+
+
+[Back](index.md)

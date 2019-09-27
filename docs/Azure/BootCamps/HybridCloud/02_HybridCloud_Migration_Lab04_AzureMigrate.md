@@ -8,3 +8,6 @@ Please complete the following steps:
 2.	Search for “azure migrate”
 3.	Start **Assessing on-premises VMware environments with Azure Migrate
 SP-AZ100085** by clicking **Launch**.
+
+
+[Back](index.md)

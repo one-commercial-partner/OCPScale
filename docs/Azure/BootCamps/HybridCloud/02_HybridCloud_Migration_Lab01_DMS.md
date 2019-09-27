@@ -137,3 +137,6 @@ Let's make sure that your data got migrated and looks right.  We're going to con
 5. Click on **New Query** and enter the following:
     * select TOP (1000) [zip] FROM MySampleDatabase.dbo.sampledata
 5. Click **Execute**.  This query will search the Azure SQL database and display the first 1000 zip codes.
+
+
+[Back](index.md)

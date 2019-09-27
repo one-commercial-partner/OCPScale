@@ -36,3 +36,5 @@ With an initiative definition, you can group several policy definitions to achie
 1. Select **Compliance** in the left side of the Azure Policy page.
 2. Locate the **Enforce tag and its value** initiative. It's likely still in Compliance state of `Not started` or `Non-compliant`. Click on the initiative to get full details on the progress of the assignment.
 
+
+[Back](index.md)

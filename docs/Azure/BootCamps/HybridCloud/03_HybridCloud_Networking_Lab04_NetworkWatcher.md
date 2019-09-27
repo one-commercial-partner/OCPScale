@@ -22,3 +22,6 @@ To test network communication with Network Watcher, first enable a network watch
 6)	Click on the .cap file it will display the blob properties.  Download the file to your documents folder on your local computer.
 7)	Install network monitor from the following: https://www.microsoft.com/en-US/download/details.aspx?id=4865 
 8)	Launch Network Monitor and open the capture file from your Documents folder.  Examine the contents of your packet capture session.
+
+
+[Back](index.md)

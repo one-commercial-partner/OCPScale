@@ -8,3 +8,4 @@ Attempt to configure this on your own, otherwise follow these instructions.  You
 * Configure the VNet peering connection in each spoke to use remote gateways.
 * Configure all VNet peering connections to allow forwarded traffic.  
  
+[Back](index.md)

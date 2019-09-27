@@ -58,4 +58,7 @@ You will present your solution design with a goal of getting approval from the c
 ## Azure Hackathon Diagram
 Here's a diagram of the existing Contoso and Small Beans  architecture.
 
-![Azure Hackathon Diagram](https://github.com/JazzyWagdaddy/HybridCloudBootCamp/blob/master/AzureHackathon.png)
+![Azure Hackathon Diagram](AzureHackathon.png)
+
+
+[Back](index.md)

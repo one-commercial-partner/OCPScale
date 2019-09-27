@@ -69,3 +69,6 @@ Since we have enabled traffic management on a global versus regional perspective
 4) Click on **MyPrimaryEndpoint**, select **Disabled**, the **Save**.
 5) In the Azure portal swith to your Traffic Manager profile and notice that **MyPrimaryEndpoint** is now **Disabled**.
 6) Return to https://www.whatsmydns.net and click **Search**, noticing the changes on which endpoint(s) are now responding.
+
+
+[Back](index.md)
