@@ -133,10 +133,8 @@ Close Internet Explorer.
 8. Minimize your RDP window.
  
 ## Task 10 - Validate Synchronization 
-1.	Switch to the Azure portal and examine your Azure AD Directory by clicking on the directory and choosing All users.   You may need to switch directories from the Default Directory to your newly created directory.
+
+1. Switch to the Azure portal and examine your Azure AD Directory by selecting the xxxx.onmicrosoft.com  Directory from the upper right hand corner of the portal.
 2. Note that you should see accounts sourced from Active Directory that have synchronized to Azure Active Directory (e.g. On Prem).
 
-### Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory!!
- 
-
-
+### Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory
