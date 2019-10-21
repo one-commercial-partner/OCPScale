@@ -74,11 +74,8 @@ Configure DNS
 12.	You will lose connection to the ADConnect VM, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the ADConnect VM.
 13.	Once the VM is successfully restarted, connect to the ADConnect VM and logon as ADAdmin.
 
-<<<<<<< HEAD
-### Join the Domain 
-=======
+
 ## Task 5 - Join the Domain 
->>>>>>> ef8a7563e13b3130865de08e25d9666d7565cf13
 1.	Within **Server Manager**, click on **Local Server**.
 2.	Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
 3.	Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
