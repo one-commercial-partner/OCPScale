@@ -6,18 +6,19 @@ Otherwise you will receive an  error in the portal if you select an unsupported 
  
 ## Task 1 - Setup an IaaS Domain Controller via JSON Template
 We will setup an IaaS VM with Active Directory via a JSON template from GitHub.  Although this domain controller is the in the cloud, we’ll use it to simulate an on-prem domain controller.
-Install the domain controller
+
+### Install the domain controller
 1.	Logon to your Azure subscription.
 2.	Surf to https://azure.microsoft.com/en-us/resources/templates/active-directory-new-domain/ 
-3.	Select **Deploy to Azure**. 
+3.	Select **Deploy to Azure**. The Azure Portal will open and a template will appear.
 4.	Enter the following information:
     * Resource Group: Create New: **AZDCRG**
     * Location: Pick a supported location
-    * Admin Username: **yourname** *you should write this down*
-    * Admin Password: **pickyourown** *you should write this down*
-    * Domain name:  Enter a FQDN such as mydomainname.com and keep the name shorter than 15 characters (that’s a NetBIOS restriction)
+    * Admin Username: Enter **yourname** *(you should write this down)*
+    * Admin Password: Enter **Complex.Password** *(you should write this down)*
+    * Domain name:  Enter a FQDN such as mydomainname.com and keep the name shorter than 15 characters (that’s a NetBIOS restriction).
     * DNS Prefix: *pickyourown* (e.g. use the letter “a” and then the last four digits of your cell phone, a1234)
-5.	Scroll down, click **I agree to the terms and conditions stated above** and then **Purchase**.  Monitor the deployment by clicking on the “Deploying Template deployment” tile within the Azure Portal.
+5.	Scroll down and select  **I agree to the terms and conditions stated above** and then **Purchase**.  Monitor the deployment by clicking on the “Deploying Template deployment” tile within the Azure Portal.
     * Confirm that you don’t have any validation errors.  If you do, correct them before moving forward. 
     * If the deployment fails, examine the logs to see what the root cause is.
     * You’ll need to delete the Resource Group before you try running the template again. 
@@ -42,24 +43,26 @@ Install the domain controller
 11.	Minimize the RDP window.
  
 ## Task 3 - Create a virtual machine
-We are creating a small VM to be used later to host the Azure AD Connector service.
+We are creating a small VM to be used later to host Azure AD Connect.
 1.	Return to the Azure portal and click the **Create a Resource** button (the Plus) found on the upper left-hand corner of the Azure portal.
-2.	Select **Compute** then select **Windows Server 2016 Datacenter**.
-3.	Fill out the virtual machine Basics form and click Ok:
+2.	Select **Compute** then select **Virtual machine**.
+3.	On the Basics tab complete the following:
+    * Resource Group: **AZDCRG**
     * Virtual machine name: **ADConnect**
-    * Size: Choose anything with at least 2 vCPUs and 7GB RAM such as a **DS2_v2**
+    * Region: Choose the same region as your domain controller
+    * Availability options: No infrastructure redundancy required
+    * Image: Windows Server 2016 Datacenter 
+    * Size: Choose **DS2_v2**
     * Username: **ADAdmin**
     * Password: `Complex.Password`
     * Confirm Password: `Complex.Password`
-    * Use existing Resource Group: **AZDCRG**
     * Public inbound ports: **Allow selected ports**
     * Select inbound ports: **RDP (3389)** 
-4.	Click **Next: Disks >**  Review the settings and click **Review + create**.
-5.	Click **Create**.  After  validation passes, you monitor deployment status. It should take less than 10 minutes to spin up the VM.
-7.	When the VM has been created, the status changes from **Your deployment is complete**.
- 
+4.	Click **Review + create** and then **Create**.   After validation passes, monitor your deployment status. It should take less than 10 minutes to spin up the VM.
+
 ## Task 4 - Join the ADConnect VM to the domain
-1.	Connect to the **ADConnect VM** and logon as ADAdmin. **Microsoft Azure / Resource Groups / AZDCRG / ADConnect / Connect.**
+
+1. Connect to the **ADConnect** virtual machine and logon as ADAdmin. **Microsoft Azure / Resource Groups / AZDCRG / ADConnect / Connect.**
 2.	If prompted, click **No** on the Network discovery blade.
 3.	Depending on which region you chose for setup, the ADConnect VM may or may not have the DNS server set to a value we need.
 4.	The DNS Server on ADCONNECT may not be set to see the domain controller (adVM), so we need to check that setting.  
@@ -74,11 +77,8 @@ Configure DNS
 12.	You will lose connection to the ADConnect VM, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the ADConnect VM.
 13.	Once the VM is successfully restarted, connect to the ADConnect VM and logon as ADAdmin.
 
-<<<<<<< HEAD
-### Join the Domain 
-=======
-## Task 5 - Join the Domain 
->>>>>>> ef8a7563e13b3130865de08e25d9666d7565cf13
+## Task 5 - Join the Domain
+
 1.	Within **Server Manager**, click on **Local Server**.
 2.	Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
 3.	Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
