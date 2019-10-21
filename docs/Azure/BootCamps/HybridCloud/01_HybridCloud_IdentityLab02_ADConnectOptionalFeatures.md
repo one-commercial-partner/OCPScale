@@ -9,7 +9,7 @@ Otherwise you will receive an  error in the portal if you select an unsupported 
 
 ## Task 1: Enable the feature
 
-### Enable Pass-through Authentication through Azure AD Connect.
+### Enable Pass-through Authentication through Azure AD Connect
 
 1. On your ADConnect VM open **Azure AD Connect**.
 2. Select **Configure** then **Change user sign-in task**, and then select **Next**.
@@ -37,7 +37,7 @@ If you plan to deploy Pass-through Authentication in a production environment, y
 We are creating a small VM to host the Azure AD Connect Authentication Agent.
 
 1. Return to the Azure portal and click the **Create a Resource** button (the Plus) found on the upper left-hand corner of the Azure portal.
-2. Select **Compute** then select **Virtual machine**.
+2. Select **Compute** then select **Virtual machine**. (Note:  The Azure Portal is intuiative and you may now see a choice named **Windows Server 2016 datacenter** under the **Popular** column.  You can choose this option however be mindful that the steps below are somewhat different.)
 3. On the Basics tab complete the following:
     * Resource Group: **AZDCRG**
     * Virtual machine name: **ADConnect2**
@@ -78,11 +78,11 @@ We are creating a small VM to host the Azure AD Connect Authentication Agent.
 4. In the Windows Security box enter the AD Domain Admin credentials you specified in the template.
 5. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
-Repeat the previous steps and create a third VM named **ADConnect3**.
+### Repeat the previous steps and create a third VM named **ADConnect3**
 
 ### Install the Authentication Agent Software
 
-1. To download the latest version of the Authentication Agent (version 1.5.193.0 or later), sign in to the Azure Active Directory admin center with your tenant's global administrator credentials.
+1. Logon to ADConnect2. Sign in to the Azure Active Directory admin center (aka Azure Portal)  with your tenant's global administrator credentials (ADSYNC).
 2. Select **Azure Active Directory** in the left pane.
 3. Select **Azure AD Connect**, select **Pass-through authentication**, and then select **Download Agent**.
 4. Select the **Accept terms & download button**.
