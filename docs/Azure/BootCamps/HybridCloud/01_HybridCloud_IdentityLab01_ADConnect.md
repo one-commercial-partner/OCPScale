@@ -72,7 +72,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 2. If prompted, click **No** on the Network discovery blade.
 3. Depending on which region you chose for setup, the ADConnect VM may or may not have the DNS server set to a value we need.
 4. The DNS Server on ADCONNECT may not be set to see the domain controller (adVM), so we need to check that setting.  
-5. Open a Command prompt and enter ipconfig /all | more.
+5. Open a **Command prompt** and enter *ipconfig /all*.
 6. If the DNS Server is set to 10.0.0.4 (the private IP address of adVM), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** tasks.
 
 ### Configure DNS
