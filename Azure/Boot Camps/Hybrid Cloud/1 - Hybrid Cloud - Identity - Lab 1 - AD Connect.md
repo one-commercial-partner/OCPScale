@@ -66,16 +66,19 @@ We are creating a small VM to be used later to host Azure AD Connect.
 2.	If prompted, click **No** on the Network discovery blade.
 3.	Depending on which region you chose for setup, the ADConnect VM may or may not have the DNS server set to a value we need.
 4.	The DNS Server on ADCONNECT may not be set to see the domain controller (adVM), so we need to check that setting.  
-5.	Open a **Command prompt** and enter *ipconfig /all | more*.
-6.	If the DNS Server is set to 10.0.0.4, close the Command Prompt window and continue to Task 5 - Join the Domain.
-Configure DNS
-7.	Within **Server Manager**, click on **Local Server**.
-8.	Click on **IPv4 address assigned by DHCP, IPv6 enabled setting** for the Ethernet connection.
-9.	Right-click on the network adapter and choose **Properties**.
-10.	Select **Internet Protocol Version 4 (TCP/IPv4)** and then click **Properties**.
-11.	Select the radio button for **Use the following DNS Server addresses:** and Set the DNS server to **10.0.0.4** and click **OK** and then **Close**.
-12.	You will lose connection to the ADConnect VM, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the ADConnect VM.
-13.	Once the VM is successfully restarted, connect to the ADConnect VM and logon as ADAdmin.
+5. Open a **Command prompt** and enter *ping advm*.  If you get a positive reply then continue to task 5, otherwise proceed to the **Configure DNS** tasks.
+5. From the Command prompt enter *ipconfig /all | more*.
+6. If the DNS Server is set to 10.0.0.4, close the Command Prompt window and continue to Task 5 - Join the Domain.
+
+### Configure DNS
+
+1.	Within **Server Manager**, click on **Local Server**.
+2.	Click on **IPv4 address assigned by DHCP, IPv6 enabled setting** for the Ethernet connection.
+3.	Right-click on the network adapter and choose **Properties**.
+4.	Select **Internet Protocol Version 4 (TCP/IPv4)** and then click **Properties**.
+5.	Select the radio button for **Use the following DNS Server addresses:** and Set the DNS server to **10.0.0.4** and click **OK** and then **Close**.
+6.	You will lose connection to the ADConnect VM, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the ADConnect VM.
+7.	Once the VM is successfully restarted, connect to the ADConnect VM and logon as ADAdmin.
 
 ## Task 5 - Join the Domain
 
