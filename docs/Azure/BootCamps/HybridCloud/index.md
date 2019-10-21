@@ -9,6 +9,7 @@ Here are the lab files for the  boot camp.  They are broken down into four disti
 
 
 - [1 - Hybrid Cloud - Identity - Lab 1 - AD Connect](01_HybridCloud_IdentityLab01_ADConnect.md)
+- [1 - Hybrid Cloud - Identity - Lab 2 - AD Connect Optional Features](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/01_HybridCloud_IdentityLab02_ADConnectOptionalFeatures.md)
 - [2 - Hybrid Cloud - Migration - Lab 1 - DMS](02_HybridCloud_Migration_Lab01_DMS.md)
 - [2 - Hybrid Cloud - Migration - Lab 2 - ASR](02_HybridCloud_Migration_Lab02_ASR.md)
 - [2 - Hybrid Cloud - Migration - Lab 3 - Azure Policy](02_HybridCloud_Migration_Lab03_AzurePolicy.md)
