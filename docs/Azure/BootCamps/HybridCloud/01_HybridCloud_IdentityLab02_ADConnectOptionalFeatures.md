@@ -7,40 +7,82 @@
 If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you are limited to a specific set of Microsoft Azure regions that you can use. Please use either the **East US, South Central US, West Europe, Southeast Asia, West US 2, or West Central US locations**.
 Otherwise you will receive an  error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
 
-## Step 2: Enable the feature
+## Task 1: Enable the feature
 
 ### Enable Pass-through Authentication through Azure AD Connect.
 
-1. Select the Change user sign-in task on Azure AD Connect, and then select Next. 
-2. Select Pass-through Authentication as the sign-in method. On successful completion, a Pass-through Authentication Agent is installed on the same server as Azure AD Connect and the feature is enabled on your tenant.
+1. On your ADConnect VM open **Azure AD Connect**.
+2. Select **Configure** then **Change user sign-in task**, and then select **Next**.
+3. Logon and then select **Pass-through Authentication** as the sign-in method. Enter the credentials for you AD domain and click **Next**.
+4. Click **Configure**. On successful completion, a Pass-through Authentication Agent is installed on the same server as Azure AD Connect and the feature is enabled on your tenant.  Click **Exit** when complete.
 
- ### Important
-Pass-through Authentication is a tenant-level feature. Turning it on affects the sign-in for users across all the managed domains in your tenant.
+**Pass-through Authentication is a tenant-level feature. Turning it on affects the sign-in for users across all the managed domains in your tenant.**
 
-## Step 3: Test the feature
+## Task 2: Test Pass-through Authentication
 
 Follow these instructions to verify that you have enabled Pass-through Authentication correctly:
 
-1. Sign in to the Azure Active Directory admin center with the global administrator credentials for your tenant.
-2. Select Azure Active Directory in the left pane.
-3. Select Azure AD Connect.
+1. Sign in to the Azure Active Directory admin center with the global administrator credentials for your tenant (e.g. adsync).
+2. Select **Azure Active Directory** in the left pane.
+3. Select **Azure AD Connect**.
 4. Verify that the Pass-through authentication feature appears as Enabled.
 5. Select Pass-through authentication. The Pass-through authentication pane lists the servers where your Authentication Agents are installed.
 
-## Step 4: Ensure high availability
+## Task 3: Ensure high availability
 
 If you plan to deploy Pass-through Authentication in a production environment, you should install additional standalone Authentication Agents. Install these Authentication Agent(s) on server(s) other than the one running Azure AD Connect. This setup provides you with high availability for user sign-in requests.
 
-### Important
+### Create a second and third virtual machine
 
-In production environments, we recommend that you have a minimum of 3 Authentication Agents running on your tenant. There is a system limit of 40 Authentication Agents per tenant. And as best practice, treat all servers running Authentication Agents as Tier 0 systems (see reference).
-Installing multiple Pass-through Authentication Agents ensures high availability, but not deterministic load balancing between the Authentication Agents. To determine how many Authentication Agents you need for your tenant, consider the peak and average load of sign-in requests that you expect to see on your tenant. As a benchmark, a single Authentication Agent can handle 300 to 400 authentications per second on a standard 4-core CPU, 16-GB RAM server.
-To estimate network traffic, use the following sizing guidance:
-Each request has a payload size of (0.5K + 1K * num_of_agents) bytes; i.e., data from Azure AD to the Authentication Agent. Here, "num_of_agents" indicates the number of Authentication Agents registered on your tenant.
-Each response has a payload size of 1K bytes; i.e., data from the Authentication Agent to Azure AD.
-For most customers, three Authentication Agents in total are sufficient for high availability and capacity. You should install Authentication Agents close to your domain controllers to improve sign-in latency.
-To begin, follow these instructions to download the Authentication Agent software:
-To download the latest version of the Authentication Agent (version 1.5.193.0 or later), sign in to the Azure Active Directory admin center with your tenant's global administrator credentials.
-Select Azure Active Directory in the left pane.
-Select Azure AD Connect, select Pass-through authentication, and then select Download Agent.
-Select the Accept terms & download button.
+We are creating a small VM to host the Azure AD Connect Authentication Agent.
+
+1. Return to the Azure portal and click the **Create a Resource** button (the Plus) found on the upper left-hand corner of the Azure portal.
+2. Select **Compute** then select **Virtual machine**.
+3. On the Basics tab complete the following:
+    * Resource Group: **AZDCRG**
+    * Virtual machine name: **ADConnect2**
+    * Region: Choose the same region as your domain controller
+    * Availability options: No infrastructure redundancy required
+    * Image: Windows Server 2016 Datacenter
+    * Size: Choose **DS2_v2**
+    * Username: **ADAdmin**
+    * Password: `Complex.Password`
+    * Confirm Password: `Complex.Password`
+    * Public inbound ports: **Allow selected ports**
+    * Select inbound ports: **RDP (3389)**
+4. Click **Review + create** and then **Create**.   After validation passes, monitor your deployment status. It should take less than 10 minutes to spin up the VM.
+
+### Join ADConnect2 to the domain
+
+1. Connect to the **ADConnect2** virtual machine and logon as ADAdmin. **Microsoft Azure / Resource Groups / AZDCRG / ADConnect2 / Connect.**
+2. If prompted, click **No** on the Network discovery blade.
+3. Depending on which region you chose for setup, the ADConnect2 virtual machine may or may not have the DNS server set to a value we need.
+4. The DNS Server on ADCONNECT2 may not be set to see the domain controller (adVM), so we need to check that setting.  
+5. Open a **Command prompt** and enter *ipconfig /all*.  If the DNS Server is set to 10.0.0.4 (the private IP address of adVM), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
+
+### Configure DNS
+
+1. Within **Server Manager**, click on **Local Server**.
+2. Click on **IPv4 address assigned by DHCP, IPv6 enabled setting** for the Ethernet connection.
+3. Right-click on the network adapter and choose **Properties**.
+4. Select **Internet Protocol Version 4 (TCP/IPv4)** and then click **Properties**.
+5. Select the radio button for **Use the following DNS Server addresses:** and Set the DNS server to **10.0.0.4** and click **OK** and then **Close**.
+6. You will then lose connection to the ADConnect2 virtual machine, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the ADConnect VM.
+7. Once the VM is successfully restarted, connect to the ADConnect2 virtual machine and logon as ADAdmin.
+
+### Join the Domain
+
+1. Within **Server Manager**, click on **Local Server**.
+2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
+3. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
+4. In the Windows Security box enter the AD Domain Admin credentials you specified in the template.
+5. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
+
+Repeat the previous steps and create a third VM named **ADConnect3**.
+
+### Install the Authentication Agent Software
+
+1. To download the latest version of the Authentication Agent (version 1.5.193.0 or later), sign in to the Azure Active Directory admin center with your tenant's global administrator credentials.
+2. Select **Azure Active Directory** in the left pane.
+3. Select **Azure AD Connect**, select **Pass-through authentication**, and then select **Download Agent**.
+4. Select the **Accept terms & download button**.
