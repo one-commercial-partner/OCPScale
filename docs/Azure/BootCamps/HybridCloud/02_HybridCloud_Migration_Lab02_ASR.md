@@ -102,7 +102,7 @@ This task is the normal starting point for a typical lift and shift migration as
 
 A test failover executes a failover but does not make the secondary or migrated VM active.  A drill validates your replication strategy without data loss or downtime and doesn't affect your production environment.
 
-1. Click the **Test Failover** icon.
+1. In the Azure Portal navigate to Virtual machines, then IIS, then Disaster Recovery.  Click the **Test Failover** icon.
 2. In Test Failover, select **Latest (lowest RPO)** as the recovery point to use for the failover.  Note the following:
     * **Latest (lowest RPO):** Fails the VM over with the current state of the VM but requires some processing time.
     * **Latest processed (low RTO):** Fails the VM over to the latest recovery point that was processed by the Site Recovery service. The time stamp is shown. With this option, no time is spent processing data, so it provides a low RTO (Recovery Time Objective)
