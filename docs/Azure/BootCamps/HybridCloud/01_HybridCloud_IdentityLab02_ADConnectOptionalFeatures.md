@@ -57,7 +57,7 @@ We are creating a small VM to host the Azure AD Connect Authentication Agent.
 1. Connect to the **ADConnect2** virtual machine and logon as ADAdmin. **Microsoft Azure / Resource Groups / AZDCRG / ADConnect2 / Connect.**
 2. If prompted, click **No** on the Network discovery blade.
 3. Depending on which region you chose for setup, the ADConnect2 virtual machine may or may not have the DNS server set to a value we need.
-4. The DNS Server on ADCONNECT2 may not be set to see the domain controller (adVM), so we need to check that setting.  
+4. The DNS Server on ADConnect2 may not be set to see the domain controller (adVM), so we need to check that setting.  
 5. Open a **Command prompt** and enter *ipconfig /all*.  If the DNS Server is set to 10.0.0.4 (the private IP address of adVM), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
 
 ### Configure DNS
@@ -67,22 +67,28 @@ We are creating a small VM to host the Azure AD Connect Authentication Agent.
 3. Right-click on the network adapter and choose **Properties**.
 4. Select **Internet Protocol Version 4 (TCP/IPv4)** and then click **Properties**.
 5. Select the radio button for **Use the following DNS Server addresses:** and Set the DNS server to **10.0.0.4** and click **OK** and then **Close**.
-6. You will then lose connection to the ADConnect2 virtual machine, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the ADConnect VM.
-7. Once the VM is successfully restarted, connect to the ADConnect2 virtual machine and logon as ADAdmin.
+6. You will then lose connection to the ADConnect2 virtual machine, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the virtual machine.
 
 ### Join the Domain
 
-1. Within **Server Manager**, click on **Local Server**.
-2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
-3. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
-4. In the Windows Security box enter the AD Domain Admin credentials you specified in the template.
-5. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
-
-### Repeat the previous steps and create a third VM named **ADConnect3**
+1. Once the virtual machine is successfully restarted, connect to the ADConnect2 virtual machine and logon as ADAdmin.
+2. Within **Server Manager**, click on **Local Server**.
+3. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
+4. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
+5. In the Windows Security box enter the AD Domain Admin credentials you specified in the template.
+6. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
 ### Install the Authentication Agent Software
 
-1. Logon to ADConnect2. Sign in to the Azure Active Directory admin center (aka Azure Portal)  with your tenant's global administrator credentials (ADSYNC).
-2. Select **Azure Active Directory** in the left pane.
-3. Select **Azure AD Connect**, select **Pass-through authentication**, and then select **Download Agent**.
-4. Select the **Accept terms & download button**.
+1. Connect to the ADConnect2 virtual machine and logon as ADAdmin.
+2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators and Users.
+3. Sign in to the Azure Active Directory admin center (<http://portal.azure.com)>  with your tenant's global administrator credentials (ADSYNC).
+4. Select **Azure Active Directory** in the left pane.
+5. Select **Azure AD Connect**, select **Pass-through authentication**, and then select **Download**.
+6. Install the client:
+    * Select the **Accept terms & download** button and then click **Run**. Accept the default values for installation.
+    * When prompted enter your adsync credentials.
+    * Click **Close** when complete.
+7. Click **Refresh** on the Azure portal.  You'll notice that ADConnect2 now appears in the default group.
+
+## Repeat the previous steps to create and configure a third VM named **ADConnect3**
