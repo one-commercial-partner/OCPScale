@@ -18,7 +18,7 @@ Here are the lab files for the boot camps/Tech Intensity workshops.  They are br
     - [Networking Lab 4 - Network Watcher](03_HybridCloud_Networking_Lab04_NetworkWatcher.md)
     - [Networking Lab 5 - Hub and Spoke Challenge (Optional)](03_HybridCloud_Networking_Lab05_HubSpokeChallenge.md)
 4. Hackathon
-    [Hackathon Case Study](04_Hybrid_Cloud_Hackathon_CaseStudy.md)
+    - [Hackathon Case Study](04_Hybrid_Cloud_Hackathon_CaseStudy.md)
 
 If you see any changes that need to be made (typos, new steps, etc.) please submit an issue!
 
