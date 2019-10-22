@@ -2,7 +2,7 @@
 
 ## Pass Thru Authentication and High Availability
 
-### Complete this lab if time permits.
+### Complete this lab if time permits
 
 ## Before you Begin
 
