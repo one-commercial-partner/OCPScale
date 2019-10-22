@@ -12,8 +12,8 @@ Here are the lab files for the boot camps/Tech Intensity workshops.  They are br
     - [Migration Lab 3 - Azure Policy](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab03_AzurePolicy.md)
     - [Migration Lab 4 - Azure Migrate (Optional)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab04_AzureMigrate.md)
 3. Networking
-    - [Networking Lab 1 - Virtual Networks](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/03_HybridCloud_Networking_Lab02_LoadBalancer.md)
-    - [Networking Lab 2 - Load Balancer](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/03_HybridCloud_Networking_Lab01_VirtualNetworks.md)
+    - [Networking Lab 1 - Virtual Networks](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/03_HybridCloud_Networking_Lab01_VirtualNetworks.md)
+    - [Networking Lab 2 - Load Balancer](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/03_HybridCloud_Networking_Lab02_LoadBalancer.md)
     - [Networking Lab 3 - Traffic Manager](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/03_HybridCloud_Networking_Lab03_TrafficManager.md)
     - [Networking Lab 4 - Network Watcher](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/03_HybridCloud_Networking_Lab04_NetworkWatcher.md)
     - [Networking Lab 5 - Hub and Spoke Challenge (Optional)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/03_HybridCloud_Networking_Lab05_HubSpokeChallenge.md)
