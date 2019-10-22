@@ -31,17 +31,17 @@ We need to create some users in order to learn about application provisioning to
     * Under Groups click **0 groups selected**.  Highlight **Facebook Authorized** and then click **Select**
     * Click **Create**
 
-## Task 2 - Add an application from the Azure AD gallery
+## Task 2 - Add Facebook from the Azure AD gallery
 
 To add Facebook from the Azure AD gallery, follow these steps:
 
-1. Click **Azure Active Directory**, **Enterprise Application**, and then **+New  Application**, and enter the following:
+1. Click **Azure Active Directory**, **Enterprise Applications**, **+New  Application**, and enter the following:
     * Enter **Facebook** in the Add from the gallery section.
     * Select **Facebook** and then select Add to add the application. After a short period, you can see the application’s configuration pane.
 
 ## Task 3 - Configure Facebook for password single sign-on
 
-To configure single sign-on for an application, follow these steps:
+To configure single sign-on for Facebook, follow these steps:
 
 1. Select **Single sign-on** from the application’s menu on the left.
 2. Select **Password-based** Sign-on mode and then click **Save**.
