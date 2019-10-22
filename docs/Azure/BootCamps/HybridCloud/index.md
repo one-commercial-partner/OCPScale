@@ -9,7 +9,7 @@ Here are the lab files for the  boot camp.  They are broken down into four disti
 
 - [Identity Lab 1 - AD Connect Infrastructure Setup](01_HybridCloud_IdentityLab01_ADConnect.md)
 - [Identity Lab 2 - AD Connect High Availability (Optional)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/01_HybridCloud_IdentityLab02_ADConnectOptionalFeatures.md)
-- [Identity Lab 3 - AD Connect Publishing a SSO Application(Optional)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/01_HybridCloud_IdentityLab03_SSOApp(Optional).md)
+- [Identity Lab 3 - AD Connect Publishing a SSO Application (Optional)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/01_HybridCloud_IdentityLab03_SSOApp(Optional).md)
 - [Migration Lab 1 - DMS](02_HybridCloud_Migration_Lab01_DMS.md)
 - [Migration Lab 2 - ASR](02_HybridCloud_Migration_Lab02_ASR.md)
 - [Migration Lab 3 - Azure Policy](02_HybridCloud_Migration_Lab03_AzurePolicy.md)
