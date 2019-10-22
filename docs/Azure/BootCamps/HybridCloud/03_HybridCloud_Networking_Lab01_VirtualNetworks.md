@@ -178,8 +178,8 @@ Let's examine our network topology now that we have peering enabled.
 3. User **Resource Group** select **MyVNets**.  In a moment a conceptual network diagram should be generated showing all your vNets and subnets including the new peerings between vNet1 and vNet2.
 
 ## Clean out your VMs
-Given the limited capacity of sponsored Azure please delete the **NetVMs**  Resource Groups before finishing the lab.
 
+Given the limited capacity of sponsored Azure please delete the **NetVMs**  Resource Groups before finishing the lab.
 
 ## Challenge - PING the Public IP address
 

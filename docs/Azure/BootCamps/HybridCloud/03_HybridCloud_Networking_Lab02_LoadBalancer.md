@@ -9,7 +9,7 @@ In this section, you create a public standard load balancer by using the portal.
 1. On the upper-left side of the portal, select **+Create a resource** > **Networking** > **Load Balancer**.
 2. In the Create load balancer pane, enter these values:
     * Resource Group: *Create New* **LoadBalancers**
-    * Name: **LB01** 
+    * Name: **LB01**
     * Region: Use the same region as your other resources
     * Type: **Public**
     * SKU: **Standard**
