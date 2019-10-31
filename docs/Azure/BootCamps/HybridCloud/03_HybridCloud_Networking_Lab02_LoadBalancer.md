@@ -29,7 +29,8 @@ In this section you create a virtual network and you create two virtual machines
 2. In the Create virtual network pane, enter these values, and then select **Create**:
     * **LBvNet** for the name of the virtual network
     * **10.20.0.0/16** as the address space
-    * **LBRG** for the name of the resource group (*Create new*)
+    * **LoadBalVMs** for the name of the resource group (*Create new*)
+    * **Location**: Use the same region as your other resources
     * **BackendSubnet** for the subnet name
     * **10.20.0.0/24** as the address space
 
@@ -37,10 +38,10 @@ In this section you create a virtual network and you create two virtual machines
 
 1. On the upper-left side of the portal, select **Create a resource** > **Compute** > **Windows Server 2016 Datacenter**.
 2. Enter, or select, the following information, accept the defaults for the remaining settings:
-    * Resource Group: LBRG
+    * Resource Group: **LoadBalVMs**
     * Name: **LBVM1**
     * Region: *Choose a consistent supported Region*
-    * Availability option: choose **Availability set** > **Create New** > **LBAVSet** > **Ok**.
+    * Availability option: choose **Availability set** > **Create New** > **LBVMAVSet** > **Ok**.
     * Size: Change to **DS1_v2**
     * Username: pick a username
     * Password: Use `Complex.Password`
@@ -49,12 +50,13 @@ In this section you create a virtual network and you create two virtual machines
     * Select **Next: Disks >**
     * Click **Next: Networking >**
     * Configure the following settings:
-        * Virtual Network: **LBVnet**
+        * Virtual Network: **LBvNet**
         * Subnet: **BackendSubnet**
         * Public IP: *Create New*
+            * Name: **LBVM1-ip**
             * SKU: **Standard**
             * Click **Ok**
-        * Place this virtual machine in the backend pool of an existing Azure load balancing solution: **Yes**
+    * Place this virtual machine in the backend pool of an existing Azure load balancing solution: **Yes**
         * Load balancing options: **Azure load balancer**
         * Select a load balancer: **LB01**
         * Select a backend pool: *Create new* **BEPool**
@@ -66,9 +68,9 @@ In this section you create a virtual network and you create two virtual machines
 
 1. By following the previous steps create a second VM:
     * Name: **LBVM2**
-    * **LBAVSet** as the existing availability set.
-    * **LBVnet** as the virtual network.
-    * **myBackendSubnet** as the subnet.
+    * **LBVMAVSet** as the existing availability set.
+    * **LBvNet** as the virtual network.
+    * **BackendSubnet** as the subnet.
 
 ## Task 3 - Create NSG rules
 
