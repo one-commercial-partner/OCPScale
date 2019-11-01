@@ -21,9 +21,9 @@ To test network communication with Network Watcher, first enable a network watch
 
 *Note that it may take several minutes for the packet capture to initialize.  In you get an error ensure that LBVM1 is running.*
 
-1. Find the public IP address for the load balancer LBPublicIP.
-2. Shutdown LBVM2 and then paste the public IP address of your Load Balancer into the address bar of your browser. Hit refresh and notice the default page of IIS web server is displayed in the browser.
+1. Find the public IP address for the load balancer **LB01** which should be **LBPublicIP**.  Paste the public IP address of your Load Balancer into the address bar of your browser. Hit refresh and notice the default page of the IIS web server is displayed in the browser.
+2. Stop **LBVM2**. Hit refresh and notice the default page of the IIS web server is displayed in the browser.
 3. Stop the packet capture by returning to **Network Watcher** > **Packet Capture** >**Right-Click** > **Stop**.
-4. Click on the .cap file it will display the blob properties.  Download the file to your documents folder on your local computer.
+4. Click on the .cap file under the blob properties near the bottom of the screen.  Download the file to your documents folder on your local computer.
 5. Install network monitor from the following: <https://www.microsoft.com/en-US/download/details.aspx?id=4865>
 6. Launch Network Monitor and open the capture file from your Documents folder.  Examine the contents of your packet capture session.
