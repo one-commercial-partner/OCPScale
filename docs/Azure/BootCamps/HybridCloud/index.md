@@ -24,5 +24,3 @@ Here are the lab files for the boot camps/Tech Intensity workshops.  They are br
 If you see any changes that need to be made (typos, new steps, etc.) please submit an issue!
 
 Thanks!
-
-[Back](../)
