@@ -11,44 +11,24 @@ Please note that using this approach represents `the fastest way` to migrate a V
 This script creates an Azure Virtual Machine running Windows Server 2016, and then uses the Azure Virtual Machine DSC Extension to install IIS. After running the script, you can access the default IIS website on the public IP address of the virtual machine.
 
 1. This lab requires Azure PowerShell.  If you need to install Azure PowerShell, see [Install Azure PowerShell module](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps).
-
-2. There are some locations that restrict access to port 445 (SMB).  Before continuing execute the following command within PowerShell:
-
-    `Test-NetConnection -ComputerName wagsazurefiles.file.core.windows.net -Port 445`
-
-    If your connection fails jump to step 4.
-
- 3. Open PowerShell and Run `Connect-AzAccount` to logon to your Azure subscription.  If your current identity is connected to multiple Azue subscriptions, obtain the GUID of the subscription you want to use and issue the following syntax: 
-`Connect-AzAccount  -SubscriptionId *GUID*`
-
-    If the command is successful (TcpTestSucceeded=True) then continue with the following steps.  Otherwise, jump to step 4.
-
-* Enter the following command in PowerShell:
-
-    `Invoke-Expression -Command "cmdkey /add:wagsazurefiles.file.core.windows.net /user:Azure\wagsazurefiles /pass:tCfYh37xGNjIc0czqfTW9+kUHIIhlxRUPh9h4YtD/hh7FiFPn1v32RH7uV0a83E6nAa6kkVU6d+nAAeoBItpJg=="`
-* Next, enter this command into PowerShell.  *Note that if the drive letter Z: is already used on your local computer feel free to use any available drive letter.*
-
-    `New-PSDrive -Name Z -PSProvider FileSystem -Root "\\\wagsazurefiles.file.core.windows.net\buildiis"`
-
-* Map the z: to an Azure files share:
-
-    `net use Z: \\wagsazurefiles.file.core.windows.net\buildiis /persistent:Yes`
-* Copy the file to your local computer and the proceed to step 6.
-
-    `copy z:\build-iis-vm.ps1 c:\users\yourprofile\downloads`
-
-4. Obtain the buildiis.ps1 directly from your instructor.
-5. Copy the build-iis-vm.ps1 to your local computer.  
-6. From PowerShell execute the build-iis-vm.ps1 script:
-
-    `.\Build-IIS-VM.ps1`
-
-7. When prompted enter the username and password for the IIS VM:
+2. Run the following command
+```
+    Invoke-WebRequest "https://raw.githubusercontent.com/one-commercial-partner/OCPScale/master/docs/Azure/BootCamps/HybridCloud/Build-IIS-VM.ps1" -OutFile Build-IIS-VM.ps1
+```
+4. Open PowerShell and Run `Connect-AzAccount` to logon to your Azure subscription.  If your current identity is connected to multiple Azue subscriptions, obtain the GUID of the subscription you want to use and issue the following syntax: 
+```
+    Connect-AzAccount  -SubscriptionId *GUID*
+```
+5. From PowerShell execute the build-iis-vm.ps1 script:
+```
+    .\Build-IIS-VM.ps1
+```
+6. When prompted enter the username and password for the IIS VM:
     * Username:  pick a username and notate the credentials
     * Password: Enter `Complex.Password` and notate the credentials 
-8. Observe the build process via PowerShell.  Why does the PowerShell Command fail?  To correct the problem disable policy enforcement of the **Require tag and its value** policy.
-7. Once PowerShell builds the VM and installs IIS, open the Azure Portal and then obtain the public IP address of the IIS virtual machine.
-8. Open a web browser and surf to the public IP address just make sure things are working.
+7. Observe the build process via PowerShell.  Why does the PowerShell Command fail?  To correct the problem disable policy enforcement of the **Require tag and its value** policy.
+8. Once PowerShell builds the VM and installs IIS, open the Azure Portal and then obtain the public IP address of the IIS virtual machine.
+9. Open a web browser and surf to the public IP address just make sure things are working.
 
 ## Task 2 - Create target network resource
 
