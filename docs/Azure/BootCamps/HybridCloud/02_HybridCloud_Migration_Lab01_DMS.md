@@ -1,6 +1,6 @@
 # Azure Migration
 
-## Database Migration Service
+# Database Migration Assistant (DMA)
 
 In this lab you are going to create an IaaS VM with SQL as a source environment, load the database up with data, then use DMS to migrate that over to Azure.
 
