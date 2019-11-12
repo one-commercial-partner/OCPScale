@@ -2,7 +2,7 @@
 
 # Database Migration Assistant (DMA)
 
-In this lab you are going to create an IaaS VM with SQL as a source environment, load the database up with data, then use DMS to migrate that over to Azure.
+In this lab you are going to create an IaaS VM with SQL as a source environment, load the database up with data, then use DMA to migrate that over to Azure.
 
 ## Task 1 - Create a SQL Server VM image
 
