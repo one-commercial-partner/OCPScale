@@ -34,7 +34,7 @@ We will setup an IaaS VM with Active Directory via a JSON template from GitHub. 
 1. Connect to the adVM virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AZDCRG / adVM / Connect**.  
 2. Click on **Download RDP File**.
 3. Logon with the fully qualified credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
-4. If prompted, click **No** on the Network Discovery blade.
+4. When prompted click **No** on the Network Discovery blade.
 5. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
 6. Expand the tree and select the **Users Container**.
 7. On the toolbar click the icon to create a new user in the current container.  
@@ -59,7 +59,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
     * Region: Choose the same region as your domain controller
     * Availability options: No infrastructure redundancy required
     * Image: Windows Server 2016 Datacenter
-    * Size: Choose **DS2_v2**
+    * Size: Choose **Standard DS1 v2**
     * Username: **ADAdmin**
     * Password: `Complex.Password`
     * Confirm Password: `Complex.Password`
