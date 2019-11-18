@@ -32,7 +32,7 @@ We will setup an IaaS VM with Active Directory via a JSON template from GitHub. 
 ## Task 2 - Connect to the Domain Controller and create a user account
 
 1. Connect to the adVM virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AZDCRG / adVM / Connect**.  
-2. Click on **Download RDP File**.
+2. Make sure that you choose the **Load balancer public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
 3. Logon with the fully qualified credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
 4. When prompted click **No** on the Network Discovery blade.
 5. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
