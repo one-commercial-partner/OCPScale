@@ -21,7 +21,7 @@ We will setup an IaaS VM with Active Directory via a JSON template from GitHub. 
     * Admin Password: Enter **Complex.Password** *(you should write this down)*
     * Domain name:  Enter a FQDN such as mydomainname.com and keep the name shorter than 15 characters (that’s a NetBIOS restriction).
     * DNS Prefix: *pickyourown* (e.g. use the letter “a” and then the last four digits of your cell phone, a1234)
-    * Vm Size: **Standard_DS1_v2**
+    * Vm Size: **Standard_DS1_v2**   *(Note: You can choose a large VM size in order to get a faster VM but be careful that you don't exceed your CPU quota.)*
 5. Scroll down and select  **I agree to the terms and conditions stated above** and then **Purchase**.  Monitor the deployment by clicking on the “Deploying Template deployment” tile within the Azure Portal.
     * Confirm that you don’t have any validation errors.  If you do, correct them before moving forward.
     * If the deployment fails, examine the logs to see what the root cause is.
@@ -43,7 +43,7 @@ We will setup an IaaS VM with Active Directory via a JSON template from GitHub. 
     * Last Name: **Prem**
     * Full Name: **On Prem**
     * User Logon Name: **onprem**
-9. Click **Next** and set the password to *Complex.Password*. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
+9. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
 10. Click **Next** then **Finish**.
 11. Minimize the RDP window.
 
@@ -69,11 +69,10 @@ We are creating a small VM to be used later to host Azure AD Connect.
 
 ## Task 4 - Join the ADConnect VM to the domain
 
-1. Connect to the **ADConnect** virtual machine and logon as ADAdmin. **Microsoft Azure / Resource Groups / AZDCRG / ADConnect / Connect.**
-2. If prompted, click **No** on the Network discovery blade.
-3. Depending on which region you chose for setup, the ADConnect VM may or may not have the DNS server set to a value we need.
-4. The DNS Server on ADCONNECT may not be set to see the domain controller (adVM), so we need to check that setting.  
-5. Open a **Command prompt** and enter *ipconfig /all*.  If the DNS Server is set to 10.0.0.4 (the private IP address of adVM), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
+1. Connect to the **ADConnect** virtual machine and logon as `ADAdmin`. **Microsoft Azure / Resource Groups / AZDCRG / ADConnect / Connect.**
+2. When prompted click **No** on the Network discovery blade.
+3. The DNS Server on ADCONNECT may not be set to see the domain controller (adVM), so we need to check that setting.  
+4. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.0.0.4 (the private IP address of adVM), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
 
 ### Configure DNS
 
@@ -112,19 +111,19 @@ We are going to create an account that AD Connect will use to perform the synchr
     * User name: **adsync**
     * Name: **AD Sync Account**
     * Click on **Show Password** and then copy the password.
-    * Under **Roles** click **User**.  Search for and select a directory role named: **Global administrator**. Select than and then click **Select**.
+    * Under **Roles** click **User**.  Search for and select a directory role named: **Global administrator**, then click **Select**.
 2. Click **Create**.
 3. Open an InPrivate or Incognito browser and surf to <https://portal.azure.com.>
 4. Login as the AD Sync Account you just created using the temporary password.
-5. Change your password to *Complex.Password* and then click **Sign in**.
+5. Change your password to `Complex.Password` and then click **Sign in**.
 6. Close your inprivate or incognito browser.
 
 ## Task 8 - Sync Azure AD with Windows Server AD (AD DS)
 
 ### Install Azure Active Directory Connect
 
-1. Connect to the ADConnect VM and logon as your previously created **domain account** (i.e. **domainname\username**, not adadmin which is a local account).  If you don’t see the VM, you must switch from the new Azure Active Directory  you just created to the **Default Directory** associated with your subscription.  Click in the upper right-hand corner of the screen to change directories.
-2. When Server Manager opens select Local Server and turn off IE Enhanced Security Configuration for Administrators and Users.
+1. Connect to the ADConnect VM and logon as your previously created **domain account** (i.e. `domainname\username`, not adadmin which is a local account).  If you don’t see the VM, you might need to  switch from the new Azure Active Directory you just created to the **Default Directory** associated with your subscription.  Click in the upper right-hand corner of the screen to change directories.
+2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators and Users.
 3. Open Internet Explorer, accept the defaults, and surf to <http://go.microsoft.com/fwlink/?LinkId=615771>
 4. Click **Download**, then **Run** when prompted.
 Close Internet Explorer.
