@@ -21,6 +21,7 @@ We will setup an IaaS VM with Active Directory via a JSON template from GitHub. 
     * Admin Password: Enter **Complex.Password** *(you should write this down)*
     * Domain name:  Enter a FQDN such as mydomainname.com and keep the name shorter than 15 characters (that’s a NetBIOS restriction).
     * DNS Prefix: *pickyourown* (e.g. use the letter “a” and then the last four digits of your cell phone, a1234)
+    * Vm Size: **Standard_DS1_v2**
 5. Scroll down and select  **I agree to the terms and conditions stated above** and then **Purchase**.  Monitor the deployment by clicking on the “Deploying Template deployment” tile within the Azure Portal.
     * Confirm that you don’t have any validation errors.  If you do, correct them before moving forward.
     * If the deployment fails, examine the logs to see what the root cause is.
