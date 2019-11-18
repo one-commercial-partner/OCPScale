@@ -31,7 +31,7 @@ In this section you create a virtual network and you create two virtual machines
     * **10.20.0.0/16** as the address space
     * **LoadBalVMs** for the name of the resource group (*Create new*)
     * **Location**: Use the same region as your other resources
-    * **BackendSubnet** for the subnet name
+    * **Backend** for the subnet name
     * **10.20.0.0/24** as the address space
     * Click **Create**.
 
@@ -45,14 +45,13 @@ In this section you create a virtual network and you create two virtual machines
     * Availability option: choose **Availability set** > **Create New** > **LBVMAVSet** > **Ok**.
     * Size: Set to **DS1_v2**
     * Username: pick a username
-    * Password: Use `Complex.Password`
-    * Confirm Password: Use `Complex.Password`
+    * Password: `Complex.Password`
+    * Confirm Password: `Complex.Password`
     * Public inbound ports: Open RDP, 3389
-    * Select **Next: Disks >**
-    * Click **Next: Networking >**
+    * Select the **Networking** tab
     * Configure the following settings:
         * Virtual Network: **LBvNet**
-        * Subnet: **BackendSubnet**
+        * Subnet: **Backend**
         * Public IP: *Create New*
             * Name: **LBVM1-ip**
             * SKU: **Standard**
@@ -61,9 +60,8 @@ In this section you create a virtual network and you create two virtual machines
     * Place this virtual machine behind an existing Azure load balancing solution: **Yes**
         * Load balancing options: **Azure load balancer**
         * Select a load balancer: **LB01**
-        * Select a backend pool: *Create new* **BEPool**
-        * Select **Create** and then **Next: Management >**
-    * Under **Diagnostic storage account** click  **Review + create**.
+        * Select a backend pool: *Create new* **BackendPool**
+        * Select **Create** and then **Review + create**.
     * Once validation passes click **Create**.
 
 ### Create LBVM2
@@ -72,7 +70,11 @@ In this section you create a virtual network and you create two virtual machines
     * Name: **LBVM2**
     * **LBVMAVSet** as the existing availability set.
     * **LBvNet** as the virtual network.
-    * **BackendSubnet** as the subnet.
+    * **Backend** as the subnet.
+    * Public IP: *Create New*
+        * Name: **LBVM2-ip**
+        * SKU: **Standard**
+        * Click **Ok**
 
 ## Task 3 - Create NSG rules
 
@@ -92,7 +94,7 @@ In this section, you create NSG rules to allow inbound connections that use HTTP
     * Name: HTTP-In
     * Description: Allow HTTP
 
-4. Repeat the steps except from the resource list, select **LBRG** then **LBVM2-nsg**.
+4. Repeat the above steps except from the resource list, select **LoadBalVMs** then **LBVM2-nsg**.
 
 ## Task 4 - Install IIS
 
@@ -128,7 +130,7 @@ In this section, you configure load balancer settings for a back-end address poo
 To allow the load balancer to monitor the status of your app, you use a health probe. The health probe dynamically adds or removes VMs from the load balancer rotation based on their response to health checks. Create a health probe named LBHP to monitor the health of the VMs.
 
 1. On left side of the Azure Portal select **Load Balancers** and then selelct **LB01**. Under **Settings**, select **Health probes**, and then select **Add**.
-2. Use these values, and then select **OK**:
+2. Use these values and then select **OK**:
     * **LBHealthProbe** for the name of the health probe
     * **HTTP** for the protocol type
     * **80** for the port number
@@ -142,7 +144,7 @@ You use a load balancer rule to define how traffic is distributed to the VMs. Yo
 Create a load balancer rule named HTTPRule for listening to port 80 in the front end LoadBalancerFrontEnd. The rule is also for sending load-balanced network traffic to the back-end address pool myBackEndPool, also by using port 80.
 
 1. Under **Settings**, select **Load balancing rules**, and then select **Add**.
-2. Use these values, and then select **OK**:
+2. Use these values and then select **OK**:
     * **HTTPRule** for the name of the load balancer rule
     * **TCP** for the protocol type
     * **80** for the port number
@@ -158,5 +160,3 @@ Create a load balancer rule named HTTPRule for listening to port 80 in the front
 4. Stop the other LBVM and refresh your browser until you receive a **Can't reach this page** error and then restart the first VM you stopped.
 5. Once the VM comes alive you should get responses.
 6. Alternately, you can always check the load balancer status by selecting **Load Balancers**, **Backend Pools**, then expand the **virtual machine pool**.
-
-[Back](index.md)
