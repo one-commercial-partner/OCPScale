@@ -6,7 +6,7 @@ In this lab you will create a VM in Azure to simulate a source VM running in eit
 
 Please note that using this approach represents `the fastest way` to migrate a VM to Azure and should not be seen as the usual, customary amount of time it takes to perform a migration to Azure.
 
-## Task 1 - Create an IIS VM with PowerShell
+## Exercise 1 - Create an IIS VM with PowerShell
 
 This script creates an Azure Virtual Machine running Windows Server 2016, and then uses the Azure Virtual Machine DSC Extension to install IIS. After running the script, you can access the default IIS website on the public IP address of the virtual machine.
 
@@ -18,7 +18,7 @@ This script creates an Azure Virtual Machine running Windows Server 2016, and th
 
     If your connection fails jump to step 4.
 
- 3. Open PowerShell and Run `Connect-AzAccount` to logon to your Azure subscription.  If your current identity is connected to multiple Azue subscriptions, obtain the GUID of the subscription you want to use and issue the following syntax: 
+3. Open PowerShell and Run `Connect-AzAccount` to logon to your Azure subscription.  If your current identity is connected to multiple Azue subscriptions, obtain the GUID of the subscription you want to use and issue the following syntax:
 `Connect-AzAccount  -SubscriptionId *GUID*`
 
     If the command is successful (TcpTestSucceeded=True) then continue with the following steps.  Otherwise, jump to step 4.
@@ -50,7 +50,7 @@ This script creates an Azure Virtual Machine running Windows Server 2016, and th
 7. Once PowerShell builds the VM and installs IIS, open the Azure Portal and then obtain the public IP address of the IIS virtual machine.
 8. Open a web browser and surf to the public IP address just make sure things are working.
 
-## Task 2 - Create target network resource
+## Exercise 2 - Create target network resource
 
 We could have ASR automatically create the target network resources (i.e. Virtual networks and subnets) but in a more realistic scenario you'd want to pre-create these resources and place your migrated VMs in soecific networks. 
 
@@ -63,13 +63,13 @@ We could have ASR automatically create the target network resources (i.e. Virtua
     * Subnet Name: **migsub**
     * Subnet address range: **10.10.10.0/24** 
 
-## Task 3 - Create a Recovery Services vault
+## Exercise 3 - Create a Recovery Services vault
 
 This task is the normal starting point for a typical lift and shift migration as you would normally have a robust source environment to migrate.
 
 1. Click **+Create a resource > ManagementStorage > Backup and Site Recovery** and enter **MyVault** as the Name and **ASRMigration** as the Resource Group.  Click **Review + Create** and then **Create**.
 
-## Task 4 - Select a replication goal
+## Exercise 4 - Select a replication goal
 
 1. Once the vault deployment has succeeded, click on **Go to Resource** or in the search bar type in **MyVault** and select it.
 2. In the **Getting Started** Menu, click **Site Recovery** > **Prepare Infrastructure**.
@@ -78,7 +78,7 @@ This task is the normal starting point for a typical lift and shift migration as
     * Where do you want to replicate your machines to? **To Azure**
     * Click **OK**, and then **OK** again on the **Prepare Infrastructure** tab.
 
-## Task 5 - Enable replication
+## Exercise 5 - Enable replication
 
 1. In the Azure portal, click **Virtual machines**, and select the **IIS**.
 2. Under **Operations**, click **Disaster recovery**.
@@ -91,14 +91,14 @@ This task is the normal starting point for a typical lift and shift migration as
 5. Review the settings and click **Start replication**. This starts a job to enable replication (aka migration) for the VM.
 6. You may notice that Vaildating and Creating target resources takes a few moments to process.  The fabric is ensuring that resources in your target region can be created and there’s no conflicts nor capacity issues.
 
-## Task 6 - Track Replication
+## Exercise 6 - Track Replication
 
 1. Once Azure has built the core components replication will begin.  On the alert button (the bell) click on **Enabling replication for 1 vm(s)**.
 2. Notice the steps as they occur in real time.  The longest step in the process is going to be **Enable replication**.  Select that item and observe the series of steps taking place. IR, or Initial Replication, the time it takes the VM to be copied from source to target.  Notice the Status of IR.  
 3. Since it may take 30 minutes to replicate the VM, now may be an appropriate time to take a break or come back to the lab at a later time.
 4. You can check percentage complete of replication by **Virtual Machines > IIS > Operations > Disaster Recovery**.  You may notice status sits at 0% synchronized for some time and then report upwards of 87% complete on next refresh.
 
-## Task 7 - Run a Test Failover
+## Exercise 7 - Run a Test Failover
 
 A test failover executes a failover but does not make the secondary or migrated VM active.  A drill validates your replication strategy without data loss or downtime and doesn't affect your production environment.
 
@@ -114,7 +114,7 @@ A test failover executes a failover but does not make the secondary or migrated 
 6. To delete the VMs that were created during the test failover, select **IIS** from **Virtual Machines**, select **Disaster recovery** under  **Operations**, and then choose **Cleanup test failover**. In Notes, record and save any observations associated with the test failover. Click the box for **Testing is complete** and click **Ok**.
 If you don’t delete the failover VM, the VM will continue to run and increase your Azure consumption.
 
-## Task 8 - Switch over to the migrated VM
+## Exercise 8 - Switch over to the migrated VM
 
  Once you have validated the migrated VM by performing a test failover, your next step would be to switch over to the migrated VM.  In this lab you will complete the migration.
 
@@ -123,7 +123,7 @@ If you don’t delete the failover VM, the VM will continue to run and increase 
  Under alerts click the link for **Starting failover** and monitor the failover (migration).
  3. Once failover is complete, click on **Virtual Machines** in the Azure Portal and notice that you have two IIS VMs; one stopped (deallocated) in the East US and then another VM in the Central US that's running.
 
-## Task 9 - Make your migrated VM accessible
+## Exercise 9 - Make your migrated VM accessible
 
  When you migrate a VM a public IP address is not added by default and the Virtual Network does not have any Network Security Group rules.  We need to add all of these.
 
@@ -134,5 +134,3 @@ If you don’t delete the failover VM, the VM will continue to run and increase 
  [Set up IP addressing to connect to Azure VMs after failover](https://docs.microsoft.com/en-us/azure/site-recovery/concepts-on-premises-to-azure-networking)
 
  [Add Public IP and NSG to ARM VMs during Test Failover of an ASR Recovery Plan](https://gallery.technet.microsoft.com/scriptcenter/Add-Public-IP-and-NSG-to-a6bb8fee)
-
-[Back](index.md)
