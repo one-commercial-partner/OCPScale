@@ -153,10 +153,10 @@ After you're comfortable with the assessment and satisfied that the selected dat
     * Uncheck **Encryption connection**.
     * Click **Connect**.
 5. Select **Cloud** when it appears and click **Next**.
-7. On the **Select Objects tab** click **Generate SQL Script**.
-8. On the **Script & deploy schema** tab, review the script and click **Deploy schema**.  Once complete, and that task should be fast, click **Migrate Data**.
-9. On the **Select tables** tab, ensure that the row count is 38,803 and click **Start data migration**.
-10. The migration should take less than 30 seconds.  Review the tab for deployment information on warnings, failures, etc.  
+6. On the **Select Objects tab** click **Generate SQL Script**.
+7. On the **Script & deploy schema** tab, review the script and click **Deploy schema**.  Once complete, and that task should be fast, click **Migrate Data**.
+8. On the **Select tables** tab, ensure that the row count is 38,803 and click **Start data migration**.
+9. The migration should take less than 30 seconds.  Review the tab for deployment information on warnings, failures, etc.  
 
 ### **Congratulations, you have just migrated your first database to the cloud!**
 
@@ -177,4 +177,3 @@ Let's make sure that your data got migrated and looks right.  We're going to con
 6. Click **Execute**.  This query will search the Azure SQL database and display the first 1000 zip codes.
 
 ### **Congratulations for completing the SQL Migration lab!**
-
