@@ -90,7 +90,7 @@ Before you can migrate data from an on-premises SQL Server  to a single database
 3. In the Source server type text box ensure that  **SQL Server** is selected, and in the Target server type text box, ensure **Azure SQL Database** is selected. Click  **Create** to create the project.
 4. Select **Next** on the Options screen.
 5. On the Select sources screen, enter the following and then select **Connect**:
-    * Server name: Enter **SQLVM** if your built your own or `tiwsql.eastus2.cloudapp.azure.com, 1403` if you are using pre-built SQL
+    * Server name: Enter **SQLVM** if your built your own or `tiwsql.eastus2.cloudapp.azure.com, 1403` if you are using pre-built SQL.
     * Authentication type: **SQL Server Authentication**
     * In the **Username** box, type the name of a valid SQL login from the previous steps or **SQLAdmin** if you are using pre-built SQL.
     * In the **Password** box, type the password of the login from the previous steps or `Complex.Password` if you are using pre-built SQL.
@@ -123,39 +123,40 @@ Before you migrate, a target Azure SQL database needs to be provisioned..
 7. Open the server up to connections by:
     * Click on **Set Server firewall**
     * Click **ON** under **Allow Azure Services and resources to access this server**.
-    * CLick **Save**
+    * Create the following Rule:
+        * Rule Name: **Everyone**
+        * Start IP: **0.0.0.0**
+        * End IP: **255.255.255.255**
+    * Click **Save**
 
 ## Exercise 9 - Migrate the sample schema
 
 After you're comfortable with the assessment and satisfied that the selected database is a viable candidate for migration to a single database or pooled database in Azure SQL Database, use DMA to migrate the schema to Azure SQL Database.
 
 1. In the Data Migration Assistant, select the **New (+)** icon, and then under Project type, select **Migration**.
-2. Specify **SQLMIG** as the project name, in the Source server type text box, select **SQL Server**, and then in the Target server type text box, select **Azure SQL Database**.  Click **Create**.
-3. Under Select source enter the following:
-    * Server name: SQLVM
+2. Specify the following and Click **Create**.
+    * **SQLMIG** as the project name
+    * **SQL Server** in the Source server type text box
+    * **Azure SQL Database** in the Target server type text box
+3. Under Select source enter the following and click **Next**:
+    * Server name: **SQLVM** or `tiwsql.eastus2.cloudapp.azure.com, 1403` if you are using pre-built SQL.
     * Authentication type: **SQL Server Authentication**
-    * In the **Username** box, type the name of a valid SQL login from the previous steps.
-    * In the **Password** box, type the password of the login from the previous steps.
-    * Click **Connect** uncheck **Assess database before migration?** and click **Next**.
+    * In the **Username** box, type the name of the SQL login you created or **SQLAdmin** if you are using pre-built SQL.
+    * In the **Password** box enter `Complex.Password` if you are using pre-built SQL or the password you created.
+    * Click **Connect**.
+    * Uncheck **Assess database before migration?** and click **Next**.
 4. On the **Select target** tab, enter the following:
-    * Specify the source connection details for your SQL Server.  This is the FQDN name you previously copied.
+    * Specify the source connection details for your SQL Server.  This is the FQDN name of the Azure SQL Database.
     * Authentication type: **SQL Server Authentication**
     * In the **Username** box, type the name of a valid SQL login from the previous steps.
     * In the **Password** box, type the password of the login from the previous steps.
     * Uncheck **Encryption connection**.
     * Click **Connect**.
-5. The SampleData database should be listed.  Click **Next**.
-6. On the Select Target tab, enter the floowing and click Next:
-    * Server name: Enter your (Azure) SQL Server name.
-    * Authentication type: SQL Server Authentication
-    * In the Username box, type the name of a valid SQL login from the previous steps.
-    * In the Password box, type the password of the login from the previous steps.
-    * Uncheck Encrypt connection under Connection properties. Under normal circumstances we would use this option but we did not configure certificates on the source SQL server.
-7. Select **MySampleDB** when it appears and click **Next**.
-8. On the **Select Objects tab** click **Generate SQL Script**.
-9. On the **Script & deploy schema** tab, review the script and click **Deploy schema**.  Once complete, and that task should be fast, click **Migrate Data**.
-10. On the **Select tables** tab, ensure that the row count is 38,803 and click **Start data migration**.
-11. The migration should take less than 30 seconds.  Review the tab for deployment information on warnings, failures, etc.  
+5. Select **Cloud** when it appears and click **Next**.
+7. On the **Select Objects tab** click **Generate SQL Script**.
+8. On the **Script & deploy schema** tab, review the script and click **Deploy schema**.  Once complete, and that task should be fast, click **Migrate Data**.
+9. On the **Select tables** tab, ensure that the row count is 38,803 and click **Start data migration**.
+10. The migration should take less than 30 seconds.  Review the tab for deployment information on warnings, failures, etc.  
 
 ### **Congratulations, you have just migrated your first database to the cloud!**
 
@@ -166,15 +167,14 @@ Let's make sure that your data got migrated and looks right.  We're going to con
 1. Switch to the **Microsoft SQL Server Management Studio** application.
 2. Click on **File** then **Connect Object Explorer**.
 3. Enter the following in the Connect to Server form and click **Connect**:
-    * Server name: Enter your (Azure) SQL Server name. (e.g. `abc123.database.windows.net`)
+    * Server name: Enter your (Azure) SQL Server name. (e.g. `abc032019.database.windows.net`)
     * Authentication type: SQL Server Authentication
     * In the Username box, type the name of a valid SQL login from the previous steps.
     * In the Password box, type the password of the login from the previous steps.
-4. Browse databases to select *MySampleDatabase*.
+4. Browse databases to select **SampleData**.
 5. Right-click on **New Query** and enter the following:
-    * select TOP (1000) [zip] FROM MySampleDatabase.dbo.sampledata
+    * `select TOP (1000) [zip] FROM SampleData.dbo.sampledata`
 6. Click **Execute**.  This query will search the Azure SQL database and display the first 1000 zip codes.
 
 ### **Congratulations for completing the SQL Migration lab!**
 
-[Back](index.md)
