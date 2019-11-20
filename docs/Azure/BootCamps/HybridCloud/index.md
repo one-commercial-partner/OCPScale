@@ -13,7 +13,7 @@ Here are the lab files for the boot camps/Tech Intensity workshops.  They are br
     - [Networking Lab 4 - Network Watcher](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/03_HybridCloud_Networking_Lab04_NetworkWatcher.md)
     - [Networking Lab 5 - Hub and Spoke Challenge (Optional)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/03_HybridCloud_Networking_Lab06_HubSpokeChallenge.md)
 3. Migration
-    - [Migration Lab 1 - Database Migration Service (DMS)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab01_DMS.md)
+    - [Migration Lab 1 - Database Migration Service (DMS)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab01_DMA.md)
     - [Migration Lab 2 - Azure Site Recovery (ASR)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab02_ASR.md)
     - [Migration Lab 3 - Azure Policy](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab03_AzurePolicy.md)
     - [Migration Lab 4 - Azure Migrate (Optional)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab04_AzureMigrate.md)
