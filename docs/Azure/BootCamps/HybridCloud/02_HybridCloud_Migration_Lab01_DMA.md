@@ -51,7 +51,7 @@ Before you can complete this section, you will need to map a drive to an Azure F
 1. Open a command prompt.
 2. Key in (cut and paste) the following and hit **enter**:
 
-    `net use Z: \\\wagsazurefiles.file.core.windows.net\sampledata /u:AZURE\wagsazurefiles tCfYh37xGNjIc0czqfTW9+kUHIIhlxRUPh9h4YtD/hh7FiFPn1v32RH7uV0a83E6nAa6kkVU6d+nAAeoBItpJg==`
+    `net use Z: \\wagsazurefiles.file.core.windows.net\sampledata /u:AZURE\wagsazurefiles tCfYh37xGNjIc0czqfTW9+kUHIIhlxRUPh9h4YtD/hh7FiFPn1v32RH7uV0a83E6nAa6kkVU6d+nAAeoBItpJg==`
 3. Once Z: is mapped, change to the Z: drive.
 4. Confirm that you can see a file named sampledata.txt.
 
