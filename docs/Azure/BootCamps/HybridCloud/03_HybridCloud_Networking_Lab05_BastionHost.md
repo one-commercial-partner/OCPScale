@@ -9,24 +9,38 @@ Bastion provides secure RDP and SSH connectivity to all VMs in the virtual netwo
 
 You can deploy and use the Bastion resource to only the **East US** region during the preview with your subscription.
 
-## Leverage the QuickStart Template
+## Exercise 1 - Build Your Networks
 
-We're going to leverage a quickstart template to make the build process quick and easy.  This template will deploy Azure Bastion in a new or existing Azure Virtual Network, along with dependent resources such as the AzureBastionSubnet, Public Ip Address for Azure Bastion, and Network Security Group rules.
-This template deploys resources in the same Resource Group and Azure region as the Virtual Network.
+1. In the Azure Portal click **+Create New Resource**, then choose **Networking** then **Virtual Networks**.
+2. Enter the following and click **Create**:
+    * Name:  **BAT_VNet**
+    * Address Space: **10.2.0.0/16**
+    * Resource Group: *Create New* **Bastion**
+    * Location: (US) **East US**
+    * Subnet Name: **AzureBastionSubnet**
+    * Address Range: **10.2.0.0/27**
 
-1. Open a web browser and surf to [Deploy Azure Bastion in an Azure Virtual Network](https://github.com/Azure/azure-quickstart-templates/tree/master/101-azure-bastion).
-2. Click on **Deploy to Azure**.
-3. Enter the following:
-    * Resource Group (create new): **Bastion**
-    * Location: **(US) East US**
-    * Vnet-name: **BastionVnet**
-    * Bastion-host-name: **BastionHost**
-4. Click the box for **I agree ...** and the click **Purchase**.
-5. Monitor the deployment.  It will take about 5 minutes to spin everything up.
+## Exercise 2 - Create a bastion host
 
-## Build a VM in the Bastion VNet
+1. From the home page in the Azure portal, click **+ Create a resource**.
+2. On the New page, in the Search the Marketplace field, type **Bastion**, then click Enter to get to the search results.
+3. From the results, click **Bastion**. Make sure the publisher is Microsoft and the category is Networking.
+4. On the Bastion page, click Create to open the Create a bastion page.
+5. On the Create a bastion page, configure a new Bastion resource. Specify the following configuration settings for your Bastion resource:
+    * Resource Group: Bastion
+    * Name: AzureBat
+    * Region: **East US**
+    * Virtual network: **BAT_VNet**
+    * Subnet: **AzureBastionSubnet**
+    * Public IP address:  Prepopulated by default
+    * Public IP address name:  Prepopulated by default
+    * Public IP address SKU: Prepopulated by default
+    * Assignment: Prepopulated by default to Static.
+6. Click **Review + create** and then **Create**. It takes about 5 mins for the Bastion resource to be created and deployed.
 
-1. Once **BastionHost** is built, open BastionHost and the click **+Add**.
+## Exercise 3 - Create a Virtual Machine in the Bastion Virtual Network
+
+1. Once **AzureBat** is built, head to the home page in the Azure portal and click **+ Create a resource**.
 2. Select **Compute** then select **Virtual machine**.
 3. On the Basics tab complete the following:
     * Resource Group: **Bastion**
@@ -40,9 +54,8 @@ This template deploys resources in the same Resource Group and Azure region as t
     * Confirm Password: `Complex.Password`
     * Public inbound ports: **Allow selected ports**
     * Select inbound ports: **RDP (3389)**
-4. CLick on the **Networking** tab and enter the following:
-    
-4. Click **Review + create** and then **Create**.
+4. Click on the **Networking** tab and enter the following:
+5. Click **Review + create** and then **Create**.
 
 
  virtual machine and then click **Connect**.
