@@ -78,7 +78,7 @@ Before you can complete this section, you will need to map a drive to an Azure F
 
 ## Exercise 6 - Install the Data Migration Assistant
 
-1. From  **SQLVM** or your local computer open a web browser.  Search for, download,  and install the [Data Migration Assistant (DMA)](https://www.microsoft.com/download/details.aspx?id=53595) v5.0 or later using the defaults.
+1. From  **SQLVM** or your local WIndows computer open a web browser.  Search for, download,  and install the [Data Migration Assistant (DMA)](https://www.microsoft.com/download/details.aspx?id=53595) v5.0 or later using the defaults.  If you are using a non-Windows computer, use an existing VM from a previous lab.
 2. On the Completed screen, check the box for **Launch Microsoft Data Migration Assistant** and click **Finish**.
 
 ## Exercise 7 - Assess the simulated on-premises database
