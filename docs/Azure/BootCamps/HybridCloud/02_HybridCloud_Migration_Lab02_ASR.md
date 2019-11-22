@@ -6,51 +6,35 @@ Please note that using this approach represents `the fastest way` to migrate a V
 
 ## Exercise 1 - Create an IIS VM with PowerShell
 
-This script creates an Azure Virtual Machine running Windows Server 2016, and then uses the Azure Virtual Machine DSC Extension to install IIS. After running the script, you can access the default IIS website on the public IP address of the virtual machine.
+In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2016, and install IIS.
 
-1. This lab requires Azure PowerShell.  If you need to install Azure PowerShell, see [Install Azure PowerShell module](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps).
+1. Open an Azure CLI window by browsing to https://shell.azure.com
+2. Login using your Microsoft Account
+3. If prompted, select the default AAD directory
+4. If a Welcome to Azure Cloud Shell prompt appears after logon, select Bash as the working CLI. If it does not appear, you can select PowerShell from the dropdown in the upper-left corner once a CLI prompt is presented to you. Note that you may need to provision a new CLI storage account to save your settings.
+5. At the CLI prompt, let's create a new resource group to hold your IIS VM. Create the resource group by typing in the following command:
+`az group create --name Migration --location eastus`
+6. Create the VM by typing in the following command:
 
-2. There are some locations that restrict access to port 445 (SMB).  Before continuing execute the following command within PowerShell:
+    `az vm create --resource-group Migration --name IIS --location eastus --image win2016datacenter 
+ --admin-username *yourfirstname*
+ --admin-password Complex.Password`
+7. Once the VM is created, let's open port 80 so we can access the VM's website from the internet. Run the follwing command:
 
-    `Test-NetConnection -ComputerName wagsazurefiles.file.core.windows.net -Port 445`
+    `az vm open-port --port 80 --resource-group RG-LAB-BCDR-EAST2 --name VM-IIS-East`
+8. Now let's install IIS using a Custom Script Extension. Run the following command:
 
-    If your connection fails jump to step 4.
+    `az vm extension set --publisher Microsoft.Compute --version 1.8 --name CustomScriptExtension --vm-name IIS --resource-group Migration 
+ --settings '{"commandToExecute":"powershell.exe Install-WindowsFeature -Name Web-Server"}'`
+9. Get the public IP of IIS by running the following command:
 
-3. Open PowerShell and Run `Connect-AzAccount` to logon to your Azure subscription.  If your current identity is connected to multiple Azue subscriptions, obtain the GUID of the subscription you want to use and issue the following syntax:
-`Connect-AzAccount  -SubscriptionId *GUID*`
+    `az network public-ip show --resource-group Migration --name IISPublicIP`
 
-    If the command is successful (TcpTestSucceeded=True) then continue with the following steps.  Otherwise, jump to step 4.
-
-* Enter the following command in PowerShell:
-
-    `Invoke-Expression -Command "cmdkey /add:wagsazurefiles.file.core.windows.net /user:Azure\wagsazurefiles /pass:tCfYh37xGNjIc0czqfTW9+kUHIIhlxRUPh9h4YtD/hh7FiFPn1v32RH7uV0a83E6nAa6kkVU6d+nAAeoBItpJg=="`
-* Next, enter this command into PowerShell.  *Note that if the drive letter Z: is already used on your local computer feel free to use any available drive letter.*
-
-    `New-PSDrive -Name Z -PSProvider FileSystem -Root "\\\wagsazurefiles.file.core.windows.net\buildiis"`
-
-* Map the z: to an Azure files share:
-
-    `net use Z: \\wagsazurefiles.file.core.windows.net\buildiis /persistent:Yes`
-* Copy the file to your local computer and the proceed to step 6.
-
-    `copy z:\build-iis-vm.ps1 c:\users\yourprofile\downloads`
-
-4. Obtain the buildiis.ps1 directly from your instructor.
-5. Copy the build-iis-vm.ps1 to your local computer.  
-6. From PowerShell execute the build-iis-vm.ps1 script:
-
-    `.\Build-IIS-VM.ps1`
-
-7. When prompted enter the username and password for the IIS VM:
-    * Username:  pick a username and notate the credentials
-    * Password: Enter `Complex.Password` and notate the credentials 
-8. Observe the build process via PowerShell.  Why does the PowerShell Command fail?  To correct the problem disable policy enforcement of the **Require tag and its value** policy.
-7. Once PowerShell builds the VM and installs IIS, open the Azure Portal and then obtain the public IP address of the IIS virtual machine.
-8. Open a web browser and surf to the public IP address just make sure things are working.
+10. Open a web browser and surf to the public IP address to make sure the webisite is up and running on IIS.
 
 ## Exercise 2 - Create target network resource
 
-We could have ASR automatically create the target network resources (i.e. Virtual networks and subnets) but in a more realistic scenario you'd want to pre-create these resources and place your migrated VMs in soecific networks. 
+We could have ASR automatically create the target network resources (i.e. Virtual networks and subnets) but in a more realistic scenario you'd want to pre-create these resources and place your migrated VMs in soecific networks.
 
 1. Click on Virtual networks then **+Add**
 2. Enter or select the following information, accept the defaults for the remaining settings, and then select **Create**:
