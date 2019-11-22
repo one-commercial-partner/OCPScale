@@ -8,7 +8,7 @@ Please note that using this approach represents `the fastest way` to migrate a V
 
 In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2016, and install IIS.
 
-1. Open an Azure CLI window by browsing to https://shell.azure.com
+1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com)
 2. Login using your Microsoft Account
 3. If prompted, select the default AAD directory
 4. If a Welcome to Azure Cloud Shell prompt appears after logon, select Bash as the working CLI. If it does not appear, you can select PowerShell from the dropdown in the upper-left corner once a CLI prompt is presented to you. Note that you may need to provision a new CLI storage account to save your settings.
@@ -16,7 +16,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 `az group create --name Migration --location eastus`
 6. Create the VM by typing in the following command:
 
-    `az vm create --resource-group Migration --name IIS --location eastus --image win2016datacenter 
+    `az vm create --resource-group Migration --name IIS --location eastus --image win2016datacenter
  --admin-username *yourfirstname*
  --admin-password Complex.Password`
 7. Once the VM is created, let's open port 80 so we can access the VM's website from the internet. Run the follwing command:
@@ -24,7 +24,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
     `az vm open-port --port 80 --resource-group RG-LAB-BCDR-EAST2 --name VM-IIS-East`
 8. Now let's install IIS using a Custom Script Extension. Run the following command:
 
-    `az vm extension set --publisher Microsoft.Compute --version 1.8 --name CustomScriptExtension --vm-name IIS --resource-group Migration 
+    `az vm extension set --publisher Microsoft.Compute --version 1.8 --name CustomScriptExtension --vm-name IIS --resource-group Migration
  --settings '{"commandToExecute":"powershell.exe Install-WindowsFeature -Name Web-Server"}'`
 9. Get the public IP of IIS by running the following command:
 
@@ -43,7 +43,7 @@ We could have ASR automatically create the target network resources (i.e. Virtua
     * Resource Group: *Create New* **MigrationvNets**
     * Location: **Central US**
     * Subnet Name: **migsub**
-    * Subnet address range: **10.10.10.0/24** 
+    * Subnet address range: **10.10.10.0/24**
 
 ## Exercise 3 - Create a Recovery Services vault
 
@@ -91,7 +91,7 @@ A test failover executes a failover but does not make the secondary or migrated 
     * **Latest app-consistent:** This option fails over all VMs to the latest app-consistent recovery point. The time stamp is shown.
     * **Custom:** Use this option to fail over to a specific recovery point. This option is useful for performing a test failover.
 3. Select the target Azure virtual network to which Azure VMs in the secondary region will be connected after the failover occurs, which in this lab is **MigrationvNet**.  
-4. To start the failover, click **OK**. Track progress by selecting the alert in the Notifications window. 
+4. To start the failover, click **OK**. Track progress by selecting the alert in the Notifications window.
 5. After the failover finishes (Start the virtual machine task is successful), the replica Azure VM appears in the Azure portal under Virtual Machines. Make sure that the VM is running, sized appropriately, and connected to the appropriate network. Note that the VM does not have a Public IP address.
 6. To delete the VMs that were created during the test failover, select **IIS** from **Virtual Machines**, select **Disaster recovery** under  **Operations**, and then choose **Cleanup test failover**. In Notes, record and save any observations associated with the test failover. Click the box for **Testing is complete** and click **Ok**.
 If you don’t delete the failover VM, the VM will continue to run and increase your Azure consumption.
@@ -101,7 +101,7 @@ If you don’t delete the failover VM, the VM will continue to run and increase 
  Once you have validated the migrated VM by performing a test failover, your next step would be to switch over to the migrated VM.  In this lab you will complete the migration.
 
  1. Once **Test Failover** is complete, click on **Failover**.
- 2. Under **Recovery Point** enure that **(low RTO)** is selected and click **OK**. Note the checkbox to shut down the source VM before failover (migration). 
+ 2. Under **Recovery Point** enure that **(low RTO)** is selected and click **OK**. Note the checkbox to shut down the source VM before failover (migration).
  Under alerts click the link for **Starting failover** and monitor the failover (migration).
  3. Once failover is complete, click on **Virtual Machines** in the Azure Portal and notice that you have two IIS VMs; one stopped (deallocated) in the East US and then another VM in the Central US that's running.
 
