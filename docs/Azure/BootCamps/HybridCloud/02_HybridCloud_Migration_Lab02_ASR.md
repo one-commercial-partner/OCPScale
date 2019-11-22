@@ -26,7 +26,7 @@ This script creates an Azure Virtual Machine running Windows Server 2016, and th
     `Invoke-Expression -Command "cmdkey /add:wagsazurefiles.file.core.windows.net /user:Azure\wagsazurefiles /pass:tCfYh37xGNjIc0czqfTW9+kUHIIhlxRUPh9h4YtD/hh7FiFPn1v32RH7uV0a83E6nAa6kkVU6d+nAAeoBItpJg=="`
 * Next, enter this command into PowerShell.  *Note that if the drive letter Z: is already used on your local computer feel free to use any available drive letter.*
 
-    `New-PSDrive -Name Z -PSProvider FileSystem -Root "\\\wagsazurefiles.file.core.windows.net\buildiis"`
+    `New-PSDrive -Name Z -PSProvider FileSystem -Root "\\wagsazurefiles.file.core.windows.net\buildiis"`
 
 * Map the z: to an Azure files share:
 
