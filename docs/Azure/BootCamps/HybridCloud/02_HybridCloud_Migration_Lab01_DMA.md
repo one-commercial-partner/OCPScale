@@ -51,7 +51,7 @@ Before you can complete this section, you will need to map a drive to an Azure F
 1. Open a command prompt.
 2. Key in (cut and paste) the following and hit **enter**:
 
-    `net use Z: \\\wagsazurefiles.file.core.windows.net\sampledata /u:AZURE\wagsazurefiles tCfYh37xGNjIc0czqfTW9+kUHIIhlxRUPh9h4YtD/hh7FiFPn1v32RH7uV0a83E6nAa6kkVU6d+nAAeoBItpJg==`
+    `net use Z: \\wagsazurefiles.file.core.windows.net\sampledata /u:AZURE\wagsazurefiles tCfYh37xGNjIc0czqfTW9+kUHIIhlxRUPh9h4YtD/hh7FiFPn1v32RH7uV0a83E6nAa6kkVU6d+nAAeoBItpJg==`
 3. Once Z: is mapped, change to the Z: drive.
 4. Confirm that you can see a file named sampledata.txt.
 
@@ -78,7 +78,7 @@ Before you can complete this section, you will need to map a drive to an Azure F
 
 ## Exercise 6 - Install the Data Migration Assistant
 
-1. From  **SQLVM** or your local computer open a web browser.  Search for, download,  and install the [Data Migration Assistant (DMA)](https://www.microsoft.com/download/details.aspx?id=53595) v5.0 or later using the defaults.
+1. From  **SQLVM** or your local WIndows computer open a web browser.  Search for, download,  and install the [Data Migration Assistant (DMA)](https://www.microsoft.com/download/details.aspx?id=53595) v5.0 or later using the defaults.  If you are using a non-Windows computer, use an existing VM from a previous lab.
 2. On the Completed screen, check the box for **Launch Microsoft Data Migration Assistant** and click **Finish**.
 
 ## Exercise 7 - Assess the simulated on-premises database

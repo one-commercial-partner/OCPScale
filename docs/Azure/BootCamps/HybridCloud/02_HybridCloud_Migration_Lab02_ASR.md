@@ -30,7 +30,38 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
     `az network public-ip show --resource-group Migration --name IISPublicIP`
 
+<<<<<<< HEAD
 10. Open a web browser and surf to the public IP address to make sure the webisite is up and running on IIS.
+=======
+    If the command is successful (TcpTestSucceeded=True) then continue with the following steps.  Otherwise, jump to step 4.
+
+* Enter the following command in PowerShell:
+
+    `Invoke-Expression -Command "cmdkey /add:wagsazurefiles.file.core.windows.net /user:Azure\wagsazurefiles /pass:tCfYh37xGNjIc0czqfTW9+kUHIIhlxRUPh9h4YtD/hh7FiFPn1v32RH7uV0a83E6nAa6kkVU6d+nAAeoBItpJg=="`
+* Next, enter this command into PowerShell.  *Note that if the drive letter Z: is already used on your local computer feel free to use any available drive letter.*
+
+    `New-PSDrive -Name Z -PSProvider FileSystem -Root "\\wagsazurefiles.file.core.windows.net\buildiis"`
+
+* Map the z: to an Azure files share:
+
+    `net use Z: \\wagsazurefiles.file.core.windows.net\buildiis /persistent:Yes`
+* Copy the file to your local computer and the proceed to step 6.
+
+    `copy z:\build-iis-vm.ps1 c:\users\yourprofile\downloads`
+
+4. Obtain the buildiis.ps1 directly from your instructor.
+5. Copy the build-iis-vm.ps1 to your local computer.  
+6. From PowerShell execute the build-iis-vm.ps1 script:
+
+    `.\Build-IIS-VM.ps1`
+
+7. When prompted enter the username and password for the IIS VM:
+    * Username:  pick a username and notate the credentials
+    * Password: Enter `Complex.Password` and notate the credentials 
+8. Observe the build process via PowerShell.  Why does the PowerShell Command fail?  To correct the problem disable policy enforcement of the **Require tag and its value** policy.
+7. Once PowerShell builds the VM and installs IIS, open the Azure Portal and then obtain the public IP address of the IIS virtual machine.
+8. Open a web browser and surf to the public IP address just make sure things are working.
+>>>>>>> 38c38847e028e403d3c8ce37ee2d26cd5e7f923d
 
 ## Exercise 2 - Create target network resource
 
