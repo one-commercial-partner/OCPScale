@@ -21,7 +21,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
  --admin-password Complex.Password`
 7. Once the VM is created, let's open port 80 so we can access the VM's website from the internet. Run the follwing command:
 
-    `az vm open-port --port 80 --resource-group RG-LAB-BCDR-EAST2 --name VM-IIS-East`
+    `az vm open-port --port 80 --resource-group Migration --name IIS`
 8. Now let's install IIS using a Custom Script Extension. Run the following command:
 
     `az vm extension set --publisher Microsoft.Compute --version 1.8 --name CustomScriptExtension --vm-name IIS --resource-group Migration
