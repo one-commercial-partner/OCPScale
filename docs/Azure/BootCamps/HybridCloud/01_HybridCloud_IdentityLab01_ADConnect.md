@@ -127,7 +127,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
     * Organization name (e.g. *yourfirstname* Org Mike's Org)
     * Initial domain name (e.g. your initials plus last four of your cellphone)
         * Ensure validation passes as your namespace needs to be unique within the *.onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.  
-        
+
         _You should write this initial domain  and directory name down._
 3. Click **Create**.  It will take several minutes for the directory to be created.
 4. Once complete, select Click **here** to manage your new directory.
