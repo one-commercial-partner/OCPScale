@@ -2,8 +2,12 @@
 
 ## Before you Begin
 
-If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you are limited to a specific set of Microsoft Azure regions that you can use. Please use either the **East US, South Central US, West Europe, Southeast Asia, West US 2, or West Central US locations**.
-Otherwise you will receive an  error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
+If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you are limited to a specific set of Microsoft Azure regions that you can use. Please use any of the following otherwise you will receive an  error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
+
+* **East US**
+* **South Central US**
+* **West US 2**
+* **West Central**
 
 ## Task 1 - Setup an IaaS Virtual Machine via Azure CLI
 
