@@ -8,9 +8,9 @@ Please note that using this approach represents `the fastest way` to migrate a V
 
 In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2016, and install IIS.
 
-1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com)
-2. Login using your Microsoft Account
-3. If prompted, select the default AAD directory
+1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
+2. Login using your Microsoft Account.
+3. If prompted, select the default AAD directory.
 4. If a Welcome to Azure Cloud Shell prompt appears after logon, select Bash as the working CLI. If it does not appear, you can select PowerShell from the dropdown in the upper-left corner once a CLI prompt is presented to you. Note that you may need to provision a new CLI storage account to save your settings.
 5. At the CLI prompt, let's create a new resource group to hold your IIS VM. Create the resource group by typing in the following command:
 `az group create --name Migration --location eastus`

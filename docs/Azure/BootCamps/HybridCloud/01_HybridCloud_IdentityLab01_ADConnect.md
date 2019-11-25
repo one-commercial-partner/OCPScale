@@ -5,56 +5,97 @@
 If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you are limited to a specific set of Microsoft Azure regions that you can use. Please use either the **East US, South Central US, West Europe, Southeast Asia, West US 2, or West Central US locations**.
 Otherwise you will receive an  error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
 
-## Task 1 - Setup an IaaS Domain Controller via JSON Template
+## Task 1 - Setup an IaaS Virtual Machine via Azure CLI
 
-We will setup an IaaS VM with Active Directory via a JSON template from GitHub.  Although this domain controller is the in the cloud, we’ll use it to simulate an on-prem domain controller.
+In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2019.
 
-### Install the domain controller
+1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
+2. Login using your Microsoft Account.
+3. When the **Welcome to Azure Cloud Shell** screen appears select **Bash** as the working CLI and then **Create Storage**.  Once storage is created click **Close**.
+4. At the CLI prompt, let's create a new resource group to hold your Domain Controller VMs. Create the resource group by typing in the following command:
 
-1. Logon to your Azure subscription.
-2. Surf to <https://azure.microsoft.com/en-us/resources/templates/active-directory-new-domain/>
-3. Select **Deploy to Azure**. The Azure Portal will open and a template will appear.
-4. Enter the following information:
-    * Resource Group: Create New: **AZDCRG**
-    * Location: Pick a supported location
-    * Admin Username: Enter **yourname** *(you should write this down)*
-    * Admin Password: Enter **Complex.Password** *(you should write this down)*
-    * Domain name:  Enter a FQDN such as mydomainname.com and keep the name shorter than 15 characters (that’s a NetBIOS restriction).
-    * DNS Prefix: *pickyourown* (e.g. use the letter “a” and then the last four digits of your cell phone, a1234)
-    * Vm Size: **Standard_DS1_v2**   *(Note: You can choose a large VM size in order to get a faster VM but be careful that you don't exceed your CPU quota.)*
-5. Scroll down and select  **I agree to the terms and conditions stated above** and then **Purchase**.  Monitor the deployment by clicking on the “Deploying Template deployment” tile within the Azure Portal.
-    * Confirm that you don’t have any validation errors.  If you do, correct them before moving forward.
-    * If the deployment fails, examine the logs to see what the root cause is.
-    * You’ll need to delete the Resource Group before you try running the template again.
-    * If the template takes you back to the Microsoft Azure portal and the deployment begins, monitor the status for any errors.
-6. The deployment and build of the VM will take upwards of 30 minutes depending on several factors.  Don’t forget that we’re not only spinning up a VM but we are also installing and configuring DNS and running DCPromo.  Please return to the instructor’s presentation.
+    `az group create --name AD-ResourceGroup --location eastus`
 
-## Task 2 - Connect to the Domain Controller and create a user account
+5. Create a network security group:
 
-1. Connect to the adVM virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AZDCRG / adVM / Connect**.  
-2. Make sure that you choose the **Load balancer public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
-3. Logon with the fully qualified credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
+    `az network nsg create --name AD-NSG --resource-group AD-ResourceGroup --location eastus`
+
+6. Create a network security group rule for port 3389.
+
+    `az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group AD-ResourceGroup --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389`
+
+7. Create a virtual network.
+
+    `az network vnet create --name AD-VNet --resource-group AD-ResourceGroup --address-prefixes 10.10.0.0/16 --location eastus`
+
+8. Create a subnet
+
+    `az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group AD-ResourceGroup --vnet-name AD-VNet --network-security-group AD-NSG`
+
+9. Create an availability set.  You want to keep your domain controllers resilient.
+
+    `az vm availability-set create --name AD-AvailabilitySet --resource-group AD-ResourceGroup --location eastus`
+
+10. Create your first virtual machine, noting to change the value of **--admin-username** before executing the script.
+
+    `az vm create --resource-group AD-ResourceGroup --availability-set AD-AvailabilitySet --name DC01 --size Standard_DS1_v2 --image Win2019Datacenter --admin-username *yourfirstname* --admin-password Complex.Password --data-disk-sizes-gb 20 --data-disk-caching None --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait`
+
+At this point please write down the local credentials you just created and then return to the instructor's presentation.
+
+## Task 2 - Install and Configure Active Directory
+
+In this task you use PowerShell within Windows Server 2019 to install Active Directory.
+
+1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect**.  
+2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
+3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 4. When prompted click **No** on the Network Discovery blade.
-5. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
-6. Expand the tree and select the **Users Container**.
-7. On the toolbar click the icon to create a new user in the current container.  
-8. Create a New User with the following information:
+5. Hit the Windows Start button and then open PowerShell. Enter the following to install the Active Directory Domain Service module:
+
+    `install-windowsfeature AD-Domain-Services -IncludeAllSubFeature -IncludeManagementTools`
+6. Import the deployment modules by entering the following:
+
+    `Import-Module ADDSDeployment`
+7. Promote your server to a domain controller by entering the following command.  Don't forget to set the domain anmes problerly minding the quotes.
+
+    `Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “yourdomain.com”
+-DomainNetbiosName *“YOURDOMAIN”* -ForestMode “Win2012R2” -InstallDns:$true
+-LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true`
+
+8. Once you execute this, you will be asked to enter SafeModeAdministratorPassword – this is for the Directory Services Restore Mode (DSRM). Enter `Complex.Password`, and then retype to confirm  Once you set this password here Windows will finish the AD installation and configuration on your Windows Server based on the input provided.
+
+9. Once Active Directory is installed your virtual machine will restart.
+
+## Task 3 - Connect to the Domain Controller and create a user account
+
+1. Once DC01 has restarted connect to virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect**.
+2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
+3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
+4. When prompted click **No** on the Network Discovery blade.
+5. Open PowerShell and execute the following:
+
+    `Install-WindowsFeature -Name GPMC,RSAT-AD-PowerShell,RSAT-AD-AdminCenter,RSAT-ADDS-Tools,RSAT-DNS-Server`
+
+6. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
+7. Expand the tree and select the **Users** Container.
+8. On the toolbar click the icon to create a new user in the current container.  
+9. Create a New User with the following information:
     * First Name: **On**
     * Last Name: **Prem**
     * Full Name: **On Prem**
     * User Logon Name: **onprem**
-9. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
-10. Click **Next** then **Finish**.
-11. Minimize the RDP window.
+10. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
+11. Click **Next** then **Finish**.
+12. Minimize the RDP window.
 
-## Task 3 - Create a virtual machine
+## Task 4 - Create a virtual machine
 
 We are creating a small VM to be used later to host Azure AD Connect.
 
 1. Return to the Azure portal and click the **Create a Resource** button (the Plus) found on the upper left-hand corner of the Azure portal.
 2. Select **Compute** then select **Virtual machine**.
 3. On the Basics tab complete the following:
-    * Resource Group: **AZDCRG**
+    * Resource Group: **AD-ResourceGroup**
     * Virtual machine name: **ADConnect**
     * Region: Choose the same region as your domain controller
     * Availability options: No infrastructure redundancy required
@@ -67,12 +108,12 @@ We are creating a small VM to be used later to host Azure AD Connect.
     * Select inbound ports: **RDP (3389)**
 4. Click **Review + create** and then **Create**.   After validation passes, monitor your deployment status. It should take less than 10 minutes to spin up the VM.
 
-## Task 4 - Join the ADConnect VM to the domain
+## Task 5 - Join the ADConnect VM to the domain
 
-1. Connect to the **ADConnect** virtual machine and logon as `ADAdmin`. **Microsoft Azure / Resource Groups / AZDCRG / ADConnect / Connect.**
+1. Connect to the **ADConnect** virtual machine and logon as `ADAdmin`. **Microsoft Azure / Resource Groups / AD-ResourceGroup / ADConnect / Connect.**
 2. When prompted click **No** on the Network discovery blade.
 3. The DNS Server on ADCONNECT may not be set to see the domain controller (adVM), so we need to check that setting.  
-4. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.0.0.4 (the private IP address of adVM), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
+4. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.0.0.4 (the private IP address of DC01), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
 
 ### Configure DNS
 
@@ -84,7 +125,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 6. You will then lose connection to the ADConnect VM, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the ADConnect VM.
 7. Once the VM is successfully restarted, connect to the ADConnect VM and logon as ADAdmin.
 
-## Task 5 - Join the Domain
+## Task 6 - Join the Domain
 
 1. Within **Server Manager**, click on **Local Server**.
 2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
@@ -92,7 +133,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 4. In the Windows Security box enter the AD Domain Admin credentials you specified in the template.
 5. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
-## Task 6 - Install Azure Active Directory
+## Task 7 - Install Azure Active Directory
 
 1. In the Azure Portal, click  **+Create a resource** and then select **Identity**, then **Azure Active Directory**.
 2. Enter the following on the **Create directory tab**:
@@ -103,7 +144,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 3. Click **Create**.  It will take several minutes for the directory to be created.
 4. Once complete, select Click **here** to manage your new directory.
 
-## Task 7 - Create a Sync Account
+## Task 8 - Create a Sync Account
 
 We are going to create an account that AD Connect will use to perform the synchronization process bethween the on-prem domain controller and Azure Active Directory.
 
@@ -118,7 +159,7 @@ We are going to create an account that AD Connect will use to perform the synchr
 5. Change your password to `Complex.Password` and then click **Sign in**.
 6. Close your inprivate or incognito browser.
 
-## Task 8 - Sync Azure AD with Windows Server AD (AD DS)
+## Task 9 - Sync Azure AD with Windows Server AD (AD DS)
 
 ### Install Azure Active Directory Connect
 
@@ -128,7 +169,7 @@ We are going to create an account that AD Connect will use to perform the synchr
 4. Click **Download**, then **Run** when prompted.
 Close Internet Explorer.
 
-## Task 9 -  Configure Azure Active Directory Connect
+## Task 10 -  Configure Azure Active Directory Connect
 
 1. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
 2. Review the screen and select **Use express settings**.
@@ -141,7 +182,7 @@ Close Internet Explorer.
 7. It may take 5-10 minutes for Azure AD Connect to complete installation. Read the **Configuration Complete** screen and then click **Exit**.
 8. Minimize your RDP window.
 
-## Task 10 - Validate Synchronization
+## Task 11 - Validate Synchronization
 
 1. Switch to the Azure portal and examine your Azure AD Directory by selecting the xxxx.onmicrosoft.com  Directory from the upper right hand corner of the portal.
 2. Note that you should see accounts sourced from Active Directory that have synchronized to Azure Active Directory (e.g. On Prem).
