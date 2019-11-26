@@ -127,7 +127,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 
 ## Task 6 - Join the Domain
 
-1. Once the ADConnect is successfully restarted, connect to the ADConnect VM and logon as ADAdmin.  Within **Server Manager**, click on **Local Server**.
+1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as ADAdmin.  Within **Server Manager**, click on **Local Server**.
 2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
 3. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
 4. In the Windows Security box enter the AD Domain Admin credentials you specified earlier.
@@ -137,11 +137,12 @@ We are creating a small VM to be used later to host Azure AD Connect.
 
 1. In the Azure Portal, click  **+Create a resource** and then select **Identity**, then **Azure Active Directory**.
 2. Enter the following on the **Create directory tab**:
-    * Organization name (e.g. *yourfirstname* Org Mike's Org)
+    * Organization name (e.g. *yourfirstname* Mike's Org)
     * Initial domain name (e.g. your initials plus last four of your cellphone)
-        * Ensure validation passes as your namespace needs to be unique within the *.onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.  
+        
+        *Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.*
 
-        _You should write this initial domain  and directory name down._
+        ***Write this domain name down as your Azure Active Directory Domain Name.***
 3. Click **Create**.  It will take several minutes for the directory to be created.
 4. Once complete, select Click **here** to manage your new directory.
 
