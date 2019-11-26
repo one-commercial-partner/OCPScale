@@ -82,28 +82,29 @@ In this task you use PowerShell within Windows Server 2019 to install Active Dir
 3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
 
     *Note that if you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.*
-4. When prompted click **No** on the Network Discovery blade.
-5. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
-6. Expand the tree and select the **Users** Container.
-7. On the toolbar click the icon to create a new user in the current container.  
-8. Create a New User with the following information:
+4. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
+5. Expand the tree and select the **Users** Container.
+6. On the toolbar click the icon to create a new user in the current container.  
+7. Create a New User with the following information:
     * First Name: **On**
     * Last Name: **Prem**
     * Full Name: **On Prem**
     * User Logon Name: **onprem**
-9. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
-10. Click **Next** then **Finish**.
-11. Minimize the RDP window.
+8. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
+9. Click **Next** then **Finish**.
+10. Minimize the RDP window.
 
 ## Task 4 - Create a virtual machine to host AD Connect
 
 We are creating a small VM to be used later to host Azure AD Connect.
 
-1. Open an Azure CLI window by browsing to Azure Shell.  Create an availability set.  You want to keep all your virtual machines resilient.
+1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
+2. Login using your Microsoft Account.
+3. Create an availability set.  You want to keep all your virtual machines resilient.
 
     `az vm availability-set create --name ADConnect-AvailabilitySet --resource-group AD-ResourceGroup --location eastus`
 
-2. Create your virtual machine, noting to change the value of **--admin-username** before executing the script.
+4. Create your virtual machine, noting to change the value of **--admin-username** before executing the script.
 
     `az vm create --resource-group AD-ResourceGroup --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
 
