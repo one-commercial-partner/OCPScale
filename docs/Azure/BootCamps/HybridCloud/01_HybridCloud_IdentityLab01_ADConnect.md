@@ -104,7 +104,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 
     `az vm availability-set create --name ADConnect-AvailabilitySet --resource-group AD-ResourceGroup --location eastus`
 
-4. Create your virtual machine, noting to change the value of **--admin-username** before executing the script.
+4. Create your virtual machine:
 
     `az vm create --resource-group AD-ResourceGroup --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
 
