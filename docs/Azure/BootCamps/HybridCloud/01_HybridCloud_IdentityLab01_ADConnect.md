@@ -42,7 +42,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
 10. Create your virtual machine, noting to change the value of **--admin-username** before executing the script.
 
-    `az vm create --resource-group AD-ResourceGroup --availability-set AD-AvailabilitySet --name DC01 --size Standard_DS1_v2 --image Win2019Datacenter --admin-username *yourfirstname* --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait`
+    `az vm create --resource-group AD-ResourceGroup --availability-set AD-AvailabilitySet --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username *yourfirstname* --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait`
 
 At this point please write down the local credentials you just created and then return to the instructor's presentation.
 
@@ -105,7 +105,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 
 2. Create your virtual machine, noting to change the value of **--admin-username** before executing the script.
 
-    `az vm create --resource-group AD-ResourceGroup --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_DS1_v2 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
+    `az vm create --resource-group AD-ResourceGroup --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
 
 ## Task 5 - Join the ADConnect VM to the domain
 
