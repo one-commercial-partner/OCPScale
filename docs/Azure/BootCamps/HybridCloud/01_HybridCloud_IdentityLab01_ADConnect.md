@@ -2,7 +2,7 @@
 
 ## Before you Begin
 
-If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you are limited to a specific set of Microsoft Azure regions that you can use. Please use any of the following otherwise you will receive an  error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
+If you are using a Azure subscription that was provided to you by Microsoft, you are limited to a specific set of Microsoft Azure regions that you can use. Please use any of the following otherwise you will receive an  error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
 
 * **East US**
 * **South Central US**
@@ -54,27 +54,34 @@ In this task you use PowerShell within Windows Server 2019 to install Active Dir
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
 3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 4. When prompted click **No** on the Network Discovery blade.
-5. Hit the Windows Start button and then open PowerShell. Enter the following to install the Active Directory Domain Service module:
+5. Hit the **Windows Start** button and then open **PowerShell**. Enter the following to install the Active Directory Domain Service module:
 
     `install-windowsfeature AD-Domain-Services -IncludeAllSubFeature -IncludeManagementTools`
 6. Import the deployment modules by entering the following:
 
     `Import-Module ADDSDeployment`
-7. Promote your server to a domain controller by entering the following command.  Don't forget to set the domain anmes problerly minding the quotes.
+
+    *Note that PowerShell will quickly return as this command takes milliseconds to execute.*
+7. Promote your server to a domain controller by entering the following command.  Don't forget to set the **domain names properly** minding the quotes.
 
     `Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “yourdomain.com”
 -DomainNetbiosName *“YOURDOMAIN”* -ForestMode “Win2012R2” -InstallDns:$true
 -LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true`
 
-8. Once you execute this, you will be asked to enter SafeModeAdministratorPassword – this is for the Directory Services Restore Mode (DSRM). Enter `Complex.Password`, and then retype to confirm  Once you set this password here Windows will finish the AD installation and configuration on your Windows Server based on the input provided.
+    *Write down your FQDN doman name for future reference.*
+
+8. Once you hit enter you will be asked for the  SafeModeAdministratorPassword – this is for the Directory Services Restore Mode (DSRM). Enter `Complex.Password`, and then retype to confirm.
 
 9. Once Active Directory is installed your virtual machine will restart.
 
 ## Task 3 - Connect to the Domain Controller and create a user account
 
-1. Once DC01 has restarted connect to virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect**.
+1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect**.
+
 2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
 3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
+
+    *Note that if you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.*
 4. When prompted click **No** on the Network Discovery blade.
 5. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
 6. Expand the tree and select the **Users** Container.
