@@ -78,10 +78,10 @@ We are creating a small VM to host the Azure AD Connect Authentication Agent.
 2. Within **Server Manager**, click on **Local Server**.
 3. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
 4. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
-5. In the Windows Security box enter the AD Domain Admin credentials you specified in the template.
+5. In the Windows Security box enter the AD Domain Admin credentials you wrote down earlier.
 6. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
-## Exercise 5: Install the Authentication Agent Software
+## Exercise 7 - Install the Authentication Agent Software
 
 1. Connect to the ADConnect2 virtual machine and logon as ADAdmin.
 2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators and Users.
@@ -93,7 +93,3 @@ We are creating a small VM to host the Azure AD Connect Authentication Agent.
     * When prompted enter your adsync credentials.
     * Click **Close** when complete.
 7. Click **Refresh** on the Azure portal.  You'll notice that ADConnect2 now appears in the default group.  If you receive a status of **Inactive** wait a few moments and refresh the portal.
-
-## If time permits
-
-Repeat the previous steps to create and configure a third VM named **ADConnect3**
