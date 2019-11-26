@@ -111,9 +111,10 @@ We are creating a small VM to be used later to host Azure AD Connect.
 ## Task 5 - Join the ADConnect VM to the domain
 
 1. Once the cloud shell has built your VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / AD-ResourceGroup / ADConnect / Connect /Download RDP File**
-2. When prompted click **No** on the Network discovery blade.
-3. The DNS Server on ADCONNECT may not be set to see the domain controller (DC01), so we need to check that setting.  
-4. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
+2. Logon with local credentials (i.e. ADAdmin).  Choose **More Choices** then **Use a different account** to enter your new set of credentials.
+3. When prompted click **No** on the Network discovery blade.
+4. The DNS Server on ADCONNECT may not be set to see the domain controller (DC01), so we need to check that setting.  
+5. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
 
 ### Configure DNS
 
