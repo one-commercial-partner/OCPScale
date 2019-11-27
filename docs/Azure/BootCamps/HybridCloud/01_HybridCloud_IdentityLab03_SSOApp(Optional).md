@@ -63,8 +63,8 @@ To assign one or more groups to an application directly, follow these steps:
 
 1. Select **Enterprise Applications** under **Manage** and then select **Facebook**.
 2. Click on **Users and Groups** from the menu on the left and select the **+Add user** button at the top of the pane.
-3. If you see the message ***Groups are not available for assignment due to your Active Directory plan level*** then click on the error message and activate **Azure AD Premium P2**.
-4. Select **Users**  from the Add Assignment pane and then select **Facebook Authorized**.
+3. If you see the message ***Groups are not available for assignment due to your Active Directory plan level*** then click on the error message and activate **Azure AD Premium P2**.  It may take 5-8 minutes for the upgrade to go live.
+4. Select **Users and groups**  from the Add Assignment pane and then select **Facebook Authorized**.
 5. When you're finished selecting groups, use the **Select** button to add them to the list of users and groups to be assigned to the application.
 6. Select **Assign** to assign the application to the selected groups. After a short period, the users you've selected should be able to start these applications from the Access Panel.
 
