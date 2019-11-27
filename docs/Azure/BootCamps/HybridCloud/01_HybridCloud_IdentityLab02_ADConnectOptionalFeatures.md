@@ -83,7 +83,7 @@ We are creating a small VM to host the Azure AD Connect Authentication Agent.
 
 ## Exercise 7 - Install the Authentication Agent Software
 
-1. Connect to the ADConnect2 virtual machine and logon as ADAdmin.
+1. Connect to the ADConnect2 virtual machine and logon as your domain account (*domain\username*).
 2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators and Users.
 3. Sign in to the Azure Active Directory admin center (<http://portal.azure.com)>  with your tenant's global administrator credentials (ADSYNC@*yourdomain*.onmicrosoft.com).
 4. Select **Azure Active Directory** in the left pane.

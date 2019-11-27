@@ -10,7 +10,7 @@ In this lab you are going to publish an application (Facebook) from the Azure AD
 
 If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you are limited to a specific set of Microsoft Azure regions that you can use. Please use either the **East US, South Central US, West Europe, Southeast Asia, West US 2, or West Central US locations**. Otherwise you will receive an  error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
 
-## Task  1 - Add some test users
+## Exercise 1 - Add some test users
 
 We need to create some users in order to learn about application provisioning to users and groups.
 
@@ -19,55 +19,56 @@ We need to create some users in order to learn about application provisioning to
     * Group Name: Facebook Authorized
     * Group Description: Users allowed to have SSO with Facebook
     * Click **Create**
-3. Click **Azure Active Directory**, **Users**, and then **+New Users**, and enter the following:
+3. Click your **Azure Active Directory**, **Users**, and then **+New User**, and enter the following:
     * User name: NoFace
     * Name: FacebookNo
     * Password: Select **Let me create the password** and enter `Temp.Password`
     * Click **Create**
-4. Click  **+New Users** and enter the following:
+4. Click  **+New User** and enter the following:
     * User name: YesFace
     * Name: FacebookYes
     * Password: Select **Let me create the password** and enter `Temp.Password`
     * Under Groups click **0 groups selected**.  Highlight and select  **Facebook Authorized** and then click **Select**.
     * Click **Create**
 
-## Task 2 - Add Facebook from the Azure AD gallery
+## Exercise 2 - Add Facebook from the Azure AD gallery
 
 To add Facebook from the Azure AD gallery, follow these steps:
 
-1. Click **Azure Active Directory**, **Enterprise Applications**, **+New  Application**, and enter the following:
-    * Enter **Facebook** in the **Add** from the gallery section.
+1. Click your **Azure Active Directory**, **Enterprise Applications**, **+New  Application**, and enter the following:
+    * Enter **Facebook** in the **Add from the gallery** search box.
     * Select **Facebook** and then select **Add** to add the application. After a short period, you can see the application’s configuration pane.
 
-## Task 3 - Configure Facebook for password single sign-on
+## Exercise 3 - Configure Facebook for password single sign-on
 
 To configure single sign-on for Facebook, follow these steps:
 
-1. Select **Single sign-on** from the left menu.
-2. Select **Password-based** mode and then click **Save**.
+1. Select **Single sign-on** from the left menu under **Manage**.
+2. Click on **Password-based** mode and then click **Save**.
 
-## Task 4 - Assign an application to a group directly
+## Exercise 4 - Assign an application to a group directly
 
 In order to assign an application to a group we need change the version of Azure AD from the free version to Premium P2.
 
 ### Change Azure AD Version
 
-1. Click **Azure Active Directory** in the Azure Portal.
+1. Click on your **Azure Active Directory** in the Azure Portal.
 2. Select **Getting started** and then **Get a free trial for Azure AD Premium**.
-3. Expand **Free trial** under **Enterprise Mobility + Security E5** and the click **Activate**.
-4. Select **Overview** and then refresh your browser,  Ensure that your Azure AD version reports as **Azure AD Premium P2** before continuing.
+3. Expand **Free trial** under **AZURE AD PREMIUM P2** and then click **Activate**.
+4. Select **Overview** and then refresh your browser,  Ensure that your Azure AD version reports as **Azure AD Premium P2** before continuing.  It may take several minutes for the upgrade to go active.
 
 ### Assign Groups
 
 To assign one or more groups to an application directly, follow these steps:
 
-1. Select **Enterprise Applications** and then select **Facebook**.
+1. Select **Enterprise Applications** under **Manage** and then select **Facebook**.
 2. Click on **Users and Groups** from the menu on the left and select the **+Add user** button at the top of the pane.
-3. Select **Users**  from the Add Assignment pane and then select **Facebook Authorized**.  If you see the message ***Groups are not available for assignment due to your Active Directory plan level*** then click on the error message and active **Azure AD Premium P2**.
-4. When you're finished selecting groups, use the **Select** button to add them to the list of users and groups to be assigned to the application.
-5. Select **Assign** to assign the application to the selected groups. After a short period, the users you've selected should be able to start these applications from the Access Panel.
+3. If you see the message ***Groups are not available for assignment due to your Active Directory plan level*** then click on the error message and activate **Azure AD Premium P2**.
+4. Select **Users**  from the Add Assignment pane and then select **Facebook Authorized**.
+5. When you're finished selecting groups, use the **Select** button to add them to the list of users and groups to be assigned to the application.
+6. Select **Assign** to assign the application to the selected groups. After a short period, the users you've selected should be able to start these applications from the Access Panel.
 
-## Task 5 - Test Access to Facebook
+## Exercise 5 - Test Access to Facebook
 
 You are now going to logon as FacebookYes to configure your SSO credentials to validate functionality.  You will then logon as FacebookNo to see the difference.
 
