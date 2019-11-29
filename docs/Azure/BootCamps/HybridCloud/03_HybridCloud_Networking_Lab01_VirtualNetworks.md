@@ -15,14 +15,13 @@ Otherwise you will receive an error in the portal if you select an unsupported r
 
 Additionally, your Azure subscription is limited in the amount of cores that you can provision.  Ensure that you have deleted the following VMs before completing this lab:
 
-* IIS-test
 * ADConnect2 and ADConnect3
 
 ## Lab Summary
 
-In this lab you are going top create multiple virtual networks each with it's own virtual machine and subnet and then test connectivity across subnets and vnets.
+In this lab you are going to create multiple virtual networks each with it's own virtual machine and subnet and then test connectivity across subnets and vnets.
 
-## Task 1 -  Create three virtual networks
+## Exercise 1 -  Create three virtual networks
 
 ### vNet1
 
@@ -58,9 +57,9 @@ Repeat the steps above for vNet3:
 * Subnet Name: **subnet3**
 * Subnet address range: **10.103.3.0/24**
 
-## Task 2 - Create three virtual machines
+## Exercise 2 - Create three virtual machines
 
-1. Return to the Azure portal and click the **Create a Resource** button (the Plus) found on the upper left-hand corner of the Azure portal.
+1. Return to the Azure portal and click the **+Create a Resource** button found on the upper left-hand corner of the Azure portal.
 2. Select **Compute** then select **Virtual machine**.
 3. On the Basics tab complete the following:
     * Resource Group:  *Create New* **NetVMs**
@@ -98,13 +97,13 @@ Repeat the steps above for vNet3:
 5. Select **vNet2** for the Virtual network.
 6. **Review + create**.   After validation passes, click  **Create** and then monitor your deployment status. It should take less than 10 minutes to spin up the VM.
 
-## Task 4 - Create the third VM
+## Exercise 4 - Create the third VM
 
 We are going to create the third VM using PowerShell within Cloud Shell.
 
 1. Click on the Cloud Shell icon on the taskbar: **>_**
 2. Select **PowerShell**.
-3. Select **Create Storage**.
+3. If you are prompted, select **Create Storage**.
 4. Enter the following to set the username and password needed for the administrator account on the VM :
     `$cred = Get-Credential`
 5. Create the VM (note to use the correct region):
@@ -124,7 +123,7 @@ You now have three virtuals machines each in their own virtual network and subne
 2. Under  **Monitoring** choose **Topology**.
 3. Under **Resource Group** select **VNets**.  In a moment a conceptual network diagram should be generated showing all three vNets and subnets.  Notice that there is no link between vNet1, vNet2, or vNet3.
 
-## Task 5 - Connect to a VM and test connectivity
+## Exercise 5 - Connect to a VM and test connectivity
 
 Before you begin this section, obtain the private and public IP addresses of VM1, VM2, and VM3.
 
@@ -141,7 +140,7 @@ Before you begin this section, obtain the private and public IP addresses of VM1
 
 9. Repeat these steps (connect to the VM and issue the PowerShell command) for VM2 and VM3.
 
-## Task 6 - Connect virtual networks with virtual network peering using the Azure portal
+## Exercise 6 - Connect virtual networks with virtual network peering using the Azure portal
 
 You can connect virtual networks to each other with virtual network peering. These virtual networks can be in the same region or different regions (also known as Global VNet peering). Once virtual networks are peered, resources in both virtual networks are able to communicate with each other, with the same latency and bandwidth as if the resources were in the same virtual network.
 
@@ -158,7 +157,7 @@ You can connect virtual networks to each other with virtual network peering. The
     * Select **OK**
 4. Peering status - If you don't see the status, refresh your browser.  Virtual network peering is not fully established until the peering status for both virtual networks is **Connected**.
 
-## Task 7 -  Test connectivity
+## Exercise 7 -  Test connectivity
 
 1. Obtain the public and private IP address of VM2.
 2. Open your RDP session to VM1.

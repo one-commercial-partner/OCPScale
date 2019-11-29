@@ -98,9 +98,9 @@ Before you can migrate data from an on-premises SQL Server  to a single database
     * Click **Connect**.
 6. Under *Add sources* select **SampleData** and the click **Add**.
 7. Select **Start Assessment**.
-8. Review the results and the select **Compatibility issues** radio button in the upper left ahnd corner to see if there are any compatibility issues with your database.
+8. Review the results and then select **Compatibility issues** radio button in the upper left-hand corner to see if there are any compatibility issues with your database.
 
-## Exercise 8 -Provisioned an Azure SQL database
+## Exercise 8 -Provision an Azure SQL database
 
 Before you migrate, a target Azure SQL database needs to be provisioned..
 
@@ -118,7 +118,7 @@ Before you migrate, a target Azure SQL database needs to be provisioned..
         * Click **Ok**
     * Under **Compute + storage** click *Configure database*, choose **Basic**, and then click **Apply**.
 4. Select **Review + Create** and then **Create**.
-5. Once you database server is created, click **Go to resource**.
+5. Once your database server is created, click **Go to resource**.
 6. In the Azure Portal, copy to clipboard the FQDN of  the database server, such as `abc032019.database.windows.net`.
 7. Open the server up to connections by:
     * Click on **Set Server firewall**
@@ -171,7 +171,7 @@ Let's make sure that your data got migrated and looks right.  We're going to con
     * Authentication type: SQL Server Authentication
     * In the Username box, type the name of a valid SQL login from the previous steps.
     * In the Password box, type the password of the login from the previous steps.
-4. Browse databases to select **SampleData**.
+4. Browse databases to select **Cloud**.
 5. Right-click on **New Query** and enter the following:
     * `select TOP (1000) [zip] FROM SampleData.dbo.sampledata`
 6. Click **Execute**.  This query will search the Azure SQL database and display the first 1000 zip codes.

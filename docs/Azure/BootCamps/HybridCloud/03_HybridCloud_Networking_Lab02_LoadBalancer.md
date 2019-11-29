@@ -1,8 +1,8 @@
 # Lab 2 - Load Balancer
 
-Load balancing provides a higher level of availability and scale by spreading incoming requests across multiple virtual machines (VMs). You can use the Azure portal to create a load balancer that will load balance virtual machines. In this lab you will learn how to create network resources, back-end servers, and a load balancer at the Basic pricing tier.
+Load balancing provides a higher level of availability and scale by spreading incoming requests across multiple virtual machines (VMs). You can use the Azure portal to create a load balancer that will load balance virtual machines. In this lab you will learn how to create network resources, back-end servers, and a load balancer.
 
-## Task 1 - Create a Standard load balancer
+## Exercise 1 - Create a Standard load balancer
 
 In this section, you create a public standard load balancer by using the portal. The public IP address is automatically configured as the load balancer's front end when you create the public IP and the load balancer resource by using the portal. The name of the front end is myLoadBalancer.
 
@@ -19,7 +19,7 @@ In this section, you create a public standard load balancer by using the portal.
     * Select **Review + Create**.
     * After Validation passes click **Create**.
 
-## Task 2 - Create back-end servers
+## Exercise 2 - Create back-end servers
 
 In this section you create a virtual network and you create two virtual machines for the back-end pool of your Basic load balancer. Then you install Internet Information Services (IIS) on the virtual machines to help test the load balancer.
 
@@ -76,13 +76,13 @@ In this section you create a virtual network and you create two virtual machines
         * SKU: **Standard**
         * Click **Ok**
 
-## Task 3 - Create NSG rules
+## Exercise 3 - Create NSG rules
 
 In this section, you create NSG rules to allow inbound connections that use HTTP and RDP.
 
 1. Select **Resource Groups** on the left menu. From the resource list, select **LoadBalVMs** then **LBVM1-nsg**.
 2. Under **Settings**, select **Inbound security rules**, and then select **Add**.
-3. Enter the following values for the inbound security rule named **HTTPRule** to allow for inbound HTTP connections that use port 80. Then select **Add**.
+3. Enter the following values for the inbound security rule named **HTTP-In** to allow for inbound HTTP connections that use port 80. Then select **Add**.
     * Source: Service Tag
     * Source service tag: Internet
     * Source port ranges: *
@@ -96,7 +96,7 @@ In this section, you create NSG rules to allow inbound connections that use HTTP
 
 4. Repeat the above steps except from the resource list, select **LoadBalVMs** then **LBVM2-nsg**.
 
-## Task 4 - Install IIS
+## Exercise 4 - Install IIS
 
 1. Select **Virtual Machines** on the left menu, then select **LBVM1**.
 2. On the Overview page, select **Connect** to RDP into the VM.  Download and open the RDP file if needed.
@@ -121,7 +121,7 @@ Once IIS is installed, on each VM edit the default web page by:
 
 Repeat the same steps for LBVM2 and change the line to state `<title>LBVM2</title>`
 
-## Task 5 -  Create resources for the load balancer
+## Exercise 5 -  Create resources for the load balancer
 
 In this section, you configure load balancer settings for a back-end address pool and a health probe. You also specify load balancer and NAT rules.
 
@@ -152,7 +152,7 @@ Create a load balancer rule named HTTPRule for listening to port 80 in the front
     * **BEPool** for the name of the back-end pool
     * **LBHealthProbe** for the name of the health probe
 
-## Task 6 -  Test the load balancer
+## Exercise 6 -  Test the load balancer
 
 1. Find the public IP address for the load balancer on the Overview screen.
 2. Copy the public IP address and then paste it into the address bar of your browser. The default page of IIS web server is displayed in the browser, noting LBVM1 or LBVM2 as you refresh your browser.

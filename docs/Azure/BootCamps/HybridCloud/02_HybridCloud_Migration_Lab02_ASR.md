@@ -32,7 +32,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
 ## Exercise 2 - Create target network resource
 
-We could have ASR automatically create the target network resources (i.e. Virtual networks and subnets) but in a more realistic scenario you'd want to pre-create these resources and place your migrated VMs in soecific networks.
+We could have ASR automatically create the target network resources (i.e. Virtual networks and subnets) but in a more realistic scenario you'd want to pre-create these resources and place your migrated VMs in specific networks.
 
 1. Click on Virtual networks then **+Add**
 2. Enter or select the following information, accept the defaults for the remaining settings, and then select **Create**:
@@ -47,7 +47,7 @@ We could have ASR automatically create the target network resources (i.e. Virtua
 
 This task is the normal starting point for a typical lift and shift migration as you would normally have a robust source environment to migrate.
 
-1. Click **+Create a resource > ManagementStorage > Backup and Site Recovery** and enter **MyVault** as the Name and **ASRMigration** as the Resource Group.  Click **Review + Create** and then **Create**.
+1. Click **+Create a resource > IT & Management Tools > Backup and Site Recovery** and enter **MyVault** as the Name and **ASRMigration** as the Resource Group.  Click **Review + Create** and then **Create**.
 
 ## Exercise 4 - Select a replication goal
 
