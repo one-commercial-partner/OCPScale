@@ -9,7 +9,7 @@ If you are using a Azure subscription that was provided to you by Microsoft, you
 * **West US 2**
 * **West Central**
 
-## Task 1 - Setup an IaaS Virtual Machine via Azure CLI
+## Exercise 1 - Setup an IaaS Virtual Machine via Azure CLI
 
 In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2019.
 
@@ -46,7 +46,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
 At this point please write down the local credentials you just created and then return to the instructor's presentation.
 
-## Task 2 - Install and Configure Active Directory
+## Exercise 2 - Install and Configure Active Directory
 
 In this task you use PowerShell within Windows Server 2019 to install Active Directory.
 
@@ -74,7 +74,7 @@ In this task you use PowerShell within Windows Server 2019 to install Active Dir
 
 9. Once Active Directory is installed your virtual machine will restart.
 
-## Task 3 - Connect to the Domain Controller and create a user account
+## Exercise 3 - Connect to the Domain Controller and create a user account
 
 1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect**.
 
@@ -94,7 +94,7 @@ In this task you use PowerShell within Windows Server 2019 to install Active Dir
 9. Click **Next** then **Finish**.
 10. Minimize the RDP window.
 
-## Task 4 - Create a virtual machine to host AD Connect
+## Exercise 4 - Create a virtual machine to host AD Connect
 
 We are creating a small VM to be used later to host Azure AD Connect.
 
@@ -108,7 +108,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 
     `az vm create --resource-group AD-ResourceGroup --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
 
-## Task 5 - Join the ADConnect VM to the domain
+## Exercise 5 - Join the ADConnect VM to the domain
 
 1. Once the cloud shell has built your VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / AD-ResourceGroup / ADConnect / Connect /Download RDP File**
 2. Logon with local credentials (i.e. ADAdmin).  Choose **More Choices** then **Use a different account** to enter your new set of credentials.
@@ -125,7 +125,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 5. Select the radio button for **Use the following DNS Server addresses:** and Set the DNS server to **10.10.10.11** and click **OK** and then **Close**.
 6. You will then lose connection to the ADConnect VM, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the ADConnect VM.
 
-## Task 6 - Join the Domain
+## Exercise 6 - Join the Domain
 
 1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as ADAdmin.  Within **Server Manager**, click on **Local Server**.
 2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
@@ -133,7 +133,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 4. In the Windows Security box enter the AD Domain Admin credentials you specified earlier.
 5. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
-## Task 7 - Install Azure Active Directory
+## Exercise 7 - Install Azure Active Directory
 
 1. In the Azure Portal, click  **+Create a resource** and then select **Identity**, then **Azure Active Directory**.
 2. Enter the following on the **Create directory tab**:
@@ -146,7 +146,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 3. Click **Create**.  It will take several minutes for the directory to be created.
 4. Once complete, select Click **here** to manage your new directory.
 
-## Task 8 - Create a Sync Account
+## Exercise 8 - Create a Sync Account
 
 We are going to create an account that AD Connect will use to perform the synchronization process bethween the on-prem domain controller and Azure Active Directory.
 
@@ -161,7 +161,7 @@ We are going to create an account that AD Connect will use to perform the synchr
 5. Change your password to `Complex.Password` and then click **Sign in**.
 6. Close your inprivate or incognito browser.
 
-## Task 9 - Install Azure Active Directory Connect
+## Exercise 9 - Install Azure Active Directory Connect
 
 1. Connect to the ADConnect VM and logon as your previously created **domain account** (i.e. `domainname\username`, not adadmin which is a local account).  If you don’t see the VM, you might need to  switch from the new Azure Active Directory you just created to the **Default Directory** associated with your subscription.  Click in the upper right-hand corner of the screen to change directories.
 2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators and Users.
@@ -169,7 +169,7 @@ We are going to create an account that AD Connect will use to perform the synchr
 4. Click **Download**, then **Run** when prompted.
 Close Internet Explorer.
 
-## Task 10 -  Configure Azure Active Directory Connect
+## Exercise 10 -  Configure Azure Active Directory Connect
 
 1. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
 2. Review the screen and select **Use express settings**.
@@ -184,7 +184,7 @@ Close Internet Explorer.
 7. It may take 5-10 minutes for Azure AD Connect to complete installation. Read the **Configuration Complete** screen and then click **Exit**.
 8. Minimize your RDP window.
 
-## Task 11 - Validate Synchronization
+## Exercise 11 - Validate Synchronization
 
 1. Switch to the Azure portal and examine your Azure AD Directory by selecting the xxxx.onmicrosoft.com  Directory from the upper right hand corner of the portal.
 2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. On Prem).
