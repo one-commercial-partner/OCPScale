@@ -97,9 +97,9 @@ Repeat the steps above for vNet3:
 5. Select **vNet2** for the Virtual network.
 6. **Review + create**.   After validation passes, click  **Create** and then monitor your deployment status. It should take less than 10 minutes to spin up the VM.
 
-## Exercise 4 - Create the third VM
+## Exercise 4 - OPTIONAL - Create the third VM
 
-We are going to create the third VM using PowerShell within Cloud Shell.
+We are going to create the third VM using PowerShell within Cloud Shell.  Only create this VM if you plan on completing the Hub and SPoke Challenge.
 
 1. Click on the Cloud Shell icon on the taskbar: **>_**
 2. Select **PowerShell**.
