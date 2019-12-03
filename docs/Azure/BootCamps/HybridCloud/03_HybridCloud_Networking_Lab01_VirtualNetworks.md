@@ -46,7 +46,7 @@ Repeat the steps above for vNet2:
 * Subnet Name: **subnet2**
 * Subnet address range: **10.102.2.0/24**
 
-## Exercise 2 - Provision virtual machines
+## Exercise 2 - Provision a virtual machine via the portal
 
 1. Return to the Azure portal and click the **+Create a Resource** button found on the upper left-hand corner of the Azure portal.
 2. Select **Compute** then select **Virtual machine**.
@@ -66,7 +66,7 @@ Repeat the steps above for vNet2:
 5. Select **vNet1** for the Virtual network.
 6. **Review + create** and then **Create**.   After validation passes, monitor your deployment status. It should take less than 10 minutes to spin up the VM.
 
-### Create the second VM
+## Exercise 3 - Provision a virtual machine via Cloud Shell
 
 1. Click on the Cloud Shell icon on the taskbar: **>_**
 2. Select **PowerShell**.
