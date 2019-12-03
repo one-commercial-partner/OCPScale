@@ -57,7 +57,7 @@ Repeat the steps above for vNet3:
 * Subnet Name: **subnet3**
 * Subnet address range: **10.103.3.0/24**
 
-## Exercise 2 - Create three virtual machines
+## Exercise 2 - Create up to three virtual machines
 
 1. Return to the Azure portal and click the **+Create a Resource** button found on the upper left-hand corner of the Azure portal.
 2. Select **Compute** then select **Virtual machine**.
@@ -79,23 +79,22 @@ Repeat the steps above for vNet3:
 
 ### Create the second VM
 
-1. Return to the Azure portal and click the **Create a Resource** button (the Plus) found on the upper left-hand corner of the Azure portal.
-2. Select **Compute** then select **Virtual machine**.
-3. On the Basics tab complete the following:
-    * Resource Group:  **NetVMs**
-    * Virtual machine name: **VM2**
-    * Region: Choose the same region as your other resources
-    * Availability options: No infrastructure redundancy required
-    * Image: Windows Server 2016 Datacenter
-    * Size: Choose **DS1_v2**
-    * Username: *pickaname* and write it down
-    * Password: `Complex.Password`
-    * Confirm Password: `Complex.Password`
-    * Public inbound ports: **Allow selected ports**
-    * Select inbound ports: **RDP (3389)**
-4. Click the **Networking** tab.
-5. Select **vNet2** for the Virtual network.
-6. **Review + create**.   After validation passes, click  **Create** and then monitor your deployment status. It should take less than 10 minutes to spin up the VM.
+1. Click on the Cloud Shell icon on the taskbar: **>_**
+2. Select **PowerShell**.
+3. If you are prompted, select **Create Storage**.
+4. Enter the following to set the username and password needed for the administrator account on the VM :
+    `$cred = Get-Credential`
+5. Create the VM (note to use the correct region):
+    `New-AzVm
+    -ResourceGroupName "NetVMs"
+    -Name "VM2"
+    -Location "EastUS"
+    -VirtualNetworkName "vNet3"
+    -SubnetName "Subnet3"
+    -SecurityGroupName "VM3-nsg"
+    -PublicIpAddressName "VM3-ip"
+    -Credential $cred
+    -size Standard_D2_v2`
 
 ## Exercise 4 - OPTIONAL - Create the third VM
 
