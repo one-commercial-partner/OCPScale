@@ -103,7 +103,10 @@ Before you begin this section, obtain the private and public IP addresses of VM1
 4. If prompted, select **Connect**. Enter the user name and password you specified when creating the VM. You may need to select **More choices**, then **Use a different account**, to specify the credentials you entered when you created the VM.
 5. Select **OK**.
 6. Click **No** on the Networks blade.
-7. From PowerShell, enter `ping vm2`. Ping fails, why is that? **Three reasons: 1) Each virtual network is isolated from other virtual networks, (2) ICMP is not allowed to pass through the Windows firewall by default, and (3) there is no name resolution established.**
+7. From PowerShell, enter `ping vm2`. Ping fails, why is that?
+
+    *Three reasons: 1) Each virtual network is isolated from other virtual networks, (2) ICMP is not allowed to pass through the Windows firewall by default, and (3) there is no name resolution established.*
+
 8. To allow VM1 to ping other VMs in a later step, enter the following command from PowerShell, which allows ICMP inbound through the Windows firewall:
 
     `New-NetFirewallRule –DisplayName “Allow ICMPv4-In” –Protocol ICMPv4`
