@@ -94,7 +94,7 @@ Repeat the steps above for vNet3:
     -SecurityGroupName "VM2-nsg"
     -PublicIpAddressName "VM2-ip"
     -Credential $cred
-    -size Standard_D2_v2`
+    -size Standard_D1`
 
 ## Exercise 4 - OPTIONAL - Create the third VM
 
