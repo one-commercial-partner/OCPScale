@@ -96,32 +96,13 @@ Repeat the steps above for vNet3:
     -Credential $cred
     -size Standard_D1`
 
-## Exercise 4 - OPTIONAL - Create the third VM
+## Exercise 4 - Validate Your Configuration
 
-We are going to create the third VM using PowerShell within Cloud Shell.  Only create this VM if you plan on completing the Hub and SPoke Challenge.
-
-1. Click on the Cloud Shell icon on the taskbar: **>_**
-2. Select **PowerShell**.
-3. If you are prompted, select **Create Storage**.
-4. Enter the following to set the username and password needed for the administrator account on the VM :
-    `$cred = Get-Credential`
-5. Create the VM (note to use the correct region):
-    `New-AzVm
-    -ResourceGroupName "NetVMs"
-    -Name "VM3"
-    -Location "EastUS"
-    -VirtualNetworkName "vNet3"
-    -SubnetName "Subnet3"
-    -SecurityGroupName "VM3-nsg"
-    -PublicIpAddressName "VM3-ip"
-    -Credential $cred
-    -size Standard_D2_v2`
-
-You now have three virtuals machines each in their own virtual network and subnet. Let's validate that.
+You now have two virtuals machines each in their own virtual network and subnet. Let's validate that.
 
 1. Click on **Network Watcher** from the left hand pane of the Azure Portal.
 2. Under  **Monitoring** choose **Topology**.
-3. Under **Resource Group** select **VNets**.  In a moment a conceptual network diagram should be generated showing all three vNets and subnets.  Notice that there is no link between vNet1, vNet2, or vNet3.
+3. Under **Resource Group** select **VNets**.  In a moment a conceptual network diagram should be generated showing all vNets and subnets.  Notice that there is no link between vNet1 or vNet2.
 
 ## Exercise 5 - Connect to a VM and test connectivity
 

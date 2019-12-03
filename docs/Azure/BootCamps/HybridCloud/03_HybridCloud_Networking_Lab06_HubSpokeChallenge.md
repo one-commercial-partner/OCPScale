@@ -11,3 +11,24 @@ Attempt to configure this on your own, otherwise follow these instructions.  You
 * Configure all VNet peering connections to allow forwarded traffic.  
 
 Reference [Hub-spoke network topology in Azure](<https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke>) for guidance.
+
+## Exercise 1 - Create the third VM
+
+We are going to create the third VM using PowerShell within Cloud Shell.  
+
+1. Click on the Cloud Shell icon on the taskbar: **>_**
+2. Select **PowerShell**.
+3. If you are prompted, select **Create Storage**.
+4. Enter the following to set the username and password needed for the administrator account on the VM :
+    `$cred = Get-Credential`
+5. Create the VM (note to use the correct region):
+    `New-AzVm
+    -ResourceGroupName "NetVMs"
+    -Name "VM3"
+    -Location "REGION"
+    -VirtualNetworkName "vNet3"
+    -SubnetName "Subnet3"
+    -SecurityGroupName "VM3-nsg"
+    -PublicIpAddressName "VM3-ip"
+    -Credential $cred
+    -size Standard_D2_v2`
