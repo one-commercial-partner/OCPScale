@@ -62,7 +62,7 @@ Repeat the steps above for vNet3:
 1. Return to the Azure portal and click the **+Create a Resource** button found on the upper left-hand corner of the Azure portal.
 2. Select **Compute** then select **Virtual machine**.
 3. On the Basics tab complete the following:
-    * Resource Group:  *Create New* **NetVMs**
+    * Resource Group:  *Create New* **VNets**
     * Virtual machine name: **VM1**
     * Region: Choose the same region as your other resources
     * Availability options: No infrastructure redundancy required
@@ -86,13 +86,13 @@ Repeat the steps above for vNet3:
     `$cred = Get-Credential`
 5. Create the VM (note to use the correct region):
     `New-AzVm
-    -ResourceGroupName "NetVMs"
+    -ResourceGroupName "VNets"
     -Name "VM2"
     -Location "EastUS"
-    -VirtualNetworkName "vNet3"
-    -SubnetName "Subnet3"
-    -SecurityGroupName "VM3-nsg"
-    -PublicIpAddressName "VM3-ip"
+    -VirtualNetworkName "vNet2"
+    -SubnetName "Subnet2"
+    -SecurityGroupName "VM2-nsg"
+    -PublicIpAddressName "VM2-ip"
     -Credential $cred
     -size Standard_D2_v2`
 
