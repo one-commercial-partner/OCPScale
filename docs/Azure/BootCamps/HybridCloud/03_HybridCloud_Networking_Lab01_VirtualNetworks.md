@@ -2,7 +2,7 @@
 
 ## Before you Begin
 
-If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you using what is called sponsored Azure and that subscription is  limited to a specific set of Microsoft Azure regions. Please consistently use one of the following locations:
+If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you are using what is called sponsored Azure and that subscription is limited to a specific set of Microsoft Azure regions. Please consistently use one of the following locations:
 
 * East US
 * South Central US
