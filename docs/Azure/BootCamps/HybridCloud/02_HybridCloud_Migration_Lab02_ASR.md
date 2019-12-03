@@ -25,7 +25,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 8. Now let's install IIS using a Custom Script Extension. Run the following command:
 
     `az vm extension set --publisher Microsoft.Compute --version 1.8 --name CustomScriptExtension --vm-name IIS --resource-group Migration
- --settings '{"commandToExecute":"powershell.exe Install-WindowsFeature -Name Web-Server"}`
+ --settings '{"commandToExecute":"powershell.exe Install-WindowsFeature -Name Web-Server"}'`
 9. Get the public IP of IIS by running the following command:
 
     `az network public-ip show --resource-group Migration --name IISPublicIP`
