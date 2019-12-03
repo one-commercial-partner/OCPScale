@@ -47,7 +47,7 @@ We could have ASR automatically create the target network resources (i.e. Virtua
 
 This task is the normal starting point for a typical lift and shift migration as you would normally have a robust source environment to migrate.
 
-1. Click **+Create a resource > IT & Management Tools > Backup and Site Recovery** and enter **MyVault** as the Name and **ASRMigration** as the Resource Group.  Click **Review + Create** and then **Create**.
+1. Click **+Create a resource > IT & Management Tools > Backup and Site Recovery** and enter **MyVault** as the Name and **ASRMigration** as the Resource Group.  CHoose **Central US** as the location. Click **Review + Create** and then **Create**.
 
 ## Exercise 4 - Select a replication goal
 
