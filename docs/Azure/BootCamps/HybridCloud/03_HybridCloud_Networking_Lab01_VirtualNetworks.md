@@ -154,4 +154,4 @@ If you wanted to ping the VM by public IP address, what do you think you would h
 
 ## Clean out your VMs
 
-If you are going to complete the hub and spoke challenge keep these resources.  Otherwise, given the limited capacity of sponsored Azure please delete the **NetVMs** Resource Groups before moving onto the next lab.
+If you are going to complete the hub and spoke challenge keep these resources.  Otherwise, given the limited capacity of sponsored Azure please delete the **NetVMs** Resource Group before moving onto the next lab.
