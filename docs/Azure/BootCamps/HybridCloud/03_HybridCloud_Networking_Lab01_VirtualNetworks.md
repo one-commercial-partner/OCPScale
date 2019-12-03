@@ -21,7 +21,7 @@ Additionally, your Azure subscription is limited in the amount of cores that you
 
 In this lab you are going to create multiple virtual networks each with it's own virtual machine and subnet and then test connectivity across subnets and vnets.
 
-## Exercise 1 -  Create three virtual networks
+## Exercise 1 -  Create virtual networks
 
 ### vNet1
 
@@ -46,18 +46,7 @@ Repeat the steps above for vNet2:
 * Subnet Name: **subnet2**
 * Subnet address range: **10.102.2.0/24**
 
-### vNet3
-
-Repeat the steps above for vNet3:
-
-* Name: **vNet3**
-* Address Space: **10.103.0.0/16**
-* Resource Group: **VNets**
-* Location: *Choose a consistent and supported location*
-* Subnet Name: **subnet3**
-* Subnet address range: **10.103.3.0/24**
-
-## Exercise 2 - Create up to three virtual machines
+## Exercise 2 - Provision virtual machines
 
 1. Return to the Azure portal and click the **+Create a Resource** button found on the upper left-hand corner of the Azure portal.
 2. Select **Compute** then select **Virtual machine**.
@@ -106,7 +95,7 @@ You now have two virtuals machines each in their own virtual network and subnet.
 
 ## Exercise 5 - Connect to a VM and test connectivity
 
-Before you begin this section, obtain the private and public IP addresses of VM1, VM2, and VM3.
+Before you begin this section, obtain the private and public IP addresses of VM1 and VM2.
 
 1. At the top of the Azure portal in the Search bar enter **VM1**. When VM1 appears in the search results select it.
 2. Copy the private and public IP addresses of VM1 and the select the **Connect** button.
@@ -114,12 +103,12 @@ Before you begin this section, obtain the private and public IP addresses of VM1
 4. If prompted, select **Connect**. Enter the user name and password you specified when creating the VM. You may need to select **More choices**, then **Use a different account**, to specify the credentials you entered when you created the VM.
 5. Select **OK**.
 6. Click **No** on the Networks blade.
-7. From PowerShell, enter `ping vm2`. Ping fails, why is that? **Three reasons: 1) Each virtual network is isolated from the other virtual networks, (2) ICMP is not allowed to pass through the Windows firewall by default, and (3) there is no name resolution established.**
+7. From PowerShell, enter `ping vm2`. Ping fails, why is that? **Three reasons: 1) Each virtual network is isolated from other virtual networks, (2) ICMP is not allowed to pass through the Windows firewall by default, and (3) there is no name resolution established.**
 8. To allow VM1 to ping other VMs in a later step, enter the following command from PowerShell, which allows ICMP inbound through the Windows firewall:
 
     `New-NetFirewallRule –DisplayName “Allow ICMPv4-In” –Protocol ICMPv4`
 
-9. Repeat these steps (connect to the VM and issue the PowerShell command) for VM2 and VM3.
+9. Repeat these steps (connect to the VM and issue the PowerShell command) for VM2.
 
 ## Exercise 6 - Connect virtual networks with virtual network peering using the Azure portal
 
