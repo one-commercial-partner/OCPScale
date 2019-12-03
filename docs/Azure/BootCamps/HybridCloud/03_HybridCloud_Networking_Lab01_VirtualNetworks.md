@@ -105,9 +105,9 @@ Before you begin this section, obtain the private and public IP addresses of VM1
 6. Click **No** on the Networks blade.
 7. From PowerShell, enter `ping vm2`. Ping fails, why is that?
 
-    *Three reasons: 1) Each virtual network is isolated from other virtual networks, (2) ICMP is not allowed to pass through the Windows firewall by default, and (3) there is no name resolution established.*
+    *Three reasons: 1) Each virtual network is isolated from every other virtual networks by default (2) ICMP is not allowed to pass through the Windows firewall by default, and (3) there is no name resolution established.*
 
-8. To allow VM1 to ping other VMs in a later step, enter the following command from PowerShell, which allows ICMP inbound through the Windows firewall:
+8. To allow VM1 to ping other VMs in a later step, enter the following command from PowerShell which allows ICMP inbound through the Windows firewall:
 
     `New-NetFirewallRule –DisplayName “Allow ICMPv4-In” –Protocol ICMPv4`
 
@@ -135,13 +135,18 @@ You can connect virtual networks to each other with virtual network peering. The
 1. Obtain the public and private IP address of VM2.
 2. Open your RDP session to VM1.
 3. From PowerShell ping VM2 by Public IP address. Does PING succeed? Why or why not?
+
+    *PING by public IP address will fail as the packets need to go outside of Azure and come back in, and by default NSG's block all incoming traffic.*
+
 4. From PowerShell ping VM2 by Private IP address. Does PING succeed? Why or why not?
+
+    *PING by private IP address will succeed as the packets stay within the Azure network and utilize the peering you just configured.*
 
 Let's examine our network topology now that we have peering enabled.
 
 1. Click on **Network Watcher** from the left hand pane of the Azure Portal.
 2. Under  **Monitoring** choose **Topology**.
-3. Under **Resource Group** select **VNets**.  In a moment a conceptual network diagram should be generated showing all your vNets and subnets including the new peerings between vNet1 and vNet2.
+3. Under **Resource Group** select **VNets**.  In a moment a conceptual network diagram should be generated showing the new peerings between vNet1 and vNet2.
 
 ## Challenge - PING the Public IP address
 
