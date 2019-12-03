@@ -115,7 +115,8 @@ We are going to create the third VM using PowerShell within Cloud Shell.  Only c
     -SubnetName "Subnet3"
     -SecurityGroupName "VM3-nsg"
     -PublicIpAddressName "VM3-ip"
-    -Credential $cred`
+    -Credential $cred
+    -size Standard_D2_v2`
 
 You now have three virtuals machines each in their own virtual network and subnet. Let's validate that.
 
