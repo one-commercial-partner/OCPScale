@@ -4,10 +4,7 @@
 
 | Topic | Link |
 | - | - |
-|Assign administrator permissions|
-|Configure cost center quotas and tagging|
-| | <https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources>
-|Configure policies at Azure subscription level|
+|Configure cost center quotas and tagging| <https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources>
 |Implement Management Groups|<https://docs.microsoft.com/en-us/azure/governance/management-groups/overview>|
 | |<https://docs.microsoft.com/en-us/azure/governance/management-groups/create>
 
