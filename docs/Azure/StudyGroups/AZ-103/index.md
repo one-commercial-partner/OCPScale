@@ -4,7 +4,7 @@ The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-103 study
 
 ## Study Group Schedule
 
-Registration:  [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
+Click here to register:  [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
 
 |Topic|Date|Homework|Recording|
 | - | - | - | - |
