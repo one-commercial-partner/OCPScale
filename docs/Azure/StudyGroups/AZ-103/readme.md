@@ -17,16 +17,14 @@ Participants should complete the following prior to attending a study group:
 ## Where do I register?
 
 Registration for this study group can be found here: 
-[AZ-300: Azure Architect](https://msuspartners.eventbuilder.com/AZ-300) 
+[AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
 
-> Please note that you will be asked to confirm your registration for each study group.  Feel free to join as many as you want, just be mindful each study group requires 8-10 hours of homework per week.
+>This study group is open to all who want to register
 
 ## What is in this repo?
 
 Simple ... Each file listed is a separate homework assignment, one for each of the exam objectives.
-
 If you see a typo or want to add content that others may find useful, edit away and submit your changes!
-
 Additionally, if you see something, say something!  Let's leverage the power of the community.
 
 **If you run across an interesting blog post, article, nuggest of truth, update the documents on Github!**
@@ -43,7 +41,7 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 
 ## Important Links
 
-[Certification Home Page](https://docs.microsoft.com/en-us/learn/certifications/exams/az-300)
+[Microsoft Azure certification exams](https://www.microsoft.com/en-us/learning/azure-exams.aspx)
 
 ## More Partner Certification Study Groups:
 
