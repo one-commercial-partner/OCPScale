@@ -6,7 +6,7 @@
 | - | - |
 |Assign administrator permissions|
 |Configure cost center quotas and tagging|
-| | https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources
+| | <https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources>
 |Configure policies at Azure subscription level|
 |Implement Management Groups|<https://docs.microsoft.com/en-us/azure/governance/management-groups/overview>|
 | |<https://docs.microsoft.com/en-us/azure/governance/management-groups/create>
@@ -40,7 +40,6 @@ Monitor spend | <https://docs.microsoft.com/en-us/azure/billing/billing-getting-
 |Remove resource groups|<https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/delete-resource-group?tabs=azure-powershell>
 |Experiential Learning|[Control and organize Azure resources with Azure Resource Manager](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/)
 | |[Move Azure resources to another resource group](https://docs.microsoft.com/en-us/learn/modules/move-azure-resources-another-resource-group/)
-
 
 ## Managed role based access control (RBAC)
 
