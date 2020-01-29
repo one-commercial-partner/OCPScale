@@ -8,7 +8,7 @@ Click here to register:  [AZ-300: Azure Architect](https://msuspartners.eventbui
 
 |Topic|Date|Homework|Recording|
 | - | - | - | - |
-|**Kickoff**|January 29, 2020| | |
+|**Kickoff**|January 29, 2020|None!| |
 |**Deploy and configure infrastructure**|February 11, 2020|[**Deploy and configure infrastructure**](Infrastructure.md)  | |
 |**Implement workloads and security**| February 19, 2020| | |
 |**Create and deploy apps**| February 26, 2020| | |
