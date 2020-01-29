@@ -2,25 +2,11 @@
 
 The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-103 study group. It is designed to equip you for the December 2019 version of the Microsoft Azure Administrator exam!
 
-## Study Group Schedule
-
-Click here to register:  [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
-
-|Topic|Date|Homework|Recording|
-| - | - | - | - |
-|Kickoff|January 29, 2020| | |
-|Manage Azure subscriptions and resources (15-20%)| February 11, 2020 |Manage Azure subscriptions and resources]docs\Azure\StudyGroups\AZ-103\Manage Azure subscriptions and resources (15-20%).md) |
-|Implement and manage storage (15-20%)|February 19, 2020| | |
-|Deploy and manage virtual machines (VMs) (5-10%)| February 26, 2020| | |
-|Configure and manage virtual networks (30-35%)| March 03, 2020|  | |
-|Manage identities (15-20%)|March 11, 2020| | |
-|Final Review|March 18, 2020| | |
-
-## What are study groups?
+## What are study groups'?'
 
 Community-based deep technical sessions with an emphasis on experiential learning.  Participants will be assigned homework that includes both reading and hands-on activities that are directly aligned to exam objectives.  A private Yammer group is available for students to ask questions so that your growth stays on track during this fast-paced learning environment. We'll also meet once a week to review key elements of the exam objectives.
 
-## What are the requirements?
+## What are the requirements'?'
 
 Participants should complete the following prior to attending a study group:
 
@@ -28,20 +14,30 @@ Participants should complete the following prior to attending a study group:
 - VILT training for the exam you wish to take
 - Working Azure subscription (Visual Studio or IUR)
 
-## Where do I register?
+## Where do I register'?'
 
 Registration for this study group can be found here:
 [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
 
 >This study group is open to all who want to register
 
-## What is in this repo?
+## What is in this repo'?'
 
 Simple ... Each file listed is a separate homework assignment, one for each of the exam objectives.
 If you see a typo or want to add content that others may find useful, edit away and submit your changes!
 Additionally, if you see something, say something!  Let's leverage the power of the community.
 
 **If you run across an interesting blog post, article, nuggest of truth, update the documents on Github!**
+
+## Study Group Schedule
+
+1. **Kickoff** - January 29, 2020
+1. [Manage Azure subscriptions and resources (15-20%)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/StudyGroups/AZ-103/Manage%20Azure%20subscriptions%20and%20resources%20(15-20%25).md) - February 11, 2020
+1. Implement and manage storage (15-20%) - February 19, 2020
+1. Deploy and manage virtual machines (VMs) (5-10%) - February 26, 2020
+1. Configure and manage virtual networks (30-35%) - March 03, 2020
+1. Manage identities (15-20%) - March 11, 2020
+1. Final Review - March 18, 2020
 
 ## Important Links
 
