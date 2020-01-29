@@ -48,3 +48,5 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 - [AZ-300: Azure Architect](https://msuspartners.eventbuilder.com/AZ-300)
 - [AZ-301: Azure Architect](https://msuspartners.eventbuilder.com/AZ-301)
 - [AZ-500: Azure Security Engineer](https://msuspartners.eventbuilder.com/AZ500StudyGroup)
+
+[Back](../)
