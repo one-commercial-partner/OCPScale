@@ -8,13 +8,13 @@ Click here to register:  [AZ-103: Azure Administrator](https://msuspartners.even
 
 |Topic|Date|Homework|Recording|
 | - | - | - | - |
-|Kickoff|January 29, 2020|N/A|<https://msit.microsoftstream.com/video/6caa563f-ae02-4382-a36a-93255df68a09>|
-|Manage Azure subscriptions and resources (15-20%)| February 11, 2020 | |
-|Implement and manage storage (15-20%)|February 19, 2020| | |
-|Deploy and manage virtual machines (VMs) (5-10%)| February 26, 2020| | |
-|Configure and manage virtual networks (30-35%)| March 03, 2020|  | |
-|Manage identities (15-20%)|March 11, 2020| | |
-|Final Review|March 18, 2020| | |
+|**Kickoff**|January 29, 2020|N/A|<https://msit.microsoftstream.com/video/6caa563f-ae02-4382-a36a-93255df68a09>|
+|**Manage Azure subscriptions and resources (15-20%)**| February 11, 2020 | |
+|**Implement and manage storage (15-20%)**|February 19, 2020| | |
+|**Deploy and manage virtual machines (VMs) (5-10%)**| February 26, 2020| | |
+|**Configure and manage virtual networks (30-35%)**| March 03, 2020|  | |
+|**Manage identities (15-20%)**|March 11, 2020| | |
+|**Final Review**|March 18, 2020| | |
 
 ## What are study groups?
 
@@ -33,7 +33,7 @@ Participants should complete the following prior to attending a study group:
 Registration for this study group can be found here:
 [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
 
->This study group is open to all who want to register
+>This study group is open to all who want to register!
 
 ## What is in this repo?
 
