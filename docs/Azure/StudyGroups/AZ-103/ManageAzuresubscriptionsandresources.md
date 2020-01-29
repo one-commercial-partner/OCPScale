@@ -4,9 +4,9 @@
 
 | Topic | Link |
 | - | - |
-|Configure cost center quotas and tagging| <https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources>
-|Implement Management Groups|<https://docs.microsoft.com/en-us/azure/governance/management-groups/overview>|
-| |<https://docs.microsoft.com/en-us/azure/governance/management-groups/create>
+|Configure cost center quotas and tagging| [Use tags to organize your Azure resources](<https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources>)
+|Implement Management Groups|[Organize your resources with Azure management groups](<https://docs.microsoft.com/en-us/azure/governance/management-groups/overview>)
+| |[Create management groups for resource organization and management](<https://docs.microsoft.com/en-us/azure/governance/management-groups/create>)
 
 ## Analyze resource utilization and consumption
 
