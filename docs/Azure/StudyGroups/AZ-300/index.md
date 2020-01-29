@@ -5,10 +5,11 @@ The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-300 study
 ## Study Group Schedule
 
 Click here to register:  [AZ-300: Azure Architect](https://msuspartners.eventbuilder.com/AZ-300)
+
 |Topic|Date|Homework|Recording|
 | - | - | - | - |
 |**Kickoff**|January 29, 2020| | |
-|**Deploy and configure infrastructure**|February 11, 2020| | |
+|**Deploy and configure infrastructure**|February 11, 2020|[**Deploy and configure infrastructure**](Infrastructure.md)  | |
 |**Implement workloads and security**| February 19, 2020| | |
 |**Create and deploy apps**| February 26, 2020| | |
 |**Implement authentication and secure data**|March 03, 2020| | |
