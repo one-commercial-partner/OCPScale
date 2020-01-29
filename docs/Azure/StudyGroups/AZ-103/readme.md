@@ -32,7 +32,7 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 ## Study Group Schedule
 
 1. **Kickoff** - January 29, 2020
-1. [Manage Azure subscriptions and resources](Manage Azure subscriptions and resources (15-20%).md) (15-20%) - February 11, 2020
+1. [Manage Azure subscriptions and resources](docs\Azure\StudyGroups\AZ-103\Manage Azure subscriptions and resources (15-20%).md) (15-20%) - February 11, 2020
 1. Implement and manage storage (15-20%) - February 19, 2020
 1. Deploy and manage virtual machines (VMs) (5-10%) - February 26, 2020
 1. Configure and manage virtual networks (30-35%) - March 03, 2020
