@@ -157,3 +157,5 @@
 - implement Azure Backup for VMs
   - [Tutorial: Back up and restore files for Windows virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-backup-vms)
   - [Tutorial: Back up and restore files for Linux virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-backup-vms)
+
+[Back](index.md)

@@ -13,3 +13,5 @@
 - implement Azure Confidential Compute
 - implement SSL/TLS communications
 - create, read, update, and delete keys, secrets, and certificates by using the KeyVault API
+
+[Back](index.md)

@@ -15,3 +15,5 @@
 - publish an image to the Azure Container Registry
 - implement an application that runs on an Azure Container Instance
 - manage container settings by using code
+
+[Back](index.md)
