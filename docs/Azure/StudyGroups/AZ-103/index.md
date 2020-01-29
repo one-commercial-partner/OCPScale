@@ -10,8 +10,8 @@ Click here to register:  [AZ-103: Azure Administrator](https://msuspartners.even
 
 |Topic|Date|Homework|Recording|
 | - | - | - | - |
-|**Kickoff**|January 29, 2020|N/A|[Link](<https://msuspartners.eventbuilder.com/AZ103StudyGroup>)|
-|**Manage Azure subscriptions and resources**| February 11, 2020 |[**Manage Azure subscriptions and resources**](ManageAzuresubscriptionsandresources.md) |
+|**Kickoff**|January 29, 2020|None!|[Link](<https://msuspartners.eventbuilder.com/AZ103StudyGroup>)|
+|**Manage Azure subscriptions and resources**| February 11, 2020 |[Link](ManageAzuresubscriptionsandresources.md) |
 |**Implement and manage storage**|February 19, 2020| | |
 |**Deploy and manage virtual machines (VMs)**| February 26, 2020| | |
 |**Configure and manage virtual networks**| March 03, 2020|  | |
