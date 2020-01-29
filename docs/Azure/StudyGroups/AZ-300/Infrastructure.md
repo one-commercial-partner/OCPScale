@@ -1,118 +1,159 @@
-# Deploy and Configure Infrastructure (25-30%)
+# AZ-300: Microsoft Azure Architect Technologies Study Group
+## Deploy and configure infrastructure (40-45%)
 
-## Analyze resource utilization and consumption
+### Analyze resource utilization and consumption
+- configure diagnostic settings on resources
+  - [Overview of Azure platform logs](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/platform-logs-overview)
+- create baseline for resources
+  - [Azure Monitor overview](https://docs.microsoft.com/en-us/azure/azure-monitor/overview)
+- create and test alerts
+  - [Create, view, and manage metric alerts using Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric)
+  - [Introduction to Azure Advisor](https://docs.microsoft.com/en-us/azure/advisor/advisor-overview)
+- analyze alerts across subscription
+  - [Overview of alerts in Microsoft Azure](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-overview)
+  - [Exciting advances in Azure Alerts – From better alert management to Smart Groups](https://azure.microsoft.com/en-us/blog/exciting-advances-in-azure-alerts-from-better-alert-management-to-smart-groups/)
+- analyze metrics across subscription
+  - [Collect and analyze Azure activity logs in Log Analytics workspace in Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log-collect)
+  - [Understand how metric alerts work in Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric-overview)
+- create action groups
+  - [Create and manage action groups in the Azure portal](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/action-groups)
+- monitor for unused resources
+  - [Prevent unexpected charges with Azure billing and cost management](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/getting-started)
+- monitor spend
+  - [What is Azure Cost Management and Billing?](https://docs.microsoft.com/en-us/azure/cost-management-billing/cost-management-billing-overview)
+  - [Pricing calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
+- report on spend
+  - [Advanced features of Azure Metrics Explorer](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-charts)
+- utilize Log Search query functions
+  - [Get started with log queries in Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-queries)
+- view alerts in Azure Monitor logs
+  - [Create, view, and manage log alerts using Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-log)
+- visualize diagnostics data using Azure Monitor Workbooks
+  - [Azure Monitor Workbooks](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/workbooks-overview)
 
-| Topic | Link |
-| --- | --- |
-| Configure diagnostic settings on resources | [Collect and consume log data from your Azure resources](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/diagnostic-logs-overview) |
-| Create baseline for resources | [Azure Monitor Overview](https://docs.microsoft.com/en-us/azure/azure-monitor/overview) |
-| Create and rest alerts | [Create, view, and manage metric alerts using Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric) |
-|   | [Introduction to Azure Advisor](https://docs.microsoft.com/en-us/azure/advisor/advisor-overview) |
-| Analyze alerts across subscription | [Overview of Alerts in Microsoft Azure](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-overview) |
-|   | [Exciting advances in Azure Alerts – From better alert management to Smart Groups](https://azure.microsoft.com/en-us/blog/exciting-advances-in-azure-alerts-from-better-alert-management-to-smart-groups/) |
-| Analyze metrics across subscription | [Collect Azure Activity Logs into Log Analytics across subscription](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-activity-logs-subscriptions) |
-|   | [Understand how metric alerts work in Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric-overview) |
-| Create action groups | [Create and manage action groups in the Azure portal](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/action-groups) |
-| Monitor for unused resources | [Prevent unexpected charges with Azure billing and cost management](https://docs.microsoft.com/en-us/azure/billing/billing-getting-started) |
-| Monitor spend | [What is Azure Cost Management?](https://docs.microsoft.com/en-us/azure/cost-management/overview-cost-mgt) |
-|   | [Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) |
-| Report on spend | [Azure Monitor Metrics Explorer](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-charts) |
-| Utilize Log Search query functions | [Get Started with queries in Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-queries) |
-| View alerts in Log Analytics | [Overview of Alerts in Microsoft Azure](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-overview) |
+### Create and configure storage accounts
+- configure network access to the storage account
+  - [Configure Azure Storage firewalls and virtual networks](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security)
+- create and configure storage account
+  - [Create an Azure Storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create)
+- generate shared access signature
+  - [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview)
+- implement Azure AD authentication for storage
+  - [Authorize access to blobs and queues using Azure Active Directory](https://docs.microsoft.com/en-us/azure/storage/common/storage-auth-aad)
+- install and use Azure Storage Explorer
+  - [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/)
+  - [Get started with Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-manage-with-storage-explorer)
+  - [Connect Storage Explorer to an Azure Stack Hub subscription or a storage account](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-storage-connect-se)
+- manage access keys
+  - [Manage storage account access keys](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage)
+- monitor activity log by using Azure Monitor logs
+  - [Azure Storage metrics in Azure Monitor](https://docs.microsoft.com/en-us/azure/storage/common/storage-metrics-in-azure-monitor)
+- implement Azure storage replication
+  - [Azure Storage redundancy](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy)
+- implement Azure storage account failover
+  - [Disaster recovery and account failover](https://docs.microsoft.com/en-us/azure/storage/common/storage-disaster-recovery-guidance)
 
-## Create and configure storage accounts
+### Create and configure a VM for Windows and Linux
+- configure high availability
+  - [Manage the availability of Windows virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability)
+- configure monitoring
+  - [How to monitor virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/monitor)
+- configure networking
+  - [Virtual networks and virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview)
+- configure storage
+  - [Introduction to Azure managed disks](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview)
+- configure virtual machine size
+  - [Resize a Windows VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/resize-vm)
+- implement dedicated hosts
+  - [Azure Dedicated Hosts](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/dedicated-hosts)
+- deploy and configure scale sets
+  - [What are virtual machine scale sets?](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview)
 
-| Topic | Link |
-| --- | --- |
-| Configure network access to the storage account | [Configure Azure Storage firewalls and virtual networks](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security) |
-| Create and configure storage account | [Create a storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) |
-| Generate shared access signature | [Using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
-|   | [Shared Access Signatures, Part 2: Create and use a SAS with Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-dotnet-shared-access-signature-part-2) |
-| Install and use Azure Storage Explorer | [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) |
-|   | [Get started with Storage Explorer](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-manage-with-storage-explorer?toc=%2Fazure%2Fstorage%2Fqueues%2Ftoc.json&amp;tabs=windows) |
-|   | [Connect storage explorer to an Azure Stack subscription or a storage account](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-storage-connect-se) |
-| Manage access keys | [Manage storage account settings in the Azure portal](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-manage) |
-| Monitor activity log by using Log Analytics | [Storage Analytics](https://docs.microsoft.com/en-us/azure/storage/common/storage-analytics) |
-| Implement Azure storage replication | [Azure Storage replication](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy) |
+### Automate deployment of VMs
+- modify Azure Resource Manager template
+  - [Understand the structure and syntax of Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-syntax)
+- configure location of new VMs
+  - [Set resource location in Resource Manager template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/resource-location)
+- configure VHD template
+  - [Create a managed image of a generalized VM in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/capture-image-resource)
+- deploy from template
+  - [Create a VM from a managed image](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-generalized-managed)
+- save a deployment as an Azure Resource Manager template
+  - [Single and multi-resource export to a template in Azure portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/export-template-portal)
+- deploy Windows and Linux VMs
+  - [Create a Windows virtual machine from a Resource Manager template](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ps-template)
+  - [How to create a Linux virtual machine with Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-secured-vm-from-template)
 
-## Create and configure a Virtual Machine (VM) for Windows and Linux
+### Create connectivity between virtual networks
+- create and configure Vnet peering
+  - [Virtual network peering](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview)
+  - [Create, change, or delete a virtual network peering](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering)
+- create and configure Vnet to Vnet connections
+  - [Configure a VNet-to-VNet VPN gateway connection using PowerShell](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps)
+- verify virtual network connectivity
+  - [Configure a VNet-to-VNet VPN gateway connection using PowerShell: How to verify a connection](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps#verify)
+- create virtual network gateway
+  - [Create a route-based VPN gateway using the Azure portal](https://docs.microsoft.com/en-us/azure/vpn-gateway/create-routebased-vpn-gateway-portal)
 
-| Topic | Link |
-| --- | --- |
-| Configure high availability | [Manage the availability of Windows virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability)[Azure and Linux](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/overview) |
-| Configure monitoring, networking, storage, and virtual machine size | [How to monitor virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/monitor) |
-|   | [About disks storage for Azure Windows VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/about-disks-and-vhds) |
-|   | [Virtual networks and virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview) |
-| Deploy and configure scale sets | [What are virtual machine scale sets?](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json) |
+### Implement and manage virtual networking
+- configure private IP addressing
+  - [IP address types and allocation methods in Azure](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-ip-addresses-overview-arm)
+  - [Configure private IP addresses for a virtual machine using the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-static-private-ip-arm-pportal)
+- configure public IP addresses
+  - [Create a virtual machine with a static public IP address using the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-deploy-static-pip-arm-portal)
+  - [Assign multiple IP addresses to virtual machines using PowerShell](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-multiple-ip-addresses-powershell)
+- create and configure network routes
+  - [Virtual network traffic routing](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview)
+- create and configure network interface
+  - [Create and manage a Windows virtual machine that has multiple NICs](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/multiple-nics)
+- create and configure subnets
+  - [Add, change, or delete a virtual network subnet](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-subnet)
+- create and configure virtual network
+  - [Create, change, or delete a virtual network](https://docs.microsoft.com/en-us/azure/virtual-network/manage-virtual-network)
+- create and configure Network Security Groups and Application Security Groups
+  - [Security groups](https://docs.microsoft.com/en-us/azure/virtual-network/security-overview)
+  - [Create, change, or delete a network security group](https://docs.microsoft.com/en-us/azure/virtual-network/manage-network-security-group)
 
-## Automate deployment of Virtual Machines (VMs)
+### Manage Azure Active Directory
+- add custom domains
+  - [Add your custom domain name using the Azure Active Directory portal](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain)
+- configure Azure AD Identity Protection
+  - [What is Azure Active Directory Identity Protection?](https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/overview-identity-protection)
+- configure Azure AD Join
+  - [How to: Plan your Azure AD join implementation](https://docs.microsoft.com/en-us/azure/active-directory/devices/azureadjoin-plan)
+- configure self-service password reset
+  - [Tutorial: Complete an Azure AD self-service password reset pilot roll out](https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-sspr-pilot)
+- implement conditional access policies
+  - [What is Conditional Access?](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview)
+  - [Quickstart: Require MFA for specific apps with Azure Active Directory Conditional Access](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/app-based-mfa)
+- manage multiple directories
+  - [Understand how multiple Azure Active Directory tenants interact](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/licensing-directory-independence)
+- perform an access review
+  - [Review access to groups and applications in Azure AD access reviews](https://docs.microsoft.com/en-us/azure/active-directory/governance/perform-access-review)
 
-_May include but not limited to:_ Modify Azure Resource Manager (ARM) template; configure location of new VMs; configure VHD template; deploy from template; save a deployment as an ARM template; deploy Windows and Linux VMs
+### Implement and manage hybrid identities
+- install and configure Azure AD Connect
+  - [Azure AD Connect and Azure AD Connect Health installation roadmap](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-roadmap)
+- configure federation
+  - [Manage and customize Active Directory Federation Services by using Azure AD Connect](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-fed-management)
+- configure single sign-on
+  - [Azure Active Directory Seamless Single Sign-On: Quick start](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-sso-quick-start)
+- manage and troubleshoot Azure AD Connect
+  - [Troubleshoot Azure AD connectivity with the ADConnectivityTool PowerShell module](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-adconnectivitytools)
+- troubleshoot password sync and writeback
+  - [What is password hash synchronization with Azure AD?](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-phs)
+  - [Implement password hash synchronization with Azure AD Connect sync](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization)
+  - [Azure AD Connect: Enabling device writeback](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-device-writeback)
 
-| Topic | Link |
-| --- | --- |
-| Modify Azure Resource Manager (ARM) template | [Understand the structure and syntax of Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates) |
-| configure location of new VMs | [Create Azure Resource Manager template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/how-to-create-template) |
-| configure VHD template | [Tutorial - Manage Azure disks with Azure PowerShell](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-manage-data-disk) |
-| deploy from template | [Deploy resources with Resource Manager templates and Azure portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal) |
-|   | [Deploy the template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-quickstart-create-templates-use-visual-studio-code#deploy-the-template) |
-|   | [Create a Windows virtual machine from a Resource Manager template](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ps-template) |
-| save a deployment as an ARM template | [https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template) |
-| deploy Windows and Linux VMs | [Deploy an Azure Virtual Machine using C# and a Resource Manager template](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/csharp-template) |
-|   | [How to create a Linux virtual machine with Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-secured-vm-from-template) |
-
-## Create connectivity between virtual networks
-
-| Topic | Link |
-| --- | --- |
-| Create and configure VNET peering | [Virtual network peering](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview) |
-|   | [Create, change, or delete a virtual network peering](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering) |
-| create and configure VNET to VNET | [https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-different-deployment-models-portal?toc=%2fazure%2fvirtual-network%2ftoc.json](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-different-deployment-models-portal?toc=%2fazure%2fvirtual-network%2ftoc.json) |
-|  verify virtual network connectivity | [Connect virtual networks from different deployment models using the portal](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-different-deployment-models-portal?toc=%2fazure%2fvirtual-network%2ftoc.json#verify) |
-||[Connect virtual networks from different deployment models using PowerShell](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-different-deployment-models-powershell)
-| create virtual network gateway | [Gateways and on-premises connectivity](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview#gateways-and-on-premises-connectivity) |
-
-## Implement and manage virtual networking
-
-_May include but not limited to:_ Configure private and public IP addresses, network routes, network interface, subnets, and virtual network
-
-| Topic | Link |
-| --- | --- |
-| Configure private and public IP addresses, network routes, network interface, subnets, and virtual network | [https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-ip-addresses-overview-arm](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-ip-addresses-overview-arm) |
-|   | [https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-deploy-static-pip-arm-portal](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-deploy-static-pip-arm-portal) |
-|   | [https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-multiple-ip-addresses-powershell](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-multiple-ip-addresses-powershell) |
-|   | [https://docs.microsoft.com/en-us/azure/virtual-machines/windows/multiple-nics?toc=%2fazure%2fvirtual-network%2ftoc.json](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/multiple-nics?toc=%2fazure%2fvirtual-network%2ftoc.json) |
-
-## Manage Azure Active Directory (AD)
-
-
-
-| Topic | Link |
-| --- | --- |
-| Add custom domains | [https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain) |
-| configure Azure AD Identity Protection, Azure AD Join, and Enterprise State Roaming | [https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/overview](https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/overview) |
-|   | [https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/enable](https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/enable) |
-|   | [https://docs.microsoft.com/en-us/azure/active-directory/devices/azureadjoin-plan](https://docs.microsoft.com/en-us/azure/active-directory/devices/azureadjoin-plan) |
-|   | [https://docs.microsoft.com/en-us/azure/active-directory/devices/enterprise-state-roaming-enable](https://docs.microsoft.com/en-us/azure/active-directory/devices/enterprise-state-roaming-enable) |
-| configure self-service password reset | [https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-sspr-pilot](https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-sspr-pilot) |
-|   | [https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-writeback](https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-writeback) |
-| implement conditional access policies | [https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview) |
-|   | [https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/app-based-mfa](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/app-based-mfa) |
-| manage multiple directories | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-fed-single-adfs-multitenant-federation](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-fed-single-adfs-multitenant-federation)   |
-|   | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-fed-management](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-fed-management) |
-| perform an access review | [https://docs.microsoft.com/en-us/azure/active-directory/governance/perform-access-review](https://docs.microsoft.com/en-us/azure/active-directory/governance/perform-access-review) |
-
-## Implement and manage hybrid identities
-
-| Topic | Link |
-| --- | --- |
-| Install and configure Azure AD Connect | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-roadmap](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-roadmap) |
-| configure federation and single sign-on | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-fed-management](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-fed-management) plus all Next Steps |
-|   | https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-sso-quick-start |
-|  manage Azure AD Connect | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-device-writeback](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-device-writeback) plus all Next Steps |
-| manage password sync and writeback | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-phs](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-phs) |
-|   | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization) |
-|   | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-device-writeback](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-device-writeback) |
-|   | [https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-pta](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-pta) |
-
-[Back](index.md)
+### Implement solutions that use virtual machines (VM)
+- provision VMs
+  - [Quickstart: Create a Windows virtual machine in the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal)
+  - [Quickstart: Create a Linux virtual machine in the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal)
+- create Azure Resource Manager templates
+  - [Quickstart: Create and deploy Azure Resource Manager templates by using the Azure portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/quickstart-create-templates-use-the-portal)
+- configure Azure Disk Encryption for VMs
+  - [Azure Disk Encryption for Windows VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disk-encryption-overview)
+  - [Azure Disk Encryption for Linux VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/disk-encryption-overview)
+- implement Azure Backup for VMs
+  - [Tutorial: Back up and restore files for Windows virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-backup-vms)
+  - [Tutorial: Back up and restore files for Linux virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-backup-vms)
