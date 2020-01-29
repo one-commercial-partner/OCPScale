@@ -1,6 +1,19 @@
 # AZ-300: Microsoft Azure Architect Technologies Study Group
 
-The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-300 study group. It is designed to equip you for the recently refreshed Microsoft Azure Architect Technologies exam! 
+The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-300 study group. It is designed to equip you for the recently refreshed Microsoft Azure Architect Technologies exam!
+
+## Study Group Schedule
+
+Click here to register:  [AZ-300: Azure Architect](https://msuspartners.eventbuilder.com/AZ-300)
+|Topic|Date|Homework|Recording|
+| - | - | - | - |
+|**Kickoff**|January 29, 2020| | |
+|**Deploy and configure infrastructure**|February 11, 2020| | |
+|**Implement workloads and security**| February 19, 2020| | |
+|**Create and deploy apps**| February 26, 2020| | |
+|**Implement authentication and secure data**|March 03, 2020| | |
+|**Develop for the cloud and for Azure storage**|March 11, 2020| | |
+|**Final Review**|March 18, 2020| | |
 
 ## What are study groups?
 
@@ -31,25 +44,14 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 
 **If you run across an interesting blog post, article, nuggest of truth, update the documents on Github!**
 
-## Study Group Schedule
-
-1. **Kickoff** - January 29, 2020
-1. [**Deploy and configure infrastructure**](Infrastructure.md) (25-30%) - February 11, 2020
-1. [**Implement workloads and security**](WorkloadsSecurity.md) (20-25%) - February 19, 2020
-1. [**Create and deploy apps**](Apps.md) (5-10%) - February 26, 2020
-1. [**Implement authentication and secure data**](AuthenticationSecureData.md) (5-10%) - March 03, 2020
-1. [**Develop for the cloud and for Azure storage**](CloudStorage.md) (20-25%) - March 11, 2020
-1. **Final Review** - March 18, 2020
-
 ## Important Links
 
 [Certification Home Page](https://docs.microsoft.com/en-us/learn/certifications/exams/az-300)
 
 ## More Partner Certification Study Groups
 
-- [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup) 
-- [AZ-301: Azure Architect](https://msuspartners.eventbuilder.com/AZ-301) 
-- [AZ-500: Azure Security Engineer](https://msuspartners.eventbuilder.com/AZ500StudyGroup) 
-
+- [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
+- [AZ-301: Azure Architect](https://msuspartners.eventbuilder.com/AZ-301)
+- [AZ-500: Azure Security Engineer](https://msuspartners.eventbuilder.com/AZ500StudyGroup)
 
 [Back](../)

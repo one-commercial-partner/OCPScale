@@ -6,6 +6,8 @@ The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-103 study
 
 Click here to register:  [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
 
+>This study group is open to all who want to register!
+
 |Topic|Date|Homework|Recording|
 | - | - | - | - |
 |**Kickoff**|January 29, 2020|N/A|[Link](<https://msuspartners.eventbuilder.com/AZ103StudyGroup>)|
@@ -27,13 +29,6 @@ Participants should complete the following prior to attending a study group:
 - Azure Fundamentals Certification (or have equivalent knowledge)
 - VILT training for the exam you wish to take
 - Working Azure subscription (Visual Studio or IUR)
-
-## Where do I register?
-
-Registration for this study group can be found here:
-[AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
-
->This study group is open to all who want to register!
 
 ## What is in this repo?
 
