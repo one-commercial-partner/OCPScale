@@ -12,16 +12,16 @@
 
 | Topic | Link |
 | - | - |
-|Configure diagnostic settings on resources | <https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs>
-|Create baseline for resources |<https://docs.microsoft.com/en-us/azure/monitoring/monitoring-data-collection>
-|Create and test alerts |<https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-alerts-unified-usage>
-|Analyze alerts across subscription|<https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-alerts-managing-alert-instances>
-|Create action groups|<https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-action-groups>
-Monitor for unused resources | <https://docs.microsoft.com/en-us/azure/advisor/advisor-overview>
-Monitor spend | <https://docs.microsoft.com/en-us/azure/billing/billing-getting-started>
-|Report on spend | <https://docs.microsoft.com/en-us/azure/billing/billing-understand-your-bill>
-|Utilize log search query functions | <https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-queries>
-|View alerts in log analytics | <https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-solution-alert-management>
+|Configure diagnostic settings on resources |[Overview of Azure platform logs](<https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs>)
+|Create baseline for resources |[Azure Monitor data platform](<https://docs.microsoft.com/en-us/azure/monitoring/monitoring-data-collection>)
+|Create and test alerts |[Create, view, and manage metric alerts using Azure Monitor](<https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-alerts-unified-usage>)
+|Analyze alerts across subscription|[Manage alert instances with unified alerts](<https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-alerts-managing-alert-instances>)
+|Create action groups|[Create and manage action groups in the Azure portal](<https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-action-groups>)
+Monitor for unused resources |[Introduction to Azure Advisor](<https://docs.microsoft.com/en-us/azure/advisor/advisor-overview>)
+Monitor spend |[Prevent unexpected charges with Azure billing and cost management](<https://docs.microsoft.com/en-us/azure/billing/billing-getting-started>)
+|Report on spend |[Tutorial: Review your individual Azure bill](<https://docs.microsoft.com/en-us/azure/billing/billing-understand-your-bill>)
+|Utilize log search query functions |[Overview of log queries in Azure Monitor](<https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-queries>)
+|View alerts in log analytics |[Alert Management solution in Azure Log Analytics](<https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-solution-alert-management>)
 |Experiential Learning |[Monitor cloud resources](https://docs.microsoft.com/en-us/learn/modules/cmu-monitor-cloud-resources/)
 
 ## Manage resource groups
