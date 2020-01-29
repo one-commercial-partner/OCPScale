@@ -28,13 +28,6 @@ Participants should complete the following prior to attending a study group:
 - VILT training for the exam you wish to take
 - Working Azure subscription (Visual Studio or IUR)
 
-## Where do I register?
-
-Registration for this study group can be found here:
-[AZ-300: Azure Architect](https://msuspartners.eventbuilder.com/AZ-300)
-
-> Please note that you will be asked to confirm your registration for each study group.  Feel free to join as many as you want, just be mindful each study group requires 8-10 hours of homework per week.
-
 ## What is in this repo?
 
 Simple ... Each file listed is a separate homework assignment, one for each of the exam objectives.
