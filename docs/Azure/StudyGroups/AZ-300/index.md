@@ -41,6 +41,7 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 ## Important Links
 
 [Certification Home Page](https://docs.microsoft.com/en-us/learn/certifications/exams/az-300)
+[AZ 300 Virtual instructor-led trainings (VILT) ](https://partner.microsoft.com/en-us/training/assets/collection/az-300-microsoft-azure-architect-technologies#/)
 
 ## More Partner Certification Study Groups
 
