@@ -8,7 +8,7 @@ Click here to register:  [AZ-103: Azure Administrator](https://msuspartners.even
 
 >This study group is open to all who want to register!
 
-|Topic|Date|Homework|Recording|
+|Topic|     Date|Homework|Recording|
 | - | - | - | - |
 |**Kickoff**|January 29, 2020|None!|[Link](<https://msuspartners.eventbuilder.com/AZ103StudyGroup>)|
 |**Manage Azure subscriptions and resources**| February 11, 2020 |[Link](ManageAzuresubscriptionsandresources.md) | [Link](<https://msuspartners.eventbuilder.com/AZ103StudyGroup>) |
