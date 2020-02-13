@@ -18,7 +18,7 @@
 |Analyze alerts across subscription|[Manage alert instances with unified alerts](<https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-alerts-managing-alert-instances>)
 |Create action groups|[Create and manage action groups in the Azure portal](<https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-action-groups>)
 Monitor for unused resources |[Introduction to Azure Advisor](<https://docs.microsoft.com/en-us/azure/advisor/advisor-overview>)
-Monitor spend |[Prevent unexpected charges with Azure billing and cost management](<https://docs.microsoft.com/en-us/azure/billing/billing-getting-started>)
+Monitor spend |[Prevent unexpected charges with Azure billing and cost management](<https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/getting-started>), [Manage costs with Azure Budgets](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/cost-management-budget-scenario), [Tutorial: Create and manage Azure budgets](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets), [Build budgets and alerts](https://docs.microsoft.com/en-us/learn/modules/analyze-costs-create-budgets-azure-cost-management/5-build-budgets-alerts)
 |Report on spend |[Tutorial: Review your individual Azure bill](<https://docs.microsoft.com/en-us/azure/billing/billing-understand-your-bill>)
 |Utilize log search query functions |[Overview of log queries in Azure Monitor](<https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-queries>)
 |View alerts in log analytics |[Alert Management solution in Azure Log Analytics](<https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-solution-alert-management>)
