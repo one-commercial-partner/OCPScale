@@ -1,5 +1,5 @@
 # AZ-300: Microsoft Azure Architect Technologies Study Group
-## Create and deploy apps (5-10%) 
+## Create and deploy apps (5-10%)
 
 ### Create web apps by using PaaS
 - create an Azure app service Web App
