@@ -29,7 +29,8 @@
   - [Tutorial: Deploy and use Azure Container Registry](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-acr)
 - implement an application that runs on an Azure Container Instance
   - [Tutorial: Create a container image for deployment to Azure Container Instances](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-prepare-app)
-  - [Tutorial: Create an Azure container registry and push a container image](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-prepare-acr)  - [Tutorial: Deploy a container application to Azure Container Instances](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-deploy-app)
+  - [Tutorial: Create an Azure container registry and push a container image](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-prepare-acr)  
+  - [Tutorial: Deploy a container application to Azure Container Instances](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-tutorial-deploy-app)
   - [Monitor container resources in Azure Container Instances](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-monitor)
   - [Retrieve container logs and events in Azure Container Instances](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-get-logs)
   - [Container group and instance logging with Azure Monitor logs](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-log-analytics)
