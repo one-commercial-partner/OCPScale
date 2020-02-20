@@ -50,7 +50,7 @@
 
 | Topic | Link |
 | - | - |
-|configure and review backup reports|[Configure Azure Backup reports](https://docs.microsoft.com/en-us/azure/backup/backup-azure-configure-reports) |
+|configure and review backup reports|[Configure Azure Backup reports](https://docs.microsoft.com/en-us/azure/backup/configure-reports) |
 |perform backup operation|[Back up a virtual machine in Azure](https://docs.microsoft.com/en-us/azure/backup/quick-backup-vm-portal)|
 |create Recovery Services Vault| |
 |create and configure backup policy| |
