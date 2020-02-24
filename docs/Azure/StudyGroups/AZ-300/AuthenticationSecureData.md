@@ -27,7 +27,7 @@
   - [Always Encrypted: Protect sensitive data and store encryption keys in Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted-azure-key-vault?tabs=azure-powershell)
 - implement Azure Confidential Compute
   - [Azure confidential computing](https://azure.microsoft.com/en-us/blog/azure-confidential-computing/)
-  - [Azure Confidential Computing updates with Mark Russinovich | Best of Microsoft Ignite 2018](https://www.youtube.com/watch?v=Qu6sP0XDMU8)
+  - [Azure Confidential Computing updates with Mark Russinovich - Best of Microsoft Ignite 2018](https://www.youtube.com/watch?v=Qu6sP0XDMU8)
 - implement SSL/TLS communications
   - [Azure data security and encryption best practices](https://docs.microsoft.com/en-us/azure/security/fundamentals/data-encryption-best-practices)
 - create, read, update, and delete keys, secrets, and certificates by using the KeyVault API
