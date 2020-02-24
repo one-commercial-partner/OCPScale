@@ -42,6 +42,7 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 
 - [Certification Home Page](https://docs.microsoft.com/en-us/learn/certifications/exams/az-300)
 - [AZ 300 Virtual instructor-led trainings (VILT) ](https://partner.microsoft.com/en-us/training/assets/collection/az-300-microsoft-azure-architect-technologies#/)
+- [AZ 300 Labs](https://github.com/MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies) - NOTE: these are intended for folks teaching the exam prep class, so it will take a bit to figure out the layout of the repo, but the materails are good
 
 ## More Partner Certification Study Groups
 
