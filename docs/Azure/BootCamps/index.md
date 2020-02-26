@@ -1,6 +1,6 @@
 # Azure Boot Camps
 
-- [WVD](./WVD)
+- [Windows Virtual Desktop](./WVD)
 - [Hybrid Cloud](./HybridCloud)
 
 [Back](../)
