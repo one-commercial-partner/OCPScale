@@ -11,8 +11,8 @@ Click here to register and watch recordings of past sessions:  [AZ-300: Azure Ar
 |**Kickoff**|January 29, 2020|None!|  |
 |**Deploy and configure infrastructure**|February 11, 2020|[Link](Infrastructure.md) |[Link](Infrastructure.pptx)|
 |**Implement workloads and security**| February 19, 2020|[Link](WorkloadsSecurity.md) | [Link](WorkloadsSecurity.pptx) |
-|**Create and deploy apps**| February 26, 2020|[Link](Apps.md) |  |
-|**Implement authentication and secure data**|March 03, 2020| |  |
+|**Create and deploy apps**| February 26, 2020|[Link](Apps.md) | [Link](Apps.pptx) |
+|**Implement authentication and secure data**|March 03, 2020| [Link](AuthenticationSecureData.md) |  |
 |**Develop for the cloud and for Azure storage**|March 11, 2020| |  |
 |**Final Review**|March 18, 2020| |  |
 
@@ -42,6 +42,7 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 
 - [Certification Home Page](https://docs.microsoft.com/en-us/learn/certifications/exams/az-300)
 - [AZ 300 Virtual instructor-led trainings (VILT) ](https://partner.microsoft.com/en-us/training/assets/collection/az-300-microsoft-azure-architect-technologies#/)
+- [AZ 300 Labs](https://github.com/MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies) - NOTE: these are intended for folks teaching the exam prep class, so it will take a bit to figure out the layout of the repo, but the materails are good
 
 ## More Partner Certification Study Groups
 
