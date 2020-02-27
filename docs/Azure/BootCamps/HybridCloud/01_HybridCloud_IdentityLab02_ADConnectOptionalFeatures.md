@@ -26,9 +26,9 @@ Otherwise you will receive an  error in the portal if you select an unsupported 
 
 Follow these instructions to verify that you have enabled Pass-through Authentication correctly:
 
-1. Sign in to the Azure Active Directory admin center with the global administrator credentials for your tenant (e.g. adsync).
-2. Select **Azure Active Directory** in the left pane.
-3. Select **Azure AD Connect**.
+1. Sign in to the Azure Active Directory admin center (https://aad.portal.azure.com/) with the global administrator credentials for your tenant (e.g. adsync@*yourdomain*.onmicrosoft.com).
+2. Select **Azure Active Directory** in the left pane under **Favorites**.
+3. Select **Azure AD Connect** under **Manage**.
 4. Verify that the Pass-through authentication feature appears as Enabled under **User Sign-In**.
 5. Select **Pass-through authentication**. The Pass-through authentication pane lists the servers where your Authentication Agents are installed.
 
@@ -58,7 +58,7 @@ We are creating a small VM to host the Azure AD Connect Authentication Agent.
 
 ## Exercise 5 - Join ADConnect2 to the domain
 
-1. Once the **ADConnect2** virtual machine is up and running, logon as ADAdmin. **Microsoft Azure / Resource Groups / AD-ResourceGroup / ADConnect2 / Connect.**
+1. Once the **ADConnect2** virtual machine is up and running, logon as ADAdmin. **Microsoft Azure / Resource Groups / AD-ResourceGroup / ADConnect2 / Connect / RDP**.
 2. When prompted click **No** on the Network discovery blade.
 3. Depending on which region you chose for setup, the ADConnect2 virtual machine may or may not have the DNS server set to a value we need.
 4. Open a **Command prompt** and enter *ipconfig /all*.  If the DNS Server is set to **10.10.10.11**  (the private IP address of DC01), close the Command Prompt window and then continue to **Exercise 6 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
@@ -85,7 +85,7 @@ We are creating a small VM to host the Azure AD Connect Authentication Agent.
 
 1. Connect to the ADConnect2 virtual machine and logon as your domain account (*domain\username*).
 2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators and Users.
-3. Sign in to the Azure Active Directory admin center (<http://portal.azure.com)>  with your tenant's global administrator credentials (ADSYNC@*yourdomain*.onmicrosoft.com).
+3. Sign in to the Azure Active Directory admin center <https://aad.portal.azure.com/>  with your tenant's global administrator credentials (ADSYNC@*yourdomain*.onmicrosoft.com).
 4. Select **Azure Active Directory** in the left pane.
 5. Select **Azure AD Connect**, select **Pass-through authentication**, and then select **Download**.
 6. Install the client:
