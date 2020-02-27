@@ -26,7 +26,7 @@ Otherwise you will receive an  error in the portal if you select an unsupported 
 
 Follow these instructions to verify that you have enabled Pass-through Authentication correctly:
 
-1. Sign in to the Azure Active Directory admin center (https://aad.portal.azure.com/) with the global administrator credentials for your tenant (e.g. adsync@*yourdomain*.onmicrosoft.com).
+1. Sign in to the Azure Active Directory admin center (<https://aad.portal.azure.com/>) with the global administrator credentials for your tenant (e.g. adsync@*yourdomain*.onmicrosoft.com).
 2. Select **Azure Active Directory** in the left pane under **Favorites**.
 3. Select **Azure AD Connect** under **Manage**.
 4. Verify that the Pass-through authentication feature appears as Enabled under **User Sign-In**.
