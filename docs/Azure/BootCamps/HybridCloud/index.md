@@ -16,7 +16,7 @@ Here are the lab files for the boot camps/Tech Intensity workshops.  They are br
     - [Migration Lab 1 - Database Migration Service (DMS)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab01_DMA.md)
     - [Migration Lab 2 - Azure Site Recovery (ASR)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab02_ASR.md)
     - [Migration Lab 3 - Azure Policy](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab03_AzurePolicy.md)
-    - [Migration Lab 4 - Azure Migrate (Optional)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab04_AzureMigrate.md)
+    - [Migration Lab 4 - Azure Migrate Assessment (Optional)](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/02_HybridCloud_Migration_Lab04_AzureMigrate.md)
 4. Hackathon
     - [Hackathon Case Study](https://github.com/one-commercial-partner/OCPScale/blob/master/docs/Azure/BootCamps/HybridCloud/04_Hybrid_Cloud_Hackathon_CaseStudy.md)
 
