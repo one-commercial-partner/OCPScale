@@ -13,7 +13,7 @@ If you are using a Microsoft Azure subscription that was provided to you by Micr
 
 Otherwise you will receive an error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
 
-Additionally, your Azure subscription is limited in the amount of cores that you can provision.  Ensure that you have deleted the following VMs before completing this lab:
+Additionally, your Azure subscription is limited in the amount of cores that you can provision.  Ensure that you have deleted the following VMs before completing this lab, if they exist in your subscription:
 
 * ADConnect2 and ADConnect3
 
@@ -51,29 +51,31 @@ Repeat the steps above for vNet2:
 1. Return to the Azure portal and click the **+Create a Resource** button found on the upper left-hand corner of the Azure portal.
 2. Select **Compute** then select **Virtual machine**.
 3. On the Basics tab complete the following:
-    * Resource Group:  *Create New* **VNets**
+    * Resource Group:   **VNets**
     * Virtual machine name: **VM1**
     * Region: Choose the same region as your other resources
     * Availability options: No infrastructure redundancy required
-    * Image: Windows Server 2016 Datacenter
-    * Size: Choose **DS1_v2**
+    * Image: Windows Server R2 2016 Datacenter
+    * Size: Choose **DS2_v2**
     * Username: *pickaname* and write it down
     * Password: `Complex.Password`
     * Confirm Password: `Complex.Password`
     * Public inbound ports: **Allow selected ports**
     * Select inbound ports: **RDP (3389)**
-4. Click **Next:Disks >** and then **Next:Networking >**.
-5. Select **vNet1** for the Virtual network.
-6. **Review + create** and then **Create**.   After validation passes, monitor your deployment status. It should take less than 10 minutes to spin up the VM.
+4. Click **Next:Disks >** and then **Next:Networking >**
+5. Ensure **vNet1** is selected for the Virtual network.
+6. **Review + create**.   After validation passes, click  **Create** and then monitor your deployment status for any error messages. It should take less than 10 minutes to spin up the VM.
 
 ## Exercise 3 - Provision a virtual machine via Cloud Shell
 
 1. Click on the Cloud Shell icon on the taskbar: **>_**
-2. Select **PowerShell**.
+2. Change the shell type to  **PowerShell** and click **Confirm** to switch to PowerShell.
 3. If you are prompted, select **Create Storage**.
-4. Enter the following to set the username and password needed for the administrator account on the VM :
+4. Enter the following to set the username and password needed for the administrator account on the VM.  Enter *yourfirstname* as the User and then `Complex.Password` as the password.
+
     `$cred = Get-Credential`
 5. Create the VM (note to use the correct region):
+
     `New-AzVm
     -ResourceGroupName "VNets"
     -Name "VM2"
@@ -83,13 +85,13 @@ Repeat the steps above for vNet2:
     -SecurityGroupName "VM2-nsg"
     -PublicIpAddressName "VM2-ip"
     -Credential $cred
-    -size Standard_D1`
+    -size Standard_DS2_v2`
 
 ## Exercise 4 - Validate Your Configuration
 
-You now have two virtuals machines each in their own virtual network and subnet. Let's validate that.
+You now have two virtual machines each in their own virtual network and subnet. Let's validate that.
 
-1. Click on **Network Watcher** from the left hand pane of the Azure Portal.
+1. In the search bar of the Azure Portal enter  **Network Watcher**.
 2. Under  **Monitoring** choose **Topology**.
 3. Under **Resource Group** select **VNets**.  In a moment a conceptual network diagram should be generated showing all vNets and subnets.  Notice that there is no link between vNet1 or vNet2.
 
@@ -98,8 +100,8 @@ You now have two virtuals machines each in their own virtual network and subnet.
 Before you begin this section, obtain the private and public IP addresses of VM1 and VM2.
 
 1. At the top of the Azure portal in the Search bar enter **VM1**. When VM1 appears in the search results select it.
-2. Copy the private and public IP addresses of VM1 and the select the **Connect** button.
-3. After selecting the Connect button, click on **Download RDP file**.
+2. Copy the private and public IP addresses of VM1 and then click on  **Connect** and then **RDP**.
+3. Click on **Download RDP file**.
 4. If prompted, select **Connect**. Enter the user name and password you specified when creating the VM. You may need to select **More choices**, then **Use a different account**, to specify the credentials you entered when you created the VM.
 5. Select **OK**.
 6. Click **No** on the Networks blade.
@@ -154,4 +156,4 @@ If you wanted to ping the VM by public IP address, what do you think you would h
 
 ## Clean out your VMs
 
-If you are going to complete the hub and spoke challenge keep these resources.  Otherwise, given the limited capacity of sponsored Azure please delete the **NetVMs** Resource Group before moving onto the next lab.
+If you are going to complete the hub and spoke challenge keep these resources.  Otherwise, given the limited capacity of sponsored Azure please delete the **VNets** Resource Group before moving onto the next lab.

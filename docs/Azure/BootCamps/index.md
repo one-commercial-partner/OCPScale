@@ -1,6 +1,6 @@
 # Azure Boot Camps
 
-- [DRaaS](./DRaaS)
+- [Windows Virtual Desktop](./WVD)
 - [Hybrid Cloud](./HybridCloud)
 
 [Back](../)

@@ -50,11 +50,11 @@ At this point please write down the local credentials you just created and then 
 
 In this task you use PowerShell within Windows Server 2019 to install Active Directory.
 
-1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect**.  
+1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
 3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 4. When prompted click **No** on the Network Discovery blade.
-5. Hit the **Windows Start** button and then open **PowerShell**. Enter the following to install the Active Directory Domain Service module:
+5. Hit the **Windows Start** button and then open **Windows PowerShell**. Enter the following to install the Active Directory Domain Service module:
 
     `install-windowsfeature AD-Domain-Services -IncludeAllSubFeature -IncludeManagementTools`
 6. Import the deployment modules by entering the following:
@@ -64,8 +64,8 @@ In this task you use PowerShell within Windows Server 2019 to install Active Dir
     *Note that PowerShell will quickly return as this command takes milliseconds to execute.*
 7. Promote your server to a domain controller by entering the following command.  Don't forget to set the **domain names properly** minding the quotes.
 
-    `Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “yourdomain.com”
--DomainNetbiosName *“YOURDOMAIN”* -ForestMode “Win2012R2” -InstallDns:$true
+    `Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “YOURDOMAIN.COM”
+-DomainNetbiosName “YOURDOMAIN” -ForestMode “Win2012R2” -InstallDns:$true
 -LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true`
 
     *Write down your FQDN doman name for future reference.*
@@ -76,7 +76,7 @@ In this task you use PowerShell within Windows Server 2019 to install Active Dir
 
 ## Exercise 3 - Connect to the Domain Controller and create a user account
 
-1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect**.
+1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect / RDP**.
 
 2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
 3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
@@ -110,8 +110,8 @@ We are creating a small VM to be used later to host Azure AD Connect.
 
 ## Exercise 5 - Join the ADConnect VM to the domain
 
-1. Once the cloud shell has built your VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / AD-ResourceGroup / ADConnect / Connect /Download RDP File**
-2. Logon with local credentials (i.e. ADAdmin).  Choose **More Choices** then **Use a different account** to enter your new set of credentials.
+1. Once the cloud shell has built your VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / AD-ResourceGroup / ADConnect / Connect / RDP**.  Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
+2. Logon with local credentials (i.e. ADAdmin) with a password of `Complex.Password`.  Choose **More Choices** then **Use a different account** to enter your new set of credentials.
 3. When prompted click **No** on the Network discovery blade.
 4. The DNS Server on ADConnect may not be set to see the domain controller (DC01), so we need to check that setting.  
 5. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
@@ -119,7 +119,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 ### Configure DNS
 
 1. Within **Server Manager**, click on **Local Server**.
-2. Click on **IPv4 address assigned by DHCP, IPv6 enabled setting** for the Ethernet connection.
+2. Click on **IPv4 address assigned by DHCP, IPv6 enabled** setting for the Ethernet connection.
 3. Right-click on the network adapter and choose **Properties**.
 4. Select **Internet Protocol Version 4 (TCP/IPv4)** and then **Properties**.
 5. Select the radio button for **Use the following DNS Server addresses:** and Set the DNS server to **10.10.10.11** and click **OK** and then **Close**.
@@ -135,10 +135,10 @@ We are creating a small VM to be used later to host Azure AD Connect.
 
 ## Exercise 7 - Install Azure Active Directory
 
-1. In the Azure Portal, click  **+Create a resource** and then select **Identity**, then **Azure Active Directory**.
+1. In the Azure Portal, click **Microsoft Azure** and then **+Create a resource**.  Select **Identity** and then **Azure Active Directory**.
 2. Enter the following on the **Create directory tab**:
     * Organization name (e.g. *yourfirstname* Mike's Org)
-    * Initial domain name (e.g. your initials plus last four of your cellphone)
+    * Initial domain name (e.g. your initials plus last four of your cellphone).  Hit **Tab**.
 
         *Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.*
 

@@ -55,7 +55,7 @@ In order to assign an application to a group we need change the version of Azure
 1. Click on your **Azure Active Directory** in the Azure Portal.
 2. Select **Getting started** and then **Get a free trial for Azure AD Premium**.
 3. Expand **Free trial** under **AZURE AD PREMIUM P2** and then click **Activate**.
-4. Select **Overview** and then refresh your browser,  Ensure that your Azure AD version reports as **Azure AD Premium P2** before continuing.  It may take several minutes for the upgrade to go active.
+4. Select **Overview** and then refresh your browser,  Ensure that your Azure AD version reports as **Azure AD Premium P2** before continuing.  It may take 5-8 minutes for the upgrade to go live.
 
 ### Assign Groups
 
@@ -63,7 +63,7 @@ To assign one or more groups to an application directly, follow these steps:
 
 1. Select **Enterprise Applications** under **Manage** and then select **Facebook**.
 2. Click on **Users and Groups** from the menu on the left and select the **+Add user** button at the top of the pane.
-3. If you see the message ***Groups are not available for assignment due to your Active Directory plan level*** then click on the error message and activate **Azure AD Premium P2**.  It may take 5-8 minutes for the upgrade to go live.
+3. If you see the message ***Groups are not available for assignment due to your Active Directory plan level*** then refresh your browser in 3-5 minutes and try again.
 4. Select **Users and groups**  from the Add Assignment pane and then select **Facebook Authorized**.
 5. When you're finished selecting groups, use the **Select** button to add them to the list of users and groups to be assigned to the application.
 6. Select **Assign** to assign the application to the selected groups. After a short period, the users you've selected should be able to start these applications from the Access Panel.
@@ -77,7 +77,7 @@ You are now going to logon as FacebookYes to configure your SSO credentials to v
 1. Open a web browser with an InPrivate or InCognito tab and go to <https://myapps.microsoft.com>, the My Apps portal.
 2. Logon as FacebookYes (yesface@XXXX.onmicrosoft.com).  You will be prompted to change your temporary password.  Use `Complex.Password`.
 3. Upon logon you should see Facebook listed.  Click on **Facebook**.
-4. Install the MyApps Secure Sign-in Extension.  This extension helps you start any of your organization's cloud apps that require you to use a single sign-on process.  **Install now** the extension when prompted.
+4. Install the MyApps Secure Sign-in Extension.  This extension helps you start any of your organization's cloud apps that require you to use a single sign-on process.  **Run** the extension when prompted and complete a default installation.
 5. Click **Facebook** again and enter your Facebook credentials.  Azure AD will securely store and replay your username and password for Facebook moving forward.  This is a one-time-only entry of your credentials.  Click **Sign In** when done.
 6. Close and then re-open a web browser with an InPrivate or InCognito tab and go to <https://myapps.microsoft.com>.  
 7. Click **Facebook** and validate your logon if necessary.  Notice that you are taken directly to Facebook without having to enter your Facebook credentials.

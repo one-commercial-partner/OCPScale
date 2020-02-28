@@ -43,7 +43,7 @@ In this section you create a virtual network and you create two virtual machines
     * Name: **LBVM1**
     * Region: *Choose a consistent supported Region*
     * Availability option: choose **Availability set** > **Create New** > **LBVMAVSet** > **Ok**.
-    * Size: Set to **DS1_v2**
+    * Size: Set to **DS2 v2**
     * Username: pick a username
     * Password: `Complex.Password`
     * Confirm Password: `Complex.Password`
@@ -56,7 +56,7 @@ In this section you create a virtual network and you create two virtual machines
             * Name: **LBVM1-ip**
             * SKU: **Standard**
             * Click **Ok**
-            * *Please make sure that you click **Create new** in order to set the SKU correctly*
+            * **Please make sure that you click **Create new** in order to set the SKU correctly**
     * Place this virtual machine behind an existing Azure load balancing solution: **Yes**
         * Load balancing options: **Azure load balancer**
         * Select a load balancer: **LB01**
@@ -80,46 +80,44 @@ In this section you create a virtual network and you create two virtual machines
 
 In this section, you create NSG rules to allow inbound connections that use HTTP and RDP.
 
-1. Select **Resource Groups** on the left menu. From the resource list, select **LoadBalVMs** then **LBVM1-nsg**.
-2. Under **Settings**, select **Inbound security rules**, and then select **Add**.
-3. Enter the following values for the inbound security rule named **HTTP-In** to allow for inbound HTTP connections that use port 80. Then select **Add**.
-    * Source: Service Tag
-    * Source service tag: Internet
-    * Source port ranges: *
-    * Destination: Any
-    * Destination port ranges: 80
-    * Protocol: TCP
-    * Action: Allow
-    * Priority: 100
-    * Name: HTTP-In
-    * Description: Allow HTTP
+1. Select **Resource Groups** in the Azure Portal and from the resource list select **LoadBalVMs** then **LBVM1-nsg**.
+2. Under **Settings**, select **Inbound security rules**, and then select **+Add**.
+3. Select **Add** and then enter the following values for the inbound security rule named **HTTP-In** to allow for inbound HTTP connections that use port 80.
+    * Source: **Service Tag**
+    * Source service tag: **Internet**
+    * Source port ranges: *****
+    * Destination: **Any**
+    * Destination port ranges: **80**
+    * Protocol: **TCP**
+    * Action: **Allow**
+    * Priority: **100**
+    * Name: **HTTP-In**
+    * Description: **Allow HTTP**
+    * Click **Add**
 
 4. Repeat the above steps except from the resource list, select **LoadBalVMs** then **LBVM2-nsg**.
 
 ## Exercise 4 - Install IIS
 
-1. Select **Virtual Machines** on the left menu, then select **LBVM1**.
+1. Select **Virtual Machines** in the Azure Portla and then select **LBVM1**.
 2. On the Overview page, select **Connect** to RDP into the VM.  Download and open the RDP file if needed.
-3. Sign in to the VM with your username and password.
+3. Sign in to the VM with your username and password.  Don't forget you may need to select **More choices** and then **Use a different account**.
 4. Click **No** on the Networks blade.
-5. In Server Manager, select **Manage**, and then select **Add Roles and features**.
-6. In the Add Roles and Features Wizard, use the following values:
-    * On the Select installation type page, select **Role-based or feature-based installation**.
-    * On the Select destination server page, select **LBVM1**.
-    * On the Select server role page, select **Web Server (IIS)** then **Add Features**.
-    * Follow the instructions to complete the rest of the wizard using default settings.
+5. Open **Windows Powershell** and enter the following:
 
-Repeat steps 1 to 6 for the virtual machine LBVM2.
+    `Install-WindowsFeature -name "Web-Server" -IncludeManagementTools`
+
+Repeat steps 1 to 5 for the virtual machine LBVM2.
 
 Once IIS is installed, on each VM edit the default web page by:
 
 * In Server Manager, click **Tools** then **IIS Manager**
 * Expand the left tree, right-click on Default web site, and then choose **Explore**
-* Edit the iisstart.html by opening it with notepad.
+* Edit the iisstart.html by opening it with Notepad.
 * Change the `<title>` line to read: `<title>LBVM1</title>`
 * Save the file and then exit your RDP connection
 
-Repeat the same steps for LBVM2 and change the line to state `<title>LBVM2</title>`
+Repeat the same steps for LBVM2 and change the `<title>` line to state `<title>LBVM2</title>`
 
 ## Exercise 5 -  Create resources for the load balancer
 
@@ -129,8 +127,8 @@ In this section, you configure load balancer settings for a back-end address poo
 
 To allow the load balancer to monitor the status of your app, you use a health probe. The health probe dynamically adds or removes VMs from the load balancer rotation based on their response to health checks. Create a health probe named LBHP to monitor the health of the VMs.
 
-1. On left side of the Azure Portal select **Load Balancers** and then selelct **LB01**. Under **Settings**, select **Health probes**, and then select **Add**.
-2. Use these values and then select **OK**:
+1. On left side of the Azure Portal select **Load Balancers** and then selelct **LB01**. Under **Settings**, select **Health probes**, and then select **+Add**.
+2. Enter these values and then select **OK**:
     * **LBHealthProbe** for the name of the health probe
     * **HTTP** for the protocol type
     * **80** for the port number
@@ -143,19 +141,19 @@ You use a load balancer rule to define how traffic is distributed to the VMs. Yo
 
 Create a load balancer rule named HTTPRule for listening to port 80 in the front end LoadBalancerFrontEnd. The rule is also for sending load-balanced network traffic to the back-end address pool myBackEndPool, also by using port 80.
 
-1. Under **Settings**, select **Load balancing rules**, and then select **Add**.
-2. Use these values and then select **OK**:
+1. Under **Settings**, select **Load balancing rules**, and then select **+Add**.
+2. Enter these values and then select **OK**:
     * **HTTPRule** for the name of the load balancer rule
     * **TCP** for the protocol type
     * **80** for the port number
     * **80** for the back-end port
-    * **BEPool** for the name of the back-end pool
+    * **BackendPool** for the name of the back-end pool
     * **LBHealthProbe** for the name of the health probe
 
 ## Exercise 6 -  Test the load balancer
 
-1. Find the public IP address for the load balancer on the Overview screen.
-2. Copy the public IP address and then paste it into the address bar of your browser. The default page of IIS web server is displayed in the browser, noting LBVM1 or LBVM2 as you refresh your browser.
+1. Find the public IP address for the load balancer on the Load Balancer Overview screen.
+2. Copy the public IP address and then paste it into the address bar of your browser. Connect to the IP address and notice the default page of the IIS web server is displayed in the browser, noting LBVM1 or LBVM2 as you refresh your browser.
 3. Stop either LBVM1 or LBVM2, whichever VM is responding most frequently.  As the VM is shutting down, refresh your browser.  Once one of the VMs is down, you should only see the live VM rendering you the default website.  You may receive a service unavailable error if you refresh during probe attempts.
 4. Stop the other LBVM and refresh your browser until you receive a **Can't reach this page** error and then restart the first VM you stopped.
 5. Once the VM comes alive you should get responses.

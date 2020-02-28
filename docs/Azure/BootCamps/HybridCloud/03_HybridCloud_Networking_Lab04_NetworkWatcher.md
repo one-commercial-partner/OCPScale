@@ -1,25 +1,25 @@
 
 # Lab 4 - Network Watcher
 
-To test network communication with Network Watcher, first enable a network watcher in at least one Azure region, and then use Network Watcher's IP flow verify capability.
+In this lab you are going to  test network communication with Network Watcher. First, enable a network watcher in at least one Azure region, and then use Network Watcher's IP flow verify capability.
 
 ## Enable network watcher
 
 1. In the portal, select **All services**. In the Filter box, enter **Network Watcher**. When Network Watcher appears in the results, select it.
-1. Enable network watcher by clicking on the elipsys **...**.
+1. Enable network watcher by clicking on the elipsys **...** and then choosing **Enable network watcher in a...**
 
 ## Packet Capture and examination
 
-1. From **Network Watcher** under **Network diagnostic tools**, select **Packet Capture**, then **Add**.
+1. On the **Network Watcher** blade, under **Network diagnostic tools**, select **Packet Capture**, then **+Add**.
 2. Enter the following and click **Ok**:
    - Resource Group: **LoadBalVMs**
-   - Target VM: LBVM1
+   - Target VM: **LBVM1**
    - Packet Capture Name: **Packets**
    - Maximum bytes per packet: **0**
    - Maximum bytes per session: **1073741824**
    - Time limit: **18000**
 
-*Note that it may take several minutes for the packet capture to initialize.  In you get an error ensure that LBVM1 is running.*
+*Note that it may take several minutes for the packet capture to initialize.  Do not continue until the task is complete.  In the event you receive an error, ensure that LBVM1 is running.*
 
 1. Find the public IP address for the load balancer **LB01** which should be **LBPublicIP**.  Paste the public IP address of your Load Balancer into the address bar of your browser. Hit refresh and notice the default page of the IIS web server is displayed in the browser.
 2. Stop **LBVM2**. Hit refresh and notice the default page of the IIS web server is displayed in the browser.

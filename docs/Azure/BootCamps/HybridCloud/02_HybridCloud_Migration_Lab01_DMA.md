@@ -122,7 +122,7 @@ Before you migrate, a target Azure SQL database needs to be provisioned..
 5. Once your database server is created, click **Go to resource**.
 6. In the Azure Portal, copy to clipboard the FQDN of  the database server, such as `abc032019.database.windows.net`.
 7. Open the server up to connections by:
-    * Click on **Set Server firewall**
+    * Click on **Set Server firewall** in the Azure Portal.
     * Click **ON** under **Allow Azure Services and resources to access this server**.
     * Create the following Rule:
         * Rule Name: **Everyone**
@@ -144,10 +144,10 @@ After you're comfortable with the assessment and satisfied that the selected dat
     * Authentication type: **SQL Server Authentication**
     * In the **Username** box, type the name of the SQL login you created or **SQLAdmin** if you are using pre-built SQL.
     * In the **Password** box enter `Complex.Password` if you are using pre-built SQL or the password you created.
-    * Click **Connect**.
+    * De-select **Encrypt connection** and click **Connect**.
     * Uncheck **Assess database before migration?** and click **Next**.
 4. On the **Select target** tab, enter the following:
-    * Specify the source connection details for your SQL Server.  This is the FQDN name of the Azure SQL Database.
+    * Specify the source connection details for your SQL Server.  This is the FQDN name of the Azure SQL Database **YOU** created.
     * Authentication type: **SQL Server Authentication**
     * In the **Username** box, type the name of a valid SQL login from the previous steps.
     * In the **Password** box, type the password of the login from the previous steps.
@@ -174,7 +174,7 @@ Let's make sure that your data got migrated and looks right.  We're going to con
     * In the Password box, type the password of the login from the previous steps.
 4. Browse databases to select **Cloud**.
 5. Right-click on **New Query** and enter the following:
-    * `select TOP (1000) [zip] FROM SampleData.dbo.sampledata`
+    * `select TOP (1000) [zip] FROM dbo.sampledata`
 6. Click **Execute**.  This query will search the Azure SQL database and display the first 1000 zip codes.
 
 ### **Congratulations for completing the SQL Migration lab!**
