@@ -15,7 +15,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
 1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
 2. Login using your Microsoft Account.
-3. When the **Welcome to Azure Cloud Shell** screen appears select **Bash** as the working CLI and then **Create Storage**.  Once storage is created click **Close**.
+3. When the **Welcome to Azure Cloud Shell** screen appears select **Bash** as the working CLI and then select **Create Storage**.  Once storage is created your cloud shell will provision.
 4. At the CLI prompt, let's create a new resource group to hold your Domain Controller VMs. Create the resource group by typing in the following command:
 
     `az group create --name OnPremDC --location eastus`
@@ -24,15 +24,15 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
     `az network nsg create --name AD-NSG --resource-group OnPremDC --location eastus`
 
-6. Create a network security group rule for port 3389.
+6. Create a network security group rule for port 3389:
 
     `az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group OnPremDC --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389`
 
-7. Create a virtual network.
+7. Create a virtual network:
 
     `az network vnet create --name AD-VNet --resource-group OnPremDC --address-prefixes 10.10.0.0/16 --location eastus`
 
-8. Create a subnet
+8. Create a subnet:
 
     `az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group OnPremDC --vnet-name AD-VNet --network-security-group AD-NSG`
 
@@ -44,7 +44,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
     `az vm create --resource-group OnPremDC --availability-set AD-AvailabilitySet --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username *yourfirstname* --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait`
 
-At this point please write down the local credentials you just created and then return to the instructor's presentation.
+At this point please write down the local credentials you just created.
 
 ## Exercise 2 - Install and Configure Active Directory
 
@@ -61,14 +61,15 @@ In this task you use PowerShell within Windows Server 2019 to install Active Dir
 
     `Import-Module ADDSDeployment`
 
-    *Note that PowerShell will quickly return as this command takes milliseconds to execute.*
+> *Note that PowerShell will quickly return as this command takes milliseconds to execute.*
+
 7. Promote your server to a domain controller by entering the following command.  Don't forget to set the **domain names properly** minding the quotes.
 
     `Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “YOURDOMAIN.COM”
 -DomainNetbiosName “YOURDOMAIN” -ForestMode “Win2012R2” -InstallDns:$true
 -LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true`
 
-    *Write down your FQDN doman name for future reference.*
+> *Write down your FQDN doman name and NETBIOS domain name for future reference.*
 
 8. Once you hit enter you will be asked for the  SafeModeAdministratorPassword – this is for the Directory Services Restore Mode (DSRM). Enter `Complex.Password`, and then retype to confirm.
 
@@ -76,12 +77,13 @@ In this task you use PowerShell within Windows Server 2019 to install Active Dir
 
 ## Exercise 3 - Connect to the Domain Controller and create a user account
 
-1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect / RDP**.
+1. Once DC01 has restarted connect to the virtual machine by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect / RDP**.
 
 2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
 3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
 
-    *Note that if you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.*
+> *Note that if you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.*
+
 4. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
 5. Expand the tree and select the **Users** Container.
 6. On the toolbar click the icon to create a new user in the current container.  
