@@ -100,15 +100,14 @@ In this task you use PowerShell within Windows Server 2019 to install Active Dir
 
 We are creating a small VM to be used later to host Azure AD Connect.
 
-1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
-2. Login using your Microsoft Account.
-3. Create an availability set.  You want to keep all your virtual machines resilient.
+1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com) and login using your Microsoft Account.
+2. Create an availability set.  You want to keep your virtual machines  resilient.
 
-    `az vm availability-set create --name ADConnect-AvailabilitySet --resource-group ADConnect --location eastus`
+    `az vm availability-set create --name ADConnect-AvailabilitySet --resource-group OnPremDC --location eastus`
 
-4. Create your virtual machine:
+3. Create your virtual machine:
 
-    `az vm create --resource-group ADConnect --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
+    `az vm create --resource-group OnPremDC --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
 
 ## Exercise 5 - Join the ADConnect VM to the domain
 
@@ -116,7 +115,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 2. Logon with local credentials (i.e. ADAdmin) with a password of `Complex.Password`.  Choose **More Choices** then **Use a different account** to enter your new set of credentials.
 3. When prompted click **No** on the Network discovery blade.
 4. The DNS Server on ADConnect may not be set to see the domain controller (DC01), so we need to check that setting.  
-5. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
+5. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Exercise 6 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
 
 ### Configure DNS
 
@@ -142,7 +141,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
     * Organization name (e.g. *yourfirstname* Mike's Org)
     * Initial domain name (e.g. your initials plus last four of your cellphone).  Hit **Tab**.
 
-        *Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.*
+> *Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.*
 
         ***Write this domain name down as your Azure Active Directory Domain Name.***
 3. Click **Create**.  It will take several minutes for the directory to be created.
