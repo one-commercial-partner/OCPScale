@@ -11,6 +11,7 @@
 - implement multi-factor authentication by using Azure AD
   - [How it works: Azure Multi-Factor Authentication](https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks)
 - implement OAuth2 authentication
+  - [Application types for Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-app-types)
   - [Understanding the OAuth2 implicit grant flow in Azure Active Directory (AD)](https://docs.microsoft.com/en-us/azure/active-directory/azuread-dev/v1-oauth2-implicit-grant-flow)
 - implement Managed Identities for Azure resources Service Principal authentication
   - [What are managed identities for Azure resources?](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
@@ -30,6 +31,7 @@
   - [Azure Confidential Computing updates with Mark Russinovich - Best of Microsoft Ignite 2018](https://www.youtube.com/watch?v=Qu6sP0XDMU8)
 - implement SSL/TLS communications
   - [Azure data security and encryption best practices](https://docs.microsoft.com/en-us/azure/security/fundamentals/data-encryption-best-practices)
+  - [Add an SSL certificate in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/configure-ssl-certificate)
 - create, read, update, and delete keys, secrets, and certificates by using the KeyVault API
   - [What is Azure Key Vault?](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-overview)
   - [Azure Key Vault basic concepts](https://docs.microsoft.com/en-us/azure/key-vault/basic-concepts)
