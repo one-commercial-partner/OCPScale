@@ -24,24 +24,25 @@ An initiative evaluates resources within scope of the assignment for compliance 
 2. Select **+ Initiative Definition** at the top of the page to open the Initiative definition page.
 3. Enter **Tag Enforcement** as both the Name and Description of the initiative.
 4. For Category, choose *Create new*, and enter **MyFirstInitiative**.
-5. Under **AVAILABLE DEFINITIONS** search for *tag* and then select **Enforce tag and its value**, the **+Add**.
+5. Under **AVAILABLE DEFINITIONS** search for *tag* and then select **Require tag and its value**, the **+Add**.
 6. **Set value** of `Tag Name` to **department**.
 7. **Set value** of `Tag Value` to **lab**.
 8. Click **Save**.
 
 ## Exercise 3 - Check initial compliance
 
-Now that we've created and applied a policy let's check the results on how compliane we are.  Please note that it may take Azure Policy up to `10 minutes` to evaluate and report results.
+Now that we've created and applied a policy let's check the results on how compliant we are.  Please note that it may take Azure Policy up to `10 minutes` to evaluate and report results.
 
 1. Select **Compliance** in the left side of the Azure Policy page.
 2. Locate the **Require tag and its value** initiative. It's likely still in Compliance state of `Not started` or `Non-compliant`. Click on the initiative to get full details on the progress of the assignment.
+3. Hit **Refresh** periodically in order to check the **Compliance state**.
 
 ## Exercise 4 - Modify Non-compliant resources
 
 Once evaluations are returned, you will notice all of your resources are non-compliant.  Complete these steps to make one resource compliant and review the results.
 
 1. Click on **Require tag and its value**.
-2. Under resource compliance, click on **SQLVM** and then **view resource**.
+2. Under resource compliance, click on any resource and then **view resource**.
 3. Under Tags click **click here to add tags**.
 4. Set `Tag Name` to **department**.
 5. Set `Tag Value` to **lab**.

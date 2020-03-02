@@ -127,7 +127,7 @@ If you don’t delete the failover VM, the VM will continue to run and increase 
 
 ### Create a Public IP address
 
-1. In the search box type in **Public IPAddress**, select **Public IP addresses** and hit enter.
+1. In the search box type in **Public IP Address**, select **Public IP addresses** and hit enter.
 2. Click on **+Add** and enter the following:
     * Name: **IIS-PublicIP**
     * Resource group: **Target-RG**
