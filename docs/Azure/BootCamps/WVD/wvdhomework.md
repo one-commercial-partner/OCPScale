@@ -18,31 +18,31 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 3. When the **Welcome to Azure Cloud Shell** screen appears select **Bash** as the working CLI and then **Create Storage**.  Once storage is created click **Close**.
 4. At the CLI prompt, let's create a new resource group to hold your Domain Controller VMs. Create the resource group by typing in the following command:
 
-    `az group create --name OnPremDataCenter --location eastus`
+    `az group create --name OnPremDC --location eastus`
 
 5. Create a network security group:
 
-    `az network nsg create --name AD-NSG --resource-group OnPremDataCenter --location eastus`
+    `az network nsg create --name AD-NSG --resource-group OnPremDC --location eastus`
 
 6. Create a network security group rule for port 3389.
 
-    `az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group OnPremDataCenter --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389`
+    `az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group OnPremDC --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389`
 
 7. Create a virtual network.
 
-    `az network vnet create --name AD-VNet --resource-group OnPremDataCenter --address-prefixes 10.10.0.0/16 --location eastus`
+    `az network vnet create --name AD-VNet --resource-group OnPremDC --address-prefixes 10.10.0.0/16 --location eastus`
 
 8. Create a subnet
 
-    `az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group OnPremDataCenter --vnet-name AD-VNet --network-security-group AD-NSG`
+    `az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group OnPremDC --vnet-name AD-VNet --network-security-group AD-NSG`
 
 9. Create an availability set.  You want to keep your domain controllers resilient.
 
-    `az vm availability-set create --name AD-AvailabilitySet --resource-group OnPremDataCenter --location eastus`
+    `az vm availability-set create --name AD-AvailabilitySet --resource-group OnPremDC --location eastus`
 
 10. Create your virtual machine, noting to change the value of **--admin-username** before executing the script.
 
-    `az vm create --resource-group OnPremDataCenter --availability-set AD-AvailabilitySet --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username *yourfirstname* --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait`
+    `az vm create --resource-group OnPremDC --availability-set AD-AvailabilitySet --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username *yourfirstname* --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait`
 
 At this point please write down the local credentials you just created and then return to the instructor's presentation.
 
@@ -50,7 +50,7 @@ At this point please write down the local credentials you just created and then 
 
 In this task you use PowerShell within Windows Server 2019 to install Active Directory.
 
-1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / OnPremDataCenter / DC01 / Connect / RDP**.  
+1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / OnPremDC / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
 3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 4. When prompted click **No** on the Network Discovery blade.
