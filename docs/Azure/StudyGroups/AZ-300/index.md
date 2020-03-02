@@ -12,7 +12,7 @@ Click here to register and watch recordings of past sessions:  [AZ-300: Azure Ar
 |**Deploy and configure infrastructure**|February 11, 2020|[Link](Infrastructure.md) |[Link](Infrastructure.pptx)|
 |**Implement workloads and security**| February 19, 2020|[Link](WorkloadsSecurity.md) | [Link](WorkloadsSecurity.pptx) |
 |**Create and deploy apps**| February 26, 2020|[Link](Apps.md) | [Link](Apps.pptx) |
-|**Implement authentication and secure data**|March 03, 2020| [Link](AuthenticationSecureData.md) |  |
+|**Implement authentication and secure data**|March 03, 2020| [Link](AuthenticationSecureData.md) | [Link](AuthenticationSecureData.pptx) |
 |**Develop for the cloud and for Azure storage**|March 11, 2020| [Link](CloudStorage.md) |  |
 |**Final Review**|March 18, 2020| |  |
 
