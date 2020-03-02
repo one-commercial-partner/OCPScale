@@ -14,7 +14,7 @@ In lab 1 you are going to establish ground to cloud connectivity using vNet peer
 
 * [Windows Virtual Desktop - Lab 1 - Identity](wvdlab01.md)
 
-## Lab 2 - WVD Core Infrastructure
+## Lab 2 - Provision a WVD tenant
 
 Creating a tenant in Windows Virtual Desktop is the first step toward building your desktop virtualization solution. A tenant is a group of one or more host pools. Each host pool consists of multiple session hosts, running as virtual machines in Azure and registered to the Windows Virtual Desktop service. Each host pool also consists of one or more app groups that are used to publish remote desktop and remote application resources to users. With a tenant, you can build host pools, create app groups, assign users, and make connections through the service.
 
@@ -24,4 +24,4 @@ In this lab you will learn how to:
 > * Assign the TenantCreator application role to a user in your Azure Active Directory tenant.
 > * Create a Windows Virtual Desktop tenant.
 
-* [Windows Virtual Desktop - Lab 2 - Core Infrastructure](wvdlab02.md)
+* [Windows Virtual Desktop - Lab 2 - Provisioning a WVD tenant](wvdlab02.md)
