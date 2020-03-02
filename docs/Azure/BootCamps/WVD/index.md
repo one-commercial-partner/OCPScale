@@ -8,9 +8,9 @@ In order to maximize our time together you have homework to complete prior to st
 
 Complete this [Hybrid Identity Lab](wvdhomework.md) prior to attending the WVD Workshop.  This lab will take approximately an hour to complete.
 
-## Lab 1 - Identity
+## Lab 1 - Hybrid Identity
 
-In lab 1 you are going to establish ground to cloud connectivity and then build out a domain controller in the cloud that sync to Active Directory on the ground.
+In lab 1 you are going to establish ground to cloud connectivity using vNet peering and then build out a domain controller in the cloud that will sync to Active Directory on the ground.
 
 * [Windows Virtual Desktop - Lab 1 - Identity](wvdlab01.md)
 
