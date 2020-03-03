@@ -36,9 +36,9 @@
 
 | Topic | Link |
 | - | - |
-|configure user accounts for MFA
-|enable MFA by using bulk update
-|configure fraud alerts
-|configure bypass options
-|configure Trusted IPs
-|configure verification methods
+|configure user accounts for MFA|[How to require two-step verification for a user](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-userstates) |
+|enable MFA by using bulk update|[Bulk create users (preview) in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/users-bulk-add)|
+|configure fraud alerts|[Fraud alert](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-mfasettings#fraud-alert) |
+|configure bypass options|[One-time bypass](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-mfasettings#one-time-bypass) |
+|configure Trusted IPs|[Trusted IPs](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips) |
+|configure verification methods|[Verification methods](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-mfasettings#verification-methods) |
