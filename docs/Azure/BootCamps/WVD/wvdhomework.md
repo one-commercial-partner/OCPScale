@@ -193,3 +193,21 @@ Close Internet Explorer.
 2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. On Prem).
 
 ### Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory
+
+## Exercise 12 - Create Azure AD Accounts for WVD
+
+We are going to create accounts that are needed by WIndows Virtual Desktop
+
+1. In Azure Active Directory, under **Manage** choose **Users** and then under **All users** click on **+New User** and enter the following:
+    * User name: **WVD-TC**
+    * Name: **WVD Tenant Creator**
+    * Click on **Let me create the password** and then set the password to `Temp.Password`.
+2. Click **Create**.
+3. In Azure Active Directory, under **Manage** choose **Users** and then under **All users** click on **+New User** and enter the following:
+    * User name: **WVD-RDSO**
+    * Name: **WVD RDS Owner**
+    * Click on **Let me create the password** and then set the password to `Temp.Password`.
+3. Open an InPrivate or Incognito browser and surf to <https://portal.azure.com.>
+4. Login as the AD Sync Account you just created using the temporary password.
+5. Change your password to `Complex.Password` and then click **Sign in**.
+6. Close your inprivate or incognito browser.

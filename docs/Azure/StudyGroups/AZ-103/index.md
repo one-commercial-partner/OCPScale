@@ -15,7 +15,7 @@ Click here to register:  [AZ-103: Azure Administrator](https://msuspartners.even
 |**Implement and manage storage**|February 19, 2020|[Link](ImplementandManageStorage.md)| [Link](<https://msuspartners.eventbuilder.com/AZ103StudyGroup>)|
 |**Deploy and manage virtual machines (VMs)**| February 26, 2020|[Link](Deployandmanagevirtualmachines.md) |[Link](<https://msuspartners.eventbuilder.com/AZ103StudyGroup>) |
 |**Configure and manage virtual networks**| March 03, 2020|[Link](Configureandmanagevirtualnetworks.md)  | |
-|**Manage identities**|March 11, 2020| | |
+|**Manage identities**|March 11, 2020|[Link](manageidentities.md)  | |
 |**Final Review**|March 18, 2020| | |
 
 ## What are study groups?
