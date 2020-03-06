@@ -8,15 +8,15 @@ Microsoft Learn provides a free, interactive way of learning by combining short 
 
 1. Use the links below to register for the challenges you want to participate in. 
 2. You will get an email on the Challenge Start Date with instructions on how to log into the challenge. 
-3. Complete challenge exercises during the month to earn points and move up the leader board. 
+3. Complete challenge exercises during the month to earn points and move up the leaderboard. 
 
 ## Challenge Schedule
 
-| Event | Sign Up Link | Sign Up Deadline | Start Date | End Date | Winners Announced |
-| --- | --- | --- | --- | --- | --- | 
-| April 2020 Challenge | Coming soon | March 31 2020 | April 1 2020 | April 30 2020 | May 1 2020 |
-| May 2020 Challenge | Coming soon | April 30 2020 | May 1 2020 | May 31 2020 | June 1 2020 |
-| June 2020 Challenge | Coming soon | May 31 2020 | June 1 2020 | June 30 2020 | July 1 2020 |
+| Event | Sign Up Link | Sign Up Deadline | Start Date | End Date | Winners Announced | Leaderboard |
+| --- | --- | --- | --- | --- | --- | --- | 
+| April 2020 Challenge | Coming soon | March 31 2020 | April 1 2020 | April 30 2020 | May 1 2020 | [Link](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/5f5faeea-c85a-4d6b-b35a-caaef84752e7) |
+| May 2020 Challenge | Coming soon | April 30 2020 | May 1 2020 | May 31 2020 | June 1 2020 | [Link](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/d114aff0-4db6-46b4-b8ee-ae965b35bf9f) |
+| June 2020 Challenge | Coming soon | May 31 2020 | June 1 2020 | June 30 2020 | July 1 2020 | [Link](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/8efad682-c87e-412d-9ff0-f5770241f282) |
 
 ## Official Rules
 
@@ -38,7 +38,7 @@ Microsoft Learn provides a free, interactive way of learning by combining short 
 
    Employees and directors of Microsoft Corporation and its subsidiaries, affiliates, advertising agencies, and Sweepstakes Parties are not eligible, nor are persons involved in the execution or administration of this promotion, or the family members of each above (parents, children, siblings, spouse/domestic partners, or individuals residing in the same household). Void where prohibited.
 
-   If you are participating in your capacity as an employee, it is your sole responsibility to comply with your employer’s gift policies. Microsoft will not be party to any disputes or actions related to this matter. Microsoft is committed to complying with government gift and ethics rules and therefore **government and public sector employees are not eligible** to enter
+   If you are participating in your capacity as an employee, it is your sole responsibility to comply with your employer’s gift policies. Microsoft will not be party to any disputes or actions related to this matter. Microsoft is committed to complying with government gift and ethics rules and therefore **government and public sector employees are not eligible** to enter.
 
 1. HOW TO ENTER
 
@@ -90,4 +90,4 @@ Microsoft Learn provides a free, interactive way of learning by combining short 
 
 1. WINNERS LIST
 
-   Send email to TBD with the subject line "Cloud Skills Challenge winners" within 30 days of March 3, 2020 to receive a list of winners that received a prize worth $30.00 or more.
+   Send email to usocpcsc@microsoft.com TBD with the subject line "Cloud Skills Challenge winners" within 30 days of the Challenge End Date to receive a list of winners that received a prize worth $30.00 or more.
