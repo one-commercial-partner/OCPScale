@@ -44,7 +44,7 @@ Microsoft Learn provides a free, interactive way of learning by combining short 
 
    No Purchase Necessary.
 
-   You will receive one Sweepstakes entry when you successfully register for free using the above registration links.
+   You will receive one Sweepstakes entry for every 1000 xp learner points you accumulate in the challenge during the challenge period.
 
    The entry limit is one per person overall.
 
@@ -58,21 +58,21 @@ Microsoft Learn provides a free, interactive way of learning by combining short 
 
 1. PRIZES
 
-   The following prizes will be awarded:
+   The following prizes will be awarded for each challenge:
 
-   Three (3) Grand Prizes (s). Each winner will receive: TBD. Approximate Retail Value (ARV) $TBD.
+   Three (3) Grand Prizes (s) for each challenge. Each winner will receive: 1 pair of Surface Headphones. Approximate Retail Value (ARV) $349.99.
 
    The ARV of electronic prizes is subject to price fluctuations in the consumer marketplace based on, among other things, any gap in time between the date the ARV is estimated for purposes of these Official Rules and the date the prize is awarded or redeemed. We will determine the value of the prize to be the fair market value at the time of prize award.
 
-   The total Approximate Retail Value (ARV) of all prizes: $TBD
+   The total Approximate Retail Value (ARV) of all prizes: $1,049.97
 
    We will only award one (1) Grand Prize per person during the Entry Period. No more than the stated number of prizes will be awarded. No substitution, transfer, or assignment of prize permitted, except that Microsoft reserves the right to substitute a prize of equal or greater value in the event the offered prize is unavailable. Prizes will be sent no later than 28 days after winner selection. Prize winners may be required to complete and return prize claim and / or tax forms ("Forms") within the deadline stated in the winner notification. Taxes on the prize, if any, are the sole responsibility of the winner, who is advised to seek independent counsel regarding the tax implications of accepting a prize. By accepting a prize, you agree that Microsoft may use your entry, name, image and hometown online and in print, or in any other media, in connection with this Sweepstakes without payment or compensation to you, except where prohibited by law.
 
-1. ODDS
+2. ODDS
 
    The odds of winning are based on the number of eligible entries received.
 
-1. GENERAL CONDITIONS AND RELEASE OF LIABILITY
+3. GENERAL CONDITIONS AND RELEASE OF LIABILITY
 
    To the extent allowed by law, by entering you agree to release and hold harmless Microsoft and its respective parents, partners, subsidiaries, affiliates, employees and agents from any and all liability or any injury, loss or damage of any kind arising in connection with this Sweepstakes or any prize won.
 
@@ -80,14 +80,14 @@ Microsoft Learn provides a free, interactive way of learning by combining short 
 
    We reserve the right to cancel, change or suspend this Sweepstakes for any reason, including cheating, technology failure, catastrophe, war or any other unforeseen or unexpected event that affects the integrity of this Sweepstakes, whether human or mechanical. If the integrity of the Sweepstakes cannot be restored, we may select winners from among all eligible entries received before we had to cancel, change or suspend the Sweepstakes. Rules violators will be prosecuted to the full extent of the law and may be banned from participation in Microsoft Sweepstakes.
 
-1. GOVERNING LAW
+4. GOVERNING LAW
 
    This Sweepstakes will be governed by the laws of the State of Washington, and you consent to the exclusive jurisdiction and venue of the courts of the State of Washington for any disputes arising out of this Sweepstakes.
 
-1. USE OF YOUR ENTRY
+5. USE OF YOUR ENTRY
 
    Personal data you provide while entering this Sweepstakes will be used by Microsoft and/or its agents and prize fulfillers acting on Microsoft’s behalf only for the administration and operation of this Sweepstakes and in accordance with the Microsoft Privacy Statement.
 
-1. WINNERS LIST
+6. WINNERS LIST
 
-   Send email to usocpcsc@microsoft.com TBD with the subject line "Cloud Skills Challenge winners" within 30 days of the Challenge End Date to receive a list of winners that received a prize worth $30.00 or more.
+   Send email to usocpcsc@microsoft.com with the subject line "Cloud Skills Challenge winners" within 30 days of the Challenge End Date to receive a list of winners that received a prize worth $30.00 or more.
