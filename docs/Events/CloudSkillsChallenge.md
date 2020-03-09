@@ -4,19 +4,24 @@ Build your cloud skills with learning made easy and at your own pace! With hands
 
 Microsoft Learn provides a free, interactive way of learning by combining short step-by-step tutorials, browser-based interactive coding and scripting environments, and task-based achievements to help you advance your technical skills while earning achievements.
 
+As you complete each exercise you will earn points. The more points you earn the more chances you have to win one of three pairs of [noise cancelling Surface headphones](https://www.microsoft.com/en-us/p/surface-headphones/8NRM8DZ2ZW43) valued at $349.99.
+
 ## How do I participate
 
 1. Use the links below to register for the challenges you want to participate in. 
-2. You will get an email on the Challenge Start Date with instructions on how to log into the challenge. 
-3. Complete challenge exercises during the month to earn points and move up the leaderboard. 
+1. You will get an email on the Challenge Start Date with instructions on how to log into the challenge. 
+1. Complete challenge exercises **during the month at your pace** to earn points and move up the leaderboard. 
+
+> NOTE: The system we are using for sign up requires us to specify a date and time for the event, however each of our challenges run the entire month. You have the entire month to complete as many exercises as you want and earn as much XP as you can. There will be NO physical or virtual meetings. 
 
 ## Challenge Schedule
 
 | Event | Sign Up Link | Sign Up Deadline | Start Date | End Date | Winners Announced | Leaderboard |
 | --- | --- | --- | --- | --- | --- | --- | 
-| April 2020 Challenge | Coming soon | March 31 2020 | April 1 2020 | April 30 2020 | May 1 2020 | [Link](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/5f5faeea-c85a-4d6b-b35a-caaef84752e7) |
-| May 2020 Challenge | Coming soon | April 30 2020 | May 1 2020 | May 31 2020 | June 1 2020 | [Link](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/d114aff0-4db6-46b4-b8ee-ae965b35bf9f) |
-| June 2020 Challenge | Coming soon | May 31 2020 | June 1 2020 | June 30 2020 | July 1 2020 | [Link](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/8efad682-c87e-412d-9ff0-f5770241f282) |
+| April 2020 Challenge | [Sign Up](https://msuspartners.eventbuilder.com/event/15261) | March 31 2020 | April 1 2020 | April 30 2020 | May 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/5f5faeea-c85a-4d6b-b35a-caaef84752e7) |
+| May 2020 Challenge | [Sign Up](https://msuspartners.eventbuilder.com/event/15264) | April 30 2020 | May 1 2020 | May 31 2020 | June 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/d114aff0-4db6-46b4-b8ee-ae965b35bf9f) |
+| June 2020 Challenge | [Sign Up](https://msuspartners.eventbuilder.com/event/15263) | May 31 2020 | June 1 2020 | June 30 2020 | July 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/8efad682-c87e-412d-9ff0-f5770241f282) |
+
 
 ## Official Rules
 
