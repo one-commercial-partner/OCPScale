@@ -9,11 +9,11 @@ Click here to register and watch recordings of past sessions:  [AZ-300: Azure Ar
 |Topic|Date|Homework|PPT|
 | - | - | - | - | 
 |**Kickoff**|January 29, 2020|None!|  |
-|**Deploy and configure infrastructure**|February 11, 2020|[Link](Infrastructure.md) |[Link](Infrastructure.pptx)|
-|**Implement workloads and security**| February 19, 2020|[Link](WorkloadsSecurity.md) | [Link](WorkloadsSecurity.pptx) |
-|**Create and deploy apps**| February 26, 2020|[Link](Apps.md) | [Link](Apps.pptx) |
-|**Implement authentication and secure data**|March 03, 2020| [Link](AuthenticationSecureData.md) | [Link](AuthenticationSecureData.pptx) |
-|**Develop for the cloud and for Azure storage**|March 11, 2020| [Link](CloudStorage.md) |  |
+|**Deploy and configure infrastructure** (40-45%)|February 11, 2020|[Link](Infrastructure.md) |[Link](Infrastructure.pptx)|
+|**Implement workloads and security** (25-30%)| February 19, 2020|[Link](WorkloadsSecurity.md) | [Link](WorkloadsSecurity.pptx) |
+|**Create and deploy apps** (5-10%)| February 26, 2020|[Link](Apps.md) | [Link](Apps.pptx) |
+|**Implement authentication and secure data** (5-10%)|March 03, 2020| [Link](AuthenticationSecureData.md) | [Link](AuthenticationSecureData.pptx) |
+|**Develop for the cloud and for Azure storage** (15-20%)|March 11, 2020| [Link](CloudStorage.md) | [Link](CloudStorage.pptx) |
 |**Final Review**|March 18, 2020| |  |
 
 ## What are study groups?
