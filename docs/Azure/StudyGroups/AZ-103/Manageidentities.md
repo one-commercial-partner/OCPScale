@@ -9,6 +9,9 @@
 | |[How to: Plan your Azure AD join implementation](https://docs.microsoft.com/en-us/azure/active-directory/devices/azureadjoin-plan)
 |configure self-service password reset|[Tutorial: Enable users to unlock their account or reset passwords using Azure Active Directory self-service password reset](https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-sspr) |
 |manage multiple directories|[Understand how multiple Azure Active Directory tenants interact](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/licensing-directory-independence)|
+|Experiential Learning |[Allow users to reset their password with Azure Active Directory self-service password reset](https://docs.microsoft.com/en-us/learn/modules/allow-users-reset-their-password/)|
+| |[Add custom domain name to Azure Active Directory](https://docs.microsoft.com/en-us/learn/modules/add-custom-domain-name-azure-active-directory/)|
+| |[Secure your identities with Azure Active Directory](https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-ad/)
 
 ## Manage Azure AD objects (users, groups, and devices)
 
@@ -19,6 +22,8 @@
 |manage device settings|[Manage device identities using the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal)|
 |perform bulk user updates|[Importing data into my directory](https://docs.microsoft.com/en-us/powershell/azure/active-directory/importing-data?view=azureadps-2.0)
 |manage guest accounts|[Manage guest access with Azure AD access reviews](https://docs.microsoft.com/en-us/azure/active-directory/governance/manage-guest-access-with-access-reviews)|
+|Experiential Learning|[Create Azure users and groups in Azure Active Directory](https://docs.microsoft.com/en-us/learn/modules/create-users-and-groups-in-azure-active-directory/)|
+| |[Manage users and groups in Azure Active Directory](https://docs.microsoft.com/en-us/learn/modules/manage-users-and-groups-in-aad/)
 
 ## Implement and manage hybrid identities
 
@@ -42,3 +47,4 @@
 |configure bypass options|[One-time bypass](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-mfasettings#one-time-bypass) |
 |configure Trusted IPs|[Trusted IPs](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips) |
 |configure verification methods|[Verification methods](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-mfasettings#verification-methods) |
+|Experiential Learning |[Secure Azure Active Directory users with Multi-Factor Authentication](https://docs.microsoft.com/en-us/learn/modules/secure-aad-users-with-mfa/)|
