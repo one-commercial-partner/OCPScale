@@ -51,15 +51,13 @@ As you complete each exercise you will earn points. The more points you earn the
 
    You will receive one Sweepstakes entry for every 1000 xp learner points you accumulate in the challenge during the challenge period.
 
-   The entry limit is one per person overall.
-
    We are not responsible for excess, lost, late, or incomplete entries. If disputed, entries will be deemed submitted by the authorized account holder of the email address, social media account, or other method used to enter.
 
 1. WINNER SELECTION AND NOTIFICATION
 
-   Pending confirmation of eligibility, potential prize winners will be selected by Microsoft or their Agent in a random drawing from among all eligible entries received within 7 days following the Entry Period.
+   Pending confirmation of eligibility, potential prize winners will be selected by Microsoft or their Agent in a random drawing from among all eligible entries received by the Challenge End Date.
 
-   Winners will be notified via the contact information provided during entry no more than 7 days following the drawing with prize claim instructions, including submission deadlines. If a selected winner cannot be contacted, is ineligible, fails to claim a prize or fails to return any Forms, the selected winner will forfeit their prize and an alternate winner will be selected time allowing. If you are a potential winner and you are 18 or older, but are considered a minor in your place of legal residence, we may require your parent or legal guardian to sign all required forms on your behalf. Only three alternate winners will be selected, after which unclaimed prizes will remain unawarded.
+   Winners will be notified via the contact information provided during entry no more than 7 days following the drawing with prize claim instructions, including submission deadlines. If you are a potential winner and you are 18 or older, but are considered a minor in your place of legal residence, we may require your parent or legal guardian to sign all required forms on your behalf. If a selected winner cannot be contacted, is ineligible, fails to claim a prize or fails to return any Forms, the selected winner will forfeit their prize and an alternate winner will be selected as time allows through June 30, 2020. Up to three alternate winners will be selected, after which unclaimed prizes will remain unawarded.
 
 1. PRIZES
 
@@ -68,8 +66,6 @@ As you complete each exercise you will earn points. The more points you earn the
    Three (3) Grand Prizes (s) for each challenge. Each winner will receive: 1 pair of Surface Headphones. Approximate Retail Value (ARV) $349.99.
 
    The ARV of electronic prizes is subject to price fluctuations in the consumer marketplace based on, among other things, any gap in time between the date the ARV is estimated for purposes of these Official Rules and the date the prize is awarded or redeemed. We will determine the value of the prize to be the fair market value at the time of prize award.
-
-   The total Approximate Retail Value (ARV) of all prizes: $1,049.97
 
    We will only award one (1) Grand Prize per person during the Entry Period. No more than the stated number of prizes will be awarded. No substitution, transfer, or assignment of prize permitted, except that Microsoft reserves the right to substitute a prize of equal or greater value in the event the offered prize is unavailable. Prizes will be sent no later than 28 days after winner selection. Prize winners may be required to complete and return prize claim and / or tax forms ("Forms") within the deadline stated in the winner notification. Taxes on the prize, if any, are the sole responsibility of the winner, who is advised to seek independent counsel regarding the tax implications of accepting a prize. By accepting a prize, you agree that Microsoft may use your entry, name, image and hometown online and in print, or in any other media, in connection with this Sweepstakes without payment or compensation to you, except where prohibited by law.
 
