@@ -1,5 +1,7 @@
 # US Partner Cloud Skills Challenge
 
+![Banner](./CloudSkillsChallenge/img/ExternalBanner.PNG "Are you Cloud Ready? Take the Cloud Skills Challenge!")
+
 Build your cloud skills with learning made easy and at your own pace! With hands on self paced learning covering your choice of lessons about Azure, Dynamics 365, Microsoft 365, and/or the Power Platform.
 
 Microsoft Learn provides a free, interactive way of learning by combining short step-by-step tutorials, browser-based interactive coding and scripting environments, and task-based achievements to help you advance your technical skills while earning achievements.
