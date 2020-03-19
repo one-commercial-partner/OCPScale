@@ -2,10 +2,6 @@
 
 ![Banner](./CloudSkillsChallenge/img/ExternalBanner.PNG "Are you Cloud Ready? Take the Cloud Skills Challenge!")
 
-Build your cloud skills with learning made easy and at your own pace! With hands-on self-paced learning covering your choice of lessons about Azure, Dynamics 365, Microsoft 365, and/or the Power Platform.
-
-Microsoft Learn provides a free, interactive way of learning by combining short step-by-step tutorials, browser-based interactive coding and scripting environments, and task-based achievements to help you advance your technical skills while earning achievements. Our catalog of learning modules includes content covering the entire cloud platform and targeting all skill levels and roles (technical and non-technical).
-
 The Cloud Skills Challenge helps you build your cloud skills with learning made easy! You can discover more about Azure, Dynamics 365, Microsoft 365, and/or the Power Platform with hands-on self-paced modules targeting all skill levels and roles (technical and non-technical). Microsoft Learn provides a free, interactive way to learn by combining short step-by-step tutorials, browser-based interactive coding and scripting environments, as well as task-based achievements to help you advance your technical skills while earning rewards. The Cloud Skills Challenge provides a fun way to  use Microsoft Learn to help you advance your cloud skills while earning prizes. 
 
 As you complete each exercise you will earn points. The more points you earn the more chances you have to win one of three pairs of [noise cancelling Surface headphones](https://www.microsoft.com/en-us/p/surface-headphones/8NRM8DZ2ZW43) valued at $349.99.
