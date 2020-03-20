@@ -8,14 +8,14 @@ Click here to register:  [AZ-500: Microsoft Azure Security Technologies](https:/
 
 > This study group is open to all who want to register!
 
-|Week#|Topic|Date|Homework|Recording|
+|Week #|Topic|Date|Homework|Recording|
 | - | - | - | - | - |
-|Week 1|**Kickoff**|| ||
-|Week 2|**Manage identity and access (20-25%)**|  |||
-|Week 3|**Implement platform protection (35-40%)**|||
-|Week 4|**Manage security operations (15-20%)**|| ||
-|Week 5|**Secure data and applications (30-35%)**||| |
-|Week 6|**Final Review**|| | |
+|Week 1|**Kickoff**|March 25, 2020| ||
+|Week 2|**Manage identity and access (20-25%)**|April 01, 2020  |||
+|Week 3|**Implement platform protection (35-40%)**|April 08, 2020||
+|Week 4|**Manage security operations (15-20%)**|April 15, 2020| ||
+|Week 5|**Secure data and applications (30-35%)**|April 22, 2020|| |
+|Week 6|**Final Review**|April 29, 2020| | |
 
 ## What are study groups?
 
