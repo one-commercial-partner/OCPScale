@@ -6,7 +6,7 @@ The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-500 study
 
 Click here to register:  [AZ-500: Microsoft Azure Security Technologies](https://msuspartners.eventbuilder.com/AZ500StudyGroup)
 
->This study group is open to all who want to register!
+> This study group is open to all who want to register!
 
 |Week#|Topic|Date|Homework|Recording|
 | - | - | - | - | - |
@@ -41,7 +41,7 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 
 [Microsoft Azure certification exams](https://www.microsoft.com/en-us/learning/azure-exams.aspx)
 
-## More Partner Certification Study Groups
+## Additional Partner Certification Study Groups
 
 - [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
 - [AZ-300: Microsoft Azure Architect Technologies](https://msuspartners.eventbuilder.com/AZ-300)
