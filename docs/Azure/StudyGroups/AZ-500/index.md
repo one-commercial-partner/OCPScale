@@ -11,8 +11,8 @@ Click here to register:  [AZ-500: Microsoft Azure Security Technologies](https:/
 |Week#|Topic|Date|Homework|Recording|
 | - | - | - | - | - |
 |Week 1|**Kickoff**|| ||
-|Week 2|**Manage identity and access (20-25%)**|  ||||
-|Week 3|**Implement platform protection (35-40%)**||| |
+|Week 2|**Manage identity and access (20-25%)**|  |||
+|Week 3|**Implement platform protection (35-40%)**|||
 |Week 4|**Manage security operations (15-20%)**|| ||
 |Week 5|**Secure data and applications (30-35%)**||| |
 |Week 6|**Final Review**|| | |
@@ -44,5 +44,5 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 ## More Partner Certification Study Groups
 
 - [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
-- [AZ-300: Azure Architect](https://msuspartners.eventbuilder.com/AZ-300)
-- [AZ-301: Azure Architect](https://msuspartners.eventbuilder.com/AZ-301)
+- [AZ-300: Microsoft Azure Architect Technologies](https://msuspartners.eventbuilder.com/AZ-300)
+- [AZ-301: Microsoft Azure Architect Design](https://msuspartners.eventbuilder.com/AZ-301)
