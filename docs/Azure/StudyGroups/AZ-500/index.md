@@ -19,14 +19,14 @@ Click here to register:  [AZ-500: Microsoft Azure Security Technologies](https:/
 
 ## What are study groups?
 
-Community-based deep technical sessions with an emphasis on experiential learning.  Participants will be assigned homework that includes both reading and hands-on activities that are directly aligned to exam objectives.  A private Yammer group is available for students to ask questions so that your growth stays on track during this fast-paced learning environment. We'll also meet once a week to review key elements of the exam objectives.
+Community-based deep technical sessions with an emphasis on experiential learning.  Participants will be assigned homework that includes both reading and hands-on activities that are directly aligned to exam objectives.  A [private Yammer group](https://www.yammer.com/msuspartner/#/threads/inGroup?type=in_group&feedId=9161297&view=all) is available for students to ask questions so that your growth stays on track during this fast-paced learning environment. We'll also meet once a week to review key elements of the exam objectives.
 
 ## What are the requirements?
 
 Participants should complete the following prior to attending a study group:
 
-- Azure Fundamentals Certification (or have equivalent knowledge)
-- VILT training for the exam you wish to take
+- [AZ-900: Microsoft Azure Fundamentals](https://partner.microsoft.com/en-vn/training/assets/collection/az-900-microsoft-azure-fundamentals#/)  (or have equivalent knowledge)
+- [AZ-500: Microsoft Azure Security Technologies virtual instructor-led trainings (VILT)](https://partner.microsoft.com/en-vn/training/assets/collection/az-500-microsoft-azure-security-technologies#/)
 - Working Azure subscription (Visual Studio or IUR)
 
 ## What is in this repo?
