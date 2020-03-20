@@ -1,6 +1,6 @@
 # AZ-301: Microsoft Azure Architect Design
 
-The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-500 study group. It is designed to equip you for the Microsoft Azure Security Technologies exam!
+The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-301 study group. It is designed to equip you for the Microsoft Azure Architect Design exam!
 
 **A NEW VERSION OF THIS EXAM, AZ-304, WILL BE AVAILABLE ON OR AROUND APRIL 28, 2020. You will be able to take this exam until it retires on or around July 28, 2020.**
 
