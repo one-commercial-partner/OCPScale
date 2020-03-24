@@ -10,7 +10,7 @@ Click here to register:  [AZ-500: Microsoft Azure Security Technologies](https:/
 
 |Week #|Topic|Date|Homework|Recording|
 | - | - | - | - | - |
-|Week 1|**Kickoff**|March 25, 2020| ||
+|Week 1|**Kickoff**|March 25, 2020|None!|[Link](https://msuspartners.eventbuilder.com/AZ500StudyGroup)|
 |Week 2|**Manage identity and access (20-25%)**|April 01, 2020  |||
 |Week 3|**Implement platform protection (35-40%)**|April 08, 2020||
 |Week 4|**Manage security operations (15-20%)**|April 15, 2020| ||
