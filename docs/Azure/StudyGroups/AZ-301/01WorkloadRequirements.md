@@ -2,7 +2,7 @@
 
 This particular exam objective is very broad in nature, thus it is very difficult for us to list  materials to review that align to exam objectives in a 1:1 nature.
 
-Primarily we recommend review the following:
+We recommend read and become familiar with  the following:
 
 * [Azure Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/)
 * [Azure Architecture Framework](https://docs.microsoft.com/en-us/azure/architecture/framework/)
