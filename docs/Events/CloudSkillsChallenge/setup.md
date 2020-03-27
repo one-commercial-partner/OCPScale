@@ -2,22 +2,22 @@
 
 View full Challenge Details [here](http://aka.ms/usocpcsc).
 
-If you have any issues/questions please email us [usocpcsc@microsoft.com](mailto:usocpcsc@microsoft.com)
+If you have any issues/questions, please email us [usocpcsc@microsoft.com](mailto:usocpcsc@microsoft.com)
 
 1. Sign up for the challenge [here](https://msuspartners.eventbuilder.com/event/15261) if you have not already.
 
-1. Sign up for a FREE MS Learn account [here](https://docs.microsoft.com/en-us/learn/). If you already have one log into it. 
+1. Sign up for a FREE MS Learn account [here](https://docs.microsoft.com/en-us/learn/). If you already have one, log into it. 
 
     ![MS Learn Sign in](./img/mslearn-signin.png)
 
-1. Open your MS Learn Profile, Click your name in the upper right, and then select profile
+1. Open your MS Learn Profile, click your name in the upper right, and then select profile
 
     ![MS Learn Open profile](./img/mslearn-open-profile.png)
 
 
 1. Check your profile settings.
 
-    1. Under Account Management be sure to link your MS Learn account to your Work email address. Here you can see that I am signed in with my work account so I don't need to link. 
+    1. Under Account Management be sure to link your MS Learn account to your work email address. Here you can see that I am signed in with my work account so I don't need to link. 
    
         ![MS Learn Link](./img/mslearn-link.png)
 
@@ -41,6 +41,6 @@ If you have any issues/questions please email us [usocpcsc@microsoft.com](mailto
 
   > You can come back to [MS Learn](https://docs.microsoft.com/en-us/learn) at any time before the end of the month. Just make sure you are logged into the correct account when completing the exercises. 
 
-  > **The more exercises you complete, the more points you will earn, the more entires you will get into the competition to win a great prize.** 
+  > **The more exercises you complete, the more points you will earn, the more entries you will get into the competition to win a great prize.** 
 
   > Points on the leaderboard get updated nightly. 
