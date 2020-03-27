@@ -17,15 +17,15 @@ If you have any issues/questions please email us [usocpcsc@microsoft.com](mailto
 
 1. Check your profile settings.
 
-  1. Under Account Management be sure to link your MS Learn account to your Work email address. Here you can see that I am signed in with my work account so I don't need to link. 
+    1. Under Account Management be sure to link your MS Learn account to your Work email address. Here you can see that I am signed in with my work account so I don't need to link. 
    
-    ![MS Learn Link](./img/mslearn-link.png)
+        ![MS Learn Link](./img/mslearn-link.png)
 
-   1. Update your "Display Name" to be whatever you want. This will be visible on the Challenge Leaderboard. 
+    1. Update your "Display Name" to be whatever you want. This will be visible on the Challenge Leaderboard. 
 
         ![MS Learn Display Name](./img/mslearn-displayname.png)
 
-   1. Copy your username, you will need it for the next step. 
+    1. Copy your username, you will need it for the next step. 
 
         ![MS Learn Username](./img/mslearn-username.png)
 
