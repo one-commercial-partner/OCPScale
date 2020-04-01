@@ -1,6 +1,6 @@
 # Implement platform protection (35-40%)
 
-Please complete the following course of LinkedIn Learning for intermediate knowledge of the exam objectives: [Implementing platform protection in Azure](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fazure-security-technologies-implement-platform-protection%3Ftrk%3Dshare_ent_url&account=3322)
+Please complete the following course on LinkedIn Learning for intermediate knowledge of this exam objectives: [Implementing platform protection in Azure](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fazure-security-technologies-implement-platform-protection%3Ftrk%3Dshare_ent_url&account=3322)
 > NOTE: In addition to the great content listed below, there are **20 Labs** for you to follow on the [AZ-500 GitHub site](https://github.com/saad1969/MicrosoftLearning-AZ-500-Azure-Security/tree/master/Instructions/Labs/Module_2) for this learning objective.  **WE STRONGLY RECOMMEND** that you complete all the labs in order to be exam ready.
 
 ## Implement network security
