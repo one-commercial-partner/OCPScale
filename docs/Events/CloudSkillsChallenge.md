@@ -1,7 +1,6 @@
 # US Partner Cloud Skills Challenge
-
-## Are you Cloud Ready? 
-## Take the Cloud Skills Challenge!
+# Are you Cloud Ready? 
+# Take the Cloud Skills Challenge!
 
 The Cloud Skills Challenge helps you build your cloud skills with learning made easy! You can discover more about Azure, Dynamics 365, Microsoft 365, and/or the Power Platform with hands-on self-paced modules targeting all skill levels and roles (technical and non-technical). Microsoft Learn provides a free, interactive way to learn by combining short step-by-step tutorials, browser-based interactive coding and scripting environments, as well as task-based achievements to help you advance your technical skills while earning rewards. The Cloud Skills Challenge provides a fun way to  use Microsoft Learn to help you advance your cloud skills while earning prizes. 
 
