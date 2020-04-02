@@ -4,8 +4,6 @@ View full Challenge Details [here](http://aka.ms/usocpcsc).
 
 If you have any issues/questions, please email us [usocpcsc@microsoft.com](mailto:usocpcsc@microsoft.com)
 
-1. Sign up for the challenge [here](https://msuspartners.eventbuilder.com/event/15261) if you have not already.
-
 1. Sign up for a FREE MS Learn account [here](https://docs.microsoft.com/en-us/learn/). If you already have one, log into it. 
 
     ![MS Learn Sign in](./img/mslearn-signin.png)
