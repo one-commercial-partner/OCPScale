@@ -18,7 +18,7 @@ As you complete each exercise you will earn points. The more points you earn the
 
 | Event | Sign Up Link | Sign Up Deadline | Start Date | End Date | Winners Announced | Leaderboard |
 | --- | --- | --- | --- | --- | --- | --- | 
-| April 2020 Challenge | [Join](./setup) | March 31 2020 | April 1 2020 | April 30 2020 | May 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/5f5faeea-c85a-4d6b-b35a-caaef84752e7) |
+| April 2020 Challenge | [Join](./cloudskillschallenge/setup) | March 31 2020 | April 1 2020 | April 30 2020 | May 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/5f5faeea-c85a-4d6b-b35a-caaef84752e7) |
 | May 2020 Challenge | [Sign Up](https://msuspartners.eventbuilder.com/event/15264) | April 30 2020 | May 1 2020 | May 31 2020 | June 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/d114aff0-4db6-46b4-b8ee-ae965b35bf9f) |
 | June 2020 Challenge | [Sign Up](https://msuspartners.eventbuilder.com/event/15263) | May 31 2020 | June 1 2020 | June 30 2020 | July 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/8efad682-c87e-412d-9ff0-f5770241f282) |
 
@@ -28,7 +28,7 @@ The MS Learn username of the winners will be poste here. If you see your user na
 
 ### April 2020 Challenge
 
-Challenge ongoing, check out the [leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/5f5faeea-c85a-4d6b-b35a-caaef84752e7) or [join](./setup) the challenge in progress.  
+Challenge ongoing, check out the [leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/5f5faeea-c85a-4d6b-b35a-caaef84752e7) or [join](./cloudskillschallenge/setup) the challenge in progress.  
 
 ### May 2020 Challenge
 
