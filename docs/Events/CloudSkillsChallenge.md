@@ -14,6 +14,8 @@ As you complete each exercise you will earn points. The more points you earn the
 
 > NOTE: The system we are using for sign up requires us to specify a date and time for the event, however each of our challenges run the entire month. You have the entire month to complete as many exercises as you want and earn as much XP as you can. There will be NO physical or virtual meetings. 
 
+If you have any issues/questions, please email us [usocpcsc@microsoft.com](mailto:usocpcsc@microsoft.com)
+
 ## Challenge Schedule
 
 | Event | Sign Up Link | Sign Up Deadline | Start Date | End Date | Winners Announced | Leaderboard |
