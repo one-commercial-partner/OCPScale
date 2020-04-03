@@ -16,11 +16,11 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 4. On the Infra Resource group blade, review the list of available resources. Locate the resource named **AdPubIP1** and click on it. Note that the resource type should be **Public IP address**.
 5. On the Overview page for AdPubIP1, locate the **IP address** field. Copy the IP address to a safe location.
 
-[PreReqs-Ex04000.png](attachments/PreReqs-Ex04000-4449308a-6098-4445-8bb7-a20c54dae18e.png)
+![PreReqs-Ex04000.png](attachments/PreReqs-Ex04000-4449308a-6098-4445-8bb7-a20c54dae18e.png)
 
 6. On your local machine, open the **RUN** dialog window, type **MSTSC** and hit enter.                                                                                                                              
 7. In the **Remote Desktop Connection** window, paste in the public IP address from the previous step. Click **Connect**.                                                                                               
-8. When prompted, sign in with the AD domain UPN credentials. For example, if you used the ARM template from [Exercise 3](/Windows-Virtual-Desktop-on-Azure-Lab/Prerequisites/Exercise-3:-Deploying-Azure-Infrastructure-and-AD-DS), the credentials will be something along the lines of: **adadmin@MyADDomain.com** with the password: **WVD\@zureL\@b2019!**. If prompted, click **Yes** to accept the RDP certification warning.                                                   
+8. When prompted, sign in with the AD domain UPN credentials. For example, if you used the ARM template from [Exercise 3](/Windows-Virtual-Desktop-on-Azure-Lab/Prerequisites/Exercise-3:-Deploying-Azure-Infrastructure-and-AD-DS), the credentials will be something along the lines of: **adadmin@MyADDomain.com** with the password: **WVD\@zureL\@b2019!**. If prompted, click **Yes** to accept the RDP certification warning.
 
    > **Note:** This is the Active Directory account from the ARM template, not the
    > Azure AD Global Admin account. If you have trouble signing in, try typing 
