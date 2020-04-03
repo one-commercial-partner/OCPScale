@@ -2,26 +2,31 @@
 
 Here are the lab files for the Windows Virtual Desktop TIW:
 
-## Homework Assignment
 
-In order to maximize our time together you have homework to complete prior to starting the WVD labs.  
+[Exercise 1 - Gather Tenant and Subscription Details](Exercise-1-Gather-Tenant-and-Subscription-Details.md)
 
-Complete this [Hybrid Identity Lab](wvdhomework.md) prior to attending the WVD Workshop.  This lab will take approximately an hour to complete.
+[Exercise 2 Grant consent for WVD service](Exercise-2-Grant-consent-for-WVD-service.md)
 
-## Lab 1 - Hybrid Identity
+[Exercise 3 Assign the“TenantCreator” role to a useraccount](Exercise-3-Assign-the-“TenantCreator”-role-to-a-user-account.md)
 
-In lab 1 you are going to establish ground to cloud connectivity using vNet peering and then build out a domain controller in the cloud that will sync to Active Directory on the ground.
+[Exercise 4 Create a Windows Virtual Desktop Tenant](Exercise-4-Create-a-Windows-Virtual-Desktop-Tenant.md)
 
-* [Windows Virtual Desktop - Lab 1 - Identity](wvdlab01.md)
+[Exercise-5-Deploy-a-Personal-Host-Pool](Exercise-5-Deploy-a-Personal-Host-Pool.md)
 
-## Lab 2 - Provision a WVD tenant
+[Exercise-6-Deploy-a-Pooled-Host-Pool](Exercise-6-Deploy-a-Pooled-Host-Pool.md)
 
-Creating a tenant in Windows Virtual Desktop is the first step toward building your desktop virtualization solution. A tenant is a group of one or more host pools. Each host pool consists of multiple session hosts, running as virtual machines in Azure and registered to the Windows Virtual Desktop service. Each host pool also consists of one or more app groups that are used to publish remote desktop and remote application resources to users. With a tenant, you can build host pools, create app groups, assign users, and make connections through the service.
+[Exercise-7-Deploy-an-Application-Pool-for-Remote-App](Exercise-7-Deploy-an-Application-Pool-for-Remote-App.md)
 
-In this lab you will learn how to:
+[Exercise-8-Test-WVD-Deployment](Exercise-8-Test-WVD-Deployment.md)
 
-> * Grant Azure Active Directory permissions to the Windows Virtual Desktop service.
-> * Assign the TenantCreator application role to a user in your Azure Active Directory tenant.
-> * Create a Windows Virtual Desktop tenant.
+[Exercise-X-Create-an-Azure-Files-Share-for-FSLogix](Exercise-X-Create-an-Azure-Files-Share-for-FSLogix.md)
 
-* [Windows Virtual Desktop - Lab 2 - Provisioning a WVD tenant](wvdlab02.md)
+[Exercise-9-FSLogix-Agent-Installation](Exercise-9-FSLogix-Agent-Installation.md)
+
+[Exercise-10-WVD-Monitoring](Exercise-10-WVD-Monitoring.md)
+
+[Exercise-11-Install-Management-UI](Exercise-11-Install-Management-UI.md)
+
+[Exercise-12-WVD-Scaling](Exercise-12-WVD-Scaling.md)
+
+[Exercise-13-Creating-a-WVD-Master-Image](Exercise-13-Creating-a-WVD-Master-Image.md)
