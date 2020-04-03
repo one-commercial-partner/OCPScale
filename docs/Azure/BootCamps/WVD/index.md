@@ -3,7 +3,6 @@
 ## Abstract
 
 ---------
-
 Understand the Windows Virtual Desktop Infrastructure and how-to setup a working
 WVD environment end-to-end in a typical Enterprise model.
 
@@ -24,7 +23,6 @@ WVD environment end-to-end in a typical Enterprise model.
 ## Overview
 
 ---------
-
 In this lab, attendees will deploy the [Windows Virtual Desktop
 (WVD)](https://azure.microsoft.com/en-us/services/virtual-desktop/) *solution* .
 Exclusively available as an Azure cloud service, Windows Virtual Desktop allows
@@ -53,7 +51,6 @@ costs while empowering today’s modern digital workspace.
 ## Solution architecture
 
 ----------------------
-
 At the end of the lab, attendees will have deployed an Azure Active Directory
 Tenant, Azure infrastructure, Active Directory, Active Directory Domain
 Controller using an ARM template from GitHub, Windows Virtual Desktop Tenant(s),
