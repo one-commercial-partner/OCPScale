@@ -1,6 +1,75 @@
 # Windows Virtual Desktop on Azure Lab
 
-Hands-on lab
+## Abstract
+
+---------
+
+Understand the Windows Virtual Desktop Infrastructure and how-to setup a working
+WVD environment end-to-end in a typical Enterprise model.
+
+- Deploy an AD Infrastructure in Azure
+
+- Deploy a Windows Virtual Desktop Environment
+
+- Publish Windows Virtual Desktop(s)
+
+- Publish remoteapps
+
+- Configure User Profiles with FSLogix
+
+- Configure Monitoring and Security
+
+- Understand Master Images
+
+## Overview
+
+---------
+
+In this lab, attendees will deploy the [Windows Virtual Desktop
+(WVD)](https://azure.microsoft.com/en-us/services/virtual-desktop/) *solution* .
+Exclusively available as an Azure cloud service, Windows Virtual Desktop allows
+you to choose a flexible end user virtualized application or desktop delivery
+model that best aligns with your enterprise Azure cloud strategy. WVD simplifies
+the IT model to virtualize and deploy modern and legacy desktop app experiences
+with unified management—without needing to host, install, configure and manage
+components such as diagnostics, networking, connection brokering, and gateway.
+WVD brings together Microsoft Office 365 and Azure to provide users with the
+only multi-session Windows 10 experience with exceptional scale and reduced IT
+costs while empowering today’s modern digital workspace.
+
+## Helpful Hints for this Lab
+
+---------------------------
+
+- Take your time, there is a lot of information to digest and go through
+
+- Make sure to keep track of what user accounts you are using and where you
+    are using them
+
+- Regions and locations, make sure to stay consistent as much as possible
+
+- Terminology is important
+
+## Solution architecture
+
+----------------------
+
+At the end of the lab, attendees will have deployed an Azure Active Directory
+Tenant, Azure infrastructure, Active Directory, Active Directory Domain
+Controller using an ARM template from GitHub, Windows Virtual Desktop Tenant(s),
+Host Pool(s) and session host(s).
+
+## Let's Get Started - Technical Intensity Workshop - Windows Virtual Desktop
+
+There are three phases to implementing Windows Virtual Desktops:
+
+1. [Prepare](prepare.md)
+2. [Deploy](deploy.md)
+3. [Optimize](optimize.md)
+
+![image](attachments/wvd-prep-deploy-optimize.png)
+
+## Disclaimer
 
 Information in this document, including URL and other Internet Web site
 references, is subject to change without notice. Unless otherwise noted, the
@@ -41,74 +110,3 @@ https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/Gene
 a](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx)re
 trademarks of the Microsoft group of companies. All other trademarks are
 property of their respective owners.
-
-Windows Virtual Desktops Airlift Trainers Guide
-
-## Abstract
-
----------
-
-Understand the Windows Virtual Desktop Infrastructure and how-to setup a working
-WVD environment end-to-end in a typical Enterprise model.
-
-- Deploy an AD Infrastructure in Azure
-
-- Deploy a Windows Virtual Desktop Environment
-
-- Publish Windows Virtual Desktop(s)
-
-- Publish remoteapps
-
-- Configure User Profiles with FSLogix
-
-- Configure Monitoring and Security
-
-- Understand Master Images
-
-## Overview
-
----------
-
-In this lab, attendees will deploy the [Windows Virtual Desktop
-(WVD)](https://azure.microsoft.com/en-us/services/virtual-desktop/) *solution* .
-Exclusively available as an Azure cloud service, Windows Virtual Desktop allows
-you to choose a flexible end user virtualized application or desktop delivery
-model that best aligns with your enterprise Azure cloud strategy. WVD simplifies
-the IT model to virtualize and deploy modern and legacy desktop app experiences
-with unified management—without needing to host, install, configure and manage
-components such as diagnostics, networking, connection brokering, and gateway.
-WVD brings together Microsoft Office 365 and Azure to provide users with the
-only multi-session Windows 10 experience with exceptional scale and reduced IT
-costs while empowering today’s modern digital workspace.
-
-## Helpful Hints for this Lab
-
----------------------------;
-
-- Take your time, there is a lot of information to digest and go through
-
-- Make sure to keep track of what user accounts you are using and where you
-    are using them
-
-- Regions and locations, make sure to stay consistent as much as possible
-
-- Terminology is important
-
-## Solution architecture
-
-----------------------;
-
-At the end of the lab, attendees will have deployed an Azure Active Directory
-Tenant, Azure infrastructure, Active Directory, Active Directory Domain
-Controller using an ARM template from GitHub, Windows Virtual Desktop Tenant(s),
-Host Pool(s) and session host(s).
-
-## Let's Get Started - Technical Intensity Workshop - Windows Virtual Desktop
-
-There are three phases to implementing Windows Virtual Desktops:
-
-1. [Prepare](prepare.md)
-2. [Deploy](deploy.md)
-3. [Optimize](optimize.md)
-
-![image](attachments/wvd-prep-deploy-optimize.png)
