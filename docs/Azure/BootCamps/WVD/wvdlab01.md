@@ -2,9 +2,6 @@
 
 In this lab, and just like you would in the real world, you will first establish connectivity with your on-premisis data center with your resources in Azure.  Next, you will synchronize an on-premesis domain controller to an IaaS virtual machine running as a domain controller in Azure. 
 
-Next
-
-
 ## Pre-requisites
 
 Please complete the [Hybrid Identity Lab](wvdhomework.md) prior to starting this lab.
