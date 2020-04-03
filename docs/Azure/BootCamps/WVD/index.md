@@ -16,7 +16,7 @@ Here are the lab files for the Windows Virtual Desktop TIW:
 
 [Lab 7: Deploy an Application Pool for Remote App](Lab7-Deploy-an-Application-Pool-for-Remote-App.md)
 
-[Lab 8:Test-WVD-Deployment](Lab8-Test-WVD-Deployment.md)
+[Lab 8: Test-WVD-Deployment](Lab8-Test-WVD-Deployment.md)
 
 [Lab 9: FSLogix-Agent-Installation](Lab9-FSLogix-Agent-Installation.md)
 

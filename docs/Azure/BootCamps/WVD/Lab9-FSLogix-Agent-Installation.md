@@ -1,6 +1,6 @@
+# Lab 9: FSLogix Agent Installation
 
-
-#### Task 1: Prepare the virtual machine to act as a file share for user profiles 
+## Task 1: Prepare the virtual machine to act as a file share for user profiles
 
 The following are [general
 instructions](https://docs.microsoft.com/en-us/azure/virtual-desktop/create-host-pools-user-profile)

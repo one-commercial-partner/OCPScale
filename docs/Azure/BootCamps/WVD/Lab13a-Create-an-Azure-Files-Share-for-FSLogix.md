@@ -1,6 +1,5 @@
-Exercise X: Create an Azure Files Share for FSLogix
------------------------------------------------------
----
+# Lab 13a: Create an Azure Files Share for FSLogix
+
 In this exercise you will be creating an Azure Files share and enabling Active Directory authentication for use in your WVD tenant. Azure Files is a platform service (PaaS) and is the recommended for hosting FSLogix containers for WVD users. At the end of this exercise you will have the following components:
 
 - A new storage account in your Azure subscription.

@@ -1,4 +1,5 @@
-# Exercise 6: Deploy a Pooled Host Pool
+# Lab 6: Deploy a Pooled Host Pool
+
 --------------------------------------------------------
 
 Now that we have provisioned a Windows Virtual Desktop Tenant, we can now deploy
