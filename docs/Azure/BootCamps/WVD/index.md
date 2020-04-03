@@ -35,14 +35,14 @@ costs while empowering today’s modern digital workspace.
 
 ## Helpful Hints for this Lab
 
-- Take your time, there is a lot of information to digest and go through
+- Take your time, there is a lot of information to digest and go through.
 
 - Make sure to keep track of what user accounts you are using and where you
-    are using them
+    are using them.
 
-- Regions and locations, make sure to stay consistent as much as possible
+- Regions and locations, make sure to stay consistent as much as possible.
 
-- Terminology is important
+- Terminology is important.
 
 ## Solution architecture
 

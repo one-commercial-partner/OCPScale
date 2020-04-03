@@ -1,6 +1,6 @@
 # Phase 1: Prepare your WVD environment
 
-In the first phase, **Prepare**, we’ll walk through provisioning your first Windows Virtual Desktop host pool:
+In the first phase, **Prepare**, we’ll walk through provisioning the required components to establish a Windows Virtual Desktop host pool:
 
 - Provision your Azure tenant
 - Set up Azure Active Directory (Azure AD)
