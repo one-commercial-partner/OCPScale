@@ -7,7 +7,7 @@ Before you can create a Windows Virtual Desktop tenant, you must allow Windows V
 
 ---
 
-###Enabling WVD consent to Azure AD 
+### Enabling WVD consent to Azure AD 
 
 
 1. Browse to the URL: [https://rdweb.wvd.microsoft.com.](https://rdweb.wvd.microsoft.com/) Login with the Global Admin Account for your new AAD tenant. 
