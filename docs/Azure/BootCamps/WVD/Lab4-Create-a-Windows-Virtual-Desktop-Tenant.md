@@ -4,7 +4,7 @@ After assigning Tenant Creator role to your account you are now ready to provisi
 
 https://docs.microsoft.com/en-us/azure/virtual-desktop/tenant-setup-azure-active-directory#create-a-windows-virtual-desktop-tenant
 
-## Lab 1. Install PowerShell modules**
+## Lab 1. Install PowerShell modules
 
    This step is required to install the necessary PowerShell module to run any of the WVD or RDS command-lets. Install is only required once. But it dosnt hurt to run these again to ensure you have the latest updates. 
 
@@ -14,8 +14,8 @@ Import-Module -Name Microsoft.RDInfra.RDPowerShell -Force
 ```
 ---
 
-**2. Setting Deployment context**
-   
+## Lab 2 - Setting Deployment context
+
    Capturing some of the commonly used strings into variables will make execution simpler as we execute various commands to provision our tenant. These variables will not change through out this entire deployment.  
 
 ```PowerShell

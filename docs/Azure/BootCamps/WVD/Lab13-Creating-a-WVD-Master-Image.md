@@ -1,4 +1,4 @@
-### Exercise 13: Create a Custom WVD Master Image
+# Exercise 13: Create a Custom WVD Master Image
 --------------------------------------------------------
 
 [Microsoft Reference Article](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/capture-image-resource)

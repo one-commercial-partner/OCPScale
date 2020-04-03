@@ -1,4 +1,4 @@
-### Exercise 5: Deploy a Perssonal Host Pool
+# Exercise 5: Deploy a Perssonal Host Pool
 --------------------------------------------------------
 
 Now that we have provisioned a Windows Virtual Desktop Tenant, we can now deploy
