@@ -1,15 +1,10 @@
-### Exercise 4: Create a Windows Virtual Desktop Tenant 
---------------------------------------------------------
+# Exercise 4: Create a Windows Virtual Desktop Tenant 
 
 After assigning Tenant Creator role to your account you are now ready to provision your Windows Virtual Desktop Tenant. This is currently only achievable via PowerShell. Be sure to have the **Azure AD Tenant ID** and the **Subscription ID** collected in Exercise 1 of this guide ready as you will use them to provision your tenant.
 
 https://docs.microsoft.com/en-us/azure/virtual-desktop/tenant-setup-azure-active-directory#create-a-windows-virtual-desktop-tenant
 
----
-
-
-
-**1. Install PowerShell modules**
+## Lab 1. Install PowerShell modules**
 
    This step is required to install the necessary PowerShell module to run any of the WVD or RDS command-lets. Install is only required once. But it dosnt hurt to run these again to ensure you have the latest updates. 
 
