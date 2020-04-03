@@ -8,11 +8,12 @@ Exercise 1: Gather Tenant & Subscriptions ID
 
 1. Go to the [Azure portal](https://portal.azure.com), search for and select **Azure Active Directory**.
 
- ![image.png](/.attachments/image-cd64054a-0e8d-453f-9af3-d1c05ec228a4.png)
+
+ ![image.png](docs\Azure\BootCamps\WVD\.attachments/image-cd64054a-0e8d-453f-9af3-d1c05ec228a4.png)
 
 1. Find **Properties** then find **Directory ID**, click on the clipboard icon. Paste it in a handy location so you can use it later as the **Azure Active Directory ID** value.
 
-  ![image.png](/.attachments/image-c20d07a8-7ba3-49e8-93b1-3983608be656.png)
+  ![image.png](docs\Azure\BootCamps\WVD\.attachments\image-c20d07a8-7ba3-49e8-93b1-3983608be656.png)
 
 ## Gather your Subscription ID from the Azure portal
 
