@@ -35,9 +35,10 @@ In an effort to simplify tasks in this lab, we will start by disabling [IE Enhan
 
    ![PreReqs-Ex04001.png](attachments/PreReqs-Ex04001-60859cbe-bd9f-4207-9fee-fe148d72f832.png)
   
-
 4. On the Internet Explorer Enhanced Security Configuration window, under **Administrators**, select the **Off** radio button and click **OK**.
+
 ---
+
 ## Task 3: Creating a Domain Admin account
 By default, Azure AD Connect does not synchronize the built-in domain administrator account *ADAdmin\@MyADDomain.com*. This system account has the attribute `isCriticalSystemObject` set to *true*, preventing it from being synchronized. While it is possible to modify this, it is not a best practice to do so.   
 1. In Server Manager, click **Tools** in the upper right corner and select **Active Directory Users and Computers**.
