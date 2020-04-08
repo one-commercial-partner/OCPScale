@@ -81,7 +81,7 @@ time.
 13.  You can watch the **progress** of the deployment this will take about 15 min
     or so, so it might be a good time to stretch your legs and take a break.
 
-   !image](attachments/763dbbfd0796fd7afecf51de9562d959.png)
+   ![image](attachments/763dbbfd0796fd7afecf51de9562d959.png)
 
 You should eventually receive a message **“Your Deployment is complete”.** If
 you receive a failure message refer to the step it failed at and refer to the
