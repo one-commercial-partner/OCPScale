@@ -28,7 +28,7 @@ guide.
 2. While in the **marketplace** search for **Windows Virtual Desktop** and
     Select **Provision a host pool**
 
-![iamge](attachments/8be16b1ed7e18681ce7554cf8c13bf57.png)
+![image](attachments/8be16b1ed7e18681ce7554cf8c13bf57.png)
 
 3. Select the **Create** button to provision this service**.**
 
