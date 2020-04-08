@@ -32,7 +32,7 @@ This ARM Template will provision the following resources:
 3. Under Quick Start, click **Deploy to Azure**. This will open a new browser tab to the Azure Portal 
 for custom deployments. 
 
-   ![PreReqs-Ex03000.png](/.attachments/PreReqs-Ex03000-c3ed867f-3d56-4759-96b6-7636aa557534.png =70%x)
+   ![PreReqs-Ex03000.png](/attachments/PreReqs-Ex03000-c3ed867f-3d56-4759-96b6-7636aa557534.png =70%x)
 
 4. If prompted, make sure to sign in with an account that is an owner for the Azure subscription.
 
