@@ -5,12 +5,13 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 > *Note:* RDP access to a domain controller using a public IP address is not a best practice and is 
 > only done to simplify this lab. Better security practices such as removing the PIP,
-> enabling just-in-time access and/or leveraging a bastion host should be applied enhance security. 
->
+> enabling just-in-time access and/or leveraging a bastion host should be applied enhance security.
+> 
 > **This lab should not be deployed into a production environment.**
-
 ---
+
 ## Task 1: Connecting to the domain controller 
+
 1. Sign in to the [Azure Portal](https://portal.azure.com/).
 
 2. Type **Resource groups** in the search field and select it from the list.
