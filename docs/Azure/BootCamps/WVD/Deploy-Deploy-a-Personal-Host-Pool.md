@@ -21,18 +21,18 @@ guide.
 
 ---
 
-1.  Browse to <https://portal.azure.com> and search for **Marketplace**.
+1.Browse to <https://portal.azure.com> and search for **Marketplace**.
 
-    ![](/.attachments/4e91cf3c29be44f486c9b7428235071c.png)
+    ![](attachments/4e91cf3c29be44f486c9b7428235071c.png)
 
-2.  While in the **marketplace** search for **Windows Virtual Desktop** and
+2. While in the **marketplace** search for **Windows Virtual Desktop** and
     Select **Provision a host pool**
 
-     ![](/.attachments/8be16b1ed7e18681ce7554cf8c13bf57.png)
+![iamge](attachments/8be16b1ed7e18681ce7554cf8c13bf57.png)
 
-3.  Select the **Create** button to provision this service**.**
+3. Select the **Create** button to provision this service**.**
 
-     ![](/.attachments/113f56372702b43ddc070d81b8ec36a9.png)
+ ![image](attachments/113f56372702b43ddc070d81b8ec36a9.png)
 
 ---
 
@@ -47,25 +47,25 @@ ensure the Tenant Name and Host Pool Name entered are Identical to the existing
 deployment. But in this case, we will be deploying a Host Pool for the first
 time.
 
-4.  Fill in the Marketplace Deployment follow the notes below for guidance.
+4. Fill in the Marketplace Deployment follow the notes below for guidance.
 
-    ![](/.attachments/ab9a06f0db4f31ab04db1994fa859055.png)
+    ![image](attachments/ab9a06f0db4f31ab04db1994fa859055.png)
 
-5.  Select **Next: Configure virtual machines** to continue.
+5. Select **Next: Configure virtual machines** to continue.
 
-    ![](/.attachments/f9f8a87c0a979a685551e11c3bfa2757.png)
+    ![image](attachments/f9f8a87c0a979a685551e11c3bfa2757.png)
 
-6.  Select **Next: Virtual machine settings**
+6. Select **Next: Virtual machine settings**
 
-7.  Fill in the Marketplace Deployment follow the notes below for guidance.
+7. Fill in the Marketplace Deployment follow the notes below for guidance.
 
-    ![](/.attachments/0c05f3f3105f383538f607fee26dbbb7.png)
+    ![](attachments/0c05f3f3105f383538f607fee26dbbb7.png)
 
-8.  Select **Next: Windows Virtual Desktop information**
+8. Select **Next: Windows Virtual Desktop information**
 
-9.  Fill in the Marketplace Deployment follow the notes below for guidance.
+9. Fill in the Marketplace Deployment follow the notes below for guidance.
 
-    ![](/.attachments/b149dc6c48e4cdbf004a7bad76c03664.png)
+    ![image](attachments/b149dc6c48e4cdbf004a7bad76c03664.png)
 
 10.  Select **Next: Review + Create**
 
@@ -74,20 +74,20 @@ time.
 11.  Wait for a **Validation Passed,** if you get a fail examine the error and
     resolve the failure.
 
-   ![image.png](/.attachments/f5400ea97f0f38000264b8498426774f.png)
+   ![image.png](attachments/f5400ea97f0f38000264b8498426774f.png)
 
 12.  Finally Select **Create.** To start your Host Pool Deployment.
 
 13.  You can watch the **progress** of the deployment this will take about 15 min
     or so, so it might be a good time to stretch your legs and take a break.
 
-   ![](/.attachments/763dbbfd0796fd7afecf51de9562d959.png)
+   !image](attachments/763dbbfd0796fd7afecf51de9562d959.png)
 
 You should eventually receive a message **“Your Deployment is complete”.** If
 you receive a failure message refer to the step it failed at and refer to the
 troubleshooting section on this guide.
 
-   ![](/.attachments/d186f32593dbd7d350ec18940f547f8f.png)
+   ![image](attachments/d186f32593dbd7d350ec18940f547f8f.png)
 
 ---
 
@@ -98,13 +98,13 @@ You have successfully deployed a Personal Host Pool by default the Assignment Ty
 Get-RdsHostPool -TenantName "Tenant Name" -HostPoolName "Host Pool Name"
 ```
 
-![image.png](/.attachments/image-a3673792-115e-462c-ac8c-74dea52c6b01.png)
+![image.png](attachments/image-a3673792-115e-462c-ac8c-74dea52c6b01.png)
 
 ```PowerShell
 Set-RdsHostPool -TenantName "Tenant Name" -HostPoolName "Host Pool Name" -AssignmentType Direct
 ```
 
-![image.png](/.attachments/image-906735d7-7b0f-4148-95cd-0494aaecb90a.png)
+![image.png](attachments/image-906735d7-7b0f-4148-95cd-0494aaecb90a.png)
 
 
 ---
