@@ -1,4 +1,4 @@
-# Lab 5: Deploy a Perssonal Host Pool
+# Lab 5: Deploy a Personal Host Pool
 
 --------------------------------------------------------
 
