@@ -23,7 +23,7 @@ $brokerurl = "https://rdbroker.wvd.microsoft.com"
 $aadTenantId = "The Azure AD Tenant ID Captured During Exercise 1"
 $azureSubscriptionId = "The Subscription ID Captured During Exercise 1"
 ```
-![image.png](/.attachments/image-a7620df3-808b-45ab-abd5-87ab68930475.png)
+![image.png](attachments/image-a7620df3-808b-45ab-abd5-87ab68930475.png)
 
 ---
 
@@ -36,7 +36,7 @@ $azureSubscriptionId = "The Subscription ID Captured During Exercise 1"
 Add-RdsAccount -DeploymentUrl $brokerurl
 ```
 
-![image.png](/.attachments/image-dd374f42-f7c2-44f9-be9c-da4ad92433a5.png)
+![image.png](attachments/image-dd374f42-f7c2-44f9-be9c-da4ad92433a5.png)
 
 ---
 
@@ -48,7 +48,7 @@ Add-RdsAccount -DeploymentUrl $brokerurl
 New-RdsTenant -Name "yourWVDTenantNamehere" -AadTenantId $aadTenantId -AzureSubscriptionId $azureSubscriptionId
 ```
 
-![image.png](/.attachments/image-b4e9ea52-2783-4024-8915-d927e1e5814a.png)
+![image.png](attachments/image-b4e9ea52-2783-4024-8915-d927e1e5814a.png)
 
 ---
 
@@ -60,5 +60,5 @@ Adding resources to your tenant is a critical step, at this point we will define
 New-RdsRoleAssignment -SignInName "myaccount@MyAADdomain.onmicrosoft.com" -RoleDefinitionName "RDS Owner" -TenantName "TenantNameFromAbove" -AadTenantId $aadTenantId
 ```
 
-![image.png](/.attachments/image-7dc4466e-9279-44f6-b25f-24f1e5ebb646.png)
+![image.png](attachments/image-7dc4466e-9279-44f6-b25f-24f1e5ebb646.png)
 
