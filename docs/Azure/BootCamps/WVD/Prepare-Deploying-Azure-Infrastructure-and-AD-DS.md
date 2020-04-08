@@ -17,6 +17,7 @@ This ARM Template will provision the following resources:
    - Test users created in the domain.
    - Azure AD Connect is installed and ready for configuration.
    - Public IP address assigned for remote administration via RDP.
+
 ---
 ### Task 1: Deploying the ARM template 
 
