@@ -2,7 +2,7 @@
 
 ## Abstract
 
-At the conclusion of this lab you will understand the Windows Virtual Desktop Infrastructure and how-to setup a working
+At the conclusion of this lab, you will understand the Windows Virtual Desktop Infrastructure and how-to setup a working
 WVD environment end-to-end in a typical Enterprise model.  Topics that we will cover include:
 
 - Deploy an AD Infrastructure in Azure
