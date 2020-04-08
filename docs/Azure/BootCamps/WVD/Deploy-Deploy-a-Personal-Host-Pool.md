@@ -23,7 +23,7 @@ guide.
 
 1.Browse to <https://portal.azure.com> and search for **Marketplace**.
 
-    ![](attachments/4e91cf3c29be44f486c9b7428235071c.png)
+![image](attachments/4e91cf3c29be44f486c9b7428235071c.png)
 
 2. While in the **marketplace** search for **Windows Virtual Desktop** and
     Select **Provision a host pool**
