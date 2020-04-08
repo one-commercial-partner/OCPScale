@@ -8,6 +8,7 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 > enabling just-in-time access and/or leveraging a bastion host should be applied enhance security. 
 >
 > **This lab should not be deployed into a production environment.**
+
 ---
 ## Task 1: Connecting to the domain controller 
 1. Sign in to the [Azure Portal](https://portal.azure.com/).
