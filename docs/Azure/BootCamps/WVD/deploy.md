@@ -6,8 +6,8 @@ In the second phase, Deploy, we’ll create and customize your first host pool:
 - Follow the six-step process and options to provision a Windows Virtual Desktop host pool
 - Make apps available to users with app groups
 
-[Deploy a Personal Host Pool](Lab5-Deploy-a-Personal-Host-Pool.md)
+Lab 9: [Deploy a Personal Host Pool](Deploy-a-Personal-Host-Pool.md)
 
-[Deploy a Pooled Host Pool](Lab6-Deploy-a-Pooled-Host-Pool.md)
+Lab 10: [Deploy a Pooled Host Pool](Deploy-a-Pooled-Host-Pool.md)
 
-[Deploy an Application Pool for Remote App](Lab7-Deploy-an-Application-Pool-for-Remote-App.md)
+Lab 11: [Deploy an Application Pool for Remote App](Deploy-an-Application-Pool-for-Remote-App.md)
