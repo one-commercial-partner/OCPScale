@@ -10,16 +10,22 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 > **This lab should not be deployed into a production environment.**
 ---
 ## Task 1: Connecting to the domain controller 
-1. Sign in to the [Azure Portal](https://portal.azure.com/).                                                                                    
-2. Type **Resource groups** in the search field and select it from the list. 
-3. On the Resource groups blade, click on the **Infra** resource group. 
+1. Sign in to the [Azure Portal](https://portal.azure.com/).
+
+2. Type **Resource groups** in the search field and select it from the list.
+
+3. On the Resource groups blade, click on the **Infra** resource group.
+
 4. On the Infra Resource group blade, review the list of available resources. Locate the resource named **AdPubIP1** and click on it. Note that the resource type should be **Public IP address**.
+
 5. On the Overview page for AdPubIP1, locate the **IP address** field. Copy the IP address to a safe location.
 
 ![PreReqs-Ex04000.png](attachments/PreReqs-Ex04000-4449308a-6098-4445-8bb7-a20c54dae18e.png)
 
 6. On your local machine, open the **RUN** dialog window, type **MSTSC** and hit enter.
+
 7. In the **Remote Desktop Connection** window, paste in the public IP address from the previous step. Click **Connect**.
+
 8. When prompted, sign in with the AD domain UPN credentials. For example, if you used the ARM template from [Exercise 3](/Windows-Virtual-Desktop-on-Azure-Lab/Prerequisites/Exercise-3:-Deploying-Azure-Infrastructure-and-AD-DS), the credentials will be something along the lines of: **adadmin@MyADDomain.com** with the password: **WVD\@zureL\@b2019!**. If prompted, click **Yes** to accept the RDP certification warning.
 
    > **Note:** This is the Active Directory account from the ARM template, not the
@@ -33,23 +39,30 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 In an effort to simplify tasks in this lab, we will start by disabling [IE Enhanced Security](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-ie-esc).
 1. Once connected to the domain controller, open Server Manager if it does not start automatically.
+
 2. In Server Manager, select **Local Server** on the left.
+
 3. Locate the **IE Enhanced Security Configuration** option and click **On**. 
 
    ![PreReqs-Ex04001.png](attachments/PreReqs-Ex04001-60859cbe-bd9f-4207-9fee-fe148d72f832.png)
   
 4. On the Internet Explorer Enhanced Security Configuration window, under **Administrators**, select the **Off** radio button and click **OK**.
+
 ---
 ## Task 3: Creating a Domain Admin account
-By default, Azure AD Connect does not synchronize the built-in domain administrator account *ADAdmin\@MyADDomain.com*. This system account has the attribute `isCriticalSystemObject` set to *true*, preventing it from being synchronized. While it is possible to modify this, it is not a best practice to do so.   
+By default, Azure AD Connect does not synchronize the built-in domain administrator account *ADAdmin\@MyADDomain.com*. This system account has the attribute `isCriticalSystemObject` set to *true*, preventing it from being synchronized. While it is possible to modify this, it is not a best practice to do so.
+
 1. In Server Manager, click **Tools** in the upper right corner and select **Active Directory Users and Computers**.
+
 2. In Active Directory Users and Computers, right-click the **Users** organization unit and select **New > User** from the menu.
+
 3. Complete the New User wizard.
 
    > *Tip:* This account will be important in future tasks. Make a note of the username and password 
    > you create. When setting the password, uncheck the box **User must change password at next logon**. 
 
-4. In Active Directory Users and Computers, right-click on the new user account object and select **Add to a group**. 
+4. In Active Directory Users and Computers, right-click on the new user account object and select **Add to a group**.
+
 5. On the Select Groups dialog window, type **Domain Admins** and click **OK**.
 
    > **Note:** This account will be used during the host pool creation process for joining the hosts 
@@ -61,6 +74,7 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
    > - Create computer objects
    > - Delete computer object
  ---
+ 
 ## Task 4: Configuring Azure AD Connect                                                                                                                                                                                                                                         
 1. On the desktop of the domain controller, locate the icon for **Azure AD Connect** and double-click on it.                                                                                                                                                                      
 2. Click **Use express settings**. The required components will install.
