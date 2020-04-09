@@ -10,7 +10,7 @@ As you complete each exercise you will earn points. The more points you earn the
 
 1. Use the links below to register for the challenges you want to participate in. 
 1. You will get an email on the Challenge Start Date with instructions on how to log into the challenge. 
-1. Complete challenge exercises **during the month at your pace** to earn points and move up the leaderboard. 
+1. Complete [challenge exercises](https://aka.ms/microsoftlearn) **during the month at your pace** to earn points and move up the leaderboard. 
 
 > NOTE: The system we are using for sign up requires us to specify a date and time for the event, however each of our challenges run the entire month. You have the entire month to complete as many exercises as you want and earn as much XP as you can. There will be NO physical or virtual meetings. 
 
