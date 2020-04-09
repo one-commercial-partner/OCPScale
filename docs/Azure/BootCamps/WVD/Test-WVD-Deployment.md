@@ -70,7 +70,7 @@ Run
 
 #### NOTE: Other Common Settings 
 
-**WVD Tenant Friendly Name:** You can give you WVD Tenant a friendly name that
+**WVD Tenant Friendly Name:** You can give your WVD Tenant a friendly name that
 will look less technical
 
 Set-RdsTenant -Name \<WVD Tenant\> -FriendlyName "Contoso WVD"
