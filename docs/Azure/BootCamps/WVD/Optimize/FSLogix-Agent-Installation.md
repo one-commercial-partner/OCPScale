@@ -47,7 +47,7 @@ hosts to install the agent.
     however you should verify the IP is correct by locating it in the Azure
     portal.
 
-2.  Login with the domain administrator credentials **contosowvd\\adadmin** and
+2.  Login with the domain administrator credentials **MyADDomain\\adadmin** and
     password of **WVD\@zureL\@b2019!**
 
 3.  In the previous labs the end user Bob Jones was able to login to the session
@@ -102,7 +102,7 @@ Set-ItemProperty -Path HKLM:\Software\FSLogix\Profiles -Name "LockedRetryInterva
 >   ](https://docs.microsoft.com/en-us/fslogix/configure-profile-container-tutorial)
 
 1.  Restart the session host at this time and login again to create the user
-    profile. Login as the user: 1. User Name: *bob.jones\@contosowvd.com*
+    profile. Login as the user: 1. User Name: *bob.jones@MyADDomain.com*
 
 >   2. Password: **WVD\@zureL\@b2019!**
 
@@ -112,17 +112,17 @@ Set-ItemProperty -Path HKLM:\Software\FSLogix\Profiles -Name "LockedRetryInterva
 2.  Then click on the traffic light that is in the tray. The light should be
     green.
 
-![image.png](/.attachments/image-bc21ad1d-bfbd-484e-804d-ee5652135dfe.png)
+![image.png](../attachments/image-bc21ad1d-bfbd-484e-804d-ee5652135dfe.png)
 
 Note: Sometimes the Profile status may not show green right away.
 
-![image.png](/.attachments/image-ce4397c0-8c9a-4b23-88bd-2392d8194a1e.png)
+![image.png](../attachments/image-ce4397c0-8c9a-4b23-88bd-2392d8194a1e.png)
 
 1.  Click on “**Advanced view**”
 
 2.  Go to “**Operational**” and look if you have no issue in the logs.
 
-![image.png](/.attachments/image-fae2eb94-2c30-437f-8a3a-05ef6a659ad2.png)
+![image.png](../attachments/image-fae2eb94-2c30-437f-8a3a-05ef6a659ad2.png)
 
 1.  The agent needs to be installed on **each WVD session host**. Repeat steps 1
 
@@ -153,7 +153,7 @@ the session host to verify that the profile container is mounted.
     2.  Bjones is the VHD attached profile mounted via the filter driver for
         FSLogix
 
-![image.png](/.attachments/image-1bafca9f-992d-4f97-a5b7-5c06e8d9ee97.png)
+![image.png](../attachments/image-1bafca9f-992d-4f97-a5b7-5c06e8d9ee97.png)
 
 1.  The VHDX mounted profile container can be seen also by going to th[e
     \\\\servername\\Sharename](file://servername/Sharename) created earlier.
