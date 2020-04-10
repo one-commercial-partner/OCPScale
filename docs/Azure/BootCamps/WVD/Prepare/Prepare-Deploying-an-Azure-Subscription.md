@@ -15,12 +15,12 @@ you to create new resources in Azure and assign access.
 1. Navigate to [My Visual Studio Subscriptions](https://my.visualstudio.com/Subscriptions).
 2. Under **Alternate account**, add the global admin account from your M365 developer tenant, as shown below.
 
-   ![](/.attachments/4df95f640d0e4743b4d263603780ca7a.png)
+   ![image](/attachments/4df95f640d0e4743b4d263603780ca7a.png)
 
 1. Navigate to the [My Visual Studio Benefits](https://my.visualstudio.com/Benefits) page. 
 2. Locate the Azure tile in the Tools category and click **Activate**.
 
-   ![](/.attachments/d3c74e90f1f0e0b2ea128ed046b0cfbc.png)
+   ![image](/attachments/d3c74e90f1f0e0b2ea128ed046b0cfbc.png)
 
 3. On the Azure $150 Monthly Credit window, **copy the URL** provided in Step 2.
 
@@ -30,7 +30,7 @@ you to create new resources in Azure and assign access.
 
 5. Sign in using the global admin account from your M365 developer tenant.
 
-    ![](/.attachments/5f8f766067c2d28f57728fc5e550a557.png)
+    ![image](./attachments/5f8f766067c2d28f57728fc5e550a557.png)
 
 6.  Once you have authenticated, accept the prompt to associate the subscription.
 
