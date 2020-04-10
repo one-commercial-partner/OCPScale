@@ -22,7 +22,7 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 5. On the Overview page for AdPubIP1, locate the **IP address** field. Copy the IP address to a safe location.
 
-![PreReqs-Ex04000.png](attachments/PreReqs-Ex04000-4449308a-6098-4445-8bb7-a20c54dae18e.png)
+![PreReqs-Ex04000.png](../attachments/PreReqs-Ex04000-4449308a-6098-4445-8bb7-a20c54dae18e.png)
 
 6. On your local machine, open the **RUN** dialog window, type **MSTSC** and hit enter.
 
@@ -46,7 +46,7 @@ In an effort to simplify tasks in this lab, we will start by disabling [IE Enhan
 
 3. Locate the **IE Enhanced Security Configuration** option and click **On**. 
 
-   ![PreReqs-Ex04001.png](attachments/PreReqs-Ex04001-60859cbe-bd9f-4207-9fee-fe148d72f832.png)
+   ![PreReqs-Ex04001.png](../attachments/PreReqs-Ex04001-60859cbe-bd9f-4207-9fee-fe148d72f832.png)
   
 4. On the Internet Explorer Enhanced Security Configuration window, under **Administrators**, select the **Off** radio button and click **OK**.
 
@@ -82,14 +82,14 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 2. Click **Use express settings**. The required components will install.
 3. On the Connect to Azure AD page, enter in the Azure AD Global Admin credentials. For example: **azadmin@MyAADdomain.onmicrosoft.com** and the correct password. Click **Next**.
 
-   ![PreReqs-Ex04002.png](attachments/PreReqs-Ex04002-6e2531df-f353-4fb7-968d-35ecbc9c3dd2.png)
+   ![PreReqs-Ex04002.png](../attachments/PreReqs-Ex04002-6e2531df-f353-4fb7-968d-35ecbc9c3dd2.png)
 
 4. On the Connect to AD DS page, enter in the Active Directory credentials for a Domain Admin account. For example, if you used the ARM template deployment for the domain controller, the credentials will be something along the lines of: **MyADDomain.com\ADadmin** with the password: **WVD\@zureL\@b2019!**. Click **Next**
 
    > **Note:** If you copy and paste the password, please ensure that there are no trailing
    > spaces, as that will cause the verification to fail.
 
-   ![PreReqs-Ex04003.png](attachments/PreReqs-Ex04003-93508a60-d85c-471e-aa49-ae8b99667c67.png)
+   ![PreReqs-Ex04003.png](../attachments/PreReqs-Ex04003-93508a60-d85c-471e-aa49-ae8b99667c67.png)
 
 5. Click **Install** to start the configuration and synchronization.   
 6. After a few minutes the Azure AD Connect installation will complete. Click **Exit**.
@@ -100,7 +100,7 @@ be synchronized to Azure AD.
 10. On the Azure Active Directory blade, under **Manage**, select **Users**.
 11. Review the list of user account objects and confirm the test accounts have synchronized, as shown below. 
 
-    ![PreReqs-Ex04004.png](attachments/PreReqs-Ex04004-c7bd59b0-8079-4b82-a90e-9571723695b2.png)
+    ![PreReqs-Ex04004.png](../attachments/PreReqs-Ex04004-c7bd59b0-8079-4b82-a90e-9571723695b2.png)
 
     > **Note:** It can take up to 15 minutes for the Active Directory objects to be synchronized to the 
     > Azure AD tenant.
