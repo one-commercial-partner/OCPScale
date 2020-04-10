@@ -10,11 +10,11 @@ There are many ways to create WVD master images. This article will cover a mainl
 In your Azure Portal, go to create a resource, and in the search field type
 “Microsoft Windows 10”
 
-![image.png](/.attachments/image-win10ms-mp.png)
+![image.png](../attachments/image-win10ms-mp.png)
 
 Once you pick which version you want, build the VM.
 
-![image.png](/.attachments/image-create-a-vm-image.png)
+![image.png](../attachments/image-create-a-vm-image.png)
 
 This guide does not go into the detail of creating an Azure VM; however, please make sure you open the public inbound ports for RDP when you create it.
 
@@ -26,11 +26,11 @@ Once the VM deployment is complete, login to the VM over RDP with the credential
 
 Despite the Azure support teams best efforts, the Marketplace images are always completely up to date. The best and most secure practice is to keep you master image as up to date as possible. Perform the manual steps to run Windows Update from the Settings app until no more updates are required. Reboot as necessary.
 
-![image.png](/.attachments/image-windows-update.png)
+![image.png](../attachments/image-windows-update.png)
 
 The Windows Update Settings dialog should look like this at the end:
 
-![image.png](/.attachments/image-up-to-date.png)
+![image.png](../attachments/image-up-to-date.png)
 
 #### Task 3: Run the Automated Prepare WVD Image Script 
 
@@ -64,11 +64,11 @@ The script and tools are maintained in the WVD Lab Sources Repo under the WVDIma
 
 3. Extract the files to "c:\BuildArtifacts".
 
-   ![image.png](/.attachments/image-extract-buildartifacts.png)
+   ![image.png](../attachments/image-extract-buildartifacts.png)
 
 4. Open 'c:\buildartifacts\manual\Prepare-WVDImage.ps1' in the Powershell Integrated Scripting Environment (Powershell ISE) and update the parameters as necessary based on the documentation within the script. Once you are happy, with the script configuration, save it.
 
-   ![image.png](/.attachments/image-edit-script.png)
+   ![image.png](../attachments/image-edit-script.png)
 
 5. Open Powershell administratively.
 
@@ -76,27 +76,27 @@ The script and tools are maintained in the WVD Lab Sources Repo under the WVDIma
 
 7. Run **Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process** and select **[Y] Yes**.
 
-   ![image.png](/.attachments/image-powershell-setexecutionpolicy.png)
+   ![image.png](../attachments/image-powershell-setexecutionpolicy.png)
 
 8. Execute the script by typing **.\prepare-wvdimage.ps1** and hitting <Enter>. This script will produce output to the console and the log located in "c:\windows\logs\imageprep". It may take some time to run especially if you selected to install Office 365 as it will download those files dynamically from the Microsoft Content Distribution Network (CDN).
 
    If you selected to install office, you will see a setup.exe popup for sometime. Do not close this.
 
-   ![image.png](/.attachments/image-running-script1.png)
+   ![image.png](../attachments/image-running-script1.png)
 
    If you selected to install OneDrive, you will see the onedrive popup.
 
-   ![image.png](/.attachments/image-script-onedriveinstall.png)
+   ![image.png](../attachments/image-script-onedriveinstall.png)
 
    If you selected to cleanupimage, you will see the Disk Cleanup wizard running and it may stay on the "Windows Update Cleanup" task for a few minutes while it cleans out older files in the Windows Side by Side store.
 
-   ![image.png](/.attachments/image-cleanmgr-running.png)
+   ![image.png](../attachments/image-cleanmgr-running.png)
 
    You may notice after the Disk Cleanup Wizard disappears from the screen that it appears that the powershell window is frozen. It does take a few minutes for the cleanmgr.exe process to close. You can select the powershell window and continue to hit the up arrow on your keyboard until you are presented with an active prompt. At this point, you can delete the c:\buildartifacts directory and the files on the desktop. Empty the recycle bin afterwards.
 
    If you are interested in the LGPO backup and settings, navigate to C:\Windows\Logs\ImagePrep\LGPO.
 
-   ![image.png](/.attachments/image-lgpodirectory.png)
+   ![image.png](../attachments/image-lgpodirectory.png)
 
 9. Reboot the master image VM.
 
@@ -110,7 +110,7 @@ The script and tools are maintained in the WVD Lab Sources Repo under the WVDIma
 
 3. Run **sysprep.exe /oobe /generalize /shutdown**.
 
-   ![image.png](/.attachments/image-sysprep.png)
+   ![image.png](../attachments/image-sysprep.png)
 
    The system will automatically shutdown and disconnect your RDP session.
 
@@ -118,19 +118,19 @@ The script and tools are maintained in the WVD Lab Sources Repo under the WVDIma
 
 1. Go into the Azure Portal and find the VM that you ran sysprep on, The **Status** should be listed as "Stopped". Select **Stop** to move it to a stopped state (deallocated)
 
-   ![image.png](/.attachments/image-stop-vm.png)
+   ![image.png](../attachments/image-stop-vm.png)
 
 2. Once this is done, on the top of the same screen, click capture.
 
-   ![image.png](/.attachments/image-capture-image.png)
+   ![image.png](../attachments/image-capture-image.png)
 
 3. Once you click capture, fill in all the associated fields.
 
-   ![image.png](/.attachments/image-createimage-dialog.png)
+   ![image.png](../attachments/image-createimage-dialog.png)
 
    Once completed you should now see the image,
 
-   ![image.png](/.attachments/image-imageproperties.png)
+   ![image.png](../attachments/image-imageproperties.png)
 
 4. Record the image name and resource group in order to use it as a custom image in the next task.
 
@@ -138,6 +138,6 @@ The script and tools are maintained in the WVD Lab Sources Repo under the WVDIma
 
 To start provisioning a host pool with the custom image, follow the instructions in [Exercise 6](Exercise-6%3A-Deploy-a-Pooled-Host-Pool.md) except for the Virtual Machine Settings screen. Instead of selecting a 'Gallery' Image, you will select a 'Managed Image' as in the screenshot below.
 
-![image.png](/.attachments/image-provisionhostpool-2.png)
+![image.png](../attachments/image-provisionhostpool-2.png)
 
 Complete the remainder of the instructions in [Exercise 6](Exercise-6%3A-Deploy-a-Pooled-Host-Pool.md) to provision a new host pool with the managed image.
