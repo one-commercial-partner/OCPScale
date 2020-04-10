@@ -1,4 +1,4 @@
-# Windows Virtual Desktop on Azure Lab
+# Technical Intensity Workshop - Windows Virtual Desktop
 
 ## Abstract
 
@@ -44,14 +44,7 @@ costs while empowering today’s modern digital workspace.
 
 - Terminology is important.
 
-## Solution architecture
-
-At the end of the lab, attendees will have deployed an Azure Active Directory
-Tenant, Azure infrastructure, Active Directory, Active Directory Domain
-Controller using an ARM template from GitHub, Windows Virtual Desktop Tenant(s),
-Host Pool(s) and session host(s).
-
-## Let's Get Started - Technical Intensity Workshop - Windows Virtual Desktop
+## Let's Get Started!
 
 There are three phases to implementing Windows Virtual Desktops:
 
