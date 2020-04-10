@@ -19,7 +19,7 @@ Click the Windows 10 Desktop Icon. Click Allow for Local Resources
 
 Authenticate using the login information
 
-User Name: *bob.jones@contosowvd.com* Password: **WVD\@zureL\@b2019!**
+User Name: *bob.jones@MyADDomain.com* Password: **WVD\@zureL\@b2019!**
 
 If you are successful, the Remote Desktop Client Connection opened in the
 previous task should close, and you should be able to view the same desktop via
@@ -121,7 +121,7 @@ click **Subscribe**.
 
 ![image.png](../attachments/image-a6b1509e-5ffd-4b9f-96de-b1e355f76f03.png)
 
-User Name: *bob.jones\@contosowvd.com* or any one of the users created in the AD
+User Name: *bob.jones@MyADDomain.com* or any one of the users created in the AD
 deploy process Password: **WVD\@zureL\@b2019!**
 
 
