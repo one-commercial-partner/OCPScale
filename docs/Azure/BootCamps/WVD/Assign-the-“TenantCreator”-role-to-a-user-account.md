@@ -31,7 +31,7 @@ https://docs.microsoft.com/en-us/azure/virtual-desktop/tenant-setup-azure-active
     whom you want to grant permissions to perform the Windows Virtual Desktop
     tenant creation. You should use the account created in the Azure AD section
     and the one you applied Global Admin rights to and should mimic this format,
-    myaccountname\@MyAADdomain.onmicrosoft.com
+    myaccountname@MyAADdomain.onmicrosoft.com
 
     ![image.png](attachments/image-2767bc82-4da0-4e0a-b827-38785ccbb761.png)
 
