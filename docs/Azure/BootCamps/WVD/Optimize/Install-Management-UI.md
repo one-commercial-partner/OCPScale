@@ -1,4 +1,4 @@
-# Lab 11: Install the Management UI
+# Lab 15: Install the Management UI
 
 The following lab walks through the deployment of a basic Management UI that has been available via Github.
 
