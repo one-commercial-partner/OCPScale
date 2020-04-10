@@ -13,7 +13,7 @@ Lab 13: [FSLogix Agent Installation](Optimize-Lab13-FSLogix-Agent-Installation.m
 
 Lab 14: [WVD Monitoring](Optimize-Lab14-WVD-Monitoring.md)
 
-Lab 15: [Install Management UI](Optimize-Lab14-Install-Management-UI.md)
+Lab 15: [Install Management UI](Optimize-Lab15-Install-Management-UI.md)
 
 Lab 16: [WVD Scaling](Optimize-Lab16-WVD-Scaling.md)
 
