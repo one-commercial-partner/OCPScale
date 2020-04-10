@@ -1,4 +1,4 @@
-Lav 2: Deploying an Azure Subscription 
+Lab 2: Deploying an Azure Subscription 
 --------------------------------------------------
 ---
 In this exercise you will associate your My Visual Studio Azure subscription benefit with the M365 developer tenant that you activated in [Exercise 1](/Windows-Virtual-Desktop-on-Azure-Lab/Prerequisites/Exercise-1:-Azure-AD-Tenant) of the prerequisites. The Azure subscription benefit provides you with $150 in Azure credits every month. These credits will be used to host your WVD environment.
