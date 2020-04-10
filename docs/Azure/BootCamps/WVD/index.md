@@ -48,9 +48,15 @@ costs while empowering today’s modern digital workspace.
 
 There are three phases to implementing Windows Virtual Desktops:
 
+<<<<<<< HEAD
 1. [Prepare](OCPScale/Azure/BootCamps/WVD/prepare/prepare.md)
 2. [Deploy](OCPScale/Azure/BootCamps/WVD/deploy/deploy.md)
 3. [Optimize](OCPScale/Azure/BootCamps/WVD/optimize/optimize.md)
+=======
+1. [Prepare](Prepare/prepare.md)
+2. [Deploy](Deploy/deploy.md)
+3. [Optimize](Optimize/optimize.md)
+>>>>>>> 27b28b7ae4886b6a61b813e1d524ce924501e6ba
 
 ![image](attachments/wvd-prep-deploy-optimize.png)
 
