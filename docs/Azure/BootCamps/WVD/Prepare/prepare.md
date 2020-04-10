@@ -23,3 +23,5 @@ Lab 6: [Grant consent for WVD service](Prepare-Lab06-Grant-consent-for-WVD-servi
 Lab 7: [Assign the“TenantCreator” role to a useraccount](Prepare-Lab07-Assign-the-“TenantCreator”-role-to-a-user-account.md)
 
 Lab 8: [Create a Windows Virtual Desktop Tenant](Prepare-Lab08-Create-a-Windows-Virtual-Desktop-Tenant.md)
+
+Back to [Main Page](/index.md)
