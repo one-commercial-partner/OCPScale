@@ -1,4 +1,4 @@
-Exercise 4: Configuring Azure AD Connect with AD DS
+Lab 4: Configuring Azure AD Connect with AD DS
 ---------------------------------------------------
 ---
 In this exercise you will be configuring [Azure AD Connect](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-azure-ad-connect). With Windows Virtual Desktop, all session host VMs within the WVD tenant environment are required to be domain joined to AD DS, and the domain must be synchronized with Azure AD. To manage the synchronization of objects, you will configure Azure AD Connect on the domain controller deployed in Azure.
