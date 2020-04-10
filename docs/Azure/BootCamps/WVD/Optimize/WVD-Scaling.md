@@ -1,4 +1,4 @@
-# Lab 12: WVD Scaling
+# Lab 16: WVD Scaling
 
 To reduce overall operational costs, scaling VM's down during idle periods is critical. Being able to automatically scale up when utilization is high is also important for our customers.
 The first release of Windows Virtual Desktop did not include any native scaling capabilities. In February 2020 a scaling script based on Azure Automation was released.
