@@ -136,7 +136,7 @@ the session host to verify that the profile container is mounted.
 
 2.  Authenticate using the login information
 
-    1.  User Name: *bob.jones\@contosowvd.com*
+    1.  User Name: *bob.jones@MyADDomain.com*
 
     2.  Password: **WVD\@zureL\@b2019!**
 
