@@ -24,4 +24,4 @@ Lab 7: [Assign the“TenantCreator” role to a useraccount](Prepare-Lab07-Assig
 
 Lab 8: [Create a Windows Virtual Desktop Tenant](Prepare-Lab08-Create-a-Windows-Virtual-Desktop-Tenant.md)
 
-Back to [Main Page](docs\Azure\BootCamps\WVD\index.md)
+Back to [Main Page](./index.md)
