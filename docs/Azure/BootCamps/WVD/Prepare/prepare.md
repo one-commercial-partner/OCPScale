@@ -8,9 +8,9 @@ In the first phase, **Prepare**, we’ll walk through provisioning the required 
 - Provision required administrator roles in Azure AD
 - Set up the Windows Virtual Desktop tenant
 
-Lab 1: [Deploying an Azure AD Tenant](Prepare-Lab01-Prepare-Deploying-an-Azure-AD-Tenant.md)
+Lab 1: [Deploying an Azure AD Tenant](Prepare-Lab01-Deploying-an-Azure-AD-Tenant.md)
 
-Lab 2: [Deploying an Azure Subscription](Prepare-Lab02-Prepare-Deploying-an-Azure-Subscription.md)
+Lab 2: [Deploying an Azure Subscription](Prepare-Lab02-Deploying-an-Azure-Subscription.md)
 
 Lab 3: [Deploying Azure Infrastructure and AD-DS](Prepare-Lab03-Deploying-Azure-Infrastructure-and-AD-DS.md)
 
