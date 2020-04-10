@@ -3,39 +3,18 @@
 To reduce overall operational costs, scaling VM's down during idle periods is critical. Being able to automatically scale up when utilization is high is also important for our customers.
 The first release of Windows Virtual Desktop did not include any native scaling capabilities. In February 2020 a scaling script based on Azure Automation was released.
 
-
-
 The scaling tool can be used to do the following:
 
-
-
 * Schedule VMs to start and stop based on Peak and Off-Peak business hours
-
-
-
 * Scale out VMs based on number of sessions per CPU core
-
-
-
 * Scale in VMs during off-peak hours, leaving a minimum number of session host VMs running
-
-
 
 The scaling tool uses the following Azure capabilities:
 
-
-
 * Azure Automation PowerShell runbooks
 
-
-
 * Azure Webhooks
-
-
-
 * Azure Logic Apps
-
-
 
 The solution will use several variables to specify the session behavior. The variables are described in the table below.
 
@@ -45,11 +24,7 @@ SessionThresholdPerCPU | Used to determine if the number of currently running se
 MinimumNumberOfRDSH | Determines which session host VMs should be shut down during off-peak usage time
 LimitSecondsToForceLogOffUser | When set to non-zero positive value, notify currently signed-in users to save work, wait the configured amount of time, <br>and then force the users to sign off. <br><br> Once all users have signed out, the script will shut down the VM.<br><br>When set to 0, GPO will be used to determine Session Time Limits.
 
-
-
 #Create an Azure Automation Account
-
-
 
 Open Windows PowerShell as Administrator.
 
