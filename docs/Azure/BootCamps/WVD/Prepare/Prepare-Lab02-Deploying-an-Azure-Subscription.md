@@ -24,7 +24,7 @@ you to create new resources in Azure and assign access.
 
 3. On the Azure $150 Monthly Credit window, **copy the URL** provided in Step 2.
 
-    ![](../attachments/b16a201ff10d589de7109ace5807034d.png =70%x)
+    ![image](../attachments/b16a201ff10d589de7109ace5807034d.png =70%x)
 
 4. Open an **InPrivate** browsing session, paste the URL and hit **enter**.
 
