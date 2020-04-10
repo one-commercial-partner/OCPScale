@@ -1,4 +1,4 @@
-# Lab 10: WVD Monitoring
+# Lab 14: WVD Monitoring
 
 The following describes the process for you to set up [monitoring](http://loganalytics.sepago.com/index.html) for your WVD environment. This solution uses a 3rd party partner available in our Azure Gallery. This is referred to as a ‘Microsoft Preferred Solution’. A Microsoft preferred solution is a cloud application selected for its quality, performance,
 and ability to address customer needs in a certain industry vertical or solution area. A team of Microsoft experts validates solutions from partners with specific proven competencies and capabilities. These solutions are featured in our cloud marketplace storefronts, Azure Marketplace, and AppSource, as well as
