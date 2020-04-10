@@ -40,7 +40,7 @@ Agree to the T’s and C’s and click “**Purchase**”
 
 After a few minutes, the deployment completes.
 
-![image.png](./attachments/image-2cb7af4c-171b-4881-af8f-a32f20e5f82e.png)
+![image.png](../attachments/image-2cb7af4c-171b-4881-af8f-a32f20e5f82e.png)
 
 ##Confirm App Permissions
 
