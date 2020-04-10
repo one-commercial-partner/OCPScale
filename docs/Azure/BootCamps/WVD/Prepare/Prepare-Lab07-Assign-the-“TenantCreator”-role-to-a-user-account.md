@@ -1,4 +1,4 @@
-# Lab 3: Assign the “Tenant Creator” role to a user account 
+# Lab 7: Assign the “Tenant Creator” role to a user account 
 
 Assigning an Azure Active Directory user the Tenant Creator application role allows that user to create a Windows Virtual Desktop tenant associated with the Azure Active Directory instance. You'll need to use your global administrator account to assign the Tenant Creator role. 
 
@@ -11,7 +11,7 @@ https://docs.microsoft.com/en-us/azure/virtual-desktop/tenant-setup-azure-active
 
 1. Go to the [Azure portal](https://portal.azure.com), search for and select **Azure Active Directory**.
 
-   ![image.png](attachments/image-b6077052-fb44-4a80-bcb7-ea2f38358cb8.png)
+   ![image.png](../attachments/image-b6077052-fb44-4a80-bcb7-ea2f38358cb8.png)
 
 
 
@@ -19,7 +19,7 @@ https://docs.microsoft.com/en-us/azure/virtual-desktop/tenant-setup-azure-active
 
 3.  Browes for and select the **Windows Virtual Desktop** application. 
 
-    ![(Not the Windows Virtual Desktop Client Application)](attachments/image-0d1676c7-42a1-4311-834f-93e94f496572.png)
+    ![(Not the Windows Virtual Desktop Client Application)](../attachments/image-0d1676c7-42a1-4311-834f-93e94f496572.png)
 
 
 
@@ -31,9 +31,9 @@ https://docs.microsoft.com/en-us/azure/virtual-desktop/tenant-setup-azure-active
     whom you want to grant permissions to perform the Windows Virtual Desktop
     tenant creation. You should use the account created in the Azure AD section
     and the one you applied Global Admin rights to and should mimic this format,
-    myaccountname\@MyAADdomain.onmicrosoft.com
+    myaccountname@MyAADdomain.onmicrosoft.com
 
-    ![image.png](attachments/image-2767bc82-4da0-4e0a-b827-38785ccbb761.png)
+    ![image.png](../attachments/image-2767bc82-4da0-4e0a-b827-38785ccbb761.png)
 
 
 
@@ -41,7 +41,7 @@ https://docs.microsoft.com/en-us/azure/virtual-desktop/tenant-setup-azure-active
 
      Your user should now have the role of “TenantCreator.”
 
-   ![image.png](attachments/image-cf987e03-1951-4008-aac0-ab46a36392fa.png)
+   ![image.png](../attachments/image-cf987e03-1951-4008-aac0-ab46a36392fa.png)
 
 
 

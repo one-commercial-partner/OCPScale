@@ -1,23 +1,4 @@
-# Windows Virtual Desktop on Azure Lab
-
-## Abstract
-
-At the conclusion of this lab, you will understand the Windows Virtual Desktop Infrastructure and how-to setup a working
-WVD environment end-to-end in a typical Enterprise model.  Topics that we will cover include:
-
-- Deploy an AD Infrastructure in Azure
-
-- Deploy a Windows Virtual Desktop Environment
-
-- Publish Windows Virtual Desktop(s)
-
-- Publish remoteapps
-
-- Configure User Profiles with FSLogix
-
-- Configure Monitoring and Security
-
-- Understand Master Images
+# Technical Intensity Workshop - Windows Virtual Desktop
 
 ## Overview
 
@@ -44,20 +25,13 @@ costs while empowering today’s modern digital workspace.
 
 - Terminology is important.
 
-## Solution architecture
-
-At the end of the lab, attendees will have deployed an Azure Active Directory
-Tenant, Azure infrastructure, Active Directory, Active Directory Domain
-Controller using an ARM template from GitHub, Windows Virtual Desktop Tenant(s),
-Host Pool(s) and session host(s).
-
-## Let's Get Started - Technical Intensity Workshop - Windows Virtual Desktop
+## Let's Get Started
 
 There are three phases to implementing Windows Virtual Desktops:
 
-1. [Prepare](prepare.md)
-2. [Deploy](deploy.md)
-3. [Optimize](optimize.md)
+1. [Prepare](Prepare/prepare.md)
+2. [Deploy](Deploy/deploy.md)
+3. [Optimize](Optimize/optimize.md)
 
 ![image](attachments/wvd-prep-deploy-optimize.png)
 
@@ -97,8 +71,4 @@ endorsement of Microsoft of the site or the products contained therein.
 
 © 2020 Microsoft Corporation. All rights reserved.
 
-Microsoft and the trademarks listed a[t
-https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx
-a](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx)re
-trademarks of the Microsoft group of companies. All other trademarks are
-property of their respective owners.
+Microsoft and the trademarks listed at [Microsoft Trademarks](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx). All other trademarks are property of their respective owners.

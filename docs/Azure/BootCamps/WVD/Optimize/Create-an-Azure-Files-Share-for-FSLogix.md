@@ -1,4 +1,4 @@
-# Lab 13a: Create an Azure Files Share for FSLogix
+# Lab 18: Create an Azure Files Share for FSLogix
 
 In this exercise you will be creating an Azure Files share and enabling Active Directory authentication for use in your WVD tenant. Azure Files is a platform service (PaaS) and is the recommended for hosting FSLogix containers for WVD users. At the end of this exercise you will have the following components:
 
@@ -25,11 +25,11 @@ To create a general-purpose v2 storage account in the Azure portal, follow these
 
 4. Fill in the required parameters for the storage account. Refer to the following example for more information on the available parameters.
 
-   ![SD-Ex9000.png](/.attachments/SD-Ex9000-8eccf4dd-29b8-44c3-89c4-396fa11e180a.png)
+   ![SD-Ex9000.png](../attachments/SD-Ex9000-8eccf4dd-29b8-44c3-89c4-396fa11e180a.png)
 
 5. Select **Review + Create** to review your storage account settings and create the account.
 
-   ![SD-Ex9001.png](/.attachments/SD-Ex9001-9f9cde2b-5498-4ff2-8f14-74e2470b1334.png =50%x)
+   ![SD-Ex9001.png](../attachments/SD-Ex9001-9f9cde2b-5498-4ff2-8f14-74e2470b1334.png)
 
 6. Click **Create**.
 
@@ -41,7 +41,7 @@ To create a general-purpose v2 storage account in the Azure portal, follow these
 
 2. On the Overview page for the new storage group, select **File shares**.
 
-   ![SD-Ex9002.png](/.attachments/SD-Ex9002-1991aee8-a06f-4b91-9b85-c35f8ec0d639.png =60%x)
+   ![SD-Ex9002.png](../attachments/SD-Ex9002-1991aee8-a06f-4b91-9b85-c35f8ec0d639.png)
 
 3. On the File shares blade, click **+ File Share**.
 
@@ -49,7 +49,7 @@ To create a general-purpose v2 storage account in the Azure portal, follow these
 
    > **Note:** The file share quota supports a maximum of 5,120 GiB and can be managed on the File shares blade.
 
-   ![SD-Ex9003.png](/.attachments/SD-Ex9003-b9beffb1-7b2a-483c-9fc0-0f1c7b0d266a.png =30%x)
+   ![SD-Ex9003.png](../attachments/SD-Ex9003-b9beffb1-7b2a-483c-9fc0-0f1c7b0d266a.png)
 
 ---
 
