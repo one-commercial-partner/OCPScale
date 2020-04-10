@@ -50,7 +50,7 @@ There are three phases to implementing Windows Virtual Desktops:
 
 1. [Prepare](Prepare/prepare.md)
 2. [Deploy](Deploy/deploy.md)
-3. [Optimize](optimize/optimize.md)
+3. [Optimize](Optimize/optimize.md)
 
 ![image](attachments/wvd-prep-deploy-optimize.png)
 
