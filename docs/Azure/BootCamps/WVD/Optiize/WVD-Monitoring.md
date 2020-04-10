@@ -307,7 +307,7 @@ When you select to enable Insights (preview) you will have the option to select 
 
 The deployment will take several minutes to complete.
 
-![image.jpg](///attachments/07a-024a-Wait.jpg)
+![image.jpg](../attachments/07a-024a-Wait.jpg)
 
 After the deployment is complete, wait a few more minutes for activity to be collected. Then, select Azure Monitor as shown below
 
