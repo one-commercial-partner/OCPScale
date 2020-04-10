@@ -19,7 +19,7 @@ This ARM Template will provision the following resources:
    - Public IP address assigned for remote administration via RDP.
 
 ---
-### Task 1: Deploying the ARM template 
+### 1. Deploying the ARM template 
 
 > *Tip:* Internally at MSFT we have different tenant directories available. Because of this, it is not  
 > uncommon for ARM templates hosted on GitHub to get stuck during deployment. To avoid confusion and 
