@@ -12,7 +12,7 @@ After completing this exercise you will have the following components:
 
 ---
 
-## Exercise 1: Activate your Microsoft 365 Developer subscription
+## 1. Activate your Microsoft 365 Developer subscription
 
 1. Navigate to the [My Visual Studio](https://my.visualstudio.com) benefits page. If prompted, sign in with your credentials.
 2. Locate the **Microsoft 365** tile in the **Tools** category and click **Activate**.
@@ -24,7 +24,7 @@ After completing this exercise you will have the following components:
   
    ![PreReqs-Ex01001.png](../attachments/PreReqs-Ex01001-be24f035-8a5b-44ad-a5c2-b0ad3212b8db.png)
 
-## Task 2: Invite your MSFT corp account
+## 2. Invite your MSFT corp account
 
 1. Navigate to the [Azure portal](https://portal.azure.com/) and sign in using the account you created above.
 2. Type **Azure Active Directory** in the search field and select it from the list.
