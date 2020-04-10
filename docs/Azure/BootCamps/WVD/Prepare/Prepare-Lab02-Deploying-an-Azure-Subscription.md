@@ -48,13 +48,13 @@ you to create new resources in Azure and assign access.
     >   Note that this process will not work for AIRS internal billing subscriptions, as they 
     >   cannot currently be transferred to another tenant.
 
-    ![](../attachments/f2ca5be9b667cade66f409e0724f8590.png =80%x)
+    ![image](../attachments/f2ca5be9b667cade66f409e0724f8590.png)
 
 7. Navigate to  the [Azure Portal - Subscriptions blade](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and sign in using your global admin account. 
 
 8. On the Subscriptions blade, verify that you can see the new VSE subscription. The name of this subscription can very, but for a brand new subscription you should see the Current cost reporting $0.
 
-   ![](../attachments/865b8d4f25afb0948aaffa850bfa868b.png)
+   ![image](../attachments/865b8d4f25afb0948aaffa850bfa868b.png)
 
 With your subscription in place, you are now ready to move on to exercise 3, focused on deploying your 
 Active Directory Domain Controller and bridging your on-premise authentication with your Azure AD Tenant 
@@ -75,29 +75,29 @@ transfer.
 
 3. On the Access control (IAM) blade, click **+ Add** and select **Add role assignment**.
 
-   ![](../attachments/4ceb414418a680f9d707efdb1e9a1b4f.png)
+   ![image](../attachments/4ceb414418a680f9d707efdb1e9a1b4f.png)
 
 4. For Role select **Owner**. For **Select** type the global admin account for the 
 destination tenant. Select the account from the list and click **Save**.
 
-   ![](../attachments/db74086e65ed80c6bac6069c57a40991.png =40%x)
+   ![image](../attachments/db74086e65ed80c6bac6069c57a40991.png =40%x)
 
 5. Review the new notification in the upper right corner. Clicking the notification will 
 reveal an **invitation link**, as shown below. Right-click on the link and copy it. Paste 
 this link in an **InPrivate** browsing session.
 
-   ![](../attachments/42d322c9531df8e262ff21da6cbb0c04.png)
+   ![image](../attachments/42d322c9531df8e262ff21da6cbb0c04.png)
 
 6. Sign in using the global admin account for the destination tenant and accept the permissions 
 request. This will bring you back to the Azure Portal.
 
 7. On the Subscriptions blade, select your existing subscription and click **Change directory**.
 
-   ![](../attachments/9c00cc7e1f6014b16cc7b4e90fc16396.png)
+   ![image](../attachments/9c00cc7e1f6014b16cc7b4e90fc16396.png)
 
 8. Select the **destination directory** and click **Change**.
 
-   ![](../attachments/068fb87fa3c5905b45e2413390e0bfbc.png =40%x)
+   ![image](../attachments/068fb87fa3c5905b45e2413390e0bfbc.png)
 
 9. Accept the prompts and **WAIT**. This process will take about 15 – 20 min before the subscription 
 will be available in the new tenant. Grab a snack and when it completes continue on to exercise 3.
