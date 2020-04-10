@@ -22,7 +22,7 @@ After completing this exercise you will have the following components:
 3. Navigate through the registration process. During this process you will create a new Azure AD tenant and user account. _**Keep these credentials in safe place!**_ 
 4. Once registration is complete you will arrive at the **Microsoft 365 Developer Program** page, as shown below. Confirm the subscription shows **Active**.
   
-   ![PreReqs-Ex01001.png](attachments/PreReqs-Ex01001-be24f035-8a5b-44ad-a5c2-b0ad3212b8db.png)
+   ![PreReqs-Ex01001.png](../attachments/PreReqs-Ex01001-be24f035-8a5b-44ad-a5c2-b0ad3212b8db.png)
 
 ## Task 2: Invite your MSFT corp account
 
