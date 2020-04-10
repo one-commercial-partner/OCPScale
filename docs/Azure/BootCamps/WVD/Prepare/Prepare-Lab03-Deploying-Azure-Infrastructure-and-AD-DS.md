@@ -1,4 +1,4 @@
-Exercise 3: Deploying Azure Infrastructure and AD DS
+Lab 3: Deploying Azure Infrastructure and AD DS
 --------------------------------------------------
 ---
 In this exercise you will leverage a custom Azure Resource Manager (ARM) template to deploy the required Active Directory Domain Services infrastructure for WVD. If you already have an AD DS environment and AD Connect configured, you can move on to [Exercise 4: Configuring Azure AD Connect with AD DS](/Windows-Virtual-Desktop-on-Azure-Lab/Prerequisites/Exercise-4:-Configuring-Azure-AD-Connect-with-AD-DS).
