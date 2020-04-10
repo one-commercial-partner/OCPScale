@@ -1,4 +1,4 @@
-# Lab 2: Grant consent for WVD service
+# Lab 6: Grant consent for WVD service
 
 Creating a tenant in Windows Virtual Desktop is the first step toward building your desktop virtualization solution. A (WVD) tenant is a group of one or more host pools. With a (WVD) tenant, you can build host pools, create app groups, assign users, and make connections through the service. 
 

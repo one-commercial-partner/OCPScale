@@ -1,4 +1,4 @@
-# Lab 12: WVD Scaling
+# Lab 16: WVD Scaling
 
 To reduce overall operational costs, scaling VM's down during idle periods is critical. Being able to automatically scale up when utilization is high is also important for our customers.
 The first release of Windows Virtual Desktop did not include any native scaling capabilities. In February 2020 a scaling script based on Azure Automation was released.
@@ -88,14 +88,14 @@ After the script has completed, navigate to your Resource Group in the Azure Por
 
 
 
-![image.jpg](/.attachments/07c-005-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-005-AzureAutomation.jpg)
 
 
 
 You can also verify your webhook is configured by selecting the new Runbook, navigating to your Resource list on the left side of the Azure portal, and then selecting **Webhook**.
 
 
-![image.jpg](/.attachments/07c-006-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-006-AzureAutomation.jpg)
 
 
 #Create an Azure Automation Run As Account
@@ -131,11 +131,11 @@ When you create a Run As account, it creates a new service principal user in Azu
 
 
 
-![image.jpg](/.attachments/07c-007-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-007-AzureAutomation.jpg)
 
 
 
-![image.jpg](/.attachments/07c-008-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-008-AzureAutomation.jpg)
 
 
  **Copy** the **Application ID** to PowerShell ISE as you will need it later.
@@ -271,7 +271,7 @@ After completion, the Logic App will appear in your Resource Group.
 
 
 
-![image.jpg](/.attachments/07c-009-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-009-AzureAutomation.jpg)
 
 
 
@@ -279,7 +279,7 @@ To make changes to the execution schedule, go to the Autoscale scheduler resourc
 
 
 
-![image.jpg](/.attachments/07c-010-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-010-AzureAutomation.jpg)
 
 
 
@@ -287,7 +287,7 @@ Next, select a View in Logic Apps Designer.
 
 
 
-![image.jpg](/.attachments/07c-011-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-011-AzureAutomation.jpg)
 
 
 
@@ -295,7 +295,7 @@ Once you have opened the Logic Apps Designer, you can expand both the Recurrence
 
 
 
-![image.jpg](/.attachments/07c-012-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-012-AzureAutomation.jpg)
 
 
 
@@ -320,7 +320,7 @@ You will see a list of runbook statuses in the Azure portal similar to the image
 
 
 
-![image.jpg](/.attachments/07c-013-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-013-AzureAutomation.jpg)
 
 
 
@@ -333,7 +333,7 @@ In the results, select the WVDAutoScaleRunbook.
 
 
 
-![image.jpg](/.attachments/07c-014-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-014-AzureAutomation.jpg)
 
 
 
@@ -342,7 +342,7 @@ On the Overview blade for the WVDAutoScaleRunbook, you will see a list of recent
 
 
 
-![image.jpg](/.attachments/07c-015-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-015-AzureAutomation.jpg)
 
 
 
@@ -356,7 +356,7 @@ On the new page, you will see a variety of tabs on the blade: *Input, Output, Er
 
 
 
-![image.jpg](/.attachments/07c-017-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-017-AzureAutomation.jpg)
 
 <br/>
 
@@ -365,6 +365,6 @@ Click on **All Logs** to see each individually logged event with timestamps.
 
 <br/>
 
-![image.jpg](/.attachments/07c-016-AzureAutomation.jpg)
+![image.jpg](../attachments/07c-016-AzureAutomation.jpg)
 
 <br/>

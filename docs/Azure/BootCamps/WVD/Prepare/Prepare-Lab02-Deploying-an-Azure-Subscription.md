@@ -1,4 +1,4 @@
-Exercise 2: Deploying an Azure Subscription 
+Lab 2: Deploying an Azure Subscription 
 --------------------------------------------------
 ---
 In this exercise you will associate your My Visual Studio Azure subscription benefit with the M365 developer tenant that you activated in [Exercise 1](/Windows-Virtual-Desktop-on-Azure-Lab/Prerequisites/Exercise-1:-Azure-AD-Tenant) of the prerequisites. The Azure subscription benefit provides you with $150 in Azure credits every month. These credits will be used to host your WVD environment.
@@ -15,22 +15,22 @@ you to create new resources in Azure and assign access.
 1. Navigate to [My Visual Studio Subscriptions](https://my.visualstudio.com/Subscriptions).
 2. Under **Alternate account**, add the global admin account from your M365 developer tenant, as shown below.
 
-   ![image](/attachments/4df95f640d0e4743b4d263603780ca7a.png)
+   ![image](../attachments/4df95f640d0e4743b4d263603780ca7a.png)
 
 1. Navigate to the [My Visual Studio Benefits](https://my.visualstudio.com/Benefits) page. 
 2. Locate the Azure tile in the Tools category and click **Activate**.
 
-   ![image](/attachments/d3c74e90f1f0e0b2ea128ed046b0cfbc.png)
+   ![image](../attachments/d3c74e90f1f0e0b2ea128ed046b0cfbc.png)
 
 3. On the Azure $150 Monthly Credit window, **copy the URL** provided in Step 2.
 
-    ![](/.attachments/b16a201ff10d589de7109ace5807034d.png =70%x)
+    ![image](../attachments/b16a201ff10d589de7109ace5807034d.png)
 
 4. Open an **InPrivate** browsing session, paste the URL and hit **enter**.
 
 5. Sign in using the global admin account from your M365 developer tenant.
 
-    ![image](./attachments/5f8f766067c2d28f57728fc5e550a557.png)
+    ![image](../attachments/5f8f766067c2d28f57728fc5e550a557.png)
 
 6.  Once you have authenticated, accept the prompt to associate the subscription.
 
@@ -48,13 +48,13 @@ you to create new resources in Azure and assign access.
     >   Note that this process will not work for AIRS internal billing subscriptions, as they 
     >   cannot currently be transferred to another tenant.
 
-    ![](/.attachments/f2ca5be9b667cade66f409e0724f8590.png =80%x)
+    ![image](../attachments/f2ca5be9b667cade66f409e0724f8590.png)
 
 7. Navigate to  the [Azure Portal - Subscriptions blade](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade) and sign in using your global admin account. 
 
 8. On the Subscriptions blade, verify that you can see the new VSE subscription. The name of this subscription can very, but for a brand new subscription you should see the Current cost reporting $0.
 
-   ![](/.attachments/865b8d4f25afb0948aaffa850bfa868b.png)
+   ![image](../attachments/865b8d4f25afb0948aaffa850bfa868b.png)
 
 With your subscription in place, you are now ready to move on to exercise 3, focused on deploying your 
 Active Directory Domain Controller and bridging your on-premise authentication with your Azure AD Tenant 
@@ -75,29 +75,29 @@ transfer.
 
 3. On the Access control (IAM) blade, click **+ Add** and select **Add role assignment**.
 
-   ![](/.attachments/4ceb414418a680f9d707efdb1e9a1b4f.png)
+   ![image](../attachments/4ceb414418a680f9d707efdb1e9a1b4f.png)
 
 4. For Role select **Owner**. For **Select** type the global admin account for the 
 destination tenant. Select the account from the list and click **Save**.
 
-   ![](/.attachments/db74086e65ed80c6bac6069c57a40991.png =40%x)
+   ![image](../attachments/db74086e65ed80c6bac6069c57a40991.png)
 
 5. Review the new notification in the upper right corner. Clicking the notification will 
 reveal an **invitation link**, as shown below. Right-click on the link and copy it. Paste 
 this link in an **InPrivate** browsing session.
 
-   ![](/.attachments/42d322c9531df8e262ff21da6cbb0c04.png)
+   ![image](../attachments/42d322c9531df8e262ff21da6cbb0c04.png)
 
 6. Sign in using the global admin account for the destination tenant and accept the permissions 
 request. This will bring you back to the Azure Portal.
 
 7. On the Subscriptions blade, select your existing subscription and click **Change directory**.
 
-   ![](/.attachments/9c00cc7e1f6014b16cc7b4e90fc16396.png)
+   ![image](../attachments/9c00cc7e1f6014b16cc7b4e90fc16396.png)
 
 8. Select the **destination directory** and click **Change**.
 
-   ![](/.attachments/068fb87fa3c5905b45e2413390e0bfbc.png =40%x)
+   ![image](../attachments/068fb87fa3c5905b45e2413390e0bfbc.png)
 
 9. Accept the prompts and **WAIT**. This process will take about 15 – 20 min before the subscription 
 will be available in the new tenant. Grab a snack and when it completes continue on to exercise 3.

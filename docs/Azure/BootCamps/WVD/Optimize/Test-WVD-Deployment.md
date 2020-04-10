@@ -1,4 +1,4 @@
-# Lab 8: Test Your WVD Deployment
+# Lab 12: Test Your WVD Deployment
 
 Once you have created your Windows Virtual Desktop host pool, you can download
 the client for
@@ -10,7 +10,7 @@ RDP client.
 
 Test with the HTML5 client 
 
-![image.png](attachments/image-77573e5f-1b3e-4105-b3c6-898862c176b4.png)
+![image.png](../attachments/image-77573e5f-1b3e-4105-b3c6-898862c176b4.png)
 
 Launch a browser in privacy or incognito mode and visit <http://aka.ms/wvdweb>
 to access the HTML5 client.
@@ -19,13 +19,13 @@ Click the Windows 10 Desktop Icon. Click Allow for Local Resources
 
 Authenticate using the login information
 
-User Name: *bob.jones@contosowvd.com* Password: **WVD\@zureL\@b2019!**
+User Name: *bob.jones@MyADDomain.com* Password: **WVD\@zureL\@b2019!**
 
 If you are successful, the Remote Desktop Client Connection opened in the
 previous task should close, and you should be able to view the same desktop via
 your browser window.
 
-![image.png](attachments/image-9b3111ef-9934-48f7-a9bd-a70d33d18cff.png)
+![image.png](../attachments/image-9b3111ef-9934-48f7-a9bd-a70d33d18cff.png)
 
 Log off from the WVD session.
 
@@ -66,7 +66,7 @@ Run
 
 \$False
 
-![image.png](attachments/image-f5cc9ee7-b2db-4b7e-ae36-f34a9172b334.png)
+![image.png](../attachments/image-f5cc9ee7-b2db-4b7e-ae36-f34a9172b334.png)
 
 #### NOTE: Other Common Settings 
 
@@ -119,16 +119,16 @@ the virtualized apps and desktops in the Start menu on a Windows 10 machine.
 Client.](http://aka.ms/wvd/clients/windows) **Install**. Open the app, then
 click **Subscribe**.
 
-![image.png](attachments/image-a6b1509e-5ffd-4b9f-96de-b1e355f76f03.png)
+![image.png](../attachments/image-a6b1509e-5ffd-4b9f-96de-b1e355f76f03.png)
 
-User Name: *bob.jones\@contosowvd.com* or any one of the users created in the AD
+User Name: *bob.jones@MyADDomain.com* or any one of the users created in the AD
 deploy process Password: **WVD\@zureL\@b2019!**
 
 
 
 #### Task 2: Test with the HTML5 client 
 
-![image.png](attachments/image-288846f7-f892-4cdc-a492-d03f8c08d089.png)
+![image.png](../attachments/image-288846f7-f892-4cdc-a492-d03f8c08d089.png)
 
 Launch a browser in privacy or incognito mode and visit <http://aka.ms/wvdweb>
 to access the HTML5 client. Authenticate using the login information to which
@@ -137,8 +137,8 @@ you assigned a full desktop session.
 When connecting to the desktop be sure to allow access to the clipboard/Printers
 if you need to use those devices.
 
-![image.png](attachments/image-5b0811ed-e5b8-41f1-baca-58bf77ea4a16.png)
+![image.png](../attachments/image-5b0811ed-e5b8-41f1-baca-58bf77ea4a16.png)
 
 If you are successful, you should be able to view the desktop:
 
-![image.png](attachments/image-13089e32-16e2-479c-aa2e-655375606ca2.png)
+![image.png](../attachments/image-13089e32-16e2-479c-aa2e-655375606ca2.png)
