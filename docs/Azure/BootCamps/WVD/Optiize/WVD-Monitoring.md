@@ -12,18 +12,18 @@ VDI’s (XenDesktop). The agents combine data from different sources and send th
 From the Azure Portal, you select create a resource and **search** for Azure Monitor
 for RDS and Windows Virtual Desktop.
 
-![image.jpg](/.attachments/07a-001-SepagoAgentInMarketPlace.jpg)
+![image.jpg](../attachments/07a-001-SepagoAgentInMarketPlace.jpg)
 
 After selecting the Sepago agent, select the **Create** button as shown below.
 
-![image.jpg](/.attachments/07a-002-SepagoAgentInMarketPlaceInstallPage.jpg)
+![image.jpg](../attachments/07a-002-SepagoAgentInMarketPlaceInstallPage.jpg)
 
 Make sure you deploy the workspace in
 **East US as that is where you can leverage the Interdependency agent**.
 
 The installation will generate an empty Log Analytics Workspace.
 
-![image.jpg](/.attachments/07a-003-EmptyLogAnalyticsWorkspace.jpg)
+![image.jpg](../attachments/07a-003-EmptyLogAnalyticsWorkspace.jpg)
 
 If you already have an existing Log Analytics workspace you can use the optional steps below to download and install the correct views.
 
@@ -32,7 +32,7 @@ If you already have an existing Log Analytics workspace you can use the optional
 If you want to leverage an already existing Log Analytics workspace in **EAST US**, then all you need to do is import the views which can be downloaded from here, <https://github.com/MarcelMeurer/LogAnalytics-for-Citrix-and-RDS> . Extract the views to a temp folder for now. Open up Log Analytics workspace and
 in the middle blade select view designer. Click import and browse to the view files you downloaded.
 
-![image.png](/.attachments/image-3f33b699-a1cd-4071-a4f1-0107169b4ff4.png)
+![image.png](../attachments/image-3f33b699-a1cd-4071-a4f1-0107169b4ff4.png)
 
 #### Task 3: Sepago Agent Installation
 
@@ -48,21 +48,21 @@ Locate the Workspace ID and copy it to Notepad.
 
 Locate the Primary Key and copy it to Notepad.
 
-![image.jpg](/.attachments/07a-004-ObtainWorkspaceIDandSharedKey.jpg)
+![image.jpg](../attachments/07a-004-ObtainWorkspaceIDandSharedKey.jpg)
 
 **Download** the Sepago agent from [here.](http://loganalytics.sepago.com/download.html) onto each of your session hosts.
 
-![image.jpg](/.attachments/07a-005-SepagoAgentDownloadPage.jpg)
+![image.jpg](../attachments/07a-005-SepagoAgentDownloadPage.jpg)
 
 After downloading, **unzip** the file. In the extracted folder you will find a file called ITPC-LogAnalyticsAgent.exe.config. Edit that file in Notepad.
 
 The default configuration file has placeholder entries for the CustomerId (Log Analytics Workspace ID) and SharedKey (Log Analytics Primary Key) as shown below.
 
-![image.jpg](/.attachments/07a-006-DefaultConfigFile.jpg)
+![image.jpg](../attachments/07a-006-DefaultConfigFile.jpg)
 
 Edit the file to replace the CustomerId with your Log Analytics Workspace ID (that you copied previously) and replace the SharedKey with your Log Analytics Primary Key (that you also copied previously).
 
-![image.jpg](/.attachments/07a-007-UpdatedConfigFile.jpg)
+![image.jpg](../attachments/07a-007-UpdatedConfigFile.jpg)
 
 **Save** changes to the file.
 
@@ -74,7 +74,7 @@ ITPC-LogAnalyticsAgent.exe -test
 
  You should see a "Sending test data" followed by "Done" at the end of your command output as shown below.
 
-![image.jpg](/.attachments/07a-008-SuccessfulTest.jpg)
+![image.jpg](../attachments/07a-008-SuccessfulTest.jpg)
 
 If instead you see the output stating “error”, there is a potential communication problem. Either the workspace ID or Key is incorrect or the session host can’t communicate to the LA Workspace due to networking.
 
@@ -86,17 +86,17 @@ ITPC-LogAnalyticsAgent.exe -install
 
 You will see the following output for a successful installation.
 
-![image.jpg](/.attachments/07a-009-SuccessfulInstall.jpg)
+![image.jpg](../attachments/07a-009-SuccessfulInstall.jpg)
 
 Remember to perform this installation on each Session Host. **Reboot** each Session Host after the installation is complete to ensure monitoring starts properly.
 
 Log into one of your Session Hosts after the reboot is complete. Open **Task Scheduler**. Under Active Tasks, look for the task that starts with **ITPC-LogAnalyticsAgent for RDS**. This is the scheduled task to send metrics to the Log Analytics workspace.
 
-![image.jpg](/.attachments/07a-010-ScheduledTask.jpg)
+![image.jpg](../attachments/07a-010-ScheduledTask.jpg)
 
 After some time you should see the following custom logs created in your Log Analytics workspace.
 
-![image.jpg](/.attachments/07a-011-LogAnalyticsCustomLogs.jpg)
+![image.jpg](../attachments/07a-011-LogAnalyticsCustomLogs.jpg)
 
 #### Task 4: Artificially Generate events
 
@@ -135,7 +135,7 @@ ITPC_CTX_PerfData_CL
 
 The results will be a table similar to the one shown below. You will see that one of your Session Hosts has a significant amount of CPU utilization (running ListDlls) while the other does not.
 
-![image.jpg](/.attachments/07a-012-ResultsAsTable.jpg)
+![image.jpg](../attachments/07a-012-ResultsAsTable.jpg)
 
 If you change the view to a timechart you can see the utilization over a time period (for instance, as shown below, a 24 hour period). We can see the two most active processes are the ListDLL64.exe and MsMpEng.exe (Defender AV scanning). Use the following KQL to generate a timechart:
 
@@ -150,11 +150,11 @@ ITPC_CTX_Process_CL
 
 and set the time range to 24 hours
 
-![image.jpg](/.attachments/07a-013-ResultsAsTimeChart.jpg)
+![image.jpg](../attachments/07a-013-ResultsAsTimeChart.jpg)
 
 By setting the time range to last hour you can get a "zoom in" on the last hour of performance
 
-![image.jpg](/.attachments/07a-014-ResultsAsTimeChartOneHour.jpg)
+![image.jpg](../attachments/07a-014-ResultsAsTimeChartOneHour.jpg)
 
 We can look at individual process time with the following Query
 
@@ -175,7 +175,7 @@ ITPC_CTX_Worker_CL
 | render piechart
 ```
 
-![image.jpg](/.attachments/07a-015-ResultsAsPieChart.jpg)
+![image.jpg](../attachments/07a-015-ResultsAsPieChart.jpg)
 
 The following KQL query will indicate the session information for active sessions
 
@@ -185,7 +185,7 @@ ITPC_CTX_Session_CL
 | project ConnectTime_t, LoginTime_t, UserName_s, ConnectionState_s, Worker_s, DesktopGroup_s
 ```
 
-![image.jpg](/.attachments/07a-016-SessionInformation.jpg)
+![image.jpg](../attachments/07a-016-SessionInformation.jpg)
 
 #### Task 5: Push WVD Tenant Diagnostics Data to Log Analytics Workspace
 
@@ -236,7 +236,7 @@ LogAnalyticsPrimaryKey  : ********
 
 After onboarding, navigate back to your Log Analytics workspace. You will see additional custom logs:
 
-![image.jpg](/.attachments/07a-017-DiagnosticLogs.jpg)
+![image.jpg](../attachments/07a-017-DiagnosticLogs.jpg)
 
 You can query on WVD activity through the following Kusto Query:
 
@@ -246,7 +246,7 @@ WVDActivityV1_CL
 | limit 10
 ```
 
-![image.jpg](/.attachments/07a-017a-WVDActivity.jpg)
+![image.jpg](../attachments/07a-017a-WVDActivity.jpg)
 
 You can query WVD checkpoint activity through the following Kusto Query:
 
@@ -256,7 +256,7 @@ WVDCheckpointV1_CL
 | limit 10
 ```
 
-![image.jpg](/.attachments/07a-018-WVDCheckpointV1_CL.jpg)
+![image.jpg](../attachments/07a-018-WVDCheckpointV1_CL.jpg)
 
 You can query for WVD tenant errors through the following Kusto Query:
 
@@ -266,7 +266,7 @@ WVDErrorV1_CL
 | limit 10
 ```
 
-![image.jpg](/.attachments/07a-019-WVDErrorV1_CL.jpg)
+![image.jpg](../attachments/07a-019-WVDErrorV1_CL.jpg)
 
 RDP to one or more Session Hosts using the RDP Client. When you perform RDP connections, this will be tracked in Log Analytics. You will need to wait a few minutes for the data to flow into Log Analytics.
 
@@ -286,8 +286,8 @@ WVDActivityV1_CL
 |project-away ActivityId_g, ActivityId_g1
 ```
 
-![image.jpg](/.attachments/07a-021-RDPConnectionResults.jpg)
-![image.jpg](/.attachments/07a-022-RDPConnectionResultsContinued.jpg)
+![image.jpg](../attachments/07a-021-RDPConnectionResults.jpg)
+![image.jpg](../attachments/07a-022-RDPConnectionResultsContinued.jpg)
 
 #### Task 6: Enable Azure Monitor and Insights
 
@@ -299,33 +299,33 @@ First, in the Azure portal, navigate to one of the Virtual Machines in your host
 
 Under the Monitoring section of the blade, select Insights (preview). Optionally, in the Overview blade, there may also be a Monitoring Insights (preview) option that you can select.
 
-![image.jpg](/.attachments/07a-023-EnableInsights.jpg)
+![image.jpg](../attachments/07a-023-EnableInsights.jpg)
 
 When you select to enable Insights (preview) you will have the option to select the Log Analytics workspace. Select the same workspace you have been using in this entire lab.
 
-![image.jpg](/.attachments/07a-024-ChoosePreviousWorkspace.jpg)
+![image.jpg](../attachments/07a-024-ChoosePreviousWorkspace.jpg)
 
 The deployment will take several minutes to complete.
 
-![image.jpg](/.attachments/07a-024a-Wait.jpg)
+![image.jpg](///attachments/07a-024a-Wait.jpg)
 
 After the deployment is complete, wait a few more minutes for activity to be collected. Then, select Azure Monitor as shown below
 
-![image.jpg](/.attachments/07a-025-SelectAzureMonitor.jpg)
+![image.jpg](../attachments/07a-025-SelectAzureMonitor.jpg)
 
 Verify that the Monitor Coverage is set to Enabled for your virtual machines.
 
-![image.jpg](/.attachments/07a-026-SelectMap.jpg)
+![image.jpg](../attachments/07a-026-SelectMap.jpg)
 
 Select **Map** as shown in the image above.
 
 Once Map launches you can see the mapping of ports across your different components within WVD.
 
-![image.jpg](/.attachments/07a-027-Map.jpg)
+![image.jpg](../attachments/07a-027-Map.jpg)
 
 You can expand different components to see more details as shown below:
 
-![image.jpg](/.attachments/07a-028-ExpandMap.jpg)
+![image.jpg](../attachments/07a-028-ExpandMap.jpg)
 
 Select different components to see the types of data captured (processes, ports, etc.)
 
@@ -342,4 +342,4 @@ Under _Custom Logs_ you will see the following new logs:
 * ServiceMapComputer_CL
 * ServiceMapProcess_CL
 
-![image.jpg](/.attachments/07a-029-ServiceMapLogs.jpg)
+![image.jpg](../attachments/07a-029-ServiceMapLogs.jpg)
