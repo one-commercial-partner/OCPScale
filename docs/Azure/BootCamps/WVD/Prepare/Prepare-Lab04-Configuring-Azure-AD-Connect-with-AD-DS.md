@@ -10,7 +10,7 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 > **This lab should not be deployed into a production environment.**
 ---
 
-## Task 1: Connecting to the domain controller 
+## 1. Connecting to the domain controller 
 
 1. Sign in to the [Azure Portal](https://portal.azure.com/).
 
@@ -37,7 +37,7 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
    
 ---
 
-## Task 2: Disabling IE Enhanced Security
+## 2. Disabling IE Enhanced Security
 
 In an effort to simplify tasks in this lab, we will start by disabling [IE Enhanced Security](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-ie-esc).
 1. Once connected to the domain controller, open Server Manager if it does not start automatically.
@@ -51,7 +51,7 @@ In an effort to simplify tasks in this lab, we will start by disabling [IE Enhan
 4. On the Internet Explorer Enhanced Security Configuration window, under **Administrators**, select the **Off** radio button and click **OK**.
 
 ---
-## Task 3: Creating a Domain Admin account
+## 3. Creating a Domain Admin account
 By default, Azure AD Connect does not synchronize the built-in domain administrator account *ADAdmin\@MyADDomain.com*. This system account has the attribute `isCriticalSystemObject` set to *true*, preventing it from being synchronized. While it is possible to modify this, it is not a best practice to do so.
 
 1. In Server Manager, click **Tools** in the upper right corner and select **Active Directory Users and Computers**.
@@ -77,7 +77,7 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
    > - Delete computer object
  ---
  
-## Task 4: Configuring Azure AD Connect                                                                                                                                                                                                                                         
+## 4. Configuring Azure AD Connect                                                                                                                                                                                                                                         
 1. On the desktop of the domain controller, locate the icon for **Azure AD Connect** and double-click on it.                                                                                                                                                                      
 2. Click **Use express settings**. The required components will install.
 3. On the Connect to Azure AD page, enter in the Azure AD Global Admin credentials. For example: **azadmin@MyAADdomain.onmicrosoft.com** and the correct password. Click **Next**.
