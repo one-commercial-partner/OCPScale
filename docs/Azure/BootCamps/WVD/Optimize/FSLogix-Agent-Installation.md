@@ -1,4 +1,4 @@
-# Lab 9: FSLogix Agent Installation
+# Lab 13: FSLogix Agent Installation
 
 ## Task 1: Prepare the virtual machine to act as a file share for user profiles
 
