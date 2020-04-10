@@ -1,4 +1,4 @@
-# Lab 13: Create a Custom WVD Master Image
+# Lab 17: Create a Custom WVD Master Image
 
 
 [Microsoft Reference Article](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/capture-image-resource)
