@@ -80,7 +80,7 @@ transfer.
 4. For Role select **Owner**. For **Select** type the global admin account for the 
 destination tenant. Select the account from the list and click **Save**.
 
-   ![image](../attachments/db74086e65ed80c6bac6069c57a40991.png =40%x)
+   ![image](../attachments/db74086e65ed80c6bac6069c57a40991.png)
 
 5. Review the new notification in the upper right corner. Clicking the notification will 
 reveal an **invitation link**, as shown below. Right-click on the link and copy it. Paste 
