@@ -1,4 +1,4 @@
-# Lab 8: Test Your WVD Deployment
+# Lab 12: Test Your WVD Deployment
 
 Once you have created your Windows Virtual Desktop host pool, you can download
 the client for
