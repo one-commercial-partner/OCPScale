@@ -44,7 +44,7 @@ costs while empowering today’s modern digital workspace.
 
 - Terminology is important.
 
-## Let's Get Started!
+## Let's Get Started
 
 There are three phases to implementing Windows Virtual Desktops:
 
@@ -90,8 +90,4 @@ endorsement of Microsoft of the site or the products contained therein.
 
 © 2020 Microsoft Corporation. All rights reserved.
 
-Microsoft and the trademarks listed a[t
-https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx
-a](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx)re
-trademarks of the Microsoft group of companies. All other trademarks are
-property of their respective owners.
+Microsoft and the trademarks listed at [Microsoft Trademarks](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx). All other trademarks are property of their respective owners.
