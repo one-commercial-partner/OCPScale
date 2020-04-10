@@ -20,3 +20,5 @@ Lab 16: [WVD Scaling](Optimize-Lab16-WVD-Scaling.md)
 Lab 17: [Creating a WVD Master Image](Optimize-Lab17-Creating-a-WVD-Master-Image.md)
 
 Lab 18: [Create an Azure Files Share for FSLogix](Optimize-Lab18-Create-an-Azure-Files-Share-for-FSLogix.md)
+
+Back to [Main Page](../index.md)

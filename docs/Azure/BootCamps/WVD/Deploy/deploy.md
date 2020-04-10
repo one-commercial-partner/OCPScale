@@ -11,3 +11,5 @@ Lab 9: [Deploy a Personal Host Pool](Deploy-Deploy-a-Personal-Host-Pool.md)
 Lab 10: [Deploy a Pooled Host Pool](Deploy-Deploy-a-Pooled-Host-Pool.md)
 
 Lab 11: [Deploy an Application Pool for Remote App](Deploy-Deploy-an-Application-Pool-for-Remote-App.md)
+
+Back to [Main Page](../index.md)

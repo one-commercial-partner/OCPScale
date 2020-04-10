@@ -29,7 +29,7 @@ LimitSecondsToForceLogOffUser | When set to non-zero positive value, notify curr
 Open Windows PowerShell as Administrator.
 
 Run the following cmdlet to sign into your Azure Account with your Azure Global Administrator account.
- 
+
     Login-AzAccount
 
 Next you will download a script from Github that will install the automation script and create the Azure Automation account.
@@ -39,12 +39,9 @@ Replace your local machine path in the script block below with a local path to y
 
 Execute the previous code block to download the createazureautomationaccount.ps1 script.
 
-
-
 Next, use the following script block to create your automation account.
 You will need your Azure Subscription ID, Resource Group name, the name you want to use for your Automation Account and Azure location before you begin.
 Copy the following script block into PowerShell ISE and modify the variables appropriately.
-
 
     $subscriptionID = "<paste in your Azure subcription id>"
     $resourceGroupName = "<paste in the RG name of your WVD resources>"
@@ -61,21 +58,13 @@ The script output will include a **webhook URI**. **Copy** the webhook URI into 
 
 After the script has completed, navigate to your Resource Group in the Azure Portal and verify you see an Automation Account and a runbook has been added. 
 
-
-
 ![image.jpg](../attachments/07c-005-AzureAutomation.jpg)
-
-
 
 You can also verify your webhook is configured by selecting the new Runbook, navigating to your Resource list on the left side of the Azure portal, and then selecting **Webhook**.
 
-
 ![image.jpg](../attachments/07c-006-AzureAutomation.jpg)
 
-
 #Create an Azure Automation Run As Account
-
-
 
 An Azure Automation Run As account provides authentication for managing resources in Azure with Azure cmdlets. 
 When you create a Run As account, it creates a new service principal user in Azure Active Directory and assigns the Contributor role to the service principal user at the subscription level.
@@ -85,22 +74,13 @@ When you create a Run As account, it creates a new service principal user in Azu
 
  - [ ] In the Azure portal, select **All Services**. In the list of resources, select **Automation Accounts**
 
-
-
  - [ ] On the **Automation Accounts** page, select the name of the Automation Account you just created
-
-
 
  - [ ] In the pane on the left side of the window, select **Run As Accounts** under the *Account Settings* section.
 
-
-
  - [ ] Select **Azure Run As Account**. When the **Add Azure Run As Account** pane appears, review the information and then click **Create** to start the account creation process.
 
-
  - [ ] The resource will provision in a few minutes.
-
-
 
  After it completes, you will see an asset named _AzureRunAsConnection_ in your Automation Account. The connection asset holds the application ID, tenant ID, subscription ID and the certificate thumbprint.
 
