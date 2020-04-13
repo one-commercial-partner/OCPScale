@@ -1,4 +1,4 @@
-# Technical Intensity Workshop - Windows Virtual Desktop
+# Technical Intensity Workshop - Windows Virtual Desktop Lab
 
 ## Overview
 
@@ -71,4 +71,4 @@ endorsement of Microsoft of the site or the products contained therein.
 
 © 2020 Microsoft Corporation. All rights reserved.
 
-Microsoft and the trademarks listed at [Microsoft Trademarks](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx). All other trademarks are property of their respective owners.
+Microsoft trademarks listed at [Microsoft Trademarks](https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx). All other trademarks are property of their respective owners.

@@ -3,39 +3,18 @@
 To reduce overall operational costs, scaling VM's down during idle periods is critical. Being able to automatically scale up when utilization is high is also important for our customers.
 The first release of Windows Virtual Desktop did not include any native scaling capabilities. In February 2020 a scaling script based on Azure Automation was released.
 
-
-
 The scaling tool can be used to do the following:
 
-
-
 * Schedule VMs to start and stop based on Peak and Off-Peak business hours
-
-
-
 * Scale out VMs based on number of sessions per CPU core
-
-
-
 * Scale in VMs during off-peak hours, leaving a minimum number of session host VMs running
-
-
 
 The scaling tool uses the following Azure capabilities:
 
-
-
 * Azure Automation PowerShell runbooks
 
-
-
 * Azure Webhooks
-
-
-
 * Azure Logic Apps
-
-
 
 The solution will use several variables to specify the session behavior. The variables are described in the table below.
 
@@ -45,16 +24,12 @@ SessionThresholdPerCPU | Used to determine if the number of currently running se
 MinimumNumberOfRDSH | Determines which session host VMs should be shut down during off-peak usage time
 LimitSecondsToForceLogOffUser | When set to non-zero positive value, notify currently signed-in users to save work, wait the configured amount of time, <br>and then force the users to sign off. <br><br> Once all users have signed out, the script will shut down the VM.<br><br>When set to 0, GPO will be used to determine Session Time Limits.
 
-
-
 #Create an Azure Automation Account
-
-
 
 Open Windows PowerShell as Administrator.
 
 Run the following cmdlet to sign into your Azure Account with your Azure Global Administrator account.
- 
+
     Login-AzAccount
 
 Next you will download a script from Github that will install the automation script and create the Azure Automation account.
@@ -64,12 +39,9 @@ Replace your local machine path in the script block below with a local path to y
 
 Execute the previous code block to download the createazureautomationaccount.ps1 script.
 
-
-
 Next, use the following script block to create your automation account.
 You will need your Azure Subscription ID, Resource Group name, the name you want to use for your Automation Account and Azure location before you begin.
 Copy the following script block into PowerShell ISE and modify the variables appropriately.
-
 
     $subscriptionID = "<paste in your Azure subcription id>"
     $resourceGroupName = "<paste in the RG name of your WVD resources>"
@@ -86,21 +58,13 @@ The script output will include a **webhook URI**. **Copy** the webhook URI into 
 
 After the script has completed, navigate to your Resource Group in the Azure Portal and verify you see an Automation Account and a runbook has been added. 
 
-
-
 ![image.jpg](../attachments/07c-005-AzureAutomation.jpg)
-
-
 
 You can also verify your webhook is configured by selecting the new Runbook, navigating to your Resource list on the left side of the Azure portal, and then selecting **Webhook**.
 
-
 ![image.jpg](../attachments/07c-006-AzureAutomation.jpg)
 
-
 #Create an Azure Automation Run As Account
-
-
 
 An Azure Automation Run As account provides authentication for managing resources in Azure with Azure cmdlets. 
 When you create a Run As account, it creates a new service principal user in Azure Active Directory and assigns the Contributor role to the service principal user at the subscription level.
@@ -110,22 +74,13 @@ When you create a Run As account, it creates a new service principal user in Azu
 
  - [ ] In the Azure portal, select **All Services**. In the list of resources, select **Automation Accounts**
 
-
-
  - [ ] On the **Automation Accounts** page, select the name of the Automation Account you just created
-
-
 
  - [ ] In the pane on the left side of the window, select **Run As Accounts** under the *Account Settings* section.
 
-
-
  - [ ] Select **Azure Run As Account**. When the **Add Azure Run As Account** pane appears, review the information and then click **Create** to start the account creation process.
 
-
  - [ ] The resource will provision in a few minutes.
-
-
 
  After it completes, you will see an asset named _AzureRunAsConnection_ in your Automation Account. The connection asset holds the application ID, tenant ID, subscription ID and the certificate thumbprint.
 
