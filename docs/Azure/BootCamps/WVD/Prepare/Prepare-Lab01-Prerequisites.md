@@ -1,13 +1,17 @@
-# Lab 1: Deploying an Azure AD Tenant
+# Lab 1: Prerequisites
 
 In the lab you will complete all the necessary prerequisites to build out a Windows Virtual Desktop environment.
+
+>NOTE: If you already have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment, please complete only Exercise 1.
+
+If you do not have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment, please complete all exercises.
 
 ## Azure subscription
 
 Your will need an Azure subscription to complete the Windows Virtual Desktop labs.  The following are ideal subscription types to utilize:
 
-* Visual Studio subscription
-* IUR (Azure Use RIghts) from your partner organization
+* Visual Studio Enterprise subscription
+* IUR (Azure Use Rights) from your partner organization
 
 **Microsoft does not recommend using any Azure subscription that has production workloads or services.  Use a subscriptin that is designation for testing purposes only.**
 
@@ -24,7 +28,7 @@ Your identity within your subscription must have the following rights assignment
 * Ensure that the user who will provision & configure WVD must have at least **Contributor** rights to the Azure subscription.
   * Based on the operating model, some customers might not have this enabled so contact your CSP-Partner who can help with the same.
 
-## Install Windows Virtual Desktop PowerShell Module
+## Exercise 1 - Install Windows Virtual Desktop PowerShell Module
 
 Complete these steps to install the Windows Virtual Desktop PowerShell module:
 
@@ -34,22 +38,37 @@ Complete these steps to install the Windows Virtual Desktop PowerShell module:
 
     *Type **Y** when prompted for installing from an untrusted repository.*
 
-## Install Azure Active Directory
+## Exercise 2 - Activate your Microsoft 365 subscription
 
-1. In the Azure Portal, click **Microsoft Azure** and then **+Create a resource**.  Select **Identity** and then **Azure Active Directory**.
-2. Enter the following on the **Create directory tab**:
-    * Organization name: *yourfirstname* Organization (e.g. Mike's Organization)
-    * Initial domain name: WVD*yourinitials*Lab (e.g. WVDXYZLab).  Hit **Tab**.
+This exercise assumes you have a Visual Studio Enterprise subscription.  
 
+>DO NOT complete these steps if you have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment.  Return to the [Prepare Phase Labs](prepare.md) and continue subsequent labs.
+
+1. Navigate to the [My Visual Studio](https://my.visualstudio.com) benefits page. If prompted, sign in with your credentials.
+2. Locate the **Microsoft 365** tile in the **Tools** category and click **Activate**.
+  ![M365Activate](../attachments/M365Activate.PNG)
+3. If prompted, sign in with your credentials.
+4. Click on **SET UP SUBSCRIPTION**
+5. Enter the following information and click **Continue**:
+    * Create username: *yourfirstname*
+    * Create domain: WVD*yourinitials*Lab (e.g. WVDXYZLab).  Hit **Tab**.
         *Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.*
 
         ***Write this domain name down as your Azure Active Directory Domain Name.***
+    * Password: **Complex.Password**
+    * Confirm Password: **Complex.Password**
+  ![M365Activate](../attachments/M365Setup.PNG)
+6. Enter your cell phone number and click **Send Code**.
+7. Enter your activation code and click **Set up**.
+8. Click on **Go to subscription**.
 
-        ![AzureADSetup](../attachments/AzureADSetup.PNG)
+## Exercise 3 - Activate your Enterprise Mobility + Security (EMS)
 
-3. Click **Create**.  It will take several minutes for the directory to be created.
-4. Once complete, select Click **here** to manage your new directory. Notice that **Your role** is a Global Administrator.
-
-![GlobalAdmin](../attachments/AzureADGlobalAdmin.PNG)
+1. Return to the [My Visual Studio](https://my.visualstudio.com) benefits page.
+2. Locate the **MEnterprise Mobility + Security (EMS)** tile in the **Tools** category and click **Get Code**.
+  ![EMSActivate](../attachments/EMSActivate.PNG)
+3. When the coupon code has been successfully retrieved, click **"Activate"** to proceed.
+4. If prompted, select **Yes, add it to my account**, otherwise choose **Try now**.
+5. Note your confirmation number and click **Continue**.
 
 Return to [Prepare Phase Labs](prepare.md)
