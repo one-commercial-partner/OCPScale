@@ -68,6 +68,7 @@ This exercise assumes you have a Visual Studio Enterprise subscription.
 
 1. Return to the [My Visual Studio](https://my.visualstudio.com) benefits page.
 2. Locate the **MEnterprise Mobility + Security (EMS)** tile in the **Tools** category and click **Get Code**.
+
   ![EMSActivate](../attachments/EMSActivate.PNG)
 3. When the coupon code has been successfully retrieved, click **"Activate"** to proceed.
 4. If prompted, select **Yes, add it to my account**, otherwise choose **Try now**.
