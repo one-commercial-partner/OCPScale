@@ -1,6 +1,5 @@
 # Lab 1: Deploying an Azure AD Tenant
 
---------------------------------------------------
 ---
 In this exercise you will be creating a new Azure Active Directory tenant leveraging your My Visual Studio benefits. More specifically you will be activating the [Microsoft 365 Developer subscription (E5)](https://docs.microsoft.com/en-us/visualstudio/subscriptions/vs-m365) benefit. This benefit will provide you with the necessary licensing to support a full Windows Virtual Desktop environment.
 
@@ -37,3 +36,5 @@ After completing this exercise you will have the following components:
 
 7. On the Users | All users blade, confirm your MSFT corp account is listed as a Guest.
 8. Monitor your MSFT corp mailbox for an email from Microsoft Invitations. Once received, click **Accept invitation**. Sign in with your MSFT corp email and accept the permissions update. Your MSFT corp account is now a guest in your Microsoft 365 developer tenant.
+
+Return to [Main Page](prepare.md)
