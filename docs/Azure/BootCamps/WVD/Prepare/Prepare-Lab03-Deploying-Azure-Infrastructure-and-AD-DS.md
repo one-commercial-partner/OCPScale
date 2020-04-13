@@ -1,4 +1,4 @@
-# Lab 3: Deploying Azure Infrastructure and AD DS
+# Lab 2: Deploying Azure Infrastructure and AD DS
 
 In this exercise you will leverage a custom Azure Resource Manager (ARM) template to deploy the required Active Directory Domain Services infrastructure for WVD.
 
@@ -31,23 +31,21 @@ This ARM Template will provision the following resources:
    ![PreReqs-Ex03001.png](../attachments/PreReqs-Ex03001-a65ea79e-2a12-4fd2-80cf-946dec64e987.png)
 
 5. Fill in the required ARM template parameters. Refer to the following example for more information on the parameters.
-
-   ![PreReqs-Ex03002.png](../attachments/PreReqs-Ex03002-87965f80-eed9-4086-8ac0-6e68f0509725.png)
+   * Resource Group: *Create New* **WVDLab**
+   * Location: Select an Azure region
+      > Note:  Use this same region for the lab in it's entirety
+   * Admin Password: **Complex.Password**
+   * AD Domain Name: Enter a FQDN (e.g. MyWVDLabs.com) 
+      >Please write down what you enter!
+   * CustomUPNSuffix: *Enter the name of your Azure AD Domain name (e.g. WVDJPWLab.onmicrosoft.com)*
+   * Default User Password: **Complex.Password**
 
 6. Agree to the Terms and conditions and click **Purchase**.  
 
-   ![PreReqs-Ex03003.png](../attachments/PreReqs-Ex03003-1af935eb-5e34-43c7-9824-dc0d256940a7.png)
-                      
-The deployment is now underway. On average this process can take 30 minutes to complete. It is important 
-that you monitor the deployment progress to ensure there are no problems. You can monitor progress by 
-clicking the **notification** bell in the upper right corner and clicking **Deployment in progress...**.
+The deployment is now underway. On average this process can take 30 minutes to complete. It is important that you monitor the deployment progress to ensure there are no problems. You can monitor progress by clicking the **notification** bell in the upper right corner and clicking **Deployment in progress...**.
 
-![PreReqs-Ex03004.png](../attachments/PreReqs-Ex03004-ecd71059-001c-4554-ada1-e81929cca805.png)
-
-> *Note:* While automation can make things simpler and repeatable, sometimes it can fail. If at any time during the ARM template deployment there is a failure, review the failure, delete the Resource Group and try the ARM template again, adjusting for any possible errors.
+> *Note:* While automation can make things simpler and repeatable, sometimes it can fail. If at any time during the ARM template deployment there is a failure, review the failure, **delete the Resource Group** and try the ARM template again, adjusting for any possible errors.
 
 Once the ARM template is done being deployed, the status will change to complete. At this point the domain controller is ready for RDP connectivity.
-
-![PreReqs-Ex03005.png](../attachments/PreReqs-Ex03005-0cc771eb-6516-4f11-84d9-0c6549a9c254.png)
 
 Return to [Prepare Phase Labs](prepare.md)
