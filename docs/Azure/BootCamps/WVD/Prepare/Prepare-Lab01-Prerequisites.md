@@ -56,6 +56,7 @@ This exercise assumes you have a Visual Studio Enterprise subscription.
         ***Write this domain name down as your Azure Active Directory Domain Name.***
     * Password: **Complex.Password**
     * Confirm Password: **Complex.Password**
+
         ![M365Activate](../attachments/M365Setup.PNG)
 6. Enter your cell phone number and click **Send Code**.
 7. Enter your activation code and click **Set up**.
