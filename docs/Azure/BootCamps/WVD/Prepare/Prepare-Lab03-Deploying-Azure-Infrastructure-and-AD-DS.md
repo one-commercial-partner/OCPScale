@@ -40,4 +40,4 @@ The deployment is now underway. On average this process can take 30 minutes to c
 
 Once the ARM template is done being deployed, the status will change to complete. At this point the domain controller is ready for RDP connectivity.
 
-Return to [Prepare Phase Labs](prepare.md)
+### Return to [Prepare Phase Labs](prepare.md)
