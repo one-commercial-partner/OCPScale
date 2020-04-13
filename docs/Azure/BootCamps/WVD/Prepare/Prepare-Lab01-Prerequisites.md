@@ -46,7 +46,8 @@ This exercise assumes you have a Visual Studio Enterprise subscription.
 
 1. Navigate to the [My Visual Studio](https://my.visualstudio.com) benefits page. If prompted, sign in with your credentials.
 2. Locate the **Microsoft 365** tile in the **Tools** category and click **Activate**.
-  ![M365Activate](../attachments/M365Activate.PNG)
+
+    ![M365Activate](../attachments/M365Activate.PNG)
 3. If prompted, sign in with your credentials.
 4. Click on **SET UP SUBSCRIPTION**
 5. Enter the following information and click **Continue**:
@@ -57,6 +58,7 @@ This exercise assumes you have a Visual Studio Enterprise subscription.
         ***Write this domain name down as your Azure Active Directory Domain Name.***
     * Password: **Complex.Password**
     * Confirm Password: **Complex.Password**
+  
   ![M365Activate](../attachments/M365Setup.PNG)
 6. Enter your cell phone number and click **Send Code**.
 7. Enter your activation code and click **Set up**.
