@@ -2,7 +2,7 @@
 
 In the lab you will complete all the necessary prerequisites to build out a Windows Virtual Desktop environment.
 
->NOTE: If you already have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment, please complete only Exercise 1.
+*NOTE: If you already have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment, please complete only Exercise 1.*
 
 If you do not have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment, please complete all exercises.
 
@@ -42,7 +42,7 @@ Complete these steps to install the Windows Virtual Desktop PowerShell module:
 
 This exercise assumes you have a Visual Studio Enterprise subscription.  
 
->DO NOT complete these steps if you have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment.  Return to the [Prepare Phase Labs](prepare.md) and continue subsequent labs.
+*NOTE: DO NOT complete these steps if you have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment.  Return to the [Prepare Phase Labs](prepare.md) and continue subsequent labs.*
 
 1. Navigate to the [My Visual Studio](https://my.visualstudio.com) benefits page. If prompted, sign in with your credentials.
 2. Locate the **Microsoft 365** tile in the **Tools** category and click **Activate**.
@@ -67,7 +67,7 @@ This exercise assumes you have a Visual Studio Enterprise subscription.
 ## Exercise 3 - Activate your Enterprise Mobility + Security (EMS)
 
 1. Return to the [My Visual Studio](https://my.visualstudio.com) benefits page.
-2. Locate the **MEnterprise Mobility + Security (EMS)** tile in the **Tools** category and click **Get Code**.
+2. Locate the **Enterprise Mobility + Security (EMS)** tile in the **Tools** category and click **Get Code**.
 
   ![EMSActivate](../attachments/EMSActivate.PNG)
 3. When the coupon code has been successfully retrieved, click **"Activate"** to proceed.
