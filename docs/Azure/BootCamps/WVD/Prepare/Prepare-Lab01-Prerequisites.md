@@ -45,21 +45,18 @@ This exercise assumes you have a Visual Studio Enterprise subscription.
 *NOTE: DO NOT complete these steps if you have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment.  Return to the [Prepare Phase Labs](prepare.md) and continue subsequent labs.*
 
 1. Navigate to the [My Visual Studio](https://my.visualstudio.com) benefits page. If prompted, sign in with your credentials.
-2. Locate the **Microsoft 365** tile in the **Tools** category and click **Activate**.
-
-    ![M365Activate](../attachments/M365Activate.PNG)
+2. Locate the **Microsoft 365** tile in the **Tools** category and click **Activate**.  
+![M365Activate](../attachments/M365Activate.PNG)
 3. If prompted, sign in with your credentials.
 4. Click on **SET UP SUBSCRIPTION**
 5. Enter the following information and click **Continue**:
     * Create username: *yourfirstname*
     * Create domain: WVD*yourinitials*Lab (e.g. WVDXYZLab).  Hit **Tab**.
         *Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.*
-
         ***Write this domain name down as your Azure Active Directory Domain Name.***
     * Password: **Complex.Password**
     * Confirm Password: **Complex.Password**
-  
-  ![M365Activate](../attachments/M365Setup.PNG)
+        ![M365Activate](../attachments/M365Setup.PNG)
 6. Enter your cell phone number and click **Send Code**.
 7. Enter your activation code and click **Set up**.
 8. Click on **Go to subscription**.
@@ -69,7 +66,8 @@ This exercise assumes you have a Visual Studio Enterprise subscription.
 1. Return to the [My Visual Studio](https://my.visualstudio.com) benefits page.
 2. Locate the **Enterprise Mobility + Security (EMS)** tile in the **Tools** category and click **Get Code**.
 
-  ![EMSActivate](../attachments/EMSActivate.PNG)
+    ![EMSActivate](../attachments/EMSActivate.PNG)
+
 3. When the coupon code has been successfully retrieved, click **"Activate"** to proceed.
 4. If prompted, select **Yes, add it to my account**, otherwise choose **Try now**.
 5. Note your confirmation number and click **Continue**.
