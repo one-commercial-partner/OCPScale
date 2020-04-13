@@ -45,7 +45,7 @@ Complete these steps to install the Windows Virtual Desktop PowerShell module:
 
         ***Write this domain name down as your Azure Active Directory Domain Name.***
 
-        ![AzureADSetup](docs/Azure/BootCamps/WVD/attachments/AzureADSetup.PNG)
+        ![AzureADSetup](./attachments/AzureADSetup.PNG)
 
 3. Click **Create**.  It will take several minutes for the directory to be created.
 4. Once complete, select Click **here** to manage your new directory.
