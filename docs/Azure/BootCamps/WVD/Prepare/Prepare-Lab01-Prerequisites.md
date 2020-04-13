@@ -60,7 +60,6 @@ This exercise assumes you have a Visual Studio Enterprise subscription.
     * Confirm Password: **Complex.Password**
   
   ![M365Activate](../attachments/M365Setup.PNG)
-  
 6. Enter your cell phone number and click **Send Code**.
 7. Enter your activation code and click **Set up**.
 8. Click on **Go to subscription**.
