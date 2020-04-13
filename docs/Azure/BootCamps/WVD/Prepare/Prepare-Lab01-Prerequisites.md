@@ -48,6 +48,8 @@ Complete these steps to install the Windows Virtual Desktop PowerShell module:
         ![AzureADSetup](../attachments/AzureADSetup.PNG)
 
 3. Click **Create**.  It will take several minutes for the directory to be created.
-4. Once complete, select Click **here** to manage your new directory.
+4. Once complete, select Click **here** to manage your new directory. Notice that **Your role** is a Global Administrator.
+
+![GlobalAdmin](../attachments/AzureADGlobalAdmin.PNG)
 
 Return to [Prepare Phase Labs](prepare.md)
