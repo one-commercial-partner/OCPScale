@@ -20,16 +20,9 @@ This ARM Template will provision the following resources:
 ## Exercise 1 - Deploying the ARM template
 
 1. Open a browser and navigate to the [ARM template](https://github.com/PeterR-msft/M365WVDWS/tree/master/AAD-Hybrid-Lab).
-
 2. Review the notes on the GitHub page for the ARM template prior to deployment.
 3. Under Quick Start, click **Deploy to Azure**. This will open a new browser tab to the Azure Portal for custom deployments.
-
-   ![PreReqs-Ex03000.png](../attachments/PreReqs-Ex03000-c3ed867f-3d56-4759-96b6-7636aa557534.png)
-
 4. If prompted, make sure to sign in with an account that is an owner for the Azure subscription.
-
-   ![PreReqs-Ex03001.png](../attachments/PreReqs-Ex03001-a65ea79e-2a12-4fd2-80cf-946dec64e987.png)
-
 5. Fill in the required ARM template parameters. Refer to the following example for more information on the parameters.
    * Resource Group: *Create New* **WVDLab**
    * Location: Select an Azure region
@@ -39,7 +32,6 @@ This ARM Template will provision the following resources:
       >Please write down what you enter!
    * CustomUPNSuffix: *Enter the name of your Azure AD Domain name (e.g. WVDJPWLab.onmicrosoft.com)*
    * Default User Password: **Complex.Password**
-
 6. Agree to the Terms and conditions and click **Purchase**.  
 
 The deployment is now underway. On average this process can take 30 minutes to complete. It is important that you monitor the deployment progress to ensure there are no problems. You can monitor progress by clicking the **notification** bell in the upper right corner and clicking **Deployment in progress...**.
