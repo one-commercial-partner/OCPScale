@@ -1,16 +1,13 @@
-Lab 4: Configuring Azure AD Connect with AD DS
----------------------------------------------------
----
+# Lab 3: Configuring Azure AD Connect with AD DS
+
 In this exercise you will be configuring [Azure AD Connect](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-azure-ad-connect). With Windows Virtual Desktop, all session host VMs within the WVD tenant environment are required to be domain joined to AD DS, and the domain must be synchronized with Azure AD. To manage the synchronization of objects, you will configure Azure AD Connect on the domain controller deployed in Azure.
 
-> *Note:* RDP access to a domain controller using a public IP address is not a best practice and is 
-> only done to simplify this lab. Better security practices such as removing the PIP,
-> enabling just-in-time access and/or leveraging a bastion host should be applied enhance security.
-> 
+> *Note:* RDP access to a domain controller using a public IP address is not a best practice and is only done to simplify this lab. Better security practices such as removing the PIP, enabling just-in-time access and/or leveraging a bastion host should be applied enhance security.
+>
 > **This lab should not be deployed into a production environment.**
 ---
 
-## 1. Connecting to the domain controller 
+## 1. Connecting to the domain controller
 
 1. Sign in to the [Azure Portal](https://portal.azure.com/).
 

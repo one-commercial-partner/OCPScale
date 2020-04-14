@@ -73,4 +73,4 @@ This exercise assumes you have a Visual Studio Enterprise subscription.
 4. If prompted, select **Yes, add it to my account**, otherwise choose **Try now**.
 5. Note your confirmation number and click **Continue**.
 
-Return to [Prepare Phase Labs](prepare.md)
+### Return to [Prepare Phase Labs](prepare.md)
