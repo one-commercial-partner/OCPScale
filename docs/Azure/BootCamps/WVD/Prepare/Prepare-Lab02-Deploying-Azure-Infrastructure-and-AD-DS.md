@@ -31,7 +31,7 @@ This ARM Template will provision the following resources:
    * AD Domain Name: Enter a FQDN (e.g. MyWVDLabs.com)
       >Please write down what you enter!
    * CustomUPNSuffix: *Enter the name of your Azure AD Domain name (e.g. WVDJPWLab.onmicrosoft.com)*
-   * VmSize: Standard_B2ms
+   * Vm Size: Standard_B2ms
    * Default User Password: **Complex.Password**
 6. Agree to the Terms and conditions and click **Purchase**.  
 
