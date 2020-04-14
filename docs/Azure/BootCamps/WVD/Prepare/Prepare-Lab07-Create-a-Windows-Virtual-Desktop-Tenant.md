@@ -18,7 +18,7 @@ $SignInName = "The WVD admin account"
 $TenantName = "The name of your tenant"
 ```
 
-![PSVariables](../attachments/PSVariables.png)
+![PSVariables](../attachments/PSVariables.PNG)
 
 ## Exercise 2 - Sign into Windows Virtual Desktop Services
 
@@ -53,7 +53,7 @@ Adding resources to your tenant is a critical step, at this point we will define
 New-RdsRoleAssignment -SignInName $SignInName -RoleDefinitionName "RDS Owner" -TenantName $TenantName -AadTenantId $aadTenantId
 ```
 
-![AddRoleToWVD](../attachments/AddRoleToWVD.png)
+![AddRoleToWVD](../attachments/AddRoleToWVD.PNG)
 
 Congrats! You have now completed the steps to prepare your Windows Virtual Desktop enviorment.  
 
