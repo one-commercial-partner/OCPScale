@@ -8,7 +8,7 @@ To deploy Windows Virtual Desktop we need to gather some information from the cu
 
 2. Click on the clipboard icon next to **Tenant ID**. Paste it in a handy location so you can use it later as the **Azure Active Directory ID** value.
 
-    ![TenantID](../attachments/TenantID.png)
+    ![TenantID](../attachments/TenantID.PNG)
 
 ## Exercise 2 - Gather your Subscription ID from the Azure portal
 
@@ -16,6 +16,6 @@ To deploy Windows Virtual Desktop we need to gather some information from the cu
 2. Select the Azure subscription you want to use.
 3. Look for **Subscription ID**, and then hover over the value until a clipboard icon appears. Click on the clipboard icon and paste the value in a handy location so you can use it later as the **Azure Subscription ID** value.
 
-    ![SubscriptionID](../attachments/SubscriptionID.png)
+    ![SubscriptionID](../attachments/SubscriptionID.PNG)
 
 ### Return to [Prepare Phase Labs](prepare.md)
