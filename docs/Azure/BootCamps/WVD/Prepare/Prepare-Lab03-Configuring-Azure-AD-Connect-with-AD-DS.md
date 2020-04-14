@@ -86,11 +86,15 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
     > Since this is a temporary lab environment we are not going use a validated custom domain.
 6. On the **Ready to Configure** screen click **Install**.
 7. It may take 5-10 minutes for Azure AD Connect to complete installation. Read the **Configuration Complete** screen and then click **Exit**.
-8. Sign in to the [Azure Portal](https://portal.azure.com/).
-9. Type **Azure Active Directory** in the search field and select it from the list.
-10. On the Azure Active Directory blade, under **Manage**, select **Users**.
-11. Review the list of user account objects and confirm the test accounts have synchronized, as shown below.
 
-    ![PreReqs-Ex04004.png](../attachments/PreReqs-Ex04004-c7bd59b0-8079-4b82-a90e-9571723695b2.png)
+## Exercise 5 - Validate Synchronization
+
+1. Return to the [Azure Portal](https://portal.azure.com/).
+2. Type **Azure Active Directory** in the search field and select it from the list.
+   >Ensure you are looking at the right Azure Active Directory!
+3. On the Azure Active Directory blade, under **Manage**, select **Users**.
+4. Review the list of user account objects and confirm the test accounts have synchronized, as shown below.
+
+    ![PreReqs-Ex04004.png](../attachments/PostSyncUsers.png)
 
     > **Note:** It can take up to 15 minutes for the Active Directory objects to be synchronized to the Azure AD tenant.
