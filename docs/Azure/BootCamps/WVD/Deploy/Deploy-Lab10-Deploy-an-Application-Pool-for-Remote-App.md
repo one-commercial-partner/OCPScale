@@ -2,7 +2,7 @@
 
 The default app group created for a new Windows Virtual Desktop host pool also publishes the full desktop. In addition, you can create one or more RemoteApp application groups for the host pool. Follow this tutorial to create a RemoteApp app group and publish individual Start menu apps.
 
-## Exercise 1 - Create a RemoteApp group\
+## Exercise 1 - Create a RemoteApp group
 
 1. Run the following PowerShell cmdlet to create a new empty RemoteApp app group.
 

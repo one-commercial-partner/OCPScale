@@ -66,4 +66,37 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
 
 Congrats! You have successfully deployed a Pooled Host Pool!  
 
+## Exercise 2 - Assign users to the Pool
+
+Now use the following commands to ensure your users are a member of the Pooled Host pool.
+
+This cmd will ensure the user is a member of the Application Pool, this is required to have access to see the session host.
+
+1. In the Azure Portal open the Azure Active DIrectory for your tenant.
+2. Select **Users** then **Julia Williams**.
+3. Copy the UPN: `Julia.Williams@<yourdomain>.onmicrosoft.com`
+4. Open PowerShell and enter the following command:
+
+    ```Powershell
+    Add-RdsAppGroupUser <enteryourtenantname> PooledPool "Desktop Application Group" -UserPrincipalName Julia.Williams@<yourdomain>.onmicrosoft.com
+    ```
+
+## Exercise 3 - Connect with the Windows Virtual Desktop web client
+
+1. In a browser, navigate to the [Windows Virtual Desktop web client](https://rdweb.wvd.microsoft.com/webclient).
+2. When prompted enter the credentials for Julia Williams:
+    * Username: Julia.Williams@`yourdomain`.onmicrosoft.com
+    * Password: `Complex.Password`
+3. Click on the icon for PooledPool.
+4. Click **Allow** on the **Access local resources** window.
+5. When prompted enter the credentials for Julia Williams:
+    * Username: Julia.Williams@`yourdomain`.onmicrosoft.com
+    * Password: `Complex.Password`
+6. Once connected, change the desktop background to a different picture.
+7. Disconnect from the session.
+
 ### Return to [Deploy Phase Labs](deploy.md)
+
+
+Complete a default installation and select the box for **Launch Remote Desktop when setup exits.**
+3. In the Remote Desktop client, click on **Subscribe**.

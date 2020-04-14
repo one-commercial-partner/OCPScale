@@ -69,20 +69,36 @@ troubleshooting section on this guide.
 
 Congrats! You have successfully deployed a Personal Host Pool!
 
-## Exercise 2- Connect with the Windows Desktop client
+## Exercise 2 - Assign users to the Pool
+
+Now use the following commands to ensure your users are a member of the Personal Host pool.
+
+This cmd will ensure the user is a member of the Application Pool, this is required to have access to see the session host.
+
+1. In the Azure Portal open the Azure Active DIrectory for your tenant.
+2. Select **Users** then **Bob Jones**.
+3. Copy the UPN: `Bob.Jones@<yourdomain>.onmicrosoft.com`
+4. Open PowerShell and enter the following command:
+
+    ```Powershell
+    Add-RdsAppGroupUser <enteryourtenantname> PersonalPool "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourdomain>.onmicrosoft.com
+    ```
+
+## Exercise 3 - Connect with the Windows Desktop client
 
 1. Choose the client that matches your version of Windows:
-
     * [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2068602)
     * [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2098960)
     * [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2098961)
-
 2. Complete a default installation and select the box for **Launch Remote Desktop when setup exits.**
-
 3. In the Remote Desktop client, click on **Subscribe**.
-
-4. When prompted enter your wvdadmin credentials (password is `Complex.Password`)
-   ![WVDCreds](../attachments/WVDCreds.png)
+4. When prompted enter the credentials for Bob Jones:
+    * Username: `Bob.Jones@yourdomain.onmicrosoft.com`
+    * Password: `Complex.Password`
 5. Click **Yes** on the next screen and the **Done** on the following screen.
+6. Click on the icon for Personal Pool.
+7. When prompted, enter the password: `Complex.Password`.
+8. Once connected, change the desktop background to a different picture.
+9. Disconnect from the session.
 
 ### Return to [Deploy Phase Labs](deploy.md)
