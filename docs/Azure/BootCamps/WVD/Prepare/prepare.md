@@ -22,6 +22,4 @@ Lab 6: [Assign the“TenantCreator” role to a user account](Prepare-Lab06-Assi
 
 Lab 7: [Create a Windows Virtual Desktop Tenant](Prepare-Lab07-Create-a-Windows-Virtual-Desktop-Tenant.md)
 
-Lab 8:
-
 ## Back to [Main Page](../index.md)

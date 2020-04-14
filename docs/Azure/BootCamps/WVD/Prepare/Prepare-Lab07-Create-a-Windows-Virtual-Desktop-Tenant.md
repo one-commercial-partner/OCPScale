@@ -1,6 +1,6 @@
-# Lab 7: Create a Windows Virtual Desktop Tenant 
+# Lab 7: Create a Windows Virtual Desktop Tenant
 
-After assigning Tenant Creator role to your account you are now ready to provision your Windows Virtual Desktop Tenant. This is currently only achievable via PowerShell. Be sure to have the **Azure AD Tenant ID** and the **Subscription ID** collected in Exercise 1 of this guide ready as you will use them to provision your tenant.
+After assigning Tenant Creator role to your account you are now ready to provision your Windows Virtual Desktop Tenant. This is currently only achievable via PowerShell. Be sure to have the **Azure AD Tenant ID** and the **Subscription ID** collected earlier as you will use them to provision your tenant.
 
 For more information visit [Create a Windows Virtual Desktop tenant](https://docs.microsoft.com/en-us/azure/virtual-desktop/tenant-setup-azure-active-directory#create-a-windows-virtual-desktop-tenant)
 
@@ -8,26 +8,36 @@ For more information visit [Create a Windows Virtual Desktop tenant](https://doc
 
 Capturing some of the commonly used strings into variables will make execution simpler as we execute various commands to provision our tenant. These variables will not change through out this entire deployment.  
 
+1. Open PowerShell with Administrator credentials and enter the following:
+
 ```PowerShell
 $brokerurl = "https://rdbroker.wvd.microsoft.com"
 $aadTenantId = "The Azure AD Tenant ID Captured During Exercise 1"
 $azureSubscriptionId = "The Subscription ID Captured During Exercise 1"
+$SignInName = "The WVD admin account"
+$TenantName = "The name of your tenant"
 ```
-![image.png](../attachments/image-a7620df3-808b-45ab-abd5-87ab68930475.png)
+
+![PSVariables](../attachments/PSVariables.png)
 
 ## Exercise 2 - Sign into Windows Virtual Desktop Services
 
-   The Add-RdsAccount command will log you into the Windows Virtual Desktop Platform Service, the account used here should be the same account you granted Tenant Creator in Exercise 3. You only need to authenticate once per session, but if you close PowerShell and reopen you will need to run this command-let every time you decide to provision your WVD Tenant, so it’s wise to keep this on hand.
+   The Add-RdsAccount command will log you into the Windows Virtual Desktop Platform Service, the account used here should be the same account you granted Tenant Creator in an earlier exercise . You only need to authenticate once per session, but if you close PowerShell and reopen you will need to run this command-let every time you decide to provision your Windows Virtual Desktop Tenant, so it’s wise to keep this on hand.
 
-```PowerShell
-Add-RdsAccount -DeploymentUrl $brokerurl
-```
+1. From the same PowerShell with Administrator window enter the following:
 
-![image.png](../attachments/image-dd374f42-f7c2-44f9-be9c-da4ad92433a5.png)
+   ```PowerShell
+   Add-RdsAccount -DeploymentUrl $brokerurl
+   ```
+
+2. When prompted enter your wvdadmin credentials (password is `Complex.Password`)
+   ![WVDCreds](../attachments/WVDCreds.png)
 
 ## Exercise 3 - Provision your Windows Virtual Desktop Tenant
 
    The New-RDSTenant command-let will provision your new Tenant this will use your AAD Tenant ID and Subscription ID variables defined above. For the "Name" attribute in the command be sure to provide a unique name for your Windows Virtual Desktop tenant this will be used moving forward to identity the space in which you will deploy various host pools and resources.  
+
+1. From the same PowerShell with Administrator window enter the following, entering the **correct tenant name**.
 
 ```PowerShell
 New-RdsTenant -Name "yourWVDTenantNamehere" -AadTenantId $aadTenantId -AzureSubscriptionId $azureSubscriptionId
@@ -40,9 +50,11 @@ New-RdsTenant -Name "yourWVDTenantNamehere" -AadTenantId $aadTenantId -AzureSubs
 Adding resources to your tenant is a critical step, at this point we will define a **RDS Owner** role to deploy and maintain host pools moving forward. In many cases you would provision the same account as RDS Owner as you did for Tenant Creator to ensure those users can manage all aspects of the WVD Environment. Later we will provision individual user access as necessary.
 
 ```PowerShell
-New-RdsRoleAssignment -SignInName "myaccount@MyAADdomain.onmicrosoft.com" -RoleDefinitionName "RDS Owner" -TenantName "TenantNameFromAbove" -AadTenantId $aadTenantId
+New-RdsRoleAssignment -SignInName $SignInName -RoleDefinitionName "RDS Owner" -TenantName $TenantName -AadTenantId $aadTenantId
 ```
 
-![image.png](../attachments/image-7dc4466e-9279-44f6-b25f-24f1e5ebb646.png)
+![AddRoleToWVD](../attachments/AddRoleToWVD.png)
 
-### Return to [Prepare Phase Labs](prepare.md)
+Congrats! You have now completed the steps to prepare your Windows Virtual Desktop enviorment.  
+
+### Continue to the [Deploy Phase Labs](./deploy/deploy.md)
