@@ -28,9 +28,9 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
     * Desktop type: **Personal**
 
 5. Complete the **Configure virtual machines** tab with the following information:
-    * Total users: **2** 
+    * Total users: **2**
         >This will create 2 hosts and join them to AD and this pool.
-    * Virtual machine size: *Change Size* and select **B2s** 
+    * Virtual machine size: *Change Size* and select **B2s**
         >This size is fine for lab purposes but you would choose larger VMs for production.
     * Virtual machine name prefix: **WVDPers**
         >This prefix will be used in combination with the VM number to create the VM name. If using 'WVDPers' as the prefix, VMs would be named 'WVDPers-0', 'WVDPers-1', etc. You should use a unique prefix to reduce name collisions in Active Directory and in Windows Virtual Desktop.
@@ -56,7 +56,7 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
 
    ![ValidationFailed](../attachments/ValidationFailed.png)
 
-9. Select **Create.** to start your Host Pool Deployment.
+9. Select **Create** to start your Host Pool Deployment.
 
 10. You can watch the progress of the deployment.  Note that this will take about 15 minutes or so to complete, so it might be a good time to stretch your legs and take a break.
 
@@ -67,6 +67,22 @@ troubleshooting section on this guide.
 
     ![image](../attachments/d186f32593dbd7d350ec18940f547f8f.png)
 
-Congrats! You have successfully deployed a Personal Host Pool by default the Assignment Type for all Personal or Persistent Pools is set to Automatic. This means as users log in they will be assigned to a Host until there are no more host available. 
+Congrats! You have successfully deployed a Personal Host Pool!
+
+## Exercise 2- Connect with the Windows Desktop client
+
+1. Choose the client that matches your version of Windows:
+
+    * [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2068602)
+    * [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2098960)
+    * [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2098961)
+
+2. Complete a default installation and select the box for **Launch Remote Desktop when setup exits.**
+
+3. In the Remote Desktop client, click on **Subscribe**.
+
+4. When prompted enter your wvdadmin credentials (password is `Complex.Password`)
+   ![WVDCreds](../attachments/WVDCreds.png)
+5. Click **Yes** on the next screen and the **Done** on the following screen.
 
 ### Return to [Deploy Phase Labs](deploy.md)
