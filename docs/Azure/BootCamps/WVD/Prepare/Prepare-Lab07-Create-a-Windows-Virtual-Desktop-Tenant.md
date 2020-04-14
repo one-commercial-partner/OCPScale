@@ -31,7 +31,7 @@ $TenantName = "The name of your tenant"
    ```
 
 2. When prompted enter your wvdadmin credentials (password is `Complex.Password`)
-   ![WVDCreds](../attachments/WVDCreds.png)
+   ![WVDCreds](../attachments/WVDCreds.PNG)
 
 ## Exercise 3 - Provision your Windows Virtual Desktop Tenant
 
