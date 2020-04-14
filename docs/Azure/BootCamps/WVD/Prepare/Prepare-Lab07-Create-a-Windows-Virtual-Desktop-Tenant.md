@@ -62,3 +62,4 @@ New-RdsRoleAssignment -SignInName "myaccount@MyAADdomain.onmicrosoft.com" -RoleD
 
 ![image.png](../attachments/image-7dc4466e-9279-44f6-b25f-24f1e5ebb646.png)
 
+### Return to [Prepare Phase Labs](prepare.md)

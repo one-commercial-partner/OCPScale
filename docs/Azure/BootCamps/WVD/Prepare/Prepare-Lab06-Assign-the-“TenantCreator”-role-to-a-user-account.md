@@ -35,13 +35,11 @@ https://docs.microsoft.com/en-us/azure/virtual-desktop/tenant-setup-azure-active
 
     ![image.png](../attachments/image-2767bc82-4da0-4e0a-b827-38785ccbb761.png)
 
-
-
 6.  Select the user and hit **Select,** followed by **Assign**.
 
      Your user should now have the role of “TenantCreator.”
 
    ![image.png](../attachments/image-cf987e03-1951-4008-aac0-ab46a36392fa.png)
 
-
+### Return to [Prepare Phase Labs](prepare.md)
 
