@@ -76,7 +76,7 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 2. Review the screen and select **Use express settings**.
 3. On the **Connect to Azure AD** screen enter your **Azure AD Credentials**.  This would be the account you created when provisioning your Azure Active Directory with a password of `Complex.Password`.  Click **Next** and then confirm the credential are validated.
 
-   ![AzureADInfo](../../attachments/AzureADInfo.png)
+   ![AzureADInfo](../attachments/AzureADInfo.PNG)
 
 4. On the **Connect to AD DS screen**, enter the Active Directory Domain Services domain administrator credentials. This would be your domain name from entered in the GitHub template followed by **ADadmin** with a password of `Complex.Password` (e.g. wagswvd\adadmin). Click **Next** and confirm the credential are validated.  .com
 
