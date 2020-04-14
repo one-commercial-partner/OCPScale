@@ -18,4 +18,4 @@ To deploy Windows Virtual Desktop we need to gather some information from the cu
 
     ![SubscriptionID](../attachments/SubscriptionID.png)
 
-    ### Return to [Prepare Phase Labs](prepare.md)
+### Return to [Prepare Phase Labs](prepare.md)
