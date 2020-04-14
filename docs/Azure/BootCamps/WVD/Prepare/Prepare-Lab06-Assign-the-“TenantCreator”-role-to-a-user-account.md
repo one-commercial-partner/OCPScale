@@ -15,11 +15,10 @@ You can find more information here: [Assign the TenantCreator application role](
 
 3. Under **Getting Started** select **Assign Users and groups**.
 4. Select **Add user**, select **Users and groups**, and then select **WVD Admin**, the account we created in an earlier lab and granted  Global Admin rights to.
-5.  Select the user and hit **Select,** followed by **Assign**.
+5. Select the user and hit **Select,** followed by **Assign**.
 
      Your user should now have the role of “TenantCreator.”
 
    ![WVDAdminPermsGranted](../attachments/WVDAdminPermsGranted.png)
 
 ### Return to [Prepare Phase Labs](prepare.md)
-
