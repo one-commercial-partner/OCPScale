@@ -1,28 +1,24 @@
-# Lab 85: Deploy a Personal Host Pool
+# Lab 8: Deploy a Personal Host Pool
 
---------------------------------------------------------
-
-Now that we have provisioned a Windows Virtual Desktop Tenant, we can now deploy
-a Host Pool to publish resources to our users.
+Now that we have provisioned a Windows Virtual Desktop Tenant, we can now deploy a Host Pool to publish resources to our users.
 
 Your Windows Virtual Desktop tenant is the management space for Host Pools, one of the host pool types is Personal Hosts. This means that the Host will be statically assigned to a single user or multiple users. In this situation the user logs into the same host every single time. We treat Persistent host much the same way we do traditional workstations, since they are typically running 24/7, they need to be patched and maintained like a typical workstation.
 
 There are many ways to deploy a Personal Host Pool however we will focus on leveraging the Azure Marketplace. For more advanced deployments you can use ARM templates as is documented here: [Tutorial: Create a host pool by using the Azure Marketplace](https://docs.microsoft.com/en-us/azure/virtual-desktop/create-host-pools-azure-marketplace)
 
-## Exercise 1 - Provision a host pool
+## Exercise 1 - Provision a Personal Host Pool
 
-1.Browse to <https://portal.azure.com> and search for **Marketplace**.
+1. Return to the [Azure Portal](https://portal.azure.com) and search for **Marketplace**.
 
-![image](../attachments/4e91cf3c29be44f486c9b7428235071c.png)
+    ![image](../attachments/4e91cf3c29be44f486c9b7428235071c.png)
 
-2. While in the **marketplace** search for **Windows Virtual Desktop** and
-    Select **Provision a host pool**
+2. While in the **Marketplace** search for **Windows Virtual Desktop - Provision a host pool**
 
-![image](../attachments/8be16b1ed7e18681ce7554cf8c13bf57.png)
+    ![image](../attachments/8be16b1ed7e18681ce7554cf8c13bf57.png)
 
-3. Select the **Create** button to provision this service**.**
+3. Select the **Windows Virtual Desktop - Provision a host pool** and then click the **Create** button to provision this service**.**
 
- ![image](attachments/113f56372702b43ddc070d81b8ec36a9.png)
+    ![WVDProvisionHostPool](../attachments/WVDProvisionHostPool.png)
 
 ---
 
