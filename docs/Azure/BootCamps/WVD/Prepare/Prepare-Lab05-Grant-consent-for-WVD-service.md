@@ -1,6 +1,6 @@
-# Lab 5: Grant consent for WVD service
+# Lab 5: Grant consent for the Windows Virtual Desktop service
 
-Creating a tenant in Windows Virtual Desktop is the first step toward building your desktop virtualization solution. A (WVD) tenant is a group of one or more host pools. With a (WVD) tenant, you can build host pools, create app groups, assign users, and make connections through the service.
+Creating a tenant in Windows Virtual Desktop is the first step toward building your desktop virtualization solution. A Windows Virtual Desktop tenant is a group of one or more host pools. With a Windows Virtual Desktop  tenant, you can build host pools, create app groups, assign users, and make connections through the service.
 
 Before you can create a Windows Virtual Desktop tenant, you must allow Windows Virtual Desktop services to access your Azure AD tenant. The way Windows Virtual Desktop is designed requires explicit Azure AD consent. The process is much like how Azure requires you to enable non-standard resource providers before being able to use them.
 
