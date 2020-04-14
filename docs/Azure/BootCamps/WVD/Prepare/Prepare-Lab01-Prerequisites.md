@@ -13,7 +13,7 @@ Your will need an Azure subscription to complete the Windows Virtual Desktop lab
 * Visual Studio Enterprise subscription
 * IUR (Azure Use Rights) from your partner organization
 
-**Microsoft does not recommend using any Azure subscription that has production workloads or services.  Use a subscriptin that is designation for testing purposes only.**
+**Microsoft does not recommend using any Azure subscription that has production workloads or services.  Use a subscription that is designated for testing purposes only.**
 
 If you are using IUR, contact the subscription administrator at your partner organization.  The can provision your identity into the subscription and assign the appropriate rights.
 
