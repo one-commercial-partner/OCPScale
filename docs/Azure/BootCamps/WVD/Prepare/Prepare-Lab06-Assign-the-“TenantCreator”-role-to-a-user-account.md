@@ -19,6 +19,6 @@ You can find more information here: [Assign the TenantCreator application role](
 
      Your user should now have the role of “TenantCreator.”
 
-   ![WVDAdminPermsGranted](../attachments/WVDAdminPermsGranted.png)
+   ![WVDAdminPermsGranted](../attachments/WVDAdminPermsGranted.PNG)
 
 ### Return to [Prepare Phase Labs](prepare.md)
