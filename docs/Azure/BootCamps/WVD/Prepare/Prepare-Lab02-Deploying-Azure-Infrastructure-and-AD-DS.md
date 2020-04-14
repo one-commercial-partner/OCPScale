@@ -27,8 +27,8 @@ This ARM Template will provision the following resources:
    * Resource Group: *Create New* **WVDLab**
    * Location: Select an Azure region
       > Note:  Use this same region for the lab in it's entirety
-   * Admin Password: **Complex.Password**
-   * AD Domain Name: Enter a FQDN (e.g. MyWVDLabs.com) 
+   * Admin Password: `Complex.Password`
+   * AD Domain Name: Enter a FQDN (e.g. MyWVDLabs.com)
       >Please write down what you enter!
    * CustomUPNSuffix: *Enter the name of your Azure AD Domain name (e.g. WVDJPWLab.onmicrosoft.com)*
    * Default User Password: **Complex.Password**
