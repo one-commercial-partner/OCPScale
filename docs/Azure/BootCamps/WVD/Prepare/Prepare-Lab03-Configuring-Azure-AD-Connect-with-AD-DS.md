@@ -98,3 +98,5 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
     ![PreReqs-Ex04004.png](../attachments/PostSyncUsers.png)
 
     > **Note:** It can take up to 15 minutes for the Active Directory objects to be synchronized to the Azure AD tenant.
+
+### Return to [Prepare Phase Labs](prepare.md)
