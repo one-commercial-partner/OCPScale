@@ -97,6 +97,5 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
 
 ### Return to [Deploy Phase Labs](deploy.md)
 
-
 Complete a default installation and select the box for **Launch Remote Desktop when setup exits.**
 3. In the Remote Desktop client, click on **Subscribe**.
