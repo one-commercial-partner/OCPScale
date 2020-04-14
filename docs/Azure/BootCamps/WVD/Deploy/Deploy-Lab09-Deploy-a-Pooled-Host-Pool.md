@@ -11,7 +11,7 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
 
 2. While in the **Marketplace** search for **Windows Virtual Desktop - Provision a host pool**
 
-    ![image](../attachments/8be16b1ed7e18681ce7554cf8c13bf57.png)
+    ![image](../attachments/8be16b1ed7e18681ce7554cf8c13bf57.PNG)
 
 3. Select the **Windows Virtual Desktop - Provision a host pool** and then click the **Create** button to provision this service.
 
