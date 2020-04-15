@@ -81,7 +81,7 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
 4. Open PowerShell and enter the following command:
 
     ```Powershell
-    Add-RdsAppGroupUser <enteryourtenantname> PersonalPool "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourdomain>.onmicrosoft.com
+    Add-RdsAppGroupUser <enteryourtenantname> -HostPoolName <enter host pool name> -AppGroupName "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourdomain>.onmicrosoft.com
     ```
 
 ## Exercise 3 - Connect with the Windows Desktop client
