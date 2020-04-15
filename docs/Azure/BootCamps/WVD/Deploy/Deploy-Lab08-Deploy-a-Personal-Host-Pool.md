@@ -84,21 +84,4 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
     Add-RdsAppGroupUser <enteryourtenantname> -HostPoolName <enter host pool name> -AppGroupName "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourdomain>.onmicrosoft.com
     ```
 
-## Exercise 3 - Connect with the Windows Desktop client
-
-1. Choose the client that matches your version of Windows:
-    * [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2068602)
-    * [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2098960)
-    * [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2098961)
-2. Complete a default installation and select the box for **Launch Remote Desktop when setup exits.**
-3. In the Remote Desktop client, click on **Subscribe**.
-4. When prompted enter the credentials for Bob Jones:
-    * Username: `Bob.Jones@yourdomain.onmicrosoft.com`
-    * Password: `Complex.Password`
-5. Click **Yes** on the next screen and the **Done** on the following screen.
-6. Click on the icon for Personal Pool.
-7. When prompted, enter the password: `Complex.Password`.
-8. Once connected, change the desktop background to a different picture.
-9. Disconnect from the session.
-
 ### Return to [Deploy Phase Labs](deploy.md)

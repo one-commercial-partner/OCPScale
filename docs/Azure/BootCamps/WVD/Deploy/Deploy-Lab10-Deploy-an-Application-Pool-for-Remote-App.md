@@ -7,7 +7,7 @@ The default app group created for a new Windows Virtual Desktop host pool also p
 1. Run the following PowerShell cmdlet to create a new empty RemoteApp app group.
 
    ```powershell
-   New-RdsAppGroup -TenantName <youtenantname> -HostPoolName <yourhostpool> -Name RemoteApp
+   New-RdsAppGroup -TenantName <yourtenantname> -HostPoolName <yourhostpool> -Name RemoteApp
    ```
 
 2. (Optional) To verify that the app group was created, you can run the following cmdlet to see a list of all app groups for the host pool.

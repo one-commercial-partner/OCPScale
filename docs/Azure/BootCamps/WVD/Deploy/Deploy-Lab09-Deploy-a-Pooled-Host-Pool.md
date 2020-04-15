@@ -81,20 +81,4 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
     Add-RdsAppGroupUser <enteryourtenantname> PooledPool "Desktop Application Group" -UserPrincipalName Julia.Williams@<yourdomain>.onmicrosoft.com
     ```
 
-## Exercise 3 - Connect with the Windows Virtual Desktop web client
-
-1. In a browser, navigate to the [Windows Virtual Desktop web client](https://rdweb.wvd.microsoft.com/webclient).
-2. When prompted enter the credentials for Julia Williams:
-    * Username: Julia.Williams@`yourdomain`.onmicrosoft.com
-    * Password: `Complex.Password`
-    > **NOTE:** These credentials are to logon and authenticate to the Windows Virtual Desktop Service.
-3. Click on the icon for PooledPool.
-4. Click **Allow** on the **Access local resources** window.
-5. When prompted enter the following credentials:
-    * Username: wvdadmin@`yourADdomain`
-    * Password: `Complex.Password`
-    > **NOTE:** These credentials are to logon to a computer in the pool.
-6. Once connected, change the desktop background to a different picture.
-7. Disconnect from the session.
-
 ### Return to [Deploy Phase Labs](deploy.md)
