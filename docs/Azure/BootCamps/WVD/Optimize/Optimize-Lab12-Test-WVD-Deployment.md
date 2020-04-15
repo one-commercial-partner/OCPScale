@@ -33,7 +33,6 @@
 6. Once connected, change the desktop background to a different picture.
 7. Disconnect from the session.
 
-
 ## Exercise 3 - Host Pool Validation Tag
 
 By default, the WVD agent on each host will auto update as new versions release. You can prevent this behavior by setting the **ValidationEng** flag in a host pool to true (by default it’s set to false). With the ValidationEng flag set to true ONLY the host in that host pool will auto update giving administrators control to test new WVD host images, and the newest agents before rolling to production.
