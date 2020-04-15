@@ -10,7 +10,8 @@ about how to prepare a virtual machine to act as a file share for user profiles:
 
 2. In Active Directory Users and Computer (ADUC) navigate to the **OrgUsers**
     OU. Create a **New Global Group** with a Group Type of **Security** called **WVD**.
-    ![WVDGlobalGroup](../attachments/WVDGlobalGroup.png)
+
+    ![WVDGlobalGroup](../attachments/WVDGlobalGroup.PNG)
 
 3. Add the four AD users from the ORGUsers OU into the new group called **WVD**
 
