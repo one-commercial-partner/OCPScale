@@ -35,7 +35,6 @@ Read the following to prepare for this section of the exam:
 
 [Testing Azure applications for resiliency and availability](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/testing)
 
-
 * design for application redundancy||
 * design for autoscaling
 * design for data center and fault domain redundancy
@@ -57,6 +56,5 @@ Read the following to prepare for this section of the exam:
 |identify requirements for data archiving|[Backup and archive SOlution Architectures](https://azure.microsoft.com/en-us/solutions/backup-archive/#references)|
 |identify SLA(s) for data archiving|[SLA for Storage Accounts](https://azure.microsoft.com/en-us/support/legal/sla/storage/v1_2/)|
 | |[Azure Blob storage: hot, cool, and archive access tiers](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers?tabs=azure-portal)|
-
 
 [Back](index.md)
