@@ -2,7 +2,7 @@
 
 The following lab walks through the deployment of a basic Management UI that has been available via Github.
 
-This management tool is a sample. Microsoft will provide important security and quality updates. The source code is available in GitHub at [https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux/deploy](). 
+This management tool is a sample. Microsoft will provide important security and quality updates. The source code is available in GitHub at [https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux/deploy](https://github.com/Azure/RDS-Templates/tree/master/wvd-templates/wvd-management-ux/deploy). 
 
 Customers and partners are encouraged to customize the tool to fit their business needs.
 
