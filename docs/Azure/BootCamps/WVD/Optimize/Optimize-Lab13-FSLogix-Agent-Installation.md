@@ -13,21 +13,23 @@ about how to prepare a virtual machine to act as a file share for user profiles:
 
     ![WVDGlobalGroup](../attachments/WVDGlobalGroup.PNG)
 
-3. Add the four AD users from the ORGUsers OU into the new group called **WVD**
+3. Add the users from the ORGUsers OU into the new group called **WVD**.
 
-4. This security group will be used to authenticate the Windows Virtual Desktop
-    users to the file share virtual machine you just created.
+    ![WVDGroupMembers](../attachments/WVDGroupMembers.PNG)
 
-5. On the domain controller create a folder on the **C drive** called
-    **WVDFSPROF** that will be used as the profile share.
+    > This security group will be used to authenticate the Windows Virtual Desktop users to the file share virtual machine you just created.
 
-6. Right-click the new folder, select **Properties**, select **Sharing**, then select **Advanced sharing...**.
+4. Open File Explorer on the domain controller and create a folder on the C: drive called **WVDFSPROF** that will be used as the profile share.
 
-7. Select **Share this folder**, select **Permissions...**, then select
+5. Right-click WVDFSPROF, select **Properties**, select **Sharing**, then select **Advanced sharing...**.
+
+6. Select **Share this folder**, select **Permissions...**, then select
     **Add...**.
 
-8. Search for the **WVD** group to which you added the Windows Virtual Desktop
+7. Search for the **WVD** group to which you added the Windows Virtual Desktop
     users, then make sure that group has **Full Control**.
+
+    ![WVDSharePerms](../attachments/WVDSharePerms.PNG)
 
 9. After adding the security group, right-click the folder, select
     **Properties**, select **Sharing**, then copy down the **Network Path** to     use for later.
