@@ -1,46 +1,62 @@
 # Design a Business Continuity Strategy (15-20%)
 
-*Consider completing this course on OpenEdx: [Designing for Deployment, Migration, and Integration](https://openedx.microsoft.com/courses/course-v1:Microsoft+AZ-301.3+2019_T1/course/).*
-
-*Also consider reading the [Disaster recovery for Azure applications](https://docs.microsoft.com/en-us/azure/architecture/resiliency/disaster-recovery-azure-applications).*
-
 ## Design a Site Recovery Strategy
-May include but not limited to: Design a recovery solution; design a site recovery replication policy; design for site recovery capacity and for storage replication; design site failover and failback (planned/unplanned); design the site recovery network; recommend recovery objectives (e.g., Azure, on-prem, hybrid, Recovery Time Objective (RTO), Recovery Level Objective (RLO), Recovery Point Objective (RPO)); identify resources that require site recovery; identify supported and unsupported workloads; recommend a geographical distribution strategy
 
 Read the [Azure Site Recovery Overview](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview) and [Design a recovery solution](https://docs.microsoft.com/en-us/azure/architecture/resiliency/disaster-recovery-azure-applications) articles.
 
-* [Design a site recovery replication policy](https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-set-up-replication)
-[Design for site recovery capacity and for storage replication](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-plan-capacity-vmware)
-* [Design site failover and failback (planned/unplanned)](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-create-recovery-plans)
-* Design the site recovery Network
-    * [Azure to Azure](https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-about-networking)
-    * [Azure Traffic Manager with Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/concepts-traffic-manager-with-site-recovery)
-    * [Azure ExpressRoute with Azure Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/concepts-expressroute-with-site-recovery)
-    * [Network Security Groups with Azure Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/concepts-network-security-group-with-site-recovery)
-    * [Setup public IP addresses after failover](https://docs.microsoft.com/en-us/azure/site-recovery/concepts-public-ip-address-with-site-recovery)
-* Recommend recovery objectives (e.g., Azure, on-prem, hybrid, Recovery Time Objective (RTO) Recovery Level Objective (RLO), Recovery Point Objective (RPO))  
-    * [About Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview)
-    * [Recovery Level Objective (RLO), Recovery Point Objective (RPO))](https://docs.microsoft.com/en-us/azure/architecture/resiliency/)
-    * [Identify resources that require site recovery](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
-    * [Identify supported and unsupported workloads; recommend a geographical distribution strategy](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/massively-parallel-processing-mpp-architecture)
-    * [Best practices for Azure SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-best-practices)
+| Topic | Link |
+| - | - |
+|design a recovery solution|[About Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview)|
+| |[General questions about Azure Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-faq)
+| design a site recovery replication policy|[Configure and manage replication policies for VMware disaster recovery](https://docs.microsoft.com/en-us/azure/site-recovery/vmware-azure-set-up-replication)|
+| design for site recovery capacity|[Plan capacity and scaling for VMware disaster recovery to Azure](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-plan-capacity-vmware)|
+| design for storage replication|[Design site failover and failback (planned/unplanned)](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-create-recovery-plans)|
+|design site failover and failback|[Fail over and reprotect Azure VMs between regions](https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-failover-failback)|
+| |[Failback of VMware VMs after disaster recovery to Azure](https://docs.microsoft.com/en-us/azure/site-recovery/concepts-types-of-failback)|
+|design the site recovery Network|Read all sections of: [About networking in Azure VM disaster recovery](https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-about-networking)|
+|recommend recovery objectives (Azure, on-prem, hybrid, Recovery Time Objective (RTO), Recovery Level Objective (RLO), Recovery Point Objective (RPO))| [About Site Recovery](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview)|
+| |[Overview of the resiliency pillar](https://docs.microsoft.com/en-us/azure/architecture/resiliency/)|
+|identify resources that require site recovery|[Identify resources that require site recovery](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)|
+|identify supported and unsupported workloads|Visit [Azure Site Recovery documentation](https://docs.microsoft.com/en-us/azure/site-recovery/) and search for "support" to review all support matrices
+|recommend a geographical distribution strategy|[Move Azure VMs to another region](https://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-migrate)|
+|Experiential Learning|[Protect your on-premises infrastructure from disasters with Azure Site Recovery](https://docs.microsoft.com/en-us/learn/modules/protect-on-premises-infrastructure-with-azure-site-recovery/)|
+| |[Protect your Azure infrastructure with Azure Site Recovery](https://docs.microsoft.com/en-us/learn/modules/protect-infrastructure-with-site-recovery/)|
+| |[Design your site recovery solution in Azure](https://docs.microsoft.com/en-us/learn/modules/design-your-site-recovery-solution-in-azure/)
 
-## Design for High Availability 
-May include but not limited to: Design for application redundancy, autoscaling, data center and fault domain redundancy, and network redundancy; identify resources that require high availability; identify storage types for high availability
+## Design for High Availability
 
-Read the [Availability Checklist](https://docs.microsoft.com/en-us/azure/architecture/checklist/availability)
-* [Design for application redundancy](https://docs.microsoft.com/en-us/azure/architecture/checklist/resiliency)
-* [Autoscaling](https://docs.microsoft.com/en-us/azure/architecture/best-practices/auto-scaling)
-* [Data center and fault domain redundancy](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability)
-* [Identify resources that require high availability](https://docs.microsoft.com/en-us/azure/architecture/checklist/resiliency-per-service)
-* [Identify storage types for high availability](https://docs.microsoft.com/en-us/azure/architecture/checklist/resiliency)
+Read the following to prepare for this section of the exam:
+
+[Overview of the resiliency pillar](https://docs.microsoft.com/en-us/azure/architecture/checklist/resiliency)
+
+[Resiliency checklist for specific Azure services](https://docs.microsoft.com/en-us/azure/architecture/checklist/resiliency-per-service)
+
+[Using business metrics to design resilient Azure applications](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics)
+
+[Testing Azure applications for resiliency and availability](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/testing)
+
+
+* design for application redundancy||
+* design for autoscaling
+* design for data center and fault domain redundancy
+* design for network redundancy
+* identify resources that require high availability
+* identify storage types for high availability
+* design a disaster recovery strategy for individual workloads
+* design failover/failback scenarios
+* document recovery requirements
+* identify resources that require backup
+* recommend a geographic availability strategy
 
 ## Design a Data Archiving Strategy
-May include but not limited to: Recommend storage types and methodology for data archiving; identify requirements for data archiving and business compliance requirements for data archiving; identify SLA(s) for data archiving.
 
-* [Recommend storage types and methodology for data archiving](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers)
-* [Identify requirements for data archiving and business compliance requirements for data archiving](https://docs.microsoft.com/en-us/azure/storage/common/storage-compliance-offerings)
-* [Identify SLA(s) for data archiving](https://azure.microsoft.com/en-us/support/legal/sla/storage/v1_2/)
+| Topic | Link |
+| - | - |
+|recommend storage types and methodology for data archiving|[Azure Blob storage: hot, cool, and archive access tiers](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers)|
+|identify business compliance requirements for data archiving|[Azure Storage compliance offerings](https://docs.microsoft.com/en-us/azure/storage/common/storage-compliance-offerings)|
+|identify requirements for data archiving|[Backup and archive SOlution Architectures](https://azure.microsoft.com/en-us/solutions/backup-archive/#references)|
+|identify SLA(s) for data archiving|[SLA for Storage Accounts](https://azure.microsoft.com/en-us/support/legal/sla/storage/v1_2/)|
+| |[Azure Blob storage: hot, cool, and archive access tiers](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers?tabs=azure-portal)|
 
 
 [Back](index.md)
