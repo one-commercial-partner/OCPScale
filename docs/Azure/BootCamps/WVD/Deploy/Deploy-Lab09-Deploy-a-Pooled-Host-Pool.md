@@ -15,7 +15,7 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
 
 3. Select the **Windows Virtual Desktop - Provision a host pool** and then click the **Create** button to provision this service.
 
-    ![WVDProvisionHostPool](../attachments/WVDProvisionHostPool.png)
+    ![WVDProvisionHostPool](../attachments/WVDProvisionHostPool.PNG)
 
 4. Complete the **Basics** tab with the following information:
     * Resource Group: **WVDLab**
@@ -53,7 +53,7 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
 
 8. Select **Next: Review + Create**. Wait for a **Validation Passed,** and if you get a failure examine the **Activity log** in the Azure portal and resolve the failure.
 
-   ![ValidationFailed](../attachments/ValidationFailed.png)
+   ![ValidationFailed](../attachments/ValidationFailed.PNG)
 
 9. Select **Create** to start your Host Pool Deployment.
 
