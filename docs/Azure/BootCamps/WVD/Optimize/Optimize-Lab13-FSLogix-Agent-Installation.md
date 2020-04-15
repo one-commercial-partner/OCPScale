@@ -1,63 +1,55 @@
 # Lab 13: FSLogix Agent Installation
 
-## Task 1: Prepare the virtual machine to act as a file share for user profiles
+## Exercise 1 - Prepare the virtual machine to act as a file share for user profiles
 
 The following are [general
 instructions](https://docs.microsoft.com/en-us/azure/virtual-desktop/create-host-pools-user-profile)
 about how to prepare a virtual machine to act as a file share for user profiles:
 
-1.  If you still have the previous RDP session to the domain controller please
-    maximize that session. If not, then please refer to Exercise 4 task 1 to
-    find the Public IP of your DC.
+1. Open the RDP session to the domain controller.
 
-2.  In Active Directory Users and Computer (ADUC) navigate to the **OrgUsers**
-    OU. Create a **New Global Group** with a Group Type of **Security** called
-    **WVD**.
+2. In Active Directory Users and Computer (ADUC) navigate to the **OrgUsers**
+    OU. Create a **New Global Group** with a Group Type of **Security** called **WVD**.
+    ![WVDGlobalGroup](../attachments/WVDGlobalGroup.png)
 
-3.  Add the four AD users from the ORGUsers OU into the new group called **WVD**
+3. Add the four AD users from the ORGUsers OU into the new group called **WVD**
 
-4.  This security group will be used to authenticate the Windows Virtual Desktop
+4. This security group will be used to authenticate the Windows Virtual Desktop
     users to the file share virtual machine you just created.
 
-5.  On the domain controller create a folder on the **C drive** called
+5. On the domain controller create a folder on the **C drive** called
     **WVDFSPROF** that will be used as the profile share.
 
-6.  Right-click the new folder, select **Properties**, select **Sharing**, then
-    select **Advanced sharing...**.
+6. Right-click the new folder, select **Properties**, select **Sharing**, then select **Advanced sharing...**.
 
-7.  Select **Share this folder**, select **Permissions...**, then select
+7. Select **Share this folder**, select **Permissions...**, then select
     **Add...**.
 
-8.  Search for the **WVD** group to which you added the Windows Virtual Desktop
+8. Search for the **WVD** group to which you added the Windows Virtual Desktop
     users, then make sure that group has **Full Control**.
 
-9.  After adding the security group, right-click the folder, select
-    **Properties**, select **Sharing**, then copy down the **Network Path** to
-    use for later.
+9. After adding the security group, right-click the folder, select
+    **Properties**, select **Sharing**, then copy down the **Network Path** to     use for later.
 
-#### Task 2: Installing the FSLogix agent 
+## Exercise 2 - Installing the FSLogix agent
 
-Installing the FSLogix agent can be done a few different ways. In this exercise
-we will install it via double hop RDP method where we will leverage the existing
-RDP session to the domain controller and then from there RDP into the session
-hosts to install the agent.
+Installing the FSLogix agent can be done a few different ways. In this exercise we will install it via double hop RDP method where we will leverage the existing RDP session to the domain controller and then from there RDP into the session hosts to install the agent.
 
-1.  From within the RDP session of the domain controller open **MSTSC.**
+1. From within the RDP session of the domain controller open **MSTSC.**
     Establish an RDP session to the first session host which should be 10.0.1.5,
     however you should verify the IP is correct by locating it in the Azure
     portal.
 
-2.  Login with the domain administrator credentials **MyADDomain\\adadmin** and
-    password of **WVD\@zureL\@b2019!**
+2. Login with the domain administrator credentials **MyADDomain\\adadmin** and password of **WVD\@zureL\@b2019!**
 
-3.  In the previous labs the end user Bob Jones was able to login to the session
+3. In the previous labs the end user Bob Jones was able to login to the session
     host. Once that user logged in a locally cached profile was created. For the
     FSLogix profile container to take priority over the locally cached profile,
     you will need to **Delete** the locally cached profile for user
     **C:\\Users\\BJones**. *Note: You may need to stop the Windows Search
     service prior to deleting the profile.*
 
-4.  Launch an internet browser and navigate t[o this
+4. Launch an internet browser and navigate t[o this
     link](https://docs.microsoft.com/fslogix/install-ht) to download the FSLogix
     agent.
 
