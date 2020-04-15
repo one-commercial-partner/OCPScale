@@ -35,7 +35,7 @@ Read the following to prepare for this section of the exam:
 
 [Testing Azure applications for resiliency and availability](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/testing)
 
-* design for application redundancy||
+* design for application redundancy
 * design for autoscaling
 * design for data center and fault domain redundancy
 * design for network redundancy
