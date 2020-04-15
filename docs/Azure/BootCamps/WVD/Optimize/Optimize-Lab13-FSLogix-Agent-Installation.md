@@ -126,3 +126,5 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
 8. Your should see a new folder for the profile of Bob Jones.
 
     ![BobJonesProfileonDC](../attachments/BobJonesProfileonDC.PNG)
+
+### Return to [Optimize Phase Labs](optimize.md)
