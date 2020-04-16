@@ -1,4 +1,4 @@
-# Lab 2: Deploying Azure Infrastructure and AD DS
+# Lab 3: Deploying Azure Infrastructure and AD DS
 
 In this exercise you will leverage a custom Azure Resource Manager (ARM) template to deploy the required Active Directory Domain Services infrastructure for WVD.
 

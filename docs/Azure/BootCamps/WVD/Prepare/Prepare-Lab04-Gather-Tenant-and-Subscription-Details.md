@@ -1,4 +1,4 @@
-# Lab 3: Gather Tenant & Subscriptions ID
+# Lab 2: Gather Tenant & Subscriptions ID
 
 To deploy Windows Virtual Desktop we need to gather some information from the customers or our own lab environment. Some of this information includes the Azure Active Directory Tenant ID of the Environment we are deploying WVD, as well as the Subscription ID we plan to provision the WVD Service under.
 
