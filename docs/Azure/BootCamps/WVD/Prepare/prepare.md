@@ -10,9 +10,9 @@ In the first phase, **Prepare**, we’ll walk through provisioning the required 
 
 Lab 1: [Windows Virtual Desktop Prerequisties](Prepare-Lab01-Prerequisites.md)
 
-Lab 2: [Deploying Azure Infrastructure and AD-DS](Prepare-Lab02-Deploying-Azure-Infrastructure-and-AD-DS.md)
+Lab 2: [Gather Tenant and Subscription Details](Prepare-Lab04-Gather-Tenant-and-Subscription-Details.md)
 
-Lab 3: [Gather Tenant and Subscription Details](Prepare-Lab04-Gather-Tenant-and-Subscription-Details.md)
+Lab 3: [Deploying Azure Infrastructure and AD-DS](Prepare-Lab02-Deploying-Azure-Infrastructure-and-AD-DS.md)
 
 Lab 4: [Configuring Azure AD Connect with AD-DS](Prepare-Lab03-Configuring-Azure-AD-Connect-with-AD-DS.md)
 
