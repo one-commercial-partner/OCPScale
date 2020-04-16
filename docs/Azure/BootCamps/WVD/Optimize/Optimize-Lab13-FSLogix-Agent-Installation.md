@@ -1,10 +1,8 @@
 # Lab 13: FSLogix Agent Installation
 
-## Exercise 1 - Prepare the virtual machine to act as a file share for user profiles
+In this lab you will install and configure FSLogix to utilize a share on your domain controller to host user profiles.
 
-The following are [general
-instructions](https://docs.microsoft.com/en-us/azure/virtual-desktop/create-host-pools-user-profile)
-about how to prepare a virtual machine to act as a file share for user profiles:
+## Exercise 1 - Prepare the virtual machine to act as a file share for user profiles
 
 1. Open the RDP session to the domain controller.
 

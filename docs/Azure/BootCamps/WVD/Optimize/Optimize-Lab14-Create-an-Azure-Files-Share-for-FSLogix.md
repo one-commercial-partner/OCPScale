@@ -1,11 +1,6 @@
 # Lab 14: Create an Azure Files Share for FSLogix
 
-In this exercise you will be creating an Azure Files share and enabling Active Directory authentication for use in your WVD tenant. Azure Files is a platform service (PaaS) and is the recommended for hosting FSLogix containers for WVD users. At the end of this exercise you will have the following components:
-
-* A new storage account in your Azure subscription.
-* A new Azure file share for your FSLogix profile containers.
-* AD authentication enabled for your Azure storage account.
-* Permissions applied for user access to the file share.
+In this exercise you will be creating an Azure Files share and enabling Active Directory authentication for use in your Windows Virtual Desktop tenant. You will then have user profiles be stored on Azure Files.
 
 ## Exercise 1 - Create a storage account
 
@@ -64,7 +59,7 @@ Connect-AzAccount
 #Select the target subscription for the current session
 Select-AzSubscription -SubscriptionId "<your-subscription-id-here>"
 
-# Register the target storage account with your active directory environment under the target OU (for example: specify the OU with Name as "UserAccounts" or DistinguishedName as "OU=UserAccounts,DC=CONTOSO,DC=COM"). 
+# Register the target storage account with your active directory environment under the target OU (for example: specify the OU with Name as "UserAccounts" or DistinguishedName as "OU=UserAccounts,DC=CONTOSO,DC=COM").
 # You can use to this PowerShell cmdlet: Get-ADOrganizationalUnit to find the Name and DistinguishedName of your target OU. If you are using the OU Name, specify it with -OrganizationalUnitName as shown below. If you are using the OU DistinguishedName, you can set it with -OrganizationalUnitDistinguishedName.
 # You can choose to create the identity that represents the storage account as either a Service Logon Account or Computer Account, depends on the AD permission you have and preference.
 Join-AzStorageAccountForAuth `
