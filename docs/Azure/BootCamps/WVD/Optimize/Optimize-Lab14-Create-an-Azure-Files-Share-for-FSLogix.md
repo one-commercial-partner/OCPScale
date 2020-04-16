@@ -39,25 +39,10 @@ To create a general-purpose v2 storage account in the Azure portal, follow these
 
 ## Exercise 3 - Enable AD authentication for your storage account
 
-To enable AD authentication over SMB for Azure file shares, you need to first register your storage account with AD and then set the required domain properties on the storage account. When the feature is enabled on the storage account, it applies to all new and existing file shares in the account. Use `join-AzStorageAccountForAuth` to enable the feature. You can find the detailed description of the end-to-end workflow in the section below.
+To enable AD authentication over SMB for Azure file shares, you need to first register your storage account with AD and then set the required domain properties on the storage account. When the feature is enabled on the storage account, it applies to all new and existing file shares in the account.
 
-You can use the following script to perform the registration and enable the feature.
-
-### Check prerequisites
-
-1. From your domain controiller download and unzip the [AzFilesHybrid module](https://github.com/Azure-Samples/azure-files-samples/releases).
-2. Open Windows PowerShell (**Start** -> **Windows PowerShell**) and switch to the **C:\Users\adadmin\Documents\AzFilesHybrid** folder.
-3. Execute the following:
-
-   ```PowerShell
-   .\AzFilesHybrid.psm1
-   ```
-
-4. At the Security Warning click **Open**
-
-Install and execute the module on a device that is domain joined to AD with AD credentials that have permissions to create a service logon account or a computer account in the target AD.
-3. Run the script using an AD credential that is synced to your Azure AD. The AD credential must have either the storage account owner or the contributor RBAC role permissions.
-*4. Make sure your storage account is in a [supported region](#regional-availability).
+1. In the Azure Portal, select your storage account.
+2. Select **Configuration** from the left pane under **Settings**, then enable Identity-based access for file shares Azure Active Directory Domain Service (AAD DS) in the main pane. Confirm this change by selecting Save.
 
 ### Domain join your storage account
 
