@@ -6,7 +6,7 @@ Lab 12: [Test WVD Deployment](Optimize-Lab12-Test-WVD-Deployment.md)
 
 Lab 13: [FSLogix Agent Installation](Optimize-Lab13-FSLogix-Agent-Installation.md)
 
-## Under Development
+## Under Development - Use at Own Risk
 
 The following labs are going through final QA testing and will be available shortly.  Feel free to glance at the contents however the actual exercises themselves have not been fully validated.
 
