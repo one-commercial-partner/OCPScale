@@ -1,6 +1,6 @@
 # Lab 12: Test Your WVD Deployment
 
-In this lab your will validate the personal and Pooled Windows Virtual Desktop pools that you created by connecting to them via the Windows Desktop CLient and the Web Client.
+In this lab your will validate the personal and Pooled Windows Virtual Desktop pools that you created by connecting to them via the Windows Desktop Client and the Web Client.
 
 ## Exercise 1 - Connect with the Windows Desktop client
 
