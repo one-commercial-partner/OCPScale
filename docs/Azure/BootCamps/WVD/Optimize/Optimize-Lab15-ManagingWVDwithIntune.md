@@ -59,9 +59,7 @@ We will be using the  Azure App Service to buy a custom domain.  Your app's App 
     ![CustomDomainRecords](../attachments/CustomDomainRecords.PNG)
 6. Continue to add the TXT, CNAME, and MX records to Azure DNS.
 
-## Exercise 2 - Sign in and Configure InTune
-
-### Assign Licenses
+## Exercise 2 - Assign Licenses
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), complete the following steps:
 
@@ -73,7 +71,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink
 3. Choose **Save** and then repeat the steps for **Julia Williams**.
     > If you get the error `License cannot be assigned to a user without a usage location specified.`, return to the user and under **Manage** click on **Profile** and then under **Settings** click **edit** and set their **uasge location** to the **United States** and click **Save**.  Repeat the steps to assign the license.
 
-### Create a group
+## Exercise 3 - Create a group
 
 You will create a group that will be used manage objects. To create a group:
 
@@ -86,13 +84,12 @@ You will create a group that will be used manage objects. To create a group:
     * Bob Jones
     * Julia Williams
     * `yourself` as the tenant administator
-7. CLick **Select**
-8. Assign yourself as the tent administrator as the Owner.
-9. Click **Create**/
+7. Click **Select** and then assign yourself (the tenant administrator) as the Owner.
+8. Click **Create**
 
     ![IntuneNewGroup](../attachments/IntuneNewGroup.PNG)
 
-### Set up Windows 10 automatic enrollment
+## Exercise 4 - Set up Windows 10 automatic enrollment
 
 1. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) select **Devices**.  Under **Device enrollment** select **Enroll devices** and then select **Automatic Enrollment**.
 2. Select **Some** from the MDM user scope to use MDM auto-enrollment.
@@ -100,6 +97,11 @@ You will create a group that will be used manage objects. To create a group:
 4. Under MAM User scope click on **SOme**.
 5. Find **Windows Virtual Desktops** and click **Select**.
 6. Use the default values for the remaining configuration values and choose **Save**.
+
+## Exercise 5 - Enroll your Windows 10 device
+
+1. From your desktop, open the Remote Desktop client and select **PersonalPool**.
+2. When prompted enter the credentials for Bob Jones.
 
 
 ### Return to [Optimize Phase Labs](optimize.md)
