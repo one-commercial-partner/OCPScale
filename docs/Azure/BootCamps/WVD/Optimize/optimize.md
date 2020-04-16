@@ -11,4 +11,4 @@ Lab 12: [Test WVD Deployment](Optimize-Lab12-Test-WVD-Deployment.md)
 
 Lab 13: [FSLogix Agent Installation](Optimize-Lab13-FSLogix-Agent-Installation.md)
 
-Back to [Main Page](../index.md)
+## Back to [Technical Intensity Workshop - Windows Virtual Desktop Labs](../index.md)

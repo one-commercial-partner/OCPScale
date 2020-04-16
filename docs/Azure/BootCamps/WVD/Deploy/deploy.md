@@ -12,4 +12,4 @@ Lab 9: [Deploy a Pooled Host Pool](Deploy-Lab09-Deploy-a-Pooled-Host-Pool.md)
 
 Lab 10: [Deploy an Application Pool for Remote App](Deploy-Lab10-Deploy-an-Application-Pool-for-Remote-App.md)
 
-Back to [Main Page](../index.md)
+## Back to [Technical Intensity Workshop - Windows Virtual Desktop Labs](../index.md)
