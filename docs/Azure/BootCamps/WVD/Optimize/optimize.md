@@ -6,11 +6,13 @@ Lab 12: [Test WVD Deployment](Optimize-Lab12-Test-WVD-Deployment.md)
 
 Lab 13: [FSLogix Agent Installation](Optimize-Lab13-FSLogix-Agent-Installation.md)
 
+Lab 15: [Managing WVD with Intune](Optimize-Lab15-ManagingWVDwithIntune.md)
+
 ## Under Development
 
-Lab 14: [Create an Azure Files Share for FSLogix](Optimize-Lab14-Create-an-Azure-Files-Share-for-FSLogix.md)
+The following labs are going through final QA testing and will be available shortly.  Feel free to glance at the contents however the actual exercises themselves have not been fully validated.
 
-Lab 15: [Managing WVD with Intune](Optimize-Lab15-ManagingWVDwithIntune.md)
+Lab 14: [Create an Azure Files Share for FSLogix](Optimize-Lab14-Create-an-Azure-Files-Share-for-FSLogix.md)
 
 Lab 16: [Install Management UI](Optimize-Lab16-Install-Management-UI.md)
 
