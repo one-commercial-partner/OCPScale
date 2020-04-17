@@ -1,4 +1,4 @@
-# Lab 7: Create a Windows Virtual Desktop Tenant
+# Lab 6: Create a Windows Virtual Desktop Tenant
 
 After assigning Tenant Creator role to your account you are now ready to provision your Windows Virtual Desktop Tenant. This is currently only achievable via PowerShell. Be sure to have the **Azure AD Tenant ID** and the **Subscription ID** collected earlier as you will use them to provision your tenant.
 

@@ -1,4 +1,4 @@
-# Lab 3: Deploying Azure Infrastructure
+# Lab 2: Deploying Azure Infrastructure
 
 In this exercise you will leverage a custom Azure Resource Manager (ARM) template to deploy the required Active Directory Domain Services infrastructure for Windows Virtual Desktop.
 

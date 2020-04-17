@@ -1,10 +1,6 @@
 # Phase 2: Deploy Window Virtual Desktop
 
-In the second phase, Deploy, we’ll create and customize your first host pool:
-
-- Find Windows Virtual Desktop in the Azure Marketplace
-- Follow the six-step process and options to provision a Windows Virtual Desktop host pool
-- Make apps available to users with app groups
+In the second phase, Deploy, we’ll create a Personal and Host Pool, and then deploy an application.
 
 Lab 7: [Deploy a Personal Host Pool](Deploy-Lab07-Deploy-a-Personal-Host-Pool.md)
 

@@ -1,4 +1,4 @@
-# Lab 6: Assign the “Tenant Creator” role to a user account
+# Lab 5: Assign the “Tenant Creator” role to a user account
 
 Assigning an Azure Active Directory user the Tenant Creator application role allows that user to create a Windows Virtual Desktop tenant associated with the Azure Active Directory instance. You'll need to use your global administrator account to assign the Tenant Creator role.
 

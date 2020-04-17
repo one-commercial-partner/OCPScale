@@ -1,4 +1,4 @@
-# Lab 5: Grant consent for the Windows Virtual Desktop service
+# Lab 4: Grant consent for the Windows Virtual Desktop service
 
 Creating a tenant in Windows Virtual Desktop is the first step toward building your desktop virtualization solution. A Windows Virtual Desktop tenant is a group of one or more host pools. With a Windows Virtual Desktop  tenant, you can build host pools, create app groups, assign users, and make connections through the service.
 
