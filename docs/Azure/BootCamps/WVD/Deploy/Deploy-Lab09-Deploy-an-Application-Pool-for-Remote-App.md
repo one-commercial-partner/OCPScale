@@ -1,4 +1,4 @@
-# Lab 10: Deploying an Application Pool for Remote App
+# Lab 9: Deploying an Application Pool for Remote App
 
 The default app group created for a new Windows Virtual Desktop host pool also publishes the full desktop. In addition, you can create one or more RemoteApp application groups for the host pool. Follow this tutorial to create a RemoteApp app group and publish individual Start menu apps.
 

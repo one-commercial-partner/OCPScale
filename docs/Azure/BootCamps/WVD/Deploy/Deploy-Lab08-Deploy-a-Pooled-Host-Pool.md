@@ -1,4 +1,4 @@
-# Lab 9: Deploy a Pooled Host Pool
+# Lab 8: Deploy a Pooled Host Pool
 
 Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Host Pool to publish resources to our users.
 

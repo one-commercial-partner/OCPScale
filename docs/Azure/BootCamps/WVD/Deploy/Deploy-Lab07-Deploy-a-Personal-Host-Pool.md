@@ -1,4 +1,4 @@
-# Lab 8: Deploy a Personal Host Pool
+# Lab 7: Deploy a Personal Host Pool
 
 Now that we have provisioned a Windows Virtual Desktop Tenant, we can now deploy a Personal Host Pool to publish resources to our users.
 
