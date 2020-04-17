@@ -46,6 +46,4 @@ Complete these steps to install the Windows Virtual Desktop PowerShell module on
 
     *Type **Y** when prompted for installing from an untrusted repository.*
 
-
-
 ### Return to [Prepare Phase Labs](prepare.md)
