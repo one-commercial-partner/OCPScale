@@ -6,6 +6,10 @@ In the lab you will complete all the necessary prerequisites to build out a Wind
 
 If you do not have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment, please complete all exercises.
 
+## Your enviroment
+
+We recommend having multiple monitors to complete this lab.  On one monitor load your web browser to the Azure Portal and on the other have this lab guide visible.
+
 ## Azure subscription
 
 Your will need an Azure subscription to complete the Windows Virtual Desktop labs.  The following are ideal subscription types to utilize:
@@ -16,6 +20,10 @@ Your will need an Azure subscription to complete the Windows Virtual Desktop lab
 **Microsoft does not recommend using any Azure subscription that has production workloads or services.  Use a subscription that is designated for testing purposes only.**
 
 If you are using IUR, contact the subscription administrator at your partner organization.  The can provision your identity into the subscription and assign the appropriate rights.
+
+> Please ensure that you are using a **clean** subscription, meaning your subscription has no connections to any existing subscriptions, identities, accounts, etc.
+
+You will consume roughly $25.00 in your subscription configuring this lab.
 
 ## Rights assignments
 
@@ -30,7 +38,7 @@ Your identity within your subscription must have the following rights assignment
 
 ## Exercise 1 - Install Windows Virtual Desktop PowerShell Module
 
-Complete these steps to install the Windows Virtual Desktop PowerShell module:
+Complete these steps to install the Windows Virtual Desktop PowerShell module on your local computer:
 
 1. To quickly download and install the Windows Virtual Desktop PowerShell module, launch PowerShell as an administrator and run the following command:
 
