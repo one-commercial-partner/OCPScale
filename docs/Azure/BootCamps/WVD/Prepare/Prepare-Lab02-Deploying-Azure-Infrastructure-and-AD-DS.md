@@ -19,6 +19,29 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 
     ![InitialAzureADInfo](../attachments/InitialAzureADInfo.PNG)
 
+### Create a Global Account
+
+1. Under **Manage** select **Users**.
+2. Click on **+New** User.
+3. Complete the following and then click **Create**
+    * User name: **AzureADAdmin**
+    * Name: **AzureADAdmin**
+    * Under Password:
+        * Select **Let me create the password**
+        * Initial password: `Temporary.Password`
+    * Under Groups and roles click on **User**
+        * Scroll down to find and select `Global administrator`.
+        * Click **Select**
+
+### Reset the password
+
+1. Open an InPrivate or Incognito browser.
+2. Surf to portal.azure.com
+3. Logon as `AzureADAdmin@<yourdomainname..onmicrosoft.com` with a password of `Temporary.Password`.
+4. Update your password to `Complex.Password`.
+5. Close the browser.
+
+
 ## Exercise 2 - Deploying the ARM template
 
 1. Open a new tab in your browser and navigate to the [ARM template](https://github.com/PeterR-msft/M365WVDWS/tree/master/AAD-Hybrid-Lab).
@@ -112,6 +135,8 @@ The template is pre-populated with a list of VM sizes to choose from.  Based upo
 ```
 
 5. Click **Save**, then **I agree**, and then click **Purchase**.
+
+6. Click on **Go to resource**.
 
 Once the ARM template is done being deployed, the status will change to complete. At this point the domain controller is ready for RDP connectivity.
 

@@ -1,4 +1,4 @@
-# Lab 4: Configuring Azure AD Connect with AD DS
+# Lab 3: Configuring Azure AD Connect with AD DS
 
 In this exercise you will be configuring [Azure AD Connect](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-azure-ad-connect). With Windows Virtual Desktop, all session host VMs within the WVD tenant environment are required to be domain joined to AD DS, and the domain must be synchronized with Azure AD. To manage the synchronization of objects, you will configure Azure AD Connect on the domain controller deployed in Azure.
 
@@ -24,9 +24,9 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 7. In the **Remote Desktop Connection** window, paste in the public IP address from the previous step. Click **Connect**.
 
-8. When prompted, sign in with the credentials of **adadmin** with the password of **Complex.Password**. When prompted, click **Yes** to accept the RDP certification warning.
+8. When prompted, sign in with the credentials of **adadmin** with the password of `Complex.Password`. When prompted, click **Yes** to accept the RDP certification warning.
 
----
+9. Upon connection click **No** on the Network Discovery blade.
 
 ## Exercise 2 - Disabling IE Enhanced Security
 
@@ -50,11 +50,11 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 
 1. In Server Manager, click **Tools** in the upper right corner and select **Active Directory Users and Computers**.
 
-2. In Active Directory Users and Computers, right-click the **Users** organization unit and select **New > User** from the menu.
+2. In Active Directory Users and Computers, expand your domain tree and right-click the **Users** organization unit and select **New > User** from the menu.
 
 3. Create a New User with the following information:
     * First Name: **WVD**
-    * Last Name: **Admin**
+    * Last Name: **Administrator**
     * Full Name: **WVD Administrator**
     * User Logon Name: **wvdadmin**
 4. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
@@ -62,9 +62,9 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 
    > *Tip:* This account will be important in future tasks. Make a note of the username and password you create.
 
-6. In Active Directory Users and Computers, right-click on the `My Admin` account object and select **Add to a group**.
+6. In Active Directory Users and Computers, right-click on the `WVD Administrator` account object and select **Add to a group**.
 
-7. On the Select Groups dialog window, type **Domain Admins**, click **Check Names**, and then click **OK**.  CLick **OK** once the operation is completed successfully.
+7. On the Select Groups dialog window, type **Enterprise Admins**, click **Check Names**, and then click **OK**.  Click **OK** once the operation is completed successfully.
 
    > **Note:** This account will be used during the host pool creation process for joining the hosts to the domain. Granting Domain Admin permissions will simplify the lab. However, any Active Directory account that has the following permissions will suffice. This can be done using [Active Directory Delegate Control.](https://danielengberg.com/domain-join-permissions-delegate-active-directory/)
 
@@ -72,13 +72,17 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 
 ## Exercise 4 - Configuring Azure AD Connect
 
-1. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
+1. Return to the desktop of your domain Controller and double-click on **Azure AD Connect**. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
 2. Review the screen and select **Use express settings**.
-3. On the **Connect to Azure AD** screen enter your **Azure AD Credentials**.  This would be the account you created when provisioning your Azure Active Directory with a password of `Complex.Password`.  Click **Next** and then confirm the credential are validated.
+3. On the **Connect to Azure AD** screen enter the following and then click **Next** and then confirm the credential are validated.
+   * USERNAME: `AzureADAdmin@<yourAzureADdomainname>.onmicrosoft.com`
+   * PASSWORD: `Complex.Password`.  
 
-   ![AzureADInfo](../attachments/AzureADInfo.PNG)
+   ![ConnectToAzureAD](../attachments/ConnectToAzureAD.PNG)
 
-4. On the **Connect to AD DS screen**, enter the Active Directory Domain Services domain administrator credentials. This would be your domain name from entered in the GitHub template followed by **ADadmin** with a password of `Complex.Password` (e.g. wagswvd\adadmin). Click **Next** and confirm the credential are validated.  .com
+4. On the **Connect to AD DS screen**, enter the following and then click **Next** and then confirm the credential are validated.
+   * USERNAME: `<yourADdomainname>\wvdadmin`
+   * PASSWORD: `Complex.Password`
 
     > **NOTE** If you get an error about the current security context is not associated with an Active Directory domain or forest, you more than likely didn’t logon with a domain account but rather a local account.  You can verify this by opening a command prompt and entering **whoami**.  Logout and login with a domain account and then restart at step 1 in this section.
 5. On the **Azure AD sign-in configuration** screen, select the checkbox for **Continue without any verified domains** and click **Next**.
