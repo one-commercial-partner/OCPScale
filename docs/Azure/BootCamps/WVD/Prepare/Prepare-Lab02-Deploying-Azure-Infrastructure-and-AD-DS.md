@@ -46,9 +46,7 @@ The deployment is now underway. On average this process can take 30 minutes to c
 
 ![TemplateDeployError](../attachments/TemplateDeployError.PNG)
 
-> Delete the **WVDLabs Resource Group** and try the ARM template again, this time trying the **Standard_B2s** VM size.
-
-If you'd like to see what VM SKUs are available in a specific region based upon your Azure subscription, try the following PowerShell command:
+You need to determine what VM SKUs are available in a specific region based upon your Azure subscription, try the following PowerShell command:
 
 ```PowerShell
 # Connect to your Azure subscription
@@ -56,10 +54,64 @@ Connect-AzAccount
 
 # See what SKUs are available
 # Don't forget to change the command line to the region where you plan to deploy resources
-Get-AzComputeResourceSku | where {$_.Locations.Contains("eastus") -and $_.ResourceType.Contains("virtualMachines") -and $_.Name.Contains("Standard_DS14_v2")}
-Get-AzComputeResourceSku | where {$_.Locations.Contains("eastus") -and $_.ResourceType.Contains("virtualMachines") -and $_.Name.Contains("Standard_")
- -and $_.Restriction.Contains("NotAvailable") }
+Get-AzComputeResourceSku | where {$_.Locations.Contains("eastus") -and $_.ResourceType.Contains("virtualMachines") -and $_.Name.Contains("Standard_") }
 ```
+
+### Edit the template
+
+The template is pre-populated with a list of VM sizes to choose from.  Based upon several factors your VM size might not be availble from the list, so the list needs to be edited.
+
+1. On the **Custom deployment** screen, click on **Edit template**.
+2. Expand **Parameters** and select **vmSize (string)**
+3. Find vmSize, which is around line 100, which looks like this:
+
+```PowerShell
+"vmSize": {
+            "type": "string",
+            "defaultValue": "Standard_A2_v2",
+            "allowedValues": [
+                "Standard_A2_v2",
+                "Standard_A4_v2",
+                "Standard_A2M_v2",
+                "Standard_A4M_v2",
+                "Standard_A4_v2",
+                "Standard_D2_v2",
+                "Standard_D3_v2",
+                "Standard_D11_v2",
+                "Standard_D12_v2",
+                "Standard_B2ms",
+                "Standard_B2s",
+                "Standard_B4ms",
+                "Standard_F2",
+                "Standard_F2s_v2"
+```
+
+3. Append to the end of the array the following value `Standard_D2s_v3`.  Your tex should now look like this:
+
+```PowerShell
+        "vmSize": {
+            "type": "string",
+            "defaultValue": "Standard_A2_v2",
+            "allowedValues": [
+                "Standard_A2_v2",
+                "Standard_A4_v2",
+                "Standard_A2M_v2",
+                "Standard_A4M_v2",
+                "Standard_A4_v2",
+                "Standard_D2_v2",
+                "Standard_D3_v2",
+                "Standard_D11_v2",
+                "Standard_D12_v2",
+                "Standard_B2ms",
+                "Standard_B2s",
+                "Standard_B4ms",
+                "Standard_F2",
+                "Standard_F2s_v2",
+				"Standard_D2s_v3"
+            ],
+```
+
+4. Click **Save**, then **I agree**, and then click **Purchase**.
 
 Once the ARM template is done being deployed, the status will change to complete. At this point the domain controller is ready for RDP connectivity.
 
