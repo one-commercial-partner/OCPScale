@@ -29,9 +29,8 @@ costs while empowering today’s modern digital workspace.
 
 There are three phases to implementing Windows Virtual Desktops:
 
-1. [Prepare](Prepare/prepare.md)
-2. [Deploy](Deploy/deploy.md)
-3. [Optimize](Optimize/optimize.md)
+### | [Prepare Labs](Prepare/prepare.md) | [Deploy Labs](Deploy/deploy.md) | [Optimize Labs](Optimize/optimize.md)|
+
 
 ![image](attachments/wvd-prep-deploy-optimize.png)
 
