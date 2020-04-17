@@ -32,8 +32,8 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
         >This will create 2 hosts and join them to AD and this pool.
     * Virtual machine size: *Change Size* and select **B2s**
         >This size is fine for lab purposes but you would choose larger VMs for production.  Based upon your previous lab experience choose the smallest VM size that is available to you.
-    * Virtual machine name prefix: **WVDPers**
-        >This prefix will be used in combination with the VM number to create the VM name. If using 'WVDPers' as the prefix, VMs would be named 'WVDPers-0', 'WVDPers-1', etc. You should use a unique prefix to reduce name collisions in Active Directory and in Windows Virtual Desktop.
+    * Virtual machine name prefix: **Personal**
+        >This prefix will be used in combination with the VM number to create the VM name. If using 'Personal' as the prefix, VMs would be named 'Personal-0', 'Personal-1', etc. You should use a unique prefix to reduce name collisions in Active Directory and in Windows Virtual Desktop.
 
 6. Complete the **Virtual machine settings** tab with the following information:
     * AD domain join UPN: `WVDAdmin@<yourADDomain>`
@@ -48,7 +48,7 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
         >**DO NOT CHANGE THIS NAME!**
     * Windows Virtual Desktop tenant name:  `<yourTenantName>`
         >Provide the tenant name used earlier. If the name does not exactly match your deployment will fail.  If your PowerShell window is still open you should be able to retrieve the name there.
-    * UPN: `WVDAdmin@<yourAzureADDomain` 
+    * UPN: `WVDAdmin@<yourAzureADDomain`
     * Password: `Complex.Password`
     * Confirm password: `Complex.Password`
 
@@ -75,13 +75,13 @@ Now use the following commands to ensure your users are a member of the Personal
 
 This cmd will ensure the user is a member of the Application Pool, this is required to have access to see the session host.
 
-1. In the Azure Portal open the Azure Active DIrectory for your tenant.
+1. In the Azure Portal open the Azure Active Directory for your tenant.
 2. Select **Users** then **Bob Jones**.
 3. Copy the UPN: `Bob.Jones@<yourdomain>.onmicrosoft.com`
 4. Open PowerShell and enter the following command:
 
     ```Powershell
-    Add-RdsAppGroupUser <enteryourtenantname> -HostPoolName PersonalPool -AppGroupName "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourdomain>.onmicrosoft.com
+    Add-RdsAppGroupUser $TenantName -HostPoolName Personal -AppGroupName "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourdomain>.onmicrosoft.com
     ```
 
 ### Return to [Deploy Phase Labs](deploy.md)
