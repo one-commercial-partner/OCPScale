@@ -1,12 +1,6 @@
 # Phase 1: Prepare your Windows Virtual Desktop environment
 
-In the first phase, **Prepare**, we’ll walk through provisioning the required components to establish a Windows Virtual Desktop solution:
-
-- Provision your Azure tenant
-- Set up Azure Active Directory (Azure AD)
-- Integrate with Active Directory Domain Services
-- Provision required administrator roles in Azure AD
-- Set up the Windows Virtual Desktop tenant
+In the first phase, **Prepare**, we’ll walk through provisioning the required components to establish a Windows Virtual Desktop solution.
 
 Lab 1: [Windows Virtual Desktop Prerequisties](Prepare-Lab01-Prerequisites.md)
 
