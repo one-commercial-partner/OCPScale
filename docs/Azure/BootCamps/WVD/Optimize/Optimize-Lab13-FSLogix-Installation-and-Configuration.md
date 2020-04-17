@@ -1,8 +1,8 @@
-# Lab 13: FSLogix Agent Installation
+# Lab 13: FSLogix Installation and Configuration
 
 In this lab you will install and configure FSLogix to utilize a share on your domain controller to host user profiles.
 
-## Exercise 1 - Prepare the virtual machine to act as a file share for user profiles
+## Exercise 1 - Prepare a virtual machine to act as a file share for user profiles
 
 1. Open the RDP session to the domain controller.
 

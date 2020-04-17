@@ -4,7 +4,7 @@ In the third phase, **Optimize**, we’ll customize the basic Windows Virtual De
 
 Lab 12: [Test WVD Deployment](Optimize-Lab12-Test-WVD-Deployment.md)
 
-Lab 13: [FSLogix Agent Installation](Optimize-Lab13-FSLogix-Agent-Installation.md)
+Lab 13: [FSLogix Installation and Configuration](Optimize-Lab13-FSLogix-Installation-and-Configuration.md)
 
 ## Under Development - Use at Own Risk
 
