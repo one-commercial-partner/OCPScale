@@ -46,4 +46,15 @@ Complete these steps to install the Windows Virtual Desktop PowerShell module on
 
     *Type **Y** when prompted for installing from an untrusted repository.*
 
+## Exercise 2 - Capture your Azure Subscription ID
+
+1. Open the [Azure Portal](portal.azure.com) and logon.
+
+2. Click on **Microsoft Azure** and then **Subscriptions**.
+
+3. Click on your subscription, and then on the main pne click on the Subscription ID: line, and then click on the icon to copy the information.
+
+4. Paste the information in a scratch location such as Notepad.
+
+
 ### Return to [Prepare Phase Labs](prepare.md)

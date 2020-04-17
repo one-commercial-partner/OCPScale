@@ -8,13 +8,13 @@ For more information visit [Create a Windows Virtual Desktop tenant](https://doc
 
 Capturing some of the commonly used strings into variables will make execution simpler as we execute various commands to provision our tenant. These variables will not change through out this entire deployment.  
 
-1. Open PowerShell with Administrator credentials and enter the following:
+1. From your desktop, open PowerShell (or PowerShell ISE) with Administrator credentials and enter the following:
 
 ```PowerShell
 $brokerurl = "https://rdbroker.wvd.microsoft.com"
-$aadTenantId = "The Azure AD Tenant ID Captured During Exercise 1"
-$azureSubscriptionId = "The Subscription ID Captured During Exercise 1"
-$SignInName = "The WVD admin account"
+$aadTenantId = "Your Azure AD Tenant ID"
+$azureSubscriptionId = "Your Subscription ID"
+$SignInName = "wvdadmin@<yourAzureADdomain>.onmicrosoft.com"
 $TenantName = "The name of your tenant"
 ```
 
@@ -40,7 +40,7 @@ $TenantName = "The name of your tenant"
 1. From the same PowerShell with Administrator window enter the following, entering the **correct tenant name**.
 
 ```PowerShell
-New-RdsTenant -Name "yourWVDTenantNamehere" -AadTenantId $aadTenantId -AzureSubscriptionId $azureSubscriptionId
+New-RdsTenant -Name $TenantName -AadTenantId $aadTenantId -AzureSubscriptionId $azureSubscriptionId
 ```
 
 ![image.png](../attachments/image-b4e9ea52-2783-4024-8915-d927e1e5814a.png)

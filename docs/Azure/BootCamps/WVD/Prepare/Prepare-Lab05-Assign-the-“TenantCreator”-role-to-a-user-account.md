@@ -9,12 +9,15 @@ You can find more information here: [Assign the TenantCreator application role](
 ## Exercise 1 - Assigning Windows Virtual Desktop Tenant Creator Role
 
 1. Return to the [Azure portal](https://portal.azure.com) and under you Azure Active Directory select **Enterprise applications**.
+
+    >Make sure you select the right directory!
+
 2. Browse for and select the **Windows Virtual Desktop** application.  You will need to hover over `Windows Virtual Desktop` in order to select it.
 
     ![(Not the Windows Virtual Desktop Client Application)](../attachments/image-0d1676c7-42a1-4311-834f-93e94f496572.png)
 
 3. Under **Getting Started** select **Assign Users and groups**.
-4. Select **Add user**, select **Users and groups**, and then select **WVD Admin**, the account we created in an earlier lab and granted  Global Admin rights to.
+4. Select **Add user**, select **Users**, and then select **WVD Administrator**, the account we created in an earlier lab and granted  Global Admin rights to.
 5. Select the user and hit **Select,** followed by **Assign**.
 
      Your user should now have the role of “TenantCreator.”
