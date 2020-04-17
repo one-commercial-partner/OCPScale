@@ -1,11 +1,11 @@
-# Lab 3: Deploying Azure Infrastructure, Azure AD, and AD DS
+# Lab 3: Deploying Azure Infrastructure
 
-In this exercise you will leverage a custom Azure Resource Manager (ARM) template to deploy the required Active Directory Domain Services infrastructure for WVD.
+In this exercise you will leverage a custom Azure Resource Manager (ARM) template to deploy the required Active Directory Domain Services infrastructure for Windows Virtual Desktop.
 
 ## Exercise 1 - Install Azure Active Directory
 
 1. In the Azure Portal, click **Microsoft Azure** and then **+Create a resource**.  Select **Identity** and then **Azure Active Directory**.
-2. Enter the following on the **Create directory tab**:
+2. Enter the following on the **Create directory** tab:
     * Organization name: **WVD Lab**
     * Initial domain name: `<yourinitials>`WVDLab
     * Hit **Tab**.
@@ -13,7 +13,7 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
         >Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.
 
 3. Click **Create**.  It will take several minutes for the directory to be created.
-4. Once complete, select Click **here** to manage your new directory.
+4. Once complete, click **here** to manage your new directory.
 
     >**Copy the Azure Active Directory Domain Name and Tenant ID to a scratch location such as Notepad.**
 
@@ -31,22 +31,22 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 5. Complete the following fields:
    * Resource Group: *Create New* **WVDLab**
    * Location: Select an Azure region
-      > Note:  Use this same region for the lab in it's entirety
+      > Note:  Use this same region for every part of the lab!
    * Admin Password: `Complex.Password`
-   * AD Domain Name: Enter a FQDN (e.g. MyWVDLabs.com)
+   * AD Domain Name: Enter a Fully Qualified Domain Name (e.g. MyWVDLabs.com)
       >Please write down what you enter!
    * CustomUPNSuffix: *Cut and paste your Tenant name* (e.g. `<yourcustomdomain>.onmicrosoft.com`)
    * Default User Password: `Complex.Password`
    * Vm Size: **Standard_B2ms**
 6. Agree to the Terms and conditions and click **Purchase**.  
 
-The deployment is now underway. On average this process can take 30 minutes to complete. It is important that you monitor the deployment progress to ensure there are no problems. You can monitor progress by clicking the **notification** bell in the upper right corner and clicking **Deployment in progress...**.
+The deployment is now underway. On average this process can take 30 minutes to complete. It is important that you monitor the deployment progress to ensure there are no problems. You can monitor progress by clicking the **Notifications** bell in the upper right corner and clicking **Deployment in progress...**.
 
 >One of the typical errors we see is the Standard_B2ms VM size isn't currently available within the region.
 
 ![TemplateDeployError](../attachments/TemplateDeployError.PNG)
 
-You need to determine what VM SKUs are available in a specific region based upon your Azure subscription, try the following PowerShell command:
+You need to determine what VM SKUs are available in your specific region based upon your Azure subscription.  Enter the following PowerShell command:
 
 ```PowerShell
 # Connect to your Azure subscription
@@ -86,7 +86,7 @@ The template is pre-populated with a list of VM sizes to choose from.  Based upo
                 "Standard_F2s_v2"
 ```
 
-3. Append to the end of the array the following value `Standard_D2s_v3`.  Your tex should now look like this:
+3. Append to the end of the array the following value `Standard_D2s_v3`.  Your text should now look like this:
 
 ```PowerShell
         "vmSize": {
