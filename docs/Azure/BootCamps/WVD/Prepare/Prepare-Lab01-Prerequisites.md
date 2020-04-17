@@ -56,5 +56,4 @@ Complete these steps to install the Windows Virtual Desktop PowerShell module on
 
 4. Paste the information in a scratch location such as Notepad.
 
-
 ### Return to [Prepare Phase Labs](prepare.md)

@@ -24,35 +24,35 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
 4. Complete the **Basics** tab with the following information:
     * Resource Group: **WVDLab**
     * Region: **Choose the same region where you placed previous resources**
-    * Hostpool name: **PersonalPool**
+    * Hostpool name: **Personal**
     * Desktop type: **Personal**
 
 5. Complete the **Configure virtual machines** tab with the following information:
     * Total users: **2**
         >This will create 2 hosts and join them to AD and this pool.
     * Virtual machine size: *Change Size* and select **B2s**
-        >This size is fine for lab purposes but you would choose larger VMs for production.
+        >This size is fine for lab purposes but you would choose larger VMs for production.  Based upon your previous lab experience choose the smallest VM size that is available to you.
     * Virtual machine name prefix: **WVDPers**
         >This prefix will be used in combination with the VM number to create the VM name. If using 'WVDPers' as the prefix, VMs would be named 'WVDPers-0', 'WVDPers-1', etc. You should use a unique prefix to reduce name collisions in Active Directory and in Windows Virtual Desktop.
 
 6. Complete the **Virtual machine settings** tab with the following information:
-    * AD domain join UPN: **WVDAdmin@(your AD Domain Name)** (e.g. adadmin@wagswvd.com)
+    * AD domain join UPN: `WVDAdmin@<yourADDomain>`
         >UPN of an Active Directory user that has permissions and will be used to join the virtual machines to your domain.  If you didn't write this down you can return to your RDP session with the domain controller and obtain the information.
     * Admin Password: `Complex.Password`
     * Confirm password: `Complex.Password`
-    * Virtual network: **Select the existing virtual network you created earlier, do not create a new VNET**
-    * vmSubnet: **Select the existing subnet you created earlier**
+    * Virtual network: **Select the existing virtual network created earlier, do not create a new VNET**
+    * vmSubnet: **Select the existing subnet you created earlier, do not create a new subnet**
 
 7. Complete the **Windows Virtual Desktop information** tab with the following information:
     * Windows Virtual Desktop tenant group name
         >**DO NOT CHANGE THIS NAME!**
-    * Windows Virtual Desktop tenant name:  wvdXYZlabs.onmicrosoft.com
+    * Windows Virtual Desktop tenant name:  `<yourTenantName>`
         >Provide the tenant name used earlier. If the name does not exactly match your deployment will fail.  If your PowerShell window is still open you should be able to retrieve the name there.
-    * UPN: **WVDAdmin@(your Azure AD Domain Name)** (e.g. wvdadmin@domain.onmicrosoft.com)
+    * UPN: `WVDAdmin@<yourAzureADDomain` 
     * Password: `Complex.Password`
     * Confirm password: `Complex.Password`
 
-8. Select **Next: Review + Create**. Wait for a **Validation Passed,** and if you get a failure examine the **Activity log** in the Azure portal and resolve the failure.
+8. Select **Review + Create**. Wait for a **Validation Passed** and if you get a failure examine the **Activity log** in the Azure portal and resolve the failure.
 
    ![ValidationFailed](../attachments/ValidationFailed.PNG)
 

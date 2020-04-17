@@ -41,7 +41,6 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 4. Update your password to `Complex.Password`.
 5. Close the browser.
 
-
 ## Exercise 2 - Deploying the ARM template
 
 1. Open a new tab in your browser and navigate to the [ARM template](https://github.com/PeterR-msft/M365WVDWS/tree/master/AAD-Hybrid-Lab).
