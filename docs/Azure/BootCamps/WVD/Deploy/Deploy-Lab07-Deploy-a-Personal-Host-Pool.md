@@ -22,7 +22,7 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
     ![WVDProvisionHostPool](../attachments/WVDProvisionHostPool.PNG)
 
 4. Complete the **Basics** tab with the following information:
-    * Resource Group: **WVDLab**
+    * Resource Group: *Create New* **WVDLab-Personal**
     * Region: **Choose the same region where you placed previous resources**
     * Hostpool name: **Personal**
     * Desktop type: **Personal**

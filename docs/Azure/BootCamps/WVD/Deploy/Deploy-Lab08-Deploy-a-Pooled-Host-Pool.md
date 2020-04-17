@@ -39,8 +39,8 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
         >UPN of an Active Directory user that has permissions and will be used to join the virtual machines to your domain.  If you didn't write this down you can return to your RDP session with the domain controller and obtain the information.
     * Admin Password: `Complex.Password`
     * Confirm password: `Complex.Password`
-    * Virtual network: **Select the existing virtual network you created earlier, do not create a new VNET**
-    * vmSubnet: **Select the existing subnet you created earlier, do not create a new subnet**
+    * Virtual network: **Select the existing virtual network you created earlier, do not create a new VNET**.
+    * vmSubnet: **Select the existing subnet you created earlier, do not create a new subnet**.
 
 7. Complete the **Windows Virtual Desktop information** tab with the following information:
     * Windows Virtual Desktop tenant group name

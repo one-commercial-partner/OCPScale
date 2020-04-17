@@ -51,7 +51,7 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 
 4. If prompted, make sure to sign in with an account that is an owner for the Azure subscription.
 5. Complete the following fields:
-   * Resource Group: *Create New* **WVDLab**
+   * Resource Group: *Create New* **WVDLab-Infrastructure**
    * Location: Select an Azure region
       > Note:  Use this same region for every part of the lab!
    * Admin Password: `Complex.Password`
