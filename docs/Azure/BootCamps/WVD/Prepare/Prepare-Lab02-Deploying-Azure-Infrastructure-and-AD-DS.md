@@ -35,7 +35,7 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
    * Admin Password: `Complex.Password`
    * AD Domain Name: Enter a Fully Qualified Domain Name (e.g. MyWVDLabs.com)
       >Please write down what you enter!
-   * CustomUPNSuffix: *Cut and paste your Tenant name* (e.g. `<yourcustomdomain>.onmicrosoft.com`)
+   * CustomUPNSuffix: *Enter the last four digital of your cellphone*
    * Default User Password: `Complex.Password`
    * Vm Size: **Standard_B2ms**
 6. Agree to the Terms and conditions and click **Purchase**.  
@@ -86,7 +86,7 @@ The template is pre-populated with a list of VM sizes to choose from.  Based upo
                 "Standard_F2s_v2"
 ```
 
-3. Append to the end of the array the following value `Standard_D2s_v3`.  Your text should now look like this:
+4. Append to the end of the array the following value `Standard_D2s_v3`.  Your text should now look like this:
 
 ```PowerShell
         "vmSize": {
@@ -111,7 +111,7 @@ The template is pre-populated with a list of VM sizes to choose from.  Based upo
             ],
 ```
 
-4. Click **Save**, then **I agree**, and then click **Purchase**.
+5. Click **Save**, then **I agree**, and then click **Purchase**.
 
 Once the ARM template is done being deployed, the status will change to complete. At this point the domain controller is ready for RDP connectivity.
 
