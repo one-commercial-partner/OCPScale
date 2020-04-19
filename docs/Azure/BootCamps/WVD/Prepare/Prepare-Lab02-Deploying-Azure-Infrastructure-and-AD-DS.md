@@ -139,17 +139,15 @@ The template is pre-populated with a list of VM sizes to choose from.  Based upo
    * Default User Password: `Complex.Password`
    * Vm Size: **Standard_B2ms**
 
-        > NOTE:  If you had to edit the template the choose the correct VM size.
+        > NOTE:  If you had to edit the template then choose the correct VM size.
 6. Agree to the Terms and conditions and click **Purchase**.  
 
 The deployment is now underway. On average this process can take 30 minutes to complete. It is important that you monitor the deployment progress to ensure there are no problems. You can monitor progress by clicking the **Notifications** bell in the upper right corner and clicking **Deployment in progress...**.
 
 ![TemplateDeployError](../attachments/TemplateDeployError.PNG)
 
-5. Click **Save**, change the **vm Size** to `Standard_D2s_v3`, then click on **I agree**, and then click **Purchase**.
-
-6. Click on **Go to resource**.
-
 Once the ARM template is done being deployed, the status will change to complete. At this point the domain controller is ready for RDP connectivity.
+
+### Continue with Lab 3: [Configuring Azure AD Connect with AD-DS](Prepare-Lab03-Configuring-Azure-AD-Connect-with-AD-DS.md)
 
 ### Return to [Prepare Phase Labs](prepare.md)

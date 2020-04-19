@@ -103,4 +103,6 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 
     > **Note:** It can take up to 15 minutes for the Active Directory objects to be synchronized to the Azure AD tenant.
 
+### Continue with Lab 4: [Grant consent for WVD service](Prepare-Lab04-Grant-consent-for-WVD-service.md)
+
 ### Return to [Prepare Phase Labs](prepare.md)

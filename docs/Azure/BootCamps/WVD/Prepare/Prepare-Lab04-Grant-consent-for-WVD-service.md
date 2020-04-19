@@ -24,4 +24,6 @@ Before you can create a Windows Virtual Desktop tenant, you must allow Windows V
 
     >**NOTE**: If you receive an error that the page is not working or not available right now, click the button in your browser to go back one page and try again.  This is a temporary condition.
 
+### Continue with Lab 5: [Assign the “TenantCreator” role to a user account](Prepare-Lab05-Assign-the-“TenantCreator”-role-to-a-user-account.md)
+
 ### Return to [Prepare Phase Labs](prepare.md)

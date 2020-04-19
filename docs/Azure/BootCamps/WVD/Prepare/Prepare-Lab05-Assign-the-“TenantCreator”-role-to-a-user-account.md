@@ -24,4 +24,6 @@ You can find more information here: [Assign the TenantCreator application role](
 
    ![WVDAdminPermsGranted](../attachments/WVDAdminPermsGranted.PNG)
 
+### Continue with Lab 6: [Create a Windows Virtual Desktop Tenant](Prepare-Lab06-Create-a-Windows-Virtual-Desktop-Tenant.md)
+
 ### Return to [Prepare Phase Labs](prepare.md)
