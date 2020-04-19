@@ -129,7 +129,7 @@ The template is pre-populated with a list of VM sizes to choose from.  Based upo
                 "Standard_B4ms",
                 "Standard_F2",
                 "Standard_F2s_v2",
-    "Standard_D2s_v3"
+                "Standard_D2s_v3"
             ],
 ```
 
