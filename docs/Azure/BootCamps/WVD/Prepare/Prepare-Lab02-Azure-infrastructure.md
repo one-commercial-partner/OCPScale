@@ -11,27 +11,27 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 3. When the **Welcome to Azure Cloud Shell** screen appears select **Bash** as the working CLI and then **Create Storage**.  Once storage is created click **Close**.
 4. At the CLI prompt, let's create a new resource group to hold your Domain Controller VMs. Create the resource group by typing in the following command:
 
-    `az group create --name AD-ResourceGroup --location eastus`
+    `az group create --name WVDLab-Infrastructure --location eastus`
 
 5. Create a network security group:
 
-    `az network nsg create --name AD-NSG --resource-group AD-ResourceGroup --location eastus`
+    `az network nsg create --name AD-NSG --resource-group WVDLab-Infrastructure --location eastus`
 
 6. Create a network security group rule for port 3389.
 
-    `az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group AD-ResourceGroup --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389`
+    `az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group WVDLab-Infrastructure --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389`
 
 7. Create a virtual network.
 
-    `az network vnet create --name AD-VNet --resource-group AD-ResourceGroup --address-prefixes 10.10.0.0/16 --location eastus`
+    `az network vnet create --name AD-VNet --resource-group WVDLab-Infrastructure --address-prefixes 10.10.0.0/16 --location eastus`
 
 8. Create a subnet
 
-    `az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group AD-ResourceGroup --vnet-name AD-VNet --network-security-group AD-NSG`
+    `az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group WVDLab-Infrastructure --vnet-name AD-VNet --network-security-group AD-NSG`
 
 9. Create your virtual machine, noting to change the value of **--admin-username** before executing the script.
 
-    `az vm create --resource-group AD-ResourceGroup --availability-set AD-AvailabilitySet --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username *yourfirstname* --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait`
+    `az vm create --resource-group WVDLab-Infrastructure --availability-set AD-AvailabilitySet --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username *yourfirstname* --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait`
 
 At this point please write down the local credentials you just created and then return to the instructor's presentation.
 
@@ -39,7 +39,7 @@ At this point please write down the local credentials you just created and then 
 
 In this task you use PowerShell within Windows Server 2019 to install Active Directory.
 
-1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect / RDP**.  
+1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
 3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 4. When prompted click **No** on the Network Discovery blade.
@@ -65,7 +65,7 @@ In this task you use PowerShell within Windows Server 2019 to install Active Dir
 
 ## Exercise 3 - Connect to the Domain Controller and create a user account
 
-1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect / RDP**.
+1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.
 
 2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
 3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
@@ -91,15 +91,15 @@ We are creating a small VM to be used later to host Azure AD Connect.
 2. Login using your Microsoft Account.
 3. Create an availability set.  You want to keep all your virtual machines resilient.
 
-    `az vm availability-set create --name ADConnect-AvailabilitySet --resource-group AD-ResourceGroup --location eastus`
+    `az vm availability-set create --name ADConnect-AvailabilitySet --resource-group WVDLab-Infrastructure --location eastus`
 
 4. Create your virtual machine:
 
-    `az vm create --resource-group AD-ResourceGroup --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
+    `az vm create --resource-group WVDLab-Infrastructure --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
 
 ## Exercise 5 - Join the ADConnect VM to the domain
 
-1. Once the cloud shell has built your VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / AD-ResourceGroup / ADConnect / Connect / RDP**.  Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
+1. Once the cloud shell has built your VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / ADConnect / Connect / RDP**.  Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
 2. Logon with local credentials (i.e. ADAdmin) with a password of `Complex.Password`.  Choose **More Choices** then **Use a different account** to enter your new set of credentials.
 3. When prompted click **No** on the Network discovery blade.
 4. The DNS Server on ADConnect may not be set to see the domain controller (DC01), so we need to check that setting.  
