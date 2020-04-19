@@ -8,31 +8,27 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 ## Exercise 1 - Connecting to the domain controller
 
-1. Sign in or switch to the [Azure Portal](https://portal.azure.com/).
+1. Click on **Go to resource**, or return to the [Azure Portal](https://portal.azure.com/).
 
-2. Type **Resource groups** in the search field and select it from the list.
+2. Locate the resource named **AdPubIP1** and click on it. Note that the resource type should be **Public IP address**.
 
-3. On the Resource groups blade, click on the **WVDLab-Infrastructure** resource group.
-
-4. On the WVDLab-Infrastructure Resource group blade, review the list of available resources. Locate the resource named **AdPubIP1** and click on it. Note that the resource type should be **Public IP address**.
-
-5. On the Overview page for AdPubIP1, locate the **IP address** field. Copy the IP address to a safe location.
+3. On the Overview page for AdPubIP1, locate the **IP address** field. Copy the IP address to a safe location.
 
    ![PreReqs-Ex04000.png](../attachments/PreReqs-Ex04000-4449308a-6098-4445-8bb7-a20c54dae18e.png)
 
-6. On your local machine, open the **RUN** dialog window, type **MSTSC** and hit enter.
+4. On your local machine, open the **RUN** dialog window, type **MSTSC** and hit enter.
 
-7. In the **Remote Desktop Connection** window, paste in the public IP address from the previous step. Click **Connect**.
+5. In the **Remote Desktop Connection** window, paste in the public IP address from the previous step. Click **Connect**.
 
-8. When prompted, sign in with the credentials of **adadmin** with the password of `Complex.Password`. You may have to click on **More choices**.  When prompted, click **Yes** to accept the RDP certification warning.
+6. When prompted, sign in with the credentials of **adadmin** with the password of `Complex.Password`. You may have to click on **More choices** and then **Use a different account**.   When prompted, click **Yes** to accept the RDP certification warning.
 
-9. Upon connection click **No** on the **Networks** blade.
+7. Upon connection click **No** on the **Networks** blade.
 
 ## Exercise 2 - Disabling IE Enhanced Security
 
 In an effort to simplify tasks in this lab, we will start by disabling [IE Enhanced Security](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-ie-esc).
 
-1. Once connected to the domain controller, open Server Manager if it does not start automatically.
+1. Once connected to the domain controller, close the message about **Windows Admin Center**.
 
 2. In Server Manager, select **Local Server** on the left.
 
@@ -50,7 +46,7 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 
 1. In Server Manager, click **Tools** in the upper right corner and select **Active Directory Users and Computers**.
 
-2. In Active Directory Users and Computers, expand your domain tree and right-click the **Users** organization unit and select **New > User** from the menu.
+2. In Active Directory Users and Computers, expand your domain tree, select  and then right-click **Users** and select **New > User** from the menu.
 
 3. Create a New User with the following information:
     * First Name: **WVD**
@@ -62,7 +58,7 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 
    > *Tip:* This account will be important in future tasks. Make a note of the username and password you create.
 
-6. In Active Directory Users and Computers, right-click on the `WVD Administrator` account object and select **Add to a group**.
+6. In Active Directory Users and Computers, select and then right-click on the `WVD Administrator` account object and select **Add to a group**.
 
 7. On the Select Groups dialog window, type **Enterprise Admins**, click **Check Names**, and then click **OK**.  Click **OK** once the operation is completed successfully.
 
