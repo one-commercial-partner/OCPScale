@@ -14,14 +14,16 @@ In this lab your will validate the personal and Pooled Windows Virtual Desktop p
     * Username: `Bob.Jones@yourdomain.onmicrosoft.com`
     * Password: `Complex.Password`
 5. Click **Yes** on the next screen and the **Done** on the following screen.
-6. Click on the icon for Personal Pool.
-7. When prompted, enter the password: `Complex.Password`.
+6. Double-click on the icon for Personal Pool.
+7. When prompted enter the credentials for Bob Jones:
+    * Username: `Bob.Jones@<yourdomain>.onmicrosoft.com`
+    * Password: `Complex.Password`
 8. Once connected, change the desktop background to a different picture.
 9. Disconnect from the session.
 
 ## Exercise 2 - Connect with the Windows Virtual Desktop web client
 
-1. In a browser, navigate to the [Windows Virtual Desktop web client](https://rdweb.wvd.microsoft.com/webclient).
+1. In a INPrivate or InCognito browser, navigate to the [Windows Virtual Desktop web client](https://rdweb.wvd.microsoft.com/webclient).
 2. When prompted enter the credentials for Julia Williams:
     * Username: Julia.Williams@`yourdomain`.onmicrosoft.com
     * Password: `Complex.Password`
@@ -35,4 +37,4 @@ In this lab your will validate the personal and Pooled Windows Virtual Desktop p
 6. Once connected, change the desktop background to a different picture.
 7. Disconnect from the session.
 
-### Return to [Optimize Phase Labs](optimize.md)
+### Return to [Deploy Phase Labs](Deploy.md)
