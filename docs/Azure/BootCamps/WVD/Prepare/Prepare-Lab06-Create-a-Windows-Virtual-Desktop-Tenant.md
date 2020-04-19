@@ -60,4 +60,4 @@ New-RdsRoleAssignment -SignInName $SignInName -RoleDefinitionName "RDS Owner" -T
 
 Congrats! You have now completed the steps to prepare your Windows Virtual Desktop enviorment.  
 
-### Continue to the [Deploy Phase Labs](../Deploy/deploy.md)
+### Continue to the [Prepare Phase Labs](../Prepare/prepare.md)
