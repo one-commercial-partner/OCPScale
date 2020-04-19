@@ -34,7 +34,7 @@ $TenantName = "The name of your tenant"
 
    > This was the account we granted Tenant Creator permission to.
 
-     ![WVDCreds](../attachments/WVDCreds.png)
+     ![WVDCreds](../attachments/WVDCreds.PNG)
 
 ## Exercise 3 - Provision your Windows Virtual Desktop Tenant
 
