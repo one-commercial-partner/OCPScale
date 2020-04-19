@@ -41,56 +41,75 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 9. Create your virtual machine:.
 
     ```PowerShell
-    az vm create --resource-group WVDLab-Infrastructure --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username adadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait
+    az vm create --resource-group WVDLab-Infrastructure --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username adadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11
     ```
 
 ## Exercise 2 - Install and Configure Active Directory
 
-In this task you use PowerShell within Windows Server 2019 to install Active Directory.
+In this task you use PowerShell (or PowerSHell ISE) within Windows Server 2019 to install Active Directory.
 
 1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
-3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
+3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials. The username is `adadmin` and the password is `Complex.Password`.  CLick **Yes** when prompted regarding the certificate error.
 4. When prompted click **No** on the Network Discovery blade.
 5. Hit the **Windows Start** button and then open **Windows PowerShell**. Enter the following to install the Active Directory Domain Service module:
 
-    `install-windowsfeature AD-Domain-Services -IncludeAllSubFeature -IncludeManagementTools`
+    ```PowerShell
+    Install-windowsfeature AD-Domain-Services -IncludeAllSubFeature -IncludeManagementTools
+    ```
+
+    > This may takes a few minutes to run.
+
 6. Import the deployment modules by entering the following:
 
-    `Import-Module ADDSDeployment`
+    ```PowerShell
+    Import-Module ADDSDeployment
+    ```
 
-    *Note that PowerShell will quickly return as this command takes milliseconds to execute.*
+    >PowerShell will quickly return as this command takes milliseconds to execute.
 7. Promote your server to a domain controller by entering the following command.  Don't forget to set the **domain names properly** minding the quotes.
 
-    `Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “YOURDOMAIN.COM”
--DomainNetbiosName “YOURDOMAIN” -ForestMode “Win2012R2” -InstallDns:$true
--LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true`
+    ```PowerShell
+    Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “YOURDOMAIN.COM”
+    -DomainNetbiosName “YOURDOMAIN” -ForestMode “Win2012R2” -InstallDns:$true
+    -LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true
+    ```
 
     *Write down your FQDN doman name for future reference.*
 
 8. Once you hit enter you will be asked for the  SafeModeAdministratorPassword – this is for the Directory Services Restore Mode (DSRM). Enter `Complex.Password`, and then retype to confirm.
 
+    > You will receive warnings about security settings, network adapters, and DNS Servers.  These warnings can be ignored.
+
 9. Once Active Directory is installed your virtual machine will restart.
 
 ## Exercise 3 - Connect to the Domain Controller and create a user account
 
+By default, Azure AD Connect does not synchronize the built-in domain administrator account *ADAdmin\@MyADDomain.com*. This system account has the attribute `isCriticalSystemObject` set to *true*, preventing it from being synchronized. While it is possible to modify this, it is not a best practice to do so.
+
 1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.
 
 2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
-3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
+3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. adadmin@yourdomain.com).  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 
     *Note that if you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.*
 4. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
-5. Expand the tree and select the **Users** Container.
-6. On the toolbar click the icon to create a new user in the current container.  
-7. Create a New User with the following information:
-    * First Name: **On**
-    * Last Name: **Prem**
-    * Full Name: **On Prem**
-    * User Logon Name: **onprem**
-8. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
-9. Click **Next** then **Finish**.
-10. Minimize the RDP window.
+
+5. Create a New User with the following information:
+    * First Name: **WVD**
+    * Last Name: **Administrator**
+    * Full Name: **WVD Administrator**
+    * User Logon Name: **wvdadmin**
+6. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
+7. Click **Next** then **Finish**.
+
+   > *Tip:* This account will be important in future tasks. Make a note of the username and password you create.
+
+8. In Active Directory Users and Computers, select and then right-click on the `WVD Administrator` account object and select **Add to a group**.
+
+9. On the Select Groups dialog window, type **Enterprise Admins**, click **Check Names**, and then click **OK**.  Click **OK** once the operation is completed successfully.
+
+   > **Note:** This account will be used during the host pool creation process for joining the hosts to the domain. Granting Enterprise Admin permissions will simplify the lab. However, any Active Directory account that has the following permissions will suffice. This can be done using [Active Directory Delegate Control.](https://danielengberg.com/domain-join-permissions-delegate-active-directory/)
 
 ## Exercise 4 - Create a virtual machine to host AD Connect
 
