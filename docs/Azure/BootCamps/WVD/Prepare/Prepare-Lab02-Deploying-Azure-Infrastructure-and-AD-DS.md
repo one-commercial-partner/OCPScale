@@ -48,7 +48,7 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 You need to determine what VM SKUs are available in your specific region based upon your Azure subscription.  Enter the following PowerShell command from either your desktop or Azure Cloud Shell with Powershell:
 
 ```PowerShell
-# RUn this from your desktop to connect to your Azure subscription.  No need to run this first from Cloud Shell.
+# Run this from your desktop to connect to your Azure subscription.  No need to run this command from Cloud Shell.
 Connect-AzAccount
 
 # See what SKUs are available - everybody will run this command
@@ -93,12 +93,12 @@ The template is pre-populated with a list of VM sizes to choose from.  Based upo
                 "Standard_F2s_v2"
 ```
 
-6. Append to the end of the array the following value `Standard_D2s_v3`.  Your text should now look like this:
+6. Change the `"defaultValue"` to `Standard_D2s_v3` and then append to the end of the array the following value `Standard_D2s_v3`.  Your text should now look like this:
 
 ```PowerShell
         "vmSize": {
             "type": "string",
-            "defaultValue": "Standard_A2_v2",
+            "defaultValue": "Standard_D2s_v3",
             "allowedValues": [
                 "Standard_A2_v2",
                 "Standard_A4_v2",
