@@ -32,6 +32,7 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
     * Under Groups and roles click on **User**
         * Scroll down to find and select `Global administrator`.
         * Click **Select**
+    * Usage location: **United States**
 
 ### Reset the password
 
