@@ -44,8 +44,6 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
     az vm create --resource-group WVDLab-Infrastructure --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username adadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait
     ```
 
-At this point please write down the local credentials you just created and then return to the instructor's presentation.
-
 ## Exercise 2 - Install and Configure Active Directory
 
 In this task you use PowerShell within Windows Server 2019 to install Active Directory.
