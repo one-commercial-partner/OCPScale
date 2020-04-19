@@ -1,6 +1,6 @@
 # Lab 2: Deploying Azure Infrastructure
 
-In this exercise you will leverage a custom Azure Resource Manager (ARM) template to deploy the required Active Directory Domain Services infrastructure for Windows Virtual Desktop.
+In this exercise you will deploy the required infrastructure to provision a  Windows Virtual Desktop.
 
 ## Exercise 1 - Setup an IaaS Virtual Machine via Azure CLI
 
@@ -11,27 +11,38 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 3. When the **Welcome to Azure Cloud Shell** screen appears select **Bash** as the working CLI and then **Create Storage**.  Once storage is created click **Close**.
 4. At the CLI prompt, let's create a new resource group to hold your Domain Controller VMs. Create the resource group by typing in the following command:
 
-    `az group create --name WVDLab-Infrastructure --location eastus`
+    ```PowerShell
+    az group create --name WVDLab-Infrastructure --location eastus
+    ```
 
 5. Create a network security group:
 
-    `az network nsg create --name AD-NSG --resource-group WVDLab-Infrastructure --location eastus`
+    ```PowerShell
+    az network nsg create --name AD-NSG --resource-group WVDLab-Infrastructure --location eastus
+    ```
 
 6. Create a network security group rule for port 3389.
 
-    `az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group WVDLab-Infrastructure --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389`
+    ```PowerShell
+    az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group WVDLab-Infrastructure --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389
+    ```
 
 7. Create a virtual network.
 
-    `az network vnet create --name AD-VNet --resource-group WVDLab-Infrastructure --address-prefixes 10.10.0.0/16 --location eastus`
+    ```PowerShell
+    az network vnet create --name AD-VNet --resource-group WVDLab-Infrastructure --address-prefixes 10.10.0.0/16 --location eastus
 
-8. Create a subnet
+8. Create a subnet:
 
-    `az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group WVDLab-Infrastructure --vnet-name AD-VNet --network-security-group AD-NSG`
+    ```PowerShell
+    az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group WVDLab-Infrastructure --vnet-name AD-VNet --network-security-group AD-NSG
+    ```
 
-9. Create your virtual machine, noting to change the value of **--admin-username** before executing the script.
+9. Create your virtual machine:.
 
-    `az vm create --resource-group WVDLab-Infrastructure --availability-set AD-AvailabilitySet --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username *yourfirstname* --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait`
+    ```PowerShell
+    az vm create --resource-group WVDLab-Infrastructure --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username adadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait
+    ```
 
 At this point please write down the local credentials you just created and then return to the instructor's presentation.
 
