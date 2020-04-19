@@ -26,14 +26,16 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
     * Region: **Choose the same region where you placed previous resources**
     * Hostpool name: **Personal**
     * Desktop type: **Personal**
+    * Click **Next: Configure virtual machines >**
 
 5. Complete the **Configure virtual machines** tab with the following information:
     * Total users: **2**
         >This will create 2 hosts and join them to AD and this pool.
     * Virtual machine size: *Change Size* and select **B2s**
-        >This size is fine for lab purposes but you would choose larger VMs for production.  Based upon your previous lab experience choose the smallest VM size that is available to you.
+        >Choose the smallest VM size that is supported within your region such as a **D2s_v3**.
     * Virtual machine name prefix: **Personal**
         >This prefix will be used in combination with the VM number to create the VM name. If using 'Personal' as the prefix, VMs would be named 'Personal-0', 'Personal-1', etc. You should use a unique prefix to reduce name collisions in Active Directory and in Windows Virtual Desktop.
+    * Click **Next: Virtual machine settings >**
 
 6. Complete the **Virtual machine settings** tab with the following information:
     * AD domain join UPN: `WVDAdmin@<yourADDomain>`
@@ -42,13 +44,14 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
     * Confirm password: `Complex.Password`
     * Virtual network: **Select the existing virtual network created earlier, do not create a new VNET**
     * vmSubnet: **Select the existing subnet you created earlier, do not create a new subnet**
+    * Click **Next: Windows Virtual Desktop information >**
 
 7. Complete the **Windows Virtual Desktop information** tab with the following information:
     * Windows Virtual Desktop tenant group name
         >**DO NOT CHANGE THIS NAME!**
     * Windows Virtual Desktop tenant name:  `<yourTenantName>`
         >Provide the tenant name used earlier. If the name does not exactly match your deployment will fail.  If your PowerShell window is still open you should be able to retrieve the name there.
-    * UPN: `WVDAdmin@<yourAzureADDomain`
+    * UPN: `WVDAdmin@<yourAzureADDomain>.onmicrosoft.com`
     * Password: `Complex.Password`
     * Confirm password: `Complex.Password`
 
@@ -56,7 +59,7 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
 
    ![ValidationFailed](../attachments/ValidationFailed.PNG)
 
-9. Select **Create** to start your Host Pool Deployment.
+9. Select **Create** to start your Personal Host Pool deployment.
 
 10. You can watch the progress of the deployment.  Note that this will take about 15 minutes or so to complete, so it might be a good time to stretch your legs and take a break.
 

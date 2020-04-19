@@ -60,6 +60,8 @@ New-RdsRoleAssignment -SignInName $SignInName -RoleDefinitionName "RDS Owner" -T
 
 ![AddRoleToWVD](../attachments/AddRoleToWVD.PNG)
 
+>**Copy all this information to your scratch space!**
+
 Congrats! You have now completed the steps to prepare your Windows Virtual Desktop enviorment.  
 
 ### Continue to Lab 7: [Deploy a Personal Host Pool](../Deploy/Deploy-Lab07-Deploy-a-Personal-Host-Pool.md)
