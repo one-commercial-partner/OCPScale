@@ -48,10 +48,10 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 You need to determine what VM SKUs are available in your specific region based upon your Azure subscription.  Enter the following PowerShell command from either your desktop or Azure Cloud Shell with Powershell:
 
 ```PowerShell
-# RUn this from your desktop to connect to your Azure subscription.  No need to run this from Cloud Shell.
+# RUn this from your desktop to connect to your Azure subscription.  No need to run this first from Cloud Shell.
 Connect-AzAccount
 
-# See what SKUs are available
+# See what SKUs are available - everybody will run this command
 # Don't forget to change the command line to the region where you plan to deploy resources
 Get-AzComputeResourceSku | where {$_.Locations.Contains("eastus") -and $_.ResourceType.Contains("virtualMachines") -and $_.Name.Contains("Standard_") }
 ```
@@ -65,9 +65,12 @@ If you have a `Standard_B2ms` VM available, jump to the section named **Run the 
 
 The template is pre-populated with a list of VM sizes to choose from.  Based upon several factors your VM size might not be availble from the list, so the list needs to be edited.
 
-1. On the **Custom deployment** screen, click on **Edit template**.
-2. Expand **Parameters** and select **vmSize (string)**
-3. Find vmSize, which is around line 100, which looks like this:
+1. Open a new tab in your browser and navigate to the Azure Active Directory Hybrid Lab [ARM template](https://github.com/PeterR-msft/M365WVDWS/tree/master/AAD-Hybrid-Lab).
+2. Under Quick Start, click **Deploy to Azure**. If you receive an error about not having any subscriptions, click on your name in the upper right-hand corner, then click on **Switch Directory**, and select your **Default Directory**.
+
+3. On the **Custom deployment** screen, click on **Edit template**.
+4. Expand **Parameters** and select **vmSize (string)**
+5. Find vmSize, which is around line 100, which looks like this:
 
 ```PowerShell
 "vmSize": {
@@ -90,7 +93,7 @@ The template is pre-populated with a list of VM sizes to choose from.  Based upo
                 "Standard_F2s_v2"
 ```
 
-4. Append to the end of the array the following value `Standard_D2s_v3`.  Your text should now look like this:
+6. Append to the end of the array the following value `Standard_D2s_v3`.  Your text should now look like this:
 
 ```PowerShell
         "vmSize": {
@@ -115,7 +118,7 @@ The template is pre-populated with a list of VM sizes to choose from.  Based upo
             ],
 ```
 
-5. Click **Save**
+7. Click **Save**
 
 ### Run the Template
 
