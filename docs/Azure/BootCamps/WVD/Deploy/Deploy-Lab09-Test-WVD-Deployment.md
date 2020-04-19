@@ -37,4 +37,4 @@ In this lab your will validate the personal and Pooled Windows Virtual Desktop p
 6. Once connected, change the desktop background to a different picture.
 7. Disconnect from the session.
 
-### Return to [Deploy Phase Labs](Deploy.md)
+### Return to [Deploy Phase Labs](deploy.md)
