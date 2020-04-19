@@ -20,6 +20,8 @@ $TenantName = "The name of your tenant"
 
 ![PSVariables](../attachments/PSVariables.PNG)
 
+   > Note: Make sure your tenant name has no special characters!
+
 ## Exercise 2 - Sign into Windows Virtual Desktop Services
 
    The Add-RdsAccount command will log you into the Windows Virtual Desktop Platform Service, the account used here should be the same account you granted Tenant Creator in an earlier exercise . You only need to authenticate once per session, but if you close PowerShell and reopen you will need to run this command-let every time you decide to provision your Windows Virtual Desktop Tenant, so it’s wise to keep this on hand.
@@ -59,5 +61,7 @@ New-RdsRoleAssignment -SignInName $SignInName -RoleDefinitionName "RDS Owner" -T
 ![AddRoleToWVD](../attachments/AddRoleToWVD.PNG)
 
 Congrats! You have now completed the steps to prepare your Windows Virtual Desktop enviorment.  
+
+### Continue to Lab 7: [Deploy a Personal Host Pool](Deploy-Lab07-Deploy-a-Personal-Host-Pool.md)
 
 ### Continue to the [Prepare Phase Labs](../Prepare/prepare.md)
