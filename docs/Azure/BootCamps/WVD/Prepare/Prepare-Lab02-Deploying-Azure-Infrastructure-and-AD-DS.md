@@ -24,8 +24,8 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 1. Under **Manage** select **Users**.
 2. Click on **+New User**.
 3. Complete the following and then click **Create**:
-    * User name: **AzureADAdmin**
-    * Name: **AzureADAdmin**
+    * User name: **AADAdmin**
+    * Name: **AADAdmin**
     * Under Password:
         * Select **Let me create the password**
         * Initial password: `Temporary.Password`
@@ -37,7 +37,7 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 
 1. Open an InPrivate or Incognito browser.
 2. Surf to portal.azure.com
-3. Logon as `AzureADAdmin@<yourdomainname..onmicrosoft.com` with a password of `Temporary.Password`.
+3. Logon as `AADAdmin@<yourdomainname..onmicrosoft.com` with a password of `Temporary.Password`.
 4. Update your password to `Complex.Password`.
 5. Close the browser.
 
