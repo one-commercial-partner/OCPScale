@@ -26,7 +26,7 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 8. When prompted, sign in with the credentials of **adadmin** with the password of `Complex.Password`. You may have to click on **More choices**.  When prompted, click **Yes** to accept the RDP certification warning.
 
-9. Upon connection click **No** on the Network Discovery blade.
+9. Upon connection click **No** on the **Networks** blade.
 
 ## Exercise 2 - Disabling IE Enhanced Security
 
@@ -44,7 +44,7 @@ In an effort to simplify tasks in this lab, we will start by disabling [IE Enhan
 
 ---
 
-## Exercise 3 - Creating a Domain Admin account
+## Exercise 3 - Creating a Enterprise Admin account
 
 By default, Azure AD Connect does not synchronize the built-in domain administrator account *ADAdmin\@MyADDomain.com*. This system account has the attribute `isCriticalSystemObject` set to *true*, preventing it from being synchronized. While it is possible to modify this, it is not a best practice to do so.
 
@@ -66,13 +66,13 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 
 7. On the Select Groups dialog window, type **Enterprise Admins**, click **Check Names**, and then click **OK**.  Click **OK** once the operation is completed successfully.
 
-   > **Note:** This account will be used during the host pool creation process for joining the hosts to the domain. Granting Domain Admin permissions will simplify the lab. However, any Active Directory account that has the following permissions will suffice. This can be done using [Active Directory Delegate Control.](https://danielengberg.com/domain-join-permissions-delegate-active-directory/)
+   > **Note:** This account will be used during the host pool creation process for joining the hosts to the domain. Granting Enterprise  Admin permissions will simplify the lab. However, any Active Directory account that has the following permissions will suffice. This can be done using [Active Directory Delegate Control.](https://danielengberg.com/domain-join-permissions-delegate-active-directory/)
 
  ---
 
 ## Exercise 4 - Configuring Azure AD Connect
 
-1. Return to the desktop of your domain Controller and double-click on **Azure AD Connect**. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
+1. Switch to the desktop of your domain Controller and double-click on **Azure AD Connect**. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
 2. Review the screen and select **Use express settings**.
 3. On the **Connect to Azure AD** screen enter the following and then click **Next** and then confirm the credential are validated.
    * USERNAME: `AzureADAdmin@<yourAzureADdomainname>.onmicrosoft.com`
@@ -81,7 +81,7 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
    ![ConnectToAzureAD](../attachments/ConnectToAzureAD.PNG)
 
 4. On the **Connect to AD DS screen**, enter the following and then click **Next** and then confirm the credential are validated.
-   * USERNAME: `<yourADdomainname>\wvdadmin`
+   * USERNAME: `<yourFQDNADdomainname>\wvdadmin` (e.g. wagslabs.com\wvdadmin)
    * PASSWORD: `Complex.Password`
 
     > **NOTE** If you get an error about the current security context is not associated with an Active Directory domain or forest, you more than likely didn’t logon with a domain account but rather a local account.  You can verify this by opening a command prompt and entering **whoami**.  Logout and login with a domain account and then restart at step 1 in this section.

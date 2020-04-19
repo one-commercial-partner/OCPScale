@@ -14,7 +14,7 @@ Capturing some of the commonly used strings into variables will make execution s
 $brokerurl = "https://rdbroker.wvd.microsoft.com"
 $aadTenantId = "Your Azure AD Tenant ID"
 $azureSubscriptionId = "Your Subscription ID"
-$SignInName = "wvdadmin@<yourAzureADdomain>.onmicrosoft.com"
+$SignInName = "AzureADAdmin@<yourAzureADdomain>.onmicrosoft.com"
 $TenantName = "The name of your tenant"
 ```
 
@@ -30,8 +30,9 @@ $TenantName = "The name of your tenant"
    Add-RdsAccount -DeploymentUrl $brokerurl
    ```
 
-2. When prompted enter your wvdadmin credentials (password is `Complex.Password`)
-   ![WVDCreds](../attachments/WVDCreds.PNG)
+2. When prompted enter your WVDAdmin credentials (password is `Complex.Password`)
+
+   > This was the account we granted Tenant Creator permission to.
 
 ## Exercise 3 - Provision your Windows Virtual Desktop Tenant
 

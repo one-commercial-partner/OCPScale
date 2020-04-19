@@ -14,7 +14,7 @@ We recommend having multiple monitors to complete this lab.  On one monitor load
 
 Your will need an Azure subscription to complete the Windows Virtual Desktop labs.  The following are ideal subscription types to utilize:
 
-* Visual Studio Enterprise subscription
+* •	Visual Studio Professional or Visual Studio Enterprise
 * IUR (Azure Use Rights) from your partner organization
 
 **Microsoft does not recommend using any Azure subscription that has production workloads or services.  Use a subscription that is designated for testing purposes only.**
