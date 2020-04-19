@@ -24,7 +24,7 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 7. In the **Remote Desktop Connection** window, paste in the public IP address from the previous step. Click **Connect**.
 
-8. When prompted, sign in with the credentials of **adadmin** with the password of `Complex.Password`. When prompted, click **Yes** to accept the RDP certification warning.
+8. When prompted, sign in with the credentials of **adadmin** with the password of `Complex.Password`. You may have to click on **More choices**.  When prompted, click **Yes** to accept the RDP certification warning.
 
 9. Upon connection click **No** on the Network Discovery blade.
 
