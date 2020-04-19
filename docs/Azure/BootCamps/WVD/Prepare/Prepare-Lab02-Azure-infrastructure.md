@@ -50,7 +50,7 @@ In this task you use PowerShell (or PowerSHell ISE) within Windows Server 2019 t
 
 1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
-3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials. The username is `adadmin` and the password is `Complex.Password`.  CLick **Yes** when prompted regarding the certificate error.
+3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials. The username is `adadmin` and the password is `Complex.Password`.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
 4. When prompted click **No** on the Network Discovery blade.
 5. Hit the **Windows Start** button and then open **Windows PowerShell**. Enter the following to install the Active Directory Domain Service module:
 
@@ -92,7 +92,9 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
 3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. adadmin@yourdomain.com).  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 
-    *Note that if you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.*
+    > Note that if you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.
+
+    > When you connect with RDP you will see adadmin as the default credentials.. These are local crdentials, not domain credentials, so be sure to click on **More choices** then **Use a different account** and enter FQDM domain credentials.
 4. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
 
 5. Create a New User with the following information:
