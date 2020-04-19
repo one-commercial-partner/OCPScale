@@ -34,6 +34,8 @@ $TenantName = "The name of your tenant"
 
    > This was the account we granted Tenant Creator permission to.
 
+     ![WVDCreds](../attachments/WVDCreds.png)
+
 ## Exercise 3 - Provision your Windows Virtual Desktop Tenant
 
    The New-RDSTenant command-let will provision your new Tenant this will use your AAD Tenant ID and Subscription ID variables defined above. For the "Name" attribute in the command be sure to provide a unique name for your Windows Virtual Desktop tenant this will be used moving forward to identity the space in which you will deploy various host pools and resources.  
