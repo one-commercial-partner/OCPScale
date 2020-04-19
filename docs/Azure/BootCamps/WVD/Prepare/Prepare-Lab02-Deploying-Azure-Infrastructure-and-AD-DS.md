@@ -56,10 +56,9 @@ Connect-AzAccount
 Get-AzComputeResourceSku | where {$_.Locations.Contains("eastus") -and $_.ResourceType.Contains("virtualMachines") -and $_.Name.Contains("Standard_") }
 ```
 
->One of the typical errors we see is the Standard_B2ms VM size isn't currently available within the region.
+>One of the typical errors we see is the Standard_B2ms VM size isn't currently available within the region.  Standard_B2ms is the ideal size for the typical domain controller workload.
 
 If you have a `Standard_B2ms` VM available, jump to the section named **Run the template**.  If you do not have a `Standard_B2ms` VM available, continue with the next section.
-
 
 ### Edit the template
 
