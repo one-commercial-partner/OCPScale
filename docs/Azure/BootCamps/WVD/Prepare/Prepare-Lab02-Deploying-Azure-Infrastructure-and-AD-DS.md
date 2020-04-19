@@ -7,7 +7,7 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 1. In the Azure Portal, click **Microsoft Azure** and then **+Create a resource**.  Select **Identity** and then **Azure Active Directory**.
 2. Enter the following on the **Create directory** tab:
     * Organization name: **WVD Lab**
-    * Initial domain name: `<yourinitials>`WVDLab
+    * Initial domain name: `<yourinitials>`WVDLab *(e.g. abdWVDLab)*
     * Hit **Tab**.
 
         >Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.
@@ -22,8 +22,8 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 ### Create a Global Account
 
 1. Under **Manage** select **Users**.
-2. Click on **+New** User.
-3. Complete the following and then click **Create**
+2. Click on **+New User**.
+3. Complete the following and then click **Create**:
     * User name: **AzureADAdmin**
     * Name: **AzureADAdmin**
     * Under Password:
@@ -43,7 +43,7 @@ In this exercise you will leverage a custom Azure Resource Manager (ARM) templat
 
 ## Exercise 2 - Deploying the ARM template
 
-1. Open a new tab in your browser and navigate to the [ARM template](https://github.com/PeterR-msft/M365WVDWS/tree/master/AAD-Hybrid-Lab).
+1. Open a new tab in your browser and navigate to the Azure Active Directory Hybrid Lab [ARM template](https://github.com/PeterR-msft/M365WVDWS/tree/master/AAD-Hybrid-Lab).
 2. Review the notes on the GitHub page for the ARM template prior to deployment.
 3. Under Quick Start, click **Deploy to Azure**. If you receive an error about not having any subscriptions, click on your name in the upper right-hand corner, then click on **Switch Directory**, and select your **Default Directory**.
 
@@ -129,11 +129,11 @@ The template is pre-populated with a list of VM sizes to choose from.  Based upo
                 "Standard_B4ms",
                 "Standard_F2",
                 "Standard_F2s_v2",
-				"Standard_D2s_v3"
+    "Standard_D2s_v3"
             ],
 ```
 
-5. Click **Save**, then **I agree**, and then click **Purchase**.
+5. Click **Save**, change the **vm Size** to `Standard_D2s_v3`, then click on **I agree**, and then click **Purchase**.
 
 6. Click on **Go to resource**.
 
