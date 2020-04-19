@@ -12,9 +12,9 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 2. Type **Resource groups** in the search field and select it from the list.
 
-3. On the Resource groups blade, click on the **WVDLab** resource group.
+3. On the Resource groups blade, click on the **WVDLab-Infrastructure** resource group.
 
-4. On the WVDLab Resource group blade, review the list of available resources. Locate the resource named **AdPubIP1** and click on it. Note that the resource type should be **Public IP address**.
+4. On the WVDLab-Infrastructure Resource group blade, review the list of available resources. Locate the resource named **AdPubIP1** and click on it. Note that the resource type should be **Public IP address**.
 
 5. On the Overview page for AdPubIP1, locate the **IP address** field. Copy the IP address to a safe location.
 
