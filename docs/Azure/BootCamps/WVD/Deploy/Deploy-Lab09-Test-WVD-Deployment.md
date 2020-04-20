@@ -31,7 +31,7 @@ In this lab your will validate the personal and Pooled Windows Virtual Desktop p
 3. Click on the icon for PooledPool.
 4. Click **Allow** on the **Access local resources** window.
 5. When prompted enter the following credentials:
-    * Username: wvdadmin@`yourADdomain`
+    * Username: adadmin@`yourADdomain`
     * Password: `Complex.Password`
     > **NOTE:** These credentials are to logon to a computer in the pool.
 6. Once connected, change the desktop background to a different picture.

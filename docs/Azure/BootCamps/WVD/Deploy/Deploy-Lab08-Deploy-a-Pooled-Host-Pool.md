@@ -18,11 +18,11 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
     ![WVDProvisionHostPool](../attachments/WVDProvisionHostPool.PNG)
 
 4. Complete the **Basics** tab with the following information:
-    * Resource Group: **WVDLab**
+    * Resource Group: *Create New* **WVDLab-Pooled**
     * Region: **Choose the same region where you placed previous resources**
     * Hostpool name: **Pooled**
     * Desktop type: **Pooled**
-
+    * Click **Next: Configure virtual machines >**
 5. Complete the **Configure virtual machines** tab with the following information:
     * Create an Availability Set: **No**
     * Usage Profile: **Custom**
@@ -30,17 +30,18 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
     * Total users: **2**
         >This will create 2 hosts and join them to AD and this pool.
     * Virtual machine size: *Change Size* and select **B2s**
-        >This size is fine for lab purposes but you would choose larger VMs for production.
+        >Choose the smallest VM size that is supported within your region such as a **D2s_v3**.
     * Virtual machine name prefix: **Pooled**
         >This prefix will be used in combination with the VM number to create the VM name. If using 'Pooled' as the prefix, VMs would be named 'Pooled-0', 'Pooled-1', etc. You should use a unique prefix to reduce name collisions in Active Directory and in Windows Virtual Desktop.
-
+    * Click **Next: Virtual machine settings >**
 6. Complete the **Virtual machine settings** tab with the following information:
-    * AD domain join UPN: `WVDAdmin@<yourADDomain>`
+    * AD domain join UPN: `ADAdmin@<yourFQDNADDomain>`
         >UPN of an Active Directory user that has permissions and will be used to join the virtual machines to your domain.  If you didn't write this down you can return to your RDP session with the domain controller and obtain the information.
     * Admin Password: `Complex.Password`
     * Confirm password: `Complex.Password`
     * Virtual network: **Select the existing virtual network you created earlier, do not create a new VNET**.
     * vmSubnet: **Select the existing subnet you created earlier, do not create a new subnet**.
+    * Click **Next: Windows Virtual Desktop information >**
 
 7. Complete the **Windows Virtual Desktop information** tab with the following information:
     * Windows Virtual Desktop tenant group name
