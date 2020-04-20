@@ -8,7 +8,7 @@ Before you can create a Windows Virtual Desktop tenant, you must allow Windows V
 
 1. On your desktop browse to the URL: [Windows Virtual Desktop Consent Page](https://rdweb.wvd.microsoft.com/).  
 2. Under **Consent Option** select **Server App** from the dropdown and then paste your Azure Active Directory ID (your Tenant ID) into the **AAD Tenant GUID or Name:** and click **Submit**.
-3. When prompted, **Pick an account** that is your credentials for Azure Active Directory, such as `AzureADAdmin@<yourAzureADDomain>.onmicrosoft.com'.
+3. When prompted, **Pick an account** that is your credentials for Azure Active Directory, such as `AzureADAdmin@<yourAzureADDomain>.onmicrosoft.com`.
 
     ![PickAnAccount](../attachments/PickAnAccount.png)
 
