@@ -92,12 +92,13 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
 3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. adadmin@yourdomain.com).  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 
-    > Note that if you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.
+    > If you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.
 
     > When you connect with RDP you will see adadmin as the default credentials.. These are local crdentials, not domain credentials, so be sure to click on **More choices** then **Use a different account** and enter FQDM domain credentials.
+
 4. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
 
-5. Create a New User with the following information:
+5. Expand the domain tree and select **Users**. Right-click and create a New User with the following information:
     * First Name: **WVD**
     * Last Name: **Administrator**
     * Full Name: **WVD Administrator**
@@ -113,24 +114,40 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 
    > **Note:** This account will be used during the host pool creation process for joining the hosts to the domain. Granting Enterprise Admin permissions will simplify the lab. However, any Active Directory account that has the following permissions will suffice. This can be done using [Active Directory Delegate Control.](https://danielengberg.com/domain-join-permissions-delegate-active-directory/)
 
+### Create Domain Accounts
+
+1. Right-click and create a New User with the following information:
+    * First Name: **Bob**
+    * Last Name: **Jones**
+    * Full Name: **Bob Jones**
+    * User Logon Name: **Bob.Jones**
+2. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
+3. Click **Next** then **Finish**.
+4. Right-click and create a New User with the following information:
+    * First Name: **Julia**
+    * Last Name: **Williams**
+    * Full Name: **Julia Williams**
+    * User Logon Name: **jullia.williams**
+5. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
+6. Click **Next** then **Finish**.
+
 ## Exercise 4 - Create a virtual machine to host AD Connect
 
 We are creating a small VM to be used later to host Azure AD Connect.
 
-1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
-2. Login using your Microsoft Account.
-3. Create an availability set.  You want to keep all your virtual machines resilient.
+1. From your desktop return to and open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
+2. You mau have to hit **Reconnect**.
+3. Create your virtual machine:
 
-    `az vm availability-set create --name ADConnect-AvailabilitySet --resource-group WVDLab-Infrastructure --location eastus`
-
-4. Create your virtual machine:
-
-    `az vm create --resource-group WVDLab-Infrastructure --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
+    ```PowerShell
+    az vm create --resource-group WVDLab-Infrastructure --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username LocalAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15
+    ```
+    > It will take about 5 minutes to provision this VM.
 
 ## Exercise 5 - Join the ADConnect VM to the domain
 
-1. Once the cloud shell has built your VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / ADConnect / Connect / RDP**.  Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
-2. Logon with local credentials (i.e. ADAdmin) with a password of `Complex.Password`.  Choose **More Choices** then **Use a different account** to enter your new set of credentials.
+1. Once the cloud shell has built your ADConnect VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / ADConnect / Connect / RDP**.  Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
+2. Logon with local credentials (i.e. LocalAdmin) with a password of `Complex.Password`.  Choose **More Choices** then **Use a different account** to enter your new set of credentials.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
 3. When prompted click **No** on the Network discovery blade.
 4. The DNS Server on ADConnect may not be set to see the domain controller (DC01), so we need to check that setting.  
 5. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
