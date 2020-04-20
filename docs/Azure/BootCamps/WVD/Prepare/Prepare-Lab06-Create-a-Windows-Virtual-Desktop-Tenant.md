@@ -8,7 +8,7 @@ For more information visit [Create a Windows Virtual Desktop tenant](https://doc
 
 Capturing some of the commonly used strings into variables will make execution simpler as we execute various commands to provision our tenant. These variables will not change through out this entire deployment.  
 
-1. From your desktop, open PowerShell (or PowerShell ISE) with Administrator credentials and enter the following:
+1. From the domain controller, open PowerShell (or PowerShell ISE) with Administrator credentials and enter the following:
 
 ```PowerShell
 $brokerurl = "https://rdbroker.wvd.microsoft.com"
@@ -18,9 +18,18 @@ $SignInName = "AzureADAdmin@<yourAzureADdomain>.onmicrosoft.com"
 $TenantName = "The name of your tenant"
 ```
 
-![PSVariables](../attachments/PSVariables.PNG)
-
    > Note: Make sure your tenant name has no special characters!
+
+   ![TenantVariables](../attachments/TenantVariables.PNG)
+
+2. Disable IE Enhanced Security Configuration using steps previously provided.
+3. Install the required PowerShell modules:
+
+   ```PowerShell
+   Install-Module -Name Microsoft.RDInfra.RDPowershell
+   ```
+
+   > If prompted click **Yes** to installing the NuGet provider and **Yes to all** to installing from an untrusted repository.
 
 ## Exercise 2 - Sign into Windows Virtual Desktop Services
 

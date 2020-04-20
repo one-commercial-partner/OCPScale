@@ -14,7 +14,7 @@ We recommend having multiple monitors to complete this lab.  On one monitor load
 
 Your will need an Azure subscription to complete the Windows Virtual Desktop labs.  The following are ideal subscription types to utilize:
 
-* •	Visual Studio Professional or Visual Studio Enterprise
+* Visual Studio Professional or Visual Studio Enterprise
 * IUR (Azure Use Rights) from your partner organization
 
 **Microsoft does not recommend using any Azure subscription that has production workloads or services.  Use a subscription that is designated for testing purposes only.**
@@ -42,7 +42,9 @@ Complete these steps to install the Windows Virtual Desktop PowerShell module on
 
 1. To quickly download and install the Windows Virtual Desktop PowerShell module, launch PowerShell as an administrator and run the following command:
 
-    `Install-Module -Name Microsoft.RDInfra.RDPowershell`
+    ```PowerShell
+    Install-Module -Name Microsoft.RDInfra.RDPowershell
+    ```
 
     *Type **Y** when prompted for installing from an untrusted repository.*
 
