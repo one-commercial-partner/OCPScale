@@ -10,7 +10,9 @@ In this lab you will install and configure FSLogix to utilize a share on your do
 
     ![WVDGlobalGroup](../attachments/WVDGlobalGroup.PNG)
 
-3. Add the users from the Users OU into the new group called **WVDUsers**.
+3. Add the the following users from the Users OU into the WVDUsers group:
+    * Bob Jones
+    * Julia Williams  called **WVDUsers**.
 
     ![WVDGroupMembers](../attachments/WVDGroupMembers.PNG)
 
