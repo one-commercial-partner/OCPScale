@@ -37,4 +37,6 @@ In this lab your will validate the personal and Pooled Windows Virtual Desktop p
 6. Once connected, change the desktop background to a different picture.
 7. Disconnect from the session.
 
-### Return to [Deploy Phase Labs](deploy.md)
+### Continue to [FSLogix Installation and Configuration with File Shares](../optimize/Optimize-Lab13-FSLogix-Installation-and-Configuration.md)
+
+## Back to [Technical Intensity Workshop - Windows Virtual Desktop Labs](../index.md)

@@ -75,4 +75,4 @@ Congrats! You have now completed the steps to prepare your Windows Virtual Deskt
 
 ### Continue to Lab 7: [Deploy a Personal Host Pool](../Deploy/Deploy-Lab07-Deploy-a-Personal-Host-Pool.md)
 
-### Continue to the [Prepare Phase Labs](../Prepare/prepare.md)
+## Back to [Technical Intensity Workshop - Windows Virtual Desktop Labs](../index.md)
