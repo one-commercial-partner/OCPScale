@@ -28,8 +28,8 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 1. Under **Manage** select **Users**.
 2. Click on **+New User**.
 3. Enter the following:
-    * User name: **AADAdmin**
-    * Name: **AADAdmin**
+    * User name: **AzureADAdmin**
+    * Name: **AzureADAdmin**
     * Under Password:
         * Select **Let me create the password**
         * Initial password: `Temporary.Password`
@@ -43,7 +43,7 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 1. Open an InPrivate or Incognito browser.
 2. Surf to portal.azure.com.
-3. Logon as `AADAdmin@<yourdomainname?.onmicrosoft.com` with a password of `Temporary.Password`.
+3. Logon as `AzureADAdmin@<yourdomainname>.onmicrosoft.com` with a password of `Temporary.Password`.
 4. Update your password to `Complex.Password`.
 5. Close the InPrivate or Incognito browser.
 
