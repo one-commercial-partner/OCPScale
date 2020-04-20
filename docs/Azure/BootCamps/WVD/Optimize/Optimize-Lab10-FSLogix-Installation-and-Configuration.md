@@ -17,9 +17,9 @@ In this lab you will install and configure FSLogix to utilize a share on your do
 
     > This security group will be used to authenticate the Windows Virtual Desktop users to the file share you just created.
 
-4. Open File Explorer on the domain controller and create a folder on the C: drive called **WVDFSPROF** that will be used as the profile share.
+4. Open File Explorer on the domain controller and create a folder on the C: drive called **WVDFSLogix** that will be used as the profile share.
 
-5. Right-click **WVDFSPROF**, select **Properties**, select **Sharing**, then select **Advanced sharing...**.
+5. Right-click **WVDFSLogix**, select **Properties**, select **Sharing**, then select **Advanced sharing...**.
 
 6. Select **Share this folder**, select **Permissions...**, then select
     **Add...**.
@@ -119,7 +119,7 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
 
 6. Disconnect from your session and return to the desktop of the domain controller.
 
-7. Return to File Explorer and open the **WVDFSPROF** directory.
+7. Return to File Explorer and open the **WVDFSLogix** directory.
 
 8. Your should see a new folder for the profile of Bob Jones.
 
