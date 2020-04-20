@@ -93,8 +93,8 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. adadmin@yourdomain.com).  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 
     > If you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.
-
-    > When you connect with RDP you will see adadmin as the default credentials.. These are local crdentials, not domain credentials, so be sure to click on **More choices** then **Use a different account** and enter FQDM domain credentials.
+    
+    > When you connect with RDP you will see adadmin as the default credentials.. These are local crdentials, not domain credentials, so be sure to click on **More choices** then **Use a different account** and enter FQDN domain credentials.
 
 4. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
 
@@ -142,6 +142,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
     ```PowerShell
     az vm create --resource-group WVDLab-Infrastructure --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username LocalAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15
     ```
+
     > It will take about 5 minutes to provision this VM.
 
 ## Exercise 5 - Join the ADConnect VM to the domain
@@ -159,7 +160,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 3. Right-click on the network adapter and choose **Properties**.
 4. Select **Internet Protocol Version 4 (TCP/IPv4)** and then **Properties**.
 5. Select the radio button for **Use the following DNS Server addresses:** and Set the DNS server to **10.10.10.11** and click **OK** and then **Close**.
-6. You will then lose connection to the ADConnect VM, this is expected. 
+6. You will then lose connection to the ADConnect VM, this is expected.
 7. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the **ADConnect** VM.
 
 ## Exercise 6 - Join the Domain
