@@ -57,7 +57,7 @@ $TenantName = "The name of your tenant"
 New-RdsTenant -Name $TenantName -AadTenantId $aadTenantId -AzureSubscriptionId $azureSubscriptionId
 ```
 
-![image.png](../attachments/image-b4e9ea52-2783-4024-8915-d927e1e5814a.png)
+![WVDTenantProvisioned](../attachments/WVDTenantProvisioned.PNG)
 
 ## Exercise 4 - Add user roles to your Windows Virtual Desktop Tenant
 

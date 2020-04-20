@@ -8,7 +8,7 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
 
 ## Exercise 1 - Provision a Personal Host Pool
 
-1. Return to the [Azure Portal](https://portal.azure.com) and search for **Marketplace**.  
+1. Return to the [Azure Portal](https://portal.azure.com) on your desktop and search for **Marketplace**.  
     > **NOTE:** Ensure that you are in the correct directory and subscription.
 
     ![image](../attachments/4e91cf3c29be44f486c9b7428235071c.png)
