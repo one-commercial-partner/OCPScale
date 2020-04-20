@@ -37,7 +37,7 @@ In this lab you will install and configure FSLogix to utilize a share on your do
 
 Installing the FSLogix agent can be done a few different ways. In this exercise we will install it via double hop RDP method where we will leverage the existing RDP session to the domain controller and then from there RDP into the session hosts to install the agent.
 
-1. From within the RDP session of the domain controller by clicking on the **Start button** then selecting **Remote Desktop Connection** from the Start menu.  Establish an RDP session to the first session host from the **Personal Pool** which should be 10.10.10.4. If you connect and do not see Bob's profile, look the the correct IP address in the Azure Portal.
+1. From within the RDP session of the domain controller by clicking on the **Start button** then selecting **Remote Desktop Connection** from the Start menu.  Establish an RDP session to the first session host from the **Personal Pool** which should be 10.10.10.4. If you connect and do not see Bob's profile, look for the correct IP address in the Azure Portal.
 
 2. Login with the domain administrator credentials `<yourADdomain>\adadmin` and a password of `Complex.Password`.  
 
@@ -46,21 +46,23 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
     * Navigate to the `C:\Users` directory.
     * Stop the Windows Search service prior to deleting the profile:
         * Right-click on the Windows Start button and select **Computer Management**.
+        * Expand **Services and Applications**.
+        * Click on **Services**.
         * Scroll-down and select the **Windows Search**.
         * Right-click and select **Stop**.
-    * Back in File Explorer right-click the `C:\Users\BJones` directory and select **Delete**.
+    * Back in File Explorer right-click the `C:\Users\Bob.Jones` directory and select **Delete**.
 
     > If you are still unable to delete the profile, Bob Jones might be disconnected.  Open Task Manager, click the **Users** tab, and if Bob Jones is listed right-click and select **Disconnect**.
 
-4. Launch Microsoft Edge and navigate to [Download and Install FSLogix](https://docs.microsoft.com/fslogix/install-ht).
+4. Within the VM (not the domain controller), launch Microsoft Edge and navigate to [Download and Install FSLogix](https://docs.microsoft.com/fslogix/install-ht).
 
 5. Click **Open**, then **Compressed Folder Tools**, then **Extract All**, then **Extract**.
 
-6. Navigate to extraction folder, thex **x64** directory, then **Release** folder, and run **FSLogixAppsSetup** to install the FSLogix agent.  Complete a default installation.
+6. Navigate to the extraction folder, then **x64** directory, then **Release** folder, and run **FSLogixAppsSetup** to install the FSLogix agent.  Complete a default installation.
 
 7. Navigate to **Program Files** \> **FSLogix** \> **Apps** to confirm the agent installed.
 
-8. Open a Command Prompt and run **RegEdit32** as an administrator. Navigate to     **Computer\\HKEY_LOCAL_MACHINE\\software\\FSLogix\\**..
+8. Open a Command Prompt and run **RegEdit32** as an administrator. Navigate to **Computer\\HKEY_LOCAL_MACHINE\\software\\FSLogix\\**.
 
 9. Open PowerShell and execute the following commands:
 
@@ -72,8 +74,7 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
     Set-ItemProperty -Path HKLM:\Software\FSLogix\Profiles -Name "Enabled" -Type "Dword" -Value "1"
 
     #Create the VHDLocations
-    #EDIT THE \\SHARE\VOLUME value you saved earlier
-    New-ItemProperty -Path HKLM:\Software\FSLogix\Profiles -Name "VHDLocations" -Value \\yoursharename\yourvolumename -PropertyType MultiString -Force
+    New-ItemProperty -Path HKLM:\Software\FSLogix\Profiles -Name "VHDLocations" -Value \\DC01\WVDFSLogix -PropertyType MultiString -Force
 
     #Create the SizeInMBs
     Set-ItemProperty -Path HKLM:\Software\FSLogix\Profiles -Name "SizeInMBs" -Type "Dword" -Value "32768"
@@ -92,9 +93,11 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
 
     ![RegEdits](../attachments/RegEdits.PNG)
 
+11. **Restart** the virtual machine.
+
 ## Exercise 3 - Confirm FSLogix Functionality
 
-1. Restart the session host and then login again as Bob Jones to create the user profile.
+1. Login again as Bob Jones to create the user profile.
     * From your desktop launch the Remote Desktop client.
     * When prompted enter the credentials for Bob Jones:
         * Username: `Bob.Jones@<yourdomain>.onmicrosoft.com`
@@ -102,17 +105,14 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
 
     > During the logon process your should see a statement about FSLogix.
 
-2. You can get a status if FSLogix agent works by launching FRXTray that in:
-    “C:\\Program Files\\FSLogix\\Apps”
+2. You can get a status if the FSLogix agent works by launching FRXTray that in `C:\Program Files\FSLogix\Apps`.
 
 3. Then click on the traffic light that is in the tray. The light should be
     green.
 
-    ![image.png](../attachments/image-bc21ad1d-bfbd-484e-804d-ee5652135dfe.png)
-
     > Note: Sometimes the Profile status may not show green right away.
 
-4. Click on “**Advanced view**” and then go to “**Operational**” and look if you have no issue in the logs.
+4. Click on “**Advanced view**” and then go to **Events** and then click on **Operational** and confirm that you all **Informational** events in the logs.
 
     ![image.png](../attachments/image-fae2eb94-2c30-437f-8a3a-05ef6a659ad2.png)
 
@@ -124,6 +124,6 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
 
 8. Your should see a new folder for the profile of Bob Jones.
 
-    ![BobJonesProfileonDC](../attachments/BobJonesProfileonDC.PNG)
+    ![FSLogixProfileOnDC](../attachments/FSLogixProfileOnDC.PNG)
 
 ### Return to [Optimize Phase Labs](optimize.md)
