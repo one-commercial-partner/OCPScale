@@ -150,20 +150,21 @@ We are creating a small VM to be used later to host Azure AD Connect.
 2. Logon with local credentials (i.e. LocalAdmin) with a password of `Complex.Password`.  Choose **More Choices** then **Use a different account** to enter your new set of credentials.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
 3. When prompted click **No** on the Network discovery blade.
 4. The DNS Server on ADConnect may not be set to see the domain controller (DC01), so we need to check that setting.  
-5. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
+5. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Exercise 6 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
 
 ### Configure DNS
 
-1. Within **Server Manager**, click on **Local Server**.
+1. Within **Server Manager**, close the message about **Windows Admin Center** and then click on **Local Server**.
 2. Click on **IPv4 address assigned by DHCP, IPv6 enabled** setting for the Ethernet connection.
 3. Right-click on the network adapter and choose **Properties**.
 4. Select **Internet Protocol Version 4 (TCP/IPv4)** and then **Properties**.
 5. Select the radio button for **Use the following DNS Server addresses:** and Set the DNS server to **10.10.10.11** and click **OK** and then **Close**.
-6. You will then lose connection to the ADConnect VM, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the ADConnect VM.
+6. You will then lose connection to the ADConnect VM, this is expected. 
+7. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the **ADConnect** VM.
 
 ## Exercise 6 - Join the Domain
 
-1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as ADAdmin.  Within **Server Manager**, click on **Local Server**.
+1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as LocalAdmin.  Within **Server Manager**, click on **Local Server**.
 2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
 3. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
 4. In the Windows Security box enter the AD Domain Admin credentials you specified earlier.
