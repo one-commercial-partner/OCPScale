@@ -16,10 +16,12 @@ In this lab your will validate the personal and Pooled Windows Virtual Desktop p
 5. Click **Yes** on the next screen and the **Done** on the following screen.
 6. Double-click on the icon for Personal Pool.
 7. When prompted enter the credentials for Bob Jones:
-    * Username: `Bob.Jones@<yourdomain>.onmicrosoft.com`
+    * Username: `Bob.Jones@<yourADdomain>`
     * Password: `Complex.Password`
 8. Once connected, change the desktop background to a different picture.
 9. Disconnect from the session.
+
+>Open a command prompt and take note of the IP address for a future exercise.
 
 ## Exercise 2 - Connect with the Windows Virtual Desktop web client
 

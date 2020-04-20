@@ -12,7 +12,7 @@ In this lab you will install and configure FSLogix to utilize a share on your do
 
 3. Add the the following users from the Users OU into the WVDUsers group:
     * Bob Jones
-    * Julia Williams  called **WVDUsers**.
+    * Julia Williams  
 
     ![WVDGroupMembers](../attachments/WVDGroupMembers.PNG)
 
@@ -37,9 +37,9 @@ In this lab you will install and configure FSLogix to utilize a share on your do
 
 Installing the FSLogix agent can be done a few different ways. In this exercise we will install it via double hop RDP method where we will leverage the existing RDP session to the domain controller and then from there RDP into the session hosts to install the agent.
 
-1. From within the RDP session of the domain controller by clicking on the **Start button** then selecting **Remote Desktop Connection** from the Start menu.  Establish an RDP session to the first session host which should be 10.0.1.6. If you connect and do not see Bob's profile, RDP into 10.0.1.5.
+1. From within the RDP session of the domain controller by clicking on the **Start button** then selecting **Remote Desktop Connection** from the Start menu.  Establish an RDP session to the first session host from the **Personal Pool** which should be 10.10.10.4. If you connect and do not see Bob's profile, look the the correct IP address in the Azure Portal.
 
-2. Login with the domain administrator credentials `<yourADdomain>\adadmin` and a password of `Complex.Password`.
+2. Login with the domain administrator credentials `<yourADdomain>\adadmin` and a password of `Complex.Password`.  
 
 3. In previous labs the end user Bob Jones was able to login to the session host. Once that user logged in a locally cached profile was created. For the FSLogix profile container to take priority over the locally cached profile, you will need to **Delete** the locally cached profile for user     `C:\Users\BJones`.
     * Right-click the Start menu and choose **File Explorer**.
