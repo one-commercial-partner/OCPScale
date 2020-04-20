@@ -10,7 +10,7 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
 
 ### Configure DNS
 
-The virtual network that contains the domain controller is pointing to Azure DNS, not the DNS of the domin controller.  New VMs will not be able to find the domain controller and join the domain.
+The virtual network that contains the domain controller is pointing to Azure DNS, not the DNS of the domin controller.  Any new VMs will not be able to find the DNS service on the domain controller and be able to join the domain.  Change the DNS to point to the domain controller.
 
 1. In the Azure portal click **Home** -> **Resource groups** -> **WVDLab-Infrastructure**.
 2. Click on **DC01** and copy the Private IP address (e.g. 10.10.10.11).
