@@ -65,7 +65,9 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
 
     ![image](../attachments/d186f32593dbd7d350ec18940f547f8f.png)
 
-Congrats! You have successfully deployed a Pooled Host Pool!  
+Congrats! You have successfully deployed a Pooled Host Pool!
+
+![PooledDeploymentComplete](../attachments/PooledDeploymentComplete.PNG)
 
 ## Exercise 2 - Assign users to the Pool
 
@@ -73,7 +75,7 @@ Now use the following commands to ensure your users are a member of the Pooled H
 
 This cmd will ensure the user is a member of the Application Pool, this is required to have access to see the session host.
 
-1. In the Azure Portal open the Azure Active DIrectory for your tenant.
+1. In the Azure Portal open the Azure Active Directory for your tenant.
 2. Select **Users** then **Julia Williams**.
 3. Copy the UPN: `Julia.Williams@<yourdomain>.onmicrosoft.com`
 4. Open PowerShell and enter the following command:

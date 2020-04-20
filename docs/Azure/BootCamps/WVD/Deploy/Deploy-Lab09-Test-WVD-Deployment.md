@@ -25,7 +25,7 @@ In this lab your will validate the personal and Pooled Windows Virtual Desktop p
 
 1. In a INPrivate or InCognito browser, navigate to the [Windows Virtual Desktop web client](https://rdweb.wvd.microsoft.com/webclient).
 2. When prompted enter the credentials for Julia Williams:
-    * Username: Julia.Williams@`yourdomain`.onmicrosoft.com
+    * Username: `Julia.Williams@<yourAzureADdomain>.onmicrosoft.com`
     * Password: `Complex.Password`
     > **NOTE:** These credentials are to logon and authenticate to the Windows Virtual Desktop Service.
 3. Click on the icon for PooledPool.
@@ -33,7 +33,7 @@ In this lab your will validate the personal and Pooled Windows Virtual Desktop p
 5. When prompted enter the following credentials:
     * Username: adadmin@`yourADdomain`
     * Password: `Complex.Password`
-    > **NOTE:** These credentials are to logon to a computer in the pool.
+    > **NOTE:** These credentials are to logon to a computer in the pool.  You could always grant `Julia.Williams@<yourAzureADdomain>.onmicrosoft.com` the right to logon locally.
 6. Once connected, change the desktop background to a different picture.
 7. Disconnect from the session.
 
