@@ -83,7 +83,7 @@ Close Internet Explorer.
 1. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
 2. Review the screen and select **Use express settings**.
 3. On the **Connect to Azure AD** screen enter your **Azure AD Credentials**:
-   * USERNAME: `AzureADSync@<yourAzureADDomain>.wagnerwvd.onmicrosoft.com`
+   * USERNAME: `AzureADSync@<yourAzureADDomain>.onmicrosoft.com`
    * PASSWORD: `Complex.Password`
    * Click **Next** and then confirm the credential are validated.
 4. On the **Connect to AD DS screen**, enter the Active Directory Domain Services domain administrator credentials:
