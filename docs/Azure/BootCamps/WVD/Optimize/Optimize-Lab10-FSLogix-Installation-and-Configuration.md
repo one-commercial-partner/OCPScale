@@ -1,4 +1,4 @@
-# Lab 13: FSLogix Installation and Configuration
+# FSLogix Installation and Configuration
 
 In this lab you will install and configure FSLogix to utilize a share on your domain controller to host user profiles.
 
