@@ -38,12 +38,12 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
     * Click **Next: Virtual machine settings >**
 
 6. Complete the **Virtual machine settings** tab with the following information:
-    * AD domain join UPN: `WVDAdmin@<yourADDomain>`
+    * AD domain join UPN: `ADAdmin@<yourADDomain>`
         >UPN of an Active Directory user that has permissions and will be used to join the virtual machines to your domain.  If you didn't write this down you can return to your RDP session with the domain controller and obtain the information.
     * Admin Password: `Complex.Password`
     * Confirm password: `Complex.Password`
-    * Virtual network: **Select the existing virtual network created earlier, do not create a new VNET**
-    * vmSubnet: **Select the existing subnet you created earlier, do not create a new subnet**
+    * Virtual network: **Select the existing virtual network created earlier, do not create a new VNET**.
+    * vmSubnet: **Select the existing subnet you created earlier, do not create a new subnet**.
     * Click **Next: Windows Virtual Desktop information >**
 
 7. Complete the **Windows Virtual Desktop information** tab with the following information:
@@ -61,7 +61,7 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
 
 9. Select **Create** to start your Personal Host Pool deployment.
 
-10. You can watch the progress of the deployment.  Note that this will take about 15 minutes or so to complete, so it might be a good time to stretch your legs and take a break.
+10. You can watch the progress of the deployment.  Note that this will take about 15 minutes or so to complete, so it might be a good time to stretch your virtual legs and take a break.
 
     ![image](../attachments/763dbbfd0796fd7afecf51de9562d959.png)
 11. You should eventually receive a message **“Your Deployment is complete”.** If
@@ -86,5 +86,7 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
     ```Powershell
     Add-RdsAppGroupUser $TenantName -HostPoolName Personal -AppGroupName "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourdomain>.onmicrosoft.com
     ```
+
+### Continue to Lab 8: [Deploy a Pooled Host Pool](Deploy-Lab08-Deploy-a-Pooled-Host-Pool.md)
 
 ### Return to [Deploy Phase Labs](deploy.md)
