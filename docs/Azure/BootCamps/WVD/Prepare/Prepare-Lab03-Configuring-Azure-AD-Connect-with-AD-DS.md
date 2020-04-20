@@ -6,98 +6,103 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 ---
 
-## Exercise 1 - Connecting to the domain controller
+## Exercise 1 - Install Azure Active Directory
 
-1. Click on **Go to resource**, or return to the [Azure Portal](https://portal.azure.com/).
+1. In the Azure Portal, click **Microsoft Azure** and then **+Create a resource**.  Select **Identity** and then **Azure Active Directory**.
+2. Enter the following on the **Create directory** tab:
+    * Organization name: **WVD Lab**
+    * Initial domain name: `<yourinitials>`WVDLab *(e.g. abdWVDLab)*
+    * Hit **Tab**.
 
-2. Locate the resource named **AdPubIP1** and click on it. Note that the resource type should be **Public IP address**.
+        >Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.
 
-3. On the Overview page for AdPubIP1, locate the **IP address** field. Copy the IP address to a safe location.
+3. Click **Create**.  It will take several minutes for the directory to be created.
+4. Once complete, click **here** to manage your new directory.
 
-   ![PreReqs-Ex04000.png](../attachments/PreReqs-Ex04000-4449308a-6098-4445-8bb7-a20c54dae18e.png)
+    >**Copy the Azure Active Directory Domain Name and Tenant ID to a scratch location such as Notepad.**
 
-4. On your local machine, open the **RUN** dialog window, type **MSTSC** and hit enter.
+    ![InitialAzureADInfo](../attachments/InitialAzureADInfo.PNG)
 
-5. In the **Remote Desktop Connection** window, paste in the public IP address from the previous step. Click **Connect**.
+### Create a Global Account
 
-6. When prompted, sign in with the credentials of **adadmin** with the password of `Complex.Password`. You may have to click on **More choices** and then **Use a different account**.   When prompted, click **Yes** to accept the RDP certification warning.
+1. Under **Manage** select **Users**.
+2. Click on **+New User**.
+3. Enter the following:
+    * User name: **AADAdmin**
+    * Name: **AADAdmin**
+    * Under Password:
+        * Select **Let me create the password**
+        * Initial password: `Temporary.Password`
+    * Under **Groups and roles** click on **User**
+        * Scroll down to find and select `Global administrator`.
+        * Click **Select**
+    * Usage location: **United States**
+4. Click **Create**.
 
-7. Upon connection click **No** on the **Networks** blade.
+### Reset the password
 
-## Exercise 2 - Disabling IE Enhanced Security
+1. Open an InPrivate or Incognito browser.
+2. Surf to portal.azure.com.
+3. Logon as `AADAdmin@<yourdomainname?.onmicrosoft.com` with a password of `Temporary.Password`.
+4. Update your password to `Complex.Password`.
+5. Close the InPrivate or Incognito browser.
 
-In an effort to simplify tasks in this lab, we will start by disabling [IE Enhanced Security](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-ie-esc).
+## Exercise 2 - Create a Sync Account
 
-1. Once connected to the domain controller, close the message about **Windows Admin Center**.
+We are going to create an account that AD Connect will use to perform the synchronization process bethween the on-prem domain controller and Azure Active Directory.
 
-2. In Server Manager, select **Local Server** on the left.
+1. In Azure Active Directory click on **+ New User** and enter the following:
+    * User name: **AzureADSync**
+    * Under Password:
+        * Select **Let me create the password**
+        * Initial password: `Temporary.Password`
+    * Under **Groups and roles** click on **User**
+        * Scroll down to find and select `Global administrator`.
+        * Click **Select**
+    * Usage location: **United States**
+2. Click **Create**.
 
-3. Locate the **IE Enhanced Security Configuration** option and click **On**.
+### Reset the Sync Account password
 
-   ![PreReqs-Ex04001.png](../attachments/PreReqs-Ex04001-60859cbe-bd9f-4207-9fee-fe148d72f832.png)
-  
-4. On the Internet Explorer Enhanced Security Configuration window, under **Administrators**, select the **Off** radio button and click **OK**.
+1. Open an InPrivate or Incognito browser.
+2. Surf to portal.azure.com.
+3. Logon as `AzureADSync@<yourdomainname>.onmicrosoft.com` with a password of `Temporary.Password`.
+4. Update your password to `Complex.Password`.
+5. Close the InPrivate or Incognito browser.
 
----
+## Exercise 3 - Install Azure Active Directory Connect
 
-## Exercise 3 - Creating a Enterprise Admin account
+1. Connect to the ADConnect VM and logon as your previously created **domain account** (i.e. `domainname\username`, not adadmin which is a local account).
+2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators.
+3. Open Internet Explorer, accept the defaults, and surf to <http://go.microsoft.com/fwlink/?LinkId=615771>
+4. Click **Download**, then **Run** when prompted.
+Close Internet Explorer.
 
-By default, Azure AD Connect does not synchronize the built-in domain administrator account *ADAdmin\@MyADDomain.com*. This system account has the attribute `isCriticalSystemObject` set to *true*, preventing it from being synchronized. While it is possible to modify this, it is not a best practice to do so.
+## Exercise 4 -  Configure Azure Active Directory Connect
 
-1. In Server Manager, click **Tools** in the upper right corner and select **Active Directory Users and Computers**.
-
-2. In Active Directory Users and Computers, expand your domain tree, select  and then right-click **Users** and select **New > User** from the menu.
-
-3. Create a New User with the following information:
-    * First Name: **WVD**
-    * Last Name: **Administrator**
-    * Full Name: **WVD Administrator**
-    * User Logon Name: **wvdadmin**
-4. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
-5. Click **Next** then **Finish**.
-
-   > *Tip:* This account will be important in future tasks. Make a note of the username and password you create.
-
-6. In Active Directory Users and Computers, select and then right-click on the `WVD Administrator` account object and select **Add to a group**.
-
-7. On the Select Groups dialog window, type **Enterprise Admins**, click **Check Names**, and then click **OK**.  Click **OK** once the operation is completed successfully.
-
-   > **Note:** This account will be used during the host pool creation process for joining the hosts to the domain. Granting Enterprise Admin permissions will simplify the lab. However, any Active Directory account that has the following permissions will suffice. This can be done using [Active Directory Delegate Control.](https://danielengberg.com/domain-join-permissions-delegate-active-directory/)
-
- ---
-
-## Exercise 4 - Configuring Azure AD Connect
-
-1. Switch to the desktop of your domain Controller and double-click on **Azure AD Connect**. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
+1. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
 2. Review the screen and select **Use express settings**.
-3. On the **Connect to Azure AD** screen enter the following and then click **Next** and then confirm the credential are validated.
-   * USERNAME: `AzureADAdmin@<yourAzureADdomainname>.onmicrosoft.com`
-   * PASSWORD: `Complex.Password`.  
-
-   ![ConnectToAzureAD](../attachments/ConnectToAzureAD.PNG)
-
-4. On the **Connect to AD DS screen**, enter the following and then click **Next** and then confirm the credential are validated.
-   * USERNAME: `<yourFQDNADdomainname>\wvdadmin` (e.g. wagslabs.com\wvdadmin)
+3. On the **Connect to Azure AD** screen enter your **Azure AD Credentials**:
+   * USERNAME: `AzureADSync@<yourAzureADDomain>.wagnerwvd.onmicrosoft.com`
    * PASSWORD: `Complex.Password`
-
-    > **NOTE** If you get an error about the current security context is not associated with an Active Directory domain or forest, you more than likely didn’t logon with a domain account but rather a local account.  You can verify this by opening a command prompt and entering **whoami**.  Logout and login with a domain account and then restart at step 1 in this section.
+   * Click **Next** and then confirm the credential are validated.
+4. On the **Connect to AD DS screen**, enter the Active Directory Domain Services domain administrator credentials:
+   * USERNAME: `<yourADDomain>\adadmin`
+   * PASSWORD: `Complex.Password`
+   * Click **Next** and then confirm the credential are validated.
 5. On the **Azure AD sign-in configuration** screen, select the checkbox for **Continue without any verified domains** and click **Next**.
 
-    > Since this is a temporary lab environment we are not going use a validated custom domain.
+   > Since this is a temporary lab environment we are not going use a validated custom domain.
 6. On the **Ready to Configure** screen click **Install**.
 7. It may take 5-10 minutes for Azure AD Connect to complete installation. Read the **Configuration Complete** screen and then click **Exit**.
+8. Minimize your RDP window.
 
 ## Exercise 5 - Validate Synchronization
 
-1. Return to the [Azure Portal](https://portal.azure.com/).
-2. Type **Azure Active Directory** in the search field and select it from the list.
-   >Ensure you are looking at the right Azure Active Directory!
-3. On the Azure Active Directory blade, under **Manage**, select **Users**.
-4. Review the list of user account objects and confirm the test accounts have synchronized, as shown below.
+1. Switch to the Azure portal and examine your Azure AD Directory by selecting the xxxx.onmicrosoft.com  Directory from the upper right hand corner of the portal.
+2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. On Prem).
 
-    ![PostSyncUsers](../attachments/PostSyncUsers.PNG)
-
-    > **Note:** It can take up to 15 minutes for the Active Directory objects to be synchronized to the Azure AD tenant.
+### Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory
 
 ### Continue with Lab 4: [Grant consent for WVD service](Prepare-Lab04-Grant-consent-for-WVD-service.md)
 

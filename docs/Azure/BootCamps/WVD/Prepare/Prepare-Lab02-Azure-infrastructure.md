@@ -167,78 +167,11 @@ We are creating a small VM to be used later to host Azure AD Connect.
 1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as LocalAdmin.  Within **Server Manager**, click on **Local Server**.
 2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
 3. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
-4. In the Windows Security box enter the AD Domain Admin credentials you specified earlier.
+4. In the Windows Security box enter the following:AD Domain Admin credentials:
+    * username: **adadmin**
+    * password: `Complex.Password`
 5. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
-## Exercise 7 - Install Azure Active Directory
+### Continue with Lab 3: [Configuring Azure AD Connect with AD-DS](Prepare-Lab03-Configuring-Azure-AD-Connect-with-AD-DS.md)
 
-1. In the Azure Portal, click **Microsoft Azure** and then **+Create a resource**.  Select **Identity** and then **Azure Active Directory**.
-2. Enter the following on the **Create directory tab**:
-    * Organization name (e.g. *yourfirstname* Mike's Org)
-    * Initial domain name (e.g. your initials plus last four of your cellphone).  Hit **Tab**.
-
-        *Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.*
-
-        ***Write this domain name down as your Azure Active Directory Domain Name.***
-3. Click **Create**.  It will take several minutes for the directory to be created.
-4. Once complete, select Click **here** to manage your new directory.
-
-## Exercise 8 - Create a Sync Account
-
-We are going to create an account that AD Connect will use to perform the synchronization process bethween the on-prem domain controller and Azure Active Directory.
-
-1. In Azure Active Directory, under **Manage** choose **Users** and then under **All users** click on **+New User** and enter the following:
-    * User name: **adsync**
-    * Name: **AD Sync Account**
-    * Click on **Show Password** and then copy the password.
-    * Under **Roles** click **User**.  Search for and select a directory role named: **Global administrator**, then click **Select**.
-2. Click **Create**.
-3. Open an InPrivate or Incognito browser and surf to <https://portal.azure.com.>
-4. Login as the AD Sync Account you just created using the temporary password.
-5. Change your password to `Complex.Password` and then click **Sign in**.
-6. Close your inprivate or incognito browser.
-
-## Exercise 9 - Install Azure Active Directory Connect
-
-1. Connect to the ADConnect VM and logon as your previously created **domain account** (i.e. `domainname\username`, not adadmin which is a local account).  If you don’t see the VM, you might need to  switch from the new Azure Active Directory you just created to the **Default Directory** associated with your subscription.  Click in the upper right-hand corner of the screen to change directories.
-2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators and Users.
-3. Open Internet Explorer, accept the defaults, and surf to <http://go.microsoft.com/fwlink/?LinkId=615771>
-4. Click **Download**, then **Run** when prompted.
-Close Internet Explorer.
-
-### Create a Global Account
-
-1. Under **Manage** select **Users**.
-2. Click on **+New User**.
-3. Complete the following and then click **Create**:
-    * User name: **AADAdmin**
-    * Name: **AADAdmin**
-    * Under Password:
-        * Select **Let me create the password**
-        * Initial password: `Temporary.Password`
-    * Under Groups and roles click on **User**
-        * Scroll down to find and select `Global administrator`.
-        * Click **Select**
-    * Usage location: **United States**
-
-## Exercise 10 -  Configure Azure Active Directory Connect
-
-1. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
-2. Review the screen and select **Use express settings**.
-3. On the **Connect to Azure AD** screen enter your **Azure AD Credentials**.  This would be the *adsync@yourdirectoryname.onmicrosoft.com*  account you created.  Click **Next** and then confirm the credential are validated.
-4. On the **Connect to AD DS screen**, enter the Active Directory Domain Services domain administrator credentials. This would be the account you created in the original template (i.e. mydomain\myusername). Click **Next** and confirm the credential are validated.  
-
-    If you get an error about the current security context is not associated with an Active Directory domain or forest, you more than likely didn’t logon with a domain account but rather a local account.  You can verify this by opening a command prompt and entering **whoami**.  Logout and login with a domain account and then restart at step 1 in this section.
-5. On the **Azure AD sign-in configuration** screen, select the checkbox for **Continue without any verified domains** and click **Next**.
-
-    Since this is a temporary lab environment we are not going use a validated custom domain.
-6. On the **Ready to Configure** screen click **Install**.
-7. It may take 5-10 minutes for Azure AD Connect to complete installation. Read the **Configuration Complete** screen and then click **Exit**.
-8. Minimize your RDP window.
-
-## Exercise 11 - Validate Synchronization
-
-1. Switch to the Azure portal and examine your Azure AD Directory by selecting the xxxx.onmicrosoft.com  Directory from the upper right hand corner of the portal.
-2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. On Prem).
-
-### Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory
+### Return to [Prepare Phase Labs](prepare.md)
