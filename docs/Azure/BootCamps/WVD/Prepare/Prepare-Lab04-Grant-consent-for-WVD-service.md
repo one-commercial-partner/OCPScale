@@ -14,7 +14,7 @@ Before you can create a Windows Virtual Desktop tenant, you must allow Windows V
 
 4. Click **Accept** on the Permissions requested page.
 
- ## Exercise 2 - Enabling Client Registration and consent to Azure AD
+## Exercise 2 - Enabling Client Registration and consent to Azure AD
 
 1. **WAIT ONE MINUTE** before proceeding. It can take about a minute for the server registration to complete. If you proceed to the next step too quickly, you may see an error.
 2. Navigate back to [Windows Virtual Desktop Consent Page](https://rdweb.wvd.microsoft.com/).
