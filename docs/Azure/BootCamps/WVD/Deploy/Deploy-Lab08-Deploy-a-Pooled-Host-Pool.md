@@ -58,9 +58,9 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
 
 9. Select **Create** to start your Host Pool Deployment.
 
-10. You can watch the progress of the deployment.  Note that this will take about 15 minutes or so to complete, so it might be a good time to stretch your legs and take a break.
+10. You can watch the progress of the deployment.  Note that this will take about 15 minutes or so to complete, so it might be a good time to stretch your virtual legs and take a break.
 
-    ![image](../attachments/763dbbfd0796fd7afecf51de9562d959.png)
+    ![PooledDeploy](../attachments/PooledDeploy.PNG)
 11. You should eventually receive a message **“Your Deployment is complete”.**
 
     ![image](../attachments/d186f32593dbd7d350ec18940f547f8f.png)
