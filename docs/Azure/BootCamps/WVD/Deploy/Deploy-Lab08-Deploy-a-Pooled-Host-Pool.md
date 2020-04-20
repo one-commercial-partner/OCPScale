@@ -82,4 +82,6 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
     Add-RdsAppGroupUser $TenantName -HostPoolName Pooled -AppGroupName "Desktop Application Group" -UserPrincipalName Julia.Williams@<yourdomain>.onmicrosoft.com
     ```
 
+### Continue to Lab 9: [Test Your WVD Deployment](Deploy-Lab09-Test-WVD-Deployment.md)
+
 ### Return to [Deploy Phase Labs](deploy.md)
