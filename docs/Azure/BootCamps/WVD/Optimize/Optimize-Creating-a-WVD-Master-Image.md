@@ -1,10 +1,8 @@
 # Create a Custom WVD Master Image
 
-[Microsoft Reference Article](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/capture-image-resource)
+> This lab involves building and updating base or golden images and may take several hours to complete.  Please plan accordingly.
 
-There are many ways to create WVD master images. This article will cover a mainly manual approach that is simple to use.
-
-## Exercise 1 - Create a new Virtual Machine (VM) in Azure 
+## Exercise 1 - Create a new Virtual Machine (VM) in Azure
 
 1. In your Azure Portal, click on **+ Create a resource**, and in the search field type **Microsoft Windows 10**.
 2. Select **Windows 10 Enterprise multi-session, Version 1909** and click **Create**.
