@@ -38,7 +38,7 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
     * Click **Next: Virtual machine settings >**
 
 6. Complete the **Virtual machine settings** tab with the following information:
-    * AD domain join UPN: `ADAdmin@<yourADDomain>`
+    * AD domain join UPN: `ADAdmin@<yourFQDNADDomain>`
         >UPN of an Active Directory user that has permissions and will be used to join the virtual machines to your domain.  If you didn't write this down you can return to your RDP session with the domain controller and obtain the information.
     * Admin Password: `Complex.Password`
     * Confirm password: `Complex.Password`
