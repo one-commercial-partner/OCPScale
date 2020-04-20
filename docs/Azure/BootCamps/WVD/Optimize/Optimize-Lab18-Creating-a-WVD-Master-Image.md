@@ -1,38 +1,34 @@
-# Lab 17: Create a Custom WVD Master Image
-
+# Create a Custom WVD Master Image
 
 [Microsoft Reference Article](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/capture-image-resource)
 
 There are many ways to create WVD master images. This article will cover a mainly manual approach that is simple to use.
 
-#### Task 1: Create a new Virtual Machine (VM) in Azure 
+## Exercise 1 - Create a new Virtual Machine (VM) in Azure 
 
-In your Azure Portal, go to create a resource, and in the search field type
-“Microsoft Windows 10”
+1. In your Azure Portal, click on **+ Create a resource**, and in the search field type **Microsoft Windows 10**.
+2. Select **Windows 10 Enterprise multi-session, Version 1909** and click **Create**.
 
-![image.png](../attachments/image-win10ms-mp.png)
+   ![PickWin10MS](../attachments/PickWin10MS.PNG)
 
-Once you pick which version you want, build the VM.
+3. Complete the following on the **Basics** tab:
+   * Resource Group: *Create New* **WVDLab-GoldenImage**
+   * Virtual machine name: **GoldenImage**
+   * Size: **Standard D2 v3**
+   * Username: `<yourfirstname>`
+   * Password: `Complex.Password`
+   * Confirm password: `Complex.Password`
+4. Complete the following on the **Networking** tab:
+   * Virtual Network: Select **AD-VNet**
+   * Subnet: Select **AD-Subnet**
+5. Click **Review + create**.  Once validation passes, click **Create**.
 
-![image.png](../attachments/image-create-a-vm-image.png)
+## Exercise 2 - Run Windows Update
 
-This guide does not go into the detail of creating an Azure VM; however, please make sure you open the public inbound ports for RDP when you create it.
+1. Click on **Go to resource** once the deployment is complete.
+2. RDP into your **GoldenImage** VM and run Windows update.
 
-For more details on how to create a VM, see [https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal).
-
-Once the VM deployment is complete, login to the VM over RDP with the credentials you supplied when creating the VM.
-
-#### Task 2: Run Windows Update
-
-Despite the Azure support teams best efforts, the Marketplace images are always completely up to date. The best and most secure practice is to keep you master image as up to date as possible. Perform the manual steps to run Windows Update from the Settings app until no more updates are required. Reboot as necessary.
-
-![image.png](../attachments/image-windows-update.png)
-
-The Windows Update Settings dialog should look like this at the end:
-
-![image.png](../attachments/image-up-to-date.png)
-
-#### Task 3: Run the Automated Prepare WVD Image Script 
+## Exercise 3 - Run the Automated Prepare WVD Image Script
 
 The devs for this content decided to develop a script (Prepare-WVDImage.ps1) to automate the baseline image build tasks to allow you to quickly create a custom image that incorporates Microsoft's main business applications and configures policies and settings to optimize the user experience. The script is parameterized to allow the image builder to selectively perform the following functions.
 
