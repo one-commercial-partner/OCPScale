@@ -35,7 +35,7 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
         >This prefix will be used in combination with the VM number to create the VM name. If using 'Pooled' as the prefix, VMs would be named 'Pooled-0', 'Pooled-1', etc. You should use a unique prefix to reduce name collisions in Active Directory and in Windows Virtual Desktop.
     * Click **Next: Virtual machine settings >**
 6. Complete the **Virtual machine settings** tab with the following information:
-    * AD domain join UPN: `ADAdmin@<yourFQDNADDomain>`
+    * AD domain join UPN: `ADAdmin@<yourFQDNADDomain>` (e.g. adadmin@wagsdemos.com)
         >UPN of an Active Directory user that has permissions and will be used to join the virtual machines to your domain.  If you didn't write this down you can return to your RDP session with the domain controller and obtain the information.
     * Admin Password: `Complex.Password`
     * Confirm password: `Complex.Password`
@@ -48,7 +48,7 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
         >**DO NOT CHANGE THIS NAME!**
     * Windows Virtual Desktop tenant name:  `<yourTenantName>`
         >Provide the tenant name used earlier. If the name does not exactly match your deployment will fail.  If your PowerShell window is still open you should be able to retrieve the name there.
-    * UPN: `WVDAdmin@<yourAzureADDomain`
+    * UPN: `WVDAdmin@<yourAzureADDomain>.onmicrosoft.com`
     * Password: `Complex.Password`
     * Confirm password: `Complex.Password`
 
