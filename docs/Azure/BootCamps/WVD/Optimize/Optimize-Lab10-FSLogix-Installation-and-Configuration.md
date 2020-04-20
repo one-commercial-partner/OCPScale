@@ -6,20 +6,19 @@ In this lab you will install and configure FSLogix to utilize a share on your do
 
 1. Open the RDP session to the domain controller.
 
-2. In Active Directory Users and Computer (ADUC) navigate to the **Users**
-    OU. Create a **New Global Group** with a Group Type of **Security** called **WVDUsers**.
+2. In Active Directory Users and Computer (ADUC) navigate to toolbar and select the icon for **Create a new group in the current container**. Create a **New Global Group** with a Group Type of **Security** called **WVDUsers**.
 
     ![WVDGlobalGroup](../attachments/WVDGlobalGroup.PNG)
 
-3. Add the users from the ORGUsers OU into the new group called **WVDUsers**.
+3. Add the users from the Users OU into the new group called **WVDUsers**.
 
     ![WVDGroupMembers](../attachments/WVDGroupMembers.PNG)
 
     > This security group will be used to authenticate the Windows Virtual Desktop users to the file share you just created.
 
-4. Open File Explorer on the domain controller and create a folder on the C: drive called **WVDUsersFSLogix** that will be used as the profile share.
+4. Open File Explorer on the domain controller and create a folder on the C: drive called **WVDFSLogix** that will be used as the profile share.
 
-5. Right-click **WVDUsersFSLogix**, select **Properties**, select **Sharing**, then select **Advanced sharing...**.
+5. Right-click **WVDFSLogix**, select **Properties**, select **Sharing**, then select **Advanced sharing...**.
 
 6. Select **Share this folder**, select **Permissions...**, then select
     **Add...**.
