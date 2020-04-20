@@ -6,25 +6,25 @@ In this lab you will install and configure FSLogix to utilize a share on your do
 
 1. Open the RDP session to the domain controller.
 
-2. In Active Directory Users and Computer (ADUC) navigate to the **OrgUsers**
-    OU. Create a **New Global Group** with a Group Type of **Security** called **WVD**.
+2. In Active Directory Users and Computer (ADUC) navigate to the **Users**
+    OU. Create a **New Global Group** with a Group Type of **Security** called **WVDUsers**.
 
     ![WVDGlobalGroup](../attachments/WVDGlobalGroup.PNG)
 
-3. Add the users from the ORGUsers OU into the new group called **WVD**.
+3. Add the users from the ORGUsers OU into the new group called **WVDUsers**.
 
     ![WVDGroupMembers](../attachments/WVDGroupMembers.PNG)
 
     > This security group will be used to authenticate the Windows Virtual Desktop users to the file share you just created.
 
-4. Open File Explorer on the domain controller and create a folder on the C: drive called **WVDFSLogix** that will be used as the profile share.
+4. Open File Explorer on the domain controller and create a folder on the C: drive called **WVDUsersFSLogix** that will be used as the profile share.
 
-5. Right-click **WVDFSLogix**, select **Properties**, select **Sharing**, then select **Advanced sharing...**.
+5. Right-click **WVDUsersFSLogix**, select **Properties**, select **Sharing**, then select **Advanced sharing...**.
 
 6. Select **Share this folder**, select **Permissions...**, then select
     **Add...**.
 
-7. Search for the **WVD** group to which you added the Windows Virtual Desktop
+7. Search for the **WVDUsers** group to which you added the Windows Virtual Desktop
     users, then make sure that group has **Full Control**.
 
     ![WVDSharePerms](../attachments/WVDSharePerms.PNG)
@@ -115,11 +115,11 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
 
     ![image.png](../attachments/image-fae2eb94-2c30-437f-8a3a-05ef6a659ad2.png)
 
-5. The agent needs to be installed on **each WVD session host**. If time permits, repeat the steps on the other virtual machine in the pool.
+5. The agent needs to be installed on **each WVDUsers session host**. If time permits, repeat the steps on the other virtual machine in the pool.
 
 6. Disconnect from your session and return to the desktop of the domain controller.
 
-7. Return to File Explorer and open the **WVDFSLogix** directory.
+7. Return to File Explorer and open the **WVDUsersFSLogix** directory.
 
 8. Your should see a new folder for the profile of Bob Jones.
 
