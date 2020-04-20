@@ -2,7 +2,7 @@
 
 In the third phase, **Optimize**, we’ll customize the basic Windows Virtual Desktop environment to take advantage of storage, file management, and automated scaling options.
 
-## [FSLogix Installation and Configuration with File Shares](Optimize-Lab13-FSLogix-Installation-and-Configuration.md)
+## [FSLogix Installation and Configuration with File Shares](Optimize-FSLogix-Installation-and-Configuration.md)
 
 ### Under Development - Use at Own Risk
 

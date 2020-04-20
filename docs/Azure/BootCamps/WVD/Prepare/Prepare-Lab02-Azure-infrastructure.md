@@ -31,6 +31,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
     ```PowerShell
     az network vnet create --name AD-VNet --resource-group WVDLab-Infrastructure --address-prefixes 10.10.0.0/16 --location eastus
+    ```
 
 8. Create a subnet:
 
