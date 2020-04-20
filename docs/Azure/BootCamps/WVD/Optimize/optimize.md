@@ -16,7 +16,7 @@ The following labs are going through final QA testing and will be available shor
 
 ### [WVD Scaling](Optimize-Lab17-WVD-Scaling.md)
 
-### [Creating a WVD Master Image](Optimize-Lab18-Creating-a-WVD-Master-Image.md)
+### [Creating a WVD Master Image](Optimize-Creating-a-WVD-Master-Image.md)
 
 ### [WVD Monitoring](Optimize-Lab19-WVD-Monitoring.md)
 

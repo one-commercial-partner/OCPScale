@@ -27,6 +27,7 @@ There are many ways to create WVD master images. This article will cover a mainl
 
 1. Click on **Go to resource** once the deployment is complete.
 2. RDP into your **GoldenImage** VM and run Windows update.
+3. Download and apply anu updates, reboot as needed.
 
 ## Exercise 3 - Run the Automated Prepare WVD Image Script
 
