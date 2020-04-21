@@ -128,7 +128,7 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
     * First Name: **Julia**
     * Last Name: **Williams**
     * Full Name: **Julia Williams**
-    * User Logon Name: **jullia.williams**
+    * User Logon Name: **julia.williams**
 5. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
 6. Click **Next** then **Finish**.
 
