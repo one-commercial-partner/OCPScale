@@ -39,7 +39,7 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
 
 1. From within the RDP session of the domain controller by clicking on the **Start button** then selecting **Remote Desktop Connection** from the Start menu.  Establish an RDP session to the first session host from the **Personal Pool** which should be 10.10.10.4. If you connect and do not see Bob's profile, look for the correct IP address in the Azure Portal.
 
-2. Login with the domain administrator credentials `<yourADdomain>\adadmin` and a password of `Complex.Password`.  
+2. Loginto Windows 10 with the domain administrator credentials `<yourADdomain>\adadmin` and a password of `Complex.Password`.  
 
 3. In previous labs the end user Bob Jones was able to login to the session host. Once that user logged in a locally cached profile was created. For the FSLogix profile container to take priority over the locally cached profile, you will need to **Delete** the locally cached profile for user     `C:\Users\BJones`.
     * Right-click the Start menu and choose **File Explorer**.
@@ -54,7 +54,7 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
 
     > If you are still unable to delete the profile, Bob Jones might be disconnected.  Open Task Manager, click the **Users** tab, and if Bob Jones is listed right-click and select **Disconnect**.
 
-4. Within the VM (not the domain controller), launch Microsoft Edge and navigate to [Download and Install FSLogix](https://docs.microsoft.com/fslogix/install-ht).
+4. Within the Windows 10 VM (not the domain controller), launch Microsoft Edge and navigate to [Download and Install FSLogix](https://docs.microsoft.com/fslogix/install-ht).
 
 5. Click **Open**, then **Compressed Folder Tools**, then **Extract All**, then **Extract**.
 
@@ -100,7 +100,7 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
 1. Login again as Bob Jones to create the user profile.
     * From your desktop launch the Remote Desktop client.
     * When prompted enter the credentials for Bob Jones:
-        * Username: `Bob.Jones@<yourdomain>.onmicrosoft.com`
+        * Username: `Bob.Jones@<yourADdomain>`
         * Password: `Complex.Password`
 
     > During the logon process your should see a statement about FSLogix.
