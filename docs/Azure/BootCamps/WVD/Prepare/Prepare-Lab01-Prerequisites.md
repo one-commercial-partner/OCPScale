@@ -58,6 +58,6 @@ Complete these steps to install the Windows Virtual Desktop PowerShell module on
 
 4. Paste the information in a scratch location such as Notepad.
 
-### Continue with Lab 2: [Deploying Azure Infrastructure and AD-DS](Prepare-Lab02-Deploying-Azure-Infrastructure-and-AD-DS.md)
+### Continue with Lab 2: [Deploying Azure Infrastructure and AD-DS](Prepare-Lab02-Azure-infrastructure.md)
 
 ### Return to [Prepare Phase Labs](prepare.md)
