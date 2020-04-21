@@ -39,6 +39,6 @@ In this lab your will validate the personal and Pooled Windows Virtual Desktop p
 6. Once connected, change the desktop background to a different picture.
 7. Disconnect from the session.
 
-## Continue to [FSLogix Installation and Configuration with File Shares](../Optimize/Optimize-Lab10-FSLogix-Installation-and-Configuration)
+## Continue to [FSLogix Installation and Configuration with File Shares](../Optimize/Optimize-FSLogix-Installation-and-Configuration)
 
 ## Back to [Technical Intensity Workshop - Windows Virtual Desktop Labs](../index.md)
