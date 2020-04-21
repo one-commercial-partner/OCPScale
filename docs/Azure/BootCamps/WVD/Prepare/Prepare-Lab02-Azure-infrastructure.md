@@ -137,7 +137,7 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 We are creating a small VM to be used later to host Azure AD Connect.
 
 1. From your desktop return to and open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
-2. You mau have to hit **Reconnect**.
+2. You may have to hit **Reconnect**.
 3. Create your virtual machine:
 
     ```PowerShell
