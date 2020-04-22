@@ -1,25 +1,21 @@
-# AZ-301: Microsoft Azure Architect Design
+# AZ-301: Microsoft Azure IoT Developer
 
-The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-301 study group. It is designed to equip you for the Microsoft Azure Architect Design exam!
-
-**A NEW VERSION OF THIS EXAM, AZ-304, WILL BE AVAILABLE ON OR AROUND APRIL 28, 2020. You will be able to take this exam until it retires on or around July 28, 2020.**
+The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-220 study group. It is designed to help you prepare for the Microsoft Azure IoT Developer exam!
 
 ## Study Group Schedule
 
-Click here to register:  [AZ-301: Microsoft Azure Architect Design](https://msuspartners.eventbuilder.com/AZ301StudyGroup)
+Click here to register:  [AZ-220: Microsoft Azure IoT Developer Study Group](https://msuspartners.eventbuilder.com/AZ220StudyGroup)
 
 > This study group is open to all who want to register!
 
-|Week #|Topic|Date|Homework|Recording|
+|Session #|Topic|Date|Homework|Recording|
 | - | - | - | - | - |
-|Week 1|**Kickoff**|March 25, 2020|None!| [Link](https://msuspartners.eventbuilder.com/AZ-301)|
-|Week 2|**Determine workload requirements (10-15%)**|April 01, 2020|[Link](01WorkloadRequirements.md)| [Link](https://msuspartners.eventbuilder.com/AZ-301)|
-|Week 3|**Design for identity and security (20-25%)**|April 08, 2020|[Link](02DesignForIdentityandSecurity)|[Link](https://msuspartners.eventbuilder.com/AZ-301)|
-|Week 4|**Design a data platform solution (15-20%)**|April 15, 2020| [Link](03DataPlatform)|[Link](https://msuspartners.eventbuilder.com/AZ-301)|
-|Week 5|**Design a business continuity strategy (15-20%)**|April 22, 2020|[Link](04BusinessContinuity.md)|[Link](https://msuspartners.eventbuilder.com/AZ-301)|
-|Week 6|**Design for deployment, migration, and integration (10-15%)**|April 29, 2020|[Link](05DeployMigrateIntergrate.md) | |
-|Week 7|**Design an infrastructure strategy (15-20%)**|May 06, 2020| | |
-|Week 8|**Final Review**|May 13, 2020| | |
+|Session 1|**AZ-220: Kickoff + Implement the IoT solution infrastructure (15-20%)**|April 22, 2020|[Link](01IoTSolutionInfrastructure)| [Link](https://msuspartners.eventbuilder.com/AZ220StudyGroup)|
+|Session 2|**AZ-220: Provision and manage devices (20-25%)**|April 29, 2020| | |
+|Session 3|**AZ-220: Implement Edge (15-20%)**|May 6, 2020| | |
+|Session 4|**AZ-220: Process and manage data (15-20%)**|May 13, 2020| | |
+|Session 5|**AZ-220: Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 20, 2020| | |
+|Session 6|**AZ-220: Implement security (15-20%) + Final Review**|May 27, 2020| | |
 
 ## What are study groups?
 
@@ -30,12 +26,11 @@ Community-based deep technical sessions with an emphasis on experiential learnin
 Participants should complete the following prior to attending a study group:
 
 - [AZ-900: Microsoft Azure Fundamentals](https://partner.microsoft.com/en-vn/training/assets/collection/az-900-microsoft-azure-fundamentals#/)  (or have equivalent knowledge)
-- [AZ-301: Microsoft Azure Architect Design virtual instructor-led trainings (VILT)](https://partner.microsoft.com/en-vn/training/assets/collection/az-301-microsoft-azure-architect-design#/)
 - Working Azure subscription (Visual Studio or IUR)
 
 ## What is in this repo?
 
-Simple ... Each file listed is a separate homework assignment, one for each of the exam objectives.
+Simple... Each file listed is a separate homework assignment, one for each of the exam objectives.
 If you see a typo or want to add content that others may find useful, edit away and submit your changes!
 Additionally, if you see something, say something!  Let's leverage the power of the community.
 
@@ -49,4 +44,5 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 
 - [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
 - [AZ-300: Microsoft Azure Architect Technologies](https://msuspartners.eventbuilder.com/AZ-300)
+- [AZ-301: Microsoft Azure Architect Design](https://msuspartners.eventbuilder.com/AZ-301)
 - [Exam AZ-500: Microsoft Azure Security Technologies](https://msuspartners.eventbuilder.com/AZ500StudyGroup)
