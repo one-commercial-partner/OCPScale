@@ -16,8 +16,8 @@ Click here to register:  [AZ-301: Microsoft Azure Architect Design](https://msus
 |Week 2|**Determine workload requirements (10-15%)**|April 01, 2020|[Link](01WorkloadRequirements.md)| [Link](https://msuspartners.eventbuilder.com/AZ-301)|
 |Week 3|**Design for identity and security (20-25%)**|April 08, 2020|[Link](02DesignForIdentityandSecurity)|[Link](https://msuspartners.eventbuilder.com/AZ-301)|
 |Week 4|**Design a data platform solution (15-20%)**|April 15, 2020| [Link](03DataPlatform)|[Link](https://msuspartners.eventbuilder.com/AZ-301)|
-|Week 5|**Design a business continuity strategy (15-20%)**|April 22, 2020|[Link](04BusinessContinuity.md)| |
-|Week 6|**Design for deployment, migration, and integration (10-15%)**|April 29, 2020| | |
+|Week 5|**Design a business continuity strategy (15-20%)**|April 22, 2020|[Link](04BusinessContinuity.md)|[Link](https://msuspartners.eventbuilder.com/AZ-301)|
+|Week 6|**Design for deployment, migration, and integration (10-15%)**|April 29, 2020|[Link](05DeployMigrateIntergrate.md) | |
 |Week 7|**Design an infrastructure strategy (15-20%)**|May 06, 2020| | |
 |Week 8|**Final Review**|May 13, 2020| | |
 
