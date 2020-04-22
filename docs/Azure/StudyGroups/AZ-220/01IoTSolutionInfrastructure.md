@@ -47,11 +47,11 @@ AZ-220: Microsoft Azure IoT Developer Exam: [https://docs.microsoft.com/en-us/le
 * Devices and device communication - April 23rd – To prepare for next week’s study group session
 
 ## Resources
-[IoT Hub Documentation](https://docs.microsoft.com/en-us/azure/iot-hub/)
-[IoT Technical Community](https://techcommunity.microsoft.com/t5/internet-of-things-iot/ct-p/IoT)
-[“Building IoT Solutions with Azure” Developer Guide](https://discover.Microsoft.com/azure-iot-building-solutions-dev-guide)
-[Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
-[Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
+* [IoT Hub Documentation](https://docs.microsoft.com/en-us/azure/iot-hub/)
+* [IoT Technical Community](https://techcommunity.microsoft.com/t5/internet-of-things-iot/ct-p/IoT)
+* [“Building IoT Solutions with Azure” Developer Guide](https://discover.Microsoft.com/azure-iot-building-solutions-dev-guide)
+* [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
+* [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
