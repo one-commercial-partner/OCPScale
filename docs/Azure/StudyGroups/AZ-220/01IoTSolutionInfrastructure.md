@@ -54,7 +54,7 @@ AZ-220: Microsoft Azure IoT Developer Exam: [https://docs.microsoft.com/en-us/le
 * [“Building IoT Solutions with Azure” Developer Guide](https://discover.Microsoft.com/azure-iot-building-solutions-dev-guide)
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
-* Create an IoT Hub
+* Create an IoT Hub:
 <br />[Use Azure Portal](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal)
 <br />[Use Azure IoT Tools for VS Code](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-use-iot-toolkit)
 <br />[Use Azure PowerShell](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-powershell)
