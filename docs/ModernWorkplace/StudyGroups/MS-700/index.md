@@ -42,8 +42,8 @@ Additionally, if you see something, say something!  Let's leverage the power of 
  
 ## Important Links
 
-[Microsoft 365 certification exams](https://docs.microsoft.com/en-us/learn/certifications/browse/?products=m365)
-[MS-700: Managing Microsoft Teams – Skills Measured](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE43VcF)
+- [Microsoft 365 certification exams](https://docs.microsoft.com/en-us/learn/certifications/browse/?products=m365)
+- [MS-700: Managing Microsoft Teams – Skills Measured](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE43VcF)
 
 ## Important Information
 
