@@ -1,8 +1,8 @@
 # Implement the IoT solution infrastructure (15-20%)
 
-AZ-220: Microsoft Azure IoT Developer Exam: [https://docs.microsoft.com/en-us/learn/certifications/exams/az-220](https://docs.microsoft.com/en-us/learn/certifications/exams/az-220)
-<br />Microsoft Certified: Azure IoT Developer Specialty: [https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
-<br />Yammer Azure Study Group: [http://aka.ms/azurecsg](http://aka.ms/azurecsg)
+[AZ-220: Microsoft Azure IoT Developer Exam](https://docs.microsoft.com/en-us/learn/certifications/exams/az-220)
+<br />[Microsoft Certified: Azure IoT Developer Specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
+<br />[Yammer Azure Study Group](http://aka.ms/azurecsg)
 
 ## Skills Measured:
 ### Create and configure an IoT Hub
