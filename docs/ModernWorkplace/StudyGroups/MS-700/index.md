@@ -43,6 +43,14 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 ## Important Links
 
 [Microsoft 365 certification exams](https://docs.microsoft.com/en-us/learn/certifications/browse/?products=m365)
+[MS-700: Managing Microsoft Teams – Skills Measured](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE43VcF)
+
+## Important Information
+
+This study group covers the version of the exam being released May 28th, 2020.  The following items were added to the Skils Measured:
+
+- Monitor and analyze service usage: "Use Power BI to identify call quality issues"
+- Manage Phone Numbers: "configure dynamic emergency calling"
 
 ## More Partner Certification Study Groups
 
