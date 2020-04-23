@@ -1,8 +1,8 @@
 # Implement the IoT solution infrastructure (15-20%)
 
-[AZ-220: Microsoft Azure IoT Developer Exam](https://docs.microsoft.com/en-us/learn/certifications/exams/az-220)
-<br />[Microsoft Certified: Azure IoT Developer Specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
-<br />[Yammer Azure Study Group](http://aka.ms/azurecsg)
+* [AZ-220: Microsoft Azure IoT Developer Exam](https://docs.microsoft.com/en-us/learn/certifications/exams/az-220)
+* [Microsoft Certified: Azure IoT Developer Specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
+* [Yammer Azure Study Group](http://aka.ms/azurecsg)
 
 ## Skills Measured:
 ### Create and configure an IoT Hub
@@ -55,13 +55,13 @@
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
 * Create an IoT Hub:
-<br />[Use Azure Portal](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal)
-<br />[Use Azure IoT Tools for VS Code](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-use-iot-toolkit)
-<br />[Use Azure PowerShell](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-powershell)
-<br />[Use Azure Cloud Shell (CLI)](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-cli)
-<br />[Use the Resource Provider REST API](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-rm-rest)
-<br />[Use an ARM Template from Azure PowerShell](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-rm-template-powershell)
-<br />[Use an ARM Template from .NET](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-rm-template-powershell)
+<br />- [Use Azure Portal](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal)
+<br />- [Use Azure IoT Tools for VS Code](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-use-iot-toolkit)
+<br />- [Use Azure PowerShell](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-powershell)
+<br />- [Use Azure Cloud Shell (CLI)](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-cli)
+<br />- [Use the Resource Provider REST API](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-rm-rest)
+<br />- [Use an ARM Template from Azure PowerShell](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-rm-template-powershell)
+<br />- [Use an ARM Template from .NET](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-rm-template-powershell)
 * [Comparing IoT Hub and Event Hubs](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-compare-event-hubs)
 * [Chosing the right IoT Hub Tier](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-scaling)
 * [Overview of Device Management with IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-overview)
