@@ -1,5 +1,5 @@
 # Common Training Content
 
 - [Azure](./Azure)
-- [Modern Workplace](./ModernWorkplace) (coming soon)
+- [Modern Workplace](./ModernWorkplace)
 - [Business Applications](./BusinessApplications) (coming soon)
