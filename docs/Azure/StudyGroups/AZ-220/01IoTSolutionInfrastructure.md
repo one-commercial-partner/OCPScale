@@ -1,6 +1,8 @@
 # Implement the IoT solution infrastructure (15-20%)
 
 AZ-220: Microsoft Azure IoT Developer Exam: [https://docs.microsoft.com/en-us/learn/certifications/exams/az-220](https://docs.microsoft.com/en-us/learn/certifications/exams/az-220)
+Microsoft Certified: Azure IoT Developer Specialty: [https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
+Yammer Azure Study Group: [http://aka.ms/azurecsg](http://aka.ms/azurecsg)
 
 ## Skills Measured:
 ### Create and configure an IoT Hub
@@ -52,6 +54,29 @@ AZ-220: Microsoft Azure IoT Developer Exam: [https://docs.microsoft.com/en-us/le
 * [“Building IoT Solutions with Azure” Developer Guide](https://discover.Microsoft.com/azure-iot-building-solutions-dev-guide)
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
+* Create an IoT Hub
+<br />[Use Azure Portal](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal)
+<br />[Use Azure IoT Tools for VS Code](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-use-iot-toolkit)
+<br />[Use Azure PowerShell](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-powershell)
+<br />[Use Azure Cloud Shell (CLI)](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-cli)
+<br />[Use the Resource Provider REST API](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-rm-rest)
+<br />[Use an ARM Template from Azure PowerShell](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-rm-template-powershell)
+<br />[Use an ARM Template from .NET](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-rm-template-powershell)
+* [Comparing IoT Hub and Event Hubs](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-compare-event-hubs)
+* [Chosing the right IoT Hub Tier](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-scaling)
+* [Overview of Device Management with IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-overview)
+* [Sending Device Telemetry to IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/quickstart-send-telemetry-cli)
+* [Device Twins Tutorial](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-device-twins)
+* [IoT Hub query language for device and module twins, jobs, and message routing](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-query-language)
+* [Device-to-cloud communication guidance](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-d2c-guidance)
+* [Cloud-to-device communications guidance](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-c2d-guidance)
+* [IoT Hub SDKs](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-sdks)
+* [Understanding IoT Message Routing](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-d2c)
+* [Azure IoT Hub Pricing](https://azure.microsoft.com/en-us/pricing/details/iot-hub/)
+* [Choose a Communication Protocol](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-protocols)
+* [IoT Hub Endpoints](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-endpoints)
+* [IoT Technical Case Studies](https://microsoft.github.io/techcasestudies/#technology=IoT&sortBy=featured)
+* [Blog: Benefits of using the Azure IoT SDKs, and pitfalls to avoid if you don’t](https://azure.microsoft.com/en-us/blog/benefits-of-using-the-azure-iot-sdks-in-your-azure-iot-solution/)
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
