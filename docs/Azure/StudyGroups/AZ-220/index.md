@@ -23,10 +23,15 @@ Community-based deep technical sessions with an emphasis on experiential learnin
 
 ## What are the requirements?
 
-Participants should complete the following prior to attending a study group:
-
-- [AZ-900: Microsoft Azure Fundamentals](https://partner.microsoft.com/en-vn/training/assets/collection/az-900-microsoft-azure-fundamentals#/)  (or have equivalent knowledge)
-- Working Azure subscription (Visual Studio or IUR)
+Prerequisites
+* Software Development Experience
+<br />- No specific software language required 
+<br />- Does not need to be at a professional level
+* Data Processing Experience
+<br />- General understanding of data storage and data processing (recommended but not required)
+* Cloud Solution Awareness
+<br />- Have a basic understanding of PaaS, SaaS, and IaaS implementations
+<br />- Microsoft Azure Fundamentals (AZ-900) or equivalent skills, is recommended 
 
 ## What is in this repo?
 
@@ -38,11 +43,14 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 
 ## Important Links
 
-[Microsoft Azure certification exams](https://www.microsoft.com/en-us/learning/azure-exams.aspx)
+* [AZ-220: Microsoft Azure IoT Developer Exam](https://docs.microsoft.com/en-us/learn/certifications/exams/az-220)
+* [Microsoft Certified: Azure IoT Developer Specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
+* [Yammer Azure Study Group](http://aka.ms/azurecsg)
+* [Microsoft Azure certification exams](https://www.microsoft.com/en-us/learning/azure-exams.aspx)
 
 ## Additional Partner Certification Study Groups
 
-- [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
-- [AZ-300: Microsoft Azure Architect Technologies](https://msuspartners.eventbuilder.com/AZ-300)
-- [AZ-301: Microsoft Azure Architect Design](https://msuspartners.eventbuilder.com/AZ-301)
-- [Exam AZ-500: Microsoft Azure Security Technologies](https://msuspartners.eventbuilder.com/AZ500StudyGroup)
+* [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
+* [AZ-300: Microsoft Azure Architect Technologies](https://msuspartners.eventbuilder.com/AZ-300)
+* [AZ-301: Microsoft Azure Architect Design](https://msuspartners.eventbuilder.com/AZ-301)
+* [Exam AZ-500: Microsoft Azure Security Technologies](https://msuspartners.eventbuilder.com/AZ500StudyGroup)
