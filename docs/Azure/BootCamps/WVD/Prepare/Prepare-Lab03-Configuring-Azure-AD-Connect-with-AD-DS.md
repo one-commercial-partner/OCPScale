@@ -16,6 +16,8 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
         >Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.
 
+    ![ClickHere](../attachments/ClickHere.PNG)
+
 3. Click **Create**.  It will take several minutes for the directory to be created.
 4. Once complete, click **here** to manage your new directory.
 
