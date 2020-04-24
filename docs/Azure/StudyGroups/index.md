@@ -7,6 +7,7 @@ Each link is to a different study group.  Next, you will find links to separate 
 > If you run across an interesting blog post, article, nuggest of truth, update the documents on Github!
 
 - [AZ-103: Microsoft Azure Administrator](./AZ-103)
+- [AZ-220: Microsoft Azure IoT Developer](./AZ-220)
 - [AZ-300: Microsoft Azure Architect Technologies](./AZ-300)
 - [AZ-301: Microsoft Azure Architect Design](./AZ-301)
 - [AZ-500: Microsoft Azure Security Technologies](./AZ-500)
