@@ -4,13 +4,44 @@
 
 ## Manage phone numbers
 
-| Topic | Link |
-| - | - |
-| Sample item from above section on OD | [Link to content](https://null) |
+Recommend a PSTN connectivity solution based on specific business requirements
 
+
+Order phone numbers
+
+
+Manage service numbers
+
+
+Add, change, or remove an emergency address for your organization
+
+
+Assign, change, or remove a phone number for a user
+
+
+Manage voice settings for users
+
+
+Configure dynamic emergency calling
 
 ## Manage Phone System
 
-| Topic | Link |
-| - | - |
-| Sample item from above section on OD | [Link to content](https://null) |
+Manage resource accounts
+
+
+Create and configure call queues
+
+
+Create and configure auto attendants
+
+
+Manage call park policies
+
+
+Manage calling policies
+
+
+Manage caller ID policies
+
+
+Interpret the Direct Routing health dashboard

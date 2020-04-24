@@ -4,18 +4,31 @@
 
 ## Manage a team
 
-| Topic | Link |
-| - | - |
-| Sample item from above section on OD | [Link to content](https://null) |
+Create a team
+
+
+Upgrade an existing resource to a team
+
+
+Manage privacy levels for a team
+
+
+Manage org-wide teams
 
 ## Manage membership in a team
 
-| Topic | Link |
-| - | - |
-| Sample item from above section on OD | [Link to content](https://null) |
+Manage users in a team
+
+
+Configure dynamic membership
+
+
+Manage access review for team members
+
 
 ## Implement policies for Microsoft Teams apps
 
-| Topic | Link |
-| - | - |
-| Sample item from above section on OD | [Link to content](https://null) |
+Create and manage app permission policies
+
+
+Create and manage app setup policies
