@@ -42,16 +42,16 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 9. Create your virtual machine:.
 
     ```PowerShell
-    az vm create --resource-group WVDLab-Infrastructure --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username adadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11
+    az vm create --resource-group WVDLab-Infrastructure --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username localadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11
     ```
 
 ## Exercise 2 - Install and Configure Active Directory
 
 In this task you use PowerShell (or PowerSHell ISE) within Windows Server 2019 to install Active Directory.
 
-1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.  
+1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account (`localadmin`) by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
-3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials. The username is `adadmin` and the password is `Complex.Password`.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
+3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials. The username is `localadmin` and the password is `Complex.Password`.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
 4. When prompted click **No** on the Network Discovery blade.
 5. Hit the **Windows Start** button and then open **Windows PowerShell**. Enter the following to install the Active Directory Domain Service module:
 

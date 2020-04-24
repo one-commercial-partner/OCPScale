@@ -72,7 +72,7 @@ We are going to create an account that AD Connect will use to perform the synchr
 
 ## Exercise 3 - Install Azure Active Directory Connect
 
-1. Connect to the ADConnect VM and logon as your previously created **domain account** (i.e. `domainname\username`, not adadmin which is a local account).
+1. Connect to the ADConnect VM and logon as `<yourADdomainname>\adadmin`, not adadmin which is a local account.
     > Ensure that you are not logging on as local account!
 2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators.
 3. Open Internet Explorer, accept the defaults, and surf to <http://go.microsoft.com/fwlink/?LinkId=615771>
