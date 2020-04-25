@@ -47,7 +47,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
 ## Exercise 2 - Install and Configure Active Directory
 
-In this task you use PowerShell (or PowerSHell ISE) within Windows Server 2019 to install Active Directory.
+In this task you use PowerShell (or PowerSh1ell ISE) within Windows Server 2019 to install Active Directory.
 
 1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account (`localadmin`) by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
@@ -71,12 +71,10 @@ In this task you use PowerShell (or PowerSHell ISE) within Windows Server 2019 t
 7. Promote your server to a domain controller by entering the following command.  Don't forget to set the **domain names properly** minding the quotes.
 
     ```PowerShell
-    Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “YOURDOMAIN.COM”
-    -DomainNetbiosName “YOURDOMAIN” -ForestMode “Win2012R2” -InstallDns:$true
-    -LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true
+    Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “<yourADdomain.TLD>" -DomainNetbiosName “<yourADdomain>" -ForestMode “Win2012R2” -InstallDns:$true -LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true
     ```
 
-    *Write down your FQDN doman name for future reference.*
+    > Write down your FQDN doman name on your scratch pad for future reference.
 
 8. Once you hit enter you will be asked for the  SafeModeAdministratorPassword – this is for the Directory Services Restore Mode (DSRM). Enter `Complex.Password`, and then retype to confirm.
 
@@ -94,7 +92,7 @@ By default, Azure AD Connect does not synchronize the built-in domain administra
 3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. adadmin@yourdomain.com).  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 
     > If you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.
-    > When you connect with RDP you will see adadmin as the default credentials.. These are local crdentials, not domain credentials, so be sure to click on **More choices** then **Use a different account** and enter FQDN domain credentials.
+    > When you connect with RDP you will see localadmin as the default credentials. These are local credentials, not domain credentials, so be sure to click on **More choices** then **Use a different account** and enter FQDN domain credentials.
 
 4. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
 
