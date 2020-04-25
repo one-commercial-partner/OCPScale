@@ -9,7 +9,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
 2. Login using your Microsoft Account.
 3. When the **Welcome to Azure Cloud Shell** screen appears select **Bash** as the working CLI and then **Create Storage**.  Once storage is created click **Close**.
-4. At the CLI prompt, let's create a new resource group to hold your Domain Controller VMs. Create the resource group by typing in the following command:
+4. At the CLI prompt, let's create a new resource group to hold your Domain Controller. Create the resource group by typing in the following command:
 
     ```PowerShell
     az group create --name WVDLab-Infrastructure --location eastus
