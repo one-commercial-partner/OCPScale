@@ -24,11 +24,11 @@ This is an account created in Active Directory that will be used to join hosts i
 
 ## Bob.Jones
 
-This in an Active Directory account that will be used to logon locally to a WVD desktop.
+This in an Active Directory account that will be used to logon locally to a WVD desktop in the Personal Pool.
 
-## julia.williams
+## Julia.Williams
 
-This in an Active Directory account that will be used to logon locally to a WVD desktop.
+This in an Active Directory account that will be used to logon locally to a WVD desktop in the Pooled Pool.
 
 ## ADConnectAdmin
 
