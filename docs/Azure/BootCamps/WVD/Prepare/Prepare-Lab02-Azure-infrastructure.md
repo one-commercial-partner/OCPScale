@@ -45,6 +45,10 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
     az vm create --resource-group WVDLab-Infrastructure --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username localadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11
     ```
 
+    > Write down your local credentials to DC01.
+
+10. Close Azure Shell.
+
 ## Exercise 2 - Install and Configure Active Directory
 
 In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 to install Active Directory.
@@ -52,7 +56,7 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account (`localadmin`) by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
 3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials. The username is `localadmin` and the password is `Complex.Password`.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
-4. When prompted click **No** on the Network Discovery blade.
+4. Once your desktop is running, click **No** on the Network Discovery blade.
 5. Hit the **Windows Start** button and then open **Windows PowerShell**. Enter the following to install the Active Directory Domain Service module:
 
     ```PowerShell
@@ -74,9 +78,9 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
     Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “<yourADdomain.TLD>" -DomainNetbiosName “<yourADdomain>" -ForestMode “Win2012R2” -InstallDns:$true -LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true
     ```
 
-    > Write down your FQDN doman name on your scratch pad for future reference.
+    > Write down your FQDN doman name and NetBIOS on your scratch pad for future reference.
 
-8. Once you hit enter you will be asked for the  SafeModeAdministratorPassword – this is for the Directory Services Restore Mode (DSRM). Enter `Complex.Password`, and then retype to confirm.
+8. Once you hit enter you will be asked for the  SafeModeAdministratorPassword – this is for the Directory Services Restore Mode (DSRM). Enter `Complex.Password` and then retype to confirm.
 
     > You will receive warnings about security settings, network adapters, and DNS Servers.  These warnings can be ignored.
 
@@ -84,15 +88,13 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 
 ## Exercise 3 - Connect to the Domain Controller and create a user account
 
-By default, Azure AD Connect does not synchronize the built-in domain administrator account. This system account has the attribute `isCriticalSystemObject` set to *true*, preventing it from being synchronized. While it is possible to modify this, it is not a best practice to do so.
-
 1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.
 
 2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
 3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. `localadmin@<yourADdomain.TLD>`.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 
-    > If you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.
-    > When you connect with RDP you will see localadmin as the default credentials. These are local credentials, not domain credentials, so be sure to click on **More choices** then **Use a different account** and enter FQDN domain credentials.
+    > If you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.  Simply wait a few minutes for the desktop to render.
+
 
 4. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
 

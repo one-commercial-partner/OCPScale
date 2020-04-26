@@ -1,14 +1,32 @@
-# Lab 15: Managing Windows Virtual Desktop with Intune
+# Managing Windows Virtual Desktop with Intune
 
-These set-up steps help you enable mobile device management (MDM) by using Intune. Devices must be managed before you can give users access to company resources or manage settings on those devices.
+Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Endpoint Manager admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
 
-## Exercise 2 - Activate your Microsoft 365 subscription
+>In this lab you are activating a free 30-day trial.
 
-This exercise assumes you have a Visual Studio Enterprise subscription.  
+## Exercise 1 - Sign up for a Microsoft Intune free trial
 
-*NOTE: DO NOT complete these steps if you have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment.  Return to the [Prepare Phase Labs](prepare.md) and continue subsequent labs.*
+1. Go to the [Microsoft Intune Trial](https://go.microsoft.com/fwlink/?linkid=2019088) page and fill out the form.
 
-1. Navigate to the [My Visual Studio](https://my.visualstudio.com) benefits page. If prompted, sign in with your credentials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 2. Locate the **Microsoft 365** tile in the **Tools** category and click **Activate**.  
 ![M365Activate](../attachments/M365Activate.PNG)
 3. If prompted, sign in with your credentials.
