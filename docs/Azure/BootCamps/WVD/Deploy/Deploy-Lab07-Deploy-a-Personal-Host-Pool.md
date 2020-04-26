@@ -8,17 +8,6 @@ There are many ways to deploy a Personal Host Pool however we will focus on leve
 
 ## Exercise 1 - Provision a Personal Host Pool
 
-### Configure DNS
-
-The virtual network that contains the domain controller is pointing to Azure DNS, not the DNS of the domin controller.  Any new VMs will not be able to find the DNS service on the domain controller and be able to join the domain.  Change the DNS to point to the domain controller.
-
-1. In the Azure portal click **Home** -> **Resource groups** -> **WVDLab-Infrastructure**.
-2. Click on **DC01** and copy the Private IP address (e.g. 10.10.10.11).
-3. Click on **WVDLab-Infrastructure** and then **AD-Vnet**.
-4. Under **Settings** click **DNS Servers**.
-5. Change the DNS servers to **Custom** and paste the IP address.
-6. Click **Save**.
-
 ### Create the Personal Pool
 
 1. Return to the [Azure Portal](https://portal.azure.com) on your desktop and search for **Marketplace**.  

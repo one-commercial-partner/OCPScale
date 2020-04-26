@@ -143,23 +143,16 @@ We are creating a small VM to be used later to host Azure AD Connect.
 
     > It will take about 5 minutes to provision this VM.
 
-## Exercise 5 - Join the ADConnect VM to the domain
+## Exercise 5 - Configure DNS
 
-1. Once the cloud shell has built your ADConnect VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / ADConnect / Connect / RDP**.  Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
-2. Logon with local credentials (i.e. localadmin) with a password of `Complex.Password`.  Choose **More Choices** then **Use a different account** to enter your new set of credentials.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
-3. When prompted click **No** on the Network discovery blade.
-4. The DNS Server on ADConnect may not be set to see the domain controller (DC01), so we need to check that setting.  
-5. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Exercise 6 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
+The virtual network that contains the domain controller is pointing to Azure DNS, not the DNS of the domin controller.  Any new VMs will not be able to find the DNS service on the domain controller and be able to join the domain.  Change the DNS to point to the domain controller.
 
-### Configure DNS
-
-1. Within **Server Manager**, close the message about **Windows Admin Center** and then click on **Local Server**.
-2. Click on **IPv4 address assigned by DHCP, IPv6 enabled** setting for the Ethernet connection.
-3. Right-click on the network adapter and choose **Properties**.
-4. Select **Internet Protocol Version 4 (TCP/IPv4)** and then **Properties**.
-5. Select the radio button for **Use the following DNS Server addresses:** and Set the DNS server to **10.10.10.11** and click **OK** and then **Close**.
-6. You will then loose connection to the ADConnect VM, this is expected.
-7. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the **ADConnect** VM.
+1. In the Azure portal click **Home** -> **Resource groups** -> **WVDLab-Infrastructure**.
+2. Click on **DC01** and copy the Private IP address (e.g. 10.10.10.11).
+3. Click on **WVDLab-Infrastructure** and then **AD-Vnet**.
+4. Under **Settings** click **DNS Servers**.
+5. Change the DNS servers to **Custom** and paste the IP address.
+6. Click **Save**.
 
 ## Exercise 6 - Join the Domain
 
