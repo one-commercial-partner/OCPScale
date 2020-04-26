@@ -97,7 +97,7 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 
 4. Within Server Manager, click **Don't show me this again** and close the **Windows Admin Center**.  Click **Tools** and then **Active Directory Users and Computers**.
 
-5. Expand the domain tree and select **Users**. Right-click and create a New User with the following information:
+5. Expand the domain tree and select **Users**. Select, right-click, and create a New User with the following information:
     * First Name: **WVD**
     * Last Name: **Administrator**
     * Full Name: **WVD Administrator**
