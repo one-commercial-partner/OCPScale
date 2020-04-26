@@ -103,7 +103,7 @@ Close Internet Explorer within the AD Connect virtual machine.
 ## Exercise 5 - Validate Synchronization
 
 1. Switch to the Azure portal and examine your Azure AD Directory by selecting the xxxx.onmicrosoft.com  Directory from the upper right hand corner of the portal.
-2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. On Prem).
+2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. Bob & Julia).
 
 > Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory!!
 
