@@ -8,6 +8,4 @@ In the second phase, Deploy, we’ll create a Personal and Host Pool, and then d
 
 ### Lab 9: [Test Your WVD Deployment](Deploy-Lab09-Test-WVD-Deployment.md)
 
-
-
 ## Back to [Technical Intensity Workshop - Windows Virtual Desktop Labs](../index.md)
