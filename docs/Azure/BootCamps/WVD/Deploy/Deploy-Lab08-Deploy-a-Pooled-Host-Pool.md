@@ -51,6 +51,8 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
     * Password: `Complex.Password`
     * Confirm password: `Complex.Password`
 
+    > If you are using a CSP subscription you will need to create a service principal for your account.  Refer to this [Tutorial: Create service principals and role assignments by using PowerShell](https://docs.microsoft.com/en-us/azure/virtual-desktop/create-service-principal-role-powershell)
+
 8. Select **Next: Review + Create**. Wait for a **Validation Passed** and if you get a failure examine the **Activity log** in the Azure portal and resolve the failure.
 
    ![ValidationFailed](../attachments/ValidationFailed.PNG)
