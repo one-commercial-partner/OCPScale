@@ -114,7 +114,7 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 
 ### Create Domain Accounts
 
-1. Right-click and create a New User with the following information:
+1. In the domain tree select **Users**, then right-click, **New**  then **User** and create a user object with the following information:
     * First Name: **Bob**
     * Last Name: **Jones**
     * Full Name: **Bob Jones**
