@@ -138,7 +138,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 3. Create your virtual machine:
 
     ```PowerShell
-    az vm create --resource-group WVDLab-Infrastructure --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username LocalAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15
+    az vm create --resource-group WVDLab-Infrastructure --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADConnectadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15
     ```
 
     > It will take about 5 minutes to provision this VM.
@@ -146,7 +146,7 @@ We are creating a small VM to be used later to host Azure AD Connect.
 ## Exercise 5 - Join the ADConnect VM to the domain
 
 1. Once the cloud shell has built your ADConnect VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / ADConnect / Connect / RDP**.  Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
-2. Logon with local credentials (i.e. LocalAdmin) with a password of `Complex.Password`.  Choose **More Choices** then **Use a different account** to enter your new set of credentials.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
+2. Logon with local credentials (i.e. localadmin) with a password of `Complex.Password`.  Choose **More Choices** then **Use a different account** to enter your new set of credentials.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
 3. When prompted click **No** on the Network discovery blade.
 4. The DNS Server on ADConnect may not be set to see the domain controller (DC01), so we need to check that setting.  
 5. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Exercise 6 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
@@ -163,11 +163,11 @@ We are creating a small VM to be used later to host Azure AD Connect.
 
 ## Exercise 6 - Join the Domain
 
-1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as LocalAdmin.  Within **Server Manager**, click on **Local Server**.
+1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as localadmin.  Within **Server Manager**, click on **Local Server**.
 2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
 3. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
 4. In the Windows Security box enter the following:AD Domain Admin credentials:
-    * username: **adadmin**
+    * username: **localadmin**
     * password: `Complex.Password`
 5. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
