@@ -121,7 +121,7 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
     * User Logon Name: **Bob.Jones**
 2. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
 3. Click **Next** then **Finish**.
-4. Right-click and create a New User with the following information:
+4. In the domain tree select **Users**, then right-click, **New**  then **User** and create a user object with the following information:
     * First Name: **Julia**
     * Last Name: **Williams**
     * Full Name: **Julia Williams**
