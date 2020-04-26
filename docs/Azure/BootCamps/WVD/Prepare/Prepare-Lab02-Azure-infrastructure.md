@@ -47,7 +47,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
 ## Exercise 2 - Install and Configure Active Directory
 
-In this task you use PowerShell (or PowerSh1ell ISE) within Windows Server 2019 to install Active Directory.
+In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 to install Active Directory.
 
 1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account (`localadmin`) by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
@@ -84,12 +84,12 @@ In this task you use PowerShell (or PowerSh1ell ISE) within Windows Server 2019 
 
 ## Exercise 3 - Connect to the Domain Controller and create a user account
 
-By default, Azure AD Connect does not synchronize the built-in domain administrator account *ADAdmin\@MyADDomain.com*. This system account has the attribute `isCriticalSystemObject` set to *true*, preventing it from being synchronized. While it is possible to modify this, it is not a best practice to do so.
+By default, Azure AD Connect does not synchronize the built-in domain administrator account. This system account has the attribute `isCriticalSystemObject` set to *true*, preventing it from being synchronized. While it is possible to modify this, it is not a best practice to do so.
 
 1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.
 
 2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
-3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. adadmin@yourdomain.com).  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
+3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. `localadmin@<yourADdomain.TLD>`.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 
     > If you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.
     > When you connect with RDP you will see localadmin as the default credentials. These are local credentials, not domain credentials, so be sure to click on **More choices** then **Use a different account** and enter FQDN domain credentials.
