@@ -42,7 +42,7 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 9. Create your virtual machine:.
 
     ```PowerShell
-    az vm create --resource-group WVDLab-Infrastructure --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username localadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11
+    az vm create --resource-group WVDLab-Infrastructure --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11
     ```
 
     > Write down your local credentials to DC01.
@@ -53,9 +53,9 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 
 In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 to install Active Directory.
 
-1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account (`localadmin`) by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.  
+1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account (`ADadmin`) by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
-3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials. The username is `localadmin` and the password is `Complex.Password`.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
+3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials. The username is `ADadmin` and the password is `Complex.Password`.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
 4. Once your desktop is running, click **No** on the Network Discovery blade.
 5. Hit the **Windows Start** button and then open **Windows PowerShell**. Enter the following to install the Active Directory Domain Service module:
 
@@ -91,7 +91,7 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / WVDLab-Infrastructure / DC01 / Connect / RDP**.
 
 2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
-3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. `localadmin@<yourADdomain.TLD>`.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
+3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. `ADAdmin@<yourADdomain.TLD>`.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
 
     > If you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.  Simply wait a few minutes for the desktop to render.
 
@@ -156,13 +156,13 @@ Following [Microsoft recommended practices](https://docs.microsoft.com/en-us/azu
 
 ## Exercise 6 - Join the Domain
 
-1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as `ADConnectAdmin`.  Select **More Choices** then **Use a different account** to enter your credentials.
+1. Once the ADConnect VM is successfully started, connect to the ADConnect VM and logon as `ADConnectAdmin`.  Select **More Choices** then **Use a different account** to enter your credentials.
 2. Click **No** on the **Networks** blade.
 3. Within Server Manager, click **Don't show me this again** and close the **Windows Admin Center** window.
 4. Click on **Local Server**, then **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
 5. Click the radio button for **Domain**, enter your fully-qualified domain name, such as `<myADdomain.TLD>`, and click **OK**.
 6. In the Windows Security box enter the following:AD Domain Admin credentials:
-    * username: **localadmin**
+    * username: **ADadmin**
     * password: `Complex.Password`
 7. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
