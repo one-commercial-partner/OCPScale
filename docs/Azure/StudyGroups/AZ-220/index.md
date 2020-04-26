@@ -48,6 +48,16 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 * [Yammer Azure Study Group](http://aka.ms/azurecsg)
 * [Microsoft Azure certification exams](https://www.microsoft.com/en-us/learning/azure-exams.aspx)
 
+## Presentations
+
+Thought study group slide decks include official curriculum content and cannot be shared here, we are able to share the core kick-off slides an the slides from the Online Workshop Series: Building End-to-End IoT Solutions.
+
+* [AZ-220 Kickoff Slides](AZ220ExamStudyGroup-Kickoff.pptx)
+
+From [Online Workshop Series: Building End-to-End IoT Solutions](https://aka.ms/IoT-online-workshop) - Make sure you register and watch the series live or on-demand.
+* [Transform your business with IoT - April 16th](part-1-transform-business-iot-external.pptx)
+* [Devices and device communication - April 23rd](part-2-device-and-device-comm.pptx)
+
 ## Additional Partner Certification Study Groups
 
 * [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
