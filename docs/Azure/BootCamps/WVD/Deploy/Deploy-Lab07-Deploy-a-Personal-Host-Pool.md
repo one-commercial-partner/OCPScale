@@ -42,14 +42,14 @@ Your Windows Virtual Desktop tenant is the management space for Host Pools, one 
         >UPN of an Active Directory user that has permissions and will be used to join the virtual machines to your domain.  If you didn't write this down you can return to your RDP session with the domain controller and obtain the information.
     * Admin Password: `Complex.Password`
     * Confirm password: `Complex.Password`
-    * Virtual network: **Select the existing virtual network created earlier, do not create a new VNET**.
-    * vmSubnet: **Select the existing subnet you created earlier, do not create a new subnet**.
+    * Virtual network: **Select AD-VNET, do not create a new VNET**.
+    * vmSubnet: **Select AD-Subnet, do not create a new subnet**.
     * Click **Next: Windows Virtual Desktop information >**
 
 7. Complete the **Windows Virtual Desktop information** tab with the following information:
     * Windows Virtual Desktop tenant group name
         >**DO NOT CHANGE THIS NAME!**
-    * Windows Virtual Desktop tenant name:  `<yourTenantName>`
+    * Windows Virtual Desktop tenant name:  `<yourWVDTenantName>`
         >Provide the tenant name used earlier. If the name does not exactly match your deployment will fail.  If your PowerShell window is still open you should be able to retrieve the name there.
     * UPN: `WVDAdmin@<yourAzureADDomain>.onmicrosoft.com`
     * Password: `Complex.Password`
@@ -70,7 +70,15 @@ troubleshooting section on this guide.
 
     ![image](../attachments/d186f32593dbd7d350ec18940f547f8f.png)
 
-Congrats! You have successfully deployed a Personal Host Pool!
+12. If your deployment fails, click on Operation detail to determine what failed.
+    ![DomainJoinFailed](../attachments/DomainJoinFailed.PNG)
+
+13. You can click on **Inputs** to see if you had a typo or entered the wrong information.
+    ![Inputs](../attachments/inputs.PNG)
+
+>We often see students entering the wrong domain information and the domain join fails.  Reviewing the data on the inputs field can help you determine when you went wrong.
+
+### Congrats! You have successfully deployed a Personal Host Pool!
 
 ## Exercise 2 - Assign users to the Pool
 
@@ -78,9 +86,9 @@ Now use the following commands to ensure your users are a member of the Personal
 
 This cmd will ensure the user is a member of the Application Pool, this is required to have access to see the session host.
 
-1. In the Azure Portal open the Azure Active Directory for your tenant.
+1. In the Azure Portal open Azure Active Directory for your tenant.
 2. Select **Users** then **Bob Jones**.
-3. Copy the UPN: `Bob.Jones@<yourdomain>.onmicrosoft.com`
+3. Copy the UPN.  e.g. `Bob.Jones@<yourdomain>.onmicrosoft.com`
 4. Open PowerShell and enter the following command:
 
     ```Powershell
