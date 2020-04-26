@@ -21,30 +21,27 @@ Your Windows Virtual Desktop tenant is the management space for Host Pools, one 
 
     ![WVDProvisionHostPool](../attachments/WVDProvisionHostPool.PNG)
 
-4. Complete the **Basics** tab with the following information:
+4. Complete the **Basics** tab with the following information and then click **Next: Configure virtual machines >**
     * Resource Group: *Create New* **WVDLab-Personal**
     * Region: **Choose the same region where you placed previous resources**
     * Hostpool name: **Personal**
     * Desktop type: **Personal**
-    * Click **Next: Configure virtual machines >**
 
-5. Complete the **Configure virtual machines** tab with the following information:
+5. Complete the **Configure virtual machines** tab with the following information and then click **Next: Virtual machine settings >**
     * Total users: **2**
         >This will create 2 hosts and join them to AD and this pool.
     * Virtual machine size: *Change Size* and select **B2s**
         >If B2s isn't available then choose the smallest VM size that is supported within your region such as a **D2s_v3**.
     * Virtual machine name prefix: **Personal**
         >This prefix will be used in combination with the VM number to create the VM name. If using 'Personal' as the prefix, VMs would be named 'Personal-0', 'Personal-1', etc. You should use a unique prefix to reduce name collisions in Active Directory and in Windows Virtual Desktop.
-    * Click **Next: Virtual machine settings >**
 
-6. Complete the **Virtual machine settings** tab with the following information:
+6. Complete the **Virtual machine settings** tab with the following information and then click **Next: Windows Virtual Desktop information >**
     * AD domain join UPN: `wvdadmin@yourADdomain.TLD`
         >UPN of an Active Directory user that has permissions and will be used to join the virtual machines to your domain.  If you didn't write this down you can return to your RDP session with the domain controller and obtain the information.
     * Admin Password: `Complex.Password`
     * Confirm password: `Complex.Password`
     * Virtual network: **Select AD-VNET, do not create a new VNET**.
     * vmSubnet: **Select AD-Subnet, do not create a new subnet**.
-    * Click **Next: Windows Virtual Desktop information >**
 
 7. Complete the **Windows Virtual Desktop information** tab with the following information:
     * Windows Virtual Desktop tenant group name
@@ -77,9 +74,9 @@ troubleshooting section on this guide.
 
     ![Inputs](../attachments/Inputs.PNG)
 
->We often see students entering the wrong domain information and the domain join fails.  Reviewing the data on the inputs field can help you determine when you went wrong.
+>We often see students entering the wrong domain information and the domain join fails.  Reviewing the data on the inputs field can help you determine the root cause of the failure.
 
-### Congrats! You have successfully deployed a Personal Host Pool!
+### Congrats! You have successfully deployed a Personal Host Pool.
 
 ## Exercise 2 - Assign users to the Pool
 
@@ -89,12 +86,14 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
 
 1. In the Azure Portal open Azure Active Directory for your tenant.
 2. Select **Users** then **Bob Jones**.
-3. Copy the UPN.  e.g. `Bob.Jones@<yourdomain>.onmicrosoft.com`
-4. Open PowerShell and enter the following command:
+3. Copy the UPN for Bob Jones.  e.g. `Bob.Jones@<yourAzureADdomain>.onmicrosoft.com`
+4. Return to PowerShell on the domain controller, click on **New Script**, cut, paste and edit the following command:
 
     ```Powershell
-    Add-RdsAppGroupUser $TenantName -HostPoolName Personal -AppGroupName "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourdomain>.onmicrosoft.com
+    Add-RdsAppGroupUser $TenantName -HostPoolName Personal -AppGroupName "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourAzureADdomain>.onmicrosoft.com
     ```
+    
+5. Hit **Run Script (F5)**.
 
 ### Continue to Lab 8: [Deploy a Pooled Host Pool](Deploy-Lab08-Deploy-a-Pooled-Host-Pool.md)
 
