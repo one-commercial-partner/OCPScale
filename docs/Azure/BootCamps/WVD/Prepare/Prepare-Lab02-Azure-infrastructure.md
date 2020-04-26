@@ -95,24 +95,22 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 
     > If you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.  Simply wait a few minutes for the desktop to render.
 
-
-4. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
+4. Within Server Manager, click **Don't show me this again** and close the **Windows Admin Center**.  Click **Tools** and then **Active Directory Users and Computers**.
 
 5. Expand the domain tree and select **Users**. Right-click and create a New User with the following information:
     * First Name: **WVD**
     * Last Name: **Administrator**
     * Full Name: **WVD Administrator**
     * User Logon Name: **wvdadmin**
-6. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
-7. Click **Next** then **Finish**.
+6. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox. Click **Next** then **Finish**.
 
-   > *Tip:* This account will be important in future tasks. Make a note of the username and password you create.
+   > This account will be important in future tasks. Make a note of the username and password you create.
 
-8. In Active Directory Users and Computers, select and then right-click on the `WVD Administrator` account object and select **Add to a group**.
+7. In Active Directory Users and Computers, select and then right-click on the `WVD Administrator` account object and select **Add to a group**.
 
-9. On the Select Groups dialog window, type **Enterprise Admins**, click **Check Names**, and then click **OK**.  Click **OK** once the operation is completed successfully.
+8. On the Select Groups dialog window, type **Enterprise Admins**, click **Check Names**, and then click **OK**.  Click **OK** once the operation is completed successfully.
 
-   > **Note:** This account will be used during the host pool creation process for joining the hosts to the domain. Granting Enterprise Admin permissions will simplify the lab. However, any Active Directory account that has the following permissions will suffice. This can be done using [Active Directory Delegate Control.](https://danielengberg.com/domain-join-permissions-delegate-active-directory/)
+   > **Note:** This account will be used during the host pool creation process for joining the hosts to the domain. Granting Enterprise Admin permissions will simplify the lab, however we recommend implementing RBAC for production environments. 
 
 ### Create Domain Accounts
 
