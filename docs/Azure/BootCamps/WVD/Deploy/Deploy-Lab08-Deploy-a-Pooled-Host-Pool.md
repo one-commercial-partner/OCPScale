@@ -17,13 +17,13 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
 
     ![WVDProvisionHostPool](../attachments/WVDProvisionHostPool.PNG)
 
-4. Complete the **Basics** tab with the following information:
+4. Complete the **Basics** tab with the following information and then click **Next: Configure virtual machines >**
     * Resource Group: *Create New* **WVDLab-Pooled**
     * Region: **Choose the same region where you placed previous resources**
     * Hostpool name: **Pooled**
     * Desktop type: **Pooled**
     * Click **Next: Configure virtual machines >**
-5. Complete the **Configure virtual machines** tab with the following information:
+5. Complete the **Configure virtual machines** tab with the following information and then click **Next: Virtual machine settings >**
     * Create an Availability Set: **No**
     * Usage Profile: **Custom**
         > Select a usage profile to determine the number of users per vCPU--Light (6), Medium (4), or Heavy (2)--to use to calculate the number of virtual machines to create based on the selected VM size. If you would like to create a specific number of VMs, select 'Custom'.
@@ -33,20 +33,19 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
         >Choose the smallest VM size that is supported within your region such as a **D2s_v3**.
     * Virtual machine name prefix: **Pooled**
         >This prefix will be used in combination with the VM number to create the VM name. If using 'Pooled' as the prefix, VMs would be named 'Pooled-0', 'Pooled-1', etc. You should use a unique prefix to reduce name collisions in Active Directory and in Windows Virtual Desktop.
-    * Click **Next: Virtual machine settings >**
-6. Complete the **Virtual machine settings** tab with the following information:
+
+6. Complete the **Virtual machine settings** tab with the following information and then click **Next: Windows Virtual Desktop information >**
     * AD domain join UPN: `ADAdmin@<yourFQDNADDomain>` (e.g. adadmin@wagsdemos.com)
         >UPN of an Active Directory user that has permissions and will be used to join the virtual machines to your domain.  If you didn't write this down you can return to your RDP session with the domain controller and obtain the information.
     * Admin Password: `Complex.Password`
     * Confirm password: `Complex.Password`
-    * Virtual network: **Select the existing virtual network you created earlier, do not create a new VNET**.
-    * vmSubnet: **Select the existing subnet you created earlier, do not create a new subnet**.
-    * Click **Next: Windows Virtual Desktop information >**
+    * Virtual network: **Select AD-VNET, do not create a new VNET**.
+    * vmSubnet: **Select AD-Subnet, do not create a new subnet**.
 
 7. Complete the **Windows Virtual Desktop information** tab with the following information:
     * Windows Virtual Desktop tenant group name
         >**DO NOT CHANGE THIS NAME!**
-    * Windows Virtual Desktop tenant name:  `<yourTenantName>`
+    * Windows Virtual Desktop tenant name:   `<yourWVDTenantName>`
         >Provide the tenant name used earlier. If the name does not exactly match your deployment will fail.  If your PowerShell window is still open you should be able to retrieve the name there.
     * UPN: `WVDAdmin@<yourAzureADDomain>.onmicrosoft.com`
     * Password: `Complex.Password`

@@ -2,11 +2,7 @@
 
 Now that we have provisioned a Windows Virtual Desktop Tenant, we can now deploy a Personal Host Pool to publish resources to our users.
 
-Your Windows Virtual Desktop tenant is the management space for Host Pools, one of the host pool types is Personal Hosts. This means that the Host will be statically assigned to a single user or multiple users. In this situation the user logs into the same host every single time. We treat Persistent host much the same way we do traditional workstations, since they are typically running 24/7, they need to be patched and maintained like a typical workstation.
-
 ## Exercise 1 - Provision a Personal Host Pool
-
-### Create the Personal Pool
 
 1. Return to the [Azure Portal](https://portal.azure.com) on your desktop and search for **Marketplace**.  
     > **NOTE:** Ensure that you are in the correct directory and subscription.
@@ -85,7 +81,7 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
 1. In the Azure Portal open Azure Active Directory for your tenant.
 2. Select **Users** then **Bob Jones**.
 3. Copy the UPN for Bob Jones.  e.g. `Bob.Jones@<yourAzureADdomain>.onmicrosoft.com`
-4. Return to PowerShell on the domain controller, click on **New Script**, cut, paste and edit the following command:
+4. Return to PowerShell on the domain controller, click on **New Script** and then cut, paste and edit the following command:
 
     ```Powershell
     Add-RdsAppGroupUser $TenantName -HostPoolName Personal -AppGroupName "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourAzureADdomain>.onmicrosoft.com
