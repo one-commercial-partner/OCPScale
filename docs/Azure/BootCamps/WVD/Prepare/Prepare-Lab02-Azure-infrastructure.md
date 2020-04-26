@@ -129,7 +129,7 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 5. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
 6. Click **Next** then **Finish**.
 
-## Exercise 4 - ## Exercise 5 - Configure DNS
+## Exercise 4 - Configure DNS
 
 The virtual network that contains the domain controller is pointing to Azure DNS, not the DNS of the domin controller, for name resolution.  Any new VMs will not be able to find the DNS service on the domain controller and be able to join the domain.  Change the DNS to point to the domain controller.
 
