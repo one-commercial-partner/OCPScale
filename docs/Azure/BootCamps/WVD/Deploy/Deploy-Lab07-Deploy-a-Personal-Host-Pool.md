@@ -74,6 +74,7 @@ troubleshooting section on this guide.
     ![DomainJoinFailed](../attachments/DomainJoinFailed.PNG)
 
 13. You can click on **Inputs** to see if you had a typo or entered the wrong information.
+
     ![Inputs](../attachments/inputs.PNG)
 
 >We often see students entering the wrong domain information and the domain join fails.  Reviewing the data on the inputs field can help you determine when you went wrong.
