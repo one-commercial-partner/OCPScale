@@ -97,7 +97,7 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 
 4. Within Server Manager, click **Don't show me this again** and close the **Windows Admin Center**.  Click **Tools** and then **Active Directory Users and Computers**.
 
-5. Expand the domain tree and select **Users**. Select, right-click, and create a New User with the following information:
+5. Expand the domain tree and select **Users**. Right-click and select **New** then **User** and create a New User with the following information:
     * First Name: **WVD**
     * Last Name: **Administrator**
     * Full Name: **WVD Administrator**
@@ -110,7 +110,7 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 
 8. On the Select Groups dialog window, type **Enterprise Admins**, click **Check Names**, and then click **OK**.  Click **OK** once the operation is completed successfully.
 
-   > **Note:** This account will be used during the host pool creation process for joining the hosts to the domain. Granting Enterprise Admin permissions will simplify the lab, however we recommend implementing RBAC for production environments. 
+   > **Note:** This account will be used during the host pool creation process for joining the hosts to the domain. Granting Enterprise Admin permissions will simplify the lab, however we recommend implementing RBAC for production environments.
 
 ### Create Domain Accounts
 
