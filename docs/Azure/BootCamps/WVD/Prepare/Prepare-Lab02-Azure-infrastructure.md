@@ -138,14 +138,14 @@ Following [Microsoft recommended practices](https://docs.microsoft.com/en-us/azu
 3. Create your virtual machine:
 
     ```PowerShell
-    az vm create --resource-group WVDLab-Infrastructure --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADConnectadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15
+    az vm create --resource-group WVDLab-Infrastructure --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADCadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15
     ```
 
-    > It will take about 5 minutes to provision this VM.
+    > It will take about 5 minutes to provision this VM, so please move to Exercise 5.
 
 ## Exercise 5 - Configure DNS
 
-The virtual network that contains the domain controller is pointing to Azure DNS, not the DNS of the domin controller.  Any new VMs will not be able to find the DNS service on the domain controller and be able to join the domain.  Change the DNS to point to the domain controller.
+The virtual network that contains the domain controller is pointing to Azure DNS, not the DNS of the domin controller, for name resolution.  Any new VMs will not be able to find the DNS service on the domain controller and be able to join the domain.  Change the DNS to point to the domain controller.
 
 1. In the Azure portal click **Home** -> **Resource groups** -> **WVDLab-Infrastructure**.
 2. Click on **DC01** and copy the Private IP address (e.g. 10.10.10.11).
@@ -156,7 +156,7 @@ The virtual network that contains the domain controller is pointing to Azure DNS
 
 ## Exercise 6 - Join the Domain
 
-1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as localadmin.  Within **Server Manager**, click on **Local Server**.
+1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as `ADCadmin`.  Within **Server Manager**, click on **Local Server**.
 2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
 3. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
 4. In the Windows Security box enter the following:AD Domain Admin credentials:
