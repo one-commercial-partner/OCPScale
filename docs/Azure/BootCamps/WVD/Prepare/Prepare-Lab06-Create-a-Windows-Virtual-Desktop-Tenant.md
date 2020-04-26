@@ -63,7 +63,9 @@ New-RdsTenant -Name $TenantName -AadTenantId $aadTenantId -AzureSubscriptionId $
 
 ## Exercise 4 - Add user roles to your Windows Virtual Desktop Tenant
 
-Adding resources to your tenant is a critical step, at this point we will define a **RDS Owner** role to deploy and maintain host pools moving forward. In many cases you would provision the same account as RDS Owner as you did for Tenant Creator to ensure those users can manage all aspects of the WVD Environment. Later we will provision individual user access as necessary.
+Adding resources to your tenant is a critical step, and at this point we will define a **RDS Owner** role to deploy and maintain host pools moving forward. In many cases you would provision the same account as RDS Owner as you did for Tenant Creator to ensure those users can manage all aspects of the WVD Environment.
+
+1. In the PowerShell ISE Output pane cut, paste, and enter the following:
 
 ```PowerShell
 New-RdsRoleAssignment -SignInName $SignInName -RoleDefinitionName "RDS Owner" -TenantName $TenantName -AadTenantId $aadTenantId
