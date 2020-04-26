@@ -86,7 +86,7 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
 1. In the Azure Portal open the Azure Active Directory for your tenant.
 2. Select **Users** then **Julia Williams**.
 3. Copy the UPN for Julia Williams.  e.g. `Julia.Williams@<yourdomain>.onmicrosoft.com`
-4. Return to PowerShell on the domain controller, click on **New Script** and then cut, paste and edit the following command:
+4. Return to PowerShell ISE on the domain controller, click on **New Script** and then cut, paste and edit the following command:
 
     ```Powershell
     Add-RdsAppGroupUser $TenantName -HostPoolName Pooled -AppGroupName "Desktop Application Group" -UserPrincipalName Julia.Williams@<yourdomain>.onmicrosoft.com
