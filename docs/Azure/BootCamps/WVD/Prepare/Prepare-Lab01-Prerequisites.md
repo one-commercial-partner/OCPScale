@@ -21,7 +21,7 @@ If you are using IUR, contact the subscription administrator at your partner org
 
 You will consume roughly $25.00 in your subscription configuring this lab.
 
-In order to complete the **Prepare** and **Deploy** phase labs, you will need 10 vCPUs available in your subscription.  
+In order to complete the **Prepare** and **Deploy** phase labs, you will need 16 vCPUs available in your subscription.  
 
 Each lab in the **Optimize** phase is  relatively lengthy in duration and may require additional resouces within your Azure subscription such as storage accounts, vCPUS, etc..
 
