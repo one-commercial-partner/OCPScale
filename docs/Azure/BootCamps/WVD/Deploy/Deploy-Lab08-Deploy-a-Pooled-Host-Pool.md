@@ -62,11 +62,11 @@ Now that we have provisioned a Personal Host Pool, we can now deploy a Pooled Ho
 10. You can watch the progress of the deployment.  Note that this will take about 15 minutes or so to complete, so it might be a good time to stretch your virtual legs and take a break.
 
     ![PooledDeploy](../attachments/PooledDeploy.PNG)
-11. You should eventually receive a message **“Your Deployment is complete”.**
+11. After all operations are complete you will receive the message **“Your Deployment is complete”.**
 
-    ![PersonalPoolDeployed](../attachments/PersonalPoolDeployed.PNG)
+    ![PooledPoolDeployed](../attachments/PooledPoolDeployed.PNG)
 
-12. If your deployment fails, click on **Operation detail** to determine what failed.
+12. If your deployment fails, click on **Operation details** to determine what failed.
     ![DomainJoinFailed](../attachments/DomainJoinFailed.PNG)
 
 13. You can click on **Inputs** to see if you had a typo or entered the wrong information.

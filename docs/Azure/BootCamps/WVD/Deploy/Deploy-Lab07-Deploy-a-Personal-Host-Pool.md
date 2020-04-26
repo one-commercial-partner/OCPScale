@@ -59,11 +59,11 @@ Now that we have provisioned a Windows Virtual Desktop Tenant, we can now deploy
 10. You can watch the progress of the deployment.  Note that this will take about 15 minutes or so to complete, so it might be a good time to stretch your virtual legs and take a break.
 
     ![WVDDeployment](../attachments/WVDDeployment.PNG)
-11. You should eventually receive a message **“Your Deployment is complete”.**
+11. Once all operations are complete you will receive the message **“Your Deployment is complete”.**
 
     ![PersonalPoolDeployed](../attachments/PersonalPoolDeployed.PNG)
 
-12. If your deployment fails, click on **Operation detail** to determine what failed.
+12. If your deployment fails, click on **Operation details** to determine what failed.
     ![DomainJoinFailed](../attachments/DomainJoinFailed.PNG)
 
 13. You can click on **Inputs** to see if you had a typo or entered the wrong information.
