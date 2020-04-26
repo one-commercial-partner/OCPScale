@@ -1,12 +1,9 @@
-# Study Group Materials 
-Simple ... 
+# Modern Workplace Study Group Materials
 
-Each folder is for a different exam and then each file listed is a separate homework assignment, one for each of the exam objectives.
+Each link is to a different study group.  Next, you will find links to separate homework assignments, one for each of the exam objectives.
 
-If you see a typo or want to add content that others may find useful, edit away and submit your changes!
+> If you see a typo or want to add content that others may find useful, edit away and submit your changes!
+> Additionally, if you see something, say something! Let's leverage the power of the community.
+> If you run across an interesting blog post, article, nuggest of truth, update the documents on Github!
 
-Additionally, if you see something, say something! Let's leverage the power of the community.
-
-If you run across an interesting blog post, article, nuggest of truth, update the documents on Github!
-
-[Back](../)
+- [MS-700: Managing Microsoft Teams](./MS-700)

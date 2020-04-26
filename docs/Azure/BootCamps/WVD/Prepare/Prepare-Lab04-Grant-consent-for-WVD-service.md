@@ -8,22 +8,22 @@ Before you can create a Windows Virtual Desktop tenant, you must allow Windows V
 
 1. On your desktop browse to the URL: [Windows Virtual Desktop Consent Page](https://rdweb.wvd.microsoft.com/).  
 2. Under **Consent Option** select **Server App** from the dropdown and then paste your Azure Active Directory ID (your Tenant ID) into the **AAD Tenant GUID or Name:** and click **Submit**.
-3. When prompted, **Pick an account** that is your credentials for Azure Active Directory, such as `AzureADAdmin@<yourAzureADDomain>.onmicrosoft.com`.
+3. When prompted, select **Use another account** and then enter  `AzureADAdmin@<yourAzureADDomain>.onmicrosoft.com`.  Click **Next**.
 
-    ![PickAnAccount](../attachments/PickAnAccount.png)
+4. Enter `Complex.Password` and then **Sign in**.
 
-4. Click **Accept** on the Permissions requested page.
+5. Click **Accept** on the **Permissions requested** page.
 
 ## Exercise 2 - Enabling Client Registration and consent to Azure AD
 
 1. **WAIT ONE MINUTE** before proceeding. It can take about a minute for the server registration to complete. If you proceed to the next step too quickly, you may see an error.
 2. Navigate back to [Windows Virtual Desktop Consent Page](https://rdweb.wvd.microsoft.com/).
 3. Next, from the **Consent Option** drop down, select **Client App**  and add the same Azure Active Directory ID (your Tenant ID) into the **AAD Tenant GUID or Name:** and click **Submit**.
-4. If prompted, **Pick an account** that is your credentials for Azure Active Directory, such as `AzureADAdmin@<yourAzureADDomain>.onmicrosoft.com'.
+4. When prompted `AzureADAdmin@<yourAzureADDomain>.onmicrosoft.com`.
 5. Click **Accept** on the permissions request page. Once this is complete you can close out of your browser session.
 
     >**NOTE**: If you receive an error that the page is not working or not available right now, click the button in your browser to go back one page and try again.  This is a temporary condition.
 
-### Continue with Lab 5: [Assign the “TenantCreator” role to a user account](Prepare-Lab05-Assign-the-“TenantCreator”-role-to-a-user-account.md)
+### Continue with Lab 5: [Assign the “TenantCreator” role](Prepare-Lab05-Assign-the-“TenantCreator”-role-to-a-user-account.md)
 
 ### Return to [Prepare Phase Labs](prepare.md)

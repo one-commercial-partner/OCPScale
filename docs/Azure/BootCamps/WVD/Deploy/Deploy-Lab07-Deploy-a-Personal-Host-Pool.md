@@ -4,20 +4,7 @@ Now that we have provisioned a Windows Virtual Desktop Tenant, we can now deploy
 
 Your Windows Virtual Desktop tenant is the management space for Host Pools, one of the host pool types is Personal Hosts. This means that the Host will be statically assigned to a single user or multiple users. In this situation the user logs into the same host every single time. We treat Persistent host much the same way we do traditional workstations, since they are typically running 24/7, they need to be patched and maintained like a typical workstation.
 
-There are many ways to deploy a Personal Host Pool however we will focus on leveraging the Azure Marketplace. For more advanced deployments you can use ARM templates as is documented here: [Tutorial: Create a host pool by using the Azure Marketplace](https://docs.microsoft.com/en-us/azure/virtual-desktop/create-host-pools-azure-marketplace)
-
 ## Exercise 1 - Provision a Personal Host Pool
-
-### Configure DNS
-
-The virtual network that contains the domain controller is pointing to Azure DNS, not the DNS of the domin controller.  Any new VMs will not be able to find the DNS service on the domain controller and be able to join the domain.  Change the DNS to point to the domain controller.
-
-1. In the Azure portal click **Home** -> **Resource groups** -> **WVDLab-Infrastructure**.
-2. Click on **DC01** and copy the Private IP address (e.g. 10.10.10.11).
-3. Click on **WVDLab-Infrastructure** and then **AD-Vnet**.
-4. Under **Settings** click **DNS Servers**.
-5. Change the DNS servers to **Custom** and paste the IP address.
-6. Click **Save**.
 
 ### Create the Personal Pool
 
@@ -45,13 +32,13 @@ The virtual network that contains the domain controller is pointing to Azure DNS
     * Total users: **2**
         >This will create 2 hosts and join them to AD and this pool.
     * Virtual machine size: *Change Size* and select **B2s**
-        >Choose the smallest VM size that is supported within your region such as a **D2s_v3**.
+        >If B2s isn't available then choose the smallest VM size that is supported within your region such as a **D2s_v3**.
     * Virtual machine name prefix: **Personal**
         >This prefix will be used in combination with the VM number to create the VM name. If using 'Personal' as the prefix, VMs would be named 'Personal-0', 'Personal-1', etc. You should use a unique prefix to reduce name collisions in Active Directory and in Windows Virtual Desktop.
     * Click **Next: Virtual machine settings >**
 
 6. Complete the **Virtual machine settings** tab with the following information:
-    * AD domain join UPN: `ADAdmin@<yourFQDNADDomain>`
+    * AD domain join UPN: `wvdadmin@yourADdomain.TLD`
         >UPN of an Active Directory user that has permissions and will be used to join the virtual machines to your domain.  If you didn't write this down you can return to your RDP session with the domain controller and obtain the information.
     * Admin Password: `Complex.Password`
     * Confirm password: `Complex.Password`

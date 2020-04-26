@@ -17,12 +17,8 @@ You can find more information here: [Assign the TenantCreator application role](
     ![(Not the Windows Virtual Desktop Client Application)](../attachments/image-0d1676c7-42a1-4311-834f-93e94f496572.png)
 
 3. Under **Getting Started** select **Assign Users and groups**.
-4. Select **Add user**, and then click on  **Users None Selected**. Scroll down and then select **WVD Administrator**, the account we created in an earlier lab and granted  Global Admin rights to.
-5. Select the user and hit **Select,** followed by **Assign**.
-
-     Your user should now have the role of “TenantCreator.”
-
-   ![WVDAdminPermsGranted](../attachments/WVDAdminPermsGranted.PNG)
+4. Select **+ Add user**, and then click on  **Users None Selected**. Scroll down and then select **WVD Administrator**, the account we created in an earlier lab and granted  Global Admin rights to.
+5. Select the user and click **Select**, followed by **Assign**.
 
 ### Continue with Lab 6: [Create a Windows Virtual Desktop Tenant](Prepare-Lab06-Create-a-Windows-Virtual-Desktop-Tenant.md)
 
