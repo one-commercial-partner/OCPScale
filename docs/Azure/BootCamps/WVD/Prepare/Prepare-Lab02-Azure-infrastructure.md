@@ -129,21 +129,7 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 5. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
 6. Click **Next** then **Finish**.
 
-## Exercise 4 - Create a virtual machine to host AD Connect
-
-Following [Microsoft recommended practices](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-prerequisites#azure-ad-connect-server) we are creating a virtual machine to be used to host Azure AD Connect.
-
-1. From your desktop return to and open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
-2. You may have to hit **Reconnect**.
-3. Create your virtual machine:
-
-    ```PowerShell
-    az vm create --resource-group WVDLab-Infrastructure --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADCadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15
-    ```
-
-    > It will take about 5 minutes to provision this VM, so please move to Exercise 5.
-
-## Exercise 5 - Configure DNS
+## Exercise 4 - ## Exercise 5 - Configure DNS
 
 The virtual network that contains the domain controller is pointing to Azure DNS, not the DNS of the domin controller, for name resolution.  Any new VMs will not be able to find the DNS service on the domain controller and be able to join the domain.  Change the DNS to point to the domain controller.
 
@@ -154,15 +140,31 @@ The virtual network that contains the domain controller is pointing to Azure DNS
 5. Change the DNS servers to **Custom** and paste the IP address.
 6. Click **Save**.
 
+## Exercise 5 - Create a virtual machine to host AD Connect
+
+Following [Microsoft recommended practices](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-prerequisites#azure-ad-connect-server) we are creating a virtual machine to be used to host Azure AD Connect.
+
+1. From your desktop return to and open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
+2. You may have to hit **Reconnect**.
+3. Create your virtual machine:
+
+    ```PowerShell
+    az vm create --resource-group WVDLab-Infrastructure --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADConnectAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15
+    ```
+
+    > It will take about 5 minutes to provision this VM, so please move to Exercise 5.
+
 ## Exercise 6 - Join the Domain
 
-1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as `ADCadmin`.  Within **Server Manager**, click on **Local Server**.
-2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
-3. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
-4. In the Windows Security box enter the following:AD Domain Admin credentials:
+1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as `ADConnectAdmin`.  Select **More Choices** then **Use a different account** to enter your credentials.
+2. Click **No** on the **Networks** blade.
+3. Within Server Manager, click **Don't show me this again** and close the **Windows Admin Center** window.
+4. Click on **Local Server**, then **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
+5. Click the radio button for **Domain**, enter your fully-qualified domain name, such as `<myADdomain.TLD>`, and click **OK**.
+6. In the Windows Security box enter the following:AD Domain Admin credentials:
     * username: **localadmin**
     * password: `Complex.Password`
-5. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
+7. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
 ### Continue with Lab 3: [Configuring Azure AD Connect with AD-DS](Prepare-Lab03-Configuring-Azure-AD-Connect-with-AD-DS.md)
 
