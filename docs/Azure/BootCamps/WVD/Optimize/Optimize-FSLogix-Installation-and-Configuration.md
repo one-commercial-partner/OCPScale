@@ -103,7 +103,7 @@ Installing the FSLogix agent can be done a few different ways. In this exercise 
 
 ## Exercise 3 - Confirm FSLogix Functionality
 
-1. From the domain ontroller launch the Remote Desktop Connection.
+1. From the domain controller launch the Remote Desktop Connection.
 2. Confirm the **Computer:** is set to  **10.10.10.4** and click **Connect**.
 3. When prompted to **Enter your credentials** click on **More choices** and then **User a different account** abd enter the credentials for Bob Jones:
     * Username: `<yourADdomain>\Bob.Jones`
