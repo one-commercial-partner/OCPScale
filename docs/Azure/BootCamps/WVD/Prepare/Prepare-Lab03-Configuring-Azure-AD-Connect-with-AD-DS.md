@@ -77,17 +77,19 @@ We are going to create an account that AD Connect will use to perform the synchr
 2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators.
 3. Open Internet Explorer, accept the defaults, and surf to [Microsoft Azure Active Directory Connect](http://go.microsoft.com/fwlink/?LinkId=615771).
 4. Click **Download**, then **Run** when prompted.
-Close Internet Explorer.
+Close Internet Explorer within the AD Connect virtual machine.
 
 ## Exercise 4 -  Configure Azure Active Directory Connect
 
-1. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
+1. Switch to the **Microsoft Azure Active Directory COnnect** window and on the **Welcome to Azure AD Connect** screen select **I agree** then **Continue**.
 2. Review the screen and select **Use express settings**.
 3. On the **Connect to Azure AD** screen enter your **Azure AD Credentials**:
+    > Copy the credentials from your scratch pad.
    * USERNAME: `AzureADSync@<yourAzureADDomain>.onmicrosoft.com`
    * PASSWORD: `Complex.Password`
-   * Click **Next** and then confirm the credential are validated.
+   * Click **Next** and then confirm the credential are validated.  Correct any errors.
 4. On the **Connect to AD DS screen**, enter the Active Directory Domain Services domain administrator credentials:
+    > Copy the credentials from your scratch pad.
    * USERNAME: `<yourADDomain>\adadmin`
    * PASSWORD: `Complex.Password`
    * Click **Next** and then confirm the credential are validated.
