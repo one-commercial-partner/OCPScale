@@ -131,7 +131,7 @@ In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 t
 
 ## Exercise 4 - Create a virtual machine to host AD Connect
 
-We are creating a small VM to be used later to host Azure AD Connect.
+Following [Microsoft recommended practices](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-prerequisites#azure-ad-connect-server) we are creating a virtual machine to be used to host Azure AD Connect.
 
 1. From your desktop return to and open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
 2. You may have to hit **Reconnect**.
