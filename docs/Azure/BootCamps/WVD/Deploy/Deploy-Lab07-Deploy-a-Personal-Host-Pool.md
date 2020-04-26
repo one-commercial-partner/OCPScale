@@ -61,13 +61,11 @@ Your Windows Virtual Desktop tenant is the management space for Host Pools, one 
 10. You can watch the progress of the deployment.  Note that this will take about 15 minutes or so to complete, so it might be a good time to stretch your virtual legs and take a break.
 
     ![WVDDeployment](../attachments/WVDDeployment.PNG)
-11. You should eventually receive a message **“Your Deployment is complete”.** If
-you receive a failure message refer to the step it failed at and refer to the
-troubleshooting section on this guide.
+11. You should eventually receive a message **“Your Deployment is complete”.**
 
-    ![image](../attachments/d186f32593dbd7d350ec18940f547f8f.png)
+    ![PersonalPoolDeployed](../attachments/PersonalPoolDeployed.PNG)
 
-12. If your deployment fails, click on Operation detail to determine what failed.
+12. If your deployment fails, click on **Operation detail** to determine what failed.
     ![DomainJoinFailed](../attachments/DomainJoinFailed.PNG)
 
 13. You can click on **Inputs** to see if you had a typo or entered the wrong information.
@@ -76,7 +74,7 @@ troubleshooting section on this guide.
 
 >We often see students entering the wrong domain information and the domain join fails.  Reviewing the data on the inputs field can help you determine the root cause of the failure.
 
-### Congrats! You have successfully deployed a Personal Host Pool.
+**Congrats! You have successfully deployed a Personal Host Pool!**
 
 ## Exercise 2 - Assign users to the Pool
 
@@ -92,7 +90,7 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
     ```Powershell
     Add-RdsAppGroupUser $TenantName -HostPoolName Personal -AppGroupName "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourAzureADdomain>.onmicrosoft.com
     ```
-    
+
 5. Hit **Run Script (F5)**.
 
 ### Continue to Lab 8: [Deploy a Pooled Host Pool](Deploy-Lab08-Deploy-a-Pooled-Host-Pool.md)
