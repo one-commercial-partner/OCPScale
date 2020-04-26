@@ -105,7 +105,7 @@ Close Internet Explorer within the AD Connect virtual machine.
 1. Switch to the Azure portal and examine your Azure AD Directory by selecting the xxxx.onmicrosoft.com  Directory from the upper right hand corner of the portal.
 2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. On Prem).
 
-### Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory
+> Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory!!
 
 ### Continue with Lab 4: [Grant consent for WVD service](Prepare-Lab04-Grant-consent-for-WVD-service.md)
 
