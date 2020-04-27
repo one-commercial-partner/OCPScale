@@ -2,11 +2,7 @@
 
 Now that we have provisioned a Windows Virtual Desktop Tenant, we can now deploy a Personal Host Pool to publish resources to our users.
 
-Your Windows Virtual Desktop tenant is the management space for Host Pools, one of the host pool types is Personal Hosts. This means that the Host will be statically assigned to a single user or multiple users. In this situation the user logs into the same host every single time. We treat Persistent host much the same way we do traditional workstations, since they are typically running 24/7, they need to be patched and maintained like a typical workstation.
-
 ## Exercise 1 - Provision a Personal Host Pool
-
-### Create the Personal Pool
 
 1. Return to the [Azure Portal](https://portal.azure.com) on your desktop and search for **Marketplace**.  
     > **NOTE:** Ensure that you are in the correct directory and subscription.
@@ -52,6 +48,8 @@ Your Windows Virtual Desktop tenant is the management space for Host Pools, one 
     * Password: `Complex.Password`
     * Confirm password: `Complex.Password`
 
+    > If you are using a CSP subscription you will need to create a service principal for your account.  Refer to this [Tutorial: Create service principals and role assignments by using PowerShell](https://docs.microsoft.com/en-us/azure/virtual-desktop/create-service-principal-role-powershell)
+
 8. Select **Review + Create**. Wait for a **Validation Passed** and if you get a failure examine the **Activity log** in the Azure portal and resolve the failure.
 
    ![ValidationFailed](../attachments/ValidationFailed.PNG)
@@ -61,13 +59,11 @@ Your Windows Virtual Desktop tenant is the management space for Host Pools, one 
 10. You can watch the progress of the deployment.  Note that this will take about 15 minutes or so to complete, so it might be a good time to stretch your virtual legs and take a break.
 
     ![WVDDeployment](../attachments/WVDDeployment.PNG)
-11. You should eventually receive a message **“Your Deployment is complete”.** If
-you receive a failure message refer to the step it failed at and refer to the
-troubleshooting section on this guide.
+11. Once all operations are complete you will receive the message **“Your Deployment is complete”.**
 
-    ![image](../attachments/d186f32593dbd7d350ec18940f547f8f.png)
+    ![PersonalPoolDeployed](../attachments/PersonalPoolDeployed.PNG)
 
-12. If your deployment fails, click on Operation detail to determine what failed.
+12. If your deployment fails, click on **Operation details** to determine what failed.
     ![DomainJoinFailed](../attachments/DomainJoinFailed.PNG)
 
 13. You can click on **Inputs** to see if you had a typo or entered the wrong information.
@@ -76,7 +72,7 @@ troubleshooting section on this guide.
 
 >We often see students entering the wrong domain information and the domain join fails.  Reviewing the data on the inputs field can help you determine the root cause of the failure.
 
-### Congrats! You have successfully deployed a Personal Host Pool.
+**Congrats! You have successfully deployed a Personal Host Pool!**
 
 ## Exercise 2 - Assign users to the Pool
 
@@ -87,12 +83,12 @@ This cmd will ensure the user is a member of the Application Pool, this is requi
 1. In the Azure Portal open Azure Active Directory for your tenant.
 2. Select **Users** then **Bob Jones**.
 3. Copy the UPN for Bob Jones.  e.g. `Bob.Jones@<yourAzureADdomain>.onmicrosoft.com`
-4. Return to PowerShell on the domain controller, click on **New Script**, cut, paste and edit the following command:
+4. Return to PowerShell on the domain controller, click on **New Script** and then cut, paste and edit the following command:
 
     ```Powershell
     Add-RdsAppGroupUser $TenantName -HostPoolName Personal -AppGroupName "Desktop Application Group" -UserPrincipalName Bob.Jones@<yourAzureADdomain>.onmicrosoft.com
     ```
-    
+
 5. Hit **Run Script (F5)**.
 
 ### Continue to Lab 8: [Deploy a Pooled Host Pool](Deploy-Lab08-Deploy-a-Pooled-Host-Pool.md)

@@ -8,121 +8,94 @@ Intune provides mobile device management (MDM) and mobile app management (MAM) f
 
 1. Go to the [Microsoft Intune Trial](https://go.microsoft.com/fwlink/?linkid=2019088) page and fill out the form.
 
+2. Sign in with your Azure Credentials.
 
+3. Click **Try now** on the **Check out confirm your order** page. Click **Continue**. You are now at the **Microsoft 365 admin center**.
 
+## Exercise 2 - Configure auto enrollment
 
+1. Return to the domain controller and open **Server Manager**.
+2. Under **Tools**, select **Group Policy Management**.
+3. Expand the **forest** and then select `<yourADdomain>`. Right-click and then selelct **Create a GPO in the domain, and Link it here...**.
+4. Under **Name:** enter **Hybrid Azure AD Join** and click **OK**.
+5. Select the **Hybrid Azure AD Join** GPO, right-click and click **Edit**.
+6. Select and expand **Computer Configuration**, then **Policies**, then **Administrative Templates**, then **Windows Components**, then select  **MDM**.
+7. Right-click  the **Enable automatic MDM ...** setting and select **Edit**.
 
+    ![MDMGPO](../attachments/MDMGPO.PNG)
 
+8. Click the radio button for **Enabled** and then click **OK**.
 
+9. Browse up the tree in the Group Policy Management Editor and select  **Device Registration**.
+10. Select the **Register domain joined commputers as devices** setting and click **Edit policy setting**.
+11. Click the radio button for **Enabled** and then click **OK**.
+12. Exit the Group Policy Management Editor.
 
+## Exercise 3 - Configure Group Policy
 
+### Create an Organizational Unit
 
+1. From the domain controller return to **Active Directory Users and Computers**.
+2. Select your domain, right-click and select **New** then **Organizational Unit**.
+3. Enter **WVD Computers** and click **OK**.
 
+### Move WVD Computers to the New OU
 
+1. Select the **Computers** container.
+2. Select all the computer names that start with **Personal-** or **Pooled-**.
+3. Right-click and select **All Tasks** and then **Move**.  Browse to the **WVD Computers OU** and click **OK**.
 
+### Apply the GPO
 
+1. From the domain controller launch Remote Desktop Connection.
+2. Confirm the **Computer:** is set to  **10.10.10.4** and click **Connect**.
+3. When prompted to **Enter your credentials** click on **More choices**, then **User a different account**, then enter the following credentials:
+    * Username: `<yourADdomain>\adadmin`
+    * Password: `Complex.Password`
 
+    > During the logon process you may see a statement about FSLogix.
 
+4. Open a Command Prompt and enter the following:
 
+     `gpupdate /force`
 
+5. Run the following:
 
+    `gpresult /SCOPE COMPUTER /v |more`
 
-2. Locate the **Microsoft 365** tile in the **Tools** category and click **Activate**.  
-![M365Activate](../attachments/M365Activate.PNG)
-3. If prompted, sign in with your credentials.
-4. Click on **SET UP SUBSCRIPTION**
-5. Enter the following information and click **Continue**:
-    * Create username: *yourfirstname*
-    * Create domain: WVD*yourinitials*Lab (e.g. WVDXYZLab).  Hit **Tab**.
-        *Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.*
-        ***Write this domain name down as your Azure Active Directory Domain Name.***
-    * Password: **Complex.Password**
-    * Confirm Password: **Complex.Password**
+6. Check the results to ensure the **Hybrid Azure AD Join** group policy is applied.
 
-        ![M365Activate](../attachments/M365Setup.PNG)
-6. Enter your cell phone number and click **Send Code**.
-7. Enter your activation code and click **Set up**.
-8. Click on **Go to subscription**.
+    ![GPOApplied](../attachments/GPOApplied.PNG)
 
-## Exercise 3 - Activate your Enterprise Mobility + Security (EMS)
-
-1. Return to the [My Visual Studio](https://my.visualstudio.com) benefits page.
-2. Locate the **Enterprise Mobility + Security (EMS)** tile in the **Tools** category and click **Get Code**.
-
-    ![EMSActivate](../attachments/EMSActivate.PNG)
-
-3. When the coupon code has been successfully retrieved, click **"Activate"** to proceed.
-4. If prompted, select **Yes, add it to my account**, otherwise choose **Try now**.
-5. Note your confirmation number and click **Continue**.
-
-## Exercise 1 - Optional: Configure a custom domain name
-
-> **NOTE: IT IS NOT REQUIRED TO SETUP A CUSTOM DOMAIN NAME TO COMPLETE THIS LAB.  IF YOU ARE INTERESTED IN DOING THIS AND ACCEPT THAT YOU WILL BE GENERATING A REAL DOMAIN NAME AND ACCEPT THE ASSOCIATED FEES PLEASE CONTINUE WITH EXERCISE 1, OTHERWISE PROCEED TO EXERCISE 2.**
-
-When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain name hosted in Azure Active Directory (AD) that looks like your-domain.onmicrosoft.com. In this example, your-domain is the domain name that you chose when you signed up. onmicrosoft.com is the suffix assigned to the accounts you add to your subscription. You can configure your organization's custom domain to access Intune instead of the domain name provided with your subscription.
-
-Before you create user accounts or synchronize your on-premises Active Directory, we strongly recommend that you decide whether to use only the `.onmicrosoft.com` domain or to add one or more of your custom domain names. Set up a custom domain before adding users to simplify user management. Setting up a customer domain lets users sign in with the credentials they use to access other domain resources.
-
-We will be using the  Azure App Service to buy a custom domain.  Your app's App Service plan must be a paid tier (Shared, Basic, Standard, or Premium). In this step, you make sure that the app is in the supported pricing tier.
-
-### Create an App Service Plan
-
-1. Open the [Azure Portal](https://portal.azure.com/#create/hub) to the Create Hub and search for and select **App Service Plan**, then click **Create**.
-2. On the Basics tab complete the following: 
-    * Resource Group: **WVDLab**
-    * Name: WVDAppPlan
-    * Operating System: Windows
-    * Region: **Select the same region as your other WVD Resources**
-    * Sku and size: Change to Shared D1
-        * > This is the least expensive plan that supports custom domain names.
-3. Click **Review + Create** and then **Create**.
-4. Once created, click on **Go to resource**.
-
-### Create an Web App
-
-1. In the Azure Portal click on **+Create a resource**.
-2. In the search bar type in and select **Web App** followed by **Create**.
-3. On the Basics tab complete the following: 
-    * Resource Group: **WVDLab**
-    * Name: `<yourinitials>`WVD (e.g. abcWVD)
-        > Ensure the domain name resolves in the .azurewebsites.net namspace.
-    * Runtime stack: **>NET Core 3.1 (LTS)
-    * Region: **Select the same region as your other WVD Resources**
-    * Ensure your App Service Plan is selected.
-4. Click **Review + Create** and then **Create**.
-5. Once created, click on **Go to resource**.
-
-### Buy the domain
-
-1. In the App Services tab, under Settings, select Custom domains.
-2. Scroll down in the main window and click **Buy Domain**.
-    > Note: If you cannot see the App Service Domains section, you need to remove the spending limit on your Azure account.
-
-3. in the **Search for domain** enter the name of the custom domain you want to purchase and hit **Tab**.
-4. Complete the rest of the form and click **OK**.  At this point you will be purchasing the domain name.
-
-### To add and verify your custom domain
-
-1. Go to [Microsoft 365 admin center](https://admin.microsoft.com/) and sign into your tenant with your administrator account.
-2. In the navigation pane, choose **Setup > Domains**.
-3. Choose Add domain, and then type in your custom domain name. Select **Use this domain**.
-4. Follow the steps to add the TXT reecord to your DNS hosting provider.
-5. Your DNS record should look like this, aside from the custom domain:
-
-    ![CustomDomainRecords](../attachments/CustomDomainRecords.PNG)
-6. Continue to add the TXT, CNAME, and MX records to Azure DNS.
-
-## Exercise 2 - Assign Licenses
+## Exercise 4 - Assign Licenses
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), complete the following steps:
 
 1. Select **Users > All Users > choose a user >** click on **Bob Jones**.
-2. Select **Licenses** then **+Assignments** and select **Intune** and **Microsoft 365 E5 Developer (without Windows and Audio Conferencing)**.
-
-    ![InTuneLicenses](../attachments/InTuneLicenses.PNG)
-
-3. Choose **Save** and then repeat the steps for **Julia Williams**.
+2. Select **Manage product licenses**,  select the checkbox for **Intune** and then click  **Save changes**.
+3. Repeat the steps for **Julia Williams**.
     > If you get the error `License cannot be assigned to a user without a usage location specified.`, return to the user and under **Manage** click on **Profile** and then under **Settings** click **edit** and set their **uasge location** to the **United States** and click **Save**.  Repeat the steps to assign the license.
+
+## Exercise 5 - Set up Windows 10 automatic enrollment
+
+1. Logon to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as `AzureADAdmin@<yourAzureADdomain..onmicrosoft.com`
+
+2. select **Devices**.  Under **Device enrollment** select **Enroll devices** and then select **Automatic Enrollment**.
+2. Select **Some** from the MDM user scope to use MDM auto-enrollment.
+3. Under Groups find **Windows Virtual Desktops** and click **Select**.
+4. Under MAM User scope click on **SOme**.
+5. Find **Windows Virtual Desktops** and click **Select**.
+6. Use the default values for the remaining configuration values and choose **Save**.
+
+## Exercise 5 - Enroll your Windows 10 device
+
+1. From your desktop, open the Remote Desktop client and select **PersonalPool**.
+2. When prompted enter the credentials for Bob Jones.
+
+
+### Return to [Optimize Phase Labs](optimize.md)
+
+
 
 ## Exercise 3 - Create a group
 
@@ -141,20 +114,3 @@ You will create a group that will be used manage objects. To create a group:
 8. Click **Create**
 
     ![IntuneNewGroup](../attachments/IntuneNewGroup.PNG)
-
-## Exercise 4 - Set up Windows 10 automatic enrollment
-
-1. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) select **Devices**.  Under **Device enrollment** select **Enroll devices** and then select **Automatic Enrollment**.
-2. Select **Some** from the MDM user scope to use MDM auto-enrollment.
-3. Under Groups find **Windows Virtual Desktops** and click **Select**.
-4. Under MAM User scope click on **SOme**.
-5. Find **Windows Virtual Desktops** and click **Select**.
-6. Use the default values for the remaining configuration values and choose **Save**.
-
-## Exercise 5 - Enroll your Windows 10 device
-
-1. From your desktop, open the Remote Desktop client and select **PersonalPool**.
-2. When prompted enter the credentials for Bob Jones.
-
-
-### Return to [Optimize Phase Labs](optimize.md)

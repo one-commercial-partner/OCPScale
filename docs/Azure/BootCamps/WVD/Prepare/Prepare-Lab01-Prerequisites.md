@@ -2,10 +2,6 @@
 
 In the lab you will complete all the necessary prerequisites to build out a Windows Virtual Desktop environment.
 
-*NOTE: If you already have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment, please complete only Exercise 1.*
-
-If you do not have an Office 365 subscription with an Enterprise Mobility + Security (EMS) E5 license environment, please complete all exercises.
-
 ## Your enviroment
 
 We recommend having multiple monitors to complete this lab.  On one monitor load your web browser to the Azure Portal and on the other have this lab guide visible.
@@ -24,6 +20,10 @@ If you are using IUR, contact the subscription administrator at your partner org
 > Please ensure that you are using a **clean** subscription, meaning your subscription has no connections to any existing subscriptions, identities, accounts, etc.
 
 You will consume roughly $25.00 in your subscription configuring this lab.
+
+In order to complete the **Prepare** and **Deploy** phase labs, you will need 16 vCPUs available in your subscription.  
+
+Each lab in the **Optimize** phase is  relatively lengthy in duration and may require additional resouces within your Azure subscription such as storage accounts, vCPUS, etc..
 
 ## Rights assignments
 
