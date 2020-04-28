@@ -94,15 +94,13 @@
 * *Registration ID* – Uniquely identifies a device in the DPS instance
 * *Device ID* – Uniquely identifies a device in the associated IoT Hub instance
 * *Attestation mechanism* – the way a device proves its identity to the DPS
-  * *X.509 Certificates* – Digital identity based on private/public key pairs and a chain of trust
-  <br />Issued by a certificate authority (CA)
+  * *X.509 Certificates* – Digital identity based on private/public key pairs and a chain of trust; issued by a certificate authority (CA)
   <br />Certificate rules:
   <br />- Chain must be trusted
   <br />- Group or individual enrollment
   <br />- Individual overrides group
   * TPM nonce challenge
-  <br />*Trusted Platform Module (TPM)* – a specification for storing keys or the interface for communicating with an HSM acting as a TPM
-  <br />Two hardware keys for the TPM
+  <br />*Trusted Platform Module (TPM)* – a specification for storing keys or the interface for communicating with an HSM acting as a TPM; two hardware keys for the TPM:
   <br />- *Endorsement key (EK)* – unique identifier for the TPM; read-only, injected by the manufacturer
   <br />- *Storage root key (SRK)* – protects the TPM secrets; generated when a user takes ownership of the TPM
   * Symmetric key
