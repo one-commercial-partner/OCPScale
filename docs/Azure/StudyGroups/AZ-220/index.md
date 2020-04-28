@@ -50,7 +50,7 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 
 ## Presentations
 
-Thought study group slide decks include official curriculum content and cannot be shared here, we are able to share the core kick-off slides an the slides from the Online Workshop Series: Building End-to-End IoT Solutions.
+Though study group slide decks include official curriculum content and cannot be shared here, we are able to share the core kick-off slides an the slides from the Online Workshop Series: Building End-to-End IoT Solutions.
 
 [AZ-220 Kickoff Slides](AZ220ExamStudyGroup-Kickoff.pdf)
 
