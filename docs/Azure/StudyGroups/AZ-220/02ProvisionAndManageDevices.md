@@ -38,6 +38,7 @@
  <br />Exercise 3: Configure Simulated Device
  <br />Exercise 4: Test the Simulated Device
  <br />Exercise 5: Retire the Device
+ 
   * [Lab 06: Automatically provision IoT devices securely and at scale with DPS](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_06-automatic-enrollment-of-devices-in-dps.html)
  <br />Exercise 1: Verify Lab Prerequisites
  <br />Exercise 2: Generate and Configure X.509 CA Certificates using OpenSSL
