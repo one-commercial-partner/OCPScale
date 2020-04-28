@@ -2,7 +2,7 @@
 
 The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-301 study group. It is designed to equip you for the Microsoft Azure Architect Design exam!
 
-**A NEW VERSION OF THIS EXAM, AZ-304, WILL BE AVAILABLE ON OR AROUND JUNE 29, 2020. You will be able to take AZ-301 until it retires on or around September 30, 2020.**
+>**A NEW VERSION OF THIS EXAM, AZ-304, WILL BE AVAILABLE ON OR AROUND JUNE 29, 2020. You will be able to take AZ-301 until it retires on or around September 30, 2020.**
 
 ## Study Group Schedule
 
