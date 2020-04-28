@@ -19,7 +19,7 @@ Click here to register:  [AZ-301: Microsoft Azure Architect Design](https://msus
 |Week 5|**Design a business continuity strategy (15-20%)**|April 22, 2020|[Link](04BusinessContinuity.md)|[Link](https://msuspartners.eventbuilder.com/AZ-301)|
 |Week 6|**Design for deployment, migration, and integration (10-15%)**|April 29, 2020|[Link](05DeployMigrateIntergrate.md) |[Link](https://msuspartners.eventbuilder.com/AZ-301) |
 |Week 7|**Design an infrastructure strategy (15-20%)**|May 06, 2020|[Link](06Infra,md) |[Link](https://msuspartners.eventbuilder.com/AZ-301) |
-|Week 8|**Final Review**|May 13, 2020| | [Link](https://msuspartners.eventbuilder.com/AZ-301)|
+|Week 8|**Final Review**|May 13, 2020|None!| [Link](https://msuspartners.eventbuilder.com/AZ-301)|
 
 ## What are study groups?
 
