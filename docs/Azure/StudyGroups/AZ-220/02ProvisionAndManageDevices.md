@@ -73,8 +73,8 @@
 ### Sign up for [Online Workshop Series: Build End-to-End IoT Solutions](https://aka.ms/IoT-online-workshop)
 * Device provisioning at scale - April 30th
 
-## Quick Reference: Device Provisioning Service (DPS) Key Concepts and Terminology
-* DPS Features: 
+## Quick Reference: Key Concepts and Terminology
+* Device Provisioning Service (DPS) Features: 
   * Secure attestation support (X.509 and TPM-based identities)
   * A configurable, updatable enrollment list containing the complete record of devices/groups of devices that may at some point register
   * Multi-hub support (including across subscriptions and regions), assigned by multiple allocation policies
@@ -83,6 +83,8 @@
   <br />- A variety of operating systems
   <br />- SDKs across multiple languages
   <br />- HTTPS, AMQP, and MQTT protocol support (Service SDK is HTTPS only)
+  
+  
 * *Service Operations Endpoint* – Used for managing DPS and the enrollment list
 * *Device Provisioning Endpoint* – Single address used for all provisioning, shared across all customers and DPS instances
 * *Linked IoT Hubs* – Target Azure IoT Hub instances for the DPS
