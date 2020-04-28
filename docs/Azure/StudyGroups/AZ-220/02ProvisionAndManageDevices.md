@@ -70,12 +70,49 @@
 ### Sign up for [Online Workshop Series: Build End-to-End IoT Solutions](https://aka.ms/IoT-online-workshop)
 * Device provisioning at scale - April 30th
 
+## Device Provisioning Service (DPS) Terminology and Key Concepts
+* Service Operations Endpoint – Used for managing DPS and the enrollment list
+* Device Provisioning Endpoint – Single address used for all provisioning, shared across all customers and DPS instances
+* Linked IoT Hubs – Target Azure IoT Hub instances for the DPS
+* Allocation Policy – As previously mentioned, the mapping of device to target Azure IoT Hub
+* Enrollment – The record of a device or group of devices that may register against the DPS
+* Registration – The record of a successful registration/provisioning of a device
+* Operations – The billing unit for DPS; one successfully completed request
+* Device Enrollment Concepts:
+<br />ID scope – Differentiates various DPS instances and tenants at the fixed, shared target endpoints
+<br />Registration ID – Uniquely identifies a device in the DPS instance
+<br />Device ID – Uniquely identifies a device in the associated IoT Hub instance
+<br />Attestation mechanism – the way a device proves its identity to the DPS
+<br />- X.509 Certificates
+<br />- TPM nonce challenge
+<br />- Symmetric key
+* Device Enrollment Types
+<br />Individual Enrollments - An Individual enrollment is an entry for a single device that may register. Individual enrollments may use either X.509 certificates or SAS tokens (from a physical or virtual TPM) as attestation mechanisms. 
+<br />Group Enrollments - An Enrollment group is an entry for a group of devices that share a common attestation mechanism of X.509 certificates, signed by the same signing certificate, which can be the root certificate or the intermediate certificate, used to produce device certificate on physical device.
+* Security Concepts: Certificates
+<br />X.509 Certificates – Digital identity based on private/public key pairs and a chain of trust
+<br />Issued by a certificate authority (CA)
+<br />Certificate rules for DPS
+<br />- Chain must be trusted
+<br />- Group or individual enrollment
+<br />- Individual overrides group
+* Security Concepts: Hardware
+<br />Hardware security module (HSM) – used for secure, hardware-based storage of device secrets
+<br />Trusted Platform Module (TPM) – a specification for storing keys or the interface for communicating with an HSM acting as a TPM
+<br />Two hardware keys for the TPM
+<br />- Endorsement key (EK) – unique identifier for the TPM; read-only, injected by the manufacturer
+<br />- Storage root key (SRK) – protects the TPM secrets; generated when a user takes ownership of the TPM
+
+
 ## Resources
 * [IoT Hub Documentation](https://docs.microsoft.com/en-us/azure/iot-hub/)
 * [IoT Technical Community](https://techcommunity.microsoft.com/t5/internet-of-things-iot/ct-p/IoT)
 * [“Building IoT Solutions with Azure” Developer Guide](https://discover.Microsoft.com/azure-iot-building-solutions-dev-guide)
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
+* [What is IoT Hub Device Provisioning Service?](https://docs.microsoft.com/en-us/azure/iot-dps/about-iot-dps)
+* [How to deprovision devices that were previously auto-provisioned](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-unprovision-devices)
+
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
