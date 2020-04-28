@@ -83,7 +83,6 @@
   <br />- A variety of operating systems
   <br />- SDKs across multiple languages
   <br />- HTTPS, AMQP, and MQTT protocol support (Service SDK is HTTPS only)
-
 * *Service Operations Endpoint* – Used for managing DPS and the enrollment list
 * *Device Provisioning Endpoint* – Single address used for all provisioning, shared across all customers and DPS instances
 * *Linked IoT Hubs* – Target Azure IoT Hub instances for the DPS
