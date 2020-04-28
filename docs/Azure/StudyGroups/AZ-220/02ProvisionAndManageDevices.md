@@ -32,14 +32,13 @@
 ## Homework:
 ### [AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer) 
 * Module 3: Device Provisioning at Scale 
- * [Lab 05: Individual Enrollment of a Device in DPS](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_05-individual-enrollment-of-device-in-dps.html)
+  * [Lab 05: Individual Enrollment of a Device in DPS](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_05-individual-enrollment-of-device-in-dps.html)
  <br />Exercise 1: Verify Lab Prerequisites
  <br />Exercise 2: Create new individual enrollment (Symmetric keys) in DPS
  <br />Exercise 3: Configure Simulated Device
  <br />Exercise 4: Test the Simulated Device
  <br />Exercise 5: Retire the Device
-
- * [Lab 06: Automatically provision IoT devices securely and at scale with DPS](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_06-automatic-enrollment-of-devices-in-dps.html)
+  * [Lab 06: Automatically provision IoT devices securely and at scale with DPS](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_06-automatic-enrollment-of-devices-in-dps.html)
  <br />Exercise 1: Verify Lab Prerequisites
  <br />Exercise 2: Generate and Configure X.509 CA Certificates using OpenSSL
  <br />Exercise 3: Create Group Enrollment (X.509 Certificate) in DPS
@@ -49,20 +48,20 @@
  <br />Exercise 7: Retire Group Enrollment
 
 * Module 8: Device Management
- * [Lab 15: Remotely monitor and control devices with Azure IoT Hub](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_15-remotely-monitor-and-control-devices.html)
+  * [Lab 15: Remotely monitor and control devices with Azure IoT Hub](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_15-remotely-monitor-and-control-devices.html)
  <br />Exercise 1: Verify Lab Prerequisites
  <br />Exercise 2: Write Code to Send and Receive Telemetry
  <br />Exercise 3: Create a Second App to Receive Telemetry
  <br />Exercise 4: Write Code to Invoke a Direct Method
  <br />Exercise 5: Write Code for Device Twins
 
- * [Lab 16: Automate IoT Device Management with Azure IoT Hub](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_16-automatic-device-management.html)
+  * [Lab 16: Automate IoT Device Management with Azure IoT Hub](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_16-automatic-device-management.html)
  <br />Exercise 1: Verify Lab Prerequisites
  <br />Exercise 2: Write code to simulate device that implements firmware update
  <br />Exercise 3: Test firmware update on a single device
 
 * Module 11: Build with IoT Central
- * [Lab 20: Build with IoT Central](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_20-build-with-iot-central.html)
+  * [Lab 20: Build with IoT Central](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_20-build-with-iot-central.html)
  <br />Exercise 1: Create and Configure Azure IoT Central
  <br />Exercise 3: Monitor a Simulated Device
  <br />Exercise 4: Create a free Azure Maps account
