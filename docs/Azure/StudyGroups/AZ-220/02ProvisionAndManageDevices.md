@@ -74,17 +74,15 @@
 * Device provisioning at scale - April 30th
 
 ## Quick Reference: Key Concepts and Terminology
-Device Provisioning Service (DPS) Features: 
-* Secure attestation support (X.509 and TPM-based identities)
-* A configurable, updatable enrollment list containing the complete record of devices/groups of devices that may at some point register
-* Multi-hub support (including across subscriptions and regions), assigned by multiple allocation policies
-* Monitoring and diagnostics logging to make sure everything is working properly
-* Cross-platform support
-  * A variety of operating systems
-  * SDKs across multiple languages
-  * HTTPS, AMQP, and MQTT protocol support (Service SDK is HTTPS only)
-  
-General DPS Terminology:
+* Device Provisioning Service (DPS) Features: 
+  * Secure attestation support (X.509 and TPM-based identities)
+  * A configurable, updatable enrollment list containing the complete record of devices/groups of devices that may at some point register
+  * Multi-hub support (including across subscriptions and regions), assigned by multiple allocation policies
+  * Monitoring and diagnostics logging to make sure everything is working properly
+  * Cross-platform support
+  <br />- A variety of operating systems
+  <br />- SDKs across multiple languages
+  <br />- HTTPS, AMQP, and MQTT protocol support (Service SDK is HTTPS only)
 * *Service Operations Endpoint* – Used for managing DPS and the enrollment list
 * *Device Provisioning Endpoint* – Single address used for all provisioning, shared across all customers and DPS instances
 * *Linked IoT Hubs* – Target Azure IoT Hub instances for the DPS
@@ -92,32 +90,27 @@ General DPS Terminology:
 * *Enrollment* – The record of a device or group of devices that may register against the DPS
 * *Registration* – The record of a successful registration/provisioning of a device
 * *Operations* – The billing unit for DPS; one successfully completed request
-
-Device Enrollment Concepts:
 * *ID Scope* – Differentiates various DPS instances and tenants at the fixed, shared target endpoints
 * *Registration ID* – Uniquely identifies a device in the DPS instance
 * *Device ID* – Uniquely identifies a device in the associated IoT Hub instance
 * *Attestation mechanism* – the way a device proves its identity to the DPS
-  * X.509 Certificates
+  * *X.509 Certificates* – Digital identity based on private/public key pairs and a chain of trust
+  <br />Issued by a certificate authority (CA)
+  <br />Certificate rules:
+  <br />- Chain must be trusted
+  <br />- Group or individual enrollment
+  <br />- Individual overrides group
   * TPM nonce challenge
+  <br />*Trusted Platform Module (TPM)* – a specification for storing keys or the interface for communicating with an HSM acting as a TPM
+  <br />Two hardware keys for the TPM
+  <br />- *Endorsement key (EK)* – unique identifier for the TPM; read-only, injected by the manufacturer
+  <br />- *Storage root key (SRK)* – protects the TPM secrets; generated when a user takes ownership of the TPM
   * Symmetric key
-
-Device Enrollment Types:
 * *Individual Enrollments* - An Individual enrollment is an entry for a single device that may register. Individual enrollments may use either X.509 certificates or SAS tokens (from a physical or virtual TPM) as attestation mechanisms. 
 * *Group Enrollments* - An Enrollment group is an entry for a group of devices that share a common attestation mechanism of X.509 certificates, signed by the same signing certificate, which can be the root certificate or the intermediate certificate, used to produce device certificate on physical device.
-
-Security Concepts: Certificates
-* *X.509 Certificates* – Digital identity based on private/public key pairs and a chain of trust
-* Issued by a certificate authority (CA)
-* Certificate rules for DPS
-  * Chain must be trusted
-  * Group or individual enrollment
-  * Individual overrides group
-
-Security Concepts: Hardware
 * *Hardware security module (HSM)* – used for secure, hardware-based storage of device secrets
 * *Trusted Platform Module (TPM)* – a specification for storing keys or the interface for communicating with an HSM acting as a TPM
-* Two hardware keys for the TPM
+  <br />Two hardware keys for the TPM
   * *Endorsement key (EK)* – unique identifier for the TPM; read-only, injected by the manufacturer
   * *Storage root key (SRK)* – protects the TPM secrets; generated when a user takes ownership of the TPM
 
