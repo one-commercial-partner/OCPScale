@@ -75,11 +75,14 @@
 
 ## Quick Reference: Key Concepts and Terminology
 * Device Provisioning Service (DPS) Features: 
-  * Secure attestation support (X.509 and TPM-based identities)
-  * A configurable, updatable enrollment list containing the complete record of devices/groups of devices that may at some point register
-  * Multi-hub support (including across subscriptions and regions), assigned by multiple allocation policies
-  * Monitoring and diagnostics logging to make sure everything is working properly
-  * Cross-platform support
+  * **Secure attestation support** for X.509 and TPM-based identities
+  * A configurable, updatable **enrollment list** containing the complete record of devices/groups of devices that may at some point register
+  * **Multiple allocation policies** to control how DPS assigns devices to IoT hubs in support of your scenarios: Lowest latency, evenly weighted distribution (default), and static configuration via the enrollment list
+  * **Monitoring and diagnostics logging** to make sure everything is working properly
+  * **Multi-hub support** allows DPS to assign devices to more than one IoT hub (including across subscriptions and regions), assigned by multiple allocation policies
+  * **Cross-region support** allows DPS to assign devices to IoT hubs in other regions
+  * **Encryption for data at rest** allows data in DPS to be encrypted and decrypted transparently using 256-bit AES encryption
+  * **Cross-platform support**
   <br />- A variety of operating systems
   <br />- SDKs across multiple languages
   <br />- HTTPS, AMQP, and MQTT protocol support (Service SDK is HTTPS only)
@@ -104,13 +107,9 @@
   <br />- *Endorsement key (EK)* – unique identifier for the TPM; read-only, injected by the manufacturer
   <br />- *Storage root key (SRK)* – protects the TPM secrets; generated when a user takes ownership of the TPM
   * Symmetric key
+* *Hardware security module (HSM)* – used for secure, hardware-based storage of device secrets
 * *Individual Enrollments* - An Individual enrollment is an entry for a single device that may register. Individual enrollments may use either X.509 certificates or SAS tokens (from a physical or virtual TPM) as attestation mechanisms. 
 * *Group Enrollments* - An Enrollment group is an entry for a group of devices that share a common attestation mechanism of X.509 certificates, signed by the same signing certificate, which can be the root certificate or the intermediate certificate, used to produce device certificate on physical device.
-* *Hardware security module (HSM)* – used for secure, hardware-based storage of device secrets
-* *Trusted Platform Module (TPM)* – a specification for storing keys or the interface for communicating with an HSM acting as a TPM
-  <br />Two hardware keys for the TPM
-  * *Endorsement key (EK)* – unique identifier for the TPM; read-only, injected by the manufacturer
-  * *Storage root key (SRK)* – protects the TPM secrets; generated when a user takes ownership of the TPM
 
 ## Resources
 * [IoT Hub Documentation](https://docs.microsoft.com/en-us/azure/iot-hub/)
