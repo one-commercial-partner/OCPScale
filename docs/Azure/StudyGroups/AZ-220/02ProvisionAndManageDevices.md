@@ -79,30 +79,29 @@
 * Registration – The record of a successful registration/provisioning of a device
 * Operations – The billing unit for DPS; one successfully completed request
 * Device Enrollment Concepts:
-<br />ID scope – Differentiates various DPS instances and tenants at the fixed, shared target endpoints
-<br />Registration ID – Uniquely identifies a device in the DPS instance
-<br />Device ID – Uniquely identifies a device in the associated IoT Hub instance
-<br />Attestation mechanism – the way a device proves its identity to the DPS
-<br />- X.509 Certificates
-<br />- TPM nonce challenge
-<br />- Symmetric key
+  * ID scope – Differentiates various DPS instances and tenants at the fixed, shared target endpoints
+  * Registration ID – Uniquely identifies a device in the DPS instance
+  * Device ID – Uniquely identifies a device in the associated IoT Hub instance
+  * Attestation mechanism – the way a device proves its identity to the DPS
+  <br />- X.509 Certificates
+  <br />- TPM nonce challenge
+  <br />- Symmetric key
 * Device Enrollment Types
-<br />Individual Enrollments - An Individual enrollment is an entry for a single device that may register. Individual enrollments may use either X.509 certificates or SAS tokens (from a physical or virtual TPM) as attestation mechanisms. 
-<br />Group Enrollments - An Enrollment group is an entry for a group of devices that share a common attestation mechanism of X.509 certificates, signed by the same signing certificate, which can be the root certificate or the intermediate certificate, used to produce device certificate on physical device.
+  * Individual Enrollments - An Individual enrollment is an entry for a single device that may register. Individual enrollments may use either X.509 certificates or SAS tokens (from a physical or virtual TPM) as attestation mechanisms. 
+  * Group Enrollments - An Enrollment group is an entry for a group of devices that share a common attestation mechanism of X.509 certificates, signed by the same signing certificate, which can be the root certificate or the intermediate certificate, used to produce device certificate on physical device.
 * Security Concepts: Certificates
-<br />X.509 Certificates – Digital identity based on private/public key pairs and a chain of trust
-<br />Issued by a certificate authority (CA)
-<br />Certificate rules for DPS
-<br />- Chain must be trusted
-<br />- Group or individual enrollment
-<br />- Individual overrides group
+  * X.509 Certificates – Digital identity based on private/public key pairs and a chain of trust
+  * Issued by a certificate authority (CA)
+  * Certificate rules for DPS
+  <br />- Chain must be trusted
+  <br />- Group or individual enrollment
+  <br />- Individual overrides group
 * Security Concepts: Hardware
-<br />Hardware security module (HSM) – used for secure, hardware-based storage of device secrets
-<br />Trusted Platform Module (TPM) – a specification for storing keys or the interface for communicating with an HSM acting as a TPM
-<br />Two hardware keys for the TPM
-<br />- Endorsement key (EK) – unique identifier for the TPM; read-only, injected by the manufacturer
-<br />- Storage root key (SRK) – protects the TPM secrets; generated when a user takes ownership of the TPM
-
+  * Hardware security module (HSM) – used for secure, hardware-based storage of device secrets
+  * Trusted Platform Module (TPM) – a specification for storing keys or the interface for communicating with an HSM acting as a TPM
+  * Two hardware keys for the TPM
+  <br />- Endorsement key (EK) – unique identifier for the TPM; read-only, injected by the manufacturer
+  <br />- Storage root key (SRK) – protects the TPM secrets; generated when a user takes ownership of the TPM
 
 ## Resources
 * [IoT Hub Documentation](https://docs.microsoft.com/en-us/azure/iot-hub/)
