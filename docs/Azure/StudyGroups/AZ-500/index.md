@@ -14,8 +14,8 @@ Click here to register:  [AZ-500: Microsoft Azure Security Technologies](https:/
 |Week 2|**Manage identity and access (20-25%)**|April 01, 2020  |[Link](01-Manageidentityandaccess.md)|[Link](https://msuspartners.eventbuilder.com/AZ500StudyGroup)|
 |Week 3|**Implement platform protection (35-40%)**|April 08, 2020|[Link](02-Implementplatformprotection.md)|[Link](https://msuspartners.eventbuilder.com/AZ500StudyGroup)
 |Week 4|**Manage security operations (15-20%)**|April 15, 2020|[Link](03-ManageSecurityOperations.md) |[Link](https://msuspartners.eventbuilder.com/AZ500StudyGroup)|
-|Week 5|**Secure data and applications (30-35%)**|April 22, 2020|[Link](04-Securedataandapplications.md)| |
-|Week 6|**Final Review**|April 29, 2020| | |
+|Week 5|**Secure data and applications (30-35%)**|April 22, 2020|[Link](04-Securedataandapplications.md)| [Link](https://msuspartners.eventbuilder.com/AZ500StudyGroup)|
+|Week 6|**Final Review**|April 29, 2020|None! |[Link](https://msuspartners.eventbuilder.com/AZ500StudyGroup) |
 
 ## What are study groups?
 
