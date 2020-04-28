@@ -118,7 +118,17 @@
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
 * [What is IoT Hub Device Provisioning Service?](https://docs.microsoft.com/en-us/azure/iot-dps/about-iot-dps)
+* [IoT Hub Device Provisioning Service concepts](https://docs.microsoft.com/en-us/azure/iot-dps/concepts-service)
+* Setup IoT Hub Device Provisioning Service
+  * [With the Azure Portal](https://docs.microsoft.com/en-us/azure/iot-dps/quick-setup-auto-provision)
+  * [With Azure Cloud Shell/Azure CLI](https://docs.microsoft.com/en-us/azure/iot-dps/quick-setup-auto-provision-cli)
+  * [With an Azure Resource Manager template](https://docs.microsoft.com/en-us/azure/iot-dps/quick-setup-auto-provision-rm)
+* [How to provision a single simulated device](https://docs.microsoft.com/en-us/azure/iot-dps/quick-create-simulated-device-symm-key)
+* [How to provision for multitenancy](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-provision-multitenant)
 * [How to deprovision devices that were previously auto-provisioned](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-unprovision-devices)
+* [How to roll X.509 device certificates](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-roll-certificates)
+* [How to reprovision devices](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-reprovision)
+* [Custom allocation policies with Azure Functions](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-use-custom-allocation-policies)
 
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
