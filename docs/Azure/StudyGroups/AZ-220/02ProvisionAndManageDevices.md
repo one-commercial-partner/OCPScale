@@ -140,6 +140,5 @@
 * [Azure IoT Central](https://azure.microsoft.com/en-us/services/iot-central/)
 * [Azure IoT Central SaaS Platform](https://apps.azureiotcentral.com/)
 
-
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
