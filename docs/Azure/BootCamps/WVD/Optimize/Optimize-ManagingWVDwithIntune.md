@@ -20,12 +20,11 @@ Intune provides mobile device management (MDM) and mobile app management (MAM) f
 4. Under **Name:** enter **Hybrid Azure AD Join** and click **OK**.
 5. Select the **Hybrid Azure AD Join** GPO, right-click and click **Edit**.
 6. Select and expand **Computer Configuration**, then **Policies**, then **Administrative Templates**, then **Windows Components**, then select  **MDM**.
-7. Right-click  the **Enable automatic MDM ...** setting and select **Edit**.
+7. Right-click the **Enable automatic MDM ...** setting and select **Edit**.
 
     ![MDMGPO](../attachments/MDMGPO.PNG)
 
 8. Click the radio button for **Enabled** and then click **OK**.
-
 9. Browse up the tree in the Group Policy Management Editor and select  **Device Registration**.
 10. Select the **Register domain joined commputers as devices** setting and click **Edit policy setting**.
 11. Click the radio button for **Enabled** and then click **OK**.
