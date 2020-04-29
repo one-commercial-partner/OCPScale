@@ -130,11 +130,16 @@
 * [How to roll X.509 device certificates](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-roll-certificates)
 * [How to reprovision devices](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-reprovision)
 * [Custom allocation policies with Azure Functions](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-use-custom-allocation-policies)
-* [Azure IoT Hub Device Provisioning at Scale[(https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-auto-device-config)
+* [Azure IoT Hub Device Provisioning at Scale](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-auto-device-config)
 * [Use Azure IoT Hub Device Provisioning Service auto-provisioning to register the MXChip IoT DevKit with IoT Hub](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-connect-mxchip-iot-devkit)
 * [Understand and use device twins in IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins)
 * [Overview of Device Management with IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-overview)
 * [Understand the Identity Registry in your IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-identity-registry)
+* [Invoke a direct method on a device](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-direct-methods)
+* [Schedule jobs on multiple devices](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-jobs)
+* [Azure IoT Central](https://azure.microsoft.com/en-us/services/iot-central/)
+* [Azure IoT Central SaaS Platform](https://apps.azureiotcentral.com/)
+
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
