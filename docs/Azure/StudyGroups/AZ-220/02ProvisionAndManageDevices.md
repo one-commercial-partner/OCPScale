@@ -118,8 +118,27 @@
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
 * [What is IoT Hub Device Provisioning Service?](https://docs.microsoft.com/en-us/azure/iot-dps/about-iot-dps)
+* [IoT Hub Device Provisioning Service concepts](https://docs.microsoft.com/en-us/azure/iot-dps/concepts-service)
+* Setup IoT Hub Device Provisioning Service
+  * [With the Azure Portal](https://docs.microsoft.com/en-us/azure/iot-dps/quick-setup-auto-provision)
+  * [With Azure Cloud Shell/Azure CLI](https://docs.microsoft.com/en-us/azure/iot-dps/quick-setup-auto-provision-cli)
+  * [With an Azure Resource Manager template](https://docs.microsoft.com/en-us/azure/iot-dps/quick-setup-auto-provision-rm)
+* [How to provision a single simulated device](https://docs.microsoft.com/en-us/azure/iot-dps/quick-create-simulated-device-symm-key)
+* [How to provision legacy devices using Symmetric key attestation](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-legacy-device-symm-key)
+* [How to provision for multitenancy](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-provision-multitenant)
 * [How to deprovision devices that were previously auto-provisioned](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-unprovision-devices)
-
+* [How to roll X.509 device certificates](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-roll-certificates)
+* [How to reprovision devices](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-reprovision)
+* [Custom allocation policies with Azure Functions](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-use-custom-allocation-policies)
+* [Azure IoT Hub Device Provisioning at Scale](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-auto-device-config)
+* [Use Azure IoT Hub Device Provisioning Service auto-provisioning to register the MXChip IoT DevKit with IoT Hub](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-connect-mxchip-iot-devkit)
+* [Understand and use device twins in IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins)
+* [Overview of Device Management with IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-overview)
+* [Understand the Identity Registry in your IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-identity-registry)
+* [Invoke a direct method on a device](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-direct-methods)
+* [Schedule jobs on multiple devices](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-jobs)
+* [Azure IoT Central](https://azure.microsoft.com/en-us/services/iot-central/)
+* [Azure IoT Central SaaS Platform](https://apps.azureiotcentral.com/)
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
