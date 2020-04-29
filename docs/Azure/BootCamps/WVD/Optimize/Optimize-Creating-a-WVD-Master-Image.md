@@ -113,5 +113,3 @@ In this exercise you will learn how to install Office 365 ProPlus, OneDrive, and
     ![RegEdits](../attachments/RegEdits.PNG)
 
 8. **Restart** the virtual machine.
-
-
