@@ -29,7 +29,7 @@ The MS Learn username of the winners will be poste here. If you see your user na
 
 ### April 2020 Challenge
 
-Winners - Thank you to the over 60 people who have participated in our April Challenge! Cumulatively you have earned almost 1 million points, thats incredible! 
+Winners - Thank you to the over 60 people who have participated in our April Challenge! Cumulatively you have earned almost 1 million points, that's incredible! 
 
 We are pleased to announce our 3 winners. If you see your learner ID below please email us at [usocpcsc@microsoft.com](mailto:usocpcsc@microsoft.com) to claim your prize. 
 
