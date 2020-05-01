@@ -20,8 +20,7 @@ If you have any issues/questions, please email us [usocpcsc@microsoft.com](mailt
 
 | Event | Sign Up Link | Sign Up Deadline | Start Date | End Date | Winners Announced | Leaderboard |
 | --- | --- | --- | --- | --- | --- | --- | 
-| April 2020 Challenge | [Join](./CloudSkillsChallenge/setup) | March 31 2020 | April 1 2020 | April 30 2020 | May 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/5f5faeea-c85a-4d6b-b35a-caaef84752e7) |
-| May 2020 Challenge | [Sign Up](https://msuspartners.eventbuilder.com/event/15264) | April 30 2020 | May 1 2020 | May 31 2020 | June 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/d114aff0-4db6-46b4-b8ee-ae965b35bf9f) |
+| May 2020 Challenge | [Join](./CloudSkillsChallenge/setup) | April 30 2020 | May 1 2020 | May 31 2020 | June 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/d114aff0-4db6-46b4-b8ee-ae965b35bf9f) |
 | June 2020 Challenge | [Sign Up](https://msuspartners.eventbuilder.com/event/15263) | May 31 2020 | June 1 2020 | June 30 2020 | July 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/8efad682-c87e-412d-9ff0-f5770241f282) |
 
 ## Challenge Winners
@@ -30,11 +29,18 @@ The MS Learn username of the winners will be poste here. If you see your user na
 
 ### April 2020 Challenge
 
-Challenge ongoing, check out the [leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/5f5faeea-c85a-4d6b-b35a-caaef84752e7) or [join](./CloudSkillsChallenge/setup) the challenge in progress.  
+Winners - Thank you to the over 60 people who have participated in our April Challenge! Cumulatively you have earned almost 1 million points, thats incredible! 
+
+We are pleased to announce our 3 winners. If you see your learner ID below please email us at [usocpcsc@microsoft.com](mailto:usocpcsc@microsoft.com) to claim your prize. 
+
+- bryanhaslip
+- sgriegoliet
+- Hetal Patel
 
 ### May 2020 Challenge
 
-[Sign Up](https://msuspartners.eventbuilder.com/event/15264) here. 
+Challenge ongoing, check out the [leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/d114aff0-4db6-46b4-b8ee-ae965b35bf9f) or [join](./CloudSkillsChallenge/setup) the challenge in progress.  
+
 
 ### June 2020 Challenge
 
