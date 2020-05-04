@@ -20,12 +20,11 @@ Intune provides mobile device management (MDM) and mobile app management (MAM) f
 4. Under **Name:** enter **Hybrid Azure AD Join** and click **OK**.
 5. Select the **Hybrid Azure AD Join** GPO, right-click and click **Edit**.
 6. Select and expand **Computer Configuration**, then **Policies**, then **Administrative Templates**, then **Windows Components**, then select  **MDM**.
-7. Right-click  the **Enable automatic MDM ...** setting and select **Edit**.
+7. Right-click the **Enable automatic MDM ...** setting and select **Edit**.
 
     ![MDMGPO](../attachments/MDMGPO.PNG)
 
 8. Click the radio button for **Enabled** and then click **OK**.
-
 9. Browse up the tree in the Group Policy Management Editor and select  **Device Registration**.
 10. Select the **Register domain joined commputers as devices** setting and click **Edit policy setting**.
 11. Click the radio button for **Enabled** and then click **OK**.
@@ -81,27 +80,24 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink
 1. Logon to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as `AzureADAdmin@<yourAzureADdomain..onmicrosoft.com`
 
 2. select **Devices**.  Under **Device enrollment** select **Enroll devices** and then select **Automatic Enrollment**.
-2. Select **Some** from the MDM user scope to use MDM auto-enrollment.
-3. Under Groups find **Windows Virtual Desktops** and click **Select**.
-4. Under MAM User scope click on **SOme**.
-5. Find **Windows Virtual Desktops** and click **Select**.
-6. Use the default values for the remaining configuration values and choose **Save**.
+3. Select **Some** from the MDM user scope to use MDM auto-enrollment.
+4. Under Groups find **Windows Virtual Desktops** and click **Select**.
+5. Under MAM User scope click on **SOme**.
+6. Find **Windows Virtual Desktops** and click **Select**.
+7. Use the default values for the remaining configuration values and choose **Save**.
 
 ## Exercise 5 - Enroll your Windows 10 device
 
 1. From your desktop, open the Remote Desktop client and select **PersonalPool**.
 2. When prompted enter the credentials for Bob Jones.
 
-
 ### Return to [Optimize Phase Labs](optimize.md)
-
-
 
 ## Exercise 3 - Create a group
 
 You will create a group that will be used manage objects. To create a group:
 
-1. Once you've opened the Microsoft Endpoint Manager, select **Groups **> **+New group**.
+1. Once you've opened the Microsoft Endpoint Manager, select **Groups**> **+New group**.
 2. In the Group type dropdown box, select **Security**.
 3. In the Group name field, enter the name **Windows Virtual Desktops** for the new group.
 4. Enter **WVD objects** as the Group description.
