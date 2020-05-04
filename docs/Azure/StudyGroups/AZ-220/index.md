@@ -11,11 +11,11 @@ Click here to register:  [AZ-220: Microsoft Azure IoT Developer Study Group](htt
 |Session #|Topic|Date|Homework|Recording|
 | - | - | - | - | - |
 |1|**AZ-220: Kickoff + Implement the IoT solution infrastructure (15-20%)**|April 22, 2020|[Link](01IoTSolutionInfrastructure.md)| [Link](https://msuspartners.eventbuilder.com/AZ220StudyGroup)|
-|2|**AZ-220: Provision and manage devices (20-25%)**|April 29, 2020|[Link](02ProvisionAndManageDevices.md)| |
-|3|**AZ-220: Implement Edge (15-20%)**|May 6, 2020| | |
-|4|**AZ-220: Process and manage data (15-20%)**|May 13, 2020| | |
-|5|**AZ-220: Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 20, 2020| | |
-|6|**AZ-220: Implement security (15-20%) + Final Review**|May 27, 2020| | |
+|2|**AZ-220: Provision and manage devices (20-25%)**|May 6, 2020|[Link](02ProvisionAndManageDevices.md)| |
+|3|**AZ-220: Implement Edge (15-20%)**|May 13, 2020| | |
+|4|**AZ-220: Process and manage data (15-20%)**|May 20, 2020| | |
+|5|**AZ-220: Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 27, 2020| | |
+|6|**AZ-220: Implement security (15-20%) + Final Review**|June 3, 2020| | |
 
 ## What are study groups?
 
@@ -57,6 +57,7 @@ Though study group slide decks include official curriculum content and cannot be
 From [Online Workshop Series: Building End-to-End IoT Solutions](https://aka.ms/IoT-online-workshop) - Make sure you register and watch the series live or on-demand.
 * [Transform your business with IoT - April 16th](part-1-transform-business-iot-external.pdf)
 * [Devices and device communication - April 23rd](part-2-device-and-device-comm.pdf)
+* [Device provisioning at scale - April 30th](part-3-device-provisioning-scale-april.pdf)
 
 ## Additional Partner Certification Study Groups
 
