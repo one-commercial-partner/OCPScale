@@ -129,6 +129,7 @@
 * [How to deprovision devices that were previously auto-provisioned](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-unprovision-devices)
 * [How to roll X.509 device certificates](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-roll-certificates)
 * [How to reprovision devices](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-reprovision)
+* [How to decommission (disenroll) devices](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-revoke-device-access-portal)
 * [Custom allocation policies with Azure Functions](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-use-custom-allocation-policies)
 * [Azure IoT Hub Device Provisioning at Scale](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-auto-device-config)
 * [Use Azure IoT Hub Device Provisioning Service auto-provisioning to register the MXChip IoT DevKit with IoT Hub](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-connect-mxchip-iot-devkit)
