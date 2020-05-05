@@ -1,4 +1,4 @@
-# AZ-301: Microsoft Azure IoT Developer
+# AZ-220: Microsoft Azure IoT Developer
 
 The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-220 study group. It is designed to help you prepare for the Microsoft Azure IoT Developer exam!
 
