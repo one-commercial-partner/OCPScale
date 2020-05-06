@@ -127,6 +127,7 @@
 * [How to provision legacy devices using Symmetric key attestation](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-legacy-device-symm-key)
 * [How to provision for multitenancy](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-provision-multitenant)
 * [How to deprovision devices that were previously auto-provisioned](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-unprovision-devices)
+* [How to disenroll a device from Azure IoT Hub Device Provisioning Service](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-revoke-device-access-portal)
 * [How to roll X.509 device certificates](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-roll-certificates)
 * [How to reprovision devices](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-reprovision)
 * [Custom allocation policies with Azure Functions](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-use-custom-allocation-policies)
