@@ -10,12 +10,12 @@ Click here to register:  [AZ-220: Microsoft Azure IoT Developer Study Group](htt
 
 |Session #|Topic|Date|Homework|Recording|
 | - | - | - | - | - |
-|1|**AZ-220: Kickoff + Implement the IoT solution infrastructure (15-20%)**|April 22, 2020|[Link](01IoTSolutionInfrastructure.md)| [Link](https://msuspartners.eventbuilder.com/AZ220StudyGroup)|
-|2|**AZ-220: Provision and manage devices (20-25%)**|May 6, 2020|[Link](02ProvisionAndManageDevices.md)| |
-|3|**AZ-220: Implement Edge (15-20%)**|May 13, 2020| | |
-|4|**AZ-220: Process and manage data (15-20%)**|May 20, 2020| | |
-|5|**AZ-220: Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 27, 2020| | |
-|6|**AZ-220: Implement security (15-20%) + Final Review**|June 3, 2020| | |
+|1|**AZ-220 Kickoff + Implement the IoT solution infrastructure (15-20%)**|April 22, 2020|[Link](01IoTSolutionInfrastructure.md)| [Link](https://msuspartners.eventbuilder.com/event/18397)|
+|2|**Provision and manage devices (20-25%)**|May 6, 2020|[Link](02ProvisionAndManageDevices.md)| [](https://msuspartners.eventbuilder.com/event/21619)|
+|3|**Implement Edge (15-20%)**|May 13, 2020| | |
+|4|**Process and manage data (15-20%)**|May 20, 2020| | |
+|5|**Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 27, 2020| | |
+|6|**Implement security (15-20%) + Final Review**|June 3, 2020| | |
 
 ## What are study groups?
 
