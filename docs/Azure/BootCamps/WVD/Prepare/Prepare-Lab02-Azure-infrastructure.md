@@ -15,29 +15,32 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
     az group create --name WVDLab-Infrastructure --location eastus
     ```
 
-5. Create a network security group:
-
-    ```PowerShell
-    az network nsg create --name AD-NSG --resource-group WVDLab-Infrastructure --location eastus
-    ```
-
-6. Create a network security group rule for port 3389.
-
-    ```PowerShell
-    az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group WVDLab-Infrastructure --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389
-    ```
-
-7. Create a virtual network.
+5. Create a virtual network.
 
     ```PowerShell
     az network vnet create --name AD-VNet --resource-group WVDLab-Infrastructure --address-prefixes 10.10.0.0/16 --location eastus
     ```
 
-8. Create a subnet:
+6. Create a AD subnet:
 
     ```PowerShell
-    az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group WVDLab-Infrastructure --vnet-name AD-VNet --network-security-group AD-NSG
+    az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group WVDLab-Infrastructure --vnet-name AD-VNet 
     ```
+7. Create a Azure Bastion subnet:
+
+   ```PowerShell
+   az network vnet subnet create --address-prefix 10.10.11.0/24 --name AzureBastionSubnet --resource-group WVDLab-Infrastructure --vnet-name AD-VNet
+   ```
+8. Create a Azure Bastion Public IP.
+
+    ```PowerShell
+   az network public-ip create -g WVDLab-Infrastructure -n AzBastionIP
+   ```
+9. Create the Azure Bastion Service.
+
+    ```PowerShell
+    az network bastion create --name AzBastionWVD --public-ip-address AzBastionIP --resource-group WVDLab-Infrastructure --vnet-name AD-VNet --location eastus
+
 
 9. Create your virtual machine:.
 
