@@ -10,7 +10,7 @@ The following labs are going through final QA testing and will be available shor
 
 ### [Create an Azure Files Share for FSLogix](Optimize-Lab14-Create-an-Azure-Files-Share-for-FSLogix.md)
 
-### [Managing WVD with Intune](Optimize-Lab15-ManagingWVDwithIntune.md)
+### [Managing WVD with Intune](Optimize-ManagingWVDwithIntune.md)
 
 ### [Install Management UI](Optimize-Lab16-Install-Management-UI.md)
 

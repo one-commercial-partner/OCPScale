@@ -14,28 +14,27 @@ In this lab your will validate the personal and Pooled Windows Virtual Desktop p
     * Username: `Bob.Jones@yourdomain.onmicrosoft.com`
     * Password: `Complex.Password`
 5. Click **Yes** on the next screen and the **Done** on the following screen.
-6. Double-click on the icon for Personal Pool.
+6. Double-click on the icon for Personal Pool icon.
 7. When prompted enter the credentials for Bob Jones:
     * Username: `Bob.Jones@<yourADdomain>`
     * Password: `Complex.Password`
 8. Once connected, change the desktop background to a different picture.
-9. Disconnect from the session.
-
->Open a command prompt and take note of the IP address for a future exercise.
+9. Open a command prompt and take note of the IP address for a future exercise.
+10. Disconnect from the session.
 
 ## Exercise 2 - Connect with the Windows Virtual Desktop web client
 
-1. In a INPrivate or InCognito browser, navigate to the [Windows Virtual Desktop web client](https://rdweb.wvd.microsoft.com/webclient).
-2. When prompted enter the credentials for Julia Williams:
+1. In a InPrivate or InCognito browser, navigate to the [Windows Virtual Desktop web client](https://rdweb.wvd.microsoft.com/webclient).
+2. When prompted enter the credentials for Julia Williams by clicking on **+ Use another account**:
     * Username: `Julia.Williams@<yourAzureADdomain>.onmicrosoft.com`
     * Password: `Complex.Password`
     > **NOTE:** These credentials are to logon and authenticate to the Windows Virtual Desktop Service.
 3. Click on the icon for PooledPool.
 4. Click **Allow** on the **Access local resources** window.
 5. When prompted enter the following credentials:
-    * Username: adadmin@`yourADdomain`
+    * Username: `yourADdomain`\ Julia.Williams
     * Password: `Complex.Password`
-    > **NOTE:** These credentials are to logon to a computer in the pool.  You could always grant `Julia.Williams@<yourAzureADdomain>.onmicrosoft.com` the right to logon locally.
+    > **NOTE:** These credentials are to logon to a computer in the pool.  
 6. Once connected, change the desktop background to a different picture.
 7. Disconnect from the session.
 

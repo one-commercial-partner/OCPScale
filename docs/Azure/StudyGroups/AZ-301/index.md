@@ -2,7 +2,7 @@
 
 The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-301 study group. It is designed to equip you for the Microsoft Azure Architect Design exam!
 
-**A NEW VERSION OF THIS EXAM, AZ-304, WILL BE AVAILABLE ON OR AROUND APRIL 28, 2020. You will be able to take this exam until it retires on or around July 28, 2020.**
+>**A NEW VERSION OF THIS EXAM, AZ-304, WILL BE AVAILABLE ON OR AROUND JUNE 29, 2020. You will be able to take AZ-301 until it retires on or around September 30, 2020.**
 
 ## Study Group Schedule
 
@@ -17,9 +17,9 @@ Click here to register:  [AZ-301: Microsoft Azure Architect Design](https://msus
 |Week 3|**Design for identity and security (20-25%)**|April 08, 2020|[Link](02DesignForIdentityandSecurity)|[Link](https://msuspartners.eventbuilder.com/AZ-301)|
 |Week 4|**Design a data platform solution (15-20%)**|April 15, 2020| [Link](03DataPlatform)|[Link](https://msuspartners.eventbuilder.com/AZ-301)|
 |Week 5|**Design a business continuity strategy (15-20%)**|April 22, 2020|[Link](04BusinessContinuity.md)|[Link](https://msuspartners.eventbuilder.com/AZ-301)|
-|Week 6|**Design for deployment, migration, and integration (10-15%)**|April 29, 2020|[Link](05DeployMigrateIntergrate.md) | |
-|Week 7|**Design an infrastructure strategy (15-20%)**|May 06, 2020| | |
-|Week 8|**Final Review**|May 13, 2020| | |
+|Week 6|**Design for deployment, migration, and integration (10-15%)**|April 29, 2020|[Link](05DeployMigrateIntergrate.md) |[Link](https://msuspartners.eventbuilder.com/AZ-301) |
+|Week 7|**Design an infrastructure strategy (15-20%)**|May 06, 2020|[Link](06Infra.md) |[Link](https://msuspartners.eventbuilder.com/AZ-301) |
+|Week 8|**Final Review**|May 13, 2020|None!| [Link](https://msuspartners.eventbuilder.com/AZ-301)|
 
 ## What are study groups?
 

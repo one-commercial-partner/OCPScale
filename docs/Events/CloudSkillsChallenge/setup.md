@@ -27,7 +27,9 @@ If you have any issues/questions, please email us [usocpcsc@microsoft.com](mailt
 
         ![MS Learn Username](./img/mslearn-username.png)
 
-1. Enter your MS Learn username on the **April challange onboarding** page [here](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/5f5faeea-c85a-4d6b-b35a-caaef84752e7/register) and then press the add button. 
+1. Enter your MS Learn username on the **challenge onboarding** page and then press the add button. 
+    1. [Challenge Onboarding for May's Challenge](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/d114aff0-4db6-46b4-b8ee-ae965b35bf9f/register)
+    1. [Challenge Onboarding for June's Challenge](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/8efad682-c87e-412d-9ff0-f5770241f282/register)
 
     ![CSC Register](./img/csc-register.png)
 

@@ -1,4 +1,4 @@
-# AZ-301: Microsoft Azure IoT Developer
+# AZ-220: Microsoft Azure IoT Developer
 
 The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-220 study group. It is designed to help you prepare for the Microsoft Azure IoT Developer exam!
 
@@ -10,12 +10,12 @@ Click here to register:  [AZ-220: Microsoft Azure IoT Developer Study Group](htt
 
 |Session #|Topic|Date|Homework|Recording|
 | - | - | - | - | - |
-|1|**AZ-220: Kickoff + Implement the IoT solution infrastructure (15-20%)**|April 22, 2020|[Link](01IoTSolutionInfrastructure.md)| [Link](https://msuspartners.eventbuilder.com/AZ220StudyGroup)|
-|2|**AZ-220: Provision and manage devices (20-25%)**|April 29, 2020| | |
-|3|**AZ-220: Implement Edge (15-20%)**|May 6, 2020| | |
-|4|**AZ-220: Process and manage data (15-20%)**|May 13, 2020| | |
-|5|**AZ-220: Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 20, 2020| | |
-|6|**AZ-220: Implement security (15-20%) + Final Review**|May 27, 2020| | |
+|1|**Kickoff + Implement the IoT solution infrastructure (15-20%)**|April 22, 2020|[Link](01IoTSolutionInfrastructure.md)| [Link](https://msuspartners.eventbuilder.com/event/18397)|
+|2|**Provision and manage devices (20-25%)**|May 6, 2020|[Link](02ProvisionAndManageDevices.md)| [Link](https://msuspartners.eventbuilder.com/event/21619)|
+|3|**Implement Edge (15-20%)**|May 13, 2020| | |
+|4|**Process and manage data (15-20%)**|May 20, 2020| | |
+|5|**Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 27, 2020| | |
+|6|**Implement security (15-20%) + Final Review**|June 3, 2020| | |
 
 ## What are study groups?
 
@@ -47,6 +47,17 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 * [Microsoft Certified: Azure IoT Developer Specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
 * [Yammer Azure Study Group](http://aka.ms/azurecsg)
 * [Microsoft Azure certification exams](https://www.microsoft.com/en-us/learning/azure-exams.aspx)
+
+## Presentations
+
+Though study group slide decks include official curriculum content and cannot be shared here, we are able to share the core kick-off slides an the slides from the Online Workshop Series: Building End-to-End IoT Solutions.
+
+[AZ-220 Kickoff Slides](AZ220ExamStudyGroup-Kickoff.pdf)
+
+> From [Online Workshop Series: Building End-to-End IoT Solutions](https://aka.ms/IoT-online-workshop) - Make sure you register and watch the series live or on-demand.
+> * [Transform your business with IoT - April 16th](part-1-transform-business-iot-external.pdf)
+> * [Devices and device communication - April 23rd](part-2-device-and-device-comm.pdf)
+> * [Device provisioning at scale - April 30th](part-3-device-provisioning-scale-april.pdf)
 
 ## Additional Partner Certification Study Groups
 

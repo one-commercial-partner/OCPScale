@@ -19,14 +19,14 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 3. Click **Create**.  It will take several minutes for the directory to be created.
 4. Once complete, click **here** to manage your new directory.
 
-    >**Copy the Azure Active Directory Domain Name and Tenant ID to a scratch location such as Notepad.**
+    ![ClickHere](../attachments/ClickHere.PNG)
 
-    ![InitialAzureADInfo](../attachments/InitialAzureADInfo.PNG)
+5. Copy the Azure Active Directory Domain Name and Tenant ID to a scratch location such as Notepad.
 
 ### Create a Global Account
 
 1. Under **Manage** select **Users**.
-2. Click on **+New User**.
+2. Click on **+ New user**.
 3. Enter the following:
     * User name: **AzureADAdmin**
     * Name: **AzureADAdmin**
@@ -43,7 +43,7 @@ In this exercise you will be configuring [Azure AD Connect](https://docs.microso
 
 1. Open an InPrivate or Incognito browser.
 2. Surf to portal.azure.com.
-3. Logon as `AzureADAdmin@<yourdomainname>.onmicrosoft.com` with a password of `Temporary.Password`.
+3. Logon as `AzureADAdmin@<yourAzureADdomain>.onmicrosoft.com` with a password of `Temporary.Password`.
 4. Update your password to `Complex.Password`.
 5. Close the InPrivate or Incognito browser.
 
@@ -72,22 +72,24 @@ We are going to create an account that AD Connect will use to perform the synchr
 
 ## Exercise 3 - Install Azure Active Directory Connect
 
-1. Connect to the ADConnect VM and logon as your previously created **domain account** (i.e. `domainname\username`, not adadmin which is a local account).
+1. Connect to the ADConnect VM and logon as `<yourADdomainname>\ADAdmin`, not `ADConnectAdmin` which is a local account.
     > Ensure that you are not logging on as local account!
 2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators.
-3. Open Internet Explorer, accept the defaults, and surf to <http://go.microsoft.com/fwlink/?LinkId=615771>
+3. Open Internet Explorer, accept the defaults, and surf to [Microsoft Azure Active Directory Connect](http://go.microsoft.com/fwlink/?LinkId=615771).
 4. Click **Download**, then **Run** when prompted.
-Close Internet Explorer.
+Close Internet Explorer within the AD Connect virtual machine.
 
 ## Exercise 4 -  Configure Azure Active Directory Connect
 
-1. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
+1. Switch to the **Microsoft Azure Active Directory COnnect** window and on the **Welcome to Azure AD Connect** screen select **I agree** then **Continue**.
 2. Review the screen and select **Use express settings**.
 3. On the **Connect to Azure AD** screen enter your **Azure AD Credentials**:
+    > Copy the credentials from your scratch pad.
    * USERNAME: `AzureADSync@<yourAzureADDomain>.onmicrosoft.com`
    * PASSWORD: `Complex.Password`
-   * Click **Next** and then confirm the credential are validated.
+   * Click **Next** and then confirm the credential are validated.  Correct any errors.
 4. On the **Connect to AD DS screen**, enter the Active Directory Domain Services domain administrator credentials:
+    > Copy the credentials from your scratch pad.
    * USERNAME: `<yourADDomain>\adadmin`
    * PASSWORD: `Complex.Password`
    * Click **Next** and then confirm the credential are validated.
@@ -101,9 +103,9 @@ Close Internet Explorer.
 ## Exercise 5 - Validate Synchronization
 
 1. Switch to the Azure portal and examine your Azure AD Directory by selecting the xxxx.onmicrosoft.com  Directory from the upper right hand corner of the portal.
-2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. On Prem).
+2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. Bob & Julia).
 
-### Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory
+> Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory!!
 
 ### Continue with Lab 4: [Grant consent for WVD service](Prepare-Lab04-Grant-consent-for-WVD-service.md)
 
