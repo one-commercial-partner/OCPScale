@@ -10,7 +10,7 @@ Click here to register:  [MS-700: Managing Microsoft Teams](https://msuspartners
 
 |Topic|     Date|Homework|Recording|
 | - | - | - | - |
-|**Kickoff**|May 7|None!| [Link](https://nwvpportalfiles.blob.core.windows.net/nwvp-portal-files/portals/25/events/19904/occurrences/18348/18348%20-%20Session1MS-700StudyGroupKickoffMeeting.mp4) |
+|**Kickoff**|May 7|None!| [Link](https://msuspartners.eventbuilder.com/event/19904) |
 |**Plan and configure a Microsoft Teams environment: Part 1**| May 14 |[Link](PlanandconfigureaMicrosoftTeamsenvironment1.md) |  |
 |**Plan and configure a Microsoft Teams environment: Part 2**| May 21 |[Link](PlanandconfigureaMicrosoftTeamsenvironment2.md) |  |
 |**Plan and configure a Microsoft Teams environment: Part 3**| May 28 |[Link](PlanandconfigureaMicrosoftTeamsenvironment3.md) |  |
