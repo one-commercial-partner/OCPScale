@@ -12,6 +12,10 @@ If you see any changes that need to be made (typos, new steps, etc.) please subm
 
 ## Storage and Backup
 
+[Manage Azure Storage](./Storage&Backup/ManageAzureStorage.md)
+
+[Azure Backup](./Storage&Backup/AzureBackup.md)
+
 ## Networking
 
 [Networking Lab 1 - Virtual Networks](./Networking/03_HybridCloud_Networking_Lab01_VirtualNetworks.md)
