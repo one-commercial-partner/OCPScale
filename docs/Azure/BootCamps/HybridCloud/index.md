@@ -1,6 +1,6 @@
 # Azure Hybrid Cloud Technical Intensity Workshop
 
-Here are the lab files for the boot camps/Tech Intensity workshops.  They are broken down into four distinct areas:
+If you see any changes that need to be made (typos, new steps, etc.) please submit an issue!
 
 ## Identity
 
@@ -32,12 +32,10 @@ Here are the lab files for the boot camps/Tech Intensity workshops.  They are br
 
 [Migration Lab 3 - Azure Policy](02_HybridCloud_Migration_Lab03_AzurePolicy.md)
 
-## Hackathon
+## Architectectural Design Dession (ADS)
 
 >The following content is for in-person events only.
 
-[Hackathon Case Study](04_Hybrid_Cloud_Hackathon_CaseStudy.md)
-
-If you see any changes that need to be made (typos, new steps, etc.) please submit an issue!
+[Azure ADS](04_Hybrid_Cloud_Hackathon_CaseStudy.md)
 
 Thanks!
