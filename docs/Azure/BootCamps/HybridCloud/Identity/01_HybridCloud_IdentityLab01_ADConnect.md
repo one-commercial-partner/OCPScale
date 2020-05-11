@@ -4,6 +4,14 @@
 
 In this lab you will start by building and configuring an Azure VM to simulate an on-premisis Active Directory domain controller.  You will then provision a VM in Azure to run Azure Active Directory Connect.  Afterwards, you will provision an Azure Active Directory tenant, and finally, using Azure AD Connect, synchronize accounts from on-premisis Active Directory to Azure Active Directory.
 
+## Before you Begin
+
+In order to be successful with this lab you will need a clean Azure subscription.  By clean we mean no resources in use or in production and the identity you have associated with this Azure subscription is not associated with any other active Azure subscription or Azure Active Directory.
+
+>DO NOT CONTINUE WITH THIS LAB IF YOU MAY IMPACT PRODUCTIONS RESOURCES AND SERVICES.
+
+You will consume approximately $10 in Azure usage building this lab.  You will also need four (4) Total Regional vCPUs available in your subscription.
+
 ## Exercise 1 - Setup an IaaS Virtual Machine via Azure CLI
 
 In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2019.
