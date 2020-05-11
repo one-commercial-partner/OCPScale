@@ -1,5 +1,7 @@
 # Hybrid Identity Hands-On Lab
 
+## Pass Thru Authentication and High Availability
+
 ## Lab scenario
 
 In this lab you will start by enabling Pass-Thru Authentication (PTA) on your existing Azure AD Connect implementation. Next, you will be provisioning a VM in Azure to run Azure Active Directory Connect.  Afterwards, you will join the virtual machine to the domain and then install the PTA agent.
@@ -11,8 +13,6 @@ In order to be successful with this lab you will need a clean Azure subscription
 >DO NOT CONTINUE WITH THIS LAB IF YOU MAY IMPACT PRODUCTIONS RESOURCES AND SERVICES.
 
 You will consume approximately $5 in Azure usage building this lab.  You will also need two (2) Total Regional vCPUs available in your subscription.
-
-## Pass Thru Authentication and High Availability
 
 ## Exercise 1 - Enable the feature
 
