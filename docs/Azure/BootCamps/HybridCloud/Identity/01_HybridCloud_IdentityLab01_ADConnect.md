@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-In this lab you will start by building and configuring an Azure VM to simulate an on-premisis Active Directory domain controller.  You will then provision a VM in Azure to run Azure Active Directory Connect.  Afterwards, you will provision an Azure Active Directory tenant, and finally, using Azure AD Connect, synchronize accounts from on-premisis Active Directory to Azure Active Directory.
+In this lab you will start by building and configuring an Azure VM to simulate an on-premises Active Directory domain controller.  You will then provision a VM in Azure to run Azure Active Directory Connect.  Afterwards, you will provision an Azure Active Directory tenant, and finally, using Azure AD Connect, synchronize accounts from on-premises Active Directory to Azure Active Directory.
 
 ## Before you Begin
 
