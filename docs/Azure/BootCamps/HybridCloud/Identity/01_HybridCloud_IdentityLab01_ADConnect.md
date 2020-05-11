@@ -1,192 +1,216 @@
 # Hybrid Identity Hands-On Lab
 
-## Before you Begin
-
-If you are using a Azure subscription that was provided to you by Microsoft, you are limited to a specific set of Microsoft Azure regions that you can use. Please use any of the following otherwise you will receive an  error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
-
-* **East US**
-* **South Central US**
-* **West US 2**
-* **West Central**
-
 ## Exercise 1 - Setup an IaaS Virtual Machine via Azure CLI
 
 In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2019.
 
 1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
-2. Login using your Microsoft Account.
+2. If prompted, login using your Microsoft Azure Account.
 3. When the **Welcome to Azure Cloud Shell** screen appears select **Bash** as the working CLI and then **Create Storage**.  Once storage is created click **Close**.
-4. At the CLI prompt, let's create a new resource group to hold your Domain Controller VMs. Create the resource group by typing in the following command:
+4. At the CLI prompt, let's create a new resource group to hold your Domain Controller. Create the resource group by typing in the following command:
 
-    `az group create --name AD-ResourceGroup --location eastus`
+    ```PowerShell
+    az group create --name Identity-Infrastructure --location eastus
+    ```
 
 5. Create a network security group:
 
-    `az network nsg create --name AD-NSG --resource-group AD-ResourceGroup --location eastus`
+    ```PowerShell
+    az network nsg create --name AD-NSG --resource-group Identity-Infrastructure --location eastus
+    ```
 
 6. Create a network security group rule for port 3389.
 
-    `az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group AD-ResourceGroup --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389`
+    ```PowerShell
+    az network nsg rule create --name PermitRDP --nsg-name AD-NSG --priority 1000 --resource-group Identity-Infrastructure --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389
+    ```
 
 7. Create a virtual network.
 
-    `az network vnet create --name AD-VNet --resource-group AD-ResourceGroup --address-prefixes 10.10.0.0/16 --location eastus`
+    ```PowerShell
+    az network vnet create --name AD-VNet --resource-group Identity-Infrastructure --address-prefixes 10.10.0.0/16 --location eastus
+    ```
 
-8. Create a subnet
+8. Create a subnet:
 
-    `az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group AD-ResourceGroup --vnet-name AD-VNet --network-security-group AD-NSG`
+    ```PowerShell
+    az network vnet subnet create --address-prefix 10.10.10.0/24 --name AD-Subnet --resource-group Identity-Infrastructure --vnet-name AD-VNet --network-security-group AD-NSG
+    ```
 
-9. Create an availability set.  You want to keep your domain controllers resilient.
+9. Create your virtual machine:.
 
-    `az vm availability-set create --name AD-AvailabilitySet --resource-group AD-ResourceGroup --location eastus`
+    ```PowerShell
+    az vm create --resource-group Identity-Infrastructure --name DC01 --size Standard_B2s --image Win2019Datacenter --admin-username ADadmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11
+    ```
 
-10. Create your virtual machine, noting to change the value of **--admin-username** before executing the script.
+    > It will take several minutes to provision the virtual machine.  We suggest you write down the credentials to DC01.
 
-    `az vm create --resource-group AD-ResourceGroup --availability-set AD-AvailabilitySet --name DC01 --size Standard_D2_v3 --image Win2019Datacenter --admin-username *yourfirstname* --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.11 --no-wait`
-
-At this point please write down the local credentials you just created and then return to the instructor's presentation.
+10. Close Azure Shell.
 
 ## Exercise 2 - Install and Configure Active Directory
 
-In this task you use PowerShell within Windows Server 2019 to install Active Directory.
+In this task you use PowerShell (or PowerShell ISE) within Windows Server 2019 to install Active Directory.
 
-1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect / RDP**.  
+1. Once DC01 is running connect to the DC01 virtual machine and logon with your local account (`ADadmin`) by selecting **Microsoft Azure / Resource Groups / Identity-Infrastructure / DC01 / Connect / RDP**.  
 2. Make sure that you choose the **public IP address**, not the *Private IP address*, and then click on **Download RDP File**.
-3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials.
-4. When prompted click **No** on the Network Discovery blade.
+3. Logon with your local credentials that you wrote down earlier.  You may have to choose **More Choices** then **Use a different account** to enter your new set of credentials. The username is `ADadmin` and the password is `Complex.Password`.  Click the checkbox for **Don't ask me again for connections to this computer** and then **Yes** when prompted regarding the certificate error.
+4. Once your desktop is provisioned, click **No** on the Network Discovery blade.
 5. Hit the **Windows Start** button and then open **Windows PowerShell**. Enter the following to install the Active Directory Domain Service module:
 
-    `install-windowsfeature AD-Domain-Services -IncludeAllSubFeature -IncludeManagementTools`
+    ```PowerShell
+    Install-windowsfeature AD-Domain-Services -IncludeAllSubFeature -IncludeManagementTools
+    ```
+
+    > This may takes a few minutes to run.
+
 6. Import the deployment modules by entering the following:
 
-    `Import-Module ADDSDeployment`
+    ```PowerShell
+    Import-Module ADDSDeployment
+    ```
 
-    *Note that PowerShell will quickly return as this command takes milliseconds to execute.*
+    >PowerShell will quickly return as this command takes milliseconds to execute.
 7. Promote your server to a domain controller by entering the following command.  Don't forget to set the **domain names properly** minding the quotes.
 
-    `Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “YOURDOMAIN.COM”
--DomainNetbiosName “YOURDOMAIN” -ForestMode “Win2012R2” -InstallDns:$true
--LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true`
+    ```PowerShell
+    Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS” -DomainMode “Win2012R2” -DomainName “<yourADdomain.TLD>" -DomainNetbiosName “<yourADdomain>" -ForestMode “Win2012R2” -InstallDns:$true -LogPath “C:\Windows\NTDS” -SysvolPath "C:\Windows\SYSVOL” -Force:$true
+    ```
 
-    *Write down your FQDN doman name for future reference.*
+    > Write down your FQDN doman name and NetBIOS on your scratch pad for future reference.
 
-8. Once you hit enter you will be asked for the  SafeModeAdministratorPassword – this is for the Directory Services Restore Mode (DSRM). Enter `Complex.Password`, and then retype to confirm.
+8. Once you hit enter you will be asked for the  SafeModeAdministratorPassword – this is for the Directory Services Restore Mode (DSRM). Enter `Complex.Password` and then retype to confirm.
+
+    > You will receive warnings about security settings, network adapters, and DNS Servers.  These warnings can be ignored.
 
 9. Once Active Directory is installed your virtual machine will restart.
 
-## Exercise 3 - Connect to the Domain Controller and create a user account
+## Exercise 3 - Configure DNS
 
-1. Once DC01 has restarted connect to the virtual machine and logon with your domain account by selecting **Microsoft Azure / Resource Groups / AD-ResourceGroup / DC01 / Connect / RDP**.
+The virtual network that contains the domain controller is pointing to Azure DNS, not the DNS of the domin controller, for name resolution.  Any new VMs will not be able to find the DNS service on the domain controller and be able to join the domain.  Change the DNS to point to the domain controller.
 
-2. Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
-3. Logon with the fully qualified domain credentials you wrote down earlier (e.g. yourname@yourdomain.com).  You may have to choose __More Choices__ then **Use a different account** to enter your new set of credentials.
+1. In the Azure portal click **Home** -> **Resource groups** -> **Identity-Infrastructure**.
+2. Click on **DC01** and copy the Private IP address (e.g. 10.10.10.11).
+3. Within the **Identity-Infrastructure** Resource Group click on  **AD-Vnet**.
+4. Under **Settings** click **DNS Servers**.
+5. Change the DNS servers to **Custom** and paste the IP address of DC01 under `Add DNS server`.
+6. Click **Save**.
 
-    *Note that if you connected to the VM too quickly you will see the message "**Please wait for the Group Policy Client**" on your screen for several minutes.*
-4. Within Server Manager, click **Tools** and then **Active Directory Users and Computers**.
-5. Expand the tree and select the **Users** Container.
-6. On the toolbar click the icon to create a new user in the current container.  
-7. Create a New User with the following information:
-    * First Name: **On**
-    * Last Name: **Prem**
-    * Full Name: **On Prem**
-    * User Logon Name: **onprem**
-8. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
-9. Click **Next** then **Finish**.
-10. Minimize the RDP window.
+## Exercise 4  - Connect to the Domain Controller and create a user account
 
-## Exercise 4 - Create a virtual machine to host AD Connect
+### Create Domain Accounts
 
-We are creating a small VM to be used later to host Azure AD Connect.
+1. RDP into DC01 and logon with the following domain account:
+    * Username: `adadmin@<yourdomain.tld>`
+    * Password: `Complex.Password`
 
-1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
-2. Login using your Microsoft Account.
-3. Create an availability set.  You want to keep all your virtual machines resilient.
+    > Choose **More Choices** then **Use a different account** to enter your new set of credentials.
+2. In **Server Manager / Tools** open **Active Directory Users and Computers**. In the domain tree expand your domain and then select **Users**, then right-click, **New**  then **User** and create a user object with the following information:
+    * First Name: **Bob**
+    * Last Name: **Jones**
+    * Full Name: **Bob Jones**
+    * User Logon Name: **Bob.Jones**
+3. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
+4. Click **Next** then **Finish**.
+5. In the domain tree select **Users**, then right-click, **New**  then **User** and create a user object with the following information:
+    * First Name: **Julia**
+    * Last Name: **Williams**
+    * Full Name: **Julia Williams**
+    * User Logon Name: **Julia.Williams**
+6. Click **Next** and set the password to `Complex.Password`. Uncheck **User must change password at next logon**, and set the **Password never expires** checkbox.
+7. Click **Next** then **Finish**.
 
-    `az vm availability-set create --name ADConnect-AvailabilitySet --resource-group AD-ResourceGroup --location eastus`
+## Exercise 5 - Create a virtual machine to host AD Connect
 
-4. Create your virtual machine:
+Following [Microsoft recommended practices](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-prerequisites#azure-ad-connect-server) we are creating a virtual machine to be used to host Azure AD Connect.
 
-    `az vm create --resource-group AD-ResourceGroup --availability-set ADConnect-AvailabilitySet --name ADConnect --size Standard_D2_v3 --image Win2019Datacenter --admin-username ADAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15`
+1. From your desktop return to and open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
+2. You may have to hit **Reconnect**.
+3. Create your virtual machine:
 
-## Exercise 5 - Join the ADConnect VM to the domain
+    ```PowerShell
+    az vm create --resource-group Identity-Infrastructure --name ADConnect --size Standard_B2s --image Win2019Datacenter --admin-username ADConnectAdmin --admin-password Complex.Password --nsg AD-NSG --private-ip-address 10.10.10.15
+    ```
 
-1. Once the cloud shell has built your VM, connect to the **ADConnect** virtual machine and logon. **Microsoft Azure / Resource Groups / AD-ResourceGroup / ADConnect / Connect / RDP**.  Make sure that you choose the **public IP address**, not the `Private IP address`, and then click on **Download RDP File**.
-2. Logon with local credentials (i.e. ADAdmin) with a password of `Complex.Password`.  Choose **More Choices** then **Use a different account** to enter your new set of credentials.
-3. When prompted click **No** on the Network discovery blade.
-4. The DNS Server on ADConnect may not be set to see the domain controller (DC01), so we need to check that setting.  
-5. Open a **Command prompt** (**Start Button** -> **Windows System**) and enter *ipconfig /all*.  If the DNS Server is set to 10.10.10.11 (the private IP address of DC01), close the Command Prompt window and then continue to **Task 5 - Join the Domain**, otherwise proceed to the **Configure DNS** set of tasks.
-
-### Configure DNS
-
-1. Within **Server Manager**, click on **Local Server**.
-2. Click on **IPv4 address assigned by DHCP, IPv6 enabled** setting for the Ethernet connection.
-3. Right-click on the network adapter and choose **Properties**.
-4. Select **Internet Protocol Version 4 (TCP/IPv4)** and then **Properties**.
-5. Select the radio button for **Use the following DNS Server addresses:** and Set the DNS server to **10.10.10.11** and click **OK** and then **Close**.
-6. You will then lose connection to the ADConnect VM, this is expected. Once you are back at the Microsoft Azure Portal, click **Restart** to restart the ADConnect VM.
-
-## Exercise 6 - Join the Domain
-
-1. Once the ADConnect VM is successfully restarted, connect to the ADConnect VM and logon as ADAdmin.  Within **Server Manager**, click on **Local Server**.
-2. Click on **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
-3. Click the radio button for **Domain**, enter your fully-qualified domain name, such as mydomainname.com, and click **OK**.
-4. In the Windows Security box enter the AD Domain Admin credentials you specified earlier.
-5. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
-
-## Exercise 7 - Install Azure Active Directory
+## Exercise 6 - Install Azure Active Directory
 
 1. In the Azure Portal, click **Microsoft Azure** and then **+Create a resource**.  Select **Identity** and then **Azure Active Directory**.
-2. Enter the following on the **Create directory tab**:
-    * Organization name (e.g. *yourfirstname* Mike's Org)
-    * Initial domain name (e.g. your initials plus last four of your cellphone).  Hit **Tab**.
+2. Enter the following on the **Create directory** tab:
+    * Organization name: **Identity Lab**
+    * Initial domain name: `<yourinitials>`IdentityLab *(e.g. abdIdentityLab)*
+    * Hit **Tab**.
 
-        *Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.*
+        >Ensure validation passes as your namespace needs to be unique within the onmicrosoft.com namespace.  We often see students choosing a domain name that already exists.
 
-        ***Write this domain name down as your Azure Active Directory Domain Name.***
 3. Click **Create**.  It will take several minutes for the directory to be created.
-4. Once complete, select Click **here** to manage your new directory.
 
-## Exercise 8 - Create a Sync Account
+## Exercise 7 - Create a Sync Account
 
-We are going to create an account that AD Connect will use to perform the synchronization process bethween the on-prem domain controller and Azure Active Directory.
+We are going to create an account that AD Connect will use to perform the synchronization process between the on-prem domain controller and Azure Active Directory.
 
-1. In Azure Active Directory, under **Manage** choose **Users** and then under **All users** click on **+New User** and enter the following:
-    * User name: **adsync**
-    * Name: **AD Sync Account**
-    * Click on **Show Password** and then copy the password.
-    * Under **Roles** click **User**.  Search for and select a directory role named: **Global administrator**, then click **Select**.
+1. In Azure Active Directory click on **+ New User** and enter the following:
+    * User name: **AzureADSync**
+    * Name: **AzureADSync**
+    * Under Password:
+        * Select **Let me create the password**
+        * Initial password: `Temporary.Password`
+    * Under **Groups and roles** click on **User**
+        * Scroll down to find and select `Global administrator`.
+        * Click **Select**
+    * Usage location: **United States**
 2. Click **Create**.
-3. Open an InPrivate or Incognito browser and surf to <https://portal.azure.com.>
-4. Login as the AD Sync Account you just created using the temporary password.
-5. Change your password to `Complex.Password` and then click **Sign in**.
-6. Close your inprivate or incognito browser.
+
+### Reset the Sync Account password
+
+1. Open an InPrivate or Incognito browser.
+2. Surf to portal.azure.com.
+3. Logon as `AzureADSync@<yourAzureADdomainname>.onmicrosoft.com` with a password of `Temporary.Password`.
+4. Update your password to `Complex.Password`.
+5. Close the InPrivate or Incognito browser.
+
+## Exercise 8 - Join the Domain
+
+1. Once the ADConnect VM is successfully provisioned, connect to the ADConnect VM and logon as `ADConnectAdmin`.  Select **More Choices** then **Use a different account** to enter your credentials.
+2. Click **No** on the **Networks** blade.
+3. Within Server Manager, click **Don't show me this again** and close the **Windows Admin Center** window.
+4. Click on **Local Server**, then **WORKGROUP**, then **Change** to rename this computer or join it to a domain.
+5. Click the radio button for **Domain**, enter your fully-qualified domain name, such as `<myADdomain.TLD>`, and click **OK**.
+6. In the Windows Security box enter the following:AD Domain Admin credentials:
+    * username: **ADadmin**
+    * password: `Complex.Password`
+7. Click **Ok** on the Welcome screen, **Ok** on the Computer Name/Domain Changes window, **Close**, then **Restart Now**.
 
 ## Exercise 9 - Install Azure Active Directory Connect
 
-1. Connect to the ADConnect VM and logon as your previously created **domain account** (i.e. `domainname\username`, not adadmin which is a local account).  If you don’t see the VM, you might need to  switch from the new Azure Active Directory you just created to the **Default Directory** associated with your subscription.  Click in the upper right-hand corner of the screen to change directories.
-2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators and Users.
-3. Open Internet Explorer, accept the defaults, and surf to <http://go.microsoft.com/fwlink/?LinkId=615771>
+1. Once the ADConnect VM has successfully rebooted, connect to the ADConnect VM and logon as `<yourADdomainname>\ADAdmin`, not `ADConnectAdmin` which is a local account. Select **More Choices** then **Use a different account** to enter your credentials.
+    > Ensure that you are not logging on as local account!
+2. When **Server Manager** opens select **Local Server** and turn off **IE Enhanced Security Configuration** for Administrators.
+3. Open Internet Explorer, accept the defaults, and surf to [Microsoft Azure Active Directory Connect](http://go.microsoft.com/fwlink/?LinkId=615771).
 4. Click **Download**, then **Run** when prompted.
-Close Internet Explorer.
+Close Internet Explorer within the AD Connect virtual machine.
 
-## Exercise 10 -  Configure Azure Active Directory Connect
+### Configure Azure Active Directory Connect
 
-1. On the Welcome to Azure AD Connect screen select **I agree** then **Continue**.
+1. When installation start switch to the **Microsoft Azure Active Directory Connect** window and on the **Welcome to Azure AD Connect** screen select **I agree** then **Continue**.
 2. Review the screen and select **Use express settings**.
-3. On the **Connect to Azure AD** screen enter your **Azure AD Credentials**.  This would be the *adsync@yourdirectoryname.onmicrosoft.com*  account you created.  Click **Next** and then confirm the credential are validated.
-4. On the **Connect to AD DS screen**, enter the Active Directory Domain Services domain administrator credentials. This would be the account you created in the original template (i.e. mydomain\myusername). Click **Next** and confirm the credential are validated.  
+3. On the **Connect to Azure AD** screen enter your **Azure AD Credentials**:
 
-    If you get an error about the current security context is not associated with an Active Directory domain or forest, you more than likely didn’t logon with a domain account but rather a local account.  You can verify this by opening a command prompt and entering **whoami**.  Logout and login with a domain account and then restart at step 1 in this section.
+   * USERNAME: `AzureADSync@<yourAzureADDomain>.onmicrosoft.com`
+   * PASSWORD: `Complex.Password`
+   * Click **Next** and then confirm the credential are validated.  Correct any errors.
+4. On the **Connect to AD DS screen**, enter the Active Directory Domain Services domain administrator credentials:
+   * USERNAME: `<yourADDomain>\adadmin`
+   * PASSWORD: `Complex.Password`
+   * Click **Next** and then confirm the credential are validated.
 5. On the **Azure AD sign-in configuration** screen, select the checkbox for **Continue without any verified domains** and click **Next**.
 
-    Since this is a temporary lab environment we are not going use a validated custom domain.
+   > Since this is a temporary lab environment we are not going use a validated custom domain.
 6. On the **Ready to Configure** screen click **Install**.
 7. It may take 5-10 minutes for Azure AD Connect to complete installation. Read the **Configuration Complete** screen and then click **Exit**.
 8. Minimize your RDP window.
 
-## Exercise 11 - Validate Synchronization
+### Validate Synchronization
 
-1. Switch to the Azure portal and examine your Azure AD Directory by selecting the xxxx.onmicrosoft.com  Directory from the upper right hand corner of the portal.
-2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. On Prem).
+1. Switch to the Azure portal and examine your Azure AD Directory by selecting the xxxx.onmicrosoft.com directory from the upper right hand corner of the portal.
+2. Under **Manage** select **Users**. Note that you should now see accounts sourced from Windows Server AD that have synchronized to Azure Active Directory (e.g. Bob & Julia).
 
-### Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory
+> Congratulations!  Your are now synchronizing Active Directory to Azure Active Directory!!
