@@ -115,6 +115,7 @@
 * [Install the Azure IoT Edge runtime on Debian-based Linux systems](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux)
 * [Understand extended offline capabilities for IoT Edge devices, modules, and child devices](https://docs.microsoft.com/en-us/azure/iot-edge/offline-capabilities)
 * [How an IoT Edge device can be used as a gateway](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-as-gateway)
+* [Update the IoT Edge security daemon and runtime](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/iot-edge/how-to-update-iot-edge.md)
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
