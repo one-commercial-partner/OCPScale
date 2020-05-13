@@ -97,6 +97,8 @@
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
 * [IoT Edge Runtime](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-runtime)
+* [Install Azure IoT Edge on Windows](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-windows)
+* [Install the Azure IoT Edge runtime on Linux](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux)
 * [IoT Edge security daemon](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-security-manager)
 * [Understand Azure IoT Edge modules](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-modules)
 * [Develop your own IoT Edge modules](https://docs.microsoft.com/en-us/azure/iot-edge/module-development)
