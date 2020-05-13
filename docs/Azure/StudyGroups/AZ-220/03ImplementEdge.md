@@ -55,7 +55,7 @@
   <br />Exercise 5: Debug in Attach Mode with IoT Edge Simulator
   <br />Exercise 6: Deploy IoT Edge Solution
 
-  * Lab 14: Run an IoT Edge device in restricted network and offline
+  * [Lab 14: Run an IoT Edge device in restricted network and offline](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_14-iot-edge-device-in-restricted-network.html)
   <br />Exercise 1: Verify Lab Prerequisites
   <br />Exercise 2: Deploy Azure IoT Edge enabled Linux VM
   <br />Exercise 3: Setup IoT Edge Parent with Child IoT Devices
@@ -99,14 +99,19 @@
 * [IoT Edge Runtime](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-runtime)
 * [IoT Edge security daemon](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-security-manager)
 * [Understand Azure IoT Edge modules](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-modules)
+* [Develop your own IoT Edge modules](https://docs.microsoft.com/en-us/azure/iot-edge/module-development)
 * [Learn how to deploy modules and establish routes in IoT Edge](https://docs.microsoft.com/en-us/azure/iot-edge/module-composition)
+* [Deploy Azure IoT Edge modules from the Azure portal](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-deploy-modules-portal) (Deployment manifest wizard)
 * [Understand IoT Edge automatic deployments for single devices or at scale](https://docs.microsoft.com/en-us/azure/iot-edge/module-deployment-monitoring)
 * [Deploy IoT Edge modules at scale using the Azure portal](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-deploy-at-scale)
 * [Monitor IoT Edge deployments](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-monitor-iot-edge-deployments)
 * Monitor a Deployment with Azure CLI
   * [az IoT Edge deployment show](https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/edge/deployment?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-edge-deployment-show) command
   * [az IoT Edge deployment show-metric](https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/edge/deployment?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-edge-deployment-show-metric) command
-  
+* [Register an Azure IoT Edge device](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-register-device)
+* [Install the Azure IoT Edge runtime on Debian-based Linux systems](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux)
+* [Understand extended offline capabilities for IoT Edge devices, modules, and child devices](https://docs.microsoft.com/en-us/azure/iot-edge/offline-capabilities)
+* [How an IoT Edge device can be used as a gateway](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-as-gateway)
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
