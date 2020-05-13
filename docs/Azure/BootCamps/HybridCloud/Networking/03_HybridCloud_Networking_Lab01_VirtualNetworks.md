@@ -1,68 +1,51 @@
 # Lab 1 - Virtual Networks
 
-## Before you Begin
-
-If you are using a Microsoft Azure subscription that was provided to you by Microsoft, you are using what is called sponsored Azure and that subscription is limited to a specific set of Microsoft Azure regions. Please consistently use one of the following locations:
-
-* East US
-* South Central US
-* West Europe
-* Southeast Asia
-* West US 2
-* West Central US
-
-Otherwise you will receive an error in the portal if you select an unsupported region and attempt to build anything in Microsoft Azure.
-
-Additionally, your Azure subscription is limited in the amount of cores that you can provision.  Ensure that you have deleted the following VMs before completing this lab, if they exist in your subscription:
-
-* ADConnect2 and ADConnect3
-
 ## Lab Summary
 
 In this lab you are going to create multiple virtual networks each with it's own virtual machine and subnet and then test connectivity across subnets and vnets.
 
 ## Exercise 1 -  Create virtual networks
 
-### vNet1
+### Task 1 - Create vNet1
 
-1. Log in to the Azure portal at <https://portal.azure.com> and click on **+Create a resource**  on the upper left corner of the Azure portal.
+1. Log in to the Azure portal at <https://portal.azure.com> and click on **Microsoft Azure**, and then **+Create a resource**.
 2. Select **Networking**, and then select **Virtual network**.
-3. Enter or select the following information, accept the defaults for the remaining settings, and then click **Create**:
-    * Name: **vNet1**
-    * Address Space: **10.101.0.0/16**
+3. Enter the following information on the **Basics** tab and then click on **Next: IP Addresses >**
     * Resource Group: *Create New* **VNets**
-    * Location: *Choose a consistent and supported location*
-    * Subnet Name: **subnet1**
-    * Subnet address range: **10.101.1.0/24**
+    * Name: **vNet1**
+4. Enter the following information on the **IP Addresses** tab and then click on **Next: IP Addresses >**
+    * Click the garbage can to delete the existing address space of 10.0.0.0/16.
+    * Enter a new IPv4 Address Space: **10.101.0.0/16**
+    * Click on **+ Add subnet** and enter the Subnet Name of **subnet1** and a subnet address range of **10.101.1.0/24** and then click **Add**.
+5. Click on **Review + Create**, and after validation, click **Create**.
 
-### vNet2
+### Task 2 - Create vNet2
 
 Repeat the steps above for vNet2:
 
 * Name: **vNet2**
 * Address Space: **10.102.0.0/16**
 * Resource Group: **VNets**
-* Location: *Choose a consistent and supported location*
 * Subnet Name: **subnet2**
 * Subnet address range: **10.102.2.0/24**
 
 ## Exercise 2 - Provision a virtual machine via the portal
 
-1. Return to the Azure portal and click the **+Create a Resource** button found on the upper left-hand corner of the Azure portal.
+1. Return to the Azure portal and click the **+Create a Resource** button.
 2. Select **Compute** then select **Virtual machine**.
 3. On the Basics tab complete the following:
     * Resource Group:   **VNets**
     * Virtual machine name: **VM1**
     * Region: Choose the same region as your other resources
     * Availability options: No infrastructure redundancy required
-    * Image: Windows Server R2 2016 Datacenter
-    * Size: Choose **DS2_v2**
-    * Username: *pickaname* and write it down
+    * Image: Windows Server 2016 Datacenter
+    * Size: Choose **DS2_v2** (or something similar)
+    * Username: *yourfirstname* and write it down
     * Password: `Complex.Password`
     * Confirm Password: `Complex.Password`
     * Public inbound ports: **Allow selected ports**
     * Select inbound ports: **RDP (3389)**
-4. Click **Next:Disks >** and then **Next:Networking >**
+4. Click **Next : Disks >** and then **Next : Networking >**
 5. Ensure **vNet1** is selected for the Virtual network.
 6. **Review + create**.   After validation passes, click  **Create** and then monitor your deployment status for any error messages. It should take less than 10 minutes to spin up the VM.
 
@@ -153,7 +136,3 @@ Let's examine our network topology now that we have peering enabled.
 ## Challenge - PING the Public IP address
 
 If you wanted to ping the VM by public IP address, what do you think you would have to do?
-
-## Clean out your VMs
-
-If you are going to complete the hub and spoke challenge keep these resources.  Otherwise, given the limited capacity of sponsored Azure please delete the **VNets** Resource Group before moving onto the next lab.
