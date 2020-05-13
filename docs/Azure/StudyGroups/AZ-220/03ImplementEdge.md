@@ -77,7 +77,7 @@
     * *IoT Edge hub* - Handles communications between modules on the IoT Edge device, and between the device and IoT Hub
 
   * *IoT Edge Modules* - Containers that run Azure services, third-party services, or your own code. Modules are deployed to IoT Edge devices and execute locally on those devices.
-   * *Module image* - A package containing the software that defines a module.
+    * *Module image* - A package containing the software that defines a module.
     * *Module instance* - The specific unit of computation running the module image on an IoT Edge device. The module instance is started by the IoT Edge runtime.
     * *Module identity* - A piece of information (including security credentials) stored in IoT Hub, that is associated to each module instance.
     * *Module twin* - A JSON document stored in IoT Hub, that contains state information for a module instance, including metadata, configurations, and conditions. 
