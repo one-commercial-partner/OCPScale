@@ -1,144 +1,112 @@
-# AZ-220 Provision and manage devices (20-25%)
+# AZ-220 Implement Edge (15-20%)
 
 * [AZ-220: Microsoft Azure IoT Developer Exam](https://docs.microsoft.com/en-us/learn/certifications/exams/az-220)
 * [Microsoft Certified: Azure IoT Developer Specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
 * [Yammer Azure Study Group](http://aka.ms/azurecsg)
 
 ## Skills Measured:
-### Implement the Device Provisioning Service (DPS)
-* Create a Device Provisioning Service
-* Create a new enrollment in DPS
-* Manage allocation policies by using Azure Functions
-* Link an IoT Hub to the DPS
+### Set up and deploy an IoT Edge device
+* Create a device identity in IoT Hub
+* Deploy a single IoT device to IoT Edge
+* Create a deployment for IoT Edge devices
+* Install container runtime on IoT devices
+* Define and implement deployment manifest
+* Update security daemon and runtime
 
-### Manage the device lifecycle
-* Provision a device by using DPS
-* Deprovision an autoenrollment
-* Decommission (disenroll) a device
+### Develop modules
+* Create and configure an Edge module
+* Deploy a module to an Edge device
+* Publish an IoT Edge module to an Azure Container Registry
 
-### Manage IoT devices by using IoT Hub
-* Manage devices list in the IoT Hub device registry
-* Modify device twin tags and properties
-* Trigger an action on a set of devices by using IoT Hub Jobs and Direct Methods
-* Set up Automatic Device Management of IoT devices at scale
-
-### Build a solution by using IoT Central
-* Define a device type in Azure IoT Central
-* Configure rules and actions in Azure IoT Central
-* Define the operator view
-* Add and manage devices from IoT Central
-* Monitor devices
+### Configure an IoT Edge device
+* Select and deploy an appropriate gateway pattern
+* Implement module-to-module communication
+* Implement and configure offline support
 
 ## Homework:
 ### [AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer) 
-* Module 3: Device Provisioning at Scale 
-  * [Lab 05: Individual Enrollment of a Device in DPS](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_05-individual-enrollment-of-device-in-dps.html)
- <br />Exercise 1: Verify Lab Prerequisites
- <br />Exercise 2: Create new individual enrollment (Symmetric keys) in DPS
- <br />Exercise 3: Configure Simulated Device
- <br />Exercise 4: Test the Simulated Device
- <br />Exercise 5: Retire the Device
- 
-  * [Lab 06: Automatically provision IoT devices securely and at scale with DPS](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_06-automatic-enrollment-of-devices-in-dps.html)
- <br />Exercise 1: Verify Lab Prerequisites
- <br />Exercise 2: Generate and Configure X.509 CA Certificates using OpenSSL
- <br />Exercise 3: Create Group Enrollment (X.509 Certificate) in DPS
- <br />Exercise 4: Configure simulated device with X.509 certificate
- <br />Exercise 5: Handle device twin desired property Changes
- <br />Exercise 6: Test the Simulated Device
- <br />Exercise 7: Retire Group Enrollment
+* Module 6: Azure IoT Edge Deployment Process
+  * [Lab 11: Introduction to Azure IoT Edge](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_11-introduction-to-azure-iot-edge.html) 
+  <br />Exercise 1: Verify Lab Prerequisites
+  <br />Exercise 2: Deploy Azure IoT Edge enabled Linux VM
+  <br />Exercise 3: Create IoT Edge Device Identity in IoT Hub using Azure CLI
+  <br />Exercise 4: Connect IoT Edge Device to IoT Hub
+  <br />Exercise 5: Add Edge Module to Edge Device
+  <br />Exercise 6: Deploy Azure Stream Analytics as IoT Edge Module
 
-* Module 8: Device Management
-  * [Lab 15: Remotely monitor and control devices with Azure IoT Hub](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_15-remotely-monitor-and-control-devices.html)
- <br />Exercise 1: Verify Lab Prerequisites
- <br />Exercise 2: Write Code to Send and Receive Telemetry
- <br />Exercise 3: Create a Second App to Receive Telemetry
- <br />Exercise 4: Write Code to Invoke a Direct Method
- <br />Exercise 5: Write Code for Device Twins
+  * [Lab 12: Setup an IoT Edge Gateway](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_12-setup-an-iot-edge-gateway.html)
+  <br />Exercise 1: Exercise 1: Verify Lab Prerequisites
+  <br />Exercise 2: Deploy Azure IoT Edge enabled Linux VM
+  <br />Exercise 3: Generate and Configure IoT Edge Device CA Certificates
+  <br />Exercise 4: Create IoT Edge Device Identity in IoT Hub using Azure Portal
+  <br />Exercise 5: Setup IoT Edge Gateway Hostname
+  <br />Exercise 6: Connect IoT Edge Gateway Device to IoT Hub
+  <br />Exercise 7: Open IoT Edge Gateway Device Ports for Communication
+  <br />Exercise 8: Create Downstream Device Identity in IoT Hub
+  <br />Exercise 9: Connect Downstream Device to IoT Edge Gateway
+  <br />Exercise 10: Verify Event Flow
 
-  * [Lab 16: Automate IoT Device Management with Azure IoT Hub](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_16-automatic-device-management.html)
- <br />Exercise 1: Verify Lab Prerequisites
- <br />Exercise 2: Write code to simulate device that implements firmware update
- <br />Exercise 3: Test firmware update on a single device
+* Module 7: Azure IoT Edge Modules
+  * [Lab 13: Develop, Deploy and debug a custom module on Azure IoT Edge with VS Code](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_13-deploy-and-debug-custom-azure-iot-edge-module.html)
+  <br />Exercise 1: Verify Lab Prerequisites
+  <br />Exercise 2: Install Azure IoT EdgeHub Dev Tool
+  <br />Exercise 3: Create Azure Container Registry
+  <br />Exercise 4: Create Custom Edge Module in C#
+  <br />Exercise 5: Debug in Attach Mode with IoT Edge Simulator
+  <br />Exercise 6: Deploy IoT Edge Solution
 
-* Module 11: Build with IoT Central
-  * [Lab 20: Build with IoT Central](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_20-build-with-iot-central.html)
- <br />Exercise 1: Create and Configure Azure IoT Central
- <br />Exercise 3: Monitor a Simulated Device
- <br />Exercise 4: Create a free Azure Maps account
- <br />Exercise 5: Create a Programming Project for a Real Device
- <br />Exercise 6: Test Your IoT Central Device
- <br />Exercise 7: Create multiple devices
+  * Lab 14: Run an IoT Edge device in restricted network and offline
+  <br />Exercise 1: Verify Lab Prerequisites
+  <br />Exercise 2: Deploy Azure IoT Edge enabled Linux VM
+  <br />Exercise 3: Setup IoT Edge Parent with Child IoT Devices
+  <br />Exercise 4: Configure IoT Edge Device as Gateway
+  <br />Exercise 5: Open IoT Edge Gateway Device Inbound Ports using Azure CLI
+  <br />Exercise 6: Configure IoT Edge Device Time-to-Live and Message Storage
+  <br />Exercise 7: Connect Child IoT Device to IoT Edge Gateway
+  <br />Exercise 8: Test Device Connectivity and Offline Support
 
 ### Sign up for [Online Workshop Series: Build End-to-End IoT Solutions](https://aka.ms/IoT-online-workshop)
-* Device provisioning at scale - April 30th
+* Work with Azure IoT Edge - May 14th
 
 ## Quick Reference: Key Concepts and Terminology
-* Device Provisioning Service (DPS) Features: 
-  * **Secure attestation support** for X.509 and TPM-based identities
-  * A configurable, updatable **enrollment list** containing the complete record of devices/groups of devices that may at some point register
-  * **Multiple allocation policies** to control how DPS assigns devices to IoT hubs in support of your scenarios: Lowest latency, evenly weighted distribution (default), and static configuration via the enrollment list
-  * **Monitoring and diagnostics logging** to make sure everything is working properly
-  * **Multi-hub support** allows DPS to assign devices to more than one IoT hub (including across subscriptions and regions), assigned by multiple allocation policies
-  * **Cross-region support** allows DPS to assign devices to IoT hubs in other regions
-  * **Encryption for data at rest** allows data in DPS to be encrypted and decrypted transparently using 256-bit AES encryption
-  * **Cross-platform support**
-  <br />- A variety of operating systems
-  <br />- SDKs across multiple languages
-  <br />- HTTPS, AMQP, and MQTT protocol support (Service SDK is HTTPS only)
-* *Service Operations Endpoint* – Used for managing DPS and the enrollment list
-* *Device Provisioning Endpoint* – Single address used for all provisioning, shared across all customers and DPS instances
-* *Linked IoT Hubs* – Target Azure IoT Hub instances for the DPS
-* *Allocation Policy* – As previously mentioned, the mapping of device to target Azure IoT Hub
-* *Enrollment* – The record of a device or group of devices that may register against the DPS
-* *Registration* – The record of a successful registration/provisioning of a device
-* *Operations* – The billing unit for DPS; one successfully completed request
-* *ID Scope* – Differentiates various DPS instances and tenants at the fixed, shared target endpoints
-* *Registration ID* – Uniquely identifies a device in the DPS instance
-* *Device ID* – Uniquely identifies a device in the associated IoT Hub instance
-* *Attestation mechanism* – the way a device proves its identity to the DPS
-  * *X.509 Certificates* – Digital identity based on private/public key pairs and a chain of trust; issued by a certificate authority (CA)
-  <br />Certificate rules:
-  <br />- Chain must be trusted
-  <br />- Group or individual enrollment
-  <br />- Individual overrides group
-  * TPM nonce challenge
-  <br />*Trusted Platform Module (TPM)* – a specification for storing keys or the interface for communicating with an HSM acting as a TPM; two hardware keys for the TPM:
-  <br />- *Endorsement key (EK)* – unique identifier for the TPM; read-only, injected by the manufacturer
-  <br />- *Storage root key (SRK)* – protects the TPM secrets; generated when a user takes ownership of the TPM
-  * Symmetric key
-* *Hardware security module (HSM)* – used for secure, hardware-based storage of device secrets
-* *Individual Enrollments* - An Individual enrollment is an entry for a single device that may register. Individual enrollments may use either X.509 certificates or SAS tokens (from a physical or virtual TPM) as attestation mechanisms. 
-* *Group Enrollments* - An Enrollment group is an entry for a group of devices that share a common attestation mechanism of X.509 certificates, signed by the same signing certificate, which can be the root certificate or the intermediate certificate, used to produce device certificate on physical device.
+* Azure IoT Edge is made up of three components:
+  1. *IoT Edge Runtime* - Runs on each IoT Edge device and manages the modules deployed to each device.
+  <br />System Modules
+   * *IoT Edge security daemon* - Starts each time an IoT Edge device boots and bootstraps the device by starting the IoT Edge agent.
+   * *IoT Edge agent* - Manages deployment and monitoring of modules on the IoT Edge device, including the IoT Edge hub. 
+   * *IoT Edge hub* - Handles communications between modules on the IoT Edge device, and between the device and IoT Hub
+
+  1. *IoT Edge Modules* - Containers that run Azure services, third-party services, or your own code. Modules are deployed to IoT Edge devices and execute locally on those devices.
+   * *Module image* - A package containing the software that defines a module.
+   * *Module instance* - The specific unit of computation running the module image on an IoT Edge device. The module instance is started by the IoT Edge runtime.
+   * *Module identity* - A piece of information (including security credentials) stored in IoT Hub, that is associated to each module instance.
+   * *Module twin* - A JSON document stored in IoT Hub, that contains state information for a module instance, including metadata, configurations, and conditions. 
+   * SDKs to develop custom modules in multiple languages (C#, C, Python, Java, Node.JS)
+  
+  1. *Cloud-based Interface* - Enables you to remotely monitor and manage IoT Edge devices.
+  
+* Module Twin Properties of Edge Runtime Modules:
+  * Desired and Reported properties
+  * EdgeAgent properties
+  * EdgeHub properties
+
 
 ## Resources
-* [IoT Hub Documentation](https://docs.microsoft.com/en-us/azure/iot-hub/)
+* [IoT Edge Documentation](https://docs.microsoft.com/en-us/azure/iot-edge/)
 * [IoT Technical Community](https://techcommunity.microsoft.com/t5/internet-of-things-iot/ct-p/IoT)
-* [“Building IoT Solutions with Azure” Developer Guide](https://discover.Microsoft.com/azure-iot-building-solutions-dev-guide)
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
-* [What is IoT Hub Device Provisioning Service?](https://docs.microsoft.com/en-us/azure/iot-dps/about-iot-dps)
-* [IoT Hub Device Provisioning Service concepts](https://docs.microsoft.com/en-us/azure/iot-dps/concepts-service)
-* Setup IoT Hub Device Provisioning Service
-  * [With the Azure Portal](https://docs.microsoft.com/en-us/azure/iot-dps/quick-setup-auto-provision)
-  * [With Azure Cloud Shell/Azure CLI](https://docs.microsoft.com/en-us/azure/iot-dps/quick-setup-auto-provision-cli)
-  * [With an Azure Resource Manager template](https://docs.microsoft.com/en-us/azure/iot-dps/quick-setup-auto-provision-rm)
-* [How to provision a single simulated device](https://docs.microsoft.com/en-us/azure/iot-dps/quick-create-simulated-device-symm-key)
-* [How to provision legacy devices using Symmetric key attestation](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-legacy-device-symm-key)
-* [How to provision for multitenancy](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-provision-multitenant)
-* [How to deprovision devices that were previously auto-provisioned](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-unprovision-devices)
-* [How to roll X.509 device certificates](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-roll-certificates)
-* [How to reprovision devices](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-reprovision)
-* [Custom allocation policies with Azure Functions](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-use-custom-allocation-policies)
-* [Azure IoT Hub Device Provisioning at Scale](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-auto-device-config)
-* [Use Azure IoT Hub Device Provisioning Service auto-provisioning to register the MXChip IoT DevKit with IoT Hub](https://docs.microsoft.com/en-us/azure/iot-dps/how-to-connect-mxchip-iot-devkit)
-* [Understand and use device twins in IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins)
-* [Overview of Device Management with IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-overview)
-* [Understand the Identity Registry in your IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-identity-registry)
-* [Invoke a direct method on a device](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-direct-methods)
-* [Schedule jobs on multiple devices](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-jobs)
-* [Azure IoT Central](https://azure.microsoft.com/en-us/services/iot-central/)
-* [Azure IoT Central SaaS Platform](https://apps.azureiotcentral.com/)
+* [IoT Edge Runtime](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-runtime)
+* [IoT Edge security daemon](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-security-manager)
+* [Understand Azure IoT Edge modules](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-modules)
+* [Learn how to deploy modules and establish routes in IoT Edge](https://docs.microsoft.com/en-us/azure/iot-edge/module-composition)
+* [Understand IoT Edge automatic deployments for single devices or at scale](https://docs.microsoft.com/en-us/azure/iot-edge/module-deployment-monitoring)
+* [Deploy IoT Edge modules at scale using the Azure portal](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-deploy-at-scale)
+* [Monitor IoT Edge deployments](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-monitor-iot-edge-deployments)
+* Monitor a Deployment with Azure CLI
+  * (az IoT Edge deployment show)[https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/edge/deployment?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-edge-deployment-show] command
+  * (az IoT Edge deployment show-metric)[https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/edge/deployment?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-edge-deployment-show-metric] command
+  
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
