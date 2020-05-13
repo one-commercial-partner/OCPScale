@@ -70,20 +70,20 @@
 
 ## Quick Reference: Key Concepts and Terminology
 * Azure IoT Edge is made up of three components:
-  1. *IoT Edge Runtime* - Runs on each IoT Edge device and manages the modules deployed to each device.
+  * *IoT Edge Runtime* - Runs on each IoT Edge device and manages the modules deployed to each device.
   <br />System Modules
-   * *IoT Edge security daemon* - Starts each time an IoT Edge device boots and bootstraps the device by starting the IoT Edge agent.
-   * *IoT Edge agent* - Manages deployment and monitoring of modules on the IoT Edge device, including the IoT Edge hub. 
-   * *IoT Edge hub* - Handles communications between modules on the IoT Edge device, and between the device and IoT Hub
+    * *IoT Edge security daemon* - Starts each time an IoT Edge device boots and bootstraps the device by starting the IoT Edge agent.
+    * *IoT Edge agent* - Manages deployment and monitoring of modules on the IoT Edge device, including the IoT Edge hub. 
+    * *IoT Edge hub* - Handles communications between modules on the IoT Edge device, and between the device and IoT Hub
 
-  1. *IoT Edge Modules* - Containers that run Azure services, third-party services, or your own code. Modules are deployed to IoT Edge devices and execute locally on those devices.
+  * *IoT Edge Modules* - Containers that run Azure services, third-party services, or your own code. Modules are deployed to IoT Edge devices and execute locally on those devices.
    * *Module image* - A package containing the software that defines a module.
-   * *Module instance* - The specific unit of computation running the module image on an IoT Edge device. The module instance is started by the IoT Edge runtime.
-   * *Module identity* - A piece of information (including security credentials) stored in IoT Hub, that is associated to each module instance.
-   * *Module twin* - A JSON document stored in IoT Hub, that contains state information for a module instance, including metadata, configurations, and conditions. 
-   * SDKs to develop custom modules in multiple languages (C#, C, Python, Java, Node.JS)
+    * *Module instance* - The specific unit of computation running the module image on an IoT Edge device. The module instance is started by the IoT Edge runtime.
+    * *Module identity* - A piece of information (including security credentials) stored in IoT Hub, that is associated to each module instance.
+    * *Module twin* - A JSON document stored in IoT Hub, that contains state information for a module instance, including metadata, configurations, and conditions. 
+    * SDKs to develop custom modules in multiple languages (C#, C, Python, Java, Node.JS)
   
-  1. *Cloud-based Interface* - Enables you to remotely monitor and manage IoT Edge devices.
+  * *Cloud-based Interface* - Enables you to remotely monitor and manage IoT Edge devices.
   
 * Module Twin Properties of Edge Runtime Modules:
   * Desired and Reported properties
@@ -104,8 +104,8 @@
 * [Deploy IoT Edge modules at scale using the Azure portal](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-deploy-at-scale)
 * [Monitor IoT Edge deployments](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-monitor-iot-edge-deployments)
 * Monitor a Deployment with Azure CLI
-  * (az IoT Edge deployment show)[https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/edge/deployment?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-edge-deployment-show] command
-  * (az IoT Edge deployment show-metric)[https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/edge/deployment?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-edge-deployment-show-metric] command
+  * [az IoT Edge deployment show](https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/edge/deployment?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-edge-deployment-show) command
+  * [az IoT Edge deployment show-metric](https://docs.microsoft.com/cli/azure/ext/azure-cli-iot-ext/iot/edge/deployment?view=azure-cli-latest#ext-azure-cli-iot-ext-az-iot-edge-deployment-show-metric) command
   
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
