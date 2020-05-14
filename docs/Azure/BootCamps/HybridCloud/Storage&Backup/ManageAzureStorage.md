@@ -16,13 +16,7 @@ In this lab, you will:
 + Task 5: Create and configure an Azure Files shares
 + Task 6: Manage network access for Azure Storage
 
-## Estimated timing: 40 minutes
-
-## Instructions
-
-### Exercise 1
-
-#### Task 1: Provision the lab environment
+## Task 1: Provision the lab environment
 
 In this task, you will deploy an Azure virtual machine that you will use later in this lab.
 
@@ -45,6 +39,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
    New-AzResourceGroup -Name $rgName -Location $location
    ```
+
 1. From the Cloud Shell pane, run the following to deploy thef virtual machine by using the uploaded template and parameter files:
 
    ```pwsh
@@ -59,7 +54,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Create and configure Azure Storage accounts
+## Task 2: Create and configure Azure Storage accounts
 
 In this task, you will create and configure an Azure Storage account.
 
@@ -113,9 +108,9 @@ In this task, you will create and configure an Azure Storage account.
 
     > **Note**: The cool access tier is optimal for data which is not accessed frequently.
 
-#### Task 3: Manage blob storage
+## Task 3: Manage blob storage
 
-In this task, you will create a blob container and upload a blob into it. 
+In this task, you will create a blob container and upload a blob into it.
 
 1. On the Storage account blade, in the **Blob service** section, click **Containers**.
 
@@ -148,7 +143,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Back on the **az104-07-container** blade, click **licenses** and then click **LICENSE**.
 
-1. On the **licenses/LICENSE** blade, review the available options. 
+1. On the **licenses/LICENSE** blade, review the available options.
 
     > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Cool**), acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task). 
 
@@ -232,13 +227,13 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
 
-1. On the **az104-07-vm0** blade, in the **Operations** section, click **Run command**. 
+1. On the **az104-07-vm0** blade, in the **Operations** section, click **Run command**.
 
-1. On the **az104-07-vm0 - Run command** blade, click **RunPowerShellScript**. 
+1. On the **az104-07-vm0 - Run command** blade, click **RunPowerShellScript**.
 
 1. On the **Run Command Script** blade, paste the script you copied earlier in this task into the **PowerShell Script** pane and click **Run**.
 
-1. Verify that the script completed successfully. 
+1. Verify that the script completed successfully.
 
 1. Replace the content of the **PowerShell Script** pane with the following script and click **Run**:
 
@@ -248,7 +243,7 @@ In this task, you will create and configure Azure Files shares.
    New-Item -Type File -Path 'Z:\az104-07-folder\az-104-07-file.txt'
    ```
 
-1. Verify that the script completed successfully. 
+1. Verify that the script completed successfully.
 
 1. Navigate back to the **az104-07-share** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders. 
 
@@ -276,14 +271,15 @@ In this task, you will configure network access for Azure Storage.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
 1. From the Cloud Shell pane, run the following to attempt downloading of the LICENSE blob from the **az104-07-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
 
    ```pwsh
    Invoke-WebRequest -URI '[blob SAS URL]'
    ```
-1. Verify that the download attempt failed. 
+
+1. Verify that the download attempt failed.
 
     > **Note**: You should receive the message stating **AuthorizationFailure: This request is not authorized to perform this operation**. This is expected, since you are connecting from the IP address assigned to an Azure VM hosting the Cloud Shell instance.
 
@@ -314,7 +310,7 @@ In this task, you will configure network access for Azure Storage.
 In this lab, you have:
 
 - Provisioned the lab environment
-- Created and configured Azure Storage accounts 
+- Created and configured Azure Storage accounts
 - Managed blob storage
 - Managed authentication and authorization for Azure Storage
 - Created and configured an Azure Files shares
