@@ -23,11 +23,11 @@
       }
     },
   "variables": {
-    "vmName": "az104-07-vm0",
-    "nicName": "az104-05-nic0",
-    "virtualNetworkName": "az104-05-vnet0",
-    "publicIPAddressName": "az104-05-pip0",
-    "nsgName": "az104-05-nsg0",
+    "vmName": "VM1",
+    "nicName": "VM1-nic0",
+    "virtualNetworkName": "VM1-vnet0",
+    "publicIPAddressName": "VM1-pip0",
+    "nsgName": "VM1-nsg0",
     "vnetIpPrefix": "10.70.0.0/22", 
     "subnetIpPrefix": "10.70.0.0/24", 
     "subnetName": "subnet0",
