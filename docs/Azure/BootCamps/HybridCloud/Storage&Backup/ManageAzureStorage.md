@@ -35,7 +35,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
    ```pwsh
    $location = '[Azure_region]'
 
-   $rgName = 'az104-07-rg0'
+   $rgName = 'VM1-rg0'
 
    New-AzResourceGroup -Name $rgName -Location $location
    ```
