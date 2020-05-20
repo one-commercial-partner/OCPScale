@@ -247,4 +247,4 @@ In this lab, you completed the following:
 
 ## [Continue to Backup Lab](AzureBackup.md)
 
-## [Return to Storage & Backups Labs](../index.md)
+## [Return to All Labs](../index.md)

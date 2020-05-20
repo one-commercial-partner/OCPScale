@@ -8,54 +8,66 @@ You have been tasked with evaluating the use of Azure Recovery Services for back
 
 In this lab, you will:
 
-+ Task 1: Provision the lab environment
-+ Task 2: Create a Recovery Services vault
-+ Task 3: Implement Azure virtual machine-level backup
-+ Task 4: Implement File and Folder backup
-+ Task 5: Perform file recovery by using Azure Recovery Services agent
-+ Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
-+ Task 7: Review the Azure Recovery Services soft delete functionality (optional)
++ Exercise 1: Provision the lab environment
++ Exercise 2: Create a Recovery Services vault
++ Exercise 3: Implement Azure virtual machine-level backup
++ Exercise 4: Implement File and Folder backup
++ Exercise 5: Perform file recovery by using Azure Recovery Services agent
++ Exercise6: Perform file recovery by using Azure virtual machine snapshots (optional)
++ Exercise 7: Review the Azure Recovery Services soft delete functionality (optional)
 
-## Exercise 1
+## Exercise 1: Provision Virtual Machines
 
-### Task 1: Provision the lab environment
+In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2019.
 
-In this task, you will deploy two virtual machines that will be used to test different backup scenarios.
+>**Note:** In the following steps change the `--location` valaue to a region closest to you.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
+2. If prompted, login using your Microsoft Azure Account.
+3. When the **Welcome to Azure Cloud Shell** screen appears select **Bash** as the working CLI and then **Create Storage**.  Once storage is created click **Close**.
+4. At the CLI prompt, let's create a new resource group to hold your virtual machine. Create the resource group by typing in the following command:
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+    ```PowerShell
+    az group create --name Backup-lab --location eastus
+    ```
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+5. Create a network security group:
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+    ```PowerShell
+    az network nsg create --name Backup-NSG --resource-group Backup-lab --location eastus
+    ```
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\10\\az104-10-vms-template.json** and **\\Allfiles\\Labs\\10\\az104-10-vms-parameters.json** into the Cloud Shell home directory.
+6. Create a network security group rule for port 3389.
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines):
+    ```PowerShell
+    az network nsg rule create --name PermitRDP --nsg-name Backup-NSG --priority 1000 --resource-group Backup-lab --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389
+    ```
 
-   ```pwsh
-   $location = '[Azure_region]'
+7. Create a virtual network.
 
-   $rgName = 'az104-10-rg0'
+    ```PowerShell
+    az network vnet create --name Backup-VNet --resource-group Backup-lab --address-prefixes 10.10.0.0/16 --location eastus
+    ```
 
-   New-AzResourceGroup -Name $rgName -Location $location
-   ```
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
+8. Create a subnet:
 
-   ```pwsh
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-10-vms-template.json `
-      -TemplateParameterFile $HOME/az104-10-vms-parameters.json `
-      -AsJob
-   ```
+    ```PowerShell
+    az network vnet subnet create --address-prefix 10.10.10.0/24 --name Backup-Subnet --resource-group Backup-lab --vnet-name Backup-VNet --network-security-group Backup-NSG
+    ```
 
-1. Minimize Cloud Shell (but do not close it).
+9. Create your first virtual machine:
 
-    >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 5 minutes.
+    ```PowerShell
+    az vm create --resource-group Backup-lab --name VM1 --size Standard_D2s_v3 --image Win2019Datacenter --admin-username backupadmin --admin-password Complex.Password --nsg Backup-NSG --private-ip-address 10.10.10.11 --no-wait
+    ```
 
-## Task 2: Create a Recovery Services vault
+10. Create your second virtual machine:
+
+    ```PowerShell
+    az vm create --resource-group Backup-lab --name VM2 --size Standard_D2s_v3 --image Win2019Datacenter --admin-username backupadmin --admin-password Complex.Password --nsg Backup-NSG --private-ip-address 10.10.10.12
+    ```
+
+## Exercise 2: Create a Recovery Services vault
 
 In this task, you will create a recovery services vault.
 
@@ -66,8 +78,8 @@ In this task, you will create a recovery services vault.
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-10-rg1** |
-    | Name | **az104-10-rsv1** |
+    | Resource group | **Backup-lab** |
+    | Name | **Backup-lab-rsv1** |
     | Region | the name of a region where you deployed the two virtual machines in the previous task |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
@@ -76,29 +88,29 @@ In this task, you will create a recovery services vault.
 
     >**Note**: Wait for the deployment to complete. The deployment should take less than 1 minute.
 
-1. When the deployment is completed, click **Go to Resource**. 
+1. When the deployment is completed, click **Go to Resource**.
 
-1. On the **az104-10-rsv1** Recovery Services vault blade, in the **Settings** section, click **Properties**.
+1. On the **Backup-lab-rsv1** Recovery Services vault blade, in the **Settings** section, click **Properties**.
 
-1. On the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Backup Configuration** label.
+1. On the **Backup-lab-rsv1 - Properties** blade, click the **Update** link under **Backup Configuration** label.
 
 1. On the **Backup Configuration** blade, note that you can set the **Storage replication type** to either **Locally-redundant** or **Geo-redundant**. Leave the default setting of **Geo-redundant** in place and close the blade.
 
     >**Note**: This setting can be configured only if there are no existing backup items.
 
-1. Back on the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label. 
+1. Back on the **Backup-lab-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label.
 
 1. On the **Security Settings** blade, note that **Soft Delete (For Azure Virtual Machines)** is **Enabled**.
 
-1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
+1. Close the **Security Settings** blade and, back on the **Backup-lab-rsv1** Recovery Services vault blade, click **Overview**.
 
-#### Task 3: Implement Azure virtual machine-level backup
+## Exercise 3: Implement Azure virtual machine-level backup
 
 In this task, you will implement Azure virtual-machine level backup.
 
-   >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed.
+   >**Note**: Before you start this task, make sure that VM1 and VM2 are fully provisioned.
 
-1. On the **az104-10-rsv1** Recovery Services vault blade, click **+ Backup**.
+1. On the **Backup-lab-rsv1** Recovery Services vault blade, click **+ Backup**.
 
 1. On the **Backup Goal** blade, specify the folowing settings:
 
@@ -115,47 +127,47 @@ In this task, you will implement Azure virtual-machine level backup.
 
     | Setting | Value |
     | ---- | ---- |
-    | Policy name | **az104-10-backup-policy** |
+    | Policy name | **Backup-lab-policy** |
     | Frequency | **Daily** |
     | Time | **12:00 AM** |
     | Timezone | the name of your local time zone |
     | Retain instant recovery snapshot(s) for | **2** Days(s) |
 
-1. Click **OK** to create the policy. This will automatically transition to the **Items to backup** step and open the **Select virtual machines** blade.
+1. Click **OK** to create the policy and then **Add**.
 
-1. On the **Select virtual machines** blade, select **az-104-10-vm0**, click **OK**, and, back on the **Backup** blade, click **Enable backup**.
+1. On the **Select virtual machines** blade, select **VM1** from the **Backup-lab** Resource group, click **OK**, and, back on the **Backup** blade, click **Enable backup**.
 
-    >**Note**: Wait for the backup to be enabled. This should take about 2 minutes. 
+    >**Note**: Wait for the backup to be enabled. This should take about 2 minutes.
 
-1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtual machines** entry.
+1. Navigate back to the **Backup-lab-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtual machines** entry.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade of **az104-10-vm0**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries, and click the **az104-10-vm0** entry.
+1. On the **Backup Items (Azure Virtual Machine)** blade of **VM1**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries, and click the **VM1** entry.
 
-1. On the **az104-10-vm0** Backup Item blade, click **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
+1. On the **VM1** Backup Item blade, click **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
 
-    >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
+    >**Note**: Do not wait for the backup to complete but instead proceed to the next Exercise.
 
-#### Task 4: Implement File and Folder backup
+## Exercise 4: Implement File and Folder backup
 
 In this task, you will implement file and folder backup by using Azure Recovery Services.
 
-1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-10-vm1**.
+1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **VM2**.
 
-1. On the **az104-10-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+1. On the **VM2** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
+1. When prompted, sign in by using the **backupadmin** username and **Complex.Password** password.
 
-1. Within the Remote Desktop session to the **az104-10-vm1** Azure virtual machine, in the **Server Manager** window, click **Local Server**, click **IE Enhanced Security Configuration** and turn it **Off** for Administrators.
+1. Within the Remote Desktop session to the **VM2** Azure virtual machine, in the **Server Manager** window, click **Local Server**, click **IE Enhanced Security Configuration** and turn it **Off** for Administrators.
 
-1. Within the Remote Desktop session to the **az104-10-vm1** Azure virtual machine, start Internet Explorer, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials. 
+1. Within the Remote Desktop session to the **VM2** Azure virtual machine, start Internet Explorer, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
 
-1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
+1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **Backup-lab-rsv1**.
 
-1. On the **az104-10-rsv1** Recovery Services vault blade, click **+ Backup**.
+1. On the **Backup-lab-rsv1** Recovery Services vault blade, click **+ Backup**.
 
 1. On the **Backup Goal** blade, specify the following settings:
 
@@ -230,19 +242,19 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. Switch to the Internet Explorer window displaying the Azure portal, navigate back to the Recovery Services vault blade and click **Backup items**. 
 
-1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
+1. On the **Backup-lab-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **az104-10-vm1.**.
+1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **VM1.**.
 
-#### Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
+## Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
 
 In this task, you will perform file restore by using Azure Recovery Services agent.
 
-1. Within the Remote Desktop session to **az104-10-vm1**, open File Explorer, navigate to the **C:\\Windows\\System32\\drivers\\etc\\** folder and delete the **hosts** file.
+1. Within the Remote Desktop session to **VM1**, open File Explorer, navigate to the **C:\\Windows\\System32\\drivers\\etc\\** folder and delete the **hosts** file.
 
 1. Switch to the Microsoft Azure Backup window and click **Recover data**. This will start **Recover Data Wizard**.
 
-1. On the **Getting Started** page of **Recover Data Wizard**, ensue that **This server (az104-10-vm1.)** option is selected and click **Next**.
+1. On the **Getting Started** page of **Recover Data Wizard**, ensue that **This server (VM1.)** option is selected and click **Next**.
 
 1. On the **Select Recovery Mode** page, ensure that **Individual files and folders** option is selected, and click **Next**.
 
@@ -270,9 +282,9 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Switch to the browser window running on your lab computer and displaying the Azure portal.
 
-1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-10-vm0**.
+1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **VM1**.
 
-1. On the **az104-10-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+1. On the **VM1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
@@ -280,9 +292,9 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
 
-1. Within the Remote Desktop session to the **az104-10-vm0** Azure virtual machine, in the **Server Manager** window, click **Local Server**, click **IE Enhanced Security Configuration** and turn it **Off** for Administrators.
+1. Within the Remote Desktop session to the **VM1** Azure virtual machine, in the **Server Manager** window, click **Local Server**, click **IE Enhanced Security Configuration** and turn it **Off** for Administrators.
 
-1. Within the Remote Desktop session to the **az104-10-vm0**, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
+1. Within the Remote Desktop session to the **VM1**, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
 
 1. From the Command Prompt, run the following to delete the **hosts** file:
 
@@ -292,17 +304,17 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
  
    >**Note**: You will restore this file from the Azure virtual machine-level snapshot-based backup later in this task.
 
-1. Within the Remote Desktop session to the **az104-10-vm0** Azure virtual machine, start Internet Explorer, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials. 
+1. Within the Remote Desktop session to the **VM1** Azure virtual machine, start Internet Explorer, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials. 
 
-1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
+1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **Backup-lab-rsv1**.
 
-1. On the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
+1. On the **Backup-lab-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
 
-1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine**. 
+1. On the **Backup-lab-rsv1 - Backup items** blade, click **Azure Virtual Machine**. 
 
-1. On the **Backup Items (Azure Virtual Machine)** blade, click **az104-10-vm0**.
+1. On the **Backup Items (Azure Virtual Machine)** blade, click **VM1**.
 
-1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**.
+1. On the **VM1** Backup Item blade, click **File Recovery**.
 
     >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
 
@@ -336,23 +348,23 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 #### Task 7: Review the Azure Recovery Services soft delete functionality
 
-1. On the lab computer, in the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
+1. On the lab computer, in the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **Backup-lab-rsv1**.
 
-1. On the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
+1. On the **Backup-lab-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
 
-1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
+1. On the **Backup-lab-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1**.
+1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **VM1**.
 
-1. On the **C:\\ on az104-10-vm1.** blade, click the **az104-10-vm1.** link.
+1. On the **C:\\ on VM1.** blade, click the **VM1.** link.
 
-1. On the **az104-10-vm1.** Protected Servers blade, click **Delete**.
+1. On the **VM1.** Protected Servers blade, click **Delete**.
 
 1. On the **Delete** blade, specify the following settings.
 
     | Settings | Value |
     | --- | --- |
-    | TYPE THE SERVER NAME | **az104-10-vm1.** |
+    | TYPE THE SERVER NAME | **VM1.** |
     | Reason | **Recycling Dev/Test server** |
     | Comments | **az104 10 lab** |
 
@@ -360,53 +372,53 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Enable the checkbox next to the label **There is backup data of 1 backup items associated with this server.I understand that clicking "Confirm" will permanently delete all the cloud backup data. This action cannot be undone. An alert may be sent to the administrators of this subscription notifying them of this deletion** and click **Delete**.
 
-1. Navigate back to the **az104-10-rsv1 - Backup items** blade and click **Azure Virtual Machines**.
+1. Navigate back to the **Backup-lab-rsv1 - Backup items** blade and click **Azure Virtual Machines**.
 
-1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine**. 
+1. On the **Backup-lab-rsv1 - Backup items** blade, click **Azure Virtual Machine**. 
 
-1. On the **Backup Items (Azure Virtual Machine)** blade, click **az104-10-vm0**.
+1. On the **Backup Items (Azure Virtual Machine)** blade, click **VM1**.
 
-1. On the **az104-10-vm0** Backup Item blade, click **Stop backup**. 
+1. On the **VM1** Backup Item blade, click **Stop backup**. 
 
 1. On the **Stop backup** blade, select **Delete Backup Data**, specify the following settings and click **Stop backup**:
 
     | Settings | Value |
     | --- | --- |
-    | Type the name of Backup item | **az104-10-vm0** |
+    | Type the name of Backup item | **VM1** |
     | Reason | **Others** |
     | Comments | **az104 10 lab** |
 
-1. Navigate back to the **az104-10-rsv1 - Backup items** blade and click **Refresh**.
+1. Navigate back to the **Backup-lab-rsv1 - Backup items** blade and click **Refresh**.
 
     >**Note**: The **Azure Virtual Machine** entry is still lists **1** backup item.
 
-1. Click the **Azure Virtual Machine** entry and, on the **Backup Items (Azure Virtual Machine)** blade, click the **az104-10-vm0** entry.
+1. Click the **Azure Virtual Machine** entry and, on the **Backup Items (Azure Virtual Machine)** blade, click the **VM1** entry.
 
-1. On the **az104-10-vm0** Backup Item blade, note that you have the option to **Undelete** the deleted backup. 
+1. On the **VM1** Backup Item blade, note that you have the option to **Undelete** the deleted backup. 
 
     >**Note**: This functionality is provided by the soft-delete feature, which is, by default, enabled for Azure virtual machine backups.
 
-1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, and in the **Settings** section, click **Properties**.
+1. Navigate back to the **Backup-lab-rsv1** Recovery Services vault blade, and in the **Settings** section, click **Properties**.
 
-1. On the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label. 
+1. On the **Backup-lab-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label. 
 
 1. On the **Security Settings** blade, Disable **Soft Delete (For Azure Virtual Machines)** and click **Save**.
 
     >**Note**: This will not affect items already in soft delete state.
 
-1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
+1. Close the **Security Settings** blade and, back on the **Backup-lab-rsv1** Recovery Services vault blade, click **Overview**.
 
-1. Navigate back to the **az104-10-vm0** Backup Item blade and click **Undelete**. 
+1. Navigate back to the **VM1** Backup Item blade and click **Undelete**. 
 
-1. On the **Undelete az104-10-vm0** blade, click **Undelete**. 
+1. On the **Undelete VM1** blade, click **Undelete**. 
 
-1. Wait for the undelete operation to complete, refresh the browser page, if needed, navigate back to the **az104-10-vm0** Backup Item blade, and click **Delete backup data**.
+1. Wait for the undelete operation to complete, refresh the browser page, if needed, navigate back to the **VM1** Backup Item blade, and click **Delete backup data**.
 
 1. On the **Delete Backup Data** blade, specify the following settings and click **Delete**:
 
     | Settings | Value |
     | --- | --- |
-    | Type the name of Backup item | **az104-10-vm0** |
+    | Type the name of Backup item | **VM1** |
     | Reason | **Others** |
     | Comments | **az104 10 lab** |
 
