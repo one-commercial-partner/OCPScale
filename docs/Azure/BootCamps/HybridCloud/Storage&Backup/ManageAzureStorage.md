@@ -19,7 +19,7 @@ In this lab, you will:
 
 In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2019.
 
->**Note:** In the following steps change the `--location` valaue to a region closest to you.
+>**Note:** In the following steps change the `--location` value to a region closest to you.
 
 1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
 2. If prompted, login using your Microsoft Azure Account.
