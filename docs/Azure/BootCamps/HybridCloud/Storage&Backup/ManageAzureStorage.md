@@ -28,9 +28,9 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files [vm-template.json](vm-template.json) and [parameters.json](vm-parameters.json) into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files [template.json](template.json) and [parameters.json](parameters.json) into the Cloud Shell home directory.
 
-    >**Note:** We recommended opening each file in a separate tab within your browser and then copying the URL when you upload the file.
+    >**Note:** We recommended opening each file in a separate tab within your browser and then copying the URL from the address bar when you upload the file.
 
 1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine):
 
