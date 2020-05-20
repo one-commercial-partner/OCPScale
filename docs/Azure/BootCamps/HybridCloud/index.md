@@ -4,37 +4,37 @@ If you see any changes that need to be made (typos, new steps, etc.) please subm
 
 ## Identity
 
-[Identity Lab 1 - AD Connect Infrastructure Setup](./Identity/01_HybridCloud_IdentityLab01_ADConnect.md)
+[Lab 1 - AD Connect Infrastructure Setup](./Identity/01_HybridCloud_IdentityLab01_ADConnect.md)
 
-[Identity Lab 2 - AD Connect High Availability (Optional)](./Identity/01_HybridCloud_IdentityLab02_ADConnectOptionalFeatures.md)
+[Lab 2 - AD Connect High Availability (Optional)](./Identity/01_HybridCloud_IdentityLab02_ADConnectOptionalFeatures.md)
 
-[Identity Lab 3 - AD Connect Publishing a SSO Application (Optional)](./Identity/01_HybridCloud_IdentityLab03_SSOApp(Optional).md)
+[Lab 3 - AD Connect Publishing a SSO Application (Optional)](./Identity/01_HybridCloud_IdentityLab03_SSOApp(Optional).md)
 
 ## Storage and Backup
 
-[Manage Azure Storage](./Storage&Backup/ManageAzureStorage.md)
+[Lab 1 - Manage Azure Storage](./Storage&Backup/ManageAzureStorage.md)
 
-[Azure Backup](./Storage&Backup/AzureBackup.md)
+[Lab 2 - Azure Backup](./Storage&Backup/AzureBackup.md)
 
 ## Networking
 
-[Networking Lab 1 - Virtual Networks](./Networking/03_HybridCloud_Networking_Lab01_VirtualNetworks.md)
+[Lab 1 - Virtual Networks](./Networking/03_HybridCloud_Networking_Lab01_VirtualNetworks.md)
 
-[Networking Lab 2 - Load Balancer](./Networking/03_HybridCloud_Networking_Lab02_LoadBalancer.md)
+[Lab 2 - Load Balancer](./Networking/03_HybridCloud_Networking_Lab02_LoadBalancer.md)
 
-[Networking Lab 3 - Traffic Manager](./Networking/03_HybridCloud_Networking_Lab03_TrafficManager.md)
+[Lab 3 - Traffic Manager](./Networking/03_HybridCloud_Networking_Lab03_TrafficManager.md)
 
-[Networking Lab 4 - Network Watcher](./Networking/03_HybridCloud_Networking_Lab04_NetworkWatcher.md)
+[Lab 4 - Network Watcher](./Networking/03_HybridCloud_Networking_Lab04_NetworkWatcher.md)
 
-[Networking Lab 5 - Hub and Spoke Challenge (Optional)](./Networking/03_HybridCloud_Networking_Lab06_HubSpokeChallenge.md)
+[Lab 5 - Hub and Spoke Challenge (Optional)](./Networking/03_HybridCloud_Networking_Lab06_HubSpokeChallenge.md)
 
 ## Migration
 
-[Migration Lab 1 - Database Migration Service (DMS)](./Migration/02_HybridCloud_Migration_Lab01_DMA.md)
+[Lab 1 - Database Migration Service (DMS)](./Migration/02_HybridCloud_Migration_Lab01_DMA.md)
 
-[Migration Lab 2 - Azure Site Recovery (ASR)](./Migration/02_HybridCloud_Migration_Lab02_ASR.md)
+[Lab 2 - Azure Site Recovery (ASR)](./Migration/02_HybridCloud_Migration_Lab02_ASR.md)
 
-[Migration Lab 3 - Azure Policy](02_HybridCloud_Migration_Lab03_AzurePolicy.md)
+[Lab 3 - Azure Policy](02_HybridCloud_Migration_Lab03_AzurePolicy.md)
 
 ## Architectectural Design Dession (ADS)
 

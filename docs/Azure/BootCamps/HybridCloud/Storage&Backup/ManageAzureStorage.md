@@ -14,7 +14,6 @@ In this lab, you will:
 + Task 3: Manage blob storage
 + Task 4: Manage authentication and authorization for Azure Storage
 + Task 5: Create and configure an Azure Files shares
-+ Task 6: Manage network access for Azure Storage
 
 ## Task 1: Provision the lab environment
 
@@ -214,89 +213,34 @@ In this task, you will create and configure Azure Files shares.
 
 1. On the **VM1** blade, in the **Operations** section, click **Run command**.
 
-1. On the **VM1 | Run command** blade, click **RunPowerShellScript**.
+1. On the **VM1 - Run command** blade, click **RunPowerShellScript**.
 
 1. On the **Run Command Script** blade, paste the script you copied earlier in this task into the **PowerShell Script** pane and click **Run**.
 
-1. Verify that the script completed successfully.
+1. Verify that the script completed successfully.  You should have the letter Z: mapped to the Azure Files share. (How cool is that!)
 
 1. Replace the content of the **PowerShell Script** pane with the following script and click **Run**:
 
    ```pwsh
    New-Item -Type Directory -Path 'Z:\storage-lab-folder'
 
-   New-Item -Type File -Path 'Z:\storage-lab-folder\az-104-07-file.txt'
+   New-Item -Type File -Path 'Z:\storage-lab-folder\storage-lab-file.txt'
    ```
 
 1. Verify that the script completed successfully.
 
-1. Navigate back to the **storage-lab-share** file share blade, click **Refresh**, and verify that **storage-lab-folder** appears in the list of folders. 
+1. Navigate back to the **storage-lab-share** file share blade, click **Refresh**, and verify that **storage-lab-folder** appears in the list of folders.
 
 1. Click **storage-lab-folder** and verify that **storage-lab-file.txt** appears in the list of files.
 
-#### Task 6: Manage network access for Azure Storage
+## Review
 
-In this task, you will configure network access for Azure Storage.
+In this lab, you completed the following:
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Settings** section, click **Firewalls and virtual networks**.
++ Task 1: Provision the lab environment
++ Task 2: Create and configure Azure Storage accounts
++ Task 3: Manage blob storage
++ Task 4: Manage authentication and authorization for Azure Storage
++ Task 5: Create and configure an Azure Files shares
 
-1. Click the **Selected networks** option and review the configuration settings that become available once this option is enabled.
-
-    > **Note**: You can use these settings to configure direct connectivity between Azure virtual machines on designated subnets of virtual networks and the storage account by using service endpoints. 
-
-1. Click the checkbox **Add your client IP address** and save the change.
-
-1. Open another browser window by using InPrivate mode and navigate to the blob SAS URL you generated in the previous task. 
-
-1. You should be presented with the content of **The MIT License (MIT)** page.
-
-    > **Note**: This is expected, since you are connecting from your client IP address.
-
-1. Close the InPrivate mode browser window, return to the browser window showing the **localfiles** blade of the Azure Storage container, and open Azure Cloud Shell pane.
-
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
-
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
-
-1. From the Cloud Shell pane, run the following to attempt downloading of the LICENSE blob from the **storage-lab-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
-
-   ```pwsh
-   Invoke-WebRequest -URI '[blob SAS URL]'
-   ```
-
-1. Verify that the download attempt failed.
-
-    > **Note**: You should receive the message stating **AuthorizationFailure: This request is not authorized to perform this operation**. This is expected, since you are connecting from the IP address assigned to an Azure VM hosting the Cloud Shell instance.
-
-1. Close the Cloud Shell pane.
-
-#### Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```pwsh
-   Get-AzResourceGroup -Name 'az104-07*'
-   ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```pwsh
-   Get-AzResourceGroup -Name 'az104-07*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
-
-#### Review
-
-In this lab, you have:
-
-- Provisioned the lab environment
-- Created and configured Azure Storage accounts
-- Managed blob storage
-- Managed authentication and authorization for Azure Storage
-- Created and configured an Azure Files shares
-- Managed network access for Azure Storage
+**DON'T FORGET TO CLEAN OUT THE RESOURCES IN YOUR SUBSCRIPTION!**
