@@ -243,6 +243,8 @@ In this lab, you completed the following:
 + Task 4: Manage authentication and authorization for Azure Storage
 + Task 5: Create and configure an Azure Files shares
 
-**DON'T FORGET TO CLEAN OUT THE RESOURCES IN YOUR SUBSCRIPTION!**
+**If you are moving to the Backup lab, you'll need VM1 for that lab, otherwise you can delete all the resources from your subscription.**
 
-## [Return to Sorage & Backups Labs](index.md)
+## [Continue to Backup Lab](AzureBackup.md)
+
+## [Return to Storage & Backups Labs](../index.md)

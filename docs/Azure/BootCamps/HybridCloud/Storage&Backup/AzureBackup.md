@@ -55,7 +55,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 5 minutes.
 
-#### Task 2: Create a Recovery Services vault
+## Task 2: Create a Recovery Services vault
 
 In this task, you will create a recovery services vault.
 
