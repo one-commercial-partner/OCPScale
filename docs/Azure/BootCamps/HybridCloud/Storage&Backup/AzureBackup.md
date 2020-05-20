@@ -182,7 +182,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Prepare infrastructure** blade, click the **Download Agent for Windows Server or Windows Client** link.
 
-1. When prompted, click **Run** to start installation of **MARSAgentInstaller.exe** with the default settings. 
+1. When prompted, click **Run** to start installation of **MARSAgentInstaller.exe** with the default settings.
 
     >**Note**: On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option.
 
@@ -240,13 +240,13 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. When the backup is complete, click **Close**, and then close Microsoft Azure Backup.
 
-1. Switch to the Internet Explorer window displaying the Azure portal, navigate back to the Recovery Services vault blade and click **Backup items**. 
+1. Switch to the Internet Explorer window displaying the Azure portal, navigate back to the Recovery Services vault blade and click **Backup items**.
 
 1. On the **Backup-lab-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
 1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **VM1.**.
 
-## Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
+## Exercise 5: Perform file recovery by using Azure Recovery Services agent (optional)
 
 In this task, you will perform file restore by using Azure Recovery Services agent.
 
