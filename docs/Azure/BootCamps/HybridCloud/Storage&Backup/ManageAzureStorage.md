@@ -16,45 +16,55 @@ In this lab, you will:
 + Task 5: Create and configure an Azure Files shares
 + Task 6: Manage network access for Azure Storage
 
+
 ## Task 1: Provision the lab environment
 
-In this task, you will deploy an Azure virtual machine that you will use later in this lab.
+In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2019.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
+2. If prompted, login using your Microsoft Azure Account.
+3. When the **Welcome to Azure Cloud Shell** screen appears select **Bash** as the working CLI and then **Create Storage**.  Once storage is created click **Close**.
+4. At the CLI prompt, let's create a new resource group to hold your Domain Controller. Create the resource group by typing in the following command:
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+    ```PowerShell
+    az group create --name Storage-Lab --location eastus
+    ```
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+5. Create a network security group:
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
+    ```PowerShell
+    az network nsg create --name Storage-NSG --resource-group Storage-Lab --location eastus
+    ```
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files [template.json](template.json) and [parameters.json](parameters.json) into the Cloud Shell home directory.
+6. Create a network security group rule for port 3389.
 
-    >**Note:** We recommended opening each file in a separate tab within your browser and then copying the URL from the address bar when you upload the file.
+    ```PowerShell
+    az network nsg rule create --name PermitRDP --nsg-name Storage-NSG --priority 1000 --resource-group Storage-Lab --access Allow --source-address-prefixes "*" --source-port-ranges "*" --direction Inbound --destination-port-ranges 3389
+    ```
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine):
+7. Create a virtual network.
 
-   ```pwsh
-   $location = '[Azure_region]'
+    ```PowerShell
+    az network vnet create --name Storage-VNet --resource-group Storage-Lab --address-prefixes 10.10.0.0/16 --location eastus
+    ```
 
-   $rgName = 'VM1-rg0'
+8. Create a subnet:
 
-   New-AzResourceGroup -Name $rgName -Location $location
-   ```
+    ```PowerShell
+    az network vnet subnet create --address-prefix 10.10.10.0/24 --name Storage-Subnet --resource-group Storage-Lab --vnet-name Storage-VNet --network-security-group Storage-NSG
+    ```
 
-1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
+9. Create your virtual machine:.
 
-   ```pwsh
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-07-vm-template.json `
-      -TemplateParameterFile $HOME/az104-07-vm-parameters.json `
-      -AsJob
-   ```
+    ```PowerShell
+    az vm create --resource-group Storage-Lab --name VM1 --size Standard_D2s_v3 --image Win2019Datacenter --admin-username storadmin --admin-password Complex.Password --nsg Storage-NSG --private-ip-address 10.10.10.11
+    ```
 
-    >**Note**: Do not wait for the deployments to complete, but proceed to the next task.
+    > It will take several minutes to provision the virtual machine.  We suggest you write down the credentials to VM1.
 
-1. Close the Cloud Shell pane.
+10. Close Azure Shell.
+
+
 
 ## Task 2: Create and configure Azure Storage accounts
 
