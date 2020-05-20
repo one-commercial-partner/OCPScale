@@ -13,8 +13,6 @@ In this lab, you will:
 + Exercise 3: Implement Azure virtual machine-level backup
 + Exercise 4: Implement File and Folder backup
 + Exercise 5: Perform file recovery by using Azure Recovery Services agent
-+ Exercise6: Perform file recovery by using Azure virtual machine snapshots (optional)
-+ Exercise 7: Review the Azure Recovery Services soft delete functionality (optional)
 
 ## Exercise 1: Provision Virtual Machines
 
@@ -244,21 +242,21 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Backup-lab-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **VM1.**.
+1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **VM2**.
 
 ## Exercise 5: Perform file recovery by using Azure Recovery Services agent (optional)
 
 In this task, you will perform file restore by using Azure Recovery Services agent.
 
-1. Within the Remote Desktop session to **VM1**, open File Explorer, navigate to the **C:\\Windows\\System32\\drivers\\etc\\** folder and delete the **hosts** file.
+1. Within the Remote Desktop session to **VM2**, open File Explorer, navigate to the **C:\\Windows\\System32\\drivers\\etc\\** folder and delete the **hosts** file.
 
 1. Switch to the Microsoft Azure Backup window and click **Recover data**. This will start **Recover Data Wizard**.
 
-1. On the **Getting Started** page of **Recover Data Wizard**, ensue that **This server (VM1.)** option is selected and click **Next**.
+1. On the **Getting Started** page of **Recover Data Wizard**, ensue that **This server (VM2)** option is selected and click **Next**.
 
 1. On the **Select Recovery Mode** page, ensure that **Individual files and folders** option is selected, and click **Next**.
 
-1. On the **Select Volume and Date** page, in the **Select the volume** drop down list, select **C:\\**, accept the default selection of the available backup, and click **Mount**. 
+1. On the **Select Volume and Date** page, in the **Select the volume** drop down list, select **C:\\**, accept the default selection of the available backup, and click **Mount**.
 
     >**Note**: Wait for the mount operation to complete. This might take about 2 minutes.
 
@@ -272,186 +270,16 @@ In this task, you will perform file restore by using Azure Recovery Services age
    robocopy [recovery_volume]:\Windows\System32\drivers\etc C:\Windows\system32\drivers\etc hosts /r:1 /w:1
    ```
 
-1. Switch back to the **Recover Data Wizard** and, on the **Browse and Recover Files**, click **Unmount** and, when prompted to confirm, click **Yes**. 
+1. Switch back to the **Recover Data Wizard** and, on the **Browse and Recover Files**, click **Unmount** and, when prompted to confirm, click **Yes**.
 
 1. Terminate the Remote Desktop session.
 
-#### Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
-
-In this task, you will restore a file from the Azure virtual machine-level snapshot-based backup.
-
-1. Switch to the browser window running on your lab computer and displaying the Azure portal.
-
-1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **VM1**.
-
-1. On the **VM1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
-
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
-
-    >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
-
-1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
-
-1. Within the Remote Desktop session to the **VM1** Azure virtual machine, in the **Server Manager** window, click **Local Server**, click **IE Enhanced Security Configuration** and turn it **Off** for Administrators.
-
-1. Within the Remote Desktop session to the **VM1**, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
-
-1. From the Command Prompt, run the following to delete the **hosts** file:
-
-   ```
-   del C:\Windows\system32\drivers\etc\hosts
-   ```
- 
-   >**Note**: You will restore this file from the Azure virtual machine-level snapshot-based backup later in this task.
-
-1. Within the Remote Desktop session to the **VM1** Azure virtual machine, start Internet Explorer, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials. 
-
-1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **Backup-lab-rsv1**.
-
-1. On the **Backup-lab-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
-
-1. On the **Backup-lab-rsv1 - Backup items** blade, click **Azure Virtual Machine**. 
-
-1. On the **Backup Items (Azure Virtual Machine)** blade, click **VM1**.
-
-1. On the **VM1** Backup Item blade, click **File Recovery**.
-
-    >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
-
-1. On the **File Recovery** blade, accept the default recovery point and click **Download Executable**.
-
-    >**Note**: The script mounts the disks from the selected recovery point as local drives within the operating system from which the script is run.
-
-1. Click **Download** and, when prompted whether to run or save **IaaSVMILRExeForWindows.exe**, click **Run**.
-
-1. When prompted to provide the password from the portal, copy the password from the **Password to run the script** text box on the **File Recovery** blade, paste it at the Command Prompt, and press **Enter**.
-
-    >**Note**: This will open a Windows PowerShell window displaying the progress of the mount.
-
-    >**Note**: If you receive an error message at this point, refresh the Internet Explorer window and repeat the last three steps.
-
-1. Wait for the mount process to complete, review the informational messages in the Windows PowerShell window, note the drive letter assigned to the volume hosting **Windows**, and start File Explorer.
-
-1. In File Explorer, navigate to the drive letter hosting the snapshot of the operating system volume you identified in the previous step and review its content.
-
-1. Switch to the **Command Prompt** window.
-
-1. From the Command Prompt, run the following to copy the restore the **hosts** file to the original location (replace `[os_volume]` with the drive letter of the operating system volume you identified earlier):
-
-   ```
-   robocopy [os_volume]:\Windows\System32\drivers\etc C:\Windows\system32\drivers\etc hosts /r:1 /w:1
-   ```
-
-1. Switch back to the **File Recovery** blade in the Azure portal and click **Unmount Disks**.
-
-1. Terminate the Remote Desktop session.
-
-#### Task 7: Review the Azure Recovery Services soft delete functionality
-
-1. On the lab computer, in the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **Backup-lab-rsv1**.
-
-1. On the **Backup-lab-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
-
-1. On the **Backup-lab-rsv1 - Backup items** blade, click **Azure Backup Agent**.
-
-1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **VM1**.
-
-1. On the **C:\\ on VM1.** blade, click the **VM1.** link.
-
-1. On the **VM1.** Protected Servers blade, click **Delete**.
-
-1. On the **Delete** blade, specify the following settings.
-
-    | Settings | Value |
-    | --- | --- |
-    | TYPE THE SERVER NAME | **VM1.** |
-    | Reason | **Recycling Dev/Test server** |
-    | Comments | **az104 10 lab** |
-
-    >**Note**: Make sure to include the trailing period when typing the server name
-
-1. Enable the checkbox next to the label **There is backup data of 1 backup items associated with this server.I understand that clicking "Confirm" will permanently delete all the cloud backup data. This action cannot be undone. An alert may be sent to the administrators of this subscription notifying them of this deletion** and click **Delete**.
-
-1. Navigate back to the **Backup-lab-rsv1 - Backup items** blade and click **Azure Virtual Machines**.
-
-1. On the **Backup-lab-rsv1 - Backup items** blade, click **Azure Virtual Machine**. 
-
-1. On the **Backup Items (Azure Virtual Machine)** blade, click **VM1**.
-
-1. On the **VM1** Backup Item blade, click **Stop backup**. 
-
-1. On the **Stop backup** blade, select **Delete Backup Data**, specify the following settings and click **Stop backup**:
-
-    | Settings | Value |
-    | --- | --- |
-    | Type the name of Backup item | **VM1** |
-    | Reason | **Others** |
-    | Comments | **az104 10 lab** |
-
-1. Navigate back to the **Backup-lab-rsv1 - Backup items** blade and click **Refresh**.
-
-    >**Note**: The **Azure Virtual Machine** entry is still lists **1** backup item.
-
-1. Click the **Azure Virtual Machine** entry and, on the **Backup Items (Azure Virtual Machine)** blade, click the **VM1** entry.
-
-1. On the **VM1** Backup Item blade, note that you have the option to **Undelete** the deleted backup. 
-
-    >**Note**: This functionality is provided by the soft-delete feature, which is, by default, enabled for Azure virtual machine backups.
-
-1. Navigate back to the **Backup-lab-rsv1** Recovery Services vault blade, and in the **Settings** section, click **Properties**.
-
-1. On the **Backup-lab-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label. 
-
-1. On the **Security Settings** blade, Disable **Soft Delete (For Azure Virtual Machines)** and click **Save**.
-
-    >**Note**: This will not affect items already in soft delete state.
-
-1. Close the **Security Settings** blade and, back on the **Backup-lab-rsv1** Recovery Services vault blade, click **Overview**.
-
-1. Navigate back to the **VM1** Backup Item blade and click **Undelete**. 
-
-1. On the **Undelete VM1** blade, click **Undelete**. 
-
-1. Wait for the undelete operation to complete, refresh the browser page, if needed, navigate back to the **VM1** Backup Item blade, and click **Delete backup data**.
-
-1. On the **Delete Backup Data** blade, specify the following settings and click **Delete**:
-
-    | Settings | Value |
-    | --- | --- |
-    | Type the name of Backup item | **VM1** |
-    | Reason | **Others** |
-    | Comments | **az104 10 lab** |
-
-#### Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```pwsh
-   Get-AzResourceGroup -Name 'az104-10*'
-   ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```pwsh
-   Get-AzResourceGroup -Name 'az104-10*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-   >**Note**: Optionally, you might consider deleting the auto-generated resource group with the prefix **AzureBackupRG_** (there is no additional charge associated with its existence).
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
-
-#### Review
+## Review
 
 In this lab, you have:
 
-- Provisioned the lab environment
-- Created a Recovery Services vault
-- Implemented Azure virtual machine-level backup
-- Implemented File and Folder backup
-- Performed file recovery by using Azure Recovery Services agent
-- Performed file recovery by using Azure virtual machine snapshots
-- Reviewed the Azure Recovery Services soft delete functionality
++ Exercise 1: Provision the lab environment
++ Exercise 2: Create a Recovery Services vault
++ Exercise 3: Implement Azure virtual machine-level backup
++ Exercise 4: Implement File and Folder backup
++ Exercise 5: Perform file recovery by using Azure Recovery Services agent
