@@ -106,6 +106,12 @@
     * In-line query handling in a language besides C# or JavaScript (e. g. Java; Spark Structured Streaming or specialized Azure Event Hubs implementation are good choices here)
     * Multi-cloud support (Azure Stream Analytics is Azure-specific; Spark Structured Streaming, Storm, etc. will work here)
 
+* Why use Time Series Insights?
+  * Time Series Insights gives a business the ability to examine historical data over long periods of time, including:
+  * Discovery of data
+  * Trending of data over time
+  * Anomaly detection over time with basic machine learning
+
 ## Resources
 * [IoT Technical Community](https://techcommunity.microsoft.com/t5/internet-of-things-iot/ct-p/IoT)
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
@@ -117,7 +123,7 @@
 * [Stream Analytics Query Patterns](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-stream-analytics-query-patterns)
 * [Stream Analytics Window Functions](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-window-functions)
 * [Stream Analytics Query Language Reference](https://docs.microsoft.com/en-us/stream-analytics-query/stream-analytics-query-language-reference?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fstream-analytics%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fbread%2Ftoc.json)
-* [Stream Analytics Outputs[(https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-define-outputs)
+* [Stream Analytics Outputs](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-define-outputs)
 * [Stream Analytics Solution Patterns](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-solution-patterns)
 * [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
 * [Run Azure Functions from Azure Stream Analytics jobs](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-with-azure-functions)
