@@ -283,3 +283,5 @@ In this lab, you have:
 + Exercise 3: Implement Azure virtual machine-level backup
 + Exercise 4: Implement File and Folder backup
 + Exercise 5: Perform file recovery by using Azure Recovery Services agent
+
+## [Return to All Labs](../index.md)
