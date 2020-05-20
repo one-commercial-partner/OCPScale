@@ -85,6 +85,27 @@
     * IoT Hub message routing maintains the order in which messages are sent
     * Event Grid does not guarantee that endpoints will receive events in the same order that they occurred
 
+* Azure Stream Analytics (ASA) Data Flow
+  * A *job* consists of an input, query, and an output
+  * *Input* – ASA can ingest data from Azure Event Hubs, Azure IoT Hub, or Azure Blob Storage
+  * *Query* – ASA uses a SQL-like query language that includes support for filtering, sorting, aggregating, joining, and user-defined functions
+  * *Output* – ASA can output to many targets
+  
+* ASA input types
+  * *Data stream input* – an unbounded sequence of events over time
+  * *Reference data input* – static (or slowly changing) data used for lookups and correlation
+
+* ASA and other Streaming Technologies
+  * When to use Azure Stream Analytics
+    * Recommended tool for analytics on Azure
+    * Dashboards for data visualization
+    * Real-time alerts from temporal and spatial patterns or anomalies
+    * Basic Extract, Transform, and Load (ETL) work
+  * When to use other technologies
+    * Apache Kafka connectivity (Azure Event Hubs are a good choice here)
+    * In-line query handling in a language besides C# or JavaScript (e. g. Java; Spark Structured Streaming or specialized Azure Event Hubs implementation are good choices here)
+    * Multi-cloud support (Azure Stream Analytics is Azure-specific; Spark Structured Streaming, Storm, etc. will work here)
+
 ## Resources
 * [IoT Technical Community](https://techcommunity.microsoft.com/t5/internet-of-things-iot/ct-p/IoT)
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
@@ -93,7 +114,13 @@
 * [Tutorial: Message Enrichments](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-message-enrichments)
 * [IoT Hub Metrics](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-metrics)
 * [Azure Stream Analytics (ASA)](https://docs.microsoft.com/en-us/azure/stream-analytics/)
-* [ASA Window Functions](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-window-functions)
+* [Stream Analytics Query Patterns](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-stream-analytics-query-patterns)
+* [Stream Analytics Window Functions](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-window-functions)
+* [Stream Analytics Query Language Reference](https://docs.microsoft.com/en-us/stream-analytics-query/stream-analytics-query-language-reference?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fstream-analytics%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fbread%2Ftoc.json)
+* [Stream Analytics Outputs[(https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-define-outputs)
+* [Stream Analytics Solution Patterns](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-solution-patterns)
+* [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
+* [Run Azure Functions from Azure Stream Analytics jobs](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-with-azure-functions)
 * [Tutorial: Time Series Insights](https://docs.microsoft.com/en-us/azure/time-series-insights/tutorial-create-populate-tsi-environment)
 * [Create IoT Hub and Device to Cloud Consumer Group](https://github.com/Azure/azure-quickstart-templates/tree/master/101-iothub-with-consumergroup-create)
 
