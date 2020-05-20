@@ -191,12 +191,11 @@ In this task, you will configure authentication and authorization for Azure Stor
 
     > **Note**: Save the blob SAS URL. You will need it later in this lab.
 
-
 ## Task 5: Create and configure an Azure Files shares
 
 In this task, you will create and configure Azure Files shares.
 
-   > **Note**: Before you start this task, verify that the virtual machine you provisioned in the first task of this lab is running.
+   > **Note**: Before you start this task, verify that VM1 you provisioned in the first task of this lab is running.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **File service** section, click **File shares**.
 
@@ -204,18 +203,18 @@ In this task, you will create and configure Azure Files shares.
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-07-share** |
+    | Name | **storage-lab-share** |
     | Quota | **1024** |
 
 1. Click the newly created file share and click **Connect**.
 
 1. On the **Connect** blade, ensure that the **Windows** tab is selected, and click **Copy to clipboard**.
 
-1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
+1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **VM1**.
 
-1. On the **az104-07-vm0** blade, in the **Operations** section, click **Run command**.
+1. On the **VM1** blade, in the **Operations** section, click **Run command**.
 
-1. On the **az104-07-vm0 - Run command** blade, click **RunPowerShellScript**.
+1. On the **VM1 | Run command** blade, click **RunPowerShellScript**.
 
 1. On the **Run Command Script** blade, paste the script you copied earlier in this task into the **PowerShell Script** pane and click **Run**.
 
@@ -224,16 +223,16 @@ In this task, you will create and configure Azure Files shares.
 1. Replace the content of the **PowerShell Script** pane with the following script and click **Run**:
 
    ```pwsh
-   New-Item -Type Directory -Path 'Z:\az104-07-folder'
+   New-Item -Type Directory -Path 'Z:\storage-lab-folder'
 
-   New-Item -Type File -Path 'Z:\az104-07-folder\az-104-07-file.txt'
+   New-Item -Type File -Path 'Z:\storage-lab-folder\az-104-07-file.txt'
    ```
 
 1. Verify that the script completed successfully.
 
-1. Navigate back to the **az104-07-share** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders. 
+1. Navigate back to the **storage-lab-share** file share blade, click **Refresh**, and verify that **storage-lab-folder** appears in the list of folders. 
 
-1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
+1. Click **storage-lab-folder** and verify that **storage-lab-file.txt** appears in the list of files.
 
 #### Task 6: Manage network access for Azure Storage
 
