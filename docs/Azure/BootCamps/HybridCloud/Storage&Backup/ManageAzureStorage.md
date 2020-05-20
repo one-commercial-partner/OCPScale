@@ -244,3 +244,5 @@ In this lab, you completed the following:
 + Task 5: Create and configure an Azure Files shares
 
 **DON'T FORGET TO CLEAN OUT THE RESOURCES IN YOUR SUBSCRIPTION!**
+
+## [Return to Sorage & Backups Labs](index.md)
