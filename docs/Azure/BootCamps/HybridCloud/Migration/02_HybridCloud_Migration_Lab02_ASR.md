@@ -8,15 +8,19 @@ Please note that using this approach represents `the fastest way` to migrate a V
 
 In this task you use the Azure CLI to create an Azure Virtual Machine running Windows Server 2016, and install IIS.
 
+### Task 1 - Provision a Virtual Machine
+
 1. Open an Azure CLI window by browsing to [Azure Shell](https://shell.azure.com).
 2. Login using your Microsoft Account.
 3. If prompted, select the default AAD directory.
-4. If a Welcome to Azure Cloud Shell prompt appears after logon, select Bash as the working CLI. If it does not appear, you can select PowerShell from the dropdown in the upper-left corner once a CLI prompt is presented to you. Note that you may need to provision a new CLI storage account to save your settings.
+4. If a Welcome to Azure Cloud Shell prompt appears after logon, select Bash as the working CLI. If it does not appear, you can select Bash from the dropdown in the upper-left corner once a CLI prompt is presented to you. Note that you may need to provision a new CLI storage account to save your settings.
 5. At the CLI prompt, let's create a new resource group to hold your IIS VM. Create the resource group by typing in the following command:
 
     `az group create --name Migration --location eastus`
 
-6. Create the VM by typing in the following command, *note **changing your first name***:
+6. Create the VM by typing in the following command
+
+    >Note: Change your first name and if needed, location to an appropriate Region.
 
     `az vm create --resource-group Migration --name IIS --location eastus --image win2016datacenter
  --admin-username *yourfirstname*
@@ -25,35 +29,40 @@ In this task you use the Azure CLI to create an Azure Virtual Machine running Wi
 7. Once the VM is created, let's open port 80 so we can access the VM's website from the internet. Run the follwing command:
 
     `az vm open-port --port 80 --resource-group Migration --name IIS`
-8. Now let's install IIS using PowerShell. RDP into the IIS VM, open **Windows Powershell** and enter the following:
+
+### Task 2 - Install IIS
+
+Now let's install IIS using PowerShell.
+
+1. RDP into the IIS VM, open **Windows PowerShell** and enter the following:
 
     `Install-WindowsFeature -name "Web-Server" -IncludeManagementTools`
-9. Get the public IP of IIS by running the following command:
-
-    `az network public-ip show --resource-group Migration --name IISPublicIP`
 
 ## Exercise 2 - Create target resources
 
 We could have ASR automatically create the target resources (i.e. Resource groups, virtual networks, and subnets) but in a more realistic scenario you'd want to pre-create these resources and place your migrated VMs in specific networks.
 
-### Create Target Resource Groups
+### Task 1 - Create Target Resource Groups
 
-1. Click on **Microsoft Azure > Resource groups > +Add**.
-2. Enter the following and then click **Create**:
+1. Back on your desktop and in the Azure Portal, click on **Microsoft Azure > Resource groups > +Add**.
+2. Enter the following: 
     * Resource group: **Target-RG**
-    * Region: **(US)West US**
-    * click **Review + Create**
+    * Region: **(US) West US**
+    * Click **Review + Create**
+    * Click **Create**
 
-### Create Target Virtual Networks
+### Task 2 - Create Target Virtual Networks
 
-1. Click on **Microsoft Azure > Virtual networks > +Add**
-2. Enter the following and then click **Create**:
+1. Click on **Microsoft Azure > Networking >** and then type in the search box **Virtual networks**.
+2. Enter the following:
     * Name: **Target-vNet**
-    * Address Space: **10.100.0.0/16**
     * Resource Group: **Target-RG**
-    * Location: **(US)West US**
-    * Subnet Name: **Target-subnet**
-    * Subnet address range: **10.100.10.0/24**
+    * Location: **(US) West US**
+    * Click **Next: IP Addresses >**
+3. Click on the trash can to remove the existing IPv4 address space.
+4. Under **IPv4 address space** enter **10.100.0.0/16**.
+5. Click on **+ Add subnet** and enter **Target-subnet** as the Subnet name and **10.100.10.0/24** as the subnet address range.
+6. Click **Add**, then **Review + Create**, then **Create**.
 
 ## Exercise 3 - Create a Recovery Services vault
 

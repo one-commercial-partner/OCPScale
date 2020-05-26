@@ -16,25 +16,25 @@ There is no significant time saving between either option.
 
 1. Log in to the Azure portal using your account.
 2. On the Azure portal, click **+Create a resource**.
-3. In the search field, type **SQL Server 2017  on Windows Server 2016** and press **ENTER**.
-4. Under Select a software plan choose Select the **SQL Server 2017 Standard on Windows Server 2016 Database Engine Only** and click **Create**.
-5. Enter the following and then click **OK**.
+3. In the search field, type **SQL Server 2017  on Windows Server 2019** and press **ENTER**.
+4. Under **Select a software plan** choose select the **SQL Server 2017 Standard on Windows Server 2019** and click **Create**.
+5. Enter the following:
     * Resource Group: *create new* **SQLMIG**
     * Virtual Machine Name: **SQLVM**
     * Region: Choose a supported region
     * Availability Options: No infrastructure redundancy required
     * Size: Select **D2s_v3**
-    * Username: `pick one` *and write it down*
+    * Username: `yourfirstname`
     * Password: `Complex.Password`
     * Confirm Password: `Complex.Password`
     * Public inbound ports: **Allow selected ports**
     * Select inbound ports: **RDP (3389)**
-6. Click on the **SQL Server settings** blade and complete the following:
-    * In the SQL connectivity drop-down, select **Public (Internet)**. This allows SQL Server connections over the internet.
-    * Change the Port to **1401** to avoid using a well-known port name in the public scenario.
-    * Under **SQL Authentication**, click **Enable**. The SQL Login is set to the same user name and password that you configured for the VM.
-7. Click **Review + create** to complete the configuration of the SQL Server VM. Once validation passes, click **Create** to build your VM.  Note that it may take 10-15 minutes to build out your virtual machine with SQL installed.
-8. While your VM is building, this is a great opportunity to take a break or have open dialogue with the group on any topics related to Azure.
+6. Click **Next: Disks >**
+7. Click on the **SQL Server settings** blade and complete the following:
+    * SQL connectivity: **Public (Internet)**
+    * Port: **1401** (to avoid using a well-known port name in the public scenario)
+    * SQL Authentication: click **Enable**. 
+8. Click **Review + create** to complete the configuration of the SQL Server VM. Once validation passes, click **Create** to build your VM.  Note that it may take 10-15 minutes to build out your virtual machine with SQL installed.
 
 ## Exercise 2 - Connect to the SQL VM
 
@@ -48,7 +48,7 @@ There is no significant time saving between either option.
 
 Before you can complete this section, you will need to map a drive to an Azure File Share to obtain sample data.
 
-1. Open a command prompt.
+1. From **SQLVM**, open a command prompt (Start/Windows System).
 2. Key in (cut and paste) the following and hit **enter**:
 
     `net use Z: \\wagsazurefiles.file.core.windows.net\sampledata /u:AZURE\wagsazurefiles tCfYh37xGNjIc0czqfTW9+kUHIIhlxRUPh9h4YtD/hh7FiFPn1v32RH7uV0a83E6nAa6kkVU6d+nAAeoBItpJg==`
@@ -58,7 +58,7 @@ Before you can complete this section, you will need to map a drive to an Azure F
 
 ## Exercise 4 - Connect to SQL
 
-1. Back on the desktop click the **Start Button**,  under the letter "M" choose **Microsoft SQL Server Tools 17** and then **Microsoft SQL Server Management Studio**.  It might take a few seconds for Management Studio to fire up.
+1. Back on the desktop of **SQLVM** click the **Start Button**,  under the letter "M" choose **Microsoft SQL Server Tools 18** and then **Microsoft SQL Server Management Studio**.  It might take a few seconds for Management Studio to fire up.
 2. In the **Connect to Server** or **Connect to Database Engine** dialog box, ensure the Server name value is  **SQLVM**.
 3. In the Authentication box, select **SQL Server Authentication**.
 4. In the Login box, type the name of the SQL login you created during  the previous exercise.
@@ -67,26 +67,27 @@ Before you can complete this section, you will need to map a drive to an Azure F
 
 ## Exercise 5 - Create a new Database and Import Data
 
-1. Under **SQLVM**, right-click **Databases** then **New Database ...**
+1. Under **SQLVM**, select and right-click **Databases** then **New Database ...**
 2. Enter **SampleData** as the Database name and click **OK**.
-3. Once the database is created, right-click **SampleData**, then **Tasks**, then **Import Flat File**.
+3. Once the database is created, expand Databases and then right-click **SampleData**, then **Tasks**, then **Import Flat File**.
 4. On the Introduction screen click **Next**.
 5. On the **Specify Input File** screen select click **Browse**, then select  the Z: Drive, then **sampledata.txt**, then click **Open**, then click **Next**.
 6. Review the information on the **Preview Data screen** and click **Next**.
-7. On the **Modify Columns screen** set *zip* as the Primary Key, enable **Allow Nulls** on all columns, and then click **Next**.
+7. On the **Modify Columns screen** set `zip` as the Primary Key, enable **Allow Nulls** on all columns, and then click **Next**.
 8. Click **Finish** on the Summary screen.
 9. Click **Close** on the Results screen.
 
 ## Exercise 6 - Install the Data Migration Assistant
 
-1. From  **SQLVM** or your local Windows computer open a web browser.  Search for, download,  and install the [Data Migration Assistant (DMA)](https://www.microsoft.com/download/details.aspx?id=53595) v5.0 or later using the default settings.  If you are using a non-Windows computer, RDP into an existing VM from a previous lab and install DMA there.
+1. Disable Internet Explorer ESC in Server Manager for Administrators.
+2. From  **SQLVM** or your local Windows computer open a web browser.  Search for, download,  and install the [Data Migration Assistant (DMA)](https://www.microsoft.com/download/details.aspx?id=53595) v5.2 or later using the default settings.  If you are using a non-Windows computer, RDP into an existing VM from a previous lab and install DMA there.
 2. On the Completed screen, check the box for **Launch Microsoft Data Migration Assistant** and click **Finish**.
 
 ## Exercise 7 - Assess the simulated on-premises database
 
 Before you can migrate data from an on-premises SQL Server  to a single database or pooled database in Azure SQL Database, you need to assess the SQL Server database for any blocking issues that might prevent migration.
 
-1. In DMA, select the  (+) icon, and then select  **Assessment** as the project type.
+1. In DMA, select the  **+** icon, and then select  **Assessment** as the project type.
 2. Specify **SampleAssessment** as the project name.
 3. In the Source server type text box ensure that  **SQL Server** is selected, and in the Target server type text box, ensure **Azure SQL Database** is selected. Click  **Create** to create the project.
 4. Select **Next** on the Options screen.
@@ -123,7 +124,7 @@ Before you migrate, a target Azure SQL database needs to be provisioned..
 6. In the Azure Portal, copy to clipboard the FQDN of  the database server, such as `abc032019.database.windows.net`.
 7. Open the server up to connections by:
     * Click on **Set Server firewall** in the Azure Portal.
-    * Click **ON** under **Allow Azure Services and resources to access this server**.
+    * Click **Yes** under **Allow Azure Services and resources to access this server**.
     * Create the following Rule:
         * Rule Name: **Everyone**
         * Start IP: **0.0.0.0**
@@ -135,7 +136,7 @@ Before you migrate, a target Azure SQL database needs to be provisioned..
 After you're comfortable with the assessment and satisfied that the selected database is a viable candidate for migration to a single database or pooled database in Azure SQL Database, use DMA to migrate the schema to Azure SQL Database.
 
 1. In the Data Migration Assistant, select the **New (+)** icon, and then under Project type, select **Migration**.
-2. Specify the following and Click **Create**.
+2. Specify the following and click **Create**.
     * **SQLMIG** as the project name
     * **SQL Server** in the Source server type text box
     * **Azure SQL Database** in the Target server type text box
