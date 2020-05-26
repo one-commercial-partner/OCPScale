@@ -123,16 +123,19 @@ Repeat the same steps for LBVM2 and change the `<title>` line to state `<title>L
 
 In this section, you configure load balancer settings for a back-end address pool and a health probe. You also specify load balancer and NAT rules.
 
-### Create a Backend pool
+### Task 1 - Create a Backend pool
 
 1. On left side of the Azure Portal click on the portal menu icon, select **Load Balancers**, then select **LB01**. Under **Settings**, select **Backend pools** then **+ Add**.
-2. Enter the following information and click **Add**:
+2. Enter the following information:
     * Name: **BackendPool**
+    * Virtual Network: LBvNet
+    * Associated to: **Virtual Machines**
+    * Click **+ Add**, select LBVM1 and LBVM2, and then click **Add**
+    * Click **Add**
 
+### Task 2 - Create a health probe
 
-### Create a health probe
-
-To allow the load balancer to monitor the status of your app, you use a health probe. The health probe dynamically adds or removes VMs from the load balancer rotation based on their response to health checks. Create a health probe named LBHP to monitor the health of the VMs.
+To allow the load balancer to monitor the status of your app, you use a health probe. The health probe dynamically adds or removes VMs from the load balancer rotation based on their response to health checks. Create a health probe to monitor the health of the VMs.
 
 1. Under **Settings**, select **Health probes**, and then select **+ Add**.
 2. Enter these values and then select **OK**:
@@ -143,7 +146,7 @@ To allow the load balancer to monitor the status of your app, you use a health p
     * Interval: **5** for the number of seconds between probe attempts
     * Unhealthy threshold: **2** for the number of consecutive probe failures that must occur before a VM is considered unhealthy
 
-### Create a load balancer rule
+### Task 3 - Create a load balancer rule
 
 1. Under **Settings**, select **Load balancing rules**, and then select **+ Add**.
 2. Enter these values and then select **OK**:
