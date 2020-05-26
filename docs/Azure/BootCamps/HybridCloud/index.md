@@ -34,7 +34,7 @@ If you see any changes that need to be made (typos, new steps, etc.) please subm
 
 [Lab 2 - Azure Site Recovery (ASR)](./Migration/02_HybridCloud_Migration_Lab02_ASR.md)
 
-[Lab 3 - Azure Policy](02_HybridCloud_Migration_Lab03_AzurePolicy.md)
+[Lab 3 - Azure Policy](./02_HybridCloud_Migration_Lab03_AzurePolicy.md)
 
 ## Architectectural Design Dession (ADS)
 
