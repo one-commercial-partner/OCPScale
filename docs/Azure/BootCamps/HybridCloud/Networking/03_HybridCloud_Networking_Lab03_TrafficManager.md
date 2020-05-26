@@ -1,6 +1,6 @@
 # Lab 3 - Traffic Manager
 
-In this lab you will deploy two instances of a web application running in two different Azure regions supported by your subscription. The two web application instances serve as primary and backup endpoints for Traffic Manager.
+In this lab you will deploy two instances of a web application running in two different Azure regions supported by your subscription. 
 
 ## Exercise 1 - Create US Web App
 
@@ -91,8 +91,8 @@ Since we have enabled traffic management on a global versus regional perspective
 
 1. In a web browser, surf to <https://www.whatsmydns.net> and enter the DNS name of your Traffic Manager profile, change the record type to CNAME, and click **Search**.
 2. Notice which of your endpoints are providing services to the various global locations.
-3. In the Azure portal swith to your Traffic Manager profile and notice that all of your endpoints are **Enabled**.
+3. In the Azure portal switch to your Traffic Manager profile and notice that all of your endpoints are **Enabled**.
 4. Click on **USEndpoint**, select **Disabled**, the **Save**.
-5. In the Azure portal switch to your Traffic Manager profile and notice that **MyPrimaryEndpoint** is now **Disabled**.
+5. In the Azure portal switch to your Traffic Manager profile and notice that **USEndpoint** is now **Disabled**.
 6. Return to <https://www.whatsmydns.net> and click **Search**, noticing the changes on which endpoint(s) are now responding.
 7. Note that it may take several moments for DNS propagation to take place.
