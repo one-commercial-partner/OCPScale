@@ -64,7 +64,7 @@ Repeat the steps above for vNet2:
     -Name "VM2"
     -Location "EastUS"
     -VirtualNetworkName "vNet2"
-    -SubnetName "Subnet2"
+    -SubnetName "subnet2"
     -SecurityGroupName "VM2-nsg"
     -PublicIpAddressName "VM2-ip"
     -Credential $cred

@@ -12,10 +12,9 @@ In this section, you create a public standard load balancer by using the portal.
     * Name: **LB01**
     * Region: Use the same region as your other resources
     * Type: **Public**
-    * SKU: **Standard**
+    * SKU: **Basic**
     * Public IP address: **Create New**
     * Public IP address name: **LBPublicIP**
-    * Availability Zone: **Zone-Redundant**
     * Select **Review + Create**.
     * After Validation passes click **Create**.
 
@@ -28,12 +27,17 @@ In this section you create a virtual network and you create two virtual machines
 1. On the upper-left side of the portal, select **Create a resource** > **Networking** > **Virtual network**.
 2. In the Create virtual network pane enter these values:
     * **LoadBalVMs** for the name of the resource group (*Create new*)
-    * **LBvNet** for the name of the virtual network
-    * **10.20.0.0/16** as the address space
-    * **Location**: Use the same region as your other resources
-    * **Backend** for the subnet name
-    * **10.20.0.0/24** as the address space
-    * Click **Review + Create** and after validation click **Create**.
+    * **LBvNet** for the Instance Name of the virtual network
+    * **Region**: Use the same region as your other resources
+    * Click **Next:  IP Addresses >**
+3. On the IP Addresses pane complete the following:
+    * Click the trash can to delete the existing IPv4 address space
+    * Enter **10.20.0.0/16** as the address space
+    * Click on **+ Add subnet**
+    * Enter **Backend** for the subnet name
+    * Enter **10.20.0.0/24** as the address range
+    * Click **Add**
+4. Click **Review + Create** and after validation passes, click **Create**.
 
 ### Create LBVM1
 
@@ -50,23 +54,27 @@ Provision a virtual machine via Cloud Shell.
 
 5. Create an availability set.
 
+    > NOTE: Ensure you are using the right region!
+
     ```powershell
     New-AzAvailabilitySet -ResourceGroupName "LoadBalVMs" -Name "LBVMAVSet" -Location "EastUS" -Sku "Aligned" -PlatformFaultDomainCount 2 -PlatformUpdateDomainCount 3
 6. Create the VM (note to use the correct region):
     ```powershell
-    New-AzVm -ResourceGroupName "LoadBalVMs" -Name "LBVM1" -Location "EastUS" -VirtualNetworkName "LBvNet" -SubnetName "Backend" -SecurityGroupName "LBVM1-nsg" -PublicIpAddressName "LBVM1-ip" -Credential $cred -size Standard_B1s -AvailabilitySetName "LBVMAVSet"
+    New-AzVm -ResourceGroupName "LoadBalVMs" -Name "LBVM1" -Location "EastUS" -VirtualNetworkName "LBvNet" -SubnetName "Backend" -SecurityGroupName "LBVM1-nsg" -PublicIpAddressName "LBVM1-ip" -Credential $cred -size Standard_DS2_v2 -AvailabilitySetName "LBVMAVSet"
     ```
-    > Note that it will take 5-8 minutes to provision the virtual machine.
+    > Note that it may take 5-8 minutes to provision the virtual machine.
 
 ### Create LBVM2
 
-1. Create the VM (note to use the correct region):
+1. Create the VM:
+
+    > NOTE: Ensure you are using the right region!
 
     ```powershell
     New-AzVm -ResourceGroupName "LoadBalVMs" -Name "LBVM2" -Location "EastUS" -VirtualNetworkName "LBvNet" -SubnetName "Backend" -SecurityGroupName "LBVM2-nsg" -PublicIpAddressName "LBVM2-ip" -Credential $cred -size Standard_B1s -AvailabilitySetName "LBVMAVSet"
     ```
 
-    > Note that it will take 5-8 minutes to provision the virtual machine.
+    > Note that it may take 5-8 minutes to provision the virtual machine.
 
 ## Exercise 3 - Create NSG rules
 
