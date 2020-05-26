@@ -71,7 +71,7 @@ Provision a virtual machine via Cloud Shell.
     > NOTE: Ensure you are using the right region!
 
     ```powershell
-    New-AzVm -ResourceGroupName "LoadBalVMs" -Name "LBVM2" -Location "EastUS" -VirtualNetworkName "LBvNet" -SubnetName "Backend" -SecurityGroupName "LBVM2-nsg" -PublicIpAddressName "LBVM2-ip" -Credential $cred -size Standard_B1s -AvailabilitySetName "LBVMAVSet"
+    New-AzVm -ResourceGroupName "LoadBalVMs" -Name "LBVM2" -Location "EastUS" -VirtualNetworkName "LBvNet" -SubnetName "Backend" -SecurityGroupName "LBVM2-nsg" -PublicIpAddressName "LBVM2-ip" -Credential $cred -size Standard_DS2_v2 -AvailabilitySetName "LBVMAVSet"
     ```
 
     > Note that it may take 5-8 minutes to provision the virtual machine.
