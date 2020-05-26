@@ -36,7 +36,7 @@ Azure Traffic Manager helps reduce downtime and improve responsiveness of import
 2. In the Create Traffic Manager profile, enter or select the following information and accept the defaults for the remaining settings:
     * Click **Create**
         * Name: `<yourinitials>`-TM (This name needs to be unique within the trafficmanager.net zone.)
-        * Routing method: Geographic
+        * Routing method: **Priority**
         * Resource Group: `<yourinitials>`-USWebApps
     * Click **Create**
 
@@ -53,34 +53,25 @@ Add the website in the East US as primary endpoint to route all the user traffic
     * Name: **USEndPoint**
     * Target resource type: **App Service**
     * Target Resource: `<yourinitals>`**-USWebApp**
-    * Geo-Mapping:
-        * Regional Grouping: **North America / Central America / Caribbean**
-        * Country/Region: **United States**
-        * State/Province:  **New York**
-    * Add a second mapping :
-        * Regional Grouping: **North America / Central America / Caribbean**
-        * Country/Region: **United States**
-        * State/Province:  **Massachusetts**
+    * Priority: **1**
     * Click  **Add**
 
-### Task 1 - Create the EU EndPoint
+### Task 2 - Create the EU EndPoint
 
 1. Click **+Add** and enter the following information:
     * Type: **Azure endpoint**
     * Name: **EUEndPoint**
     * Target resource type: **App Service**
     * Target Resource: `<yourinitals>`-EUWebApp
-    * Geo-Mapping:
-        * Regional Grouping: **Europe**
-        * Country/Region: **United Kingdom**
+    * Priority: **2**
     * Select **Add**
 2. Before proceeding confirm that the status of both endpoints is **Online**.
+
+>NOTE: You will have to hit Refresh several times.
 
 ## Exercise 5 - Test Traffic Manager profile
 
 In this section, you first determine the domain name of your Traffic Manager profile and then view how Traffic Manager fails over to the secondary endpoint when the primary endpoint is unavailable.
-
-Since we have enabled traffic management on a global versus regional perspective, we need to test access to your website from various locations around the world.
 
 ### Task 1 - Determine the DNS name
 
@@ -94,5 +85,5 @@ Since we have enabled traffic management on a global versus regional perspective
 3. In the Azure portal switch to your Traffic Manager profile and notice that all of your endpoints are **Enabled**.
 4. Click on **USEndpoint**, select **Disabled**, the **Save**.
 5. In the Azure portal switch to your Traffic Manager profile and notice that **USEndpoint** is now **Disabled**.
-6. Return to <https://www.whatsmydns.net> and click **Search**, noticing the changes on which endpoint(s) are now responding.
-7. Note that it may take several moments for DNS propagation to take place.
+6. Open a separate tab on your browser to <https://www.whatsmydns.net> and enter the DNS name of your Traffic Manager profile, change the record type to CNAME, and click **Search**.  Notice the different results.
+    > Note that it may take several moments for DNS propagation to take place.
