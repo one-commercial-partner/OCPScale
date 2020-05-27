@@ -43,6 +43,7 @@
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
 * [Monitor the health of Azure IoT Hub and diagnose problems quickly](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-monitor-resource-health)
 * [Understand the identity registry in your IoT hub - Device Heartbeat](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-identity-registry)
+* [IoT Hub Distributed Tracing](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-distributed-tracing)
 * [Azure Monitor Alerts](https://aka.ms/unified-alerts-docs)
 * [Monitor, diagnose, and troubleshoot disconnects with Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-troubleshoot-connectivity)
 * [Diagnostic Logs](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/platform-logs-overview)
@@ -50,7 +51,7 @@
 * [Tutorial: Set up and use metrics and diagnostic logs with an IoT hub](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-use-metrics-and-diags)
 * [Tutorial: Get started with Log Analytics queries](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-portal)
 * [Azure Monitor Log Queries](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-queries)
-* [Test device connectivity](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-connectivity)
+* [Test device connectivity - Check D2C connectivity and Digital Twin synchronization](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-connectivity)
 * [Reference: IoT Hub Quotas and Throttling](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-quotas-throttling)
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
