@@ -32,10 +32,6 @@
   <br />Exercise 5: Simulate Devices
   <br />Exercise 6: Review Metrics, Alerts and Archive
 
-## Quick Reference
-* Azure IoT SDKs provide a set of tools to help with development:
-  * [azure-iot-explorer](https://github.com/Azure/azure-iot-explorer): a cross-platform desktop application to connect to your IoT Hub and add/manage/communicate with IoT devices.
-
 ## Resources
 * [IoT Technical Community](https://techcommunity.microsoft.com/t5/internet-of-things-iot/ct-p/IoT)
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
@@ -51,9 +47,11 @@
 * [Tutorial: Set up and use metrics and diagnostic logs with an IoT hub](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-use-metrics-and-diags)
 * [Tutorial: Get started with Log Analytics queries](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-portal)
 * [Azure Monitor Log Queries](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-queries)
-* [Test device connectivity - Check D2C connectivity and Digital Twin synchronization](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-connectivity)
+* Check D2C connectivity and Digital Twin synchronization: [Tutorial: Use a simulated device to test connectivity with your IoT hub](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-connectivity)
 * [Reference: IoT Hub Quotas and Throttling](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-quotas-throttling)
 * [Manage connectivity and reliable messaging by using Azure IoT Hub device SDKs](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-reliability-features-in-sdks)
+* [Use Azure IoT Tools for Visual Studio Code to send and receive messages between your device and IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-vscode-iot-toolkit-cloud-device-messaging)
+* [azure-iot-explorer](https://github.com/Azure/azure-iot-explorer): a cross-platform desktop application to connect to your IoT Hub and add/manage/communicate with IoT devices.
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
