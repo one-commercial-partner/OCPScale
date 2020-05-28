@@ -52,6 +52,10 @@
 * [Manage connectivity and reliable messaging by using Azure IoT Hub device SDKs](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-reliability-features-in-sdks)
 * [Use Azure IoT Tools for Visual Studio Code to send and receive messages between your device and IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-vscode-iot-toolkit-cloud-device-messaging)
 * [azure-iot-explorer](https://github.com/Azure/azure-iot-explorer): a cross-platform desktop application to connect to your IoT Hub and add/manage/communicate with IoT devices.
+* [Accelerating IoT solution development and testing with Azure IoT Device Simulation](https://azure.microsoft.com/en-us/blog/accelerating-iot-solution-development-and-testing-with-azure-iot-device-simulation)
+* [Azure IoT Hub StressTest (GitHub)](https://github.com/IoTChinaTeam/Azure-IoTHub-StressTest)
+
+
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
