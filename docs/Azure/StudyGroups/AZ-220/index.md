@@ -14,7 +14,7 @@ Click here to register:  [AZ-220: Microsoft Azure IoT Developer Study Group](htt
 |2|**Provision and manage devices (20-25%)**|May 6, 2020|[Link](02ProvisionAndManageDevices.md)| [Link](https://msuspartners.eventbuilder.com/event/21619)|
 |3|**Implement Edge (15-20%)**|May 13, 2020| [Link](03ImplementEdge.md) | [Link](https://msuspartners.eventbuilder.com/event/18405) |
 |4|**Process and manage data (15-20%)**|May 20, 2020| [Link](04ProcessAndManageData.md) | [Link](https://msuspartners.eventbuilder.com/event/18569) |
-|5|**Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 27, 2020| [Link](05MonitorTroubleshootOptimize) |  |
+|5|**Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 27, 2020| [Link](05MonitorTroubleshootOptimize) | [Link](https://msuspartners.eventbuilder.com/event/18577) |
 |6|**Implement security (15-20%) + Final Review**|June 3, 2020| | |
 
 ## What are study groups?
