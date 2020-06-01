@@ -4,24 +4,9 @@
 
 The Cloud Skills Challenge helps you build your cloud skills with learning made easy! You can discover more about Azure, Dynamics 365, Microsoft 365, and/or the Power Platform with hands-on self-paced modules targeting all skill levels and roles (technical and non-technical). Microsoft Learn provides a free, interactive way to learn by combining short step-by-step tutorials, browser-based interactive coding and scripting environments, as well as task-based achievements to help you advance your technical skills while earning rewards. The Cloud Skills Challenge provides a fun way to  use Microsoft Learn to help you advance your cloud skills while earning prizes. 
 
-As you complete each exercise you will earn points. The more points you earn the more chances you have to win one of three pairs of [noise cancelling Surface headphones](https://www.microsoft.com/en-us/p/surface-headphones/8NRM8DZ2ZW43) valued at $349.99.
-
-## How do I participate
-
-1. Use the links below to register for the challenges you want to participate in. 
-1. You will get an email on the Challenge Start Date with instructions on how to log into the challenge. 
-1. Complete [challenge exercises](https://aka.ms/microsoftlearn) **during the month at your pace** to earn points and move up the leaderboard. 
-
-> NOTE: The system we are using for sign up requires us to specify a date and time for the event, however each of our challenges run the entire month. You have the entire month to complete as many exercises as you want and earn as much XP as you can. There will be NO physical or virtual meetings. 
 
 If you have any issues/questions, please email us [usocpcsc@microsoft.com](mailto:usocpcsc@microsoft.com)
 
-## Challenge Schedule
-
-| Event | Sign Up Link | Sign Up Deadline | Start Date | End Date | Winners Announced | Leaderboard |
-| --- | --- | --- | --- | --- | --- | --- | 
-| May 2020 Challenge | [Join](./CloudSkillsChallenge/setup) | April 30 2020 | May 1 2020 | May 31 2020 | June 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/d114aff0-4db6-46b4-b8ee-ae965b35bf9f) |
-| June 2020 Challenge | [Sign Up](https://msuspartners.eventbuilder.com/event/15263) | May 31 2020 | June 1 2020 | June 30 2020 | July 1 2020 | [Leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/8efad682-c87e-412d-9ff0-f5770241f282) |
 
 ## Challenge Winners
 
@@ -31,7 +16,7 @@ The MS Learn username of the winners will be poste here. If you see your user na
 
 Winners - Thank you to the over 60 people who have participated in our April Challenge! Cumulatively you have earned almost 1 million points, that's incredible! 
 
-We are pleased to announce our 3 winners. If you see your learner ID below please email us at [usocpcsc@microsoft.com](mailto:usocpcsc@microsoft.com) to claim your prize. 
+We are pleased to announce our 3 winners. 
 
 - bryanhaslip
 - sgriegoliet
@@ -39,12 +24,18 @@ We are pleased to announce our 3 winners. If you see your learner ID below pleas
 
 ### May 2020 Challenge
 
-Challenge ongoing, check out the [leaderboard](https://www.microsoft.com/en-us/cloudskillschallenge/Public/Contests/d114aff0-4db6-46b4-b8ee-ae965b35bf9f) or [join](./CloudSkillsChallenge/setup) the challenge in progress.  
+Winners - Thank you to the over 60 people who have participated in our May Challenge! Cumulatively you have earned over 1.1 million points, that's incredible! 
+
+We are pleased to announce our 3 winners. If you see your learner ID below please email us at [usocpcsc@microsoft.com](mailto:usocpcsc@microsoft.com) to claim your prize. 
+
+- Anthony Doran
+- Ike Patel
+- Taurean Imam
 
 
 ### June 2020 Challenge
 
-[Sign Up](https://msuspartners.eventbuilder.com/event/15263) here. 
+We are moving the June challenge to a new location! [Visit](https://www.microsoft.com/en-us/learncloudchallenge) to join the group of learners across the country! If you registered for the June Challenge here,please make sure to RE REGISTER at this site!
 
 ## Official Rules
 
