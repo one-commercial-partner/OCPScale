@@ -1,101 +1,61 @@
-# AZ-220 Process and Manage Data (15-20%)
+# AZ-220 Monitor, troubleshoot, and optimize IoT solutions (15-20%)
 
 * [AZ-220: Microsoft Azure IoT Developer Exam](https://docs.microsoft.com/en-us/learn/certifications/exams/az-220)
 * [Microsoft Certified: Azure IoT Developer Specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
 * [Yammer Azure Study Group](http://aka.ms/azurecsg)
 
 ## Skills Measured:
-### Configure routing in Azure IoT Hub
-* Implement message enrichment in IoT Hub
-* Configure routing of IoT Device messages to endpoints
-* Define and test routing queries
-* Integrate with Event Grid
+### Configure health monitoring
+* Configure metrics in IoT Hub
+* Set up diagnostics logs for Azure IoT Hub
+* Query and visualize tracing by using Azure Monitor
 
-### Configure stream processing
-* Create Azure Stream Analytics (ASA) for data and stream processing of IoT data
-* Process and filter IoT data by using Azure Functions
-* Configure Stream Analytics outputs
+### Troubleshoot device communication
+* Establish maintenance communication
+* Verify device telemetry is received by IoT Hub
+* Validate device twin properties, tags and direct methods
+* Troubleshoot device disconnects and connects
 
-### Configure an IoT solution for Time Series Insights (TSI)
-* Implement solutions to handle telemetry and time-stamped data
-* Create an Azure Time Series Insights (TSI) environment
-* Connect the IoT Hub and the Time Series Insights (TSI)
+### Perform end-to-end solution testing and diagnostics
+* Estimate the capacity required for each service in the solution
+* Conduct performance and stress testing
+* Set up device D2C message tracing by using Azure Distributed Tracing
 
 ## Homework:
-### [AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer) 
-* Module 4: Message Processing and Analytics
-  * [Lab 07: Device Message Routing](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_07-analyze-message-data-in-real-time.html)
+### [AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer)
+* Module 9: Solution Testing, Diagnostics, and Logging
+  *  [Lab 17: How to manage your Azure IoT Hub](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_17-how-to-manage-your-azure-iot-hub.html) 
   <br />Exercise 1: Verify Lab Prerequisites
-  <br />Exercise 2: Write Code for Vibration Telemetry
-  <br />Exercise 3: Create a Message Route to Azure Blob Storage
-  <br />Exercise 4: Logging Route Azure Stream Analytics Job
-
-* Module 5: Insights and Business Integration
-  * [Lab 08: Visualize a Data Stream in Power BI](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_08-visualize-data-stream-in-power-bi.html)
-  <br />Make a Call to a Built-in Machine Learning Model
-  <br />Visualize data using Power BI
-  <br />Exercise 1: Sign Up For Power BI
-  <br />Exercise 2: Verify Lab Prerequisites
-  <br />Exercise 3: Create an Azure Event Hubs service
-  <br />Exercise 4: Create Real-Time Message Route
-  <br />Exercise 5: Add Telemetry Route
-  <br />Exercise 6: Create a Power BI Dashboard
-
-  * [Lab 09: Integrate IoT Hub with Event Grid](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_09-iot-hub-integration-with-azure-event-grid.html)
-  <br />Exercise 1: Verify Lab Prerequisites
-  <br />Exercise 2: Create HTTP Web Hook Logic App that sends an email
-  <br />Exercise 3: Configure Azure IoT Hub Event Subscription
-  <br />Exercise 4: Test Your Logic App with New Devices
-
-  * [Lab 10: Explore and analyze time stamped data with Time Series Insights](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/Instructions/Labs/LAB_AK_10-analyze-time-stamped-data-with-time-series-insights.html)
-  <br />Exercise 1: Verify Lab Prerequisites
-  <br />Exercise 2: Setup Time Series Insights
-  <br />Exercise 3: Run Simulated IoT Devices
-  <br />Exercise 4: View Time Series Insights Explorer
-
-### Sign up for [Online Workshop Series: Build End-to-End IoT Solutions](https://aka.ms/IoT-online-workshop)
-* Messaging processing, analytics, and business integration – May 7 (on-demand)
-
-## Quick Reference: Key Concepts and Terminology
-* Event Concepts:
-  * *Events* - What happened
-  * *Event sources* - Where the event took place
-  * *Topics* - The endpoint where publishers send events
-  * *Event subscriptions* - The endpoint or built-in mechanism to route events, sometimes to more than one handler. Subscriptions are also used by handlers to intelligently filter incoming events
-  * *Event handlers* - The app or service reacting to the event
-
-* Key Features of Azure Event Grid:
-  * *Simplicity* - Point and click to aim events from your Azure resource to any event handler or endpoint
-  * *Advanced filtering* - Filter on event type or event publish path to make sure event handlers only receive relevant events
-  * *Fan-out* - Subscribe several endpoints to the same event to send copies of the event to as many places as needed
-  * *Reliability* - 24-hour retry with exponential backoff to make sure events are delivered
-  * *Pay-per-event* - Pay only for the amount you use Event Grid
-  * *High throughput* - Build high-volume workloads on Event Grid with support for millions of events per second
-  * *Built-in Events* - Get up and running quickly with resource-defined built-in events
-  * *Custom Events* - Use Event Grid route, filter, and reliably deliver custom events in your app
-
-* Message Routing or Event Grid: How to Choose
-  * What kind of data are you sending to the endpoints?
-    * IoT Hub message routing to send telemetry data to other services
-    * The IoT Hub integration with Event Grid works with events that occur in the IoT Hub service
-  * What endpoints need to receive this information?
-    * IoT Hub message routing supports limited number of unique endpoints and endpoint types, but you can build connectors to reroute the data and events to additional endpoints
-    * The IoT Hub integration with Event Grid supports a larger variety of endpoint types
-  * Does it matter if your data arrives in order?
-    * IoT Hub message routing maintains the order in which messages are sent
-    * Event Grid does not guarantee that endpoints will receive events in the same order that they occurred
+  <br />Exercise 2: Set Up and Use Metrics and Diagnostic Logs with an IoT Hub
+  <br />Exercise 3: Configure an Alert
+  <br />Exercise 4: Simulating the Sensors
+  <br />Exercise 5: Simulate Devices
+  <br />Exercise 6: Review Metrics, Alerts and Archive
 
 ## Resources
 * [IoT Technical Community](https://techcommunity.microsoft.com/t5/internet-of-things-iot/ct-p/IoT)
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
-* [Message Enrichments for D2C IoT Hub messages](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-message-enrichments-overview)
-* [Tutorial: Message Enrichments](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-message-enrichments)
-* [IoT Hub Metrics](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-metrics)
-* [Azure Stream Analytics (ASA)](https://docs.microsoft.com/en-us/azure/stream-analytics/)
-* [ASA Window Functions](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-window-functions)
-* [Tutorial: Time Series Insights](https://docs.microsoft.com/en-us/azure/time-series-insights/tutorial-create-populate-tsi-environment)
-* [Create IoT Hub and Device to Cloud Consumer Group](https://github.com/Azure/azure-quickstart-templates/tree/master/101-iothub-with-consumergroup-create)
+* [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/#features)
+* [Monitor the health of Azure IoT Hub and diagnose problems quickly](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-monitor-resource-health)
+* [Understand the identity registry in your IoT hub - Device Heartbeat](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-identity-registry)
+* [IoT Hub Distributed Tracing](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-distributed-tracing)
+* [Azure Monitor Alerts](https://aka.ms/unified-alerts-docs)
+* [Monitor, diagnose, and troubleshoot disconnects with Azure IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-troubleshoot-connectivity)
+* [Diagnostic Logs](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/platform-logs-overview)
+* [Different log categories and contents of those logs](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-settings)
+* [Tutorial: Set up and use metrics and diagnostic logs with an IoT hub](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-use-metrics-and-diags)
+* [Tutorial: Get started with Log Analytics queries](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-portal)
+* [Azure Monitor Log Queries](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-queries)
+* Check D2C connectivity and Digital Twin synchronization: [Tutorial: Use a simulated device to test connectivity with your IoT hub](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-connectivity)
+* [Reference: IoT Hub Quotas and Throttling](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-quotas-throttling)
+* [Manage connectivity and reliable messaging by using Azure IoT Hub device SDKs](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-reliability-features-in-sdks)
+* [Use Azure IoT Tools for Visual Studio Code to send and receive messages between your device and IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-vscode-iot-toolkit-cloud-device-messaging)
+* [azure-iot-explorer](https://github.com/Azure/azure-iot-explorer): a cross-platform desktop application to connect to your IoT Hub and add/manage/communicate with IoT devices.
+* [Accelerating IoT solution development and testing with Azure IoT Device Simulation](https://azure.microsoft.com/en-us/blog/accelerating-iot-solution-development-and-testing-with-azure-iot-device-simulation)
+* [Azure IoT Hub StressTest (GitHub)](https://github.com/IoTChinaTeam/Azure-IoTHub-StressTest)
+
+
 
 NOTE: In most cases, exams do NOT cover preview features, and some features will only be
 added to an exam when they are GA (General Availability).
