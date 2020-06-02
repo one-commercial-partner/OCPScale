@@ -89,12 +89,12 @@ Hands-on labs can be found here: [AZ-220 IoT Labs](https://microsoftlearning.git
 
 ## Exam Updates
 
-# Skills Measured - Exam update on May 28
+### Skills Measured - Exam update on May 28
 * Added *Custom and industry-focused application templates* to "Provision and Manage Devices", subtopic "IoT Central"
 *	Added *Provision IoT Edge devices with DPS* to "Implement Edge", subtopic "Setup and Deploy an IoT Edge Device"
 *	Removed *Set up device D2C message tracing by using Azure Distributed Tracing* from "Monitor, troubleshoot, and optimizeIoT solutions", subtopic "Perform end-to-end solution testing and diagnostics"
 
-# Skills Measured - Exam Update coming on or after July 21:
+### Skills Measured - Exam Update coming on or after July 21:
 This update adds the following four bullets to "Implement Edge", subtopic "Setup and deploy an IoT Edge Device":
 * The following four options will be added:
   * *IoT Edge automatic deployments*
