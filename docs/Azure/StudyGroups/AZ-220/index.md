@@ -62,7 +62,8 @@ Though study group slide decks include official curriculum content and cannot be
 > * [Work with Azure IoT Edge - May 14th](part-5-iot-edge.pdf)
 
 ## Labs by Exam Area (Skills Measured breakdown)
-[AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/)
+
+Hands-on labs can be found here: [AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/)
 
 |Module|Lab|Exam Area|
 | - | - | - |
@@ -86,6 +87,22 @@ Though study group slide decks include official curriculum content and cannot be
 |Module 10: Azure Security Center and IoT Security|Lab 19: Detect if your IoT Device was Tampered with Azure Security Center for IoT|6 - Implement security (15-20%)|
 |Module 11: Build with IoT Central|Lab 20: Build with IoT Central|2 - Provision and manage devices (20-25%)|
 
+## Exam Updates
+
+# Skills Measured - Exam update on May 28
+* Added *Custom and industry-focused application templates* to "Provision and Manage Devices", subtopic "IoT Central"
+*	Added *Provision IoT Edge devices with DPS* to "Implement Edge", subtopic "Setup and Deploy an IoT Edge Device"
+*	Removed *Set up device D2C message tracing by using Azure Distributed Tracing* from "Monitor, troubleshoot, and optimizeIoT solutions", subtopic "Perform end-to-end solution testing and diagnostics"
+
+# Skills Measured - Exam Update coming on or after July 21:
+This update adds the following four bullets to "Implement Edge", subtopic "Setup and deploy an IoT Edge Device":
+* The following four options will be added:
+  * *IoT Edge automatic deployments*
+	* *Deploy on constrained devices*
+	* *Secure IoT Edge solutions*
+	* *Deploy production certificates*
+* The italic portion will also be added:
+  * Implement and configure offline support (*including local storage*)
 
 ## Additional Partner Certification Study Groups
 
