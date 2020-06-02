@@ -11,9 +11,9 @@ Click here to register:  [MS-700: Managing Microsoft Teams](https://msuspartners
 |Topic|     Date|Homework|Recording|
 | - | - | - | - |
 |**Kickoff**|May 7|None!| [Link](https://msuspartners.eventbuilder.com/event/19904) |
-|**Plan and configure a Microsoft Teams environment: Part 1**| May 14 |[Link](PlanandconfigureaMicrosoftTeamsenvironment1.md) |  |
-|**Plan and configure a Microsoft Teams environment: Part 2**| May 21 |[Link](PlanandconfigureaMicrosoftTeamsenvironment2.md) |  |
-|**Plan and configure a Microsoft Teams environment: Part 3**| May 28 |[Link](PlanandconfigureaMicrosoftTeamsenvironment3.md) |  |
+|**Plan and configure a Microsoft Teams environment: Part 1**| May 14 |[Link](PlanandconfigureaMicrosoftTeamsenvironment1.md) | [Link](https://msuspartners.eventbuilder.com/event/20694) |
+|**Plan and configure a Microsoft Teams environment: Part 2**| May 21 |[Link](PlanandconfigureaMicrosoftTeamsenvironment2.md) | [Link](https://msuspartners.eventbuilder.com/event/20695) |
+|**Plan and configure a Microsoft Teams environment: Part 3**| May 28 |[Link](PlanandconfigureaMicrosoftTeamsenvironment3.md) | [Link](https://msuspartners.eventbuilder.com/event/20697) |
 |**Manage Chat, Calling, and Meetings: Part 1**| June 4 |[Link](ManageChatCallingandMeetings1.md) |  |
 |**Manage Chat, Calling, and Meetings: Part 2**| June 11 |[Link](ManageChatCallingandMeetings2.md) |  |
 |**Manage Teams and app policies**| June 18 |[Link](ManageTeamsandapppolicies.md) |  |
