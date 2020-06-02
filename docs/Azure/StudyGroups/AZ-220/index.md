@@ -15,7 +15,7 @@ Click here to register:  [AZ-220: Microsoft Azure IoT Developer Study Group](htt
 |3|**Implement Edge (15-20%)**|May 13, 2020| [Link](03ImplementEdge.md) | [Link](https://msuspartners.eventbuilder.com/event/18405) |
 |4|**Process and manage data (15-20%)**|May 20, 2020| [Link](04ProcessAndManageData.md) | [Link](https://msuspartners.eventbuilder.com/event/18569) |
 |5|**Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 27, 2020| [Link](05MonitorTroubleshootOptimize) | [Link](https://msuspartners.eventbuilder.com/event/18577) |
-|6|**Implement security (15-20%) + Final Review**|June 3, 2020| | |
+|6|**Implement security (15-20%) + Final Review**|June 3, 2020| [Link](06ImplementSecurity.md)| |
 
 ## What are study groups?
 
@@ -60,6 +60,32 @@ Though study group slide decks include official curriculum content and cannot be
 > * [Device provisioning at scale - April 30th](part-3-device-provisioning-scale-april.pdf)
 > * [Messaging processing, analytics, and business integration - May 7th](part-4-messaging-processing-analytics-business-integration-may.pdf)
 > * [Work with Azure IoT Edge - May 14th](part-5-iot-edge.pdf)
+
+## Labs by Exam Area (Skills Measured breakdown)
+[AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/)
+
+|Module|Lab|Exam Area|
+| - | - | - |
+|Module 1: Introduction to IoT and Azure IoT Services|Lab 01: Getting Started with Azure|1 - Implement the IoT solution infrastructure (15-20%)|
+|Module 1: Introduction to IoT and Azure IoT Services|Lab 02: Getting Started with Azure IoT Services|1 - Implement the IoT solution infrastructure (15-20%)|
+|Module 2: Devices and Device Communication|Lab 03: Setup the Development Environment|1 - Implement the IoT solution infrastructure (15-20%)|
+|Module 2: Devices and Device Communication|Lab 04: Connect an IoT Device to Azure|1 - Implement the IoT solution infrastructure (15-20%)|
+|Module 3: Device Provisioning at Scale|Lab 05: Individual Enrollment of a Device in DPS|2 - Provision and manage devices (20-25%)|
+|Module 3: Device Provisioning at Scale|Lab 06: Automatically provision IoT devices securely and at scale with DPS|2 - Provision and manage devices (20-25%)|
+|Module 4: Message Processing and Analytics|Lab 07: Device Message Routing|4 - Process and manage data (15-20%)|
+|Module 5: Insights and Business Integration|Lab 08: Visualize a Data Stream in Power BI|4 - Process and manage data (15-20%)|
+|Module 5: Insights and Business Integration|Lab 09: Integrate IoT Hub with Event Grid|4 - Process and manage data (15-20%)|
+|Module 5: Insights and Business Integration|Lab 10: Explore and analyze time stamped data with Time Series Insights|4 - Process and manage data (15-20%)|
+|Module 6: Azure IoT Edge Deployment Process|Lab 11: Introduction to Azure IoT Edge|3 - Implement Edge (15-20%)|
+|Module 6: Azure IoT Edge Deployment Process|Lab 12: Setup an IoT Edge Gateway|3 - Implement Edge (15-20%)|
+|Module 7: Azure IoT Edge Modules|Lab 13: Develop, Deploy and debug a custom module on Azure IoT Edge with VS Code|3 - Implement Edge (15-20%)|
+|Module 7: Azure IoT Edge Module|Lab 14: Run an IoT Edge device in restricted network and offline|3 - Implement Edge (15-20%)|
+|Module 8: Device Management|Lab 15: Remotely monitor and control devices with Azure IoT Hub|2 - Provision and manage devices (20-25%)|
+|Module 8: Device Management|Lab 16: Automate IoT Device Management with Azure IoT Hub|2 - Provision and manage devices (20-25%)|
+|Module 9: Solution Testing, Diagnostics, and Logging|Lab 17: How to manage your Azure IoT Hub|5 - Monitor, troubleshoot, and optimize IoT solutions (15-20%)|
+|Module 10: Azure Security Center and IoT Security|Lab 19: Detect if your IoT Device was Tampered with Azure Security Center for IoT|6 - Implement security (15-20%)|
+|Module 11: Build with IoT Central|Lab 20: Build with IoT Central|2 - Provision and manage devices (20-25%)|
+
 
 ## Additional Partner Certification Study Groups
 
