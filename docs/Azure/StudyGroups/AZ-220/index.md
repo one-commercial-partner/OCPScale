@@ -98,9 +98,9 @@ Hands-on labs can be found here: [AZ-220 IoT Labs](https://microsoftlearning.git
 This update adds the following four bullets to "Implement Edge", subtopic "Setup and deploy an IoT Edge Device":
 * The following four options will be added:
   * *IoT Edge automatic deployments*
-	* *Deploy on constrained devices*
-	* *Secure IoT Edge solutions*
-	* *Deploy production certificates*
+  * *Deploy on constrained devices*
+  * *Secure IoT Edge solutions*
+  * *Deploy production certificates*
 * The italic portion will also be added:
   * Implement and configure offline support (*including local storage*)
 
