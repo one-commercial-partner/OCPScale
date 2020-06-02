@@ -107,7 +107,7 @@ This update adds the following four bullets to "Implement Edge", subtopic "Setup
 
 ## AZ-220 Self-Assessment Tool
 Are you ready for the AZ-220 exam? This self-assessment may help you identify areas that you still need to study or practice... [Download the AZ-220 Microsoft Azure IoT Developer Exam Self-Assessment Tool](Exam-Msft-AZ-220-Self-Assessment-Build5Nines.xlsx?raw=1)
-*From [https://build5nines.com/az-220-microsoft-azure-iot-developer-specialty-certification-exam/](https://build5nines.com/az-220-microsoft-azure-iot-developer-specialty-certification-exam/)*
+<br />*From [https://build5nines.com/az-220-microsoft-azure-iot-developer-specialty-certification-exam/](https://build5nines.com/az-220-microsoft-azure-iot-developer-specialty-certification-exam/)*
 
 ## Additional Partner Certification Study Groups
 
