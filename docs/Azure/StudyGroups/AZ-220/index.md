@@ -62,6 +62,8 @@ Though study group slide decks include official curriculum content and cannot be
 > * [Work with Azure IoT Edge - May 14th](part-5-iot-edge.pdf)
 
 ## Labs by Exam Area (Skills Measured breakdown)
+[AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer/)
+
 |Module|Lab|Exam Area|
 | - | - | - |
 |Module 1: Introduction to IoT and Azure IoT Services|Lab 01: Getting Started with Azure|1 - Implement the IoT solution infrastructure (15-20%)|
