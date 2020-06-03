@@ -37,8 +37,7 @@
   
 ## Quick Reference: Key Concepts and Terminology
 * Three widely used authentication types are X.509 certificates, Trusted Platform Modules (TPM), and symmetric keys.
-  * *X.509 certificate* - A type of digital identity you can use for authentication. The X.509 certificate standard is documented in IETF RFC 5280. 
-  <br />In Azure IoT, there are two ways to authenticate certificates:
+  * ***X.509 certificate*** - A type of digital identity you can use for authentication. The X.509 certificate standard is documented in IETF RFC 5280. In Azure IoT, there are two ways to authenticate certificates:
     * Thumbprint. A thumbprint algorithm is run on a certificate to generate a hexadecimal string. The generated string is a unique identifer for the certificate.
     * CA authentication based on a full chain. A certificate chain is a hierarchical list of all certificates needed to authenticate an end-entity (EE) certificate. To authenticate an EE certificate, it's necessary to authenticate each certificate in the chain including a trusted root CA.
     
@@ -52,8 +51,7 @@
       * Certificate management can be costly and adds to total solution cost.
       * Certificate life-cycle management can be difficult if logistics are not well thought out.
 
-  * ***Trusted Platform Module (TPM)*** - A standard for securely generating and storing cryptographic keys, also known as ISO/IEC 11889. TPM also refers to a virtual or physical I/O device that interacts with modules that implement the standard. A TPM device can exist as discrete hardware, integrated hardware, a firmware-based module, or a software-based module.
-    <br />There are two key differences between TPMs and symmetric keys:
+  * ***Trusted Platform Module (TPM)*** - A standard for securely generating and storing cryptographic keys, also known as ISO/IEC 11889. TPM also refers to a virtual or physical I/O device that interacts with modules that implement the standard. A TPM device can exist as discrete hardware, integrated hardware, a firmware-based module, or a software-based module. There are two key differences between TPMs and symmetric keys:
       * TPM chips can also store X.509 certificates.
       * TPM attestation in DPS uses the TPM endorsement key (EK), a form of asymmetric authentication. With asymmetric authentication, a public key is used for encryption, and a separate private key is used for decryption. In contrast, symmetric keys use symmetric authentication, where the private key is used for both encryption and decryption.
 
