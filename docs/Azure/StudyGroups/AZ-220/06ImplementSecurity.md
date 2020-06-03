@@ -92,8 +92,10 @@
 * [Quickstart: Provision a simulated device with symmetric keys](https://docs.microsoft.com/en-us/azure/iot-dps/quick-create-simulated-device-symm-key)
 * [How to use different attestation mechanisms with Device Provisioning Service Client SDK for C](https://docs.microsoft.com/en-us/azure/iot-dps/use-hsm-with-sdk)
 * [Azure Security Center (ASC)](https://azure.microsoft.com/en-in/services/security-center/)
+* [Azure Security Center for IoT security agent](https://github.com/Azure/Azure-IoT-Security)
 * [Quickstart: Onboard Azure Security Center for IoT service in IoT Hub](https://docs.microsoft.com/en-us/azure/asc-for-iot/quickstart-onboard-iot-hub)
 * [Quickstart: Create an azureiotsecurity module twin](https://docs.microsoft.com/en-us/azure/asc-for-iot/quickstart-create-security-twin)
+* [Azure Security Center for IoT security alerts](https://docs.microsoft.com/en-us/azure/asc-for-iot/concept-customizable-security-alerts) - IoT Hub alerts and Agent alerts available for customization
 * [Quickstart: Create custom alerts](https://docs.microsoft.com/en-us/azure/asc-for-iot/quickstart-create-custom-alerts)
 * [Azure Sphere](https://azure.microsoft.com/en-in/services/azure-sphere/) - Know of it, but you shouldn't need to know implementation details
 
