@@ -81,6 +81,7 @@
 * [Microsoft Learn IoT Learning Paths](http://aka.ms/mslearniot)
 * [Azure IoT Reference Architecture Guide](https://docs.Microsoft.com/azure/architecture/reference-architectures/iot)
 * [Azure IoT Security](https://azure.microsoft.com/en-in/overview/iot/security/)
+* [Security recommendations for Azure Internet of Things (IoT) deployment](https://docs.microsoft.com/en-us/azure/iot-fundamentals/security-recommendations)
 * [Selecting device authentication options](https://docs.microsoft.com/en-us/azure/iot-dps/concepts-device-oem-security-practices)
 * [Device Authentication using X.509 CA Certificates](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-x509ca-overview)
 * [Quickstart: Enroll X.509 devices to the Device Provisioning Service using C#](https://docs.microsoft.com/bs-latn-ba/azure/iot-dps/quick-enroll-device-x509-csharp)
