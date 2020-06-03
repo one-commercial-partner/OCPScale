@@ -1,25 +1,26 @@
-# AZ-220 Process and Manage Data (15-20%)
+# AZ-220 Implement Security (15-20%)
 
 * [AZ-220: Microsoft Azure IoT Developer Exam](https://docs.microsoft.com/en-us/learn/certifications/exams/az-220)
 * [Microsoft Certified: Azure IoT Developer Specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
 * [Yammer Azure Study Group](http://aka.ms/azurecsg)
 
 ## Skills Measured:
-### Configure routing in Azure IoT Hub
-* Implement message enrichment in IoT Hub
-* Configure routing of IoT Device messages to endpoints
-* Define and test routing queries
-* Integrate with Event Grid
+### Implement device authentication in the IoT Hub
+* Choose an appropriate form of authentication
+* Manage the X.509 certificates for a device
+* Manage the symmetric keys for a device
 
-### Configure stream processing
-* Create Azure Stream Analytics (ASA) for data and stream processing of IoT data
-* Process and filter IoT data by using Azure Functions
-* Configure Stream Analytics outputs
+### Implement device security by using DPS
+* Configure different attestation mechanisms with DPS
+* Generate and manage x.509 certificates for IoT Devices
+* Configure enrollment with x.509 certificates
+* Generate a TPM endorsements key for a device
+* Configure enrollment with symmetric keys
 
-### Configure an IoT solution for Time Series Insights (TSI)
-* Implement solutions to handle telemetry and time-stamped data
-* Create an Azure Time Series Insights (TSI) environment
-* Connect the IoT Hub and the Time Series Insights (TSI)
+### Implement Azure Security Center (ASC) for IoT
+* Enable ASC for IoT in Azure IoT Hub
+* Create security modules
+* Configure custom alerts
 
 ## Homework:
 ### [AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer) 
