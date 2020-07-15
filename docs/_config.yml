@@ -1,0 +1,8 @@
+theme: jekyll-theme-cayman
+title: OCPScale
+description: One Commercial Partner Scale: Partner Resources
+url: https://one-commercial-partner.github.io/OCPScale/
+author: OCP Scale
+plugins:
+  - jekyll-seo-tag
+google_analytics: UA-172785744-1
