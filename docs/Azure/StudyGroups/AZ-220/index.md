@@ -1,6 +1,6 @@
 # AZ-220: Microsoft Azure IoT Developer
 
-The Microsoft OCP Scale Enablement Team is proud to facilitate this AZ-220 study group. It is designed to help you prepare for the Microsoft Azure IoT Developer exam!
+The Microsoft One Commercial Partner (OCP) Scale Enablement Team is proud to facilitate this AZ-220 study group. It is designed to help you prepare for the Microsoft Azure IoT Developer exam!
 
 ## Study Group Schedule
 
@@ -19,7 +19,7 @@ Click here to register:  [AZ-220: Microsoft Azure IoT Developer Study Group](htt
 
 ## What are study groups?
 
-Community-based deep technical sessions with an emphasis on experiential learning.  Participants will be assigned homework that includes both reading and hands-on activities that are directly aligned to exam objectives.  A [private Yammer group](https://www.yammer.com/msuspartner/#/threads/inGroup?type=in_group&feedId=9161297&view=all) is available for students to ask questions so that your growth stays on track during this fast-paced learning environment. We'll also meet once a week to review key elements of the exam objectives.
+Community-based deep technical sessions with an emphasis on experiential learning.  Participants will be assigned homework that includes both reading and hands-on activities that are directly aligned to exam objectives.  The [Microsoft Tech Community "Learn IoT" Conversation Space](https://aka.ms/iottechcommunity/learniot) is available for study group students to ask questions so that your growth stays on track during this fast-paced learning environment. We'll also meet once a week to review key elements of the exam objectives.
 
 ## What are the requirements?
 
@@ -45,7 +45,7 @@ Additionally, if you see something, say something!  Let's leverage the power of 
 
 * [AZ-220: Microsoft Azure IoT Developer Exam](https://docs.microsoft.com/en-us/learn/certifications/exams/az-220)
 * [Microsoft Certified: Azure IoT Developer Specialty](https://docs.microsoft.com/en-us/learn/certifications/azure-iot-developer-specialty)
-* [Yammer Azure Study Group](http://aka.ms/azurecsg)
+* [Microsoft Tech Community "Learn IoT" Conversation Space](https://aka.ms/iottechcommunity/learniot) - Where you can discuss IoT learning resources and ask homework questions!
 * [Microsoft Azure certification exams](https://www.microsoft.com/en-us/learning/azure-exams.aspx)
 
 ## Presentations
@@ -108,10 +108,3 @@ This update adds the following four bullets to "Implement Edge", subtopic "Setup
 ## AZ-220 Self-Assessment Tool
 Are you ready for the AZ-220 exam? This self-assessment may help you identify areas that you still need to study or practice... [Download the AZ-220 Microsoft Azure IoT Developer Exam Self-Assessment Tool](Exam-Msft-AZ-220-Self-Assessment-Build5Nines.xlsx?raw=1)
 <br />*From [https://build5nines.com/az-220-microsoft-azure-iot-developer-specialty-certification-exam/](https://build5nines.com/az-220-microsoft-azure-iot-developer-specialty-certification-exam/)*
-
-## Additional Partner Certification Study Groups
-
-* [AZ-103: Azure Administrator](https://msuspartners.eventbuilder.com/AZ103StudyGroup)
-* [AZ-300: Microsoft Azure Architect Technologies](https://msuspartners.eventbuilder.com/AZ-300)
-* [AZ-301: Microsoft Azure Architect Design](https://msuspartners.eventbuilder.com/AZ-301)
-* [Exam AZ-500: Microsoft Azure Security Technologies](https://msuspartners.eventbuilder.com/AZ500StudyGroup)
