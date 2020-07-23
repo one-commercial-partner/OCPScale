@@ -6,7 +6,7 @@ The Microsoft One Commercial Partner (OCP) Scale Enablement Team is proud to fac
 
 Click here to register:  [AZ-220: Microsoft Azure IoT Developer Study Group](https://msuspartners.eventbuilder.com/AZ220StudyGroup)
 
-> This study group is open to all who want to register!
+> This study group is open to all who want to register! Recordings will be released throughout the last week of July as part of the #JulyOT campaign
 
 |Session #|Topic|Date|Homework|Recording|
 | - | - | - | - | - |
@@ -16,7 +16,6 @@ Click here to register:  [AZ-220: Microsoft Azure IoT Developer Study Group](htt
 |4|**Process and manage data (15-20%)**|May 20, 2020| [Link](04ProcessAndManageData.md) |  |
 |5|**Monitor, troubleshoot, and optimize IoT solutions (15-20%)**|May 27, 2020| [Link](05MonitorTroubleshootOptimize) |  |
 |6|**Implement security (15-20%) + Final Review**|June 3, 2020| [Link](06ImplementSecurity.md)|  |
-*Recordings will be released throughout the last week of July as part of the #JulyOT campaign
 
 ## What are study groups?
 
