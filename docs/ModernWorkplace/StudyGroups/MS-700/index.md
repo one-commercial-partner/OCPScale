@@ -16,8 +16,8 @@ Click here to register:  [MS-700: Managing Microsoft Teams](https://msuspartners
 |**Plan and configure a Microsoft Teams environment: Part 3**| May 28 |[Link](PlanandconfigureaMicrosoftTeamsenvironment3.md) | [Link](https://msuspartners.eventbuilder.com/event/20697) |
 |**Manage Chat, Calling, and Meetings: Part 1**| June 4 |[Link](ManageChatCallingandMeetings1.md) | [Link](https://msuspartners.eventbuilder.com/event/20698) |
 |**Manage Chat, Calling, and Meetings: Part 2**| June 11 |[Link](ManageChatCallingandMeetings2.md) | [Link](https://msuspartners.eventbuilder.com/event/20701) |
-|**Manage Teams and app policies**| June 18 |[Link](ManageTeamsandapppolicies.md) |  |
-|**Final Review**| June 25 | None! | |
+|**Manage Teams and app policies**| June 18 |[Link](ManageTeamsandapppolicies.md) | [Link](https://msuspartners.eventbuilder.com/event/20703) |
+|**Final Review**| June 25 | None! | [Link](https://msuspartners.eventbuilder.com/event/20704) |
 
 
 ## What are study groups?
