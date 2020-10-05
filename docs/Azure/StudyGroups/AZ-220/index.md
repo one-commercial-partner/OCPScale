@@ -95,15 +95,11 @@ Hands-on labs can be found here: [AZ-220 IoT Labs](https://microsoftlearning.git
 *	**Added** *Use Azure Policy definitions for IoT Hub* to "Monitor, troubleshoot, and optimize IoT solutions", subtopic "Configure health monitoring"
 
 ### Skills Measured - Exam update on July 21, 2020
-This update adds the following four bullets to "Implement Edge", subtopic "Setup and deploy an IoT Edge Device":
-* The following four options will be **added**:
-  * *IoT Edge automatic deployments*
-  * *Deploy on constrained devices*
-  * *Secure IoT Edge solutions*
-  * *Deploy production certificates*
-  
-* The italic portion will also be **added**:
-  * Implement and configure offline support (*including local storage*)
+* **Added** *IoT Edge automatic deployments* to "Implement Edge", subtopic "Setup and deploy an IoT Edge Device"
+* **Added** *Deploy on constrained devices* to "Implement Edge", subtopic "Setup and deploy an IoT Edge Device"
+* **Added** *Secure IoT Edge solutions* to "Implement Edge", subtopic "Setup and deploy an IoT Edge Device"
+* **Added** *Deploy production certificates* to "Implement Edge", subtopic "Setup and deploy an IoT Edge Device"
+* **Modified** Implement and configure offline support (*including local storage*) to "Implement Edge", subtopic "Setup and deploy an IoT Edge Device"
 
 ### Skills Measured - Exam update on May 28, 2020
 * **Added** *Custom and industry-focused application templates* to "Provision and Manage Devices", subtopic "IoT Central"
