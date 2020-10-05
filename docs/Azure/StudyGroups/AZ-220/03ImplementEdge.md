@@ -27,7 +27,7 @@
 * Select and deploy an appropriate gateway pattern
 * Implement Industrial IoT solutions with modules like Modbus and OPC
 * Implement module-to-module communication
-* Implement and configure offline support
+* Implement and configure offline support (including local storage)
 
 ## Homework:
 ### [AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer) 
