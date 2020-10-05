@@ -89,12 +89,12 @@ Hands-on labs can be found here: [AZ-220 IoT Labs](https://microsoftlearning.git
 
 ## Exam Updates
 
-### Skills Measured - Exam update on May 28
+### Skills Measured - Exam update on May 28, 2020
 * **Added** *Custom and industry-focused application templates* to "Provision and Manage Devices", subtopic "IoT Central"
 *	**Added** *Provision IoT Edge devices with DPS* to "Implement Edge", subtopic "Setup and Deploy an IoT Edge Device"
 *	**Removed** *Set up device D2C message tracing by using Azure Distributed Tracing* from "Monitor, troubleshoot, and optimizeIoT solutions", subtopic "Perform end-to-end solution testing and diagnostics"
 
-### Skills Measured - Exam update coming on or after July 21:
+### Skills Measured - Exam update on July 21, 2020
 This update adds the following four bullets to "Implement Edge", subtopic "Setup and deploy an IoT Edge Device":
 * The following four options will be **added**:
   * *IoT Edge automatic deployments*
@@ -104,6 +104,11 @@ This update adds the following four bullets to "Implement Edge", subtopic "Setup
   
 * The italic portion will also be **added**:
   * Implement and configure offline support (*including local storage*)
+
+### Skills Measured - Exam update on September 24, 2020
+* **Added** *Monitor application health using metrics* to "Provision and Manage Devices", subtopic "Build a solution by using IoT Central"
+*	**Added** *Implement Industrial IoT solutions with modules like Modbus and OPC* to "Implement Edge", subtopic "Configure an IoT Edge device"
+*	**Added** *Use Azure Policy definitions for IoT Hub* to "Monitor, troubleshoot, and optimize IoT solutions", subtopic "Configure health monitoring"
 
 ## AZ-220 Self-Assessment Tool
 Are you ready for the AZ-220 exam? This self-assessment may help you identify areas that you still need to study or practice... [Download the AZ-220 Microsoft Azure IoT Developer Exam Self-Assessment Tool](Exam-Msft-AZ-220-Self-Assessment-Build5Nines.xlsx?raw=1)
