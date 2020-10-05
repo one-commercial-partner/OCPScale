@@ -28,6 +28,8 @@
 * Define the operator view
 * Add and manage devices from IoT Central
 * Monitor devices
+* Custom and industry-focused application templates
+* Monitor application health using metrics
 
 ## Homework:
 ### [AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer) 
