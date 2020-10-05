@@ -9,6 +9,7 @@
 * Configure metrics in IoT Hub
 * Set up diagnostics logs for Azure IoT Hub
 * Query and visualize tracing by using Azure Monitor
+* Use Azure Policy definitions for IoT Hub
 
 ### Troubleshoot device communication
 * Establish maintenance communication
@@ -19,7 +20,6 @@
 ### Perform end-to-end solution testing and diagnostics
 * Estimate the capacity required for each service in the solution
 * Conduct performance and stress testing
-* Set up device D2C message tracing by using Azure Distributed Tracing
 
 ## Homework:
 ### [AZ-220 IoT Labs](https://microsoftlearning.github.io/AZ-220-Microsoft-Azure-IoT-Developer)
