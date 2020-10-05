@@ -12,6 +12,11 @@
 * Install container runtime on IoT devices
 * Define and implement deployment manifest
 * Update security daemon and runtime
+* Provision IoT Edge devices with DPS
+* IoT Edge automatic deployments
+* Deploy on constrained devices
+* Secure IoT Edge solutions
+* Deploy production certificates
 
 ### Develop modules
 * Create and configure an Edge module
@@ -20,6 +25,7 @@
 
 ### Configure an IoT Edge device
 * Select and deploy an appropriate gateway pattern
+* Implement Industrial IoT solutions with modules like Modbus and OPC
 * Implement module-to-module communication
 * Implement and configure offline support
 
